@@ -10,6 +10,62 @@ textarea[name=comments] {
     resize: none;
 }
 
+.small-box {
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+    color: #fff;    
+}
+
+.bg-green{
+    background-color: #00a65a !important;
+}
+
+.bg-aqua {
+    background-color: #00c0ef !important;
+}
+
+.small-box h3, .small-box p {
+    z-index: 5;
+}
+.small-box h3 {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.small-box > .inner {
+    padding: 10px;
+}
+
+.small-box p {
+    font-size: 15px;
+}
+
+.small-box .icon {
+    color: rgba(0, 0, 0, 0.15);
+    font-size: 90px;
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    transition: all 0.3s linear 0s;
+    z-index: 0;
+}
+
+.small-box > .small-box-footer {
+    background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    padding: 3px 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    z-index: 10;
+}
 </style>
 
 @endsection
@@ -46,8 +102,9 @@ textarea[name=comments] {
                                                         
                                                         @if(Auth::check())
 
-															<div class="pull-left">
-                                                            @if(watchFullVideo(Auth::user()->id, Auth::user()->user_type, $video) ==  1)                             
+															@if(Setting::get('is_spam')) <div class="pull-left"> @endif 
+                                                            
+                                                                @if(watchFullVideo(Auth::user()->id, Auth::user()->user_type, $video) ==  1)                             
                                                             
                                                                 <button type="submit" id="watch_main_video_button" class="watch-button" style="background:green;">{{tr('watch_main_video')}}</button>
 
@@ -61,7 +118,6 @@ textarea[name=comments] {
 
                                                                     <button  type="button" class="watch-button" disabled  style="background:green;">{{tr('watch_main_video')}}</button>
                                                                 @endif
-
 
 
                                                                 <div class="modal fade cus-mod" id="paypal" role="dialog">
@@ -78,11 +134,44 @@ textarea[name=comments] {
 
                                                                             <div class="modal-body">
                                                                                 <!-- <p>Please Pay to see the full video</p>  -->
-                                                                                @if($video->amount > 0)
-                                                                                    <a href="{{route('videoPaypal' , $video->admin_video_id)}}" class="btn btn-danger">{{tr('paynow')}}</a>
-                                                                                @else 
-                                                                                    <a href="{{route('paypal' , Auth::user()->id)}}" class="btn btn-danger">{{tr('paynow')}}</a>
+
+                                                                                @if(Auth::user()->user_type != DEFAULT_TRUE)
+                                                                                    <div class="{{($video->amount > 0) ? 'col-lg-6' : 'col-lg-6 col-lg-offset-3'}}">
+                                                                                      <!-- small box -->
+                                                                                      <div class="small-box bg-green">
+                                                                                        <div class="inner">
+                                                                                          <h3>${{Setting::get('amount')}}</h3>
+                                                                                          <div class="clearfix"></div>
+                                                                                          <p style="float: none;text-align: left;">{{tr('subscription')}}</p>
+                                                                                        </div>
+                                                                                        <div class="icon">
+                                                                                          <i class="fa fa-money"></i>
+                                                                                        </div>
+                                                                                         <div class="clearfix"></div>
+                                                                                        <a href="{{route('paypal' , Auth::user()->id)}}" class="small-box-footer">{{tr('for_subscription')}} <i class="fa fa-arrow-circle-right"></i></a>
+                                                                                      </div>
+                                                                                    </div>
                                                                                 @endif
+                                                                                @if($video->amount > 0)
+                                                                                    <div class="{{(Auth::user()->user_type == 1) ? 'col-lg-6 col-lg-offset-3' : 'col-lg-6'}}">
+                                                                                      <!-- small box -->
+                                                                                      <div class="small-box bg-aqua">
+                                                                                        <div class="inner">
+                                                                                          <h3>${{$video->amount}}</h3>
+                                                                                          <div class="clearfix"></div>
+                                                                                          <p style="float: none;text-align: left;">{{tr('pay_per_view')}}</p>
+                                                                                        </div>
+                                                                                        <div class="icon">
+                                                                                          <i class="fa fa-money"></i>
+                                                                                        </div>
+                                                                                         <div class="clearfix"></div>
+                                                                                        <a href="{{route('videoPaypal' , $video->admin_video_id)}}" class="small-box-footer">{{tr('for_pay_per_view')}} <i class="fa fa-arrow-circle-right"></i></a>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                @endif
+                                                                                
+                                                                                <div class="clearfix"></div>
+                                                                                
                                                                             </div>
 
                                                                             
@@ -93,15 +182,25 @@ textarea[name=comments] {
                                                                 </div>
 
                                                             @endif
-                                                        </div>
-                                                        <div class="pull-right">
-                                                            @if($flaggedVideo == '')
-                                                                <button onclick="showReportForm();" type="button" class="report-button"><i class="fa fa-flag"></i> {{tr('report')}}</button>
-                                                            @else 
-                                                                <a href="{{route('user.remove.report_video', $flaggedVideo->id)}}" class="btn btn-warning"><i class="fa fa-flag"></i> {{tr('remove_report')}}</a>
-                                                            @endif
+
+                                                            <!-- For UI Alignment i Have checked from here -->
+
+                                                        @if(Setting::get('is_spam'))
 
                                                         </div>
+                                                        
+                                                            <div class="pull-right">
+
+                                                                @if($flaggedVideo == '')
+                                                                    <button onclick="showReportForm();" type="button" class="report-button"><i class="fa fa-flag"></i> {{tr('report')}}</button>
+                                                                @else 
+                                                                    <a href="{{route('user.remove.report_video', $flaggedVideo->id)}}" class="btn btn-warning"><i class="fa fa-flag"></i> {{tr('remove_report')}}</a>
+                                                                @endif
+
+                                                            </div>
+
+                                                        @endif
+
                                                         <div class="clearfix"></div>
                                                         @else
 
@@ -143,22 +242,27 @@ textarea[name=comments] {
                                         </div><!--end of video-title-->                                                             
                                     </div><!--end of details-->
 
-                                    @if ($flaggedVideo == '')
-                                        <div class="more-content" style="display: none;" id="report_video_form">
-                                            <form name="report_video" method="post" id="report_video" action="{{route('user.add.spam_video')}}">
-                                                <b>Report this Video ?</b>
-                                                <br>
-                                                @foreach($report_video as $report) 
-                                                    <input type="radio" name="reason" value="{{$report->value}}" required> {{$report->value}}<br>
-                                                @endforeach
-                                                <input type="hidden" name="video_id" value="{{$video->admin_video_id}}" />
-                                                <p class="help-block"><small>If you report this video, you won't see again the same video in anywhere in your account except "Spam Videos". If you want to continue to report this video as same. Click continue and proceed the same.</small></p>
-                                                <div class="pull-right">
-                                                    <button class="btn btn-success btn-sm">Mark as Spam</button>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </form>
-                                        </div>
+                                    @if(Setting::get('is_spam'))
+
+                                        @if ($flaggedVideo == '')
+                                            <div class="more-content" style="display: none;" id="report_video_form">
+                                                <form name="report_video" method="post" id="report_video" action="{{route('user.add.spam_video')}}">
+                                                    <b>Report this Video ?</b>
+                                                    <br>
+                                                    @foreach($report_video as $report) 
+                                                        <input type="radio" name="reason" value="{{$report->value}}" required> {{$report->value}}<br>
+                                                    @endforeach
+                                                    <input type="hidden" name="video_id" value="{{$video->admin_video_id}}" />
+                                                    <p class="help-block"><small>{{tr('report_content')}}</small></p>
+                                                    <div class="pull-right">
+                                                        <button class="btn btn-success btn-sm">{{tr('report')}}</button>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </form>
+                                            </div>
+                                        
+                                        @endif
+
                                     @endif
 
                                     <div class="more-content">
@@ -367,11 +471,11 @@ textarea[name=comments] {
         </div><!--y-content-row-->
     </div>
 
-    <!--end of y-content-->
-    
+
 @endsection
 
 @section('scripts')
+
     <script type="text/javascript">
         $(document).ready(function(){
             $('.video-y-menu').addClass('hidden');
@@ -392,45 +496,94 @@ textarea[name=comments] {
 
     <script type="text/javascript">
         
-        jQuery(document).ready(function(){   
+        jQuery(document).ready(function() {
 
-                // Opera 8.0+
-                var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-                // Firefox 1.0+
-                var isFirefox = typeof InstallTrigger !== 'undefined';
-                // At least Safari 3+: "[object HTMLElementConstructor]"
-                var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-                // Internet Explorer 6-11
-                var isIE = /*@cc_on!@*/false || !!document.documentMode;
-                // Edge 20+
-                var isEdge = !isIE && !!window.StyleMedia;
-                // Chrome 1+
-                var isChrome = !!window.chrome && !!window.chrome.webstore;
-                // Blink engine detection
-                var isBlink = (isChrome || isOpera) && !!window.CSS;
+            var is_mobile = false;
 
-                @if($trailer_video)
+            var isMobile = {
+                Android: function() {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function() {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function() {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function() {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function() {
+                    return navigator.userAgent.match(/IEMobile/i);
+                },
+                any: function() {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                }
+            };
 
-                    if(isOpera || isSafari) {
-                        jQuery('#trailer_video_setup_error').show();
-                        jQuery('#main_video_setup_error').hide();
-                        confirm('The video format is not supported in this browser. Please open with some other browser.');
+            if(isMobile.any()) {
 
-                    } else {
+                var is_mobile = true;
 
-                        var playerInstance = jwplayer("trailer-video-player");
+            }
 
-                        @if($trailerstreamUrl)
+            // Opera 8.0+
+            var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+            // Firefox 1.0+
+            var isFirefox = typeof InstallTrigger !== 'undefined';
+            // At least Safari 3+: "[object HTMLElementConstructor]"
+            var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+            // Internet Explorer 6-11
+            var isIE = /*@cc_on!@*/false || !!document.documentMode;
+            // Edge 20+
+            var isEdge = !isIE && !!window.StyleMedia;
+            // Chrome 1+
+            var isChrome = !!window.chrome && !!window.chrome.webstore;
+            // Blink engine detection
+            var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-                            playerInstance.setup({
-                                file: "{{$trailerstreamUrl}}",
-                                image: "{{$video->default_image}}",
-                                width: "100%",
-                                aspectratio: "16:9",
-                                primary: "flash",
-                            });
-                        @else
+            @if($trailer_video)
 
+                if(isOpera || isSafari) {
+                    
+                    jQuery('#trailer_video_setup_error').show();
+                    jQuery('#main_video_setup_error').hide();
+                    confirm('The video format is not supported in this browser. Please open with some other browser.');
+
+                } else {
+
+                    var playerInstance = jwplayer("trailer-video-player");
+
+                    @if($trailerstreamUrl)
+
+                        if(is_mobile) {
+
+                        }
+
+                        playerInstance.setup({
+                            sources: [{
+                                file: "{{$trailerstreamUrl}}"
+                              },{
+                                file: "{{$hls_trailer_video}}"
+                              },{
+                                file: "{{$original_trailer_video}}"
+                              }],
+                            // file: "{{$trailerstreamUrl}}",
+                            image: "{{$video->default_image}}",
+                            width: "100%",
+                            aspectratio: "16:9",
+                            primary: "flash",
+                        });
+
+                    @else
+
+                        if(is_mobile) {
+                                                        
+                            console.log('You are using a mobile device!');
+
+                            var trailerPath = "{{$hls_trailer_video}}";
+
+                        } else {
 
                             var trailerVideoPath = "{{$trailer_video_path}}";
                             var trailerVideoPixels = "{{$trailer_pixels}}";
@@ -441,64 +594,86 @@ textarea[name=comments] {
 
                             var splitTrailerPixel = trailerVideoPixels.split(',');
 
-
                             for (var i = 0 ; i < splitTrailer.length; i++) {
 
                                 trailerPath.push({file : splitTrailer[i], label : splitTrailerPixel[i]});
                             }
 
-                            // alert(trailerPath);
-                            console.log(trailerPath);
+                        }
 
-                            playerInstance.setup({
-                                sources: trailerPath,
-                                image: "{{$video->default_image}}",
-                                width: "100%",
-                                aspectratio: "16:9",
-                                primary: "flash",
-                            });
-
-                        @endif
-
-
-                        playerInstance.on('setupError', function() {
-
-                            jQuery("#trailer-video-player").css("display", "none");
-
-                            jQuery('#main_video_setup_error').hide();
-
-                            jQuery('#trailer_video_setup_error').css("display", "block");
-
-                            confirm('The video format is not supported in this browser. Please open with some other browser.');
-                        
+                        playerInstance.setup({
+                            sources: [{
+                                file: trailerPath
+                              },{
+                                file: "{{$original_trailer_video}}"
+                              }],
+                            // sources: trailerPath,
+                            image: "{{$video->default_image}}",
+                            width: "100%",
+                            aspectratio: "16:9",
+                            primary: "flash",
                         });
 
-                        @if(!$history_status && Auth::check())
+                    @endif
 
-                            jwplayer().on('displayClick', function(e) {
-                                jQuery.ajax({
-                                    url: "{{route('user.add.history')}}",
-                                    type: 'post',
-                                    data: {'admin_video_id' : "{{$video->admin_video_id}}", 'video_status' : 0},
-                                    success: function(data) {
+                    playerInstance.on('setupError', function() {
 
-                                       if(data.success == true) {
+                        var hasFlash = false;
 
-                                        console.log('Added to history');
+                        try {
+                            var fo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+                            if (fo) {
+                                hasFlash = true;
+                            }
+                        } catch (e) {
+                            if (navigator.mimeTypes
+                                    && navigator.mimeTypes['application/x-shockwave-flash'] != undefined
+                                    && navigator.mimeTypes['application/x-shockwave-flash'].enabledPlugin) {
+                                hasFlash = true;
+                            }
+                        }
 
-                                       } else {
-                                            console.log('Wrong...!');
-                                       }
-                                    }
-                                });
-                                
-                            });
+                        jQuery("#trailer-video-player").css("display", "none");
 
-                        @endif
+                        jQuery('#main_video_setup_error').hide();
+
+                        if (hasFlash == false) {
+                            jQuery('#flash_error_display').show();
+                            return false;
+                        }
+
+                        jQuery('#trailer_video_setup_error').css("display", "block");
+
+                        confirm('The video format is not supported in this browser. Please open with some other browser.');
                     
-                    }
+                    });
 
-                @endif                
+                    @if(!$history_status && Auth::check())
+
+                        jwplayer().on('displayClick', function(e) {
+                            jQuery.ajax({
+                                url: "{{route('user.add.history')}}",
+                                type: 'post',
+                                data: {'admin_video_id' : "{{$video->admin_video_id}}", 'video_status' : 0},
+                                success: function(data) {
+
+                                   if(data.success == true) {
+
+                                    console.log('Added to history');
+
+                                   } else {
+                                        console.log('Wrong...!');
+                                   }
+                                }
+                            });
+                            
+                        });
+
+                    @endif
+                
+                }
+
+            @endif                
 
             //hang on event of form with id=myform
             jQuery("form[name='add_to_wishlist']").submit(function(e) {
@@ -624,46 +799,74 @@ textarea[name=comments] {
 
                             @if($videoStreamUrl) 
 
-                            playerInstance.setup({
-                                file: "{{$videoStreamUrl}}",
-                                image: "{{$video->default_image}}",
-                                width: "100%",
-                                aspectratio: "16:9",
-                                primary: "flash",
-                                controls : true,
-                                "controlbar.idlehide" : false,
-                                controlBarMode:'floating',
-                                "controls": {
-                                    "enableFullscreen": false,
-                                    "enablePlay": false,
-                                    "enablePause": false,
-                                    "enableMute": true,
-                                    "enableVolume": true
-                                },
-                                // autostart : true,
-                                "sharing": {
-                                    "sites": ["reddit","facebook","twitter"]
-                                  }
-                            
-                            });
-                            @else
-                                var videoPath = "{{$videoPath}}";
-                                var videoPixels = "{{$video_pixels}}";
-
-                                var path = [];
-
-                                var splitVideo = videoPath.split(',');
-
-                                var splitVideoPixel = videoPixels.split(',');
-
-
-                                for (var i = 0 ; i < splitVideo.length; i++) {
-
-                                    path.push({file : splitVideo[i], label : splitVideoPixel[i]});
+                                if(is_mobile) {
+                                                        
+                                    <?php //$videoStreamUrl =  $hls_video; ?>
                                 }
 
                                 playerInstance.setup({
-                                    sources: path,
+                                    // file: "{{$videoStreamUrl}}",
+                                    sources: [{
+                                        file: "{{$videoStreamUrl}}"
+                                      },{
+                                        file: "{{$hls_main_video}}"
+                                      },{
+                                        file: "{{$original_main_video}}"
+                                      }],
+                                    image: "{{$video->default_image}}",
+                                    width: "100%",
+                                    aspectratio: "16:9",
+                                    primary: "flash",
+                                    controls : true,
+                                    "controlbar.idlehide" : false,
+                                    controlBarMode:'floating',
+                                    "controls": {
+                                        "enableFullscreen": false,
+                                        "enablePlay": false,
+                                        "enablePause": false,
+                                        "enableMute": true,
+                                        "enableVolume": true
+                                    },
+                                    // autostart : true,
+                                    "sharing": {
+                                        "sites": ["reddit","facebook","twitter"]
+                                      }
+                                
+                                });
+
+                            @else
+
+                                if(is_mobile) {
+                                                        
+                                    console.log('You are using a mobile device!');
+
+                                    var path = "{{$hls_video}}";
+
+                                } else {
+
+                                    var videoPath = "{{$videoPath}}";
+                                    var videoPixels = "{{$video_pixels}}";
+
+                                    var path = [];
+
+                                    var splitVideo = videoPath.split(',');
+
+                                    var splitVideoPixel = videoPixels.split(',');
+
+
+                                    for (var i = 0 ; i < splitVideo.length; i++) {
+
+                                        path.push({file : splitVideo[i], label : splitVideoPixel[i]});
+                                    }
+                                }
+
+                                playerInstance.setup({
+                                    sources: [{
+                                        file: path
+                                      },{
+                                        file: "{{$original_main_video}}"
+                                      }],
+                                    // sources: path,
                                     image: "{{$video->default_image}}",
                                     width: "100%",
                                     aspectratio: "16:9",
@@ -691,6 +894,27 @@ textarea[name=comments] {
 
                                 jQuery("#main-video-player").css("display", "none");
                                 jQuery('#trailer_video_setup_error').hide();
+                               
+
+                                var hasFlash = false;
+                                try {
+                                    var fo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+                                    if (fo) {
+                                        hasFlash = true;
+                                    }
+                                } catch (e) {
+                                    if (navigator.mimeTypes
+                                            && navigator.mimeTypes['application/x-shockwave-flash'] != undefined
+                                            && navigator.mimeTypes['application/x-shockwave-flash'].enabledPlugin) {
+                                        hasFlash = true;
+                                    }
+                                }
+
+                                if (hasFlash == false) {
+                                    jQuery('#flash_error_display').show();
+                                    return false;
+                                }
+
                                 jQuery('#main_video_setup_error').css("display", "block");
 
                                 confirm('The video format is not supported in this browser. Please option some other browser.');
@@ -718,9 +942,6 @@ textarea[name=comments] {
                     jQuery("#trailer_video_play").hide();
 
                     jQuery("#main_video_play").show();*/
-
-
-
 
                     @if(!$history_status)
 

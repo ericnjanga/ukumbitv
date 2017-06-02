@@ -20,7 +20,7 @@
             <div class="form-inputs">
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
-                    <input type="email" class="form-control input-lg" name="email" placeholder="Demo : admin@streamhash.com">
+                    <input type="email" class="form-control input-lg" name="email" placeholder="Demo : admin@streamhash.com" value="">
 
                     @if ($errors->has('email'))
                         <span class="help-block">

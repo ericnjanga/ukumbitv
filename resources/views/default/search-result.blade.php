@@ -9,9 +9,9 @@
 	    <div class="large-12 columns">
 	      	<nav aria-label="You are here:" role="navigation">
 		        <ul class="breadcrumbs">
-		          <li><i class="fa fa-home"></i><a href="{{route('user.dashboard')}}">Home</a></li>
+		          <li><i class="fa fa-home"></i><a href="{{route('user.dashboard')}}">{{tr('home')}}</a></li>
 		          <li>
-		            <span class="show-for-sr">Current: </span> {{tr('search')}}
+		            <span class="show-for-sr">{{tr('current')}}: </span> {{tr('search')}}
 		          </li>
 		        </ul>
 	      	</nav>

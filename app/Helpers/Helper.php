@@ -61,6 +61,72 @@
             return url('/');
         }
 
+        public static function generate_email_code($value = "")
+        {
+            return uniqid($value);
+        }
+
+        public static function generate_email_expiry()
+        {
+            return time() + 24*3600*30;  // 30 days
+        }
+
+        // Check whether email verification code and expiry
+
+        public static function check_email_verification($verification_code , $data , &$error) 
+        {
+
+            // Check the data exists
+
+            if($data) {
+
+                // Check whether verification code is empty or not
+
+                if($verification_code) {
+
+                    if ($verification_code !=  $data->verification_code ) {
+
+                        $error = 'Verification Code Mismatched';
+
+                        return FALSE;
+
+                    }
+
+                }
+                    
+                // Check whether verification code expiry 
+
+                if ($data->verification_code_expiry > time()) {
+
+                    // Token is valid
+
+                    $error = NULL;
+
+                    return true;
+
+                } else {
+
+                    $data->verification_code = Helper::generate_email_code();
+
+                    $data->verification_code_expiry = Helper::generate_email_expiry();
+
+                    $data->save();
+
+                    // If code expired means send mail to that user
+
+                    $subject = tr('verification_code_title');
+                    $email_data = $data;
+                    $page = "emails.welcome";
+                    $email = $data['email'];
+                    $result = Helper::send_email($page,$subject,$email,$email_data);
+
+                    $error = 'Verification Code Expired';
+
+                    return FALSE;
+                }
+            }
+        }
+
         // Note: $error is passed by reference
         public static function is_token_valid($entity, $id, $token, &$error)
         {
@@ -111,7 +177,7 @@
                 try {
 
                     $site_url=url('/');
-                    Mail::queue($page, array('email_data' => $email_data,'site_url' => $site_url), function ($message) use ($email, $subject) {
+                    Mail::send($page, array('email_data' => $email_data,'site_url' => $site_url), function ($message) use ($email, $subject) {
 
                             $message->to($email)->subject($subject);
                     });
@@ -270,7 +336,9 @@
                     break;
                 default:
                     $string = "";
+            
             }
+            
             return $string;
         }
 
@@ -353,7 +421,7 @@
                 $s3_url = Storage::url($local_url);
             } else {
                 $ext = $picture->getClientOriginalExtension();
-                $picture->move(base_path() . "/uploads", $file_name . "." . $ext);
+                $picture->move(public_path() . "/uploads", $file_name . "." . $ext);
                 $local_url = $file_name . "." . $ext;
 
                 $s3_url = Helper::web_url().'/uploads/'.$local_url;
@@ -391,7 +459,7 @@
                 // dd($FFmpeg->command);
             } else {
 
-                $picture->move(base_path() . "/uploads/images/", $local_url);
+                $picture->move(public_path() . "/uploads/images/", $local_url);
 
             }
 
@@ -416,7 +484,7 @@
             // Convert bytes into MB
             $bytes = convertMegaBytes($picture->getClientSize());
 
-            $inputFile = base_path('public'.$path.$local_url);
+            $inputFile = public_path().$path.$local_url;
 
             if ($bytes > Setting::get('video_compress_size') && $compress_type == DEFAULT_TRUE) {
 
@@ -436,7 +504,7 @@
 
             } else {
                 Log::info("Original Video");
-                $picture->move(base_path() . $path, $local_url);
+                $picture->move(public_path() . $path, $local_url);
             }
 
             $s3_url = Helper::web_url().$path.$local_url;
@@ -448,7 +516,7 @@
 
         public static function delete_picture($picture, $path) {
             // "/uploads/"
-            File::delete( base_path() . $path . basename($picture));
+            File::delete( public_path() . $path . basename($picture));
             return true;
         }
 
@@ -947,4 +1015,28 @@
             Log::info("*************************************");
 
         }
+
+        public static function upload_language_file($folder,$picture) {
+
+            $ext = $picture->getClientOriginalExtension();
+
+            $local_url = "messages" . "." . $ext;
+            
+            $picture->move(base_path() . "/resources/lang/".$folder ."/", $local_url);
+
+        }
+
+        public static function delete_language_files($folder, $boolean) {
+            if ($boolean) {
+                $path = base_path() . "/resources/lang/" .$folder;
+                \File::cleanDirectory($path);
+                \Storage::deleteDirectory( $path );
+                rmdir( $path );
+            } else {
+                \File::delete( base_path() . "/resources/lang/" . $folder ."/messages.php");
+            }
+            return true;
+        }
     }
+
+

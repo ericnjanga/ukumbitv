@@ -12,6 +12,32 @@
 
         <div class="y-button">
 
+            <ul class="nav navbar-nav">
+
+                @if(Setting::get('admin_language_control') == 0)
+
+                @if(count($languages = getActiveLanguages()) > 1) 
+
+                    <li  class="dropdown">
+                
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="padding: 5px 15px; margin-top: 3px; margin-right: 5px;color: #cc181e"><i class="fa fa-globe"></i> <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+
+                            @foreach($languages as $h => $language)
+
+                                <li class="{{(\Session::get('locale') == $language->folder_name) ? 'active' : ''}}" ><a href="{{route('user_session_language', $language->folder_name)}}" style="{{(\Session::get('locale') == $language->folder_name) ? 'background-color: #cc181e' : ''}}">{{$language->folder_name}}</a></li>
+                            @endforeach
+                        </ul>
+                     
+                    </li>
+
+                @endif
+                
+                @endif
+
+            </ul>
+
         	@if(Auth::check())
         		<a href="{{route('user.profile')}}" class="y-signin">{{tr('back_profile')}}</a>
         	@else

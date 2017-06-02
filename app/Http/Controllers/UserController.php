@@ -123,9 +123,11 @@ class UserController extends Controller {
 
         if($video) {
 
-            $trailer_video = $video->trailer_video;
+            $original_trailer_video = $original_main_video = $hls_main_video = $hls_trailer_video = "";
 
-            $main_video = $video->video; 
+            $trailer_video = $original_trailer_video = $hls_main_video = $video->trailer_video;
+
+            $main_video = $original_main_video = $hls_trailer_video = $video->video; 
 
             if($video->video_type == 1) {
 
@@ -140,15 +142,25 @@ class UserController extends Controller {
                         $trailer_video = \Setting::get('streaming_url').get_video_end($video->trailer_video);
                     }
                 }
+           
             }
 
-
             $videoPath = $video_pixels = $trailer_video_path = $trailer_pixels = $trailerstreamUrl = $videoStreamUrl = '';
+
             if ($video->video_type == 1) {
+
+                $hls_main_video = envfile('HLS_STREAMING_URL').get_video_end($video->video);
+
+                $hls_trailer_video = envfile('HLS_STREAMING_URL').get_video_end($video->trailer_video);
+
                 if (\Setting::get('streaming_url')) {
+
                     $trailerstreamUrl = \Setting::get('streaming_url').get_video_end($video->trailer_video);
+
                     $videoStreamUrl = \Setting::get('streaming_url').get_video_end($video->video);
+
                     if ($video->is_approved == 1) {
+
                         if($video->trailer_video_resolutions) {
                             $trailerstreamUrl = Helper::web_url().'/uploads/smil/'.get_video_end_smil($video->trailer_video).'.smil';
                         } 
@@ -156,6 +168,7 @@ class UserController extends Controller {
                             $videoStreamUrl = Helper::web_url().'/uploads/smil/'.get_video_end_smil($video->video).'.smil';
                         }
                     }
+
                 } else {
 
                     $videoPath = $video->video_resize_path ? $video->video.','.$video->video_resize_path : $video->video;
@@ -164,13 +177,14 @@ class UserController extends Controller {
                     $trailer_pixels = $video->trailer_video_resolutions ? 'original'.$video->trailer_video_resolutions : 'original';
 
                 }
+
             } else {
                 $trailerstreamUrl = $video->trailer_video;
                 $videoStreamUrl = $video->video;
             }
             
         } else {
-            return redirect('/')->with('flash_error' , tr('video_not_found'));
+            return redirect('/')->with('flash_error' , tr('no_video_found'));
         }
 
         if(\Auth::check()) {
@@ -178,7 +192,12 @@ class UserController extends Controller {
             $history_status = Helper::history_status(\Auth::user()->id,$id);
 
         }
+
         $share_link = route('user.single' , $id);
+
+        // \Log::info("HLS VIDEO".print_r($hls_main_video , true));
+
+        // \Log::info("HLS TRAILER VIDEO".print_r($hls_trailer_video , true));
         
         return view('user.single-video')
                     ->with('page' , '')
@@ -201,6 +220,10 @@ class UserController extends Controller {
                     ->with('trailer_pixels', $trailer_pixels)
                     ->with('videoStreamUrl', $videoStreamUrl)
                     ->with('trailerstreamUrl', $trailerstreamUrl)
+                    ->with('original_trailer_video' , $original_trailer_video)
+                    ->with('hls_trailer_video' , $hls_trailer_video)
+                    ->with('original_main_video' , $original_main_video)
+                    ->with('hls_main_video' , $hls_main_video)
                     ->with('flaggedVideo', $flaggedVideo);
     }
 

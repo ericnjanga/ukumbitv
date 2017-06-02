@@ -8,7 +8,7 @@
         <h4>{{tr('delete_account_heading')}}</h4>
 
         <p style="color: gray">
-            <strong>Note:</strong> {{tr('delete_account_content')}}
+            <strong>{{tr('note')}}:</strong> {{tr('delete_account_content')}}
         </p>
         
         <form role="form" method="POST" action="{{ route('user.delete.account.process') }}">

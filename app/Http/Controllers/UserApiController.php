@@ -46,6 +46,7 @@ class UserApiController extends Controller
         $this->middleware('UserApiVal' , array('except' => ['register' , 'login' , 'forgot_password','search_video' , 'privacy','about' , 'terms','contact']));
 
     }
+    
     public function register(Request $request)
     {
         $response_array = array();
@@ -211,10 +212,12 @@ class UserApiController extends Controller
                 }
 
                 $user->is_activated = 1;
-                $user->user_type = 1;
 
                 $user->save();
 
+                // Check the default subscription and save the user type 
+
+                user_type_check($user->id);
 
                 // Send welcome email to the new user:
                 if($new_user) {
@@ -1050,7 +1053,7 @@ class UserApiController extends Controller
 
             $video = $ios_video = $data->video;
 
-            if($data->video_type == 1 && $data->video_upload_type == 2) {
+            if($data->video_type == VIDEO_TYPE_UPLOAD && $data->video_upload_type == VIDEO_UPLOAD_TYPE_DIRECT) {
 
                 if(check_valid_url($data->tralier_video)) {
 
@@ -1069,6 +1072,12 @@ class UserApiController extends Controller
                     if(envfile('HLS_STREAMING_URL'))
                         $ios_video = envfile('HLS_STREAMING_URL').get_video_end($data->video);
                 }
+            }
+
+            if($data->video_type == VIDEO_TYPE_YOUTUBE) {
+
+                $video = $ios_video = get_api_youtube_link($data->video);
+                $trailer_video =  $ios_trailer_video = get_api_youtube_link($data->trailer_video);
             }
 
             $admin_video_images = AdminVideoImage::where('admin_video_id' , $request->admin_video_id)

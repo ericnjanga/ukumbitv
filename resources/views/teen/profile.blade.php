@@ -19,7 +19,7 @@
                 @endif
 
                 @if(Auth::user()->user_type) 
-                    <h5 style="color:rgb(241, 19, 19)">The Pack will Expiry within <b>{{get_expiry_days(Auth::user()->id)}} days</b></h5>
+                    <h5 style="color:rgb(241, 19, 19)">{{tr('no_of_days_expiry')}} <b>{{get_expiry_days(Auth::user()->id)}} days</b></h5>
                 @endif
 
                 <h6>{{Auth::user()->mobile}}</h6>

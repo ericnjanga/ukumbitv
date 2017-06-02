@@ -11,7 +11,7 @@
           <!-- <h3 class="main-title">{{$sub_category->name}}</h3> -->
           <div class="box-head row no-margin">
                 <h3 style="float:left" class="main-title">{{$sub_category->name}}</h3>
-                <a style="float:right" class="see-all" href="{{route('user.sub-category' ,$sub_category->id)}}">See All </a>
+                <a style="float:right" class="see-all" href="{{route('user.sub-category' ,$sub_category->id)}}">{{tr('see_all')}} </a>
 
             </div>
         </div>

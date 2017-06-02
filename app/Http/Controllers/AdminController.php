@@ -34,6 +34,8 @@ use App\Wishlist;
 
 use App\UserRating;
 
+use App\Language;
+
 use App\Settings;
 
 use App\Page;
@@ -105,14 +107,11 @@ class AdminController extends Controller
 
         $view = last_days(10);
 
-        user_track();
-
         return view('admin.dashboard.dashboard')->withPage('dashboard')
                     ->with('sub_page','')
                     ->with('user_count' , $user_count)
                     ->with('video_count' , $video_count)
                     ->with('provider_count' , $provider_count)
-                    // ->with('trending' , $trending)
                     ->with('get_registers' , $get_registers)
                     ->with('view' , $view)
                     ->with('total_revenue' , $total_revenue)
@@ -295,6 +294,10 @@ class AdminController extends Controller
 
             $user->save();
 
+            // Check the default subscription and save the user type 
+
+            user_type_check($user->id);
+
             if($user) {
                 register_mobile('web');
                 return redirect('/admin/view/user/'.$user->id)->with('flash_success', $message);
@@ -307,6 +310,7 @@ class AdminController extends Controller
     }
 
     public function delete_user(Request $request) {
+        
         if($user = User::where('id',$request->id)->first()) {
             // Check User Exists or not
             if ($user) {
@@ -1420,14 +1424,23 @@ class AdminController extends Controller
                 Helper::upload_video_image($request->file('other_image1'),$video->id,2);
 
                 Helper::upload_video_image($request->file('other_image2'),$video->id,3);
+
+                if (env('QUEUE_DRIVER') != 'redis') {
+
+                    \Log::info("Queue Driver : ".env('QUEUE_DRIVER'));
+
+                    $video->compress_status = DEFAULT_TRUE;
+
+                    $video->trailer_compress_status = DEFAULT_TRUE;
+
+                    $video->save();
+                }
                 /*if($video->is_banner)
                     return redirect(route('admin.banner.videos'));
                 else*/
                 if ($request->has('ajax_key')) {
-
                     Log::info('Video Id Ajax : '.$video->id);
-
-                    return ['id'=> route('admin.view.video', array('id'=>$video->id))];
+                    return ['id'=>route('admin.view.video', array('id'=>$video->id))];
                 } else  {
                     Log::info('Video Id : '.$video->id);
                     return redirect(route('admin.view.video', array('id'=>$video->id)));
@@ -1616,6 +1629,7 @@ class AdminController extends Controller
                         $main_video_url = Helper::video_upload($video_link, $request->compress_video);
                         Log::info("New Video Uploaded ( Main Video ) : ".'Success');
                         $video->video = $main_video_url['db_url'];
+                        $video->video_resolutions = ($request->video_resolutions) ? implode(',', $request->video_resolutions) : null;
                     } else {
                         $video->video = $video_link;
                     }
@@ -1625,12 +1639,12 @@ class AdminController extends Controller
                         $video->is_approved = DEFAULT_FALSE;
                         $trailer_video_url = Helper::video_upload($trailer_video, $request->compress_video);
                         Log::info("New Video Uploaded ( Trailer Video ) : ".'Success');
-                        $video->trailer_video = $trailer_video_url['db_url'];  
+                        $video->trailer_video = $trailer_video_url['db_url']; 
+                        $video->trailer_video_resolutions = ($request->video_resolutions) ? implode(',', $request->video_resolutions) : null; 
                     } else {
                         $video->trailer_video = $trailer_video;
                     }
-                    $video->video_resolutions = ($request->video_resolutions) ? implode(',', $request->video_resolutions) : $video->video_resolutions;
-                    $video->trailer_video_resolutions = ($request->video_resolutions) ? implode(',', $request->video_resolutions) : $video->trailer_video_resolutions;
+                
                     Log::info("Video Resoltuions : ".print_r($video->video_resolutions, true));
                     Log::info("Trailer Video Resoltuions : ".print_r($video->trailer_video_resolutions, true));
                 }                
@@ -1688,7 +1702,7 @@ class AdminController extends Controller
             Log::info("saved Video Object : ".'Success');
 
             if($video) {
-                if ($request->hasFile('video') && $request->hasFile('trailer_video') && $video->video_resolutions) {
+                if ($request->hasFile('video') && $video->video_resolutions) {
                     if ($main_video_url) {
                         $inputFile = $main_video_url['baseUrl'];
                         $local_url = $main_video_url['local_url'];
@@ -1700,6 +1714,9 @@ class AdminController extends Controller
                             Log::info("Main queue completed : ".'Success');
                         }
                     }
+                }
+
+                if($request->hasFile('trailer_video') && $video->trailer_video_resolutions) {
                     if ($trailer_video_url) {
                         $inputFile = $trailer_video_url['baseUrl'];
                         $local_url = $trailer_video_url['local_url'];
@@ -1719,6 +1736,18 @@ class AdminController extends Controller
 
                 if($request->hasFile('other_image2')) {
                    Helper::upload_video_image($request->file('other_image2'),$video->id,3); 
+                }
+
+
+                if (env('QUEUE_DRIVER') != 'redis') {
+
+                    \Log::info("Queue Driver : ".env('QUEUE_DRIVER'));
+
+                    $video->compress_status = DEFAULT_TRUE;
+
+                    $video->trailer_compress_status = DEFAULT_TRUE;
+
+                    $video->save();
                 }
 
                 if ($request->has('ajax_key')) {
@@ -2051,7 +2080,9 @@ class AdminController extends Controller
 
         $result = EnvEditorHelper::getEnvValues();
 
-        return view('admin.settings.settings')->with('settings' , $settings)->with('result', $result)->withPage('settings')->with('sub_page',''); 
+        $languages = Language::where('status', DEFAULT_TRUE)->get();
+
+        return view('admin.settings.settings')->with('settings' , $settings)->with('result', $result)->withPage('settings')->with('sub_page','')->with('languages' , $languages); 
     }
 
     public function payment_settings() {
@@ -2132,9 +2163,7 @@ class AdminController extends Controller
                 } else if($setting->key == "theme") {
 
                     if($request->has('theme')) {
-                        
                         change_theme($setting->value , $request->$key);
-
                         $setting->value = $request->theme;
                     }
 

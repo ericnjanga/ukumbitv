@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 
 use App\Helpers\Helper;
 
+use Setting;
+
 class AuthController extends Controller
 {
     /*
@@ -94,10 +96,20 @@ class AuthController extends Controller
             'is_activated' => 1,
             'login_by' => 'manual',
             'device_type' => 'web',
-            'user_type'  => 1
         ]);
 
+        // Check the default subscription and save the user type 
+
+        user_type_check($User->id);
+
         register_mobile('web');
+
+        if(!Setting::get('email_verify_control')) {
+
+            $User->is_verified = 1;
+
+            $User->save();
+        }
         
         // Send welcome email to the new user:
         $subject = tr('user_welcome_title');
@@ -110,10 +122,30 @@ class AuthController extends Controller
     }
 
 
-    protected function authenticated(Request $request, User $user){
+    protected function authenticated(Request $request, User $user) {
 
         if(\Auth::check()) {
+
             if($user = User::find(\Auth::user()->id)) {
+
+                // Check Admin Enabled the email verification
+
+                if(Setting::get('email_verify_control')) {
+
+                    if(!$user->is_verified) {
+
+                        \Auth::logout();
+
+                        // Check the verification code expiry
+
+                        Helper::check_email_verification("" , $user, $error);
+
+                        return redirect(route('user.login.form'))->with('flash_error', tr('email_verify_alert'));
+
+                    }
+
+                }
+
                 $user->login_by = 'manual';
                 $user->timezone = $request->has('timezone') ? $request->timezone : '';
                 $user->save();

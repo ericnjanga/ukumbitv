@@ -38,13 +38,25 @@ use App\Flag;
 
 use App\PayPerView;
 
+use App\Language;
+
 function tr($key) {
 
-    if (!\Session::has('locale'))
-        \Session::put('locale', \Config::get('app.locale'));
-    return \Lang::choice('messages.'.$key, 0, Array(), \Session::get('locale'));
+    if(Auth::guard('admin')->check()) {
+        // $locale = config('app.locale');
+        $locale = Setting::get('default_lang' , 'en');
+    } else {
+        if (!\Session::has('locale')) {
+            $locale = \Session::put('locale', config('app.locale'));
+        }else {
+            $locale = \Session::get('locale');
+        }
 
+    }
+    
+    return \Lang::choice('messages.'.$key, 0, Array(), $locale);
 }
+
 
 function envfile($key) {
 
@@ -237,11 +249,41 @@ function get_youtube_embed_link($video_url) {
         }
     }
 
-    // $video_url_id = substr($video_url, strpos($video_url, "=") + 1);
-
-    // $youtube_embed = "https://www.youtube.com/embed/" . $video_url_id;
-
     return $video_url;
+
+}
+
+// Need to convert the youtube link to mobile acceptable format
+
+function get_api_youtube_link($url) {
+
+    $youtube_embed = $url;
+    
+    if($url) {
+
+        // Ex : https://www.youtube.com/watch?v=jebJ9itYTJE 
+
+        if(strpos($url, "=")) {
+
+            $video_url_id = substr($url, strpos($url, "=") + 1);
+
+            $youtube_embed = "https://www.youtube.com/embed/" . $video_url_id;
+
+        } elseif(strpos($url , 'embed')) {
+
+            $youtube_embed = $url;
+
+        } else {
+
+            // EX : https://youtu.be/2CLJuuKvou4
+
+            if(strpos($url , "youtu.be")) {
+                $youtube_embed = str_replace("https://youtu.be/", "https://www.youtube.com/embed/" , $url );
+            }
+        }
+    }
+
+    return $youtube_embed;
 
 }
 
@@ -970,11 +1012,19 @@ function convertMegaBytes($bytes) {
 function get_video_attributes($video) {
 
     $command = 'ffmpeg -i ' . $video . ' -vstats 2>&1';
+
+    Log::info("Path ".$video);
+
     $output = shell_exec($command);
+
+    Log::info("Shell Exec : ".$output);
+
 
     $codec = null; $width = null; $height = null;
 
     $regex_sizes = "/Video: ([^,]*), ([^,]*), ([0-9]{1,4})x([0-9]{1,4})/";
+
+    Log::info("Preg Match :" .preg_match($regex_sizes, $output, $regs));
     if (preg_match($regex_sizes, $output, $regs)) {
         $codec = $regs [1] ? $regs [1] : null;
         $width = $regs [3] ? $regs [3] : null;
@@ -990,6 +1040,10 @@ function get_video_attributes($video) {
         $secs = $regs [3] ? $regs [3] : null;
         $ms = $regs [4] ? $regs [4] : null;
     }
+
+    Log::info("Width of the video : ".$width);
+    Log::info("Height of the video : ".$height);
+
     return array('codec' => $codec,
         'width' => $width,
         'height' => $height,
@@ -1020,6 +1074,8 @@ function readFileName($inputFile) {
     $video_attributes = [];
     
     if (preg_match('/video\/*/', $mime_type)) {
+
+        Log::info("Inside ffmpeg");
 
         $video_attributes = get_video_attributes($inputFile, 'ffmpeg');
     } 
@@ -1087,4 +1143,57 @@ function deleteVideoAndImages($video) {
             Helper::delete_picture($video->banner_image, "/uploads/images/");
         }
     }
+}
+
+/**
+ * Check the default subscription is enabled by admin
+ *
+ */
+
+function user_type_check($user) {
+
+    $user = User::find($user);
+
+    if($user) {
+
+        // User need subscripe the plan
+
+        if(Setting::get('is_subscription')) {
+
+            $user->user_type = 0;
+
+        } else {
+            // Enable the user as paid user
+            $user->user_type = 1;
+        }
+
+        $user->save();
+
+    }
+
+}
+
+function readFileLength($file)  {
+
+    $variableLength = 0;
+    if (($handle = fopen($file, "r")) !== FALSE) {
+         $row = 1;
+         while (($data = fgetcsv($handle, 1000, "\n")) !== FALSE) {
+            $num = count($data);
+            $row++;
+            for ($c=0; $c < $num; $c++) {
+                $exp = explode("=>", $data[$c]);
+                if (count($exp) == 2) {
+                    $variableLength += 1; 
+                }
+            }
+        }
+        fclose($handle);
+    }
+
+    return $variableLength;
+}
+
+function getActiveLanguages() {
+    return Language::where('status', DEFAULT_TRUE)->get();
 }

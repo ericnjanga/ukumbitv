@@ -25,6 +25,15 @@
 @include('notification.notify')
 
 
+@if(envfile('QUEUE_DRIVER') != 'redis') 
+
+ <div class="alert alert-warning">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+        {{tr('warning_error_queue')}}
+</div>
+@endif
+
+
 <div class="row">
     <div class="col-lg-12">
         <section>
@@ -57,7 +66,7 @@
                     </li>
 
                     <li role="presentation" class="disabled">
-                        <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Upload Video/Image">
+                        <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="{{tr('upload_video_image')}}">
                             <span class="round-tab">
                                 <i class="glyphicon glyphicon-picture"></i>
                             </span>
@@ -91,7 +100,7 @@
 
                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
+                                    <label>{{tr('duration')}} * : </label><small> {{tr('duration_note')}}</small>
 
                                     <div class="input-group">
                                         <div class="input-group-addon">
@@ -139,13 +148,13 @@
                         </div>
                         <ul class="list-inline pull-right">
                             <li>
-                                <button type="button" style="display: none;" id="{{REQUEST_STEP_1}}" class="btn btn-primary next-step">Next</button>
-                                <button type="button" class="btn btn-primary" onclick="saveVideoDetails({{REQUEST_STEP_1}})">Next</button>
+                                <button type="button" style="display: none;" id="{{REQUEST_STEP_1}}" class="btn btn-primary next-step">{{tr('next')}}</button>
+                                <button type="button" class="btn btn-primary" onclick="saveVideoDetails({{REQUEST_STEP_1}})">{{tr('next')}}</button>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="step2">
-                        <h3>Category</h3>
+                        <h3>{{tr('category')}}</h3>
                         <hr>
                         <div id="category">
                             @foreach($categories as $category)
@@ -160,13 +169,13 @@
                         </div>
                         <div class="clearfix"></div>
                         <ul class="list-inline">
-                            <li class="pull-left"><button type="button" class="btn btn-danger prev-step">Previous</button></li>
-                            <li class="pull-right" style="display: none"><button type="button" class="btn btn-primary next-step" id="{{REQUEST_STEP_2}}">Save and continue</button></li>
+                            <li class="pull-left"><button type="button" class="btn btn-danger prev-step">{{tr('previous')}}</button></li>
+                            <li class="pull-right" style="display: none"><button type="button" class="btn btn-primary next-step" id="{{REQUEST_STEP_2}}">{{tr('save_continue')}}</button></li>
                             <div class="clearfix"></div>
                         </ul>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="step3">
-                        <h3>Sub Category</h3>
+                        <h3>{{tr('sub_category')}}</h3>
                         <hr>
                         <div id="sub_category">
                             
@@ -174,14 +183,14 @@
                         <input type="hidden" name="sub_category_id" id="sub_category_id" />
                         <div class="clearfix"></div>
                         <ul class="list-inline">
-                            <li><button type="button" class="btn btn-danger prev-step">Previous</button></li>
+                            <li><button type="button" class="btn btn-danger prev-step">{{tr('previous')}}</button></li>
                             <!-- <li><button type="button" class="btn btn-default next-step">Skip</button></li> -->
-                            <li class="pull-right" style="display:none"><button  id="{{REQUEST_STEP_3}}" type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
+                            <li class="pull-right" style="display:none"><button  id="{{REQUEST_STEP_3}}" type="button" class="btn btn-primary btn-info-full next-step">{{tr('save_continue')}}</button></li>
                             <div class="clearfix"></div>
                         </ul>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="complete">
-                        <h3>Upload Video/Image</h3>
+                        <h3>{{tr('upload_video_image')}}</h3>
                         <hr>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -331,12 +340,12 @@
                         <div class="clearfix"></div>
                         <hr>
                         <ul class="list-inline">
-                            <li><button type="button" class="btn btn-danger prev-step">Previous</button></li>
+                            <li><button type="button" class="btn btn-danger prev-step">{{tr('previous')}}</button></li>
                             <!-- <li><button type="button" class="btn btn-default next-step">Skip</button></li> -->
                             @if(Setting::get('admin_delete_control') == 1) 
-                            <li class="pull-right"><button disabled id="{{REQUEST_STEP_FINAL}}" type="button" class="btn btn-primary btn-info-full">Finish</button></li>
+                            <li class="pull-right"><button disabled id="{{REQUEST_STEP_FINAL}}" type="button" class="btn btn-primary btn-info-full">{{tr('finish')}}</button></li>
                             @else
-                                <li class="pull-right"><button id="{{REQUEST_STEP_FINAL}}" type="submit" class="btn btn-primary btn-info-full">Finish</button></li>
+                                <li class="pull-right"><button id="{{REQUEST_STEP_FINAL}}" type="submit" class="btn btn-primary btn-info-full">{{tr('finish')}}</button></li>
                                  <li class="pull-right">
                                     <div class="progress">
                                         <div class="bar"></div >
@@ -420,9 +429,8 @@
         $('form').submit(function () {
            window.onbeforeunload = null;
         });
-        
         window.onbeforeunload = function() {
-            return "Data will be lost if you leave the page, are you sure?";
+             return "Data will be lost if you leave the page, are you sure?";
         };
     </script>
  

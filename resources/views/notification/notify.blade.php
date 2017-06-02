@@ -1,11 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: aravinth
- * Date: 5/7/15
- * Time: 11:58 AM
- */
-?>
+
 @if(Session::has('flash_errors'))
     @if(is_array(Session::get('flash_errors')))
         <div class="alert alert-danger" >

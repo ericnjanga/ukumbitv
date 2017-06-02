@@ -32,7 +32,7 @@
 
 	* 1920x1080
 
-* Admin Settings
+* Admin Settings *
 	
 	* Email Configuration
 
@@ -42,29 +42,27 @@
 
 	* AWS s3 Settings
 
-* Pay Per Video
+* Pay Per Video *
 	
 	* Can choose user type - All users , Paid Users or Normal users
 
 	* Can choose payment type - Recurring Payment or OneTime Payment
 
+* Email Verification Added *
+
+* Multi Language Feature Added *
+
+* Video On Demand - Cross Browser Support Added *
+
 *** Please create folders for resoluions with 777 permissions. ***
 
-<code> public/uploads/videos/ </code>
+public/uploads/videos/original 
 
-	* 426x240
+public/uploads/images/ 
 
-	* 640x360
-
-	* 854x480
-
-	* 1280x720
-
-	* 1920x1080
-
-
-<code>public/uploads/images/ </code>
+public/uploads/smil/ 
 
 
 
-# ukumbitv
+
+

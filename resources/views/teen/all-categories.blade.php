@@ -13,7 +13,7 @@
             <div class="video-box">
                 <a href="{{route('user.category',$category->id)}}">
                     <img src="{{$category->picture}}">
-                    <span class="time">{{category_video_count($category->id)}} Videos</span>
+                    <span class="time">{{category_video_count($category->id)}} {{tr('videos')}}</span>
                     <h5 class="video-title cat">{{$category->name}}</h5>
                 </a>
             </div>

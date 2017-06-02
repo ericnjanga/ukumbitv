@@ -170,7 +170,7 @@
 
             <div class="row column head-text clearfix">
 
-                <p class="pull-left">All Videos : <span>{{total_video_count()}} Videos posted</span></p>
+                <p class="pull-left">{{tr('all_videos')}} : <span>{{total_video_count()}} {{tr('videos_posted')}}</span></p>
                 <div class="grid-system pull-right show-for-large">
                     <a class="secondary-button current grid-default" href="#"><i class="fa fa-th"></i></a>
                     <a class="secondary-button grid-medium" href="#"><i class="fa fa-th-large"></i></a>

@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <label for="name" class="col-sm-1 control-label">{{tr('name')}}</label>
                             <div class="col-sm-10">
-                                <input type="text" required class="form-control" value="{{$category->name}}" id="name" name="name" placeholder="Category Name">
+                                <input type="text" required class="form-control" value="{{$category->name}}" id="name" name="name" placeholder="{{tr('enter')}} {{tr('category')}}">
                             </div>
                         </div>
 

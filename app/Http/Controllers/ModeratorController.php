@@ -725,10 +725,21 @@ class ModeratorController extends Controller
 
                 Helper::upload_video_image($request->file('other_image2'),$video->id,3);
 
+                if (env('QUEUE_DRIVER') != 'redis') {
+
+                    \Log::info("Queue Driver : ".env('QUEUE_DRIVER'));
+
+                    $video->compress_status = DEFAULT_TRUE;
+
+                    $video->trailer_compress_status = DEFAULT_TRUE;
+
+                    $video->save();
+                }
+
                 if ($request->has('ajax_key')) {
-                    return ['id'=> route('moderator.view.video', array('id' => $video->id))];
+                    return ['id'=>route('moderator.view.video', array('id'=>$video->id))];
                 } else {
-                    return redirect(route('moderator.view.video', array('id' => $video->id)))->with('flash_success', tr('video_create_success'));
+                    return redirect(route('moderator.view.video', array('id'=>$video->id)))->with('flash_success', tr('video_create_success'));
                 }
             } else {
                 if ($request->has('ajax_key')) {
@@ -866,6 +877,7 @@ class ModeratorController extends Controller
                         foreach ($splitVideos as $key => $value) {
                            Helper::delete_picture($video->video, $videopath.$value.'/');
                         }
+                        $video->video_resolutions = ($request->video_resolutions) ? implode(',', $request->video_resolutions) : null;
                         Log::info("Deleted Main Video : ".'Success');   
                     }
                     if ($request->hasFile('trailer_video')) {
@@ -878,6 +890,7 @@ class ModeratorController extends Controller
                            Helper::delete_picture($video->trailer_video, $videopath.$value.'/');
                         }
                         Log::info("Deleted Trailer Video : ".'Success');
+                        $video->trailer_video_resolutions = ($request->video_resolutions) ? implode(',', $request->video_resolutions) : null; 
                     }
 
                 }
@@ -903,8 +916,8 @@ class ModeratorController extends Controller
                     } else {
                         $video->trailer_video = $trailer_video;
                     }
-                    $video->video_resolutions = ($request->video_resolutions) ? implode(',', $request->video_resolutions) : $video->video_resolutions;
-                    $video->trailer_video_resolutions = ($request->video_resolutions) ? implode(',', $request->video_resolutions) : $video->video_resolutions;
+                    /*$video->video_resolutions = ($request->video_resolutions) ? implode(',', $request->video_resolutions) : $video->video_resolutions;
+                    $video->trailer_video_resolutions = ($request->video_resolutions) ? implode(',', $request->video_resolutions) : $video->video_resolutions;*/
                 }                
 
             } elseif($request->video_type == VIDEO_TYPE_YOUTUBE && $video_link && $trailer_video) {
@@ -951,7 +964,7 @@ class ModeratorController extends Controller
 
             if($video) {
 
-                if ($request->hasFile('video') && $request->hasFile('trailer_video') && $video->video_resolutions) {
+                if ($request->hasFile('video') && $video->video_resolutions) {
 
                     if ($main_video_url) {
                         $inputFile = $main_video_url['baseUrl'];
@@ -964,6 +977,9 @@ class ModeratorController extends Controller
                             Log::info("Main queue completed : ".'Success');
                         }
                     }
+                }
+
+                if($request->hasFile('trailer_video') && $video->trailer_video_resolutions) {
                     if ($trailer_video_url) {
                         $inputFile = $trailer_video_url['baseUrl'];
                         $local_url = $trailer_video_url['local_url'];
@@ -985,9 +1001,20 @@ class ModeratorController extends Controller
                    Helper::upload_video_image($request->file('other_image2'),$video->id,3); 
                 }
 
+                if (env('QUEUE_DRIVER') != 'redis') {
+
+                    \Log::info("Queue Driver : ".env('QUEUE_DRIVER'));
+
+                    $video->compress_status = DEFAULT_TRUE;
+
+                    $video->trailer_compress_status = DEFAULT_TRUE;
+
+                    $video->save();
+                }
+
                 // dd($video->id);
                 if ($request->has('ajax_key')) {
-                    return ['id'=> route('moderator.view.video', array('id' => $video->id))];
+                    return ['id'=>route('moderator.view.video', array('id'=>$video->id))];
                 } else {
                     return redirect(route('moderator.view.video', array('id'=>$video->id)))->with('flash_success', tr('video_edit_success'));
                 }

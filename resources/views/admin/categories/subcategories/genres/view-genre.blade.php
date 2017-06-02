@@ -132,7 +132,7 @@
                                 @if($image->is_default)
                                     <span style="margin-left:0px" class="username"><a href="#">{{tr('default_image')}}</a></span>
                                 @else
-                                    <span style="margin-left:0px" class="username"><a href="#">Image {{$image->position}}</a></span>
+                                    <span style="margin-left:0px" class="username"><a href="#">{{tr('image')}} {{$image->position}}</a></span>
                                 @endif
                             </div>
 

@@ -28,19 +28,17 @@
                         <h5 class="text-center">{{tr('delete_account_heading')}}</h5>
 
                         <p>
-                            <strong style="color: brown">Note:</strong> {{tr('delete_account_content')}}
+                            <strong style="color: brown">{{tr('note')}}:</strong> {{tr('delete_account_content')}}
                         </p>
 
                             <form method="post" data-abide="bhwxrp-abide" novalidate="" action="{{ route('user.delete.account.process') }}">                                
 
                                 <div class="input-group">
                                     <span class="input-group-label"><i class="fa fa-user"></i></span>
-                                    <input type="password" name="password" placeholder="Enter your Password" required="">
+                                    <input type="password" name="password" placeholder="{{tr('enter_password')}}" required="">
                                 </div>
 
                                 <button class="button expanded" type="submit" name="submit">{{tr('delete')}}</button>
-
-                                
 
                             </form>
                         </div>

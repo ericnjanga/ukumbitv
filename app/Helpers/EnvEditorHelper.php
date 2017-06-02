@@ -8,7 +8,6 @@ class EnvEditorHelper
 {
 	
 	public static function getEnvValues() {
-		
 		$data =  array();
 
 		$path = base_path('.env');

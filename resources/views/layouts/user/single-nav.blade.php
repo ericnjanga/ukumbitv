@@ -30,7 +30,7 @@
 
     @else
         <div class="menu4">
-            <p>Sign in now to see your channels and recommendations!</p>
+            <p>{{tr('streamtube_signin_nav_content')}}</p>
             <form method="get" action="{{route('user.login.form')}}">
                 <button type="submit">{{tr('login')}}</button>
             </form>

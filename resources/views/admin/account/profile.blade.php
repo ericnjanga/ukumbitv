@@ -80,7 +80,7 @@
                                 <label for="email" class="col-sm-2 control-label">{{tr('email')}}</label>
 
                                 <div class="col-sm-10">
-                                  <input type="email" required value="{{Auth::guard('admin')->user()->email}}" name="email" class="form-control" id="email" placeholder="{{tr('email')}}" readonly>
+                                  <input type="email" required value="{{Auth::guard('admin')->user()->email}}" name="email" class="form-control" id="email" placeholder="{{tr('email')}}">
                                 </div>
                             </div>
 
@@ -89,8 +89,8 @@
                                 <label for="mobile" class="col-sm-2 control-label">{{tr('mobile')}}</label>
 
                                 <div class="col-sm-10">
-                                  <input type="text" required value="{{Auth::guard('admin')->user()->mobile}}" name="mobile" class="form-control" id="mobile" placeholder="{{tr('mobile')}}" pattern="[0-9]{6,}">
-                                  <small style="color:brown">Note : The mobile must be between 6 and 13 digits.</small>
+                                  <input type="text" value="{{Auth::guard('admin')->user()->mobile}}" name="mobile" class="form-control" id="mobile" placeholder="{{tr('mobile')}}" pattern="[0-9]{6,}">
+                                  <small style="color:brown">{{tr('mobile_note')}}</small>
                                 </div>
                             </div>
 
@@ -98,7 +98,7 @@
                                 <label for="address" class="col-sm-2 control-label">{{tr('address')}}</label>
 
                                 <div class="col-sm-10">
-                                  <input type="text" required value="{{Auth::guard('admin')->user()->address}}" name="address" class="form-control" id="address" placeholder="{{tr('address')}}">
+                                  <input type="text" value="{{Auth::guard('admin')->user()->address}}" name="address" class="form-control" id="address" placeholder="{{tr('address')}}">
                                 </div>
                             </div>
 

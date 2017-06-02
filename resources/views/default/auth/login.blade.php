@@ -25,6 +25,8 @@
 
                             <h5 class="text-center">{{tr('login')}}</h5>
 
+                            @include('notification.notify')
+
                             <form data-abide="xdc2hs-abide" novalidate="" role="form" method="POST" action="{{ url('/login') }}">
 
                                 {!! csrf_field() !!}
@@ -48,7 +50,7 @@
 
                                     <span class="input-group-label"><i class="fa fa-user"></i></span>
 
-                                    <input class="input-group-field" type="text" name="email" placeholder="Enter your email" required="">
+                                    <input class="input-group-field" type="text" name="email" placeholder="{{tr('enter')}} {{tr('email')}}" required="">
 
                                     @if($errors->has('email'))
                                         <span class="form-error"><strong>{{ $errors->first('email') }}</strong></span>
@@ -59,7 +61,7 @@
                                 <div class="input-group">
                                     <span class="input-group-label"><i class="fa fa-lock"></i></span>
                                     
-                                    <input type="password" id="password" name="password" placeholder="Enter your password" required="">
+                                    <input type="password" id="password" name="password" placeholder="{{tr('enter')}} {{tr('password')}}" required="">
 
                                     <span class="form-error">
                                         @if ($errors->has('password'))

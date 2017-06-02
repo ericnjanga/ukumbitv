@@ -86,30 +86,76 @@
 
                         <form action="{{(Setting::get('admin_delete_control') == 1) ? '' : route('admin.save.settings')}}" method="POST" enctype="multipart/form-data" role="form">
                             <div class="box-body">
+
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="streaming_url">{{tr('streaming_url')}}</label>
                                         <input type="text" value="{{ Setting::get('streaming_url')}}" class="form-control" name="streaming_url" id="streaming_url" placeholder="Enter Streaming URL">
                                     </div> 
                                 </div>
-                                <div class="col-lg-3">
-                                     <div class="form-group">
-                                        <label for="amount">{{tr('amount')}}</label>
-                                        <input type="text" class="form-control" value="{{Setting::get('amount')  }}" name="amount" id="amount" placeholder="{{tr('amount')}}" pattern="[0-9]{1,}">
+
+                                @if(Setting::get('is_subscription'))
+
+                                    <div class="col-lg-3">
+                                         <div class="form-group">
+                                            <label for="amount">{{tr('amount')}}</label>
+                                            <input type="text" class="form-control" value="{{Setting::get('amount')  }}" name="amount" id="amount" placeholder="{{tr('amount')}}" pattern="[0-9]{1,}">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label for="expiry_days">{{tr('expiry_days')}}</label>
-                                        <input type="text" class="form-control" value="{{Setting::get('expiry_days')  }}" name="expiry_days" id="expiry_days" placeholder="{{tr('expiry_days')}}" pattern="[0-9]{1,}">
-                                    </div>   
-                                </div>
+                                    
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="expiry_days">{{tr('expiry_days')}}</label>
+                                            <input type="text" class="form-control" value="{{Setting::get('expiry_days')  }}" name="expiry_days" id="expiry_days" placeholder="{{tr('expiry_days')}}" pattern="[0-9]{1,}">
+                                        </div>   
+                                    </div>
+
+                                @endif
+
+
                                 <div class="col-lg-12">
+
                                     <div class="form-group">
                                         <label for="google_analytics">{{tr('google_analytics')}}</label>
                                         <textarea class="form-control" id="google_analytics" name="google_analytics">{{Setting::get('google_analytics')}}</textarea>
                                     </div>
-                                </div>   
+
+                                </div> 
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="playstore">{{tr('playstore')}}</label>
+                                        <input type="text" value="{{ Setting::get('playstore')}}" class="form-control" name="playstore" id="playstore" placeholder="{{tr('playstore')}}">
+                                    </div> 
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="appstore">{{tr('appstore')}}</label>
+                                        <input type="text" value="{{ Setting::get('appstore')}}" class="form-control" name="appstore" id="appstore" placeholder="Enter {{tr('appstore')}}">
+                                    </div> 
+                                </div>
+
+                                @if(Setting::get('admin_language_control') == 0)
+
+                                <div class="col-lg-12">
+
+                                    <div class="form-group">
+                                        <label for="amount">{{tr('default_lang')}}</label>
+
+                                        <select class="form-control" name="default_lang" id="default_lang" required>
+
+                                            <option value="">{{tr('language')}}</option>
+                                                @foreach($languages as $h => $language)
+                                                    <option value="{{$language->folder_name}}" {{(Setting::get('default_lang') == $language->folder_name) ? 'selected' : Setting::get('default_lang')}}>{{$language->language}}({{$language->folder_name}})</option>
+                                                @endforeach
+                                            
+                                            </select>
+                                    </div> 
+
+                                </div>  
+
+                                @endif
 
                           </div>
                           <!-- /.box-body -->
