@@ -1,9 +1,5 @@
 <?php
 
-
-use Illuminate\Support\Facades\Redis;
-
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -16,12 +12,6 @@ use Illuminate\Support\Facades\Redis;
 */
 
 // Report Video type
-
-Route::get('redis/test',function(){
-    $redis = Redis::connection();    
-    $views=$redis->incr('view');
-    dd($views);
-});
 
 if(!defined('REPORT_VIDEO_KEY')) define('REPORT_VIDEO_KEY', 'REPORT_VIDEO');
 if (!defined('IMAGE_RESOLUTIONS_KEY')) define('IMAGE_RESOLUTIONS_KEY', 'IMAGE_RESOLUTIONS');
@@ -107,10 +97,6 @@ if(!defined('WEB')) define('WEB' , 1);
 
 Route::get('/test' , 'ApplicationController@test');
 
-Route::post('/test' , 'ApplicationController@test')->name('test');
-
-Route::get('/email/verification' , 'ApplicationController@email_verify')->name('email.verify');
-
 // Installation
 
 Route::get('/install/theme', 'InstallationController@install')->name('installTheme');
@@ -120,6 +106,8 @@ Route::get('/system/check', 'InstallationController@system_check_process')->name
 Route::post('/install/theme', 'InstallationController@theme_check_process')->name('install.theme');
 
 Route::post('/install/settings', 'InstallationController@settings_process')->name('install.settings');
+
+Route::get('/test', 'ApplicationController@test')->name('test');
 
 // Elastic Search Test
 
@@ -154,10 +142,6 @@ Route::get('/about', 'ApplicationController@about')->name('user.about');
 Route::post('select/sub_category' , 'ApplicationController@select_sub_category')->name('select.sub_category');
 
 Route::post('select/genre' , 'ApplicationController@select_genre')->name('select.genre');
-
-Route::get('admin_control', 'ApplicationController@admin_control')->name('admin_control');
-
-Route::post('save_admin_control', 'ApplicationController@save_admin_control')->name('save_admin_control');
 
 
 Route::group(['prefix' => 'admin'], function(){
@@ -365,25 +349,6 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::post('/custom/push', 'AdminController@custom_push_process')->name('admin.send.push');
 
-
-    // Languages
-    Route::get('/languages/index', 'LanguageController@languages_index')->name('admin.languages.index'); 
-
-    Route::get('/languages/download/{folder}', 'LanguageController@languages_download')->name('admin.languages.download'); 
-
-    Route::get('/languages/create', 'LanguageController@languages_create')->name('admin.languages.create');
-    
-    Route::get('/languages/edit/{id}', 'LanguageController@languages_edit')->name('admin.languages.edit');
-
-    Route::get('/languages/status/{id}', 'LanguageController@languages_status')->name('admin.languages.status');   
-
-    Route::post('/languages/save', 'LanguageController@languages_save')->name('admin.languages.save');
-
-    Route::get('/languages/delete/{id}', 'LanguageController@languages_delete')->name('admin.languages.delete');
-
-    Route::get('/languages/set_default_language/{name}', 'LanguageController@set_default_language')->name('admin.languages.set_default_language');
-
-
 });
 
 Route::get('/', 'UserController@index')->name('user.dashboard');
@@ -393,6 +358,8 @@ Route::get('/single', 'UserController@single_video');
 Route::get('/user/searchall' , 'ApplicationController@search_video')->name('search');
 
 Route::any('/user/search' , 'ApplicationController@search_all')->name('search-all');
+
+// Route::any('/user/search' , 'ApplicationController@search_all')->name('search-all');
 
 // Categories and single video 
 
@@ -406,14 +373,13 @@ Route::get('genre/{id}', 'UserController@genre_videos')->name('user.genre');
 
 Route::get('video/{id}', 'UserController@single_video')->name('user.single');
 
+Route::get('newvideo/{id}', 'UserController@single_newvideo')->name('user.single'); // Added By Vishnu
 
 // Social Login
 
 Route::post('/social', array('as' => 'SocialLogin' , 'uses' => 'SocialAuthController@redirect'));
 
 Route::get('/callback/{provider}', 'SocialAuthController@callback');
-
-Route::get('/user_session_language/{lang}', 'ApplicationController@set_session_language')->name('user_session_language');
 
 
 Route::group([], function(){

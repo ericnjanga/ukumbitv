@@ -96,8 +96,9 @@ class UserController extends Controller {
         }
         
     }
+//Added New function by Vishnu
 
-    public function single_video($id) {
+    public function single_newvideo($id) {
 
         $video = Helper::get_video_details($id);
 
@@ -123,11 +124,9 @@ class UserController extends Controller {
 
         if($video) {
 
-            $original_trailer_video = $original_main_video = $hls_main_video = $hls_trailer_video = "";
+            $trailer_video = $video->trailer_video;
 
-            $trailer_video = $original_trailer_video = $hls_main_video = $video->trailer_video;
-
-            $main_video = $original_main_video = $hls_trailer_video = $video->video; 
+            $main_video = $video->video; 
 
             if($video->video_type == 1) {
 
@@ -142,25 +141,15 @@ class UserController extends Controller {
                         $trailer_video = \Setting::get('streaming_url').get_video_end($video->trailer_video);
                     }
                 }
-           
             }
 
+
             $videoPath = $video_pixels = $trailer_video_path = $trailer_pixels = $trailerstreamUrl = $videoStreamUrl = '';
-
             if ($video->video_type == 1) {
-
-                $hls_main_video = envfile('HLS_STREAMING_URL').get_video_end($video->video);
-
-                $hls_trailer_video = envfile('HLS_STREAMING_URL').get_video_end($video->trailer_video);
-
                 if (\Setting::get('streaming_url')) {
-
                     $trailerstreamUrl = \Setting::get('streaming_url').get_video_end($video->trailer_video);
-
                     $videoStreamUrl = \Setting::get('streaming_url').get_video_end($video->video);
-
                     if ($video->is_approved == 1) {
-
                         if($video->trailer_video_resolutions) {
                             $trailerstreamUrl = Helper::web_url().'/uploads/smil/'.get_video_end_smil($video->trailer_video).'.smil';
                         } 
@@ -168,7 +157,6 @@ class UserController extends Controller {
                             $videoStreamUrl = Helper::web_url().'/uploads/smil/'.get_video_end_smil($video->video).'.smil';
                         }
                     }
-
                 } else {
 
                     $videoPath = $video->video_resize_path ? $video->video.','.$video->video_resize_path : $video->video;
@@ -177,14 +165,13 @@ class UserController extends Controller {
                     $trailer_pixels = $video->trailer_video_resolutions ? 'original'.$video->trailer_video_resolutions : 'original';
 
                 }
-
             } else {
                 $trailerstreamUrl = $video->trailer_video;
                 $videoStreamUrl = $video->video;
             }
             
         } else {
-            return redirect('/')->with('flash_error' , tr('no_video_found'));
+            return redirect('/')->with('flash_error' , tr('video_not_found'));
         }
 
         if(\Auth::check()) {
@@ -192,12 +179,121 @@ class UserController extends Controller {
             $history_status = Helper::history_status(\Auth::user()->id,$id);
 
         }
-
         $share_link = route('user.single' , $id);
+        
+        return view('user.single_newvideo')
+                    ->with('page' , '')
+                    ->with('subPage' , '')
+                    ->with('video' , $video)
+                    ->with('recent_videos' , $recent_videos)
+                    ->with('trendings' , $trendings)
+                    ->with('comments' , $comments)
+                    ->with('suggestions',$suggestions)
+                    ->with('wishlist_status' , $wishlist_status)
+                    ->with('history_status' , $history_status)
+                    ->with('trailer_video' , $trailer_video)
+                    ->with('main_video' , $main_video)
+                    ->with('url' , $main_video)
+                    ->with('categories' , $categories)
+                    ->with('report_video', $report_video)
+                    ->with('videoPath', $videoPath)
+                    ->with('video_pixels', $video_pixels)
+                    ->with('trailer_video_path', $trailer_video_path)
+                    ->with('trailer_pixels', $trailer_pixels)
+                    ->with('videoStreamUrl', $videoStreamUrl)
+                    ->with('trailerstreamUrl', $trailerstreamUrl)
+                    ->with('flaggedVideo', $flaggedVideo);
+    }
 
-        // \Log::info("HLS VIDEO".print_r($hls_main_video , true));
+    /**
+     * Show the profile list.
+     *
+     * @return \Illuminate\Http\Response
+     */
+	// End By Vishnu
+	 
+	public function single_video($id) {
 
-        // \Log::info("HLS TRAILER VIDEO".print_r($hls_trailer_video , true));
+        $video = Helper::get_video_details($id);
+
+        $trendings = Helper::trending(WEB);
+
+        $recent_videos = Helper::recently_added(WEB);
+
+        $categories = get_categories();
+
+        $comments = Helper::get_video_comments($id,0,WEB);
+
+        $suggestions = Helper::suggestion_videos('', '', $id);
+
+        $wishlist_status = $history_status = WISHLIST_EMPTY;
+
+        $trailer_video = $main_video = "";
+
+        $report_video = getReportVideoTypes();
+
+        // Load the user flag
+
+        $flaggedVideo = (Auth::check()) ? Flag::where('video_id',$id)->where('user_id', Auth::user()->id)->first() : '';
+
+        if($video) {
+
+            $trailer_video = $video->trailer_video;
+
+            $main_video = $video->video; 
+
+            if($video->video_type == 1) {
+
+                if(check_valid_url($video->video) && $video->video_upload_type == 2) {
+                    if(\Setting::get('streaming_url')) {
+                        $main_video = \Setting::get('streaming_url').get_video_end($video->video);
+                    }
+                }
+
+                if(check_valid_url($video->trailer_video) && $video->video_upload_type == 2) {
+                    if(\Setting::get('streaming_url')) {
+                        $trailer_video = \Setting::get('streaming_url').get_video_end($video->trailer_video);
+                    }
+                }
+            }
+
+
+            $videoPath = $video_pixels = $trailer_video_path = $trailer_pixels = $trailerstreamUrl = $videoStreamUrl = '';
+            if ($video->video_type == 1) {
+                if (\Setting::get('streaming_url')) {
+                    $trailerstreamUrl = \Setting::get('streaming_url').get_video_end($video->trailer_video);
+                    $videoStreamUrl = \Setting::get('streaming_url').get_video_end($video->video);
+                    if ($video->is_approved == 1) {
+                        if($video->trailer_video_resolutions) {
+                            $trailerstreamUrl = Helper::web_url().'/uploads/smil/'.get_video_end_smil($video->trailer_video).'.smil';
+                        } 
+                        if ($video->video_resolutions) {
+                            $videoStreamUrl = Helper::web_url().'/uploads/smil/'.get_video_end_smil($video->video).'.smil';
+                        }
+                    }
+                } else {
+
+                    $videoPath = $video->video_resize_path ? $video->video.','.$video->video_resize_path : $video->video;
+                    $video_pixels = $video->video_resolutions ? 'original,'.$video->video_resolutions : 'original';
+                    $trailer_video_path = $video->trailer_video_path ? $video->trailer_video.','.$video->trailer_video_path : $video->trailer_video;
+                    $trailer_pixels = $video->trailer_video_resolutions ? 'original'.$video->trailer_video_resolutions : 'original';
+
+                }
+            } else {
+                $trailerstreamUrl = $video->trailer_video;
+                $videoStreamUrl = $video->video;
+            }
+            
+        } else {
+            return redirect('/')->with('flash_error' , tr('video_not_found'));
+        }
+
+        if(\Auth::check()) {
+            $wishlist_status = Helper::check_wishlist_status(\Auth::user()->id,$id);
+            $history_status = Helper::history_status(\Auth::user()->id,$id);
+
+        }
+        $share_link = route('user.single' , $id);
         
         return view('user.single-video')
                     ->with('page' , '')
@@ -220,10 +316,6 @@ class UserController extends Controller {
                     ->with('trailer_pixels', $trailer_pixels)
                     ->with('videoStreamUrl', $videoStreamUrl)
                     ->with('trailerstreamUrl', $trailerstreamUrl)
-                    ->with('original_trailer_video' , $original_trailer_video)
-                    ->with('hls_trailer_video' , $hls_trailer_video)
-                    ->with('original_main_video' , $original_main_video)
-                    ->with('hls_main_video' , $hls_main_video)
                     ->with('flaggedVideo', $flaggedVideo);
     }
 
