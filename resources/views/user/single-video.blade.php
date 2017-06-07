@@ -136,11 +136,11 @@ textarea[name=comments] {
                                                                                 <!-- <p>Please Pay to see the full video</p>  -->
 
                                                                                 @if(Auth::user()->user_type != DEFAULT_TRUE)
-                                                                                    <div class="{{($video->amount > 0) ? 'col-lg-6' : 'col-lg-6 col-lg-offset-3'}}">
+                                                                                    <div class="@if(Setting::get('is_payper_view')) {{($video->amount > 0) ? 'col-lg-6' : 'col-lg-6 col-lg-offset-3'}} @else  'col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3' @endif">
                                                                                       <!-- small box -->
                                                                                       <div class="small-box bg-green">
                                                                                         <div class="inner">
-                                                                                          <h3>${{Setting::get('amount')}}</h3>
+                                                                                          <h3>{{Setting::get('currency')}} {{Setting::get('amount')}}</h3>
                                                                                           <div class="clearfix"></div>
                                                                                           <p style="float: none;text-align: left;">{{tr('subscription')}}</p>
                                                                                         </div>
@@ -152,22 +152,27 @@ textarea[name=comments] {
                                                                                       </div>
                                                                                     </div>
                                                                                 @endif
-                                                                                @if($video->amount > 0)
-                                                                                    <div class="{{(Auth::user()->user_type == 1) ? 'col-lg-6 col-lg-offset-3' : 'col-lg-6'}}">
-                                                                                      <!-- small box -->
-                                                                                      <div class="small-box bg-aqua">
-                                                                                        <div class="inner">
-                                                                                          <h3>${{$video->amount}}</h3>
-                                                                                          <div class="clearfix"></div>
-                                                                                          <p style="float: none;text-align: left;">{{tr('pay_per_view')}}</p>
+
+                                                                                @if(Setting::get('is_payper_view'))
+
+                                                                                    @if($video->amount > 0)
+                                                                                        <div class="{{(Auth::user()->user_type == 1) ? 'col-lg-6 col-lg-offset-3' : 'col-lg-6'}}">
+                                                                                          <!-- small box -->
+                                                                                          <div class="small-box bg-aqua">
+                                                                                            <div class="inner">
+                                                                                              <h3>{{Setting::get('currency')}} {{$video->amount}}</h3>
+                                                                                              <div class="clearfix"></div>
+                                                                                              <p style="float: none;text-align: left;">{{tr('pay_per_view')}}</p>
+                                                                                            </div>
+                                                                                            <div class="icon">
+                                                                                              <i class="fa fa-money"></i>
+                                                                                            </div>
+                                                                                             <div class="clearfix"></div>
+                                                                                            <a href="{{route('videoPaypal' , $video->admin_video_id)}}" class="small-box-footer">{{tr('for_pay_per_view')}} <i class="fa fa-arrow-circle-right"></i></a>
+                                                                                          </div>
                                                                                         </div>
-                                                                                        <div class="icon">
-                                                                                          <i class="fa fa-money"></i>
-                                                                                        </div>
-                                                                                         <div class="clearfix"></div>
-                                                                                        <a href="{{route('videoPaypal' , $video->admin_video_id)}}" class="small-box-footer">{{tr('for_pay_per_view')}} <i class="fa fa-arrow-circle-right"></i></a>
-                                                                                      </div>
-                                                                                    </div>
+                                                                                    
+                                                                                    @endif
                                                                                 @endif
                                                                                 
                                                                                 <div class="clearfix"></div>

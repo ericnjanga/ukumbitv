@@ -84,6 +84,23 @@
                             </label>
                         </div>
 
+                        <div class="form-group">
+
+                            <label>Pay Per View (Yes - will display , No - hide )</label>
+
+                            <br>
+                            
+                            <label>
+                                <input required type="radio" name="is_payper_view" value="1" class="flat-red" @if(Setting::get('is_payper_view')) checked @endif>
+                                {{tr('yes')}}
+                            </label>
+
+                            <label>
+                                <input required type="radio" name="is_payper_view" class="flat-red"  value="0" @if(!Setting::get('is_payper_view')) checked @endif>
+                                {{tr('no')}}
+                            </label>
+                        </div>
+
 
                   </div>
                   <!-- /.box-body -->

@@ -13,7 +13,7 @@
 
             <div class="new-history">
                 <div class="content-head">
-                    <div><h4>{{tr('pay_per_videos')}} ( ${{user_total_amount()}} )</h4></div>              
+                    <div><h4>{{tr('pay_per_videos')}} ( {{Setting::get('currency')}} {{user_total_amount()}} )</h4></div>              
                 </div><!--end of content-head-->
 
                 @if(count($model) > 0)
@@ -31,7 +31,7 @@
                                 <div class="history-title">
                                     <div class="history-head row">
                                         <div class="cross-title">
-                                            <h5><a href="{{($video->adminVideo->is_approved == 1) ? route('user.single' , $video->video_id) : ''}}">{{$video->adminVideo->title}} (${{$video->amount}})</a></h5>
+                                            <h5><a href="{{($video->adminVideo->is_approved == 1) ? route('user.single' , $video->video_id) : ''}}">{{$video->adminVideo->title}} ({{Setting::get('currency')}} {{$video->amount}})</a></h5>
                                             <p class="duration">{{tr('duration')}}: {{$video->adminVideo->duration}}</p>
                                         </div> 
                                     </div> <!--end of history-head--> 
