@@ -150,7 +150,7 @@ class AuthController extends Controller
                 $user->timezone = $request->has('timezone') ? $request->timezone : '';
                 $user->save();
             }   
-        };
+        }
        return redirect()->intended($this->redirectPath());
     }
 

@@ -65,6 +65,7 @@
             </div><!--y-button end-->
         @else
             <div class="y-button">
+                <a href="{{route('user.register.form')}}" class="y-signin">{{tr('signup')}}</a>
                 <a href="{{route('user.login.form')}}" class="y-signin">{{tr('login')}}</a>
             
             </div><!--y-button end-->
