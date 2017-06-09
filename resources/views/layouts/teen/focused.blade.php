@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@if(Setting::get('site_name')) {{Setting::get('site_name') }} @else {{tr('site_name')}} @endif</title>
+        <title>{{Setting::get('site_name' , "StreamHash")}}</title>
 
         <meta name="description" content="">
         <meta name="author" content="">
@@ -18,7 +18,7 @@
 
         <style type="text/css">
             .ui-autocomplete{
-                z-index: 99999;
+              z-index: 99999;
             }
         </style>
 
@@ -94,6 +94,7 @@
         </script>
 
         @yield('scripts')
+
 
     </body>
 </html>

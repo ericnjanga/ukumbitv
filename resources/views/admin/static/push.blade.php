@@ -30,7 +30,7 @@
                             <label for="message" class="col-sm-1 control-label">{{tr('message')}}</label>
 
                             <div class="col-sm-10">
-                                <input type="text" required name="message" class="form-control" id="message" placeholder="{{tr('enter')}} {{tr('message')}}">
+                                <input type="text" required name="message" class="form-control" id="message" placeholder="Enter Custom Push Message">
                             </div>
                         </div>
 

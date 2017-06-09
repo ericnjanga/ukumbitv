@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <title>@if(Setting::get('site_name')) {{Setting::get('site_name') }} @else {{tr('site_name')}} @endif</title>
+    <title>{{Setting::get('site_name' , "StreamHash")}}</title>
     
     <meta name="viewport" content="width=device-width,  initial-scale=1">
     <link rel="stylesheet" href="{{asset('streamtube/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('streamtube/css/jquery-ui.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/fonts/font-awesome/css/font-awesome.min.css')}}">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> 
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'> 
     <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/slick.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/slick-theme.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/style.css')}}">
@@ -80,9 +80,10 @@
 
         });
 
-    </script>
+</script>
 
     @yield('scripts')
+
 
 </body>
 

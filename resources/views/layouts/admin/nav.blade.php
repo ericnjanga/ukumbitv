@@ -93,32 +93,15 @@
                 <a href="{{route('admin.user.payments')}}">
                     <i class="fa fa-credit-card"></i> <span>{{tr('payments')}}</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
-
                 <ul class="treeview-menu">
-
-                    @if(Setting::get('is_subscription'))
-                    
-                        <li id="user-payments">
-                            <a href="{{route('admin.user.payments')}}">
-                                <i class="fa fa-credit-card"></i> <span>{{tr('user_payments')}}</span>
-                            </a>
-                        </li>
-
-                    @endif
-                    
+                    <li id="user-payments"><a href="{{route('admin.user.payments')}}">
+                        <i class="fa fa-credit-card"></i> <span>{{tr('user_payments')}}</span>
+                    </a></li>
                     <li id="video-subscription"><a href="{{route('admin.user.video-payments')}}">
                         <i class="fa fa-credit-card"></i> <span>{{tr('video_payments')}}</span>
                     </a></li>
                 </ul>
             </li>
-
-            @if(Setting::get('admin_language_control') == 0)
-            <li id="languages">
-                <a href="{{route('admin.languages.index')}}">
-                    <i class="fa fa-globe"></i> <span>{{tr('languages')}}</span>
-                </a>
-            </li>
-            @endif
 
 
             <li id="settings">
@@ -161,15 +144,11 @@
                 </a>
             </li>
 
-            @if(Setting::get('is_spam'))
-
-                <li id="spam_videos">
-                    <a href="{{route('admin.spam-videos')}}">
-                        <i class="fa fa-flag"></i> <span>{{tr('spam_videos')}}</span>
-                    </a>
-                </li>
-
-            @endif
+            <li id="spam_videos">
+                <a href="{{route('admin.spam-videos')}}">
+                    <i class="fa fa-flag"></i> <span>{{tr('spam_videos')}}</span>
+                </a>
+            </li>
 
             <li id="help">
                 <a href="{{route('admin.help')}}">

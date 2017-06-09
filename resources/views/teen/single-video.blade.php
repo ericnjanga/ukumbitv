@@ -1,66 +1,6 @@
 @extends('layouts.user')
 
-@section('styles')
-<style type="text/css">
-.small-box {
-    border-radius: 2px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    display: block;
-    margin-bottom: 20px;
-    position: relative;
-    color: #fff;    
-}
 
-.bg-green{
-    background-color: #00a65a !important;
-}
-
-.bg-aqua {
-    background-color: #00c0ef !important;
-}
-
-.small-box h3, .small-box p {
-    z-index: 5;
-}
-.small-box h3 {
-    font-size: 38px;
-    font-weight: bold;
-    margin: 0 0 10px;
-    padding: 0;
-    white-space: nowrap;
-}
-
-.small-box > .inner {
-    padding: 10px;
-}
-
-.small-box p {
-    font-size: 15px;
-}
-
-.small-box .icon {
-    color: rgba(0, 0, 0, 0.15);
-    font-size: 90px;
-    position: absolute;
-    right: 10px;
-    top: -10px;
-    transition: all 0.3s linear 0s;
-    z-index: 0;
-}
-
-.small-box > .small-box-footer {
-    background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
-    color: rgba(255, 255, 255, 0.8);
-    display: block;
-    padding: 3px 0;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    z-index: 10;
-}
-</style>
-
-@endsection
 @section('content')
 
     <?php $url = $trailer_url = ""; ?>
@@ -83,9 +23,7 @@
                     <form method="post" name="watch_main_video" class="watch-full-form" style="width: 25%">
 
                         @if(Auth::check())
-
-                            @if(Setting::get('is_spam')) <div class="pull-left"> @endif
-
+                            <div class="pull-left">
                                 @if(watchFullVideo(Auth::user()->id, Auth::user()->user_type, $video) ==  1)
                                     <input class="watch-full" type="submit" id="watch_main_video_button" name="submit" value="{{tr('watch_main_video')}}" style="background: green">
                                 @else
@@ -110,41 +48,12 @@
 
                                                 <div class="modal-body">
                                                 
-                                                    @if(Auth::user()->user_type != DEFAULT_TRUE)
-                                                        <div class="{{($video->amount > 0) ? 'col-lg-6' : 'col-lg-6 col-lg-offset-3'}}">
-                                                          <!-- small box -->
-                                                          <div class="small-box bg-green">
-                                                            <div class="inner">
-                                                              <h3>${{Setting::get('amount')}}</h3>
-                                                              <div class="clearfix"></div>
-                                                              <p style="float: none;text-align: left;">{{tr('subscription')}}</p>
-                                                            </div>
-                                                            <div class="icon">
-                                                              <i class="fa fa-money"></i>
-                                                            </div>
-                                                             <div class="clearfix"></div>
-                                                            <a href="{{route('paypal' , Auth::user()->id)}}" class="small-box-footer">{{tr('for_subscription')}} <i class="fa fa-arrow-circle-right"></i></a>
-                                                          </div>
-                                                        </div>
-                                                    @endif
+
                                                     @if($video->amount > 0)
-                                                        <div class="{{(Auth::user()->user_type == 1) ? 'col-lg-6 col-lg-offset-3' : 'col-lg-6'}}">
-                                                          <!-- small box -->
-                                                          <div class="small-box bg-aqua">
-                                                            <div class="inner">
-                                                              <h3>${{$video->amount}}</h3>
-                                                              <div class="clearfix"></div>
-                                                              <p style="float: none;text-align: left;">{{tr('pay_per_view')}}</p>
-                                                            </div>
-                                                            <div class="icon">
-                                                              <i class="fa fa-money"></i>
-                                                            </div>
-                                                             <div class="clearfix"></div>
-                                                            <a href="{{route('videoPaypal' , $video->admin_video_id)}}" class="small-box-footer">{{tr('for_pay_per_view')}} <i class="fa fa-arrow-circle-right"></i></a>
-                                                          </div>
-                                                        </div>
+                                                        <a href="{{route('videoPaypal' , $video->admin_video_id)}}" class="btn btn-danger">{{tr('paynow')}}</a>
+                                                    @else 
+                                                        <a href="{{route('paypal' , Auth::user()->id)}}" class="btn btn-danger">{{tr('paynow')}}</a>
                                                     @endif
-                                                    <div class="clearfix"></div>
                                                 </div>
 
                                           </div>
@@ -154,23 +63,15 @@
                                     </div>
 
                                 @endif
-
-                                <!-- For UI Purpose I have Checked the condition Here -->
-
-                                @if(Setting::get('is_spam')) 
-                                
                             </div>
-                            
-                                <div class="pull-right">
-                                    @if($flaggedVideo == '')
-                                        <button onclick="showReportForm();" type="button" class="watch-full" id="mark-as-spam"><i class="fa fa-flag"></i> {{tr('report')}}</button>
-                                    @else 
-                                        <a href="{{route('user.remove.report_video', $flaggedVideo->id)}}" class="btn btn-warning" style="padding: 4px 5px;font-size: 12px;"><i class="fa fa-flag"></i> {{tr('remove_report')}}</a>
-                                    @endif
+                            <div class="pull-right">
+                                @if($flaggedVideo == '')
+                                    <button onclick="showReportForm();" type="button" class="watch-full" id="mark-as-spam"><i class="fa fa-flag"></i> {{tr('report')}}</button>
+                                @else 
+                                    <a href="{{route('user.remove.report_video', $flaggedVideo->id)}}" class="btn btn-warning" style="padding: 4px 5px;font-size: 12px;"><i class="fa fa-flag"></i> {{tr('remove_report')}}</a>
+                                @endif
 
-                                </div>
-                            @endif
-
+                            </div>
                             <div class="clearfix"></div>
                         @else
 
@@ -258,26 +159,22 @@
                     <p class="des">{{$video->description}}</p>
                 </div>
 
-                @if(Setting::get('is_spam'))
-
-                    @if ($flaggedVideo == '')
-                        <div class="more-content" style="display: none;" id="report_video_form">
-                            <form name="report_video" method="post" id="report_video" action="{{route('user.add.spam_video')}}">
-                                <b>Report this Video ?</b>
-                                <br>
-                                @foreach($report_video as $report) 
-                                    <input style="display:inline-block" type="radio" name="reason" value="{{$report->value}}" required> {{$report->value}}<br>
-                                @endforeach
-                                <input type="hidden" name="video_id" value="{{$video->admin_video_id}}" />
-                                <p class="help-block"><small>{{tr('report_content')}}</small></p>
-                                <div class="pull-right">
-                                    <button class="btn btn-success btn-sm">{{tr('report')}}</button>
-                                </div>
-                                <div class="clearfix"></div>
-                            </form>
-                        </div>
-                    @endif
-                
+                @if ($flaggedVideo == '')
+                    <div class="more-content" style="display: none;" id="report_video_form">
+                        <form name="report_video" method="post" id="report_video" action="{{route('user.add.spam_video')}}">
+                            <b>Report this Video ?</b>
+                            <br>
+                            @foreach($report_video as $report) 
+                                <input style="display:inline-block" type="radio" name="reason" value="{{$report->value}}" required> {{$report->value}}<br>
+                            @endforeach
+                            <input type="hidden" name="video_id" value="{{$video->admin_video_id}}" />
+                            <p class="help-block"><small>If you report this video, you won't see again the same video in anywhere in your account except "Spam Videos". If you want to continue to report this video as same. Click continue and proceed the same.</small></p>
+                            <div class="pull-right">
+                                <button class="btn btn-success btn-sm">Mark as Spam</button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
                 @endif
 
                 @if(Auth::check())
@@ -428,116 +325,69 @@
 
 @section('scripts')
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.video-y-menu').addClass('hidden');
-        }); 
-        function showReportForm() {
-            var divId = document.getElementById('report_video_form').style.display;
-            if (divId == 'none') {
-                $('#report_video_form').show(500);
-            } else {
-                $('#report_video_form').hide(500);
-            }
-        }
-    </script>
-
     <script src="{{asset('jwplayer/jwplayer.js')}}"></script>
 
     <script>jwplayer.key="{{envfile('JWPLAYER_KEY')}}";</script>
 
     <script type="text/javascript">
-        
-        jQuery(document).ready(function() {
 
-            var is_mobile = false;
-
-            var isMobile = {
-                Android: function() {
-                    return navigator.userAgent.match(/Android/i);
-                },
-                BlackBerry: function() {
-                    return navigator.userAgent.match(/BlackBerry/i);
-                },
-                iOS: function() {
-                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-                },
-                Opera: function() {
-                    return navigator.userAgent.match(/Opera Mini/i);
-                },
-                Windows: function() {
-                    return navigator.userAgent.match(/IEMobile/i);
-                },
-                any: function() {
-                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-                }
-            };
-
-            if(isMobile.any()) {
-
-                var is_mobile = true;
-
+        function showReportForm() {
+            var divId = document.getElementById('report_video_form').style.display;
+            if (divId == 'none') {
+                jQuery('#report_video_form').show(500);
+            } else {
+                jQuery('#report_video_form').hide(500);
             }
+        }
+        
+        jQuery(document).ready(function(){
 
-            // Opera 8.0+
-            var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-            // Firefox 1.0+
-            var isFirefox = typeof InstallTrigger !== 'undefined';
-            // At least Safari 3+: "[object HTMLElementConstructor]"
-            var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-            // Internet Explorer 6-11
-            var isIE = /*@cc_on!@*/false || !!document.documentMode;
-            // Edge 20+
-            var isEdge = !isIE && !!window.StyleMedia;
-            // Chrome 1+
-            var isChrome = !!window.chrome && !!window.chrome.webstore;
-            // Blink engine detection
-            var isBlink = (isChrome || isOpera) && !!window.CSS;
+                // Opera 8.0+
+                
+                var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+                // Firefox 1.0+
+                var isFirefox = typeof InstallTrigger !== 'undefined';
+                // At least Safari 3+: "[object HTMLElementConstructor]"
+                var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+                // Internet Explorer 6-11
+                var isIE = /*@cc_on!@*/false || !!document.documentMode;
+                // Edge 20+
+                var isEdge = !isIE && !!window.StyleMedia;
+                // Chrome 1+
+                var isChrome = !!window.chrome && !!window.chrome.webstore;
+                // Blink engine detection
+                var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-            @if($trailer_video)
+                // console.log('Inside Trailer Video');
 
-                if(isOpera || isSafari) {
-                    
-                    jQuery('#trailer_video_setup_error').show();
+                @if($trailer_video)
+
+                    jQuery('#trailer_video_setup_error').hide();
                     jQuery('#main_video_setup_error').hide();
-                    confirm('The video format is not supported in this browser. Please open with some other browser.');
 
-                } else {
+                    if(isOpera || isSafari) {
 
-                    var playerInstance = jwplayer("trailer-video-player");
+                        jQuery('#trailer_video_setup_error').show();
 
-                    @if($trailerstreamUrl)
+                        confirm('The video format is not supported in this browser. Please open with some other browser.');
 
-                        if(is_mobile) {
+                    } else {
 
-                        }
+                        var playerInstance = jwplayer("trailer-video-player");
 
-                        playerInstance.setup({
-                            sources: [{
-                                file: "{{$trailerstreamUrl}}"
-                              },{
-                                file: "{{$hls_trailer_video}}"
-                              },{
-                                file: "{{$original_trailer_video}}"
-                              }],
-                            // file: "{{$trailerstreamUrl}}",
-                            image: "{{$video->default_image}}",
-                            width: "100%",
-                            aspectratio: "16:9",
-                            primary: "flash",
-                        });
 
-                    @else
+                        @if($trailerstreamUrl)
 
-                        if(is_mobile) {
-                                                        
-                            console.log('You are using a mobile device!');
+                            playerInstance.setup({
+                                file: "{{$trailerstreamUrl}}",
+                                image: "{{$video->default_image}}",
+                                width: "100%",
+                                aspectratio: "16:9",
+                                primary: "flash",
+                            });
+                        @else
 
-                            var trailerPath = "{{$hls_trailer_video}}";
-
-                        } else {
-
-                            var trailerVideoPath = "{{$trailer_video_path}}";
+                             var trailerVideoPath = "{{$trailer_video_path}}";
                             var trailerVideoPixels = "{{$trailer_pixels}}";
 
                             var trailerPath = [];
@@ -546,86 +396,59 @@
 
                             var splitTrailerPixel = trailerVideoPixels.split(',');
 
+
                             for (var i = 0 ; i < splitTrailer.length; i++) {
 
                                 trailerPath.push({file : splitTrailer[i], label : splitTrailerPixel[i]});
                             }
 
-                        }
-
-                        playerInstance.setup({
-                            sources: [{
-                                file: trailerPath
-                              },{
-                                file: "{{$original_trailer_video}}"
-                              }],
-                            // sources: trailerPath,
-                            image: "{{$video->default_image}}",
-                            width: "100%",
-                            aspectratio: "16:9",
-                            primary: "flash",
-                        });
-
-                    @endif
-
-                    playerInstance.on('setupError', function() {
-
-                        var hasFlash = false;
-
-                        try {
-                            var fo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
-                            if (fo) {
-                                hasFlash = true;
-                            }
-                        } catch (e) {
-                            if (navigator.mimeTypes
-                                    && navigator.mimeTypes['application/x-shockwave-flash'] != undefined
-                                    && navigator.mimeTypes['application/x-shockwave-flash'].enabledPlugin) {
-                                hasFlash = true;
-                            }
-                        }
-
-                        jQuery("#trailer-video-player").css("display", "none");
-
-                        jQuery('#main_video_setup_error').hide();
-
-                        if (hasFlash == false) {
-                            jQuery('#flash_error_display').show();
-                            return false;
-                        }
-
-                        jQuery('#trailer_video_setup_error').css("display", "block");
-
-                        confirm('The video format is not supported in this browser. Please open with some other browser.');
-                    
-                    });
-
-                    @if(!$history_status && Auth::check())
-
-                        jwplayer().on('displayClick', function(e) {
-                            jQuery.ajax({
-                                url: "{{route('user.add.history')}}",
-                                type: 'post',
-                                data: {'admin_video_id' : "{{$video->admin_video_id}}", 'video_status' : 0},
-                                success: function(data) {
-
-                                   if(data.success == true) {
-
-                                    console.log('Added to history');
-
-                                   } else {
-                                        console.log('Wrong...!');
-                                   }
-                                }
+                            playerInstance.setup({
+                                sources: trailerPath,
+                                image: "{{$video->default_image}}",
+                                width: "100%",
+                                aspectratio: "16:9",
+                                primary: "flash",
                             });
-                            
+
+                        @endif
+
+                        playerInstance.on('setupError', function() {
+
+                            jQuery("#trailer-video-player").css("display", "none");
+                            jQuery('#main_video_setup_error').hide();
+                            jQuery('#trailer_video_setup_error').css("display", "block");
+
+                            confirm('The video format is not supported in this browser. Please open with some other browser.');
+                        
                         });
 
-                    @endif
-                
-                }
 
-            @endif                
+                        @if(!$history_status && Auth::check())
+
+                            jwplayer().on('displayClick', function(e) {
+                                jQuery.ajax({
+                                    url: "{{route('user.add.history')}}",
+                                    type: 'post',
+                                    data: {'admin_video_id' : "{{$video->admin_video_id}}", 'video_status' : 0},
+                                    success: function(data) {
+
+                                       if(data.success == true) {
+
+                                        // console.log('Added to history');
+
+                                       } else {
+                                            // console.log('Wrong...!');
+                                       }
+                                    }
+                                });
+                                
+                            });
+
+                        @endif
+                    }
+
+            @endif
+
 
             //hang on event of form with id=myform
             jQuery("form[name='add_to_wishlist']").submit(function(e) {
@@ -651,13 +474,13 @@
                                     jQuery('#status').val("0");
 
                                     jQuery('#wishlist_id').val(data.wishlist_id); 
-                                    jQuery("#added_wishlist").css({'background':'rgb(229, 45, 39)','color' : '#FFFFFF'});
-                                    jQuery("#added_wishlist").append('<i class="fa fa-heart"> {{tr('added_wishlist')}}');
+                                    jQuery("#added_wishlist").css({'background':'#cb0000','color' : '#FFFFFF'});
+                                    jQuery("#added_wishlist").append('Added <i class="fa fa-heart">');
                                 } else {
                                     jQuery('#status').val("1");
                                     jQuery('#wishlist_id').val("");
                                     jQuery("#added_wishlist").css({'background':'','color' : ''});
-                                    jQuery("#added_wishlist").append('<i class="fa fa-heart"> {{tr('add_to_wishlist')}}');
+                                    jQuery("#added_wishlist").append('+ ADD To Wishlist');
                                 }
                            } else {
                                 console.log('Wrong...!');
@@ -672,14 +495,13 @@
                     $(this.form).submit()
                     return false;
                  }
-            }).focus(function(){
-                if(this.value == "Write your comment here..."){
-                     this.value = "";
-                }
+            });
 
-            }).blur(function(){
-                if(this.value==""){
-                     this.value = "";
+            $("form[name='comment_sent']").on('keyup keypress keydown', function(e) {
+                var keyCode = e.keyCode || e.which;
+                if (keyCode === 13) { 
+                    e.preventDefault();
+                    return false;
                 }
             });
 
@@ -691,9 +513,9 @@
                 //get the action-url of the form
                 var actionurl = e.currentTarget.action;
 
-                var form_data = jQuery("#comment").val();
+                var comment_content = jQuery('#comment').val();
 
-                if(form_data) {
+                if(comment_content != ''){
 
                     //do your own request an handle the results
                     jQuery.ajax({
@@ -715,17 +537,19 @@
                                     jQuery('#comment_count').text(count);
                                     jQuery('#video_comment_count').text(count);
 
-                                    jQuery('#new-comment').prepend('<div class="display-com"><div class="com-image"><img style="width:48px;height:48px" src="{{Auth::user()->picture}}"></div><div class="display-comhead"><span class="sub-comhead"><a href="#"><h5 style="float:left">{{Auth::user()->name}}</h5></a><a href="#"><p>'+data.date+'</p></a><p class="com-para">'+data.comment.comment+'</p></span></div></div>');
+                                    jQuery('#new-comment').prepend('<div class="com-list"><div class="com-img"><img src="{{Auth::user()->picture}}" ></div><div class="com-detail"><h5>{{Auth::user()->name}}</h5><h6>'+data.date+'</h6><p>'+data.comment.comment+'</p></div></div>');
                                 @endif
                                } else {
-                                    console.log('Wrong...!');
+                                    // console.log('Wrong...!');
                                }
                             }
+                    
                     });
+
                 } else {
                     return false;
                 }
-
+            
             });
 
             jQuery("form[name='watch_main_video']").submit(function(e) {
@@ -733,15 +557,15 @@
                 //prevent Default functionality
                 e.preventDefault();
 
-                jQuery('#watch_main_video_button').fadeOut();
+                jQuery('#watch_main_video_button').hide();
 
                     @if($main_video)
 
                         if(isOpera || isSafari) {
 
-                            jQuery('#main_video_setup_error').show();
                             jQuery('#trailer_video_setup_error').hide();
                             jQuery('#main-video-player').hide();
+                            jQuery('#main_video_setup_error').show();
 
                             confirm('The video format is not supported in this browser. Please option some other browser.');
 
@@ -749,150 +573,106 @@
 
                             var playerInstance = jwplayer("main-video-player");
 
-                            @if($videoStreamUrl) 
+                            @if($videoStreamUrl)
 
-                                if(is_mobile) {
-                                                        
-                                    <?php //$videoStreamUrl =  $hls_video; ?>
-                                }
 
-                                playerInstance.setup({
-                                    // file: "{{$videoStreamUrl}}",
-                                    sources: [{
-                                        file: "{{$videoStreamUrl}}"
-                                      },{
-                                        file: "{{$hls_main_video}}"
-                                      },{
-                                        file: "{{$original_main_video}}"
-                                      }],
-                                    image: "{{$video->default_image}}",
-                                    width: "100%",
-                                    aspectratio: "16:9",
-                                    primary: "flash",
-                                    controls : true,
-                                    "controlbar.idlehide" : false,
-                                    controlBarMode:'floating',
-                                    "controls": {
-                                        "enableFullscreen": false,
-                                        "enablePlay": false,
-                                        "enablePause": false,
-                                        "enableMute": true,
-                                        "enableVolume": true
-                                    },
-                                    // autostart : true,
-                                    "sharing": {
-                                        "sites": ["reddit","facebook","twitter"]
-                                      }
-                                
-                                });
+                            playerInstance.setup({
+                                file: "{{$videoStreamUrl}}",
+                                image: "{{$video->default_image}}",
+                                width: "100%",
+                                aspectratio: "16:9",
+                                primary: "flash",
+                                controls : true,
+                                "controlbar.idlehide" : false,
+                                controlBarMode:'floating',
+                                "controls": {
+                                    "enableFullscreen": false,
+                                    "enablePlay": false,
+                                    "enablePause": false,
+                                    "enableMute": true,
+                                    "enableVolume": true
+                                },
+                                autostart : true,
+                                "sharing": {
+                                    "sites": ["reddit","facebook","twitter"]
+                                  }
+                            
+                            });
 
                             @else
+                                var videoPath = "{{$videoPath}}";
+                            var videoPixels = "{{$video_pixels}}";
 
-                                if(is_mobile) {
-                                                        
-                                    console.log('You are using a mobile device!');
+                            var path = [];
 
-                                    var path = "{{$hls_video}}";
+                            var splitVideo = videoPath.split(',');
 
-                                } else {
-
-                                    var videoPath = "{{$videoPath}}";
-                                    var videoPixels = "{{$video_pixels}}";
-
-                                    var path = [];
-
-                                    var splitVideo = videoPath.split(',');
-
-                                    var splitVideoPixel = videoPixels.split(',');
+                            var splitVideoPixel = videoPixels.split(',');
 
 
-                                    for (var i = 0 ; i < splitVideo.length; i++) {
+                            for (var i = 0 ; i < splitVideo.length; i++) {
 
-                                        path.push({file : splitVideo[i], label : splitVideoPixel[i]});
-                                    }
-                                }
+                                path.push({file : splitVideo[i], label : splitVideoPixel[i]});
+                            }
 
-                                playerInstance.setup({
-                                    sources: [{
-                                        file: path
-                                      },{
-                                        file: "{{$original_main_video}}"
-                                      }],
-                                    // sources: path,
-                                    image: "{{$video->default_image}}",
-                                    width: "100%",
-                                    aspectratio: "16:9",
-                                    primary: "flash",
-                                    controls : true,
-                                    "controlbar.idlehide" : false,
-                                    controlBarMode:'floating',
-                                    "controls": {
-                                        "enableFullscreen": false,
-                                        "enablePlay": false,
-                                        "enablePause": false,
-                                        "enableMute": true,
-                                        "enableVolume": true
-                                    },
-                                    // autostart : true,
-                                    "sharing": {
-                                        "sites": ["reddit","facebook","twitter"]
-                                      }
-                                
-                                });
+
+                            playerInstance.setup({
+                                sources: path,
+                                image: "{{$video->default_image}}",
+                                width: "100%",
+                                aspectratio: "16:9",
+                                primary: "flash",
+                                controls : true,
+                                "controlbar.idlehide" : false,
+                                controlBarMode:'floating',
+                                "controls": {
+                                    "enableFullscreen": false,
+                                    "enablePlay": false,
+                                    "enablePause": false,
+                                    "enableMute": true,
+                                    "enableVolume": true
+                                },
+                                autostart : true,
+                                "sharing": {
+                                    "sites": ["reddit","facebook","twitter"]
+                                  }
+                            
+                            });
+
 
                             @endif
+                            
 
+                             
                             playerInstance.on('setupError', function() {
 
                                 jQuery("#main-video-player").css("display", "none");
                                 jQuery('#trailer_video_setup_error').hide();
-                               
-
-                                var hasFlash = false;
-                                try {
-                                    var fo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
-                                    if (fo) {
-                                        hasFlash = true;
-                                    }
-                                } catch (e) {
-                                    if (navigator.mimeTypes
-                                            && navigator.mimeTypes['application/x-shockwave-flash'] != undefined
-                                            && navigator.mimeTypes['application/x-shockwave-flash'].enabledPlugin) {
-                                        hasFlash = true;
-                                    }
-                                }
-
-                                if (hasFlash == false) {
-                                    jQuery('#flash_error_display').show();
-                                    return false;
-                                }
-
                                 jQuery('#main_video_setup_error').css("display", "block");
-
+                                
                                 confirm('The video format is not supported in this browser. Please option some other browser.');
                             
                             });
+
+                            jQuery("#trailer-video-player").hide();
+                            jQuery("#main-video-player").show();
                         }
-                    
+
                     @else
                         jQuery('#main_video_error').show();
                         jQuery('#trailer_video_error').hide();
+
                     @endif
 
-                    jQuery("#trailer-video-player").hide();
-                    jQuery("#main-video-player").show();
-                
-                
 
                     // Remove trailer video url, to stop the autoplay while playing main video
 
                     //First get the  iframe URL
-                    /*var url = $('#iframe_trailer_video').attr('src');
+                   /* var url = jQuery('#iframe_trailer_video').attr('src');
 
-                    $('#iframe_trailer_video').attr('src', '');
+                    jQuery('#iframe_trailer_video').attr('src', '');*/
 
-                    jQuery("#trailer_video_play").hide();
-
+                    /*jQuery("#trailer_video_play").hide();
                     jQuery("#main_video_play").show();*/
 
                     @if(!$history_status)
@@ -924,7 +704,5 @@
             });
 
         });
-
     </script>
-
 @endsection

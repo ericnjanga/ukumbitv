@@ -22,16 +22,7 @@
 
 @section('content')
 
-@include('notification.notify')
-
-
-@if (envfile('QUEUE_DRIVER') != 'redis') 
-
- <div class="alert alert-warning">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-        {{tr('warning_error_queue')}}
-</div>
-@endif
+    @include('notification.notify')
 
 <div class="row">
     <div class="col-lg-12">
@@ -79,7 +70,7 @@
                     <div class="tab-pane active" role="tabpanel" id="step1">
                         <input type="hidden" value="1" name="ajax_key">
                         <!-- <h3>Video Details</h3> -->
-                        <div style="margin-left: 15px"><small>{{tr('note')}} : <span style="color:red">*</span> fields are mandatory. Please fill and click next.</small></div> 
+                        <div style="margin-left: 15px"><small>Note : <span style="color:red">*</span> fields are mandatory. Please fill and click next.</small></div> 
                         <hr>
                         <div class="">
                             <input type="hidden" value="{{$video->admin_video_id}}" name="id">
@@ -462,12 +453,16 @@
     </script>  
     <script src="{{asset('assets/js/wizard.js')}}"></script>
     <script>
+        
         loadGenre(genreId);
+        
+
         $('form').submit(function () {
            window.onbeforeunload = null;
         });
+        
         window.onbeforeunload = function() {
-             return "Data will be lost if you leave the page, are you sure?";
+            return "Data will be lost if you leave the page, are you sure?";
         };
     </script>
 @endsection

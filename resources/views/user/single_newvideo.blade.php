@@ -10,6 +10,8 @@
 textarea[name=comments] {
     resize: none;
 }
+.youtube-nav,footer{display:none;}
+.profile-content{margin-top:0px !important;}
 
 </style>
 
@@ -23,13 +25,13 @@ textarea[name=comments] {
 
           <!--  @include('layouts.user.nav')-->
 
-            <div class="page-inner col-sm-9 col-md-10 profile-edit">
+            <div class="page-inner col-sm-12 col-md-12 profile-edit">
             
                 <div class="profile-content">
 
-                    <div class="row no-margin">
+                    <div class="row">
 
-                        <div class="col-sm-12 col-md-8 play-video">
+                        <div class="col-sm-12 col-md-12 play-video">
 
                             @include('user.videos.streaming')
 

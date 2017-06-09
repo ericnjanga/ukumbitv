@@ -23,14 +23,6 @@
 @include('notification.notify')
 
 
-@if (env('QUEUE_DRIVER') != 'redis') 
-
- <div class="alert alert-warning">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-        {{tr('warning_error_queue')}}
-</div>
-@endif
-
 <div class="row">
     <div class="col-lg-12">
         <section>
@@ -76,7 +68,7 @@
                 <div class="tab-content">
                     <div class="tab-pane active" role="tabpanel" id="step1">
                         <!-- <h3>Video Details</h3> -->
-                        <div style="margin-left: 15px"><small>{{tr('note')}} : <span style="color:red">*</span> fields are mandatory. Please fill and click next.</small></div> 
+                        <div style="margin-left: 15px"><small>Note : <span style="color:red">*</span> fields are mandatory. Please fill and click next.</small></div> 
                         <hr>
                         <div class="">
                             <input type="hidden" value="1" name="ajax_key">
@@ -97,7 +89,7 @@
 
                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label>{{tr('duration')}} * : </label><small> {{tr('duration_note')}}</small>
+                                    <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
 
                                     <div class="input-group">
                                         <div class="input-group-addon">
@@ -145,8 +137,8 @@
                         </div>
                         <ul class="list-inline pull-right">
                             <li>
-                                <button type="button" style="display: none;" id="{{REQUEST_STEP_1}}" class="btn btn-primary next-step">{{tr('next')}}</button>
-                                <button type="button" class="btn btn-primary" onclick="saveVideoDetails({{REQUEST_STEP_1}})">{{tr('next')}}</button>
+                                <button type="button" style="display: none;" id="{{REQUEST_STEP_1}}" class="btn btn-primary next-step">Next</button>
+                                <button type="button" class="btn btn-primary" onclick="saveVideoDetails({{REQUEST_STEP_1}})">Next</button>
                             </li>
                         </ul>
                     </div>
@@ -166,8 +158,8 @@
                         </div>
                         <div class="clearfix"></div>
                         <ul class="list-inline">
-                            <li class="pull-left"><button type="button" class="btn btn-danger prev-step">{{tr('previous')}}</button></li>
-                            <li class="pull-right" style="display: none"><button type="button" class="btn btn-primary next-step" id="{{REQUEST_STEP_2}}">{{tr('save_continue')}}</button></li>
+                            <li class="pull-left"><button type="button" class="btn btn-danger prev-step">Previous</button></li>
+                            <li class="pull-right" style="display: none"><button type="button" class="btn btn-primary next-step" id="{{REQUEST_STEP_2}}">Save and continue</button></li>
                             <div class="clearfix"></div>
                         </ul>
                     </div>
@@ -180,9 +172,9 @@
                         <input type="hidden" name="sub_category_id" id="sub_category_id" />
                         <div class="clearfix"></div>
                         <ul class="list-inline">
-                            <li><button type="button" class="btn btn-danger prev-step">{{tr('previous')}}</button></li>
+                            <li><button type="button" class="btn btn-danger prev-step">Previous</button></li>
                             <!-- <li><button type="button" class="btn btn-default next-step">Skip</button></li> -->
-                            <li class="pull-right" style="display:none"><button  id="{{REQUEST_STEP_3}}" type="button" class="btn btn-primary btn-info-full next-step">{{tr('save_continue')}}</button></li>
+                            <li class="pull-right" style="display:none"><button  id="{{REQUEST_STEP_3}}" type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
                             <div class="clearfix"></div>
                         </ul>
                     </div>
@@ -349,12 +341,12 @@
                         <div class="clearfix"></div>
                         <hr>
                         <ul class="list-inline">
-                            <li><button type="button" class="btn btn-danger prev-step">{{tr('previous')}}</button></li>
+                            <li><button type="button" class="btn btn-danger prev-step">Previous</button></li>
                             <!-- <li><button type="button" class="btn btn-default next-step">Skip</button></li> -->
                             @if(Setting::get('admin_delete_control') == 1) 
-                            <li class="pull-right"><button disabled id="{{REQUEST_STEP_FINAL}}" type="button" class="btn btn-primary btn-info-full">{{tr('finish')}}</button></li>
+                            <li class="pull-right"><button disabled id="{{REQUEST_STEP_FINAL}}" type="button" class="btn btn-primary btn-info-full">Finish</button></li>
                             @else
-                                <li class="pull-right"><button id="{{REQUEST_STEP_FINAL}}" type="submit" class="btn btn-primary btn-info-full">{{tr('finish')}}</button></li>
+                                <li class="pull-right"><button id="{{REQUEST_STEP_FINAL}}" type="submit" class="btn btn-primary btn-info-full">Finish</button></li>
                                  <li class="pull-right">
                                     <div class="progress">
                                         <div class="bar"></div >
@@ -431,12 +423,15 @@
 
     <script src="{{asset('assets/js/wizard.js')}}"></script>
     <script>
+
         $('form').submit(function () {
            window.onbeforeunload = null;
         });
+        
         window.onbeforeunload = function() {
-             return "Data will be lost if you leave the page, are you sure?";
+            return "Data will be lost if you leave the page, are you sure?";
         };
+
     </script>
 @endsection
 

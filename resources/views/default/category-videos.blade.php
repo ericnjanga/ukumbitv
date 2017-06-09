@@ -11,7 +11,7 @@
 		        <ul class="breadcrumbs">
 		          <li><i class="fa fa-home"></i><a href="{{route('user.dashboard')}}">{{tr('home')}}</a></li>
 		          <li>
-		            <span class="show-for-sr">{{tr('current')}}: </span> {{tr('categories')}}
+		            <span class="show-for-sr">Current: </span> {{tr('categories')}}
 		          </li>
 		        </ul>
 	      	</nav>
@@ -105,7 +105,7 @@
 			                <div class="large-12 columns">
 
 			                    <div class="row column head-text clearfix">
-			                        <p class="pull-left">{{tr('videos')}} : <span>{{get_category_video_count($category->id)}} {{tr('videos_posted')}}</span></p>
+			                        <p class="pull-left">{{tr('videos')}} : <span>{{get_category_video_count($category->id)}} Videos posted</span></p>
 			                        <div class="grid-system pull-right show-for-large">
 			                            <a class="secondary-button grid-default" href="#"><i class="fa fa-th"></i></a>
 			                            <a class="secondary-button current grid-medium" href="#"><i class="fa fa-th-large"></i></a>
@@ -246,7 +246,7 @@
 	                <div style="display:none" class="large-12 medium-7 medium-centered columns">
 	                    <div class="widgetBox">
 	                        <div class="widgetTitle">
-	                            <h5>{{tr('search_videos')}}</h5>
+	                            <h5>Search Videos</h5>
 	                        </div><!--end of widget-title-->
 	                        <form id="searchform" method="get" role="search">
 	                            <div class="input-group">

@@ -3,10 +3,7 @@
 @section('content')
 
     <div class="login-box">
-
         <h4>{{tr('login')}}</h4>
-
-        @include('notification.notify')
 
         @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
 
@@ -47,7 +44,7 @@
 
         @endif
 
-        <p class="or text-center">{{tr('or')}}</p>
+        <p class="or text-center">OR</p>
 
         <form role="form" method="POST" action="{{ url('/login') }}">
             {!! csrf_field() !!}

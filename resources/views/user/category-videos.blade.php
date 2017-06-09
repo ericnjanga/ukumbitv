@@ -31,7 +31,7 @@
                                     <a href="{{route('user.single' , $video->admin_video_id)}}"><img src="{{$video->default_image}}" /></a>
                                 </div><!--end of slide-image-->
 
-                                <div class="video-details" style="display:none;">
+                                <div class="video-details">
                                     <div class="video-head">
                                         <a href="{{route('user.single' , $video->admin_video_id)}}">{{$video->title}}</a>
                                     </div>
