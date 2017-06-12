@@ -28,7 +28,7 @@
           	<div class="small-box bg-yellow">
             	<div class="inner">
               		<h3>{{$today_videos}}</h3>
-              		<p>{{tr('total_videos')}}</p>
+              		<p>{{tr('today_videos')}}</p>
             	</div>
             	
             	<div class="icon">

@@ -32,13 +32,13 @@
 
                     <div class="form-group">
                         <label for="heading">{{tr('heading')}}</label>
-                        <input type="text" class="form-control" name="heading" value="{{ $pages->heading  }}" id="heading" placeholder="{{tr('enter')}} {{tr('heading')}}">
+                        <input type="text" class="form-control" name="heading" value="{{ $pages->heading  }}" id="heading" placeholder="Enter heading">
                     </div>
 
                     <div class="form-group">
                         <label for="description">{{tr('description')}}</label>
 
-                        <textarea id="ckeditor" name="description" class="form-control" placeholder="{{tr('enter')}} {{tr('description')}}">{{$pages->description}}</textarea>
+                        <textarea id="ckeditor" name="description" class="form-control" placeholder="Enter text ...">{{$pages->description}}</textarea>
                         
                     </div>
 

@@ -44,7 +44,7 @@
 
     @endif
     
-    <p class="or text-center">{{tr('or')}}</p>
+    <p class="or text-center">OR</p>
     <form role="form" method="POST" action="{{ url('/register') }}">
       <div class="form-group">
         {!! csrf_field() !!}

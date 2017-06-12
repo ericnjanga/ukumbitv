@@ -31,7 +31,7 @@
                             <li class="clearfix">
                                 <a id="user-profile" href="{{route('user.profile')}}">
                                     <i class="fa fa-user"></i>
-                                    {{tr('about_me')}}
+                                    {{tr('about')}}
                                 </a>
                             </li>
 
@@ -60,8 +60,6 @@
                                 </a>
                             </li>
 
-                            @if(Setting::get('is_spam'))
-
                              <li class="clearfix">
                                 <a id="user-spam-videos" href="{{route('user.spam-videos')}}">
                                     <i class="fa fa-flag"></i>{{tr('spam_videos')}}
@@ -71,8 +69,6 @@
                                 </a>
                             </li>
 
-                            @endif
-
                             <li class="clearfix">
                                 <a href="{{route('user.comments')}}" id="user-comments">
                                     <i class="fa fa-comments-o"></i>{{tr('comments')}}
@@ -80,16 +76,12 @@
                                 </a>
                             </li>
 
-                            @if(Setting::get('is_payper_view'))
-
                             <li class="clearfix">
                                 <a id="pay_per_videos" href="{{route('user.pay-per-videos')}}">
                                     <i class="fa fa-video-camera"></i>{{tr('pay_per_videos')}}
                                     <span class="float-right">${{user_total_amount()}}</span>
                                 </a>
                             </li>
-
-                            @endif
 
                             @if(Auth::user()->login_by == 'manual')
 

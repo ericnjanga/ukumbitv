@@ -12,7 +12,7 @@
                     <li><i class="fa fa-home"></i><a href="{{route('user.dashboard')}}">{{tr('home')}}</a></li>
                     <li><a href="{{route('user.profile')}}">{{tr('profile')}}</a></li>
                     <li>
-                        <span class="show-for-sr">{{tr('current')}}: </span> {{tr('pay_per_videos')}}
+                        <span class="show-for-sr">Current: </span> {{tr('pay_per_videos')}}
                     </li>
                 </ul>
             </nav>

@@ -166,7 +166,8 @@ class UserController extends Controller {
 
                 }
             } else {
-                $trailerstreamUrl = $video->trailer_video;
+                //$trailerstreamUrl = $video->trailer_video;
+                $trailerstreamUrl = $video->video;
                 $videoStreamUrl = $video->video;
             }
             

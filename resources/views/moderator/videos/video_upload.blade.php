@@ -21,18 +21,7 @@
 
 @section('content')
 
-@include('notification.notify')
-
-
-
-@if (envfile('QUEUE_DRIVER') != 'redis') 
- <div class="alert alert-warning">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-        {{tr('warning_error_queue')}}
-</div>
-@endif
-
-
+    @include('notification.notify')
 <div class="row">
     <div class="col-lg-12">
         <section>
@@ -419,11 +408,13 @@
     <script src="{{asset('assets/js/wizard.js')}}"></script>
 
     <script>
+    
         $('form').submit(function () {
            window.onbeforeunload = null;
         });
+        
         window.onbeforeunload = function() {
-             return "Data will be lost if you leave the page, are you sure?";
+            return "Data will be lost if you leave the page, are you sure?";
         };
     </script>
 @endsection

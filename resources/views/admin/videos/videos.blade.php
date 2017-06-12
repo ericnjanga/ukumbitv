@@ -36,9 +36,7 @@
 						      @if(Setting::get('theme') == 'default')
 						      	<th>{{tr('slider_video')}}</th>
 						      @endif
-						      @if(Setting::get('is_payper_view'))
-						      	<th>{{tr('pay_per_view')}}</th>
-						      @endif
+						      <th>{{tr('pay_per_view')}}</th>
 						      <th>{{tr('status')}}</th>
 						      <th>{{tr('action')}}</th>
 						    </tr>
@@ -100,13 +98,7 @@
                                                     @endif
 								                  	<li role="presentation"><a role="menuitem" tabindex="-1" target="_blank" href="{{route('admin.view.video' , array('id' => $video->video_id))}}">{{tr('view')}}</a></li>
 
-								                  	@if(Setting::get('is_payper_view'))
-
-								                  		<li role="presentation">
-								                  			<a role="menuitem" tabindex="-1" data-toggle="modal" data-target="#{{$video->video_id}}">{{tr('pay_per_view')}}</a>
-								                  		</li>
-
-								                  	@endif
+								                  	<li role="presentation"><a role="menuitem" tabindex="-1" data-toggle="modal" data-target="#{{$video->video_id}}">{{tr('pay_per_view')}}</a></li>
 
 								                  	<li class="divider" role="presentation"></li>
 

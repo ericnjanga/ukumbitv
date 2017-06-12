@@ -59,7 +59,7 @@
                 </div><!--end of social-btn-->          
             </div><!--end of socila-form-->
 
-            <p class="col-xs-12 divider1">{{tr('or')}}</p>
+            <p class="col-xs-12 divider1">OR</p>
 
             <div class="sign-up">
 

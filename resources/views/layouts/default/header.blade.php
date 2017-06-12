@@ -64,31 +64,7 @@
 
                                     <li id="about"><a href="{{route('user.about')}}"><i class="fa fa-user"></i>{{tr('about')}}</a></li>
 
-                                    @if(Setting::get('admin_language_control') == 0)
-
-                                        @if(count($all_languages = getActiveLanguages()) > 1)
-
-                                            <li class="has-submenu" data-dropdown-menu="example1" id="languages">
-                                                
-                                                <a href="javascript:void(0);"><i class="fa fa-globe"></i>
-                                                {{tr('language')}}</a>
-
-                                                <ul class="submenu menu vertical" data-submenu data-animate="slide-in-down slide-out-up">
-                                                    @foreach($all_languages as $l => $language)
-                                                        <li class="{{(\Session::get('locale') == $language->folder_name) ? 'lan-active' : ''}}">
-                                                            <a href="{{route('user_session_language', $language->folder_name)}}">
-                                                                
-                                                                {{$language->folder_name}}
-                                                            </a>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                           
-                                            </li>
-
-                                            @endif
-
-                                    @endif
+                                   <!--  <li id="contact"><a href="{{route('user.contact')}}"><i class="fa fa-envelope"></i>{{tr('contact')}}</a></li> -->
 
                                     <li id="profile" class="has-submenu" data-dropdown-menu="example1">
                                         

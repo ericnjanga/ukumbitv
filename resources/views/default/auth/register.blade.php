@@ -59,7 +59,7 @@
 
                                     <span class="input-group-label"><i class="fa fa-user"></i></span>
 
-                                    <input class="input-group-field" type="text" name="name" placeholder="{{tr('enter')}} {{tr('username')}}" required="">
+                                    <input class="input-group-field" type="text" name="name" placeholder="Enter your username" required="">
 
                                 </div>
 
@@ -67,21 +67,21 @@
                                     
                                     <span class="input-group-label"><i class="fa fa-envelope"></i></span>
 
-                                    <input class="input-group-field" type="email" name="email" placeholder="{{tr('enter')}} {{tr('email')}}" required="">
+                                    <input class="input-group-field" type="email" name="email" placeholder="Enter your email" required="">
 
                                 </div>
 
                                 <div class="input-group">
                                     <span class="input-group-label"><i class="fa fa-lock"></i></span>
                                     
-                                    <input type="password" id="password" name="password" placeholder="{{tr('enter')}} {{tr('password')}}" required="">
+                                    <input type="password" id="password" name="password" placeholder="Enter your password" required="">
 
                                 </div>
 
                                 <div class="input-group">
                                     <span class="input-group-label"><i class="fa fa-lock"></i></span>
                                     
-                                    <input type="password" id="password" name="password_confirmation" placeholder="{{tr('enter')}} {{tr('confirm_password')}}" required="">
+                                    <input type="password" id="password" name="password_confirmation" placeholder="Enter your confirm password" required="">
 
                                 </div>
 
@@ -103,7 +103,7 @@
                         <div class="middle-text text-center hide-for-small-only" data-equalizer-watch="" style="height: 314px;">
                             <p>
                                 <i class="fa fa-arrow-left arrow-left"></i>
-                                <span>{{tr('or')}}</span>
+                                <span>OR</span>
                                 <i class="fa fa-arrow-right arrow-right"></i>
                             </p>
                         </div>

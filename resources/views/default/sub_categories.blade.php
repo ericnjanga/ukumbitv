@@ -20,7 +20,7 @@
 		          	</li>
 
 		          	<li>
-		            	<span class="show-for-sr">{{tr('current')}}: </span> {{$sub_category->name}}
+		            	<span class="show-for-sr">Current: </span> {{$sub_category->name}}
 		          	</li>
 		        </ul>
 	      	</nav>
@@ -66,7 +66,7 @@
 		                	@if(count($videos) > 0)
 
 			                    <div class="row column head-text clearfix">
-			                        <p class="pull-left">{{tr('videos')}} : <span>{{get_sub_category_video_count($sub_category->id)}} {{tr('videos_posted')}}</span></p>
+			                        <p class="pull-left">{{tr('videos')}} : <span>{{get_sub_category_video_count($sub_category->id)}} Videos posted</span></p>
 			                        <div class="grid-system pull-right show-for-large">
 			                            <a class="secondary-button grid-default" href="#"><i class="fa fa-th"></i></a>
 			                            <a class="secondary-button current grid-medium" href="#"><i class="fa fa-th-large"></i></a>
@@ -213,7 +213,7 @@
 	                <div style="display:none" class="large-12 medium-7 medium-centered columns">
 	                    <div class="widgetBox">
 	                        <div class="widgetTitle">
-	                            <h5>{{tr('search_videos')}}</h5>
+	                            <h5>Search Videos</h5>
 	                        </div><!--end of widget-title-->
 	                        <form id="searchform" method="get" role="search">
 	                            <div class="input-group">
