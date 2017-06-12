@@ -116,7 +116,7 @@ class AuthController extends Controller
         $email_data = $User;
         $page = "emails.welcome";
         $email = $data['email'];
-        $result = Helper::send_email($page,$subject,$email,$email_data);
+        Helper::send_email($page,$subject,$email,$email_data);
         
         return $User;
     }
