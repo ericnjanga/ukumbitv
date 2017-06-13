@@ -309,21 +309,14 @@ class ApplicationController extends Controller {
      */
 
     public function email_verify(Request $request) {
-
         // Check the request have user ID
-
-        if($request->id) {
-
+        if($request->id) {         
             // Check the user record exists
-
             if($user = User::find($request->id)) {
-
                 // Check the user already verified
 
-                if($user->is_verified) {
-
+                if(!$user->isVerified()) {
                     // Check the verification code and expiry of the code
-
                     $response = Helper::check_email_verification($request->verification_code , $user, $error);
 
                     if($response) {
@@ -334,30 +327,21 @@ class ApplicationController extends Controller {
                         \Auth::loginUsingId($request->id);
 
                         return redirect(route('user.profile'))->with('flash_success' , "Email verified successfully!!!");
-
                     } else {
-
                         return redirect(route('user.login.form'))->with('flash_error' , $error);
                     }
 
                 } else {
-
                     \Log::info('User Already verified');
-
                     \Auth::loginUsingId($request->id);
-
                     return redirect(route('user.dashboard'));
                 }
-
             } else {
                 return redirect(route('user.login.form'))->with('flash_error' , "User Record Not Found");
             }
-
         } else {
-
             return redirect(route('user.login.form'))->with('flash_error' , "Something Missing From Email verification");
         }
-    
     }
 
     public function admin_control() {

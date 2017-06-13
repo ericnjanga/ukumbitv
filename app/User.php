@@ -137,6 +137,15 @@ class User extends Authenticatable
 
         });
     }
+    
+    /**
+     * Check if user is verified
+     * 
+     * @return type
+     */
+    public function isVerified() {
+        return $this->attributes['is_verified'] === "1" ? true : false;
+    }
 
 
     /**
