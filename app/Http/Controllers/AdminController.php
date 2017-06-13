@@ -279,7 +279,10 @@ class AdminController extends Controller
             
             $user->token = Helper::generate_token();
             $user->token_expiry = Helper::generate_token_expiry();
-            $user->is_activated = 1;                   
+            $user->is_activated = 1; 
+            $user->is_verified = 1; 
+            $user->is_guest = $request->has('is_guest') ? $request->is_guest : '0';
+            
 
             if($request->id == ''){
                 $email_data['name'] = $user->name;

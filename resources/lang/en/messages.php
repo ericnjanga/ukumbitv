@@ -181,6 +181,7 @@ return array(
 	'others'	=>	'Others',
 	'address'	=>	'Address',
 	'validity_days'  =>  'Validity Days',
+    'guest'	=>	'Guest',
 
 	'image' => 'Image',
 	'upload_message'	=>	'Upload only .png, .jpg or .jpeg image files only',

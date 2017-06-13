@@ -53,6 +53,14 @@
                                  <small style="color:brown">Note : The mobile must be between 6 and 13 digits.</small>
                             </div>
                         </div>
+                        
+                        <div class="form-group">
+                            <label for="is_guest" class="col-sm-1 control-label">{{tr('guest')}}</label>
+
+                            <div class="col-sm-10">
+                                <input type="checkbox" name="is_guest" value="1">
+                            </div>
+                        </div>
 
                     </div>
 

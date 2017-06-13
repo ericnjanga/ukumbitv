@@ -23,8 +23,8 @@ class VerifyUser
     public function handle($request, Closure $next)
     {
         $user = $request->user();
-        //Check if user is set
-        if($user) {
+        //Check if user is set and is not guest
+        if($user && !$user->is_guest) {
             //Check if email is verified, if not redirect and logout
             if (!$user->isVerified() && Setting::get('email_verify_control') === "1") {
                 \Auth::logout();
