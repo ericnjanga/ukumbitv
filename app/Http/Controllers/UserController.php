@@ -138,7 +138,8 @@ class UserController extends Controller {
 
                 if(check_valid_url($video->trailer_video) && $video->video_upload_type == 2) {
                     if(\Setting::get('streaming_url')) {
-                        $trailer_video = \Setting::get('streaming_url').get_video_end($video->trailer_video);
+                        //$trailer_video = \Setting::get('streaming_url').get_video_end($video->trailer_video);
+						$trailer_video = \Setting::get('streaming_url').get_video_end($video->video);
                     }
                 }
             }
@@ -147,11 +148,11 @@ class UserController extends Controller {
             $videoPath = $video_pixels = $trailer_video_path = $trailer_pixels = $trailerstreamUrl = $videoStreamUrl = '';
             if ($video->video_type == 1) {
                 if (\Setting::get('streaming_url')) {
-                    $trailerstreamUrl = \Setting::get('streaming_url').get_video_end($video->trailer_video);
+                    $trailerstreamUrl = \Setting::get('streaming_url').get_video_end($video->video);
                     $videoStreamUrl = \Setting::get('streaming_url').get_video_end($video->video);
                     if ($video->is_approved == 1) {
                         if($video->trailer_video_resolutions) {
-                            $trailerstreamUrl = Helper::web_url().'/uploads/smil/'.get_video_end_smil($video->trailer_video).'.smil';
+                            $trailerstreamUrl = Helper::web_url().'/uploads/smil/'.get_video_end_smil($video->video).'.smil';
                         } 
                         if ($video->video_resolutions) {
                             $videoStreamUrl = Helper::web_url().'/uploads/smil/'.get_video_end_smil($video->video).'.smil';
@@ -166,8 +167,9 @@ class UserController extends Controller {
 
                 }
             } else {
+				
                 //$trailerstreamUrl = $video->trailer_video;
-                $trailerstreamUrl = $video->video;
+				$trailerstreamUrl = $video->video;
                 $videoStreamUrl = $video->video;
             }
             
@@ -192,7 +194,7 @@ class UserController extends Controller {
                     ->with('suggestions',$suggestions)
                     ->with('wishlist_status' , $wishlist_status)
                     ->with('history_status' , $history_status)
-                    ->with('trailer_video' , $trailer_video)
+                    ->with('trailer_video' , $main_video)
                     ->with('main_video' , $main_video)
                     ->with('url' , $main_video)
                     ->with('categories' , $categories)
@@ -202,7 +204,7 @@ class UserController extends Controller {
                     ->with('trailer_video_path', $trailer_video_path)
                     ->with('trailer_pixels', $trailer_pixels)
                     ->with('videoStreamUrl', $videoStreamUrl)
-                    ->with('trailerstreamUrl', $trailerstreamUrl)
+                    ->with('trailerstreamUrl', $videoStreamUrl)
                     ->with('flaggedVideo', $flaggedVideo);
     }
 
