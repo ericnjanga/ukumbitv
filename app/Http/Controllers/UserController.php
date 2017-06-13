@@ -810,4 +810,15 @@ class UserController extends Controller {
                         ->with('page' , 'Profile')
                         ->with('subPage' , 'Payper Videos');
     }
+    
+    /**
+     * 
+     * @return type
+     */
+    public function payment()
+    {
+        return view('user.userpayment')
+                    ->with('page' , 'profile')
+                    ->with('subPage' , 'user-profile');
+    }
 }

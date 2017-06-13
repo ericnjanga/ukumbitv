@@ -31,6 +31,7 @@ class SocialAuthController extends Controller
 			$user->social_unique_id = $social_user->id;
 			$user->login_by = $provider;
 			$user->is_activated = 1;
+            $user->is_verified = 1;
 
 			if($social_user->name) {
 				$user->name = $social_user->name;
