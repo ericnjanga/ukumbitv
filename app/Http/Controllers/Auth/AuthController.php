@@ -132,7 +132,7 @@ class AuthController extends Controller
 
                 if(Setting::get('email_verify_control')) {
 
-                    if(!$user->is_verified) {
+                    if(!$user->is_verified && !$user->is_guest) {
 
                         \Auth::logout();
 

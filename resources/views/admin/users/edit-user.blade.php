@@ -52,6 +52,14 @@
                                 <input type="text" required name="mobile" value="{{$user->mobile}}" class="form-control" id="mobile" placeholder="{{tr('mobile')}}">
                             </div>
                         </div>
+                        
+                        <div class="form-group">
+                            <label for="is_guest" class="col-sm-1 control-label">{{tr('guest')}}</label>
+
+                            <div class="col-sm-10">
+                                <input type="checkbox" name="is_guest" value="1">
+                            </div>
+                        </div>
 
                     </div>
 

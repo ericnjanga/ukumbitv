@@ -181,6 +181,7 @@ return array(
 	'others'	=>	'Others',
 	'address'	=>	'Address',
 	'validity_days'  =>  'Validity Days',
+    'guest'	=>	'Guest',
 
 	'image' => 'Image',
 	'upload_message'	=>	'Upload only .png, .jpg or .jpeg image files only',
@@ -271,7 +272,8 @@ return array(
 	'pay_now_content' => 'Please Pay to see the full video',
 	'pay_now_login_content' => 'Please Login to watch Full Video',
 	'please_login' => 'Please Login',
-
+    'pay_subscription_content' => 'Please make subscription payment to watch access videos.',
+    
 	'rating'	=> 	'Rating',
 	
 	'select_image'	=> 	'Select Image',

@@ -394,6 +394,8 @@ Route::group([], function(){
     Route::get('register', 'Auth\AuthController@showRegistrationForm')->name('user.register.form');
 
     Route::post('register', 'Auth\AuthController@register')->name('user.register.post');
+    
+    Route::get('payment', 'UserController@payment')->name('user.userpayment');
 
     // Password Reset Routes...
     Route::get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');

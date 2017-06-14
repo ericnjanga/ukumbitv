@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 use App\Helpers\Helper;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -145,6 +146,26 @@ class User extends Authenticatable
      */
     public function isVerified() {
         return $this->attributes['is_verified'] === "1" ? true : false;
+    }
+    
+    /**
+     * Get user payments and check if there is valid one
+     * 
+     * @param \App\User $user
+     * @return boolean
+     */
+    public function userPaymentExpieryDateValid (User $user) {
+        $return = false;
+        $now = Carbon::now();
+        
+        foreach ($user->userPayment->all() as $userPayment) {
+            $expiry_date = Carbon::parse($userPayment->expiry_date);
+            if ($expiry_date->diffInSeconds($now) > 0) {
+                $return = true;
+            }
+        }
+
+        return $return;
     }
 
 
