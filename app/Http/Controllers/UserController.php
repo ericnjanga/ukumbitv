@@ -58,28 +58,20 @@ class UserController extends Controller {
     public function index() {
 
         $database = config('database.connections.mysql.database');
-        
         $username = config('database.connections.mysql.username');
 
         if($database && $username && Setting::get('installation_process') == 3) {
-
             counter('home');
-
             $watch_lists = $wishlists = array();
 
             if(\Auth::check()){
-
                 $wishlists  = Helper::wishlist(\Auth::user()->id,WEB);  
-
                 $watch_lists = Helper::watch_list(\Auth::user()->id,WEB);  
             }
             
             $recent_videos = Helper::recently_added(WEB);
-
             $trendings = Helper::trending(WEB);
-            
             $suggestions  = Helper::suggestion_videos(WEB);
-
             $categories = get_categories();
 
             return view('user.index')
@@ -94,7 +86,6 @@ class UserController extends Controller {
         } else {
             return redirect()->route('installTheme');
         }
-        
     }
 //Added New function by Vishnu
 

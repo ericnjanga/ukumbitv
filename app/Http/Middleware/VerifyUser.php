@@ -3,9 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use App\User;
 use Setting;
-use App\Helpers\Helper;
 
 /**
  * Verifications logged in user have to pass to access application
@@ -13,6 +11,8 @@ use App\Helpers\Helper;
  */
 class VerifyUser
 {
+    //List of paths allowed to access while user not logged in
+    private $allowed_paths = ['login', 'register', 'social', 'callback/facebook'];
     /**
      * Handle an incoming request.
      *
@@ -33,6 +33,11 @@ class VerifyUser
             //Get if user made subscription payment
             if (!$user->userPaymentExpieryDateValid($user) && !$request->is('payment') && !$request->is('logout') && !$request->is('paypal/*')) {
                 return redirect(route('user.userpayment'))->with('flash_warning', tr('make_paypal_subscription'));
+            }
+        } else {
+            //Allowed paths while not logged in
+            if (!$request->is('social/*') && !in_array($request->path(), $this->allowed_paths)) {
+                return redirect(route('user.login.form'));
             }
         }
         
