@@ -45,6 +45,8 @@
 
 <body>
 
+	<img src="https://ukumbitv.com/streamtube/images/y-logo.png">
+
     @include('layouts.user.header')
 
     <div class="common-youtube">
@@ -55,94 +57,100 @@
 
     @include('layouts.user.footer')
     
-    <script src="{{asset('streamtube/js/jquery.min.js')}}"></script>
-    <script src="{{asset('streamtube/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('streamtube/js/vendors/jquery.min.js')}}"></script>
+    <script src="{{asset('streamtube/js/vendors/bootstrap.min.js')}}"></script>
     <script src="{{asset('assets/bootstrap/js/jquery-ui.js')}}"></script>
-    <script type="text/javascript" src="{{asset('streamtube/js/jquery-migrate-1.2.1.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('streamtube/js/slick.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('streamtube/js/script.js')}}"></script>
+    <script type="text/javascript" src="{{asset('streamtube/js/vendors/jquery-migrate-1.2.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('streamtube/js/vendors/slick.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('streamtube/js/vendors/script.js')}}"></script>
+
+		
+		<!-- For background images slider -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+		
+		<!-- App decoration -->
+    <script type="text/javascript" src="{{asset('streamtube/js/app.decoration.js')}}"></script>
+
 
     <script>
-        $(document).ready(function(){
+        // $(document).ready(function(){
      
-            $('.box').slick({
-                  dots: true,
-                  infinite: false,
-                  speed: 300,
-                  slidesToShow: 5,
-                    arrows: true,
-                  slidesToScroll: 5,
-                  responsive: [
-                    {
-                      breakpoint: 1024,
-                      settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
-                      }
-                    },
-                    {
-                      breakpoint: 600,
-                      settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                      }
-                    },
-                    {
-                      breakpoint: 480,
-                      settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                      }
-                    }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-                  ]
-            });
-        });
+        //     $('.box').slick({
+        //           dots: true,
+        //           infinite: false,
+        //           speed: 300,
+        //           slidesToShow: 5,
+        //             arrows: true,
+        //           slidesToScroll: 5,
+        //           responsive: [
+        //             {
+        //               breakpoint: 1024,
+        //               settings: {
+        //                 slidesToShow: 3,
+        //                 slidesToScroll: 3,
+        //                 infinite: true,
+        //                 dots: true
+        //               }
+        //             },
+        //             {
+        //               breakpoint: 600,
+        //               settings: {
+        //                 slidesToShow: 2,
+        //                 slidesToScroll: 2
+        //               }
+        //             },
+        //             {
+        //               breakpoint: 480,
+        //               settings: {
+        //                 slidesToShow: 1,
+        //                 slidesToScroll: 1
+        //               }
+        //             }
+        //             // You can unslick at a given breakpoint now by adding:
+        //             // settings: "unslick"
+        //             // instead of a settings object
+        //           ]
+        //     });
+        // });
 
     </script>
 
-    <script type="text/javascript">
+    <script type="text/javascript"> 
+        // jQuery(document).ready( function () {
+        //     //autocomplete
+        //     jQuery("#auto_complete_search").autocomplete({
+        //         source: "{{route('search')}}",
+        //         minLength: 1,
+        //         select: function(event, ui){
 
-        jQuery(document).ready( function () {
-            //autocomplete
-            jQuery("#auto_complete_search").autocomplete({
-                source: "{{route('search')}}",
-                minLength: 1,
-                select: function(event, ui){
+        //             // set the value of the currently focused text box to the correct value
 
-                    // set the value of the currently focused text box to the correct value
-
-                    if (event.type == "autocompleteselect"){
+        //             if (event.type == "autocompleteselect"){
                         
-                        // console.log( "logged correctly: " + ui.item.value );
+        //                 // console.log( "logged correctly: " + ui.item.value );
 
-                        var username = ui.item.value;
+        //                 var username = ui.item.value;
 
-                        if(ui.item.value == 'View All') {
+        //                 if(ui.item.value == 'View All') {
 
-                            // console.log('View AALLLLLLLLL');
+        //                     // console.log('View AALLLLLLLLL');
 
-                            window.location.href = "{{route('search-all', array('q' => 'all'))}}";
+        //                     window.location.href = "{{route('search-all', array('q' => 'all'))}}";
 
-                        } else {
-                            // console.log("User Submit");
+        //                 } else {
+        //                     // console.log("User Submit");
 
-                            jQuery('#auto_complete_search').val(ui.item.value);
+        //                     jQuery('#auto_complete_search').val(ui.item.value);
 
-                            jQuery('#userSearch').submit();
-                        }
+        //                     jQuery('#userSearch').submit();
+        //                 }
 
-                    }                        
-                }      // select
+        //             }                        
+        //         }      // select
 
-            }); 
+        //     }); 
 
-        });
-
+        // }); 
     </script>
 
     @yield('scripts')
