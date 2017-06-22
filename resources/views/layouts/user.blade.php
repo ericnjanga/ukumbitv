@@ -45,7 +45,7 @@
 
 <body>
 
-	<img src="https://ukumbitv.com/streamtube/images/y-logo.png">
+	<img src="{{asset('streamtube/images/y-logo.png')}}">
 
     @include('layouts.user.header')
 
