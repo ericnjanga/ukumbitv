@@ -102,7 +102,7 @@
 
     <!--end off canvas wrapper-->
 
-    <!-- script files -->
+    <!-- script files
     <script src="{{asset('assets/bower_components/jquery/dist/jquery.js')}}"></script>
 
     <script src="{{asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
@@ -113,91 +113,91 @@
     <script src="{{asset('assets/js/jquery.showmore.src.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/js/app.js')}}"></script>
     <script src="{{asset('assets/layerslider/js/greensock.js')}}" type="text/javascript"></script>
+     -->
 
-    <!-- LayerSlider script files -->
+    <!-- LayerSlider script files
     <script src="{{asset('assets/layerslider/js/layerslider.transitions.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/layerslider/js/layerslider.kreaturamedia.jquery.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
     <script src="{{asset('assets/js/inewsticker.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/js/jquery.kyco.easyshare.js')}}" type="text/javascript"></script>
+     -->
 
     @yield('scripts')
 
     <script type="text/javascript">
-        @if($page) jQuery("#{{$page}}").addClass("active"); @endif
-        @if($subPage) jQuery("#{{$subPage}}").addClass("active"); @endif
+        // @if($page) jQuery("#{{$page}}").addClass("active"); @endif
+        // @if($subPage) jQuery("#{{$subPage}}").addClass("active"); @endif
     </script>
 
-    <script type="text/javascript">
+    <script type="text/javascript"> 
+        // jQuery(document).ready( function () {
+        //     //autocomplete
+        //     jQuery("#auto_complete_search").autocomplete({
+        //         source: "{{route('search')}}",
+        //         minLength: 1,
+        //         select: function(event, ui){
 
-        jQuery(document).ready( function () {
-            //autocomplete
-            jQuery("#auto_complete_search").autocomplete({
-                source: "{{route('search')}}",
-                minLength: 1,
-                select: function(event, ui){
+        //             // set the value of the currently focused text box to the correct value
 
-                    // set the value of the currently focused text box to the correct value
+        //             if (event.type == "autocompleteselect"){
 
-                    if (event.type == "autocompleteselect"){
+        //                 // console.log( "logged correctly: " + ui.item.value );
 
-                        // console.log( "logged correctly: " + ui.item.value );
+        //                 var username = ui.item.value;
 
-                        var username = ui.item.value;
+        //                 if(ui.item.value == 'View All') {
 
-                        if(ui.item.value == 'View All') {
+        //                     // console.log('View AALLLLLLLLL');
 
-                            // console.log('View AALLLLLLLLL');
+        //                     window.location.href = "{{route('search-all', array('key' => 'all'))}}";
 
-                            window.location.href = "{{route('search-all', array('key' => 'all'))}}";
+        //                 } else {
+        //                     // console.log("User Submit");
 
-                        } else {
-                            // console.log("User Submit");
+        //                     jQuery('#auto_complete_search').val(ui.item.value);
 
-                            jQuery('#auto_complete_search').val(ui.item.value);
+        //                     jQuery('#userSearch').submit();
+        //                 }
 
-                            jQuery('#userSearch').submit();
-                        }
+        //             }
+        //         }      // select
 
-                    }
-                }      // select
+        //     });
 
-            });
+        //     jQuery("#responsive_auto_complete_search").autocomplete({
+        //         source: "{{route('search')}}",
+        //         minLength: 1,
+        //         select: function(event, ui){
 
-            jQuery("#responsive_auto_complete_search").autocomplete({
-                source: "{{route('search')}}",
-                minLength: 1,
-                select: function(event, ui){
+        //             // set the value of the currently focused text box to the correct value
 
-                    // set the value of the currently focused text box to the correct value
+        //             if (event.type == "autocompleteselect"){
 
-                    if (event.type == "autocompleteselect"){
+        //                 // console.log( "logged correctly: " + ui.item.value );
 
-                        // console.log( "logged correctly: " + ui.item.value );
+        //                 var username = ui.item.value;
 
-                        var username = ui.item.value;
+        //                 if(ui.item.value == 'View All') {
 
-                        if(ui.item.value == 'View All') {
+        //                     // console.log('View AALLLLLLLLL');
 
-                            // console.log('View AALLLLLLLLL');
+        //                     window.location.href = "{{route('search', array('q' => 'all'))}}";
 
-                            window.location.href = "{{route('search', array('q' => 'all'))}}";
+        //                 } else {
+        //                     // console.log("User Submit");
 
-                        } else {
-                            // console.log("User Submit");
+        //                     jQuery('#auto_complete_search').val(ui.item.value);
 
-                            jQuery('#auto_complete_search').val(ui.item.value);
+        //                     jQuery('#userSearch').submit();
+        //                 }
 
-                            jQuery('#userSearch').submit();
-                        }
+        //             }
+        //         }      // select
 
-                    }
-                }      // select
+        //     });
 
-            });
-
-        });
-
+        // }); 
     </script>
 
 
