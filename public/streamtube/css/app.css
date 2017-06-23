@@ -4,7 +4,11 @@ body {
 
 .main-footer {
   height: 309px;
+  font-size: 14px;
   background-color: #282250; }
+  .main-footer a {
+    color: #ffffff;
+    opacity: 0.7; }
 
 input[type="text"],
 input[type="password"],
