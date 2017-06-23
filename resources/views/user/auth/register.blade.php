@@ -6,9 +6,7 @@
         <div class="common-form">
             
             <div class="social-form">
-                <div class="signup-head">
-                    <h3>{{tr('signup')}}</h3>
-                </div><!--end  of signup-head-->
+                <h3 class="title text-center">{{tr('signup')}}</h3>
 
                 <div class="social-btn">
 
@@ -132,5 +130,5 @@
 
     <script type="text/javascript" src="{{asset('streamtube/js/app.decoration.js')}}"></script>
 
-    
+
 @endsection
