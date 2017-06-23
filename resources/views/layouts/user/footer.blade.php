@@ -1,4 +1,4 @@
-<footer>
+<footer class="main-footer">
     <div class="footer1 row">
         <div class="col-sm-2 foot-div">
             <div class="tube-image">

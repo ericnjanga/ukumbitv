@@ -2,6 +2,10 @@ body {
   font-family: HelveticaNeue;
   background-color: #fff; }
 
+.main-footer {
+  height: 309px;
+  background-color: #282250; }
+
 input[type="text"],
 input[type="password"],
 input[type="email"] {
