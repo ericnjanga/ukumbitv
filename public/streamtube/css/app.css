@@ -14,10 +14,21 @@ input[type="email"] {
   background-color: rgba(255, 255, 255, 0.1); }
 
 .auth-rectangle {
-  margin: 0 auto;
   max-width: 360px;
   height: 425px;
   border-radius: 2px;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   background-color: rgba(0, 0, 0, 0.3); }
+
+.frame-login-registration {
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }

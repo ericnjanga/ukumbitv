@@ -1,12 +1,18 @@
 
  
 
-.auth-rectangle {
-	margin: 0 auto;
+.auth-rectangle { 
 	max-width: 360px;
 	height: 425px;
 	border-radius: 2px;
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
 	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.frame-login-registration{
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="form-background" style="border:5px solid turquoise;">
+<div class="frame-login-registration" style="border:5px solid turquoise;">
     <div class="auth-rectangle">
 
          @include('notification.notify')
