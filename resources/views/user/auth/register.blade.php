@@ -128,17 +128,9 @@
 
 @section('scripts')
 
-<script src="{{asset('assets/js/jstz.min.js')}}"></script>
-<script>
+
+
+    <script type="text/javascript" src="{{asset('streamtube/js/app.decoration.js')}}"></script>
+
     
-    $(document).ready(function() {
-
-        var dMin = new Date().getTimezoneOffset();
-        var dtz = -(dMin/60);
-        // alert(dtz);
-        $("#userTimezone").val(jstz.determine().name());
-    });
-
-</script>
-
 @endsection

@@ -46,8 +46,6 @@
     <script type="text/javascript" src="{{asset('streamtube/js/script.js')}}"></script>
 		-->
 
-    <script type="text/javascript" src="{{asset('streamtube/js/app.decoration.js')}}"></script>
-
     <script type="text/javascript">
         // jQuery(document).ready( function () {
         //     //autocomplete

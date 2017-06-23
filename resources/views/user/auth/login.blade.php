@@ -64,7 +64,7 @@
 
 
 
-        
+
 
             <div class="social-btn">
                 @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
@@ -88,17 +88,7 @@
 
 @section('scripts')
 
-<script src="{{asset('assets/js/jstz.min.js')}}"></script>
-<script>
-    
-    $(document).ready(function() {
 
-        var dMin = new Date().getTimezoneOffset();
-        var dtz = -(dMin/60);
-        // alert(dtz);
-        $("#userTimezone").val(jstz.determine().name());
-    });
-
-</script>
+    <script type="text/javascript" src="{{asset('streamtube/js/app.decoration.js')}}"></script>
 
 @endsection
