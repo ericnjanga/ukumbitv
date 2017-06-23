@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="form-background">
+<div class="form-background" style="border:5px solid turquoise;">
     <div class="common-form login-common">
 
          @include('notification.notify')
