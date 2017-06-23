@@ -68,13 +68,13 @@
 <script src="{{asset('assets/js/jstz.min.js')}}"></script>
 <script>
     
-    // $(document).ready(function() {
+    $(document).ready(function() {
 
-    //     var dMin = new Date().getTimezoneOffset();
-    //     var dtz = -(dMin/60);
-    //     // alert(dtz);
-    //     $("#userTimezone").val(jstz.determine().name());
-    // });
+        var dMin = new Date().getTimezoneOffset();
+        var dtz = -(dMin/60);
+        // alert(dtz);
+        $("#userTimezone").val(jstz.determine().name());
+    });
 
 </script>
 
