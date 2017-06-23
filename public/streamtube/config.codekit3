@@ -22,6 +22,32 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/_resources\/scss\/components\/form.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/_resources\/scss\/components\/form.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_resources\/scss\/global\/body.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/_resources\/scss\/global\/body.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/_resources\/scss\/pages\/login-registration.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -42,6 +68,16 @@
 		"oAP": "\/css\/ajax-loader.gif",
 		"oF": 0,
 		"opt": 0
+		},
+	"\/css\/app.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/app-min.css",
+		"oF": 0,
+		"oS": 0
 		},
 	"\/css\/bootstrap-social.css": {
 		"aP": 1,

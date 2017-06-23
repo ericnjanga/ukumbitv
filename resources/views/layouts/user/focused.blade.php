@@ -13,7 +13,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/slick-theme.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/style.css')}}">
 
-    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/responsive.css')}}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/responsive.css')}}"> -->
+
+    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/app.css')}}">
 
     <link rel="shortcut icon" type="image/png" href="@if(Setting::get('site_icon')) {{Setting::get('site_icon')}} @else {{asset('img/favicon.png')}} @endif"/>
 
