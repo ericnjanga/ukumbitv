@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="form-background" style="border:5px solid turquoise;">
-    <div class="common-form login-common">
+    <div class="auth-rectangle">
 
          @include('notification.notify')
         
