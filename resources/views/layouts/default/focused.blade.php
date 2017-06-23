@@ -101,41 +101,41 @@
 
       <script type="text/javascript">
 
-        jQuery(document).ready( function () {
-            //autocomplete
-            jQuery("#auto_complete_search").autocomplete({
-                source: "{{route('search')}}",
-                minLength: 1,
-                select: function(event, ui){
+        // jQuery(document).ready( function () {
+        //     //autocomplete
+        //     jQuery("#auto_complete_search").autocomplete({
+        //         source: "{{route('search')}}",
+        //         minLength: 1,
+        //         select: function(event, ui){
 
-                    // set the value of the currently focused text box to the correct value
+        //             // set the value of the currently focused text box to the correct value
 
-                    if (event.type == "autocompleteselect"){
+        //             if (event.type == "autocompleteselect"){
 
-                        // console.log( "logged correctly: " + ui.item.value );
+        //                 // console.log( "logged correctly: " + ui.item.value );
 
-                        var username = ui.item.value;
+        //                 var username = ui.item.value;
 
-                        if(ui.item.value == 'View All') {
+        //                 if(ui.item.value == 'View All') {
 
-                            // console.log('View AALLLLLLLLL');
+        //                     // console.log('View AALLLLLLLLL');
 
-                            window.location.href = "{{route('search', array('q' => 'all'))}}";
+        //                     window.location.href = "{{route('search', array('q' => 'all'))}}";
 
-                        } else {
-                            // console.log("User Submit");
+        //                 } else {
+        //                     // console.log("User Submit");
 
-                            jQuery('#auto_complete_search').val(ui.item.value);
+        //                     jQuery('#auto_complete_search').val(ui.item.value);
 
-                            jQuery('#userSearch').submit();
-                        }
+        //                     jQuery('#userSearch').submit();
+        //                 }
 
-                    }
-                }      // select
+        //             }
+        //         }      // select
 
-            });
+        //     });
 
-        });
+        // });
 
     </script>
 

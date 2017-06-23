@@ -1,4 +1,4 @@
-<div class="youtube-nav signup-nav">
+<div class="youtube-nav signup-nav" style="border:10px solid orange;">
     <div class="row">
         <div class="test you-image">
             <a href="{{route('user.dashboard')}}" class="y-image">
