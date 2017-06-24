@@ -128,6 +128,8 @@ return array(
 	'upgrade' => 'Upgrade',
 	'submit'	=>	'Submit',
 	'join_for_free_month'	=>	'join free for a month',
+	'you_get_per_month'	=>	'For $2 a month, you get',
+	'first_month_free'	=>	'The first month is free',
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',

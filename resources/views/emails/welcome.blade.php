@@ -118,7 +118,28 @@
 </script>
 
 </head>
-<body >
+<body>
+	<table style="background-color: black; text-align:center;" cellpadding="0" width="100%" cellspacing="0" border="0">
+		<tr>
+			<td valign="middle">
+				<h1 style="color:#fff;">UkumbiTV</h1>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle">
+				<h2>Hi {{$email_data->name}}! </h2>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle">
+				<h2>Hi {{$email_data->name}}! </h2>
+			</td>
+		</tr>
+	</table>
+		
+
+
+
     <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
     <table style="background-color: black;" cellpadding="0" width="100%" cellspacing="0" border="0" id="backgroundTable" class='bgBody table-full'>
         <tr>
@@ -162,7 +183,7 @@
                                         <td width="100%" colspan="3" align="center" style="padding-bottom:10px;padding-top:25px;">
                                             <div class="contentEditableContainer contentTextEditable">
                                                 <div class="contentEditable" >
-                                                    <h2 >Hi {{$email_data->name}}! </h2>
+                                                    
                                                 </div>
                                             </div>
                                         </td>
