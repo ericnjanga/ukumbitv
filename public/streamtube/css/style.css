@@ -1006,13 +1006,7 @@ signup.html css
     width: 100%;
     border-radius: 4px;
 }
-.signup-form input{
-	width: 100%;
-	margin-bottom: 10px;
-	/*padding: 10px;*/
-	border-radius: 3px;
-	color: #333;
-}
+ 
 .sign-up input[type=text] {
   border: 1px solid #b8b8b8;
   border-radius: 3px; 

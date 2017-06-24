@@ -28,6 +28,8 @@ input[type="email"] {
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   background-color: rgba(0, 0, 0, 0.3); }
+  .auth-rectangle .form-group {
+    margin-bottom: 5px; }
 
 .frame-login-registration {
   height: 600px;

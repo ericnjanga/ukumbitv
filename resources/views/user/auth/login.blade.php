@@ -3,85 +3,82 @@
 @section('content')
 
 <div class="frame-login-registration">
-    <div class="auth-rectangle">
+  <div class="auth-rectangle">
 
-         @include('notification.notify')
-        
-        <div class="social-form">
-            <div class="signup-head">
-                <h3>Login</h3>
-            </div><!--end  of signup-head-->         
-        </div><!--end of socila-form-->
- 
+     @include('notification.notify')
+    
+    <div class="social-form">
+        <div class="signup-head">
+            <h3>Login</h3>
+        </div><!--end  of signup-head-->         
+    </div><!--end of socila-form-->
 
-        <div class="sign-up login-page">
-            {!! csrf_field() !!}
 
-            @if($errors->has('email') || $errors->has('password'))
-                <div data-abide-error="" class="alert callout">
-                    <p>
-                        <i class="fa fa-exclamation-triangle"></i> 
-                        <strong> 
-                            @if($errors->has('email')) 
-                                {{ $errors->first('email') }}
-                            @else 
-                                $errors->first('password')
-                            @endif
-                        </strong>
-                    </p>
-                </div>
-            @endif
+    <div class="sign-up login-page">
+      {!! csrf_field() !!}
 
-            <form class="signup-form login-form" role="form" method="POST" action="{{ url('/login') }}">
-                <div class="form-group">
-                    <label for="email">{{tr('email')}}</label>
-                    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{tr('email')}}">
+      @if($errors->has('email') || $errors->has('password'))
+          <div data-abide-error="" class="alert callout">
+              <p>
+                  <i class="fa fa-exclamation-triangle"></i> 
+                  <strong> 
+                      @if($errors->has('email')) 
+                          {{ $errors->first('email') }}
+                      @else 
+                          $errors->first('password')
+                      @endif
+                  </strong>
+              </p>
+          </div>
+      @endif
 
-                    
-                </div>
+      <form role="form" method="POST" action="{{ url('/login') }}">
+        <div class="form-group">
+            <!-- <label for="email">{{tr('email')}}</label> -->
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{tr('email')}}">
+        </div>
 
-                <div class="form-group">
-                    <label for="password">{{tr('password')}}</label>
-                    <input type="password" name="password" class="form-control" id="password" placeholder="{{tr('password')}}">
+        <div class="form-group">
+          <!-- <label for="password">{{tr('password')}}</label> -->
+          <input type="password" name="password" class="form-control" id="password" placeholder="{{tr('password')}}">
 
-                    <span class="form-error">
-                        @if ($errors->has('password'))
-                            <strong>{{ $errors->first('password') }}</strong>
-                        @endif
-                    </span>
+          <span class="form-error">
+              @if ($errors->has('password'))
+                  <strong>{{ $errors->first('password') }}</strong>
+              @endif
+          </span> 
+        </div>
 
-                </div>
+        <input type="hidden" name="timezone" value="" id="userTimezone">
 
-                <input type="hidden" name="timezone" value="" id="userTimezone">
-
-                <div class="change-pwd">
-                    <button type="submit" class="btn btn-primary signup-submit">{{tr('submit')}}</button>
-                </div>  
-                <p>{{tr('new_account')}} <a href="{{route('user.register.form')}}">{{tr('register')}}</a></p>
-                <p> <a href="{{ url('/password/reset') }}">{{tr('forgot_password')}}</a></p>           
-            </form>
-        </div><!--end of sign-up-->
+        <div class="change-pwd">
+            <button type="submit" class="btn btn-primary signup-submit">{{tr('submit')}}</button>
+        </div>  
+        <p>{{tr('new_account')}} <a href="{{route('user.register.form')}}">{{tr('register')}}</a></p>
+        <p> <a href="{{ url('/password/reset') }}">{{tr('forgot_password')}}</a></p>           
+      </form>
+    </div><!--end of sign-up-->
 
 
 
 
 
-            <div class="social-btn">
-                @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
-                    <div class="social-fb">
-                        <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
-                            <input type="hidden" value="facebook" name="provider" id="provider">
-                            <a href="#">
-                                <button type="submit">
-                                    <i class="fa fa-facebook"></i>{{tr('login_via_fb')}}
-                                </button>
-                            </a>
-                        </form>
-                    </div> 
-                @endif  
-            </div><!--end of social-btn--> 
+    <div class="social-btn">
+        @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
+            <div class="social-fb">
+                <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
+                    <input type="hidden" value="facebook" name="provider" id="provider">
+                    <a href="#">
+                        <button type="submit">
+                            <i class="fa fa-facebook"></i>{{tr('login_via_fb')}}
+                        </button>
+                    </a>
+                </form>
+            </div> 
+        @endif  
+    </div><!--end of social-btn--> 
 
-    </div><!--end of common-form-->     
+  </div><!--end of common-form-->     
 </div><!--end of form-background-->
 
 @endsection
