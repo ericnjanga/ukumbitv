@@ -1,11 +1,19 @@
 
 
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="checkbox"],
+button[type="submit"] {
+	border-radius: 3px;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
 button[type="submit"]{
-	height: 50px;
-	border-radius: 3px; 
+	height: 50px; 
 }
 
 input[type="text"],

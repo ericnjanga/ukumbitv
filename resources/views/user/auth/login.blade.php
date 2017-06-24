@@ -60,11 +60,16 @@
 				</div>
 
 
+      	{{-- [Submit button] --}}
         <button type="submit" class="btn btn-submit">{{tr('submit')}}</button> 
 
 
-        <p>{{tr('new_account')}} <a href="{{route('user.register.form')}}">{{tr('register')}}</a></p>
-        <p> <a href="{{ url('/password/reset') }}">{{tr('forgot_password')}}</a></p>    
+      	{{-- [Forgot password/Register] --}}
+				<div class="text-center"> 
+        	<p>{{tr('forgot_password')}}? <a href="{{ url('/password/reset') }}">{{tr('Recover')}}</a></p>
+        	<p>{{tr('no_account')}}? <a href="{{route('user.register.form')}}">{{tr('sign_up_now')}}</a></p>
+				</div>    
+				
         <input type="hidden" name="timezone" value="" id="userTimezone">       
       </form>
     </div><!--end of sign-up-->

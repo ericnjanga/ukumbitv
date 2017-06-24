@@ -223,7 +223,10 @@ return array(
 
 	'login_constant_error' => 'There are some errors in your form.',
 	'new_here' => 'New Here ? ',
+	'Recover' => 'Recover',
 	'new_account' => 'Create a new Account',
+	'no_account' => 'No account',
+	'sign_up_now' => 'Sign up now',
 	'login_via_fb' => 'Login Via Facebook',
 	'login_via_twitter' => 'Login Via Twitter',
 	'login_via_google' => 'Login Via Google',
