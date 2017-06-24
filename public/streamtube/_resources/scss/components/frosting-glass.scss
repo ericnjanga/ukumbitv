@@ -1,0 +1,17 @@
+
+ 
+
+.backdropfilter{ 
+	.frosting-glass { 
+		-webkit-backdrop-filter: blur(20px);
+		backdrop-filter: blur(20px);
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+}//backdropfilter
+ 
+
+.no-backdropfilter{ 
+	.frosting-glass { 
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+}//no-backdropfilter

@@ -19,17 +19,12 @@
 
     <link rel="shortcut icon" type="image/png" href="@if(Setting::get('site_icon')) {{Setting::get('site_icon')}} @else {{asset('img/favicon.png')}} @endif"/>
 
-    <style type="text/css">
-        .ui-autocomplete{
-          z-index: 99999;
-        }
-    </style>
-
+   
     @yield('styles')
 
 </head>
 
-<body>
+<body class="@yield('body-class')">
 
     @include('layouts.user.focused-nav')
 
@@ -42,52 +37,7 @@
 
     <!-- background images slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-    <!--
-    <script src="{{asset('streamtube/js/jquery.min.js')}}"></script>
-    <script src="{{asset('streamtube/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('streamtube/js/jquery-ui.js')}}"></script>
-    <script type="text/javascript" src="{{asset('streamtube/js/jquery-migrate-1.2.1.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('streamtube/js/slick.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('streamtube/js/script.js')}}"></script>
-		-->
-
-    <script type="text/javascript">
-        // jQuery(document).ready( function () {
-        //     //autocomplete
-        //     jQuery("#auto_complete_search").autocomplete({
-        //         source: "{{route('search')}}",
-        //         minLength: 1,
-        //         select: function(event, ui){
-
-        //             // set the value of the currently focused text box to the correct value
-
-        //             if (event.type == "autocompleteselect"){
-                        
-        //                 // console.log( "logged correctly: " + ui.item.value );
-
-        //                 var username = ui.item.value;
-
-        //                 if(ui.item.value == 'View All') {
-
-        //                     // console.log('View AALLLLLLLLL');
-
-        //                     window.location.href = "{{route('search', array('q' => 'all'))}}";
-
-        //                 } else {
-        //                     // console.log("User Submit");
-
-        //                     jQuery('#auto_complete_search').val(ui.item.value);
-
-        //                     jQuery('#userSearch').submit();
-        //                 }
-
-        //             }                        
-        //         }      // select
-
-        //     }); 
-
-        // });
-		</script>
+    
 
     @yield('scripts')
 

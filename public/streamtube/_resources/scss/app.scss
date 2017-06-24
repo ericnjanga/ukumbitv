@@ -7,10 +7,12 @@
 
 
 @import 'global/body.scss';
+@import 'global/nav.scss';
 @import 'global/footer.scss';
 
 
-@import 'components/form.scss';
+@import 'components/form.scss'; 
+@import 'components/frosting-glass.scss'; 
 
 
 @import 'pages/login-registration.scss';

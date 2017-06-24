@@ -19,7 +19,7 @@
 		"oA": 0,
 		"oAP": "\/css\/app.css",
 		"oF": 3,
-		"oS": 0,
+		"oS": 3,
 		"uL": 1
 		},
 	"\/_resources\/scss\/components\/form.scss": {
@@ -31,6 +31,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/_resources\/scss\/components\/form.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_resources\/scss\/components\/frosting-glass.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/_resources\/scss\/components\/frosting-glass.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -57,6 +70,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/_resources\/scss\/global\/footer.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/_resources\/scss\/global\/nav.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/_resources\/scss\/global\/nav.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -488,11 +514,11 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/js\/app.decoration.js": {
+	"\/js\/app.unauth.decor.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 1,
-		"oAP": "\/js\/app.decoration-min.js",
+		"oA": 0,
+		"oAP": "\/js\/app.unauth.decor-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0

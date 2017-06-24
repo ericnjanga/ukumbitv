@@ -5,4 +5,11 @@ body{
 	line-height: 1.0;
 	letter-spacing: 0.5px; 
 	background-color: $color-secondary;
+
+	//Crisp text
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
+
+
+ 

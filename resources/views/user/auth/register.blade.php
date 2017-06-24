@@ -2,6 +2,12 @@
 
 @section('content')
 
+
+{{-- Assign "page-login" class to body --}}
+@section('body-class')
+page-registrater
+@endsection
+
 <div class="frame-registration">
   <div class="auth-rectangle panel-register">
       
