@@ -4,8 +4,7 @@
 .auth-rectangle { 
 	position: relative;
 	padding: 30px;
-	width: 360px;
-	height: 425px;
+	width: 360px; 
 	border-radius: 2px;
 	color: #fff;
 	background-color: rgba(0, 0, 0, 0.3);
@@ -26,7 +25,7 @@
 
 	.btn-submit {
 		color: #fff;
-		background-color: #ec174f;
+		background-color: $color-primary;
 	}
 
 	//backdrop filter
@@ -44,7 +43,19 @@
 	}
 }
 
-.frame-login-registration{
+.frame-login{
+
+}
+.frame-registration{
+	.panel-register{
+		margin-right: 25px;
+	}
+	.panel-offers{
+		margin-left: 25px;
+	}
+}
+.frame-login, 
+.frame-registration{
   height: 600px;
   display: flex;
   align-items: center;

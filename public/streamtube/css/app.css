@@ -1,3 +1,9 @@
+.txt-color-primary {
+  color: #ec174f; }
+
+.txt-color-secondary {
+  color: #282250; }
+
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   background-color: #fff;
@@ -37,7 +43,6 @@ input[type="email"] {
   position: relative;
   padding: 30px;
   width: 360px;
-  height: 425px;
   border-radius: 2px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.3); }
@@ -65,7 +70,14 @@ input[type="email"] {
             filter: blur(20px);
     z-index: -1; }
 
-.frame-login-registration {
+.frame-registration .panel-register {
+  margin-right: 25px; }
+
+.frame-registration .panel-offers {
+  margin-left: 25px; }
+
+.frame-login,
+.frame-registration {
   height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;

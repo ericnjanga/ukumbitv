@@ -127,6 +127,7 @@ return array(
 	'change'	=> 	'Change',
 	'upgrade' => 'Upgrade',
 	'submit'	=>	'Submit',
+	'join_for_free_month'	=>	'join free for a month',
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',
