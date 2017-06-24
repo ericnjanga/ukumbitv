@@ -1,6 +1,8 @@
 body {
   font-family: HelveticaNeue;
-  background-color: #fff; }
+  background-color: #fff;
+  line-height: 1.0;
+  letter-spacing: 0.5px; }
 
 .main-footer {
   padding-top: 40px;
@@ -15,9 +17,14 @@ body {
 
 input[type="text"],
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+button[type="submit"] {
   height: 50px;
-  border-radius: 3px;
+  border-radius: 3px; }
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
   background-color: rgba(255, 255, 255, 0.1); }
 
 .auth-rectangle {
@@ -26,11 +33,19 @@ input[type="email"] {
   width: 360px;
   height: 425px;
   border-radius: 2px;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.3); }
+  .auth-rectangle .page-title {
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 300; }
   .auth-rectangle .form-group {
     margin-bottom: 5px; }
   .auth-rectangle .form-control {
     border: 0px solid #ccc; }
+  .auth-rectangle .btn-submit {
+    color: #fff;
+    background-color: #ec174f; }
   .auth-rectangle:before {
     content: '';
     position: absolute;

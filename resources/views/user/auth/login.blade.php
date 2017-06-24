@@ -7,11 +7,7 @@
 
      @include('notification.notify')
     
-    <div class="social-form">
-        <div class="signup-head">
-            <h3>Login</h3>
-        </div><!--end  of signup-head-->         
-    </div><!--end of socila-form-->
+    <h3 class="page-title text-center">Login</h3>
 
 
     <div class="sign-up login-page">
@@ -33,11 +29,15 @@
       @endif
 
       <form role="form" method="POST" action="{{ url('/login') }}">
+
+      	{{-- [email] for group --}}
         <div class="form-group">
             <!-- <label for="email">{{tr('email')}}</label> -->
             <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{tr('email')}}">
         </div>
 
+
+      	{{-- [password] for group --}}
         <div class="form-group">
           <!-- <label for="password">{{tr('password')}}</label> -->
           <input type="password" name="password" class="form-control" id="password" placeholder="{{tr('password')}}">
@@ -49,13 +49,23 @@
           </span> 
         </div>
 
-        <input type="hidden" name="timezone" value="" id="userTimezone">
 
-        <div class="change-pwd">
-            <button type="submit" class="btn btn-primary signup-submit">{{tr('submit')}}</button>
-        </div>  
+      	{{-- [Stay logged in] for group --}}
+				<div class="form-group">
+					<div class="checkbox">
+				    <label>
+				      <input type="checkbox"> Stay logged in
+				    </label>
+				  </div>
+				</div>
+
+
+        <button type="submit" class="btn btn-submit">{{tr('submit')}}</button> 
+
+
         <p>{{tr('new_account')}} <a href="{{route('user.register.form')}}">{{tr('register')}}</a></p>
-        <p> <a href="{{ url('/password/reset') }}">{{tr('forgot_password')}}</a></p>           
+        <p> <a href="{{ url('/password/reset') }}">{{tr('forgot_password')}}</a></p>    
+        <input type="hidden" name="timezone" value="" id="userTimezone">       
       </form>
     </div><!--end of sign-up-->
 

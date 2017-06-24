@@ -1190,12 +1190,7 @@ edit profile.html css
 }
 .edit-image{
 	margin-bottom: 10px;
-}
-label{
-	border: none;
-    padding: 0;
-    float: left;
-}
+} 
 .editform-content input[type="file"]{
 	padding: 5px;
 	border: 1px solid #ccc;
