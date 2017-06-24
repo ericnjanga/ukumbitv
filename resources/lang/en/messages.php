@@ -369,7 +369,7 @@ return array(
 
 
 	//Admin Login
-	'welcome'	=>	'Welcome to StreamHash. Please sign in to your account',
+	'welcome'	=>	'Welcome to UkumbiTV. Please sign in to your account',
 	'email_add'	=>	'E-mail Address',
 	
 	'password_reset_msg'	=>	'Enter a new password and log in to your account',

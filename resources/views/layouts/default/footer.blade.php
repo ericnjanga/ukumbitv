@@ -6,7 +6,7 @@
     </div>
 
     <div class="btm-footer-text text-center">
-        <p><a href="http://streamhash.com" target="_blank">2017 © {{Setting::get('site_name' , 'StreamHash')}}</a></p>
+        <p><a href="http://streamhash.com" target="_blank">2017 © {{Setting::get('site_name' , 'UkumbiTV')}}</a></p>
     </div>
 </div>
 

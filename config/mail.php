@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => env('MAIL_USERNAME'), 'name' => env('SITENAME' , 'StreamHash')],
+    'from' => ['address' => env('MAIL_USERNAME'), 'name' => env('SITENAME' , 'UkumbiTV')],
 
     /*
     |--------------------------------------------------------------------------
