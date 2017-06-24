@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>{{Setting::get('site_name' , "StreamHash")}}</title>
+    <title>{{Setting::get('site_name' , "UkumbiTV - Watch unlimited african movies and TV Shows online")}}</title>
     
     <meta name="viewport" content="width=device-width,  initial-scale=1">
     <link rel="stylesheet" href="{{asset('streamtube/css/bootstrap.min.css')}}">

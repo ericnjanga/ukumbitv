@@ -16,7 +16,7 @@
             <li><a href="{{route('user.about')}}">About Us</a></li>
             <li><a href="{{route('user.terms-condition')}}">Terms &amp; Conditions</a></li>
             <li><a href="{{route('user.privacy_policy')}}">Privacy &amp; Policy</a></li>
-            <li><a href="http://streamhash.com/" target="_blank">&#169; 2017 {{Setting::get('site_name' , 'StreamHash')}}</a></li>
+            <li><a href="http://streamhash.com/" target="_blank">&#169; 2017 {{Setting::get('site_name' , 'UkumbiTV - Watch unlimited african movies and TV Shows online')}}</a></li>
         </ul>
     </div>   
   </div> --> 
