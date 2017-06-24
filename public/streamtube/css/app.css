@@ -8,13 +8,13 @@ body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   background-color: #fff;
   line-height: 1.0;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  background-color: #282250; }
 
 .main-footer {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 14px;
-  background-color: #282250;
   color: #ffffff;
   opacity: 0.7; }
   .main-footer a {
