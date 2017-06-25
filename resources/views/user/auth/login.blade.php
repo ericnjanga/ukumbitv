@@ -111,6 +111,6 @@ page-login
 @section('scripts')
 
 
-    <script src="app/app.unauth.decor.js"></script>
+    <script src="js/app.unauth.decor.js"></script>
 
 @endsection
