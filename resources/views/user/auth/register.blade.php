@@ -156,12 +156,6 @@ page-registrater
 
 @endsection
 
-
 @section('scripts')
-
-
-
-    <script type="text/javascript" src="{{asset('streamtube/js/app.decoration.js')}}"></script>
-
-
+  <script src="{{asset('streamtube/js/app.unauth.decor.js')}}"></script>
 @endsection

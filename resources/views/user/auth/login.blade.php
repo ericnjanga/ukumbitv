@@ -109,8 +109,5 @@ page-login
 @endsection
 
 @section('scripts')
-
-
-    <script src="js/app.unauth.decor.js"></script>
-
+  <script src="{{asset('streamtube/js/app.unauth.decor.js')}}"></script>
 @endsection
