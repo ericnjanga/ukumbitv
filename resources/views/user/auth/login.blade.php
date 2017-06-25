@@ -102,8 +102,8 @@ page-login
     </form>
     
 
-  </div>{{!-- rectangle --}}    
-</div>{{!-- main-content --}}
+  </div><!-- rectangle -->    
+</div><!-- main-content -->
 
 
 @endsection
