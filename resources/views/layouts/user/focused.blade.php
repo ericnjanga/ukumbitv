@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 
 <head>
     <title>{{Setting::get('site_name' , "UkumbiTV - Watch unlimited african movies and TV Shows online")}}</title>
@@ -19,6 +19,7 @@
 
     <link rel="shortcut icon" type="image/png" href="@if(Setting::get('site_icon')) {{Setting::get('site_icon')}} @else {{asset('img/favicon.png')}} @endif"/>
 
+    <script src="{{asset('streamtube/js/vendors/modernizr.custom.js')}}"></script>
    
     @yield('styles')
 
