@@ -17,6 +17,14 @@ $rectangle-width: 360px;
 		border-radius: 2px;
 		color: #fff;
 
+		.btn-link{
+			color: #fff;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+
 		.page-title { 
 			margin-top: 0;
 			margin-bottom: 30px;
