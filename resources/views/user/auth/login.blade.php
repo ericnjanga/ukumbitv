@@ -13,8 +13,9 @@ page-login
   <div class="rectangle frosting-glass">
 
      @include('notification.notify')
-    
-    <h3 class="page-title text-center">Login</h3>
+      <a href="{{url('setlocale/en')}}">EN</a>
+      <a href="{{url('setlocale/fr')}}">FR</a>
+    <h3 class="page-title text-center">{{trans('messages.login_form_title')}}</h3>
     
     {!! csrf_field() !!}
 

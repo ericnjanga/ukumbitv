@@ -10,7 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+Route::get('setlocale/{locale}', function ($locale) {
+    return redirect()->back()->withCookie(cookie('locale', $locale));                             # Redirect with select lang
+});
 // Report Video type
 
 if(!defined('REPORT_VIDEO_KEY')) define('REPORT_VIDEO_KEY', 'REPORT_VIDEO');
@@ -382,7 +384,9 @@ Route::post('/social', array('as' => 'SocialLogin' , 'uses' => 'SocialAuthContro
 Route::get('/callback/{provider}', 'SocialAuthController@callback');
 
 
+
 Route::group([], function(){
+
 
     Route::get('login', 'Auth\AuthController@showLoginForm')->name('user.login.form');
 
@@ -616,5 +620,6 @@ Route::group(['prefix' => 'userApi'], function(){
     Route::get('/clearHistory', 'UserApiController@clear_history');
 
     // 
+
 
 });
