@@ -8,8 +8,8 @@
 page-registrater
 @endsection
 
-<div class="frame-registration">
-  <div class="auth-rectangle panel-register">
+<div class="main-content">
+  <div class="rectangle panel-register frosting-glass">
       
       <div class="social-form">
           <h3 class="title text-center">{{tr('signup')}}</h3>
@@ -128,7 +128,7 @@ page-registrater
 
 
 
-  <div class="auth-rectangle panel-offers">
+  <div class="rectangle panel-offers frosting-glass">
   	<h2 class="page-title">
   		{{tr('you_get_per_month')}}:
   	</h2>
