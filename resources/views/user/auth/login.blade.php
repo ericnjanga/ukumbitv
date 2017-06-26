@@ -71,28 +71,18 @@ page-login
     	{{-- [Forgot password/Register] --}}
 			<footer class="text-center"> 
 				<div class="fb-login">
-					<a href="#">
-						<i class="fa fa-facebook-official" aria-hidden="true"></i>
-						Login with Facebook
-					</a>
- 
-					{{--
-			    <div class="social-btn">
-			        @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
-			            <div class="social-fb">
-			                <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
-			                    <input type="hidden" value="facebook" name="provider" id="provider">
-			                    <a href="#">
-			                        <button type="submit">
-			                            <i class="fa fa-facebook"></i>{{tr('login_via_fb')}}
-			                        </button>
-			                    </a>
-			                </form>
-			            </div> 
-			        @endif  
-			    </div>
-			    --}}
-				</div>
+					@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
+	          <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
+	              <input type="hidden" value="facebook" name="provider" id="provider">
+	              <a href="#">
+	                <button type="submit" class="btn-link">
+	                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
+	                  {{tr('login_via_fb')}}
+	                </button>
+	              </a>
+	          </form>
+			    @endif 
+        </div> 
 
       	<p>{{tr('forgot_password')}}? <a href="{{ url('/password/reset') }}">{{tr('Recover')}}</a></p>
       	<p>{{tr('no_account')}}? <a href="{{route('user.register.form')}}">{{tr('sign_up_now')}}</a></p>
