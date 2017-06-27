@@ -12,9 +12,8 @@ page-login
 <div class="main-content">
   <div class="rectangle frosting-glass">
 
-     @include('notification.notify')
-      <a href="{{url('setlocale/en')}}">EN</a>
-      <a href="{{url('setlocale/fr')}}">FR</a>
+    @include('notification.notify')
+ 
     <h3 class="page-title text-center">{{trans('messages.login_form_title')}}</h3>
     
     {!! csrf_field() !!}
@@ -60,7 +59,7 @@ page-login
 			<div class="form-group form-group-spacearound1">
 				<div class="checkbox">
 			   	<input type="checkbox" id="cb-stay-connected"> 
-			    <label for="cb-stay-connected">Stay logged in</label>
+			    <label for="cb-stay-connected">{{tr('Stay_logged_in')}}</label>
 			  </div>
 			</div>
 

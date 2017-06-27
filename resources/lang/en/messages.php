@@ -98,8 +98,8 @@ return array(
 	'settings'	=>	'Settings',
 	'delete_account' => 'Delete Account',
 
-	'forgot_password'	=>	'Forgot Password?',
-	'forgot'	=>	'Forgot Your Password?',
+	'forgot_password'	=>	'Forgot Password',
+	'forgot'	=>	'Forgot Your Password',
 	'remember'	=>	'Remember Me',
 
 	'reset_password' => 'Reset Password',
@@ -165,6 +165,7 @@ return array(
 	'one_time_payment'=> 'One Time Payment',
 	'recurring_payment'=> 'Recurring Payment',
 	'payment_added'=> 'Payment Added Successfully',
+	'Stay_logged_in' => 'Stay logged in',
 
 	// Form Elements
 
