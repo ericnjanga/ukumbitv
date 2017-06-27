@@ -179,7 +179,7 @@
                                     <div class="contentEditableContainer contentTextEditable">
                                         <div class="contentEditable" >
                                             <p>
-                                            	"{{trans('messages.Welcome_to')}} {{Setting::get('site_name' , 'Stream Hash')}} {{trans('messages.welcome_email_msg1')}} "
+                                            	"{{trans('messages.Welcome_to')}} <b>UkumbiTV</b> {{trans('messages.welcome_email_msg1')}} "
                                             </p>
                                             <p>{{trans('messages.welcome_email_msg2')}}</p>
                                         </div>

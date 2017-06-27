@@ -23,7 +23,7 @@ return array(
 	'question_contactus' 	=> 'Des questions? Contactez nous', 
 	'Copyright' 					=> 'Droits d\'auteur',
   'email_verify_alert' 	=> 'Compte non vérifié. Veuillez vous adresser au courrier électronique et le vérifier.',
-  'website_description' => 'UkumbiTV - Accès en ligne illimité aux films et émissions de télé africains',
+  'website_description' => 'Accès en ligne illimité aux films et émissions de télé africains',
 	'first_month_free'		=>	'Le premier mois est gratuit',
 	'already_account' 		=> 'Vous avez déjà un compte?',
 	'you_get_per_month'		=>	'Pour 2 $ par mois, vous obtenez',

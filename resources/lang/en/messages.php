@@ -80,6 +80,7 @@ return array(
 	'Verify_Now' => 'Verify Now',
 	'welcome_email_msg2' => 'Enjoy your free month of unlimited videos!',
 	'welcome_email_msg1' => 'and thanks for signing up!',
+  'website_description' => 'Watch unlimited african movies and TV Shows online',
 	'Welcome_to' => 'Welcome to',
 	'admin' => 'Admin',
 	'users' 	=>	'Users',
