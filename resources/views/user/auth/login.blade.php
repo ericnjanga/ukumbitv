@@ -58,7 +58,7 @@ page-login
     	{{-- [Stay logged in] for group --}}
 			<div class="form-group form-group-spacearound1">
 				<div class="checkbox">
-			   	<input type="checkbox" id="cb-stay-connected"> 
+			   	<input type="checkbox" id="cb-stay-connected" checked> 
 			    <label for="cb-stay-connected">{{trans('messages.Stay_logged_in')}}</label>
 			  </div>
 			</div>

@@ -7,4 +7,11 @@
   align-items: center;
 	// background: lime;
 	height: 100px;
+	a {
+		color: #fff;
+		opacity: 0.4;
+		&:hover { 
+			opacity: 1;
+		}
+	}
 }
