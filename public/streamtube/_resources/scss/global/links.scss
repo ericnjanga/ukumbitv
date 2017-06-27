@@ -20,3 +20,11 @@ a.underlined {
 		text-decoration: none;
 	}
 }
+
+
+.main-footer a {
+	&:hover{
+		opacity: 1;
+		cursor: pointer;
+	}
+}

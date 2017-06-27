@@ -8,14 +8,10 @@
 	color: #ffffff;
 	line-height: 2em;
 	background-color: $color-secondary;
-	p, ul, a {
+	* {
 		color: #ffffff;
 		opacity: 0.7;
 	}
-	a {
-		&:hover{
-			opacity: 1;
-			cursor: pointer;
-		}
-	}
 }
+
+
