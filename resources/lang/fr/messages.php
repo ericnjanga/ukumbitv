@@ -1,6 +1,8 @@
 <?php
 
 return array(
+	'name'							=>	'Nom',
+	'signup'						=>	'S\'inscrire',
  	'login_form_title' 	=> 'S\'identifier',
 	'email'							=>	'Adresse electronique',
 	'password'					=>	'Mot de passe',
@@ -16,4 +18,11 @@ return array(
 	'privacy_statement' => 'Déclaration de confidentialité',
 	'question_contactus' 	=> 'Des questions? Contactez nous', 
 	'Copyright' 					=> 'Droits d\'auteur',
+  'email_verify_alert' 	=> 'Compte non vérifié. Veuillez vous adresser au courrier électronique et le vérifier.',
+  'website_description' => 'UkumbiTV - Accès en ligne illimité aux films et émissions de télé africains',
+	'first_month_free'		=>	'Le premier mois est gratuit',
+	'already_account' 		=> 'Vous avez déjà un compte?',
+	'you_get_per_month'		=>	'Pour 2 $ par mois, vous obtenez',
+	'join_for_free_month'	=>	'Abonnement gratuit le 1er mois',
+	'confirm_password' 		=> 'Confirmez le mot de passe',
 );

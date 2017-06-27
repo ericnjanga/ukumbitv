@@ -86,7 +86,7 @@ return array(
 	'menu' => 'Menu',
 
 	'register'	=>	'Register',
-	'signup'	=>	'Signup',
+	'signup'	=>	'Sign Up',
 	'login'	=>	'Login',
 	'logout'	=>	'Logout',
 	'sign_out' => 'Sign out',
@@ -131,7 +131,7 @@ return array(
 	'change'	=> 	'Change',
 	'upgrade' => 'Upgrade',
 	'submit'	=>	'Submit',
-	'join_for_free_month'	=>	'join free for a month',
+	'join_for_free_month'	=>	'Join free for a month',
 	'you_get_per_month'	=>	'For $2 a month, you get',
 	'first_month_free'	=>	'The first month is free',
 
@@ -248,7 +248,8 @@ return array(
 	'share_on_twitter' => 'Share On Twitter',
 	'reset_now' => 'Reset Now',
 	'update_now' => 'Update Now',
-    'email_verify_alert' => 'Account not verified. Please go to email and verify it.',
+  'email_verify_alert' => 'Account not verified. Please go to email and verify it.',
+  'website_description' => 'UkumbiTV - Watch unlimited african movies and TV Shows online',
 
 	// Home Page
 
