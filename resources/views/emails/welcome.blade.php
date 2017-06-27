@@ -119,49 +119,84 @@
 		<tr> 
 			<td style="background-color: #282250;" align="center" valign="top">
 				<!-- main table -->
-				<table width="600">
+				<table width="600"> 
 					<tr>
 						<td height="100" align="left" valign="middle">
-							<img src="{{asset('streamtube/images/logo1.png')}}" width="155" height="155" alt='UkumbiTv' />
+							<img src="{{asset('streamtube/images/logo1.png')}}" width="151" height="30" alt='UkumbiTv' />
 						</td>
 					</tr>
 					<tr>
 						<td height="230" align="left" valign="middle" style="background-image:url({{asset('streamtube/images/email-hero1.jpg')}})">
-							<table width="45%">
+							<table width="60%">
 								<tr>
+									<td width="30"></td>
 									<td>
-							<h2 style="color: #fff;">{{trans('messages.website_description')}}</h2></td>
+										<h2 style="color: #fff; font-family: Roboto,sans-serif;">{{trans('messages.website_description')}}</h2></td>
 								</tr>
 							</table>
 						</td>
 					</tr>
 					<tr>
 						<td align="center" valign="middle" style="background-color: #ccc;">
+
+							<table>
+								<tr>
+									<td height="50"></td>
+								</tr>
+								<tr>
+									<td align="center" valign="middle" height="100">
+										
+										<h3 style="margin-bottom:20px;     font-family: Roboto,sans-serif;">
+			              	{{trans('messages.Welcome_to')}} <b>UkumbiTV</b> {{trans('messages.welcome_email_msg1')}}
+			              </h3>
+			              <h4>For $2 per month, you get:</h4>
+			              <ul style="margin-bottom:20px; font-family: Roboto,sans-serif;">
+			              	<li>item 1</li>
+			              	<li>item 2</li>
+			              	<li>item 3</li>
+			              	<li>item 4</li>
+			              	<li>item 5</li>
+			              	<li>item 6</li>
+			              </ul>
+			              <p style="font-family: Roboto,sans-serif; font-size:16px;">{{trans('messages.welcome_email_msg2')}}</p>
+									</td>
+								</tr>
+								<tr>
+									<td height="50"></td>
+								</tr>
+								<tr>
+									<td align="center" style="padding-top:25px;padding-bottom:115px;"> 
+			              <table cellpadding="0" cellspacing="0" border="0" align="center" width="300">
+
+			                <tr>
+			                  <td bgcolor="#ec174f" align="center" style="border-radius:4px;margin-top: 10px" width="200" height="50">
+			                     
+			                    <a target='_blank' href="{{route('email.verify' , ['id' => $email_data->id , 'verification_code' => $email_data->verification_code])}}" style="color: #fff; font-family: Roboto,sans-serif; display: block; padding: 15px; text-decoration: none; font-size: 16px; text-transform: uppercase;">{{trans('messages.Verify_Now')}}</a>
+			                       
+			                  </td>
+			                </tr>
+			              </table>
+			            </td> 
+								</tr>
+								<tr>
+									<td height="50"></td>
+								</tr>
+							</table>
 							
 
-							<h3 style="margin-bottom:20px;">
-              	"{{trans('messages.Welcome_to')}} <b>UkumbiTV</b> {{trans('messages.welcome_email_msg1')}} "
-              </h3>
-              <p>{{trans('messages.welcome_email_msg2')}}</p>
 
 
 						</td>
 					</tr>
+ 
 
-					<tr> 
-            <td align="center" style="padding-top:25px;padding-bottom:115px;"> 
-              <table cellpadding="0" cellspacing="0" border="0" align="center" width="300" height="50">
-
-                <tr>
-                  <td bgcolor="#ec174f" align="center" style="border-radius:4px;margin-top: 10px" width="200" height="50">
-                     
-                    <a target='_blank' href="{{route('email.verify' , ['id' => $email_data->id , 'verification_code' => $email_data->verification_code])}}" style="color: #FFF;text-orientation: none;cursor: pointer;" class='link2'>{{trans('messages.Verify_Now')}}</a>
-                       
-                  </td>
-                </tr>
-              </table>
-            </td> 
-					</tr>
+ 					<tr>
+ 						<td height="150" align="center" valign="middle" style="color: #fff; font-size:11px; color:#ccc; font-family: Roboto,sans-serif; text-align-center;"> 
+							<p>This email was sent to you because you indicated that you'd like to receive updates about new features and offers to improve your listing's performance from Google My Business. If you don't want to receive such emails in the future, please unsubscribe here. You can also change your preferences on your Google My Business settings page by logging into https://business.google.com/settings. </p>
+ 							<p>Pleace website footer links</p>
+ 							<p>Pleace the eastmall address</p>
+ 						</td>
+ 					</tr>
 				</table>
 				<!-- main table -->
 			</td> 
