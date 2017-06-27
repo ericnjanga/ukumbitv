@@ -66,7 +66,7 @@ page-register
 
       	<!-- [Additional links] -->
 				<footer class="text-center">
-					<p>{{trans('messages.already_account')}} <a href="{{route('user.login.form')}}">{{trans('messages.login')}}</a></p> 
+					<p>{{trans('messages.already_account')}} <a href="{{route('user.login.form')}}" class="underline">{{trans('messages.login')}}</a></p> 
 				</footer> 
 
         <input type="hidden" name="timezone" value="" id="userTimezone">   
