@@ -66,30 +66,30 @@ page-login
 
     	{{-- [Submit button] --}}
       <button type="submit" class="btn btn-primary btn-block">{{trans('messages.submit')}}</button> 
+		</form>
 
+  	{{-- [Forgot password/Register] --}}
+		<footer class="text-center"> 
+			<div class="fb-login">
+				@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
+          <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
+              <input type="hidden" value="facebook" name="provider" id="provider">
+              <!-- <a href="#"> -->
+                <button type="submit" class="btn-link">
+                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                  {{trans('messages.login_via_fb')}}
+                </button>
+              <!-- </a> -->
+          </form>
+		    @endif 
+      </div> 
 
-    	{{-- [Forgot password/Register] --}}
-			<footer class="text-center"> 
-				<div class="fb-login">
-					@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
-	          <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
-	              <input type="hidden" value="facebook" name="provider" id="provider">
-	              <!-- <a href="#"> -->
-	                <button type="submit" class="btn-link">
-	                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
-	                  {{trans('messages.login_via_fb')}}
-	                </button>
-	              <!-- </a> -->
-	          </form>
-			    @endif 
-        </div> 
+    	<p>{{trans('messages.forgot_password')}}? <a href="{{ url('/password/reset') }}" class="underlined">{{trans('messages.Recover')}}</a></p>
+    	<p>{{trans('messages.no_account')}}? <a href="{{route('user.register.form')}}" class="underlined">{{trans('messages.sign_up_now')}}</a></p>
+		</footer>   
 
-      	<p>{{trans('messages.forgot_password')}}? <a href="{{ url('/password/reset') }}" class="underlined">{{trans('messages.Recover')}}</a></p>
-      	<p>{{trans('messages.no_account')}}? <a href="{{route('user.register.form')}}" class="underlined">{{trans('messages.sign_up_now')}}</a></p>
-			</footer>   
-
-      <input type="hidden" name="timezone" value="" id="userTimezone">       
-    </form>
+    <input type="hidden" name="timezone" value="" id="userTimezone">       
+   
     
 
   </div><!-- rectangle -->    
