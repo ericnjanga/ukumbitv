@@ -227,8 +227,8 @@ return array(
 
 	// mail title configure
 
-	'user_welcome_title' => 'Welcome to Stream Hash',
-	'provider_welcome_title' => 'Welcome to Stream Hash',
+	'user_welcome_title' => 'Welcome to UkumbiTV',
+	'provider_welcome_title' => 'Welcome to UkumbiTV',
 
 	'user_forgot_email_title' => "Your new password",
 	'provider_forgot_email_title' =>  'Your new password',

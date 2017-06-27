@@ -53,7 +53,7 @@
 			              	{{trans('messages.Welcome_to')}} <b>UkumbiTV</b> {{trans('messages.welcome_email_msg1')}}
 			              </h3>
 			              <h4 style=" font-size:16px;">{{trans('messages.you_get_per_month')}}:</h4>
-			              <ul style="margin-bottom:20px;">
+			              <ul style="margin-bottom:20px; list-style:none;">
 			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_1')}}</li>
 			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_2')}}</li>
 			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_3')}}</li>
@@ -115,9 +115,7 @@
 										</p>
 
 
-										<p style="font-size:10px; text-align:center; color:#ccc; text-align:center;">
-								  		<p>{{trans('messages.Copyright')}} 2017, Toronto, Canada</p> 
-								  	</p> 
+										<p style="font-size:10px; text-align:center; color:#ccc; text-align:center;">{{trans('messages.Copyright')}} 2017, Toronto, Canada</p> 
  
 									</td>
 								</tr>

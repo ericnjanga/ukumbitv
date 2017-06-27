@@ -2,9 +2,12 @@
 
 return array(
 	'Hi' => 'Salut',
-	'Verify_Now' => 'Vérifiez maintenant',
-	'welcome_email_msg2' => 'Enjoy your free month of unlimited videos!',
-	'welcome_email_msg1' => 'et merci de vous inscrire!',
+	'user_welcome_title' 			=> 'Bienvenue chez UkumbiTV',
+	'provider_welcome_title' 	=> 'Bienvenue chez UkumbiTV',
+	'Welcome_to' 					=> 'Bienvenue chez',
+	'Verify_Now' 					=> 'Vérifiez maintenant',
+	'welcome_email_msg2' 	=> 'Enjoy your free month of unlimited videos!',
+	'welcome_email_msg1' 	=> 'et merci de vous inscrire!',
 	'welcome_email_footer_msg1' => 'Cet email vous a été envoyé parce que vous vous êtes inscrit à ',
 	'name'							=>	'Nom',
 	'signup'						=>	'S\'inscrire',
