@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Nous n\'avons pas ces informations d\'identification',
+    'failed' => 'Nous ne reconnaissons pas ces informations d\'identification',
     'throttle' => 'Trop de tentatives de connexion. Veuillez réessayer dans: secondes secondes.',
 
 ];
