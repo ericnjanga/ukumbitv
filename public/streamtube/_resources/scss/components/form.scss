@@ -24,7 +24,8 @@ input[type="email"]{
 	  color: #000;
 	}
 	&:focus{
-		background-color: rgba(255,255,255,11);
+	  color: #000; 
+		background-color: rgba(255,255,255,1);
 	}
 }
 

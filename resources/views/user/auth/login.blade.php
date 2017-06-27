@@ -19,8 +19,8 @@ page-login
     {!! csrf_field() !!}
 
     @if($errors->has('email') || $errors->has('password'))
-      <div data-abide-error="" class="alert callout">
-          <p>
+      <div data-abide-error="" class="alert callout mb0">
+          <p class="color-danger">
               <i class="fa fa-exclamation-triangle"></i> 
               <strong> 
                   @if($errors->has('email')) 

@@ -8,7 +8,8 @@ $color-secondary : #282250;
 
 
 //utilities
-.txt-color-primary {
+.txt-color-primary,
+.color-danger {
 	color: $color-primary;
 }
 .txt-color-secondary {
