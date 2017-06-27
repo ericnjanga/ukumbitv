@@ -140,7 +140,7 @@ class AuthController extends Controller
 
                         Helper::check_email_verification("" , $user, $error);
 
-                        return redirect(route('user.login.form'))->with('flash_error', tr('email_verify_alert'));
+                        return redirect(route('user.login.form'))->with('flash_error', trans('messages.email_verify_alert'));
 
                     }
 

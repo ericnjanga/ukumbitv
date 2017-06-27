@@ -80,7 +80,8 @@ return array(
 	'Verify_Now' => 'Verify Now',
 	'welcome_email_msg2' => 'Enjoy your free month of unlimited videos!',
 	'welcome_email_msg1' => 'and thanks for signing up!',
-  'website_description' => 'Watch unlimited african movies and TV Shows online',
+    'website_description' => 'Watch unlimited african movies and TV Shows online',
+    'site_name'	=>	'UkumbiTV',
 	'Welcome_to' => 'Welcome to',
 	'admin' => 'Admin',
 	'users' 	=>	'Users',
@@ -254,8 +255,8 @@ return array(
 	'share_on_twitter' => 'Share On Twitter',
 	'reset_now' => 'Reset Now',
 	'update_now' => 'Update Now',
-  'email_verify_alert' => 'Account not verified. Please go to email and verify it.',
-  'website_description' => 'UkumbiTV - Watch unlimited african movies and TV Shows online',
+    'email_verify_alert' => 'Account not verified. Please go to email and verify it.',
+
 
 	// Home Page
 
@@ -591,7 +592,6 @@ return array(
 
 	'browser_key' => 'Browser Key',
 
-	'site_name'	=>	'Site Name',
 	'tag_name'	=>	'Tag Name',
 	'site_logo'	=>	'Site Logo',
 	'email_logo'	=>	'Email Logo',
