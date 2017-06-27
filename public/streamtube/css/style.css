@@ -1042,11 +1042,7 @@ signup.html css
 }
 .sign-button button:hover{
 	background-color: #b31217;
-}
-.signup-form p{
-	margin-top: 10px;
-	font-size: 12px;
-}
+} 
 
 
 /*
