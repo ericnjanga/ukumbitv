@@ -127,12 +127,7 @@
 		</tr>
 		<tr>
 			<td valign="middle">
-				<h2>Hi {{$email_data->name}}! </h2>
-			</td>
-		</tr>
-		<tr>
-			<td valign="middle">
-				<h2>Hi {{$email_data->name}}! </h2>
+				<h2>{{trans('messages.Hi')}} {{$email_data->name}}! </h2>
 			</td>
 		</tr>
 	</table>
@@ -140,120 +135,95 @@
 
 
 
-    <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
-    <table style="background-color: black;" cellpadding="0" width="100%" cellspacing="0" border="0" id="backgroundTable" class='bgBody table-full'>
-        <tr>
-            <td>
+  <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+  <table style="background-color: black;" cellpadding="0" width="100%" cellspacing="0" border="0" id="backgroundTable" class='bgBody table-full'>
+    <tr>
+      <td> 
+        <!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
 
-                <!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
+        <table cellpadding="0" class="table-full" cellspacing="0" border="0" align="center" width="100%" style="border-collapse:collapse;">
+            <tr>
+                <td class='movableContentContainer'>
 
-                <table cellpadding="0" class="table-full" cellspacing="0" border="0" align="center" width="100%" style="border-collapse:collapse;">
-                    <tr>
-                        <td class='movableContentContainer'>
+                    <div class='movableContent'>
+                        <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
+                            <tr height="40">
+                                <td width="200">&nbsp;</td>
+                                <td width="200">&nbsp;</td>
+                                <td width="200">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="200" valign="top">&nbsp;</td>
+                                <td width="200" valign="top" align="center">
+                                    <div class="contentEditableContainer contentTextEditable">
+                                        <div class="contentEditable">
+                                            <img src="{{asset('streamtube/images/logo1.png')}}" width="155" height='155' alt='UkumbiTv' />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="200" valign="top">&nbsp;</td>
+                            </tr>
+                            <tr height="25">
+                                <td width="200">&nbsp;</td>
+                                <td width="200">&nbsp;</td>
+                                <td width="200">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
 
-                            <div class='movableContent'>
-                                <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
-                                    <tr height="40">
-                                        <td width="200">&nbsp;</td>
-                                        <td width="200">&nbsp;</td>
-                                        <td width="200">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="200" valign="top">&nbsp;</td>
-                                        <td width="200" valign="top" align="center">
+                    <div class='movableContent'>
+                        <table cellpadding="0" cellspacing="0" border="0" align="center" width="600"> 
+                            <tr>
+                                <td width="100">&nbsp;</td>
+                                <td width="400" align="center" style="padding-bottom:5px;">
+                                    <div class="contentEditableContainer contentTextEditable">
+                                        <div class="contentEditable" >
+                                            <p>
+                                            	"{{trans('messages.Welcome_to')}} {{Setting::get('site_name' , 'Stream Hash')}} {{trans('messages.welcome_email_msg1')}} "
+                                            </p>
+                                            <p>{{trans('messages.welcome_email_msg2')}}</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="100">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class='movableContent'>
+                        <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
+                            <tr>
+                                <td width="100">&nbsp;</td>
+                                
+                                @if(Setting::get('email_verify_control'))
+                                    <td width="400" align="center" style="padding-top:25px;padding-bottom:115px;"> 
+                                      <table cellpadding="0" cellspacing="0" border="0" align="center" width="200" height="50">
+
+                                        <tr>
+                                          <td bgcolor="#ec174f" align="center" style="border-radius:4px;margin-top: 10px" width="200" height="50">
                                             <div class="contentEditableContainer contentTextEditable">
-                                                <div class="contentEditable" >
-                                                    <img src="@if(Setting::get('site_logo')) {{Setting::get('site_logo' )}} @else {{ asset('logo.png')}} @endif" width="155" height='155' alt='Logo'  data-default="placeholder" />
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td width="200" valign="top">&nbsp;</td>
-                                    </tr>
-                                    <tr height="25">
-                                        <td width="200">&nbsp;</td>
-                                        <td width="200">&nbsp;</td>
-                                        <td width="200">&nbsp;</td>
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <div class='movableContent'>
-                                <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
-                                    <tr>
-                                        <td width="100%" colspan="3" align="center" style="padding-bottom:10px;padding-top:25px;">
-                                            <div class="contentEditableContainer contentTextEditable">
-                                                <div class="contentEditable" >
-                                                    
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="100">&nbsp;</td>
-                                        <td width="400" align="center" style="padding-bottom:5px;">
-                                            <div class="contentEditableContainer contentTextEditable">
-                                                <div class="contentEditable" >
-                                                    <p >
-                                                    	"Welcome to {{Setting::get('site_name' , 'Stream Hash')}} and thanks for signing up! and to let you know we're here to answer any questions."
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td width="100">&nbsp;</td>
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <div class='movableContent'>
-                                <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
-                                    <tr>
-                                        <td width="100">&nbsp;</td>
-                                        <td width="400" align="center" style="padding-top:25px;padding-bottom:115px;">
-                                            <table cellpadding="0" cellspacing="0" border="0" align="center" width="200" height="50">
-                                                <tr>
-                                                    <td bgcolor="#cf4545" align="center" style="border-radius:4px;" width="200" height="50">
-                                                        <div class="contentEditableContainer contentTextEditable">
-                                                            <div class="contentEditable" >
-                                                                <a target='_blank' href="{{route('user.dashboard')}}" style="color: #FFF;text-orientation: none" class='link2'>Visit our Website</a>
-                                                            </div>
-                                                        </div>
-
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        @if(Setting::get('email_verify_control'))
-                                            <td width="400" align="center" style="padding-top:25px;padding-bottom:115px;">
-
-                                                <table cellpadding="0" cellspacing="0" border="0" align="center" width="200" height="50">
-
-                                                    <tr>
-                                                        <td bgcolor="green" align="center" style="border-radius:4px;margin-top: 10px" width="200" height="50">
-                                                            <div class="contentEditableContainer contentTextEditable">
-                                                                <div class="contentEditable" >
-                                                                    <a target='_blank' href="{{route('email.verify' , ['id' => $email_data->id , 'verification_code' => $email_data->verification_code])}}" style="color: #FFF;text-orientation: none;cursor: pointer;" class='link2'>Verify Now</a>
-                                                                </div>
-                                                            </div>
-
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        @endif
-                                        
-                                        </td>
-                                        <td width="100">&nbsp;</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                    <!-- END BODY -->
-
-            </td>
-        </tr>
-    </table>
-    <!-- End of wrapper table -->
+                                              <div class="contentEditable" >
+                                                  <a target='_blank' href="{{route('email.verify' , ['id' => $email_data->id , 'verification_code' => $email_data->verification_code])}}" style="color: #FFF;text-orientation: none;cursor: pointer;" class='link2'>{{trans('messages.Verify_Now')}}</a>
+                                              </div>
+                                            </div> 
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                @endif
+                                
+                                </td>
+                                <td width="100">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+            <!-- END BODY --> 
+      </td>
+    </tr>
+  </table>
+  <!-- End of wrapper table -->
 </body>
 </html>

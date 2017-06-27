@@ -4,7 +4,7 @@
 		<div class="col-md-12">
 	    <div class="brand pull-left">
 	      <a href="{{route('user.dashboard')}}" alt="UKUMBITV" class="y-image">
-	      	<img src="{{asset('streamtube/images/logo1.png')}}">
+	      	<img src="{{asset('streamtube/images/logo1.png')}}" alt='UkumbiTv' />
 	      </a>
 	    </div><!--test end-->
 

@@ -1,6 +1,10 @@
 <?php
 
 return array(
+	'Hi' => 'Salut',
+	'Verify_Now' => 'Vérifiez maintenant',
+	'welcome_email_msg2' => 'Enjoy your free month of unlimited videos!',
+	'welcome_email_msg1' => 'et merci de vous inscrire!',
 	'name'							=>	'Nom',
 	'signup'						=>	'S\'inscrire',
  	'login_form_title' 	=> 'S\'identifier',

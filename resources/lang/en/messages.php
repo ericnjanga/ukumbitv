@@ -76,6 +76,11 @@ return array(
 
 	// Global Variables
 
+	'Hi' => 'Hi',
+	'Verify_Now' => 'Verify Now',
+	'welcome_email_msg2' => 'Enjoy your free month of unlimited videos!',
+	'welcome_email_msg1' => 'and thanks for signing up!',
+	'Welcome_to' => 'Welcome to',
 	'admin' => 'Admin',
 	'users' 	=>	'Users',
 	'user' => 'User',
