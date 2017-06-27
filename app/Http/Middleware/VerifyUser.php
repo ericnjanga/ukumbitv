@@ -28,7 +28,7 @@ class VerifyUser
             //Check if email is verified, if not redirect and logout
             if (!$user->isVerified() && Setting::get('email_verify_control') === "1") {
                 \Auth::logout();
-                return redirect(route('user.login.form'))->with('flash_error', tr('email_verify_alert'));
+                return redirect(route('user.login.form'))->with('flash_error', trans('messages.email_verify_alert'));
             }
             //Get if user made subscription payment
             if (!$user->userPaymentExpieryDateValid($user) && !$request->is('payment') && !$request->is('logout') && !$request->is('paypal/*')) {

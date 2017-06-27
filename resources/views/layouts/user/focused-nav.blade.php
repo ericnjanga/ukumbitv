@@ -8,9 +8,14 @@
 	      </a>
 	    </div><!--test end-->
 
-	    <div class="main-nav__additional-links pull-right"> 
-	      <a href="{{url('setlocale/en')}}">English</a>
-	      <a href="{{url('setlocale/fr')}}">Français</a>
+	    <div class="main-nav__additional-links pull-right">
+
+			@if(App::isLocale('fr'))
+	      		<a href="{{url('setlocale/en')}}">English</a>
+			@else
+	      		<a href="{{url('setlocale/fr')}}">Français</a>
+			@endif
+
 	    	<!-- @if(Auth::check())
 	    		<a href="{{route('user.profile')}}" class="y-signin">{{tr('back_profile')}}</a>
 	    	@else

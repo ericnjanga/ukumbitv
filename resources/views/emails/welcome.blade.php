@@ -122,7 +122,7 @@
 	<table style="background-color: black; text-align:center;" cellpadding="0" width="100%" cellspacing="0" border="0">
 		<tr>
 			<td valign="middle">
-				<h1 style="color:#fff;">UkumbiTV</h1>
+				<h1 style="color:#fff;">{{trans('messages.site_name')}}</h1>
 			</td>
 		</tr>
 		<tr>

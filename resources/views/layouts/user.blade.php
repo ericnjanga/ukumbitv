@@ -28,15 +28,15 @@
 
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{Setting::get('site_name' , 'UkumbiTV - Watch unlimited african movies and TV Shows online')}}" />
+    <meta property="og:title" content="{{trans('messages.site_name')}} - {{trans('messages.website_description')}}" />
     <meta property="og:description" content="The best solution to start up a video streaming venture!" />
     <meta property="og:url" content="" />
-    <meta property="og:site_name" content="{{Setting::get('site_name' , 'UkumbiTV')}}" />
+    <meta property="og:site_name" content="{{trans('messages.site_name')}}" />
     <meta property="og:image" content="{{Setting::get('site_icon')}}" />
 
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:description" content="The best solution to start up a video streaming venture!"/>
-    <meta name="twitter:title" content="{{Setting::get('site_name' , 'UkumbiTV - Watch unlimited african movies and TV Shows online')}}"/>
+    <meta name="twitter:title" content="{{trans('messages.site_name')}} - {{trans('messages.website_description')}}"/>
     <meta name="twitter:image:src" content="@if(Setting::get('site_icon')) {{ Setting::get('site_icon') }} @else {{asset('favicon.png') }} @endif"/>
 
     @yield('styles')
