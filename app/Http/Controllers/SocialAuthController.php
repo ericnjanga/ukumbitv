@@ -20,7 +20,7 @@ class SocialAuthController extends Controller
 
     public function callback(Request $request ,$provider)
 	{
-
+        
 		$social_user = \Socialite::driver($provider)->user();
 
 		$user = User::where('social_unique_id' , $social_user->id)->where('login_by' , $provider)->first();
@@ -31,7 +31,6 @@ class SocialAuthController extends Controller
 			$user->social_unique_id = $social_user->id;
 			$user->login_by = $provider;
 			$user->is_activated = 1;
-            $user->is_verified = 1;
 
 			if($social_user->name) {
 				$user->name = $social_user->name;
@@ -61,6 +60,9 @@ class SocialAuthController extends Controller
             $user->token_expiry = Helper::generate_token_expiry();
 
 			$user->save();
+            //Automaticly set that email is verified
+            $user->is_verified = 1;
+            $user->save();
 
 		}
 
