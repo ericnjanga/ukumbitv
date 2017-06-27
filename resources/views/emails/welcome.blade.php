@@ -16,7 +16,7 @@
 					-moz-osx-font-smoothing: grayscale;
         }
 
-        #outlook a {padding:0;}
+/*        #outlook a {padding:0;}
         body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
         .ExternalClass {width:100%;}
         .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
@@ -47,14 +47,14 @@
 
             a[href^="tel"], a[href^="sms"] {
                 text-decoration: none;
-                color: black; /* or whatever your want */
+                color: black;  
                 pointer-events: none;
                 cursor: default;
             }
 
             .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
                 text-decoration: default;
-                color: orange !important; /* or whatever your want */
+                color: orange !important;  
                 pointer-events: auto;
                 cursor: default;
             }
@@ -64,7 +64,7 @@
         @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
             a[href^="tel"], a[href^="sms"] {
                 text-decoration: none;
-                color: blue; /* or whatever your want */
+                color: blue; 
                 pointer-events: none;
                 cursor: default;
             }
@@ -108,38 +108,64 @@
         .table-full{
             height:100%;
         }
-
+*/
     </style>
-
-<script type="colorScheme" class="swatch active">
-  {
-    "name":"Default",
-    "bgBody":"ffffff",
-    "link":"f2f2f2",
-    "color":"555555",
-    "bgItem":"F4A81C",
-    "title":"181818"
-  }
-</script>
+ 
 
 </head>
 <body>
 
 	<table width="100%">
-		<tr>
-			<td width="20"></td>
-			<td>
+		<tr> 
+			<td style="background-color: #282250;" align="center" valign="top">
 				<!-- main table -->
-				<table>
+				<table width="600">
 					<tr>
 						<td height="100" align="left" valign="middle">
-							<img src="{{asset('streamtube/images/logo1.png')}}" width="155" height='155' alt='UkumbiTv' />
+							<img src="{{asset('streamtube/images/logo1.png')}}" width="155" height="155" alt='UkumbiTv' />
 						</td>
+					</tr>
+					<tr>
+						<td height="230" align="left" valign="middle" style="background-image:url({{asset('streamtube/images/email-hero1.jpg')}})">
+							<table width="45%">
+								<tr>
+									<td>
+							<h2 style="color: #fff;">{{trans('messages.website_description')}}</h2></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle" style="background-color: #ccc;">
+							
+
+							<h3 style="margin-bottom:20px;">
+              	"{{trans('messages.Welcome_to')}} <b>UkumbiTV</b> {{trans('messages.welcome_email_msg1')}} "
+              </h3>
+              <p>{{trans('messages.welcome_email_msg2')}}</p>
+
+
+						</td>
+
+
+						@if(Setting::get('email_verify_control'))
+            <td align="center" style="padding-top:25px;padding-bottom:115px;"> 
+              <table cellpadding="0" cellspacing="0" border="0" align="center" width="300" height="50">
+
+                <tr>
+                  <td bgcolor="#ec174f" align="center" style="border-radius:4px;margin-top: 10px" width="200" height="50">
+                     
+                    <a target='_blank' href="{{route('email.verify' , ['id' => $email_data->id , 'verification_code' => $email_data->verification_code])}}" style="color: #FFF;text-orientation: none;cursor: pointer;" class='link2'>{{trans('messages.Verify_Now')}}</a>
+                       
+                  </td>
+                </tr>
+              </table>
+            </td>
+        		@endif
 					</tr>
 				</table>
 				<!-- main table -->
-			</td>
-			<td width="20"></td>
+			</td> 
 		</tr>
 	</table>
 
@@ -151,7 +177,7 @@
 
 
 
-	<table style="background-color: black; text-align:center;" cellpadding="0" width="100%" cellspacing="0" border="0">
+	<!-- <table style="background-color: black; text-align:center;" cellpadding="0" width="100%" cellspacing="0" border="0">
 		<tr>
 			<td valign="middle">
 				<h1 style="color:#fff;">{{trans('messages.site_name')}}</h1>
@@ -163,15 +189,14 @@
 			</td>
 		</tr>
 	</table>
-		
+		 -->
 
 
 
   <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
-  <table style="background-color: black;" cellpadding="0" width="100%" cellspacing="0" border="0" id="backgroundTable" class='bgBody table-full'>
+<!--   <table style="background-color: black;" cellpadding="0" width="100%" cellspacing="0" border="0" id="backgroundTable" class='bgBody table-full'>
     <tr>
-      <td> 
-        <!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
+      <td>  
 
         <table cellpadding="0" class="table-full" cellspacing="0" border="0" align="center" width="100%" style="border-collapse:collapse;">
             <tr>
@@ -251,11 +276,13 @@
                     </div>
                 </td>
             </tr>
-        </table>
-            <!-- END BODY --> 
+        </table> 
       </td>
     </tr>
-  </table>
-  <!-- End of wrapper table -->
+  </table>  -->
+
+
+
+
 </body>
 </html>
