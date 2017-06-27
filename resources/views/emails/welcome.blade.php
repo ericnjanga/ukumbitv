@@ -102,22 +102,22 @@
  							<table cellpadding="0" cellspacing="0" border="0" cellpadding="0" align="center" width="400">
 								<tr>
 									<td> 
-										<p style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-align:center;">{{trans('messages.welcome_email_footer_msg1')}} <a href="https://www.ukumbitv.com">ukumbitv</a>. </p>
+										<p style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-align:center;">{{trans('messages.welcome_email_footer_msg1')}} <a href="https://www.ukumbitv.com" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">ukumbitv</a>. </p>
 
 
-										<div style="text-align:center; color:#ccc; text-align:center;">
+										<p style="text-align:center; color:#ccc; text-align:center;">
 											<a href="https://ukumbitv.com/terms-of-use" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">{{trans('messages.terms_of_use')}}</a> | <a href="https://ukumbitv.com/privacy-statement" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">{{trans('messages.privacy_statement')}}</a>
-										</div>
+										</p>
 
 
-										<div style="text-align:center; color:#ccc; text-align:center;">
+										<p style="font-size:10px; text-align:center; color:#ccc; text-align:center;">
 											{{trans('messages.question_contactus')}}: <a href="mailto:info@ukumbitv.com" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">info@ukumbitv.com</a>
-										</div>
+										</p>
 
 
-										<div style="text-align:center; color:#ccc; text-align:center;">
+										<p style="font-size:10px; text-align:center; color:#ccc; text-align:center;">
 								  		<p>{{trans('messages.Copyright')}} 2017, Toronto, Canada</p> 
-								  	</div> 
+								  	</p> 
  
 									</td>
 								</tr>
