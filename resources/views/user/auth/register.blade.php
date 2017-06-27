@@ -62,7 +62,7 @@ page-register
           <input type="password" name="password_confirmation" class="form-control" id="confirm_password" placeholder="{{trans('messages.confirm_password')}}">
         </div>
 
-        <button type="submit" class="btn btn-submit btn-block">{{trans('messages.join_for_free_month')}}</button>
+        <button type="submit" class="btn btn-primary btn-block">{{trans('messages.join_for_free_month')}}</button>
 
       	<!-- [Additional links] -->
 				<footer class="text-center">

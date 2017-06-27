@@ -31,6 +31,16 @@ input[type="checkbox"]:checked + label{
 
 
 
+
+.btn-primary { 
+	background-color: $color-primary;
+	&:hover{ 
+		opacity: 0.7;
+	}
+}
+
+
+
 //Replacing native element appearance by icons
 
 //hide checkbox

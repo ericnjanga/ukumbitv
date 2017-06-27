@@ -65,7 +65,7 @@ page-login
 
 
     	{{-- [Submit button] --}}
-      <button type="submit" class="btn btn-submit btn-block">{{trans('messages.submit')}}</button> 
+      <button type="submit" class="btn btn-primary btn-block">{{trans('messages.submit')}}</button> 
 
 
     	{{-- [Forgot password/Register] --}}
