@@ -74,12 +74,12 @@ page-login
 					@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
 	          <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
 	              <input type="hidden" value="facebook" name="provider" id="provider">
-	              <a href="#">
+	              <!-- <a href="#"> -->
 	                <button type="submit" class="btn-link">
 	                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
 	                  {{trans('messages.login_via_fb')}}
 	                </button>
-	              </a>
+	              <!-- </a> -->
 	          </form>
 			    @endif 
         </div> 
