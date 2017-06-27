@@ -43,15 +43,15 @@ page-login
 
 
     	{{-- [password] for group --}}
+    	@if ($errors->has('password'))
+      <div class="color-danger"> 
+        <i class="fa fa-exclamation-triangle"></i> 
+        <strong>{{ $errors->first('password') }}</strong> 
+      </div>
+      @endif 
       <div class="form-group">
         <!-- <label for="password">{{trans('messages.password')}}</label> -->
-        <input type="password" name="password" class="form-control" id="password" placeholder="{{trans('messages.password')}}">
-
-        <span class="form-error">
-            @if ($errors->has('password'))
-                <strong>{{ $errors->first('password') }}</strong>
-            @endif
-        </span> 
+        <input type="password" name="password" class="form-control" id="password" placeholder="{{trans('messages.password')}}"> 
       </div>
 
 
