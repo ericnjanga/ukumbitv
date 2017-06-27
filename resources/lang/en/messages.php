@@ -255,7 +255,7 @@ return array(
 	'share_on_twitter' => 'Share On Twitter',
 	'reset_now' => 'Reset Now',
 	'update_now' => 'Update Now',
-    'email_verify_alert' => 'Account not verified. Please go to email and verify it.',
+    'email_verify_alert' => 'Account not verified, Please go to email and verify it.',
 
 
 	// Home Page
