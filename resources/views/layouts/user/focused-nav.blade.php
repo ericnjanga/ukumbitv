@@ -8,7 +8,7 @@
 	      </a>
 	    </div><!--test end-->
 
-	    <div class="brand pull-right"> 
+	    <div class="main-nav__additional-links pull-right"> 
 	      <a href="{{url('setlocale/en')}}">English</a>
 	      <a href="{{url('setlocale/fr')}}">Français</a>
 	    	<!-- @if(Auth::check())
