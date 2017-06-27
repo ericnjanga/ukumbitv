@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/app.css')}}">
 
-    <link rel="shortcut icon" type="image/png" href="@if(Setting::get('site_icon')) {{Setting::get('site_icon')}} @else {{asset('img/favicon.png')}} @endif"/>
+    <link rel="shortcut icon" type="image/png" href="{{asset('streamtube/images/favicon.ico')}}"/>
 
     <script src="{{asset('streamtube/js/vendors/modernizr.custom.js')}}"></script>
    
