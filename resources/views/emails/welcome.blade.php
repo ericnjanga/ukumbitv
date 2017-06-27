@@ -115,11 +115,11 @@
 </head>
 <body>
 
-	<table width="100%">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
 		<tr> 
 			<td style="background-color: #282250;" align="center" valign="top">
 				<!-- main table -->
-				<table width="600"> 
+				<table cellpadding="0" cellspacing="0" border="0" width="600"> 
 					<tr>
 						<td height="100" align="left" valign="middle">
 							<img src="{{asset('streamtube/images/logo1.png')}}" width="151" height="30" alt='UkumbiTv' />
@@ -127,7 +127,7 @@
 					</tr>
 					<tr>
 						<td height="230" align="left" valign="middle" style="background-image:url({{asset('streamtube/images/email-hero1.jpg')}})">
-							<table width="60%">
+							<table cellpadding="0" cellspacing="0" border="0" width="60%">
 								<tr>
 									<td width="30"></td>
 									<td>
@@ -139,18 +139,18 @@
 					<tr>
 						<td align="center" valign="middle" style="background-color: #ccc;">
 
-							<table>
+							<table cellpadding="0" cellspacing="0" border="0">
 								<tr>
-									<td height="50"></td>
+									<td height="25"></td>
 								</tr>
 								<tr>
-									<td align="center" valign="middle" height="100">
+									<td align="center" valign="middle">
 										
-										<h3 style="margin-bottom:20px;     font-family: Roboto,sans-serif;">
+										<h3 style="margin-bottom:20px; font-size:18px; font-family: Roboto,sans-serif;">
 			              	{{trans('messages.Welcome_to')}} <b>UkumbiTV</b> {{trans('messages.welcome_email_msg1')}}
 			              </h3>
-			              <h4>For $2 per month, you get:</h4>
-			              <ul style="margin-bottom:20px; font-family: Roboto,sans-serif;">
+			              <h4 style=" font-size:16px;">For $2 per month, you get:</h4>
+			              <ul style="margin-bottom:20px; font-family: Roboto,sans-serif; font-size:16px;">
 			              	<li>item 1</li>
 			              	<li>item 2</li>
 			              	<li>item 3</li>
@@ -166,7 +166,7 @@
 								</tr>
 								<tr>
 									<td align="center" style="padding-top:25px;padding-bottom:115px;"> 
-			              <table cellpadding="0" cellspacing="0" border="0" align="center" width="300">
+			              <table cellpadding="0" cellspacing="0" border="0" cellpadding="0" align="center" width="300">
 
 			                <tr>
 			                  <td bgcolor="#ec174f" align="center" style="border-radius:4px;margin-top: 10px" width="200" height="50">
@@ -191,10 +191,10 @@
  
 
  					<tr>
- 						<td height="150" align="center" valign="middle" style="color: #fff; font-size:11px; color:#ccc; font-family: Roboto,sans-serif; text-align-center;"> 
-							<p>This email was sent to you because you indicated that you'd like to receive updates about new features and offers to improve your listing's performance from Google My Business. If you don't want to receive such emails in the future, please unsubscribe here. You can also change your preferences on your Google My Business settings page by logging into https://business.google.com/settings. </p>
- 							<p>Pleace website footer links</p>
- 							<p>Pleace the eastmall address</p>
+ 						<td height="150" align="center" valign="middle"> 
+							<p style="color: #fff; font-size:11px; color:#ccc; font-family: Roboto,sans-serif; text-align-center;">This email was sent to you because you indicated that you'd like to receive updates about new features and offers to improve your listing's performance from Google My Business. If you don't want to receive such emails in the future, please unsubscribe here. You can also change your preferences on your Google My Business settings page by logging into https://business.google.com/settings. </p>
+ 							<p style="color: #fff; font-size:11px; color:#ccc; font-family: Roboto,sans-serif; text-align-center;">Pleace website footer links</p>
+ 							<p style="color: #fff; font-size:11px; color:#ccc; font-family: Roboto,sans-serif; text-align-center;">Pleace the eastmall address</p>
  						</td>
  					</tr>
 				</table>
@@ -211,7 +211,7 @@
 
 
 
-	<!-- <table style="background-color: black; text-align:center;" cellpadding="0" width="100%" cellspacing="0" border="0">
+	<!-- <table cellpadding="0" cellspacing="0" border="0" style="background-color: black; text-align:center;" cellpadding="0" width="100%" cellspacing="0" border="0">
 		<tr>
 			<td valign="middle">
 				<h1 style="color:#fff;">{{trans('messages.site_name')}}</h1>
@@ -228,16 +228,16 @@
 
 
   <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
-<!--   <table style="background-color: black;" cellpadding="0" width="100%" cellspacing="0" border="0" id="backgroundTable" class='bgBody table-full'>
+<!--   <table cellpadding="0" cellspacing="0" border="0" style="background-color: black;" cellpadding="0" width="100%" cellspacing="0" border="0" id="backgroundTable" class='bgBody table-full'>
     <tr>
       <td>  
 
-        <table cellpadding="0" class="table-full" cellspacing="0" border="0" align="center" width="100%" style="border-collapse:collapse;">
+        <table cellpadding="0" cellspacing="0" border="0" cellpadding="0" class="table-full" cellspacing="0" border="0" align="center" width="100%" style="border-collapse:collapse;">
             <tr>
                 <td class='movableContentContainer'>
 
                     <div class='movableContent'>
-                        <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
+                        <table cellpadding="0" cellspacing="0" border="0" cellpadding="0" cellspacing="0" border="0" align="center" width="600">
                             <tr height="40">
                                 <td width="200">&nbsp;</td>
                                 <td width="200">&nbsp;</td>
@@ -263,7 +263,7 @@
                     </div>
 
                     <div class='movableContent'>
-                        <table cellpadding="0" cellspacing="0" border="0" align="center" width="600"> 
+                        <table cellpadding="0" cellspacing="0" border="0" cellpadding="0" cellspacing="0" border="0" align="center" width="600"> 
                             <tr>
                                 <td width="100">&nbsp;</td>
                                 <td width="400" align="center" style="padding-bottom:5px;">
@@ -282,13 +282,13 @@
                     </div>
 
                     <div class='movableContent'>
-                        <table cellpadding="0" cellspacing="0" border="0" align="center" width="600">
+                        <table cellpadding="0" cellspacing="0" border="0" cellpadding="0" cellspacing="0" border="0" align="center" width="600">
                             <tr>
                                 <td width="100">&nbsp;</td>
                                 
                                 @if(Setting::get('email_verify_control'))
                                     <td width="400" align="center" style="padding-top:25px;padding-bottom:115px;"> 
-                                      <table cellpadding="0" cellspacing="0" border="0" align="center" width="200" height="50">
+                                      <table cellpadding="0" cellspacing="0" border="0" cellpadding="0" cellspacing="0" border="0" align="center" width="200" height="50">
 
                                         <tr>
                                           <td bgcolor="#ec174f" align="center" style="border-radius:4px;margin-top: 10px" width="200" height="50">
