@@ -30,26 +30,26 @@
 					</tr>
 					<tr>
 						<td height="230" align="left" valign="middle" style="background-image:url({{asset('streamtube/images/email-hero1.jpg')}})">
-							<table cellpadding="0" cellspacing="0" border="0" width="60%">
+							<table cellpadding="0" cellspacing="0" border="0" width="50%">
 								<tr>
 									<td width="30"></td>
 									<td>
-										<h2 style="color: #fff; font-family: Roboto,sans-serif;">{{trans('messages.website_description')}}</h2></td>
+										<h2 style="color: #fff; font-family: Roboto,sans-serif; line-height: 30px;">{{trans('messages.website_description')}}</h2></td>
 								</tr>
 							</table>
 						</td>
 					</tr>
 					<tr>
-						<td align="center" valign="middle" style="background-color: #ccc;">
+						<td align="center" valign="middle" style="background-color: #ddd;">
 
 							<table cellpadding="0" cellspacing="0" border="0">
 								<tr>
-									<td height="25"></td>
+									<td height="50"></td>
 								</tr>
 								<tr>
 									<td align="center" valign="middle">
 										
-										<h3 style="margin-bottom:20px; font-size:18px; font-family: Roboto,sans-serif; color:#333;">
+										<h3 style="margin-bottom:20px; margin-top:0; font-size:18px; font-family: Roboto,sans-serif; color:#333;">
 			              	{{trans('messages.Welcome_to')}} <b>UkumbiTV</b> {{trans('messages.welcome_email_msg1')}}
 			              </h3>
 			              <h4 style=" font-size:16px;">For $2 per month, you get:</h4>
@@ -82,7 +82,7 @@
 			            </td> 
 								</tr>
 								<tr>
-									<td height="25"></td>
+									<td height="50"></td>
 								</tr>
 							</table>
 							
