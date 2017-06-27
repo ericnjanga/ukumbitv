@@ -109,7 +109,7 @@
 											<a href="https://ukumbitv.com/terms-of-use" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">{{trans('messages.terms_of_use')}}</a> | <a href="https://ukumbitv.com/privacy-statement" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">{{trans('messages.privacy_statement')}}</a>
 										</p>
 
-
+  
 										<p style="font-size:10px; text-align:center; color:#ccc; text-align:center;">
 											{{trans('messages.question_contactus')}}: <a href="mailto:info@ukumbitv.com" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">info@ukumbitv.com</a>
 										</p>

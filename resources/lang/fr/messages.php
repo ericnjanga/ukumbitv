@@ -2,11 +2,11 @@
 
 return array(
 	'Hi' => 'Salut',
-	'user_welcome_title' 			=> 'Bienvenue chez UkumbiTV',
-	'provider_welcome_title' 	=> 'Bienvenue chez UkumbiTV',
-	'Welcome_to' 					=> 'Bienvenue chez',
+	'user_welcome_title' 			=> 'Bienvenue sur UkumbiTV',
+	'provider_welcome_title' 	=> 'Bienvenue sur UkumbiTV',
+	'Welcome_to' 					=> 'Bienvenue sur',
 	'Verify_Now' 					=> 'Vérifiez maintenant',
-	'welcome_email_msg2' 	=> 'Enjoy your free month of unlimited videos!',
+	'welcome_email_msg2' 	=> 'Profitez de votre mois gratuit de vidéos illimitées',
 	'welcome_email_msg1' 	=> 'et merci de vous inscrire!',
 	'welcome_email_footer_msg1' => 'Cet email vous a été envoyé parce que vous vous êtes inscrit à ',
 	'name'							=>	'Nom',
@@ -40,4 +40,8 @@ return array(
 	'website_offer_3' => '(offer 3)',
 	'website_offer_4' => '(offer 4)',
 	'website_offer_5' => '(offer 5)',
+
+
+	//Admin Login
+	'welcome'	=>	'Bienvenue sur UkumbiTV. Connectez-vous à votre compte s\'il vous plaît',
 );
