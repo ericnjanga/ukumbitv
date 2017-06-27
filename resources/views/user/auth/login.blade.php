@@ -44,7 +44,7 @@ page-login
 
     	{{-- [password] for group --}}
     	@if ($errors->has('password'))
-      <div class="color-danger"> 
+      <div class="alert callout mb0 color-danger"> 
         <i class="fa fa-exclamation-triangle"></i> 
         <strong>{{ $errors->first('password') }}</strong> 
       </div>
