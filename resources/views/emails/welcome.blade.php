@@ -52,14 +52,13 @@
 										<h3 style="margin-bottom:20px; margin-top:0; font-size:18px; font-family: Roboto,sans-serif; color:#333;">
 			              	{{trans('messages.Welcome_to')}} <b>UkumbiTV</b> {{trans('messages.welcome_email_msg1')}}
 			              </h3>
-			              <h4 style=" font-size:16px;">For $2 per month, you get:</h4>
+			              <h4 style=" font-size:16px;">{{trans('messages.you_get_per_month')}}:</h4>
 			              <ul style="margin-bottom:20px;">
-			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">item 1</li>
-			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">item 2</li>
-			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">item 3</li>
-			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">item 4</li>
-			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">item 5</li>
-			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">item 6</li>
+			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_1')}}</li>
+			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_2')}}</li>
+			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_3')}}</li>
+			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_4')}}</li>
+			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_5')}}</li>
 			              </ul>
 			              <p style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">{{trans('messages.welcome_email_msg2')}}</p>
 									</td>
@@ -74,7 +73,7 @@
 			                <tr>
 			                  <td bgcolor="#ec174f" align="center" style="border-radius:4px;" width="200" height="50">
 			                     
-			                    <a target='_blank' href="{{route('email.verify' , ['id' => $email_data->id , 'verification_code' => $email_data->verification_code])}}" style="color: #fff; font-family: Roboto,sans-serif; display: block; padding: 15px; text-decoration: none; font-size: 16px; text-transform: uppercase;">{{trans('messages.Verify_Now')}}</a>
+			                    <a target='_blank' href="{{route('email.verify' , ['id' => $email_data->id , 'verification_code' => $email_data->verification_code])}}" style="color: #fff; font-family: Roboto,sans-serif; display: block; padding: 15px; text-decoration: none; font-size: 16px; text-transform: uppercase;">{{trans('messages.go_to_the_website_now')}}</a>
 			                       
 			                  </td>
 			                </tr>
@@ -93,19 +92,44 @@
 					</tr>
  
 
+
+					<tr>
+						<td height="50"></td>
+					</tr>
+
  					<tr>
- 						<td height="250" align="center" valign="middle"> 
+ 						<td align="center" valign="middle"> 
  							<table cellpadding="0" cellspacing="0" border="0" cellpadding="0" align="center" width="400">
 								<tr>
 									<td> 
-										<p style="font-size:9px; color:#ccc; font-family: Roboto,sans-serif; text-align:center;">This email was sent to you because you indicated that you'd like to receive updates about new features and offers to improve your listing's performance from Google My Business. If you don't want to receive such emails in the future, please unsubscribe here. You can also change your preferences on your Google My Business settings page by logging into https://business.google.com/settings. </p>
-			 							<p style="font-size:9px; color:#ccc; font-family: Roboto,sans-serif; text-align:center;">Pleace website footer links</p>
-			 							<p style="font-size:9px; color:#ccc; font-family: Roboto,sans-serif; text-align:center;">Pleace the eastmall address</p>
+										<p style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-align:center;">{{trans('messages.welcome_email_footer_msg1')}} <a href="https://www.ukumbitv.com">ukumbitv</a>. </p>
+
+
+										<div style="text-align:center; color:#ccc; text-align:center;">
+											<a href="https://ukumbitv.com/terms-of-use" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">{{trans('messages.terms_of_use')}}</a> | <a href="https://ukumbitv.com/privacy-statement" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">{{trans('messages.privacy_statement')}}</a>
+										</div>
+
+
+										<div style="text-align:center; color:#ccc; text-align:center;">
+											{{trans('messages.question_contactus')}}: <a href="mailto:info@ukumbitv.com" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">info@ukumbitv.com</a>
+										</div>
+
+
+										<div style="text-align:center; color:#ccc; text-align:center;">
+								  		<p>{{trans('messages.Copyright')}} 2017, Toronto, Canada</p> 
+								  	</div> 
+ 
 									</td>
 								</tr>
  							</table>
  						</td>
  					</tr>
+
+
+
+					<tr>
+						<td height="50"></td>
+					</tr>
 				</table>
 				<!-- main table -->
 			</td> 
