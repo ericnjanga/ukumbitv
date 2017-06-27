@@ -8,7 +8,12 @@
     <style type="text/css">
 
         body {
-            background-color: black;
+            background-color: #282250;
+
+
+					/*Crisp text*/ 
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
         }
 
         #outlook a {padding:0;}
@@ -119,6 +124,33 @@
 
 </head>
 <body>
+
+	<table width="100%">
+		<tr>
+			<td width="20"></td>
+			<td>
+				<!-- main table -->
+				<table>
+					<tr>
+						<td height="100" align="left" valign="middle">
+							<img src="{{asset('streamtube/images/logo1.png')}}" width="155" height='155' alt='UkumbiTv' />
+						</td>
+					</tr>
+				</table>
+				<!-- main table -->
+			</td>
+			<td width="20"></td>
+		</tr>
+	</table>
+
+
+
+
+
+
+
+
+
 	<table style="background-color: black; text-align:center;" cellpadding="0" width="100%" cellspacing="0" border="0">
 		<tr>
 			<td valign="middle">
