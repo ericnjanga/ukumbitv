@@ -192,9 +192,9 @@
 
  					<tr>
  						<td height="150" align="center" valign="middle"> 
-							<p style="color: #fff; font-size:11px; color:#ccc; font-family: Roboto,sans-serif; text-align-center;">This email was sent to you because you indicated that you'd like to receive updates about new features and offers to improve your listing's performance from Google My Business. If you don't want to receive such emails in the future, please unsubscribe here. You can also change your preferences on your Google My Business settings page by logging into https://business.google.com/settings. </p>
- 							<p style="color: #fff; font-size:11px; color:#ccc; font-family: Roboto,sans-serif; text-align-center;">Pleace website footer links</p>
- 							<p style="color: #fff; font-size:11px; color:#ccc; font-family: Roboto,sans-serif; text-align-center;">Pleace the eastmall address</p>
+							<p style="color: #fff; font-size:9px; color:#ccc; font-family: Roboto,sans-serif; text-align-center;">This email was sent to you because you indicated that you'd like to receive updates about new features and offers to improve your listing's performance from Google My Business. If you don't want to receive such emails in the future, please unsubscribe here. You can also change your preferences on your Google My Business settings page by logging into https://business.google.com/settings. </p>
+ 							<p style="color: #fff; font-size:9px; color:#ccc; font-family: Roboto,sans-serif; text-align-center;">Pleace website footer links</p>
+ 							<p style="color: #fff; font-size:9px; color:#ccc; font-family: Roboto,sans-serif; text-align-center;">Pleace the eastmall address</p>
  						</td>
  					</tr>
 				</table>
