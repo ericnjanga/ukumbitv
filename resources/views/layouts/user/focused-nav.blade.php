@@ -4,7 +4,7 @@
 		<div class="col-md-12">
 	    <div class="brand">
 	      <a href="{{route('user.dashboard')}}" alt="UKUMBITV" class="y-image">
-	      	<img src="http://via.placeholder.com/136x43">
+	      	<img src="{{asset('streamtube/images/logo1.png')}}">
 	      </a>
 	    </div><!--test end-->
 

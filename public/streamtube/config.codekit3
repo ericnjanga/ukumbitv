@@ -422,6 +422,28 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/images\/logo1.png": {
+		"ft": 32768,
+		"iS": 4215,
+		"oA": 0,
+		"oAP": "\/images\/logo1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/logo2.png": {
+		"ft": 32768,
+		"iS": 5048,
+		"oA": 0,
+		"oAP": "\/images\/logo2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/images\/y-logo.png": {
 		"ft": 32768,
 		"iS": 13530,
