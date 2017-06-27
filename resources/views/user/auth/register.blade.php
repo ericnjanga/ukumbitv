@@ -10,7 +10,7 @@ page-register
 
 <div class="main-content">
   <div class="rectangle panel-register frosting-glass"> 
-    <h3 class="page-title text-center">{{tr('signup')}}</h3>
+    <h3 class="page-title text-center">{{trans('messages.signup')}}</h3>
  
     <form class="signup-form" role="form" method="POST" action="{{ url('/register') }}">
 
@@ -43,30 +43,30 @@ page-register
         @endif
 
         <div class="form-group">
-          <!-- <label for="name">{{tr('name')}}</label> -->
-          <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="{{tr('name')}}">
+          <!-- <label for="name">{{trans('messages.name')}}</label> -->
+          <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="{{trans('messages.name')}}">
         </div>
 
         <div class="form-group">
-          <!-- <label for="email">{{tr('email')}}</label> -->
-          <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{tr('email')}}">
+          <!-- <label for="email">{{trans('messages.email')}}</label> -->
+          <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{trans('messages.email')}}">
         </div>
 
         <div class="form-group">
-          <!-- <label for="password">{{tr('password')}}</label> -->
-          <input type="password" name="password" class="form-control" id="password" placeholder="{{tr('password')}}">
+          <!-- <label for="password">{{trans('messages.password')}}</label> -->
+          <input type="password" name="password" class="form-control" id="password" placeholder="{{trans('messages.password')}}">
         </div>
 
         <div class="form-group">
-          <!-- <label for="confirm_password">{{tr('confirm_password')}}</label> -->
-          <input type="password" name="password_confirmation" class="form-control" id="confirm_password" placeholder="{{tr('confirm_password')}}">
+          <!-- <label for="confirm_password">{{trans('messages.confirm_password')}}</label> -->
+          <input type="password" name="password_confirmation" class="form-control" id="confirm_password" placeholder="{{trans('messages.confirm_password')}}">
         </div>
 
-        <button type="submit" class="btn btn-submit btn-block">{{tr('join_for_free_month')}}</button>
+        <button type="submit" class="btn btn-submit btn-block">{{trans('messages.join_for_free_month')}}</button>
 
       	<!-- [Additional links] -->
 				<footer class="text-center">
-					<p>{{tr('already_account')}} <a href="{{route('user.login.form')}}">{{tr('login')}}</a></p> 
+					<p>{{trans('messages.already_account')}} <a href="{{route('user.login.form')}}">{{trans('messages.login')}}</a></p> 
 				</footer> 
 
         <input type="hidden" name="timezone" value="" id="userTimezone">   
@@ -77,7 +77,7 @@ page-register
 
   <div class="rectangle panel-offers frosting-glass">
   	<h3 class="page-title">
-  		{{tr('you_get_per_month')}}:
+  		{{trans('messages.you_get_per_month')}}:
   	</h3>
   	<ul class="list-unstyled">
   		<li class="text-uppercase">
@@ -97,7 +97,7 @@ page-register
   		</li>
   	</ul>
 
-  	<h3 class="cta-title txt-color-primary">{{tr('first_month_free')}}!</h3>
+  	<h3 class="cta-title txt-color-primary">{{trans('messages.first_month_free')}}!</h3>
   </div>   
 </div><!--form-background end-->
 

@@ -37,15 +37,15 @@ page-login
 
     	{{-- [email] for group --}}
       <div class="form-group">
-          <!-- <label for="email">{{tr('email')}}</label> -->
-          <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{tr('email')}}">
+          <!-- <label for="email">{{trans('messages.email')}}</label> -->
+          <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{trans('messages.email')}}">
       </div>
 
 
     	{{-- [password] for group --}}
       <div class="form-group">
-        <!-- <label for="password">{{tr('password')}}</label> -->
-        <input type="password" name="password" class="form-control" id="password" placeholder="{{tr('password')}}">
+        <!-- <label for="password">{{trans('messages.password')}}</label> -->
+        <input type="password" name="password" class="form-control" id="password" placeholder="{{trans('messages.password')}}">
 
         <span class="form-error">
             @if ($errors->has('password'))
@@ -59,13 +59,13 @@ page-login
 			<div class="form-group form-group-spacearound1">
 				<div class="checkbox">
 			   	<input type="checkbox" id="cb-stay-connected"> 
-			    <label for="cb-stay-connected">{{tr('Stay_logged_in')}}</label>
+			    <label for="cb-stay-connected">{{trans('messages.Stay_logged_in')}}</label>
 			  </div>
 			</div>
 
 
     	{{-- [Submit button] --}}
-      <button type="submit" class="btn btn-submit btn-block">{{tr('submit')}}</button> 
+      <button type="submit" class="btn btn-submit btn-block">{{trans('messages.submit')}}</button> 
 
 
     	{{-- [Forgot password/Register] --}}
@@ -77,15 +77,15 @@ page-login
 	              <a href="#">
 	                <button type="submit" class="btn-link">
 	                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
-	                  {{tr('login_via_fb')}}
+	                  {{trans('messages.login_via_fb')}}
 	                </button>
 	              </a>
 	          </form>
 			    @endif 
         </div> 
 
-      	<p>{{tr('forgot_password')}}? <a href="{{ url('/password/reset') }}">{{tr('Recover')}}</a></p>
-      	<p>{{tr('no_account')}}? <a href="{{route('user.register.form')}}">{{tr('sign_up_now')}}</a></p>
+      	<p>{{trans('messages.forgot_password')}}? <a href="{{ url('/password/reset') }}">{{trans('messages.Recover')}}</a></p>
+      	<p>{{trans('messages.no_account')}}? <a href="{{route('user.register.form')}}">{{trans('messages.sign_up_now')}}</a></p>
 			</footer>   
 
       <input type="hidden" name="timezone" value="" id="userTimezone">       

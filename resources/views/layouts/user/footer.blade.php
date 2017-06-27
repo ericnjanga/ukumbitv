@@ -4,21 +4,21 @@
 	  	<div class="col-md-12 text-center">
 	  		<ul class="list-inline">
 	  			<li>
-	  				<a href="#">Terms of use</a>
+	  				<a href="#">{{trans('messages.terms_of_use')}}</a>
 	  			</li>
 	  			<li>
-	  				<a href="#">Privacy Statement</a>
+	  				<a href="#">{{trans('messages.privacy_statement')}}</a>
 	  			</li> 
 	  		</ul>
 	  		<ul class="list-inline"> 
 	  			<li>
-	  				Questions? Contact us: <a href="mailto:info@ukumbitv.com">info@ukumbitv.com</a>
+	  				{{trans('messages.question_contactus')}}: <a href="mailto:info@ukumbitv.com">info@ukumbitv.com</a>
 	  			</li>
 	  		</ul>
 	  	</div>
 
 	  	<div class="col-md-12 text-center">
-	  		<p>Copyright 2017, Toronto, Canada</p>
+	  		<p>{{trans('messages.Copyright')}} 2017, Toronto, Canada</p>
 				<p><a href="https://www.ukumbitv.com">ukumbitv</a></p>
 	  	</div>
 	  </div>

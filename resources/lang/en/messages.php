@@ -90,6 +90,10 @@ return array(
 	'login'	=>	'Login',
 	'logout'	=>	'Logout',
 	'sign_out' => 'Sign out',
+	'terms_of_use' => 'Terms of use',
+	'privacy_statement' => 'Privacy Statement',
+	'question_contactus' => 'Questions? Contact us',
+	'Copyright' => 'Copyright',
 
 	'profile'	=>	'Profile',
 	'account'	=> 	'Account',

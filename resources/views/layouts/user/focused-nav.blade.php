@@ -9,8 +9,8 @@
 	    </div><!--test end-->
 
 	    <div class="brand pull-right"> 
-	      <a href="{{url('setlocale/en')}}">EN</a>
-	      <a href="{{url('setlocale/fr')}}">FR</a>
+	      <a href="{{url('setlocale/en')}}">English</a>
+	      <a href="{{url('setlocale/fr')}}">Français</a>
 	    	<!-- @if(Auth::check())
 	    		<a href="{{route('user.profile')}}" class="y-signin">{{tr('back_profile')}}</a>
 	    	@else
