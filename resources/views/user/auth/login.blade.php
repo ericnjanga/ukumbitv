@@ -84,8 +84,8 @@ page-login
 			    @endif 
         </div> 
 
-      	<p>{{trans('messages.forgot_password')}}? <a href="{{ url('/password/reset') }}">{{trans('messages.Recover')}}</a></p>
-      	<p>{{trans('messages.no_account')}}? <a href="{{route('user.register.form')}}">{{trans('messages.sign_up_now')}}</a></p>
+      	<p>{{trans('messages.forgot_password')}}? <a href="{{ url('/password/reset') }}" class="underlined">{{trans('messages.Recover')}}</a></p>
+      	<p>{{trans('messages.no_account')}}? <a href="{{route('user.register.form')}}" class="underlined">{{trans('messages.sign_up_now')}}</a></p>
 			</footer>   
 
       <input type="hidden" name="timezone" value="" id="userTimezone">       
