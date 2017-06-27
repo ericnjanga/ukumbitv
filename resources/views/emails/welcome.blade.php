@@ -146,9 +146,9 @@
 
 
 						</td>
+					</tr>
 
-
-						@if(Setting::get('email_verify_control'))
+					<tr> 
             <td align="center" style="padding-top:25px;padding-bottom:115px;"> 
               <table cellpadding="0" cellspacing="0" border="0" align="center" width="300" height="50">
 
@@ -160,8 +160,7 @@
                   </td>
                 </tr>
               </table>
-            </td>
-        		@endif
+            </td> 
 					</tr>
 				</table>
 				<!-- main table -->
