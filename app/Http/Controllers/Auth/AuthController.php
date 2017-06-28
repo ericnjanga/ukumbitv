@@ -112,7 +112,7 @@ class AuthController extends Controller
         }
         
         // Send welcome email to the new user:
-        $subject = tr('user_welcome_title');
+        $subject = trans('messages.user_welcome_title');
         $email_data = $User;
         $page = "emails.welcome";
         $email = $data['email'];
