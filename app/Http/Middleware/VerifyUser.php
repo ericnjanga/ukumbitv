@@ -31,7 +31,8 @@ class VerifyUser
                 return redirect(route('user.login.form'))->with('flash_error', trans('messages.email_verify_alert'));
             }
             //Get if user made subscription payment
-            if (!$user->userPaymentExpieryDateValid($user) && !$request->is('payment') && !$request->is('logout') && !$request->is('paypal/*')) {
+            if (!$user->userPaymentExpieryDateValid($user) && ($request->is('video/*') || $request->is('newvideo/*'))) { 
+                //!$request->is('payment') && !$request->is('logout') && !$request->is('paypal/*')
                 return redirect(route('user.userpayment'))->with('flash_warning', tr('make_paypal_subscription'));
             }
         } else {
