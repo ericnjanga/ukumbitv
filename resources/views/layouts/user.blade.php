@@ -18,8 +18,10 @@
 	<body> 
 	    @include('layouts.user.header')
 
-	    <div class="main-content"> 
+	    <div class="main-content" style="background:turquoise; height: 200px;"> 
+	    	<!--
 	      @yield('content') 
+	    -->
 	    </div>
 
 	    @include('layouts.user.footer')
