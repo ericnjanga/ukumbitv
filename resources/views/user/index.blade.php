@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="y-content">
+    <div class="y-content" style="border:10px solid red;">
         <div class="row content-row">
 
             @include('layouts.user.nav')
@@ -24,7 +24,7 @@
                             <div class="slide-box">
                                 <div class="slide-image">
                                     <a href="{{route('user.single' , $wishlist->admin_video_id)}}"><img src="{{$wishlist->default_image}}" /></a>
-                                </div><!--end of slide-image-->
+                                </div>
 
                                 <div class="video-details">
                                     <div class="video-head">
@@ -32,7 +32,7 @@
                                     </div>
                                     <div class="sugg-description">
                                         <p>{{tr('duration')}}: {{$wishlist->duration}}</p>
-                                    </div><!--end of sugg-description--> 
+                                    </div>
 
                                     <span class="stars">
                                         <a href="#"><i @if($wishlist->ratings > 1) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
@@ -41,13 +41,13 @@
                                        <a href="#"><i @if($wishlist->ratings > 4) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
                                        <a href="#"><i @if($wishlist->ratings > 5) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
                                     </span> 
-                                </div><!--end of video-details-->
-                            </div><!--end of slide-box-->
+                                </div>
+                            </div>
                             @endforeach
                    
                               
-                        </div><!--end of box--> 
-                    </div><!--end of slide-area-->
+                        </div>
+                    </div>
 
                 @endif
 
@@ -65,7 +65,7 @@
                             <div class="slide-box">
                                 <div class="slide-image">
                                     <a href="{{route('user.single' , $recent_video->admin_video_id)}}"><img src="{{$recent_video->default_image}}" /></a>
-                                </div><!--end of slide-image-->
+                                </div>
 
                                 <div class="video-details">
                                     <div class="video-head">
@@ -73,7 +73,7 @@
                                     </div>
                                     <div class="sugg-description">
                                         <p>{{tr('duration')}}: {{$recent_video->duration}}</p>
-                                    </div><!--end of sugg-description--> 
+                                    </div>
 
                                     <span class="stars">
                                         <a href="#"><i @if($recent_video->ratings > 1) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
@@ -82,13 +82,13 @@
                                        <a href="#"><i @if($recent_video->ratings > 4) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
                                        <a href="#"><i @if($recent_video->ratings > 5) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
                                     </span> 
-                                </div><!--end of video-details-->
-                            </div><!--end of slide-box-->
+                                </div>
+                            </div>
                             @endforeach
                    
                               
-                        </div><!--end of box--> 
-                    </div><!--end of slide-area-->
+                        </div>
+                    </div>
 
                 @endif
 
