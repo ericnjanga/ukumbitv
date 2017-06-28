@@ -16,47 +16,56 @@ page-register
 
         {!! csrf_field() !!}
 
-        @if($errors->has('email') || $errors->has('name') || $errors->has('password_confirmation') ||$errors->has('password'))
-    			<div data-abide-error="" class="alert callout mb0">
-              <p class="color-danger">
-                  <i class="fa fa-exclamation-triangle"></i> 
-                  <strong> 
-                      @if($errors->has('email')) 
-                          {{ $errors->first('email') }}
-                      @endif
-
-                      @if($errors->has('name')) 
-                          {{ $errors->first('name') }}
-                      @endif
-
-                      @if($errors->has('password')) 
-                          {{$errors->first('password')}}
-                      @endif
-
-                      @if($errors->has('password_confirmation'))
-                          {{ $errors->has('password_confirmation') }}
-                      @endif
-
-                  </strong>
-              </p>
-          </div>
-        @endif
-
+        
+				
+	    	@if($errors->has('name'))
+	      <div class="alert callout mb0 color-danger"> 
+	        <i class="fa fa-exclamation-triangle"></i> 
+	        <strong>{{ $errors->first('name') }}</strong> 
+	      </div>
+	      @endif 
         <div class="form-group">
           <!-- <label for="name">{{trans('messages.name')}}</label> -->
           <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="{{trans('messages.name')}}">
         </div>
 
+
+
+				
+	    	@if($errors->has('email'))
+	      <div class="alert callout mb0 color-danger"> 
+	        <i class="fa fa-exclamation-triangle"></i> 
+	        <strong>{{ $errors->first('email') }}</strong> 
+	      </div>
+	      @endif 
         <div class="form-group">
           <!-- <label for="email">{{trans('messages.email')}}</label> -->
           <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{trans('messages.email')}}">
         </div>
 
+
+
+				
+	    	@if($errors->has('password'))
+	      <div class="alert callout mb0 color-danger"> 
+	        <i class="fa fa-exclamation-triangle"></i> 
+	        <strong>{{ $errors->first('password') }}</strong> 
+	      </div>
+	      @endif 
         <div class="form-group">
           <!-- <label for="password">{{trans('messages.password')}}</label> -->
           <input type="password" name="password" class="form-control" id="password" placeholder="{{trans('messages.password')}}">
         </div>
 
+
+
+				
+	    	@if($errors->has('confirm_password'))
+	      <div class="alert callout mb0 color-danger"> 
+	        <i class="fa fa-exclamation-triangle"></i> 
+	        <strong>{{ $errors->first('confirm_password') }}</strong> 
+	      </div>
+	      @endif 
         <div class="form-group">
           <!-- <label for="confirm_password">{{trans('messages.confirm_password')}}</label> -->
           <input type="password" name="password_confirmation" class="form-control" id="confirm_password" placeholder="{{trans('messages.confirm_password')}}">
