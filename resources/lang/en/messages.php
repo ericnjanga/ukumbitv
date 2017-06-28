@@ -81,8 +81,8 @@ return array(
 	'welcome_email_msg2' => 'Enjoy your free month of unlimited videos!',
 	'welcome_email_msg1' => 'and thanks for signing up!',
 	'welcome_email_footer_msg1' => 'This email was sent to you because you signed up on ',
-    'website_description' => 'Watch unlimited african movies and TV Shows online',
-    'site_name'	=>	'UkumbiTV',
+  'website_description' => 'Watch unlimited african movies and TV Shows online',
+  'site_name'	=>	'UkumbiTV',
 	'Welcome_to' => 'Welcome to',
 	'admin' => 'Admin',
 	'users' 	=>	'Users',
@@ -120,8 +120,7 @@ return array(
 	'old_password'	=> 	'Old Password',
 	'new_password'	=> 	'New Password',
 	'confirm_password'	=> 	'Confirm Password',
-	'password_confirmation' => 'Confirm Password',
-	'confirm_password' => 'Confirm Password',
+	'password_confirmation' => 'Confirm Password', 
 
 	'help'	=>	'Help',
 	'contact' => 'Contact Us',
@@ -257,7 +256,7 @@ return array(
 	'share_on_twitter' => 'Share On Twitter',
 	'reset_now' => 'Reset Now',
 	'update_now' => 'Update Now',
-    'email_verify_alert' => 'Account not verified. Please go to email and verify it.',
+  'email_verify_alert' => 'Account not verified. Please go to email and verify it.',
 
 
 	// Home Page
@@ -343,8 +342,7 @@ return array(
 
 	//Admin General
 
-	'view_history'	=>	'View History',
-	'copyright'	=>	'Copyright',
+	'view_history'	=>	'View History', 
 	'copyright_message' => 'All rights reserved',
 	'paypal_email'	=>	'Paypal Email',
 	'default'	=>	'Default',
@@ -503,8 +501,7 @@ return array(
 	'website_offer_2' => '(offer 2)',
 	'website_offer_3' => '(offer 3)',
 	'website_offer_4' => '(offer 4)',
-	'website_offer_5' => '(offer 5)',
-	'website_offer_5' => '(offer 5)',
+	'website_offer_5' => '(offer 5)', 
 
 	//Admin Videos
 	'videos' => 'Videos',
@@ -667,7 +664,6 @@ return array(
 	'MAIL_ENCRYPTION' => 'MAIL ENCRYPTION',
 
 	'email_settings' => 'Email Settings',
-
-
-    'login_form_title' => 'Login'
+ 
+  'login_form_title' => 'Login'
 );
