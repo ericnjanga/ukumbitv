@@ -16,17 +16,17 @@
 	</head>
 
 	<body> 
-	    @include('layouts.user.header')
+    @include('layouts.user.header')
 
-	    <div class="main-content" style="background:turquoise; height: 200px;"> 
-	    	<!-- 
-	      @yield('content') 
-	    	-->
-	    </div>
+    <div class="main-content" style="background:turquoise; height: 200px;"> 
+    	<!-- 
+      @yield('content') 
+    	-->
+    </div>
 
-	    @include('layouts.user.footer')
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	 
-	    @yield('scripts') 
+    @include('layouts.user.footer')
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    @yield('scripts') 
 	</body>
 </html>
