@@ -17,29 +17,29 @@ page-register
         {!! csrf_field() !!}
 
         @if($errors->has('email') || $errors->has('name') || $errors->has('password_confirmation') ||$errors->has('password'))
-            <div data-abide-error="" class="alert callout">
-                <p>
-                    <i class="fa fa-exclamation-triangle"></i> 
-                    <strong> 
-                        @if($errors->has('email')) 
-                            {{ $errors->first('email') }}
-                        @endif
+    			<div data-abide-error="" class="alert callout mb0">
+              <p class="color-danger">
+                  <i class="fa fa-exclamation-triangle"></i> 
+                  <strong> 
+                      @if($errors->has('email')) 
+                          {{ $errors->first('email') }}
+                      @endif
 
-                        @if($errors->has('name')) 
-                            {{ $errors->first('name') }}
-                        @endif
+                      @if($errors->has('name')) 
+                          {{ $errors->first('name') }}
+                      @endif
 
-                        @if($errors->has('password')) 
-                            {{$errors->first('password')}}
-                        @endif
+                      @if($errors->has('password')) 
+                          {{$errors->first('password')}}
+                      @endif
 
-                        @if($errors->has('password_confirmation'))
-                            {{ $errors->has('password_confirmation') }}
-                        @endif
+                      @if($errors->has('password_confirmation'))
+                          {{ $errors->has('password_confirmation') }}
+                      @endif
 
-                    </strong>
-                </p>
-            </div>
+                  </strong>
+              </p>
+          </div>
         @endif
 
         <div class="form-group">
