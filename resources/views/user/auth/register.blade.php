@@ -87,23 +87,8 @@ page-register
   	<h3 class="page-title text-center">
   		{{trans('messages.you_get_per_month')}}:
   	</h3>
-  	<ul class="list-unstyled">
-  		<li class="text-uppercase">
-  			[icon] {{trans('messages.website_offer_1')}}
-  		</li>
-  		<li class="text-uppercase">
-  			[icon] {{trans('messages.website_offer_2')}}
-  		</li>
-  		<li class="text-uppercase">
-  			[icon] {{trans('messages.website_offer_3')}}
-  		</li>
-  		<li class="text-uppercase">
-  			[icon] {{trans('messages.website_offer_4')}}
-  		</li>
-  		<li class="text-uppercase">
-  			[icon] {{trans('messages.website_offer_5')}}
-  		</li>
-  	</ul>
+
+	  @include('snippet.offers')
 
   	<h3 class="cta-title txt-color-primary text-center">{{trans('messages.first_month_free')}}!</h3>
   </div>   
