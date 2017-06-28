@@ -20,7 +20,18 @@ page-login
 
     @if($errors->has('email') || $errors->has('password'))
       <div data-abide-error="" class="alert callout mb0">
-          <p class="color-danger">
+      	@if($errors->has('email')) 
+					<p class="color-danger">
+            <i class="fa fa-exclamation-triangle"></i> 
+						<strong>{{ $errors->first('email') }}</strong>
+					</p>
+      	else
+					<p class="color-danger">
+            <i class="fa fa-exclamation-triangle"></i> 
+						<strong>{{ $errors->first('password') }}</strong>
+					</p> 
+      	@endif
+          <!-- <p class="color-danger">
               <i class="fa fa-exclamation-triangle"></i> 
               <strong> 
                   @if($errors->has('email')) 
@@ -29,7 +40,7 @@ page-login
                       $errors->first('password')
                   @endif
               </strong>
-          </p>
+          </p> -->
       </div>
     @endif
 
