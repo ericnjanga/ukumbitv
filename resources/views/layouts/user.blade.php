@@ -1,51 +1,21 @@
 <!DOCTYPE html>
-<html>
-
+<html class="no-js">
 <head>
-    <title>{{Setting::get('site_name' , "Start Streaming")}}</title>
+    <title>{{trans('messages.site_name')}} - {{trans('messages.website_description')}}</title>
     
     <meta name="viewport" content="width=device-width,  initial-scale=1">
-    <link rel="stylesheet" href="{{asset('streamtube/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/bootstrap/css/jquery-ui.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/fonts/font-awesome/css/font-awesome.min.css')}}">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> 
-    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/slick.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/slick-theme.css')}}"/>
+    <link rel="stylesheet" href="{{asset('streamtube/css/bootstrap.min.css')}}"> 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/app.css')}}"> 
+    <link rel="shortcut icon" type="image/png" href="{{asset('streamtube/images/logo2-fav.png')}}"/>
+    <script src="{{asset('streamtube/js/vendors/modernizr.custom.js')}}"></script>
+    <!--  
     <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/style.css')}}">
-
-    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/responsive.css')}}">
-
-    <link rel="shortcut icon" type="image/png" href="{{Setting::get('site_icon' , asset('img/favicon.png'))}}"/>
-    <style type="text/css">
-        .ui-autocomplete{
-          z-index: 99999;
-        }
-    </style>
-
-    @if(Setting::get('google_analytics'))
-        <?php echo Setting::get('google_analytics'); ?>
-    @endif
-
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{trans('messages.site_name')}} - {{trans('messages.website_description')}}" />
-    <meta property="og:description" content="The best solution to start up a video streaming venture!" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="{{trans('messages.site_name')}}" />
-    <meta property="og:image" content="{{Setting::get('site_icon')}}" />
-
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:description" content="The best solution to start up a video streaming venture!"/>
-    <meta name="twitter:title" content="{{trans('messages.site_name')}} - {{trans('messages.website_description')}}"/>
-    <meta name="twitter:image:src" content="@if(Setting::get('site_icon')) {{ Setting::get('site_icon') }} @else {{asset('favicon.png') }} @endif"/>
-
-    @yield('styles')
-
+    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/responsive.css')}}"> --> 
+    @yield('styles') 
 </head>
 
 <body>
-
-	<img src="{{asset('streamtube/images/y-logo.png')}}">
 
     @include('layouts.user.header')
 
