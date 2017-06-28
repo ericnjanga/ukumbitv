@@ -15,8 +15,6 @@ page-register
     <form class="signup-form" role="form" method="POST" action="{{ url('/register') }}">
 
         {!! csrf_field() !!}
-
-        
 				
 	    	@if($errors->has('name'))
 	      <div class="alert callout mb0 color-danger"> 
@@ -59,11 +57,12 @@ page-register
 
 
 
+
 				
-	    	@if($errors->has('confirm_password'))
+	    	@if($errors->has('password_confirmation'))
 	      <div class="alert callout mb0 color-danger"> 
 	        <i class="fa fa-exclamation-triangle"></i> 
-	        <strong>{{ $errors->first('confirm_password') }}</strong> 
+	        <strong>{{ $errors->first('password_confirmation') }}</strong> 
 	      </div>
 	      @endif 
         <div class="form-group">
