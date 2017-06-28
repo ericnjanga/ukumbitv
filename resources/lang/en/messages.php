@@ -96,6 +96,7 @@ return array(
 	'register'	=>	'Register',
 	'signup'	=>	'Sign Up',
 	'login'	=>	'Login',
+	'login2'	=>	'Login',
 	'logout'	=>	'Logout',
 	'sign_out' => 'Sign out',
 	'terms_of_use' => 'Terms of use',
@@ -210,7 +211,7 @@ return array(
 	// Web Register 
 	'registration_form'	=>	'Registration Form',
 	'already_register'	=>	'Already Registered? Login',
-	'already_account' => 'Already Have an Account?',
+	'already_account' => 'Already Have an Account?', 
 	
 	'login_form'	=>	'Login Form',
 	'password_ph'	=>	'Atleast 6 letters',

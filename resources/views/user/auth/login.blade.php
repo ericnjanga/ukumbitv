@@ -30,17 +30,7 @@ page-login
             <i class="fa fa-exclamation-triangle"></i> 
 						<strong>{{ $errors->first('password') }}</strong>
 					</p> 
-      	@endif
-          <!-- <p class="color-danger">
-              <i class="fa fa-exclamation-triangle"></i> 
-              <strong> 
-                  @if($errors->has('email')) 
-                      {{ $errors->first('email') }}
-                  @else 
-                      $errors->first('password')
-                  @endif
-              </strong>
-          </p> -->
+      	@endif 
       </div>
     @endif
 

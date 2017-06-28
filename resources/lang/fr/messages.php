@@ -44,4 +44,6 @@ return array(
 
 	//Admin Login
 	'welcome'	=>	'Bienvenue sur UkumbiTV. Connectez-vous à votre compte s\'il vous plaît',
+	'login'	=>	'S\'identifier',
+	'login2'	=>	'Indentifiez vous',
 );
