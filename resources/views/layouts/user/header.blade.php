@@ -1,4 +1,35 @@
-<div class="youtube-nav">
+<div class="main-nav">
+	<div class="container">
+		<div class="col-md-12">
+	    <div class="brand pull-left">
+	      <a href="{{route('user.dashboard')}}" alt="UKUMBITV" class="y-image">
+	      	<img src="{{asset('streamtube/images/logo1.png')}}" alt='UkumbiTv' />
+	      </a>
+	    </div><!--test end-->
+
+	    <div class="main-nav__additional-links pull-right">
+
+			@if(App::isLocale('fr'))
+	      		<a href="{{url('setlocale/en')}}">English</a>
+			@else
+	      		<a href="{{url('setlocale/fr')}}">Français</a>
+			@endif
+
+	    	<!-- @if(Auth::check())
+	    		<a href="{{route('user.profile')}}" class="y-signin">{{tr('back_profile')}}</a>
+	    	@else
+	    		<a href="{{route('user.register.form')}}" class="y-signin">{{tr('signup')}}</a>
+	            <a href="{{route('user.login.form')}}" class="y-signin">{{tr('login')}}</a>
+	    	@endif  -->
+	    </div> 
+	  </div>
+	</div> 
+</div>
+
+
+
+
+<!-- <div class="youtube-nav">
     <div class="row">
         <div class="test toggle1">
             <a href="#"><i class="fa fa-align-justify toggle-icon" aria-hidden="true"></i></a>
@@ -11,7 +42,7 @@
                     <img src="{{asset('logo.png')}}">
                 @endif
             </a>
-        </div><!--test end-->
+        </div>
 
         <div id="custom-search-input" class="">
             <form method="post" action="{{route('search-all')}}" id="userSearch">
@@ -26,7 +57,7 @@
                 
             </div>
             </form>
-        </div><!--custom-search-input end-->
+        </div>
 
         @if(Auth::check())
             <div class="y-button profile-button">
@@ -56,14 +87,16 @@
                         <li><a href="{{route('user.logout')}}">{{tr('logout')}}</a></li>
                       </ul>
                     </div>
-            </div><!--y-button end-->
+            </div>
         @else
             <div class="y-button">
                 <a href="{{route('user.register.form')}}" class="y-signin">{{tr('signup')}}</a>
                 <a href="{{route('user.login.form')}}" class="y-signin">{{tr('login')}}</a>
             
-            </div><!--y-button end-->
+            </div>
         @endif
 
-    </div><!--end of row-->
-</div><!--end of youtube-nav-->
+    </div>
+</div> -->
+
+
