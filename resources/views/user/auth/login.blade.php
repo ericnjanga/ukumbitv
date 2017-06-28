@@ -25,7 +25,7 @@ page-login
             <i class="fa fa-exclamation-triangle"></i> 
 						<strong>{{ $errors->first('email') }}</strong>
 					</p>
-      	else
+      	@else
 					<p class="color-danger">
             <i class="fa fa-exclamation-triangle"></i> 
 						<strong>{{ $errors->first('password') }}</strong>
