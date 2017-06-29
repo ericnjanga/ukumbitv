@@ -53,13 +53,14 @@
 			              	{{trans('messages.Welcome_to')}} <b>UkumbiTV</b> {{trans('messages.welcome_email_msg1')}}
 			              </h3>
 			              <h4 style=" font-size:16px;">{{trans('messages.you_get_per_month')}}:</h4>
-			              <ul style="margin-bottom:20px; list-style:none;">
-			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_1')}}</li>
+			              <div style="margin-bottom:20px; list-style:none;">
+			              	<!-- <li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_1')}}</li>
 			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_2')}}</li>
 			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_3')}}</li>
 			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_4')}}</li>
-			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_5')}}</li>
-			              </ul>
+			              	<li style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">[icon] {{trans('messages.website_offer_5')}}</li> -->
+	  									@include('snippet.offers')
+			              </div>
 			              <p style="font-family: Roboto,sans-serif; font-size:16px; color:#333;">{{trans('messages.welcome_email_msg2')}}</p>
 									</td>
 								</tr>
