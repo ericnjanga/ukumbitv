@@ -9,18 +9,23 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="https://ukumbitv.com/streamtube/images/deco/x9fwkuz96805.jpg" alt="...">
+      <img src="https://ukumbitv.com/streamtube/images/deco/car-x9fwkuz94596.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
     <div class="item">
-      <img src="https://ukumbitv.com/streamtube/images/deco/x9fwkuz94596.jpg" alt="...">
+      <img src="https://ukumbitv.com/streamtube/images/deco/car-x9fwkuz96701.jpg" alt="...">
       <div class="carousel-caption">
         ...
       </div>
     </div>
-    ...
+    <div class="item">
+      <img src="https://ukumbitv.com/streamtube/images/deco/car-x9fwkuz96805.jpg" alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
   </div>
 
   <!-- Controls -->
