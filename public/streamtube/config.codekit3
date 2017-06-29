@@ -126,6 +126,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/_resources\/scss\/pages\/videos.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/_resources\/scss\/pages\/videos.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/_resources\/scss\/utilities\/vars.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -443,6 +456,16 @@
 		"iS": 519402,
 		"oA": 0,
 		"oAP": "\/images\/deco\/x9fwkuz96893.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/email-hero1.jpg": {
+		"ft": 16384,
+		"iS": 32377,
+		"oA": 0,
+		"oAP": "\/images\/email-hero1.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

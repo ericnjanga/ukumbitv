@@ -15,7 +15,7 @@
 	    @yield('styles') 
 	</head>
 
-	<body> 
+	<body class="page-videos"> 
     @include('layouts.user.header')
 
     <div class="main-content">
