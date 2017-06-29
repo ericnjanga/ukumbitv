@@ -18,7 +18,7 @@
 	<body> 
     @include('layouts.user.header')
 
-    <div class="main-content" style="background:turquoise; height: 200px;">
+    <div class="main-content">
     	@include('layouts.user.latest-uploads.hero-carousel')
     	<!-- 
       @yield('content') 
