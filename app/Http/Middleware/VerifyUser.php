@@ -12,7 +12,7 @@ use Setting;
 class VerifyUser
 {
     //List of paths allowed to access while user not logged in
-    private $allowed_paths = ['login', 'register', 'social', 'callback/facebook', 'admin', 'email', 'setlocale', 'setlocale/fr', 'setlocale/en', 'about', 'terms', 'privacy_policy'];
+    private $allowed_paths = ['login', 'register', 'social', 'callback/facebook', 'admin', 'email', 'setlocale', 'setlocale/fr', 'setlocale/en', 'about-us', 'terms-of-use', 'privacy-statement'];
     /**
      * Handle an incoming request.
      *

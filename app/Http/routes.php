@@ -129,15 +129,15 @@ Route::get('/payment/expiry', 'ApplicationController@user_payment_expiry')->name
 
 Route::get('/privacy', 'UserApiController@privacy')->name('user.privacy');
 
-Route::get('/terms', 'UserApiController@terms')->name('user.terms');
+Route::get('/terms-of-use', 'UserApiController@terms')->name('user.terms');
 
 Route::get('/contact', 'UserController@contact')->name('user.contact');
 
-Route::get('/privacy_policy', 'ApplicationController@privacy')->name('user.privacy_policy');
+Route::get('/privacy-statement', 'ApplicationController@privacy')->name('user.privacy_policy');
 
 Route::get('/terms', 'ApplicationController@terms')->name('user.terms-condition');
 
-Route::get('/about', 'ApplicationController@about')->name('user.about');
+Route::get('/about-us', 'ApplicationController@about')->name('user.about');
 
 // Video upload 
 

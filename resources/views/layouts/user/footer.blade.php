@@ -4,13 +4,13 @@
 	  	<div class="col-md-12 text-center">
 	  		<ul class="list-inline">
 	  			<li>
-	  				<a href="{{url('/about')}}" class="underlined">{{trans('messages.about_us')}}</a>
+	  				<a href="{{url('/about-us')}}" class="underlined">{{trans('messages.about_us')}}</a>
 	  			</li> 
 	  			<li>
-	  				<a href="{{url('/terms')}}" class="underlined">{{trans('messages.terms_of_use')}}</a>
+	  				<a href="{{url('/terms-of-use')}}" class="underlined">{{trans('messages.terms_of_use')}}</a>
 	  			</li>
 	  			<li>
-	  				<a href="{{url('/privacy_policy')}}" class="underlined">{{trans('messages.privacy_statement')}}</a>
+	  				<a href="{{url('/privacy-statement')}}" class="underlined">{{trans('messages.privacy_statement')}}</a>
 	  			</li> 
 	  		</ul>
 	  		<ul class="list-inline"> 
