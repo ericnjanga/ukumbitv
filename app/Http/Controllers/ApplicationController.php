@@ -326,7 +326,7 @@ class ApplicationController extends Controller {
 
                         \Auth::loginUsingId($request->id);
 
-                        return redirect(route('user.profile'))->with('flash_success' , "Email verified successfully!!!");
+                        return redirect('/')->with('flash_success' , "Email verified successfully!!!");
                     } else {
                         return redirect(route('user.login.form'))->with('flash_error' , $error);
                     }
