@@ -124,7 +124,7 @@ return array(
 
 	'help'	=>	'Help',
 	'contact' => 'Contact Us',
-	'about' => 'About Us',
+	'about_us' => 'À propos',
 	'terms_conditions' => 'Terms and Conditions',
 	'privacy' => 'Privacy',
 
