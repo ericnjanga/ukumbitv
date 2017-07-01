@@ -10,14 +10,19 @@
     width: 100%;
 	}//main-nav
 
-	.carousel,
+	//.carousel,
 	.video-container {
 		margin-bottom: 50px;
 	}
 
 	//[xs]......
 	.main-content {
-		padding-top: 550px;
+		padding-top: 250px;
+	
+		// for medium and large screens ...
+		@media (min-width: 768px) {
+			padding-top: 550px;
+		}
 	}
 
 	.billboard {

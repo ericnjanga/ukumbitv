@@ -25,7 +25,7 @@
 
 			<div class="container video-container">
 				<div class="row">
-		    	<div class="col col-sm-6 col-md-3">
+		    	<div class="col col-xs-6 col-md-3">
 				    <div class="thumbnail video-thumbnail">
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
@@ -56,7 +56,7 @@
 				  </div> 
 				  {{--video-thumbnail--}}
 					
-		    	<div class="col col-sm-6 col-md-3">
+		    	<div class="col col-xs-6 col-md-3">
 				    <div class="thumbnail video-thumbnail">
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
@@ -88,7 +88,7 @@
 				  {{--video-thumbnail--}}
 
 
-		    	<div class="col col-sm-6 col-md-3">
+		    	<div class="col col-xs-6 col-md-3">
 				    <div class="thumbnail video-thumbnail">
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
@@ -120,7 +120,7 @@
 				  {{--video-thumbnail--}}
 
 
-		    	<div class="col col-sm-6 col-md-3">
+		    	<div class="col col-xs-6 col-md-3">
 				    <div class="thumbnail video-thumbnail">
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
@@ -152,7 +152,7 @@
 				  {{--video-thumbnail--}}
 
 
-		    	<div class="col col-sm-6 col-md-3">
+		    	<div class="col col-xs-6 col-md-3">
 				    <div class="thumbnail video-thumbnail">
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
@@ -184,7 +184,7 @@
 				  {{--video-thumbnail--}}
 
 
-		    	<div class="col col-sm-6 col-md-3">
+		    	<div class="col col-xs-6 col-md-3">
 				    <div class="thumbnail video-thumbnail">
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
