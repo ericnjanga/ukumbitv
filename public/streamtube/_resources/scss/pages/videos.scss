@@ -6,6 +6,10 @@
     z-index: 99;
     width: 100%;
 	}//main-nav
+
+	.carousel {
+		margin-bottom: 50px;
+	}
 }
 
 
@@ -14,5 +18,18 @@
 		padding: 0;
 		background-color: #292734;
 		border-width: 0px;
+	}
+	.thumbnail-title, 
+	.thumbnail-info1 {
+		font-family: Roboto;
+		color: #ffffff;
+	}
+	.thumbnail-title { 
+		font-size: 16px;
+		font-weight: 500; 
+	}
+	.thumbnail-info1 {  
+		opacity: 0.5; 
+		font-size: 14px; 
 	}
 }

@@ -25,7 +25,7 @@
 				<div class="row">
 		    	<div class="col-sm-6 col-md-3">
 				    <div class="thumbnail">
-				      <img src="http://via.placeholder.com/500x380" class="img-responsive" alt="...">
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
 				      <div class="caption">
 				        <h3>Thumbnail label</h3>
 				        <p>...</p> 
@@ -35,7 +35,7 @@
 					
 		    	<div class="col-sm-6 col-md-3">
 				    <div class="thumbnail">
-				      <img src="http://via.placeholder.com/500x380" class="img-responsive" alt="...">
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
 				      <div class="caption">
 				        <h3>Thumbnail label</h3>
 				        <p>...</p> 
@@ -45,17 +45,19 @@
 
 		    	<div class="col-sm-6 col-md-3">
 				    <div class="thumbnail">
-				      <img src="http://via.placeholder.com/500x380" class="img-responsive" alt="...">
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
 				      <div class="caption">
-				        <h3>Thumbnail label</h3>
-				        <p>...</p> 
+				        <h3 class="thumbnail-title">Title</h3>
+				        <div class="thumbnail-info1">
+				        	<time>2016</time>, <div>Cameroon</div>
+				        </div>
 				      </div>
 				    </div>
 				  </div> 
 
 		    	<div class="col-sm-6 col-md-3">
 				    <div class="thumbnail">
-				      <img src="http://via.placeholder.com/500x380" class="img-responsive" alt="...">
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
 				      <div class="caption">
 				        <h3>Thumbnail label</h3>
 				        <p>...</p> 
