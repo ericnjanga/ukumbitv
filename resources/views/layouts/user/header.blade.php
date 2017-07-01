@@ -81,8 +81,10 @@
       	</li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-					<span class="user-name">[user name]</span>
-           <span class="caret"></span></a>
+          	<img src="http://via.placeholder.com/40x40" data-pin-nopin="true" class="img-circle">
+						<span class="user-name">[user name]</span>
+           	<span class="caret"></span>
+          </a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
