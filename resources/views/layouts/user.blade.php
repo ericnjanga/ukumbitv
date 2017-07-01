@@ -27,15 +27,10 @@
 				    <div class="thumbnail">
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
-				      <div class="caption">
-
-
-
-
-								<!-- ... -->
+				      <div class="caption">  
 								<div class="panel-group thumbnail-info2" id="accordion" role="tablist" aria-multiselectable="true">
 								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="headingOne">
+								    <div class="panel-heading" role="tab" id="heading3">
 
 							        <h3 class="thumbnail-title">Title</h3>
 							        <div class="thumbnail-info1">
@@ -43,56 +38,19 @@
 							        </div>
 
 								      <h4 class="panel-title--">
-								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
 								          Collapsible Group Item #1
 								        </a>
 								      </h4>
 								    </div>
-								    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+								    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
 								      <div class="panel-body">
 								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
 								      </div>
 								    </div>
-								  </div>
-								  <!-- <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="headingTwo">
-								      <h4 class="panel-title">
-								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-								          Collapsible Group Item #2
-								        </a>
-								      </h4>
-								    </div>
-								    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-								      <div class="panel-body">
-								        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-								      </div>
-								    </div>
-								  </div>
-								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="headingThree">
-								      <h4 class="panel-title">
-								        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-								          Collapsible Group Item #3
-								        </a>
-								      </h4>
-								    </div>
-								    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-								      <div class="panel-body">
-								        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-								      </div>
-								    </div>
-								  </div> -->
-								</div>
-								<!-- ... -->
-
-
-
-
-
-				      <!--   <div class="thumbnail-info2">
-				        	Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
-				        </div> -->
-				      </div>
+								  </div> 
+								</div><!-- panel-group --> 
+				      </div><!-- caption -->
 				    </div>
 				  </div> 
 					
@@ -100,12 +58,30 @@
 				    <div class="thumbnail">
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
-				      <div class="caption">
-				        <h3 class="thumbnail-title">Title</h3>
-				        <div class="thumbnail-info1">
-				        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
-				        </div>
-				      </div>
+				      <div class="caption">  
+								<div class="panel-group thumbnail-info2" id="accordion" role="tablist" aria-multiselectable="true">
+								  <div class="panel panel-default">
+								    <div class="panel-heading" role="tab" id="heading2">
+
+							        <h3 class="thumbnail-title">Title</h3>
+							        <div class="thumbnail-info1">
+							        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+							        </div>
+
+								      <h4 class="panel-title--">
+								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+								          Collapsible Group Item #1
+								        </a>
+								      </h4>
+								    </div>
+								    <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+								      <div class="panel-body">
+								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
+								      </div>
+								    </div>
+								  </div> 
+								</div><!-- panel-group --> 
+				      </div><!-- caption -->
 				    </div>
 				  </div> 
 
@@ -113,12 +89,30 @@
 				    <div class="thumbnail">
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
-				      <div class="caption">
-				        <h3 class="thumbnail-title">Title</h3>
-				        <div class="thumbnail-info1">
-				        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
-				        </div>
-				      </div>
+				      <div class="caption">  
+								<div class="panel-group thumbnail-info2" id="accordion" role="tablist" aria-multiselectable="true">
+								  <div class="panel panel-default">
+								    <div class="panel-heading" role="tab" id="heading1">
+
+							        <h3 class="thumbnail-title">Title</h3>
+							        <div class="thumbnail-info1">
+							        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+							        </div>
+
+								      <h4 class="panel-title--">
+								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+								          Collapsible Group Item #1
+								        </a>
+								      </h4>
+								    </div>
+								    <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+								      <div class="panel-body">
+								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
+								      </div>
+								    </div>
+								  </div> 
+								</div><!-- panel-group --> 
+				      </div><!-- caption -->
 				    </div>
 				  </div> 
 
