@@ -5,6 +5,7 @@
 .main-nav { 
 	border-width: 0;
 	z-index: 99;
+	border-radius: 0;
 
 	.search-control {
 		height: 40px;
@@ -78,8 +79,15 @@
     	}
 		}
 		.navbar-nav>li>a {
+			color: #ccc;
 			padding-top: 10px;
     	padding-bottom: 10px;
+		}
+
+		.navbar-default .navbar-nav>.active>a { 
+	    background-color: $color-primary!important;
+	    color: #fff;
+	    border-radius: 50px;
 		}
 
 		//background .....
