@@ -75,7 +75,7 @@
       	<li>
       		<form class="navbar-form navbar-left">
 		        <div class="form-group">
-		          <input type="text" class="form-control" placeholder="Search">
+		          <input type="text" class="form-control search-control" placeholder="Search">
 		        </div> 
 		      </form>
       	</li>

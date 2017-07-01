@@ -7,7 +7,45 @@
  //  align-items: center;
 	// // background: lime;
 	// height: 100px;
+	background-color: transparent!important;
+	border-width: 0;
 	z-index: 99;
+
+	.search-control {
+		height: 40px;
+		border-radius: 100px!important;
+	}
+	
+	//Style main nav differently for medium and large screens
+	@media (min-width: 768px) {
+		.container-fluid {
+			display: flex;
+    	align-items: center;
+    	.navbar-brand {
+    		height: inherit;
+    	}
+    	.navbar-collapse{
+    		display: flex!important;
+		    align-items: center;
+		    height: 100px!important;
+		    flex: 1;
+    	}
+    	.navbar-right {
+    		margin-left: auto;
+    	}
+    	.navbar-form {
+    		margin: 0;
+    	}
+    	.dropdown-toggle {
+    		padding-top: 0;
+    		padding-bottom: 0;
+    	}
+		}
+		.navbar-nav>li>a {
+			padding-top: 10px;
+    	padding-bottom: 10px;
+		}
+	}
 }
 
 .main-nav__additional-links{
