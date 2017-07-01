@@ -4,11 +4,9 @@
 
 	//some code
 	$('body').on('mouseenter', '.video-thumbnail', function(){
-		$(this).find('a[data-toggle="collapse"]').trigger('click');
-		console.log('>>>> mouseenter');
+		$(this).find('a[data-toggle="collapse"]').trigger('click'); 
 	}).on('mouseleave', '.video-thumbnail', function(){
-		$(this).find('a[data-toggle="collapse"]').trigger('click');
-		console.log('>>>> mouseleave');
+		$(this).find('a[data-toggle="collapse"]').trigger('click'); 
 	});
 
 })(jQuery);

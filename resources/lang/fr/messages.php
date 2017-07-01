@@ -405,7 +405,7 @@ return array(
 	'total_android' => 'Total Android Users',
 	'total_ios' => 'Total iOS Users',
 	'latest_users' => 'Latest Users',
-	'more_info' => 'More info',
+	'more_info' => 'Plus d\'informations',
 	'total_moderator' => 'Total Moderators',
 	'total_revenue' => 'Total Revenue',
 	'daily_view_count' => 'Recent Site View Count',

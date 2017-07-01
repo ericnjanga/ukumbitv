@@ -3,6 +3,8 @@
 	<head>
 	    <title>{{trans('messages.site_name')}} - {{trans('messages.website_description')}}</title>
 	    
+
+	    
 	    <meta name="viewport" content="width=device-width,  initial-scale=1">
 	    <link rel="stylesheet" href="{{asset('streamtube/css/bootstrap.min.css')}}"> 
 	    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
@@ -39,7 +41,7 @@
 
 								      <h4 class="panel-title--">
 								        <a role="button" data-toggle="collapse" data-parent="#accordion1a" href="#collapse1a" aria-expanded="true" aria-controls="collapse1a">
-								          Collapsible Group Item #1
+								          {{trans('more_info')}}
 								        </a>
 								      </h4>
 								    </div>
@@ -70,7 +72,7 @@
 
 								      <h4 class="panel-title--">
 								        <a role="button" data-toggle="collapse" data-parent="#accordion2a" href="#collapse2a" aria-expanded="true" aria-controls="collapse2a">
-								          Collapsible Group Item #1
+								          {{trans('more_info')}}
 								        </a>
 								      </h4>
 								    </div>
@@ -103,7 +105,7 @@
 
 								      <h4 class="panel-title--">
 								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-								          Collapsible Group Item #1
+								          {{trans('more_info')}}
 								        </a>
 								      </h4>
 								    </div>
@@ -136,41 +138,7 @@
 
 								      <h4 class="panel-title--">
 								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-								          Collapsible Group Item #1
-								        </a>
-								      </h4>
-								    </div>
-								    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
-								      <div class="panel-body">
-								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
-								      </div>
-								    </div>
-								  </div> 
-								</div><!-- panel-group --> 
-				      </div><!-- caption -->
-				    </div>
-				  </div> 
-
-
-
-
-		    	<div class="col-sm-6 col-md-3">
-				    <div class="thumbnail video-thumbnail">
-				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
-				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
-				      <div class="caption">  
-								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion" role="tablist" aria-multiselectable="true">
-								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="heading3">
-
-							        <h3 class="thumbnail-title">Title</h3>
-							        <div class="thumbnail-info1">
-							        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
-							        </div>
-
-								      <h4 class="panel-title--">
-								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-								          Collapsible Group Item #1
+								          {{trans('more_info')}}
 								        </a>
 								      </h4>
 								    </div>
@@ -204,7 +172,7 @@
 
 								      <h4 class="panel-title--">
 								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-								          Collapsible Group Item #1
+								          {{trans('more_info')}}
 								        </a>
 								      </h4>
 								    </div>
@@ -238,9 +206,44 @@
 
 								      <h4 class="panel-title--">
 								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-								          Collapsible Group Item #1
+								          {{trans('more_info')}}
 								        </a>
 								      </h4>
+								    </div>
+								    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+								      <div class="panel-body">
+								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
+								      </div>
+								    </div>
+								  </div> 
+								</div><!-- panel-group --> 
+				      </div><!-- caption -->
+				    </div>
+				  </div> 
+
+
+
+
+		    	<div class="col-sm-6 col-md-3">
+				    <div class="thumbnail video-thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
+				      <div class="caption">  
+								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+								  <div class="panel panel-default">
+								    <div class="panel-heading" role="tab" id="heading3">
+
+							        <h3 class="thumbnail-title">Title</h3>
+							        <div class="thumbnail-info1">
+							        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+							        </div>
+
+								      
+								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+								          {{trans('more_info')}}
+								        </a>
+								      
+								      
 								    </div>
 								    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
 								      <div class="panel-body">
@@ -271,7 +274,7 @@
 							        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
 							        </div><h4 class="panel-title--">
 								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3" class="collapsed">
-								          Collapsible Group Item #1
+								          {{trans('more_info')}}
 								        </a>
 								      </h4>
 								    </div>
