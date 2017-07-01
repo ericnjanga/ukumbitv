@@ -28,10 +28,6 @@
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
 				      <div class="caption">
-				        <h3 class="thumbnail-title">Title</h3>
-				        <div class="thumbnail-info1">
-				        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
-				        </div>
 
 
 
@@ -40,6 +36,12 @@
 								<div class="panel-group thumbnail-info2" id="accordion" role="tablist" aria-multiselectable="true">
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="headingOne">
+
+							        <h3 class="thumbnail-title">Title</h3>
+							        <div class="thumbnail-info1">
+							        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+							        </div>
+
 								      <h4 class="panel-title--">
 								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 								          Collapsible Group Item #1
@@ -94,6 +96,84 @@
 				    </div>
 				  </div> 
 					
+		    	<div class="col-sm-6 col-md-3">
+				    <div class="thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
+				      <div class="caption">
+				        <h3 class="thumbnail-title">Title</h3>
+				        <div class="thumbnail-info1">
+				        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div> 
+
+		    	<div class="col-sm-6 col-md-3">
+				    <div class="thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
+				      <div class="caption">
+				        <h3 class="thumbnail-title">Title</h3>
+				        <div class="thumbnail-info1">
+				        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div> 
+
+		    	<div class="col-sm-6 col-md-3">
+				    <div class="thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
+				      <div class="caption">
+				        <h3 class="thumbnail-title">Title</h3>
+				        <div class="thumbnail-info1">
+				        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div> 
+
+		    	<div class="col-sm-6 col-md-3">
+				    <div class="thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
+				      <div class="caption">
+				        <h3 class="thumbnail-title">Title</h3>
+				        <div class="thumbnail-info1">
+				        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div> 
+
+		    	<div class="col-sm-6 col-md-3">
+				    <div class="thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
+				      <div class="caption">
+				        <h3 class="thumbnail-title">Title</h3>
+				        <div class="thumbnail-info1">
+				        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div> 
+
+		    	<div class="col-sm-6 col-md-3">
+				    <div class="thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
+				      <div class="caption">
+				        <h3 class="thumbnail-title">Title</h3>
+				        <div class="thumbnail-info1">
+				        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+				        </div>
+				      </div>
+				    </div>
+				  </div> 
+
 		    	<div class="col-sm-6 col-md-3">
 				    <div class="thumbnail">
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
