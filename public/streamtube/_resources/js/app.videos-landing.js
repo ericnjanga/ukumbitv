@@ -4,10 +4,10 @@
 
 	//some code
 	$('body').on('mouseenter', '.video-thumbnail', function(){
-		$(this).find('.video-thumbnail-accordion').collapse('show');
+		$(this).find('a[data-toggle="collapse"]').trigger('click');
 		console.log('>>>> mouseenter');
 	}).on('mouseleave', '.video-thumbnail', function(){
-		$(this).find('.video-thumbnail-accordion').collapse('hide');
+		$(this).find('a[data-toggle="collapse"]').trigger('click');
 		console.log('>>>> mouseleave');
 	});
 
