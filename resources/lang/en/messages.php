@@ -665,5 +665,7 @@ return array(
 
 	'email_settings' => 'Email Settings',
  
-  'login_form_title' => 'Login'
+  'login_form_title' => 'Login',
+ 
+  'jobs' => 'Jobs'
 );

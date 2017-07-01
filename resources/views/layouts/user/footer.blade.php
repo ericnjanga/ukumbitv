@@ -12,12 +12,15 @@
 	  			<li>
 	  				<a href="{{url('/privacy-statement')}}" class="underlined">{{trans('messages.privacy_statement')}}</a>
 	  			</li> 
+	  			<li>
+	  				<a href="{{url('/jobs')}}" class="underlined">{{trans('messages.jobs')}}</a>
+	  			</li> 
 	  		</ul>
 	  		<ul class="list-inline"> 
 	  			<li>
 	  				{{trans('messages.question_contactus')}}: <a href="mailto:info@ukumbitv.com" class="underlined">info@ukumbitv.com</a>
 	  			</li>
-	  		</ul>
+	  		</ul> 
 	  	</div>
 
 	  	<div class="col-md-12 text-center">
