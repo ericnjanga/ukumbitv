@@ -12,7 +12,7 @@
 		border-radius: 100px!important;
 	}
 	
-	//Style main nav differently for medium and large screens
+	// for small screens ...
 	@media (max-width: 767px) {
 		background-color: #444;
 		.navbar-header {
@@ -53,7 +53,7 @@
 		}
 	}
 	
-	//Style main nav differently for medium and large screens
+	// for medium and large screens ...
 	@media (min-width: 768px) {
 		.container-fluid {
 			display: flex;

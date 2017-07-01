@@ -23,10 +23,18 @@
 	.billboard {
 		position: absolute;
     width: 100%;
-    top: 0;
+    
     .img-responsive {
     	width: 100%;
     }
+	
+		// for small screens ...
+    top: 50px; //mobile nav height
+	
+		// for medium and large screens ...
+		@media (min-width: 768px) {
+			top: 0;
+		}
 	}
 	//[xs]......
 }
