@@ -9,6 +9,24 @@
 	],
 "creatorBuild": "25813",
 "files": {
+	"\/_resources\/js\/app.unauth.decor.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/app.unauth.decor.js",
+		"oF": 2,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/_resources\/js\/app.videos-landing.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/app.videos-landing.js",
+		"oF": 2,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/_resources\/scss\/app.scss": {
 		"aP": 1,
 		"bl": 0,
