@@ -12,6 +12,47 @@
 	}
 	
 	//Style main nav differently for medium and large screens
+	@media (max-width: 767px) {
+		background-color: #444;
+		.navbar-header {
+			display: flex;
+			align-items: center;
+		}
+		 
+		.navbar-nav>.active>a {
+			background: #222;
+			color: $color-primary!important;
+		}
+		.navbar-nav>li>a { 
+		    color: #ccc;
+		}
+		.navbar-collapse {
+			border-color: #222!important;
+		}
+
+		form {
+			padding-left: 15px;
+    	padding-right: 15px;
+		}
+			
+		 
+		$img-brand-height: 20px;
+		.navbar-brand {
+			padding: 0; 
+	    margin-right: auto;
+	    height: $img-brand-height; 
+	    margin-left: 15px;
+		}
+		.img-brand {
+			width: 101px;
+			height: $img-brand-height;
+		}
+		.navbar-toggle {
+			margin-left: auto;
+		}
+	}
+	
+	//Style main nav differently for medium and large screens
 	@media (min-width: 768px) {
 		.container-fluid {
 			display: flex;

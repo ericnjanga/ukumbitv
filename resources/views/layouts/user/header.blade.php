@@ -52,7 +52,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-				<img src="{{asset('streamtube/images/logo1.png')}}" alt='UkumbiTv' />
+				<img class="img-brand" src="{{asset('streamtube/images/logo1.png')}}" alt='UkumbiTv' />
       </a>
     </div>
 
