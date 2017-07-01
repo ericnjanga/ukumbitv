@@ -18,6 +18,10 @@
 
 
 .video-content {
+	.col {
+		padding-left: 10px;
+    padding-right: 10px;
+	}
 	.thumbnail {
 		cursor: pointer;
 		max-width: 500px;
@@ -48,6 +52,7 @@
 		margin: 0;
 		opacity: 0.8;
 		position: absolute;
+		top:0;
     z-index: 9999999;
     background-color: #292734;
     opacity: 1;
@@ -58,8 +63,12 @@
 			background: transparent;
     	border-width: 0;
 		}
+		.panel-body{
+			padding-top: 15px;
+		}
 		.panel-body,
 		.panel-heading {
+			border-width: 0!important;
 			padding: 0;
 		}
 	}
