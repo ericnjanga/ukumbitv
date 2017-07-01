@@ -25,6 +25,7 @@
 				<div class="row">
 		    	<div class="col-sm-6 col-md-3">
 				    <div class="thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
 				      <div class="caption">
 				        <h3 class="thumbnail-title">Title</h3>
@@ -37,6 +38,7 @@
 					
 		    	<div class="col-sm-6 col-md-3">
 				    <div class="thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
 				      <div class="caption">
 				        <h3 class="thumbnail-title">Title</h3>
@@ -49,6 +51,7 @@
 
 		    	<div class="col-sm-6 col-md-3">
 				    <div class="thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
 				      <div class="caption">
 				        <h3 class="thumbnail-title">Title</h3>
@@ -61,6 +64,7 @@
 
 		    	<div class="col-sm-6 col-md-3">
 				    <div class="thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
 				      <div class="caption">
 				        <h3 class="thumbnail-title">Title</h3>

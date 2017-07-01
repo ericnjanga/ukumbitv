@@ -1,5 +1,8 @@
 
 
+
+
+
 .page-videos {
 	.main-nav {
 		position: fixed;
@@ -16,9 +19,22 @@
 
 .video-content {
 	.thumbnail {
+		cursor: pointer;
+		max-width: 500px;
 		padding: 0;
 		background-color: #292734;
 		border-width: 0px;
+		.caption{
+			padding: 20px;
+		}
+		.fa{
+			$fa-width: 80px;
+			position: absolute;
+		  font-size: $fa-width;
+		  left: 50%;
+		  margin-left: -#{$fa-width/2};
+		  top: 23%;
+		}
 	}
 	.thumbnail-title, 
 	.thumbnail-info1 {
@@ -26,6 +42,8 @@
 		color: #ffffff; 
 	}
 	.thumbnail-title { 
+		margin-top: 0;
+		margin-bottom: 5px;
 		font-size: 16px;
 		font-weight: 500; 
 	}
