@@ -9,7 +9,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-    	<img src="http://via.placeholder.com/1200x650" class="img-responsive">
+    	<img src="http://via.placeholder.com/1200x650/200/f2f2f2/039240" class="img-responsive">
       <!-- <img src="https://ukumbitv.com/streamtube/images/deco/car-x9fwkuz94596.jpg" alt="..."> -->
       <div class="carousel-caption">
       	<h3>Sweet roll toffee biscuit</h3>
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="item">
-    	<img src="http://via.placeholder.com/1200x650" class="img-responsive">
+    	<img src="http://via.placeholder.com/1200x650/250/ffffff/000000" class="img-responsive">
       <!-- <img src="https://ukumbitv.com/streamtube/images/deco/car-x9fwkuz96701.jpg" alt="..."> -->
       <div class="carousel-caption">
       	<h3>Gummies candy canes</h3>
