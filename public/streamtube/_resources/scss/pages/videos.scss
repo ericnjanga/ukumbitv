@@ -17,13 +17,16 @@
 
 	//[xs]......
 	.main-content {
-		padding-top: 600px;
+		padding-top: 550px;
 	}
 
 	.billboard {
 		position: absolute;
     width: 100%;
     top: 0;
+    .img-responsive {
+    	width: 100%;
+    }
 	}
 	//[xs]......
 }
