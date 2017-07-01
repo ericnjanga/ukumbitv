@@ -23,10 +23,11 @@
 	  		</ul> 
 	  		<ul class="list-inline"> 
 	  			<li>
+	  				{{trans('messages.translate_website_in')}} :
 	  				@if(App::isLocale('fr'))
-				      <a href="{{url('setlocale/en')}}">English</a>
+				      <a class="underlined" href="{{url('setlocale/en')}}">English</a>
 						@else
-				      <a href="{{url('setlocale/fr')}}">Français</a>
+				      <a class="underlined" href="{{url('setlocale/fr')}}">Français</a>
 						@endif
 	  			</li>
 	  		</ul> 
