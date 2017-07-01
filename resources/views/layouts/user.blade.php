@@ -32,6 +32,9 @@
 				        <div class="thumbnail-info1">
 				        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
 				        </div>
+				        <div class="thumbnail-info2">
+				        	Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
+				        </div>
 				      </div>
 				    </div>
 				  </div> 
