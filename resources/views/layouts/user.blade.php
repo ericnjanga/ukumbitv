@@ -28,9 +28,9 @@
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
 				      <div class="caption">  
-								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion1a" role="tablist" aria-multiselectable="true">
 								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="heading3">
+								    <div class="panel-heading" role="tab" id="heading1a">
 
 							        <h3 class="thumbnail-title">Title</h3>
 							        <div class="thumbnail-info1">
@@ -38,12 +38,12 @@
 							        </div>
 
 								      <h4 class="panel-title--">
-								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+								        <a role="button" data-toggle="collapse" data-parent="#accordion1a" href="#collapse1a" aria-expanded="true" aria-controls="collapse1a">
 								          Collapsible Group Item #1
 								        </a>
 								      </h4>
 								    </div>
-								    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+								    <div id="collapse1a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1a">
 								      <div class="panel-body">
 								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
 								      </div>
@@ -59,7 +59,7 @@
 				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
 				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
 				      <div class="caption">  
-								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion2a" role="tablist" aria-multiselectable="true">
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="heading3">
 
@@ -69,12 +69,12 @@
 							        </div>
 
 								      <h4 class="panel-title--">
-								        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+								        <a role="button" data-toggle="collapse" data-parent="#accordion2a" href="#collapse2a" aria-expanded="true" aria-controls="collapse2a">
 								          Collapsible Group Item #1
 								        </a>
 								      </h4>
 								    </div>
-								    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+								    <div id="collapse2a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
 								      <div class="panel-body">
 								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
 								      </div>
