@@ -34,13 +34,13 @@
 								  <div class="panel panel-default">
 								    <div class="panel-heading" role="tab" id="heading1a">
 
-							        <h3 class="thumbnail-title">Title</h3>
+							        <h3 class="thumbnail-title">[Title]</h3>
 							        <div class="thumbnail-info1">
-							        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+							        	<time class="ib">[year]</time>, <div class="ib">[Country]</div>
 							        </div>
 
 											
-							        <a role="button" class="sr-only" data-toggle="collapse" data-parent="#accordion" href="#collapse1a" aria-expanded="true" aria-controls="collapse1a">
+							        <a role="button" class="sr-only" data-toggle="collapse" data-parent="#accordion1a" href="#collapse1a" aria-expanded="true" aria-controls="collapse1a">
 							          {{trans('more_info')}}
 							        </a> 
 								    </div>
@@ -54,6 +54,7 @@
 				      </div><!-- caption -->
 				    </div>
 				  </div> 
+				  {{!--video-thumbnail--}}
 					
 		    	<div class="col-sm-6 col-md-3">
 				    <div class="thumbnail video-thumbnail">
@@ -62,19 +63,19 @@
 				      <div class="caption">  
 								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion2a" role="tablist" aria-multiselectable="true">
 								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="heading3">
+								    <div class="panel-heading" role="tab" id="heading2a">
 
-							        <h3 class="thumbnail-title">Title</h3>
+							        <h3 class="thumbnail-title">[Title]</h3>
 							        <div class="thumbnail-info1">
-							        	<time class="ib">2016</time>, <div class="ib">Cameroon</div>
+							        	<time class="ib">[year]</time>, <div class="ib">[Country]</div>
 							        </div>
 
 											
-							        <a role="button" class="sr-only" data-toggle="collapse" data-parent="#accordion" href="#collapse2a" aria-expanded="true" aria-controls="collapse2a">
+							        <a role="button" class="sr-only" data-toggle="collapse" data-parent="#accordion2a" href="#collapse2a" aria-expanded="true" aria-controls="collapse2a">
 							          {{trans('more_info')}}
-							        </a>  
+							        </a> 
 								    </div>
-								    <div id="collapse2a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+								    <div id="collapse2a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2a">
 								      <div class="panel-body">
 								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
 								      </div>
@@ -84,6 +85,135 @@
 				      </div><!-- caption -->
 				    </div>
 				  </div> 
+				  {{!--video-thumbnail--}}
+
+
+		    	<div class="col-sm-6 col-md-3">
+				    <div class="thumbnail video-thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
+				      <div class="caption">  
+								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion3a" role="tablist" aria-multiselectable="true">
+								  <div class="panel panel-default">
+								    <div class="panel-heading" role="tab" id="heading3a">
+
+							        <h3 class="thumbnail-title">[Title]</h3>
+							        <div class="thumbnail-info1">
+							        	<time class="ib">[year]</time>, <div class="ib">[Country]</div>
+							        </div>
+
+											
+							        <a role="button" class="sr-only" data-toggle="collapse" data-parent="#accordion3a" href="#collapse3a" aria-expanded="true" aria-controls="collapse3a">
+							          {{trans('more_info')}}
+							        </a> 
+								    </div>
+								    <div id="collapse3a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3a">
+								      <div class="panel-body">
+								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
+								      </div>
+								    </div>
+								  </div> 
+								</div><!-- panel-group --> 
+				      </div><!-- caption -->
+				    </div>
+				  </div> 
+				  {{!--video-thumbnail--}}
+
+
+		    	<div class="col-sm-6 col-md-3">
+				    <div class="thumbnail video-thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
+				      <div class="caption">  
+								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion4a" role="tablist" aria-multiselectable="true">
+								  <div class="panel panel-default">
+								    <div class="panel-heading" role="tab" id="heading4a">
+
+							        <h3 class="thumbnail-title">[Title]</h3>
+							        <div class="thumbnail-info1">
+							        	<time class="ib">[year]</time>, <div class="ib">[Country]</div>
+							        </div>
+
+											
+							        <a role="button" class="sr-only" data-toggle="collapse" data-parent="#accordion4a" href="#collapse4a" aria-expanded="true" aria-controls="collapse4a">
+							          {{trans('more_info')}}
+							        </a> 
+								    </div>
+								    <div id="collapse4a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4a">
+								      <div class="panel-body">
+								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
+								      </div>
+								    </div>
+								  </div> 
+								</div><!-- panel-group --> 
+				      </div><!-- caption -->
+				    </div>
+				  </div> 
+				  {{!--video-thumbnail--}}
+
+
+		    	<div class="col-sm-6 col-md-3">
+				    <div class="thumbnail video-thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
+				      <div class="caption">  
+								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion5a" role="tablist" aria-multiselectable="true">
+								  <div class="panel panel-default">
+								    <div class="panel-heading" role="tab" id="heading5a">
+
+							        <h3 class="thumbnail-title">[Title]</h3>
+							        <div class="thumbnail-info1">
+							        	<time class="ib">[year]</time>, <div class="ib">[Country]</div>
+							        </div>
+
+											
+							        <a role="button" class="sr-only" data-toggle="collapse" data-parent="#accordion5a" href="#collapse5a" aria-expanded="true" aria-controls="collapse5a">
+							          {{trans('more_info')}}
+							        </a> 
+								    </div>
+								    <div id="collapse5a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5a">
+								      <div class="panel-body">
+								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
+								      </div>
+								    </div>
+								  </div> 
+								</div><!-- panel-group --> 
+				      </div><!-- caption -->
+				    </div>
+				  </div> 
+				  {{!--video-thumbnail--}}
+
+
+		    	<div class="col-sm-6 col-md-3">
+				    <div class="thumbnail video-thumbnail">
+				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
+				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
+				      <div class="caption">  
+								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion6a" role="tablist" aria-multiselectable="true">
+								  <div class="panel panel-default">
+								    <div class="panel-heading" role="tab" id="heading6a">
+
+							        <h3 class="thumbnail-title">[Title]</h3>
+							        <div class="thumbnail-info1">
+							        	<time class="ib">[year]</time>, <div class="ib">[Country]</div>
+							        </div>
+
+											
+							        <a role="button" class="sr-only" data-toggle="collapse" data-parent="#accordion6a" href="#collapse6a" aria-expanded="true" aria-controls="collapse6a">
+							          {{trans('more_info')}}
+							        </a> 
+								    </div>
+								    <div id="collapse6a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6a">
+								      <div class="panel-body">
+								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
+								      </div>
+								    </div>
+								  </div> 
+								</div><!-- panel-group --> 
+				      </div><!-- caption -->
+				    </div>
+				  </div> 
+				  {{!--video-thumbnail--}}
 
  
  
