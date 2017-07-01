@@ -670,4 +670,8 @@ return array(
   'jobs' => 'Jobs',
   'Movies' => 'Movies',
   'TvShows' => 'Tv Shows',
+  'translate_website_in' => 'Translate website in',
+
+
+
 );

@@ -21,6 +21,22 @@
 	  				{{trans('messages.question_contactus')}}: <a href="mailto:info@ukumbitv.com" class="underlined">info@ukumbitv.com</a>
 	  			</li>
 	  		</ul> 
+	  		<ul class="list-inline"> 
+	  			<li>
+	  				@if(App::isLocale('fr'))
+				      <a href="{{url('setlocale/en')}}">English</a>
+						@else
+				      <a href="{{url('setlocale/fr')}}">Français</a>
+						@endif
+	  			</li>
+	  		</ul> 
+
+
+
+	  		
+
+
+
 	  	</div>
 
 	  	<div class="col-md-12 text-center">

@@ -670,4 +670,5 @@ return array(
   'jobs' => 'Emplois',
   'Movies' => 'Films',
   'TvShows' => 'Séries Télé',
+  'translate_website_in' => 'Traduire le site web en',
 );
