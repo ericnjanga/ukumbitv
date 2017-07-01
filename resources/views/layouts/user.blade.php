@@ -54,7 +54,7 @@
 				      </div><!-- caption -->
 				    </div>
 				  </div> 
-				  {{!--video-thumbnail--}}
+				  {{--video-thumbnail--}}
 					
 		    	<div class="col-sm-6 col-md-3">
 				    <div class="thumbnail video-thumbnail">
@@ -85,7 +85,7 @@
 				      </div><!-- caption -->
 				    </div>
 				  </div> 
-				  {{!--video-thumbnail--}}
+				  {{--video-thumbnail--}}
 
 
 		    	<div class="col-sm-6 col-md-3">
@@ -117,7 +117,7 @@
 				      </div><!-- caption -->
 				    </div>
 				  </div> 
-				  {{!--video-thumbnail--}}
+				  {{--video-thumbnail--}}
 
 
 		    	<div class="col-sm-6 col-md-3">
@@ -149,7 +149,7 @@
 				      </div><!-- caption -->
 				    </div>
 				  </div> 
-				  {{!--video-thumbnail--}}
+				  {{--video-thumbnail--}}
 
 
 		    	<div class="col-sm-6 col-md-3">
@@ -181,7 +181,7 @@
 				      </div><!-- caption -->
 				    </div>
 				  </div> 
-				  {{!--video-thumbnail--}}
+				  {{--video-thumbnail--}}
 
 
 		    	<div class="col-sm-6 col-md-3">
@@ -213,7 +213,7 @@
 				      </div><!-- caption -->
 				    </div>
 				  </div> 
-				  {{!--video-thumbnail--}}
+				  {{--video-thumbnail--}}
 
  
  
