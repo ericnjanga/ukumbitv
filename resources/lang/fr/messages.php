@@ -667,5 +667,7 @@ return array(
 
   'login_form_title' 	=> 'S\'identifier',
  
-  'jobs' => 'Emplois'
+  'jobs' => 'Emplois',
+  'Movies' => 'Films',
+  'TvShows' => 'Séries Télé',
 );

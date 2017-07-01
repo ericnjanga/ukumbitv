@@ -59,16 +59,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="{{route('user.profile')}}">{{tr('account')}}</a></li> 
-            <li role="separator" class="divider"></li>
-            <li><a href="{{route('user.logout')}}">{{tr('logout')}}</a></li>
-          </ul>
+        <li class="active">
+        	<a href="#">
+        		{{trans('Movies')}}
+        		<span class="sr-only">(current)</span></a>
         </li>
+        <li><a href="#">{{trans('TvShows')}}</a></li> 
       </ul>
       
       <ul class="nav navbar-nav navbar-right"> 

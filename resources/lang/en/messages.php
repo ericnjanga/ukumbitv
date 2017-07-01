@@ -667,5 +667,7 @@ return array(
  
   'login_form_title' => 'Login',
  
-  'jobs' => 'Jobs'
+  'jobs' => 'Jobs',
+  'Movies' => 'Movies',
+  'TvShows' => 'Tv Shows',
 );
