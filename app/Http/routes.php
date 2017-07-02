@@ -294,6 +294,17 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::get('/video/decline/{id}', 'AdminController@decline_video')->name('admin.video.decline');
 
+
+    //MOVIE
+
+
+
+    Route::get('/add/movie', 'AdminController@add_movie')->name('admin.add.movie');
+    Route::post('/add/movie', 'AdminController@add_movie_process')->name('admin.save.movie');
+
+    Route::post('movie-upload-image', ['as' => 'movie-upload-images', 'uses' =>'AdminController@postUpload']);
+    Route::post('add/movie-upload-image/delete', ['as' => 'movie-upload-remove', 'uses' =>'AdminController@deleteUpload']);
+
     // Slider Videos
 
     Route::get('/slider/video/{id}', 'AdminController@slider_video')->name('admin.slider.video');

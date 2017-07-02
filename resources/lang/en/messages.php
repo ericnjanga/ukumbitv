@@ -516,6 +516,11 @@ return array(
 	'select_sub_category' => 'Select Sub Category',
 	'select_genre' => 'Select Genre',
 	'publish' => 'Publish',
+
+    //movies
+    'movies' => 'Movies',
+    'add_movie' => 'Add movie',
+    'view_movies'	=>	'All Movies',
 	
 	'ratings' => 'Ratings',
 	'reviews' => 'Reviews',

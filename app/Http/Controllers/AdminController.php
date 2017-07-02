@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Actor;
+use App\Director;
 use Illuminate\Http\Request;
 
 use App\Requests;
@@ -46,6 +48,8 @@ use App\Helpers\EnvEditorHelper;
 
 use App\Flag;
 
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
 use Validator;
 
 use Hash;
@@ -1164,6 +1168,59 @@ class AdminController extends Controller
                 ->with('page' ,'videos')
                 ->with('sub_page' ,'add-video');
 
+    }
+
+    public function add_movie()
+    {
+        $categories = Category::where('categories.is_approved' , 1)
+            ->select('categories.id as id' , 'categories.name' , 'categories.picture' ,
+                'categories.is_series' ,'categories.status' , 'categories.is_approved')
+            ->leftJoin('sub_categories' , 'categories.id' , '=' , 'sub_categories.category_id')
+            ->groupBy('sub_categories.category_id')
+            ->havingRaw("COUNT(sub_categories.id) > 0")
+            ->orderBy('categories.name' , 'asc')
+            ->get();
+
+        $actors = Actor::all();
+        $directors = Director::all();
+
+        return view('admin.videos.movie_upload')
+            ->with('categories', $categories)
+            ->with('actors', $actors)
+            ->with('directors', $directors)
+            ->with('page', 'videos');
+    }
+
+    public function add_movie_process(Request $request)
+    {
+
+    }
+
+    public function postUpload(Request $request)
+    {
+
+        $image = $request->file('file');
+        $imageName = time().$image->getClientOriginalName();
+        $image->move(public_path('images'),$imageName);
+        return response()->json(['success'=>$imageName]);
+
+    }
+
+    public function deleteUpload(Request $request)
+    {
+
+        $filename = $request->id;
+
+        if(!$filename)
+        {
+            return 0;
+        }
+
+        File::delete($filename);
+
+
+
+        return response()->json(['success' => $request->id]);
     }
 
     public function edit_video(Request $request) {
