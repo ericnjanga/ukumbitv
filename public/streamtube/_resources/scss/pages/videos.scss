@@ -13,6 +13,26 @@
 	//.carousel,
 	.video-container {
 		margin-bottom: 50px;
+	
+		// for small screens ...
+		@media (max-width: 767px) {
+			.row {
+				margin-right: 0;
+    		margin-left: 0;
+			}
+			.col {
+		    padding-left: 2px;
+		    padding-right: 2px;
+			}
+			.video-thumbnail {
+				.caption {
+					display: none;
+				}
+			}
+			.img-responsive {
+				border-radius: 4px;
+			}
+		}
 	}
 
 	//[xs]......
