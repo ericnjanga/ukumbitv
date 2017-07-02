@@ -201,6 +201,8 @@ var Grid = (function() {
 		// the settings..
 		settings = $.extend( true, {}, settings, config );
 
+
+		console.log('>>>>$grid.imagesLoaded', $grid.imagesLoaded);
 		// preload all images
 		$grid.imagesLoaded( function() {
 
