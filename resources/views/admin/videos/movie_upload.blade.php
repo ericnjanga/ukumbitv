@@ -144,7 +144,7 @@
 
                                         <label for="actor" class="">Select actors *</label>
 
-                                        <select required id="actor" name="actor_id" class="form-control">
+                                        <select multiple required id="actor" name="actor_id" class="form-control">
                                             @foreach($actors as $actor)
                                                 <option value="{{$actor->id}}">{{$actor->name}}</option>
                                             @endforeach
