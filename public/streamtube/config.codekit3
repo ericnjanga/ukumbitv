@@ -681,6 +681,24 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/grid-system\/grid.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/grid-system\/grid-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/grid-system\/modernizr.custom.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/grid-system\/modernizr.custom-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/vendors\/bootstrap.min.js": {
 		"ft": 64,
 		"mi": 1,
@@ -713,15 +731,6 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/js\/vendors\/jquery.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/js\/vendors\/modernizr-custom.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/vendors\/modernizr-custom-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0

@@ -233,7 +233,11 @@
     @include('layouts.user.footer')
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-	    <script src="{{asset('streamtube/js/app.videos-landing.js')}}"></script>
+
+  	<!-- grid system -->
+	  <script src="{{asset('streamtube/js/grid-system/grid.js')}}"></script>
+  	<!-- Video Page extra script -->
+	  <!-- <script src="{{asset('streamtube/js/app.videos-landing.js')}}"></script> -->
     @yield('scripts') 
 	</body>
 </html>
