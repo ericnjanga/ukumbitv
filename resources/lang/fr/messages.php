@@ -666,4 +666,9 @@ return array(
 	'email_settings' => 'Email Settings',
 
   'login_form_title' 	=> 'S\'identifier',
+ 
+  'jobs' => 'Emplois',
+  'Movies' => 'Films',
+  'TvShows' => 'Séries Télé',
+  'translate_website_in' => 'Traduire le site web en',
 );

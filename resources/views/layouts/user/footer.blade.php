@@ -12,12 +12,32 @@
 	  			<li>
 	  				<a href="{{url('/privacy-statement')}}" class="underlined">{{trans('messages.privacy_statement')}}</a>
 	  			</li> 
+	  			<li>
+	  				<a href="{{url('/jobs')}}" class="underlined">{{trans('messages.jobs')}}</a>
+	  			</li> 
 	  		</ul>
 	  		<ul class="list-inline"> 
 	  			<li>
 	  				{{trans('messages.question_contactus')}}: <a href="mailto:info@ukumbitv.com" class="underlined">info@ukumbitv.com</a>
 	  			</li>
-	  		</ul>
+	  		</ul> 
+	  		<ul class="list-inline"> 
+	  			<li>
+	  				{{trans('messages.translate_website_in')}} :
+	  				@if(App::isLocale('fr'))
+				      <a class="underlined" href="{{url('setlocale/en')}}">English</a>
+						@else
+				      <a class="underlined" href="{{url('setlocale/fr')}}">Français</a>
+						@endif
+	  			</li>
+	  		</ul> 
+
+
+
+	  		
+
+
+
 	  	</div>
 
 	  	<div class="col-md-12 text-center">

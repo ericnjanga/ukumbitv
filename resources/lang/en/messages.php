@@ -670,5 +670,13 @@ return array(
 
 	'email_settings' => 'Email Settings',
  
-  'login_form_title' => 'Login'
+  'login_form_title' => 'Login',
+ 
+  'jobs' => 'Jobs',
+  'Movies' => 'Movies',
+  'TvShows' => 'Tv Shows',
+  'translate_website_in' => 'Translate website in',
+
+
+
 );

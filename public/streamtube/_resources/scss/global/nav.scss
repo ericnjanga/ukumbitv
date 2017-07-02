@@ -2,11 +2,104 @@
 
 
 
-.main-nav {
-	display: flex;
-  align-items: center;
-	// background: lime;
-	height: 100px;
+.main-nav { 
+	border-width: 0;
+	z-index: 99;
+	border-radius: 0;
+
+	.search-control {
+		height: 40px;
+		border-radius: 100px!important;
+	}
+	
+	// for small screens ...
+	@media (max-width: 767px) {
+		background-color: #444;
+		.navbar-header {
+			display: flex;
+			align-items: center;
+		}
+		 
+		.navbar-nav>.active>a {
+			background: #222;
+			color: $color-primary!important;
+		}
+		.navbar-nav>li>a { 
+		    color: #ccc;
+		}
+		.navbar-collapse {
+			border-color: #222!important;
+		}
+
+		form .form-group {
+			padding-left: 15px;
+    	padding-right: 15px;
+		}
+			
+		 
+		$img-brand-height: 20px;
+		.navbar-brand {
+			padding: 0; 
+	    margin-right: auto;
+	    height: $img-brand-height; 
+	    margin-left: 15px;
+		}
+		.img-brand {
+			width: 101px;
+			height: $img-brand-height;
+		}
+		.navbar-toggle {
+			margin-left: auto;
+		}
+	}
+	
+	// for medium and large screens ...
+	@media (min-width: 768px) {
+		.container-fluid {
+			display: flex;
+    	align-items: center;
+    	.navbar-brand {
+    		height: inherit;
+    	}
+    	.navbar-collapse{
+    		display: flex!important;
+		    align-items: center;
+		    height: 100px!important;
+		    flex: 1;
+    	}
+    	.navbar-right {
+    		margin-left: auto;
+    	}
+    	.navbar-form {
+    		margin: 0;
+    	}
+    	.dropdown-toggle {
+    		padding-top: 0;
+    		padding-bottom: 0;
+    	}
+		}
+		.navbar-nav>li>a {
+			color: #ccc;
+			padding-top: 10px;
+    	padding-bottom: 10px;
+		}
+
+		.navbar-nav>.active>a { 
+	    background-color: $color-primary!important;
+	    color: #fff;
+	    border-radius: 50px;
+		}
+
+		//background .....
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+3,000000+69,000000+100&1+3,0.41+69,0.2+100 */
+		background: -moz-linear-gradient(top,  rgba(0,0,0,1) 3%, rgba(0,0,0,0.41) 69%, rgba(0,0,0,0.2) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 3%,rgba(0,0,0,0.41) 69%,rgba(0,0,0,0.2) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(0,0,0,1) 3%,rgba(0,0,0,0.41) 69%,rgba(0,0,0,0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#33000000',GradientType=0 ); /* IE6-9 */
+
+	}//..........
+
+
 }
 
 .main-nav__additional-links{
