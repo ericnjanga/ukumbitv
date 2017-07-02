@@ -138,6 +138,7 @@ Route::get('/privacy-statement', 'ApplicationController@privacy')->name('user.pr
 Route::get('/terms-of-use', 'ApplicationController@terms')->name('user.terms-condition');
 
 Route::get('/about-us', 'ApplicationController@about')->name('user.about');
+Route::get('/jobs', 'ApplicationController@jobs')->name('user.jobs');
 
 // Video upload 
 
@@ -304,6 +305,7 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::post('movie-upload-image', ['as' => 'movie-upload-images', 'uses' =>'AdminController@postUpload']);
     Route::post('add/movie-upload-image/delete', ['as' => 'movie-upload-remove', 'uses' =>'AdminController@deleteUpload']);
+    Route::post('add/create-movie', ['as' => 'create-movie', 'uses' =>'AdminController@createMovie']);
 
     // Slider Videos
 

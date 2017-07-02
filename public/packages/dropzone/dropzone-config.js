@@ -1,4 +1,5 @@
 var photo_counter = 0;
+var dropImages = [];
 Dropzone.options.realDropzone = {
 
     uploadMultiple: false,
@@ -13,16 +14,25 @@ Dropzone.options.realDropzone = {
     // The setting up of the dropzone
     init:function() {
 
+        this.on("success", function(file, responseText) {
+             // or however you would point to your assigned file ID here;
+            file.newName = responseText.success;
+            dropImages.push(responseText.success);
+            //console.log(file.newName);
+            //console.log(responseText.success); // console should show the ID you pointed to
+            // do stuff with file.id ...
+        });
+
         this.on("removedfile", function(file) {
 
             $.ajax({
                 type: 'POST',
                 url: 'movie-upload-image/delete',
-                data: {id: file.name, _token: $('#csrf-token').val()},
+                data: {id: file.newName, _token: $('#csrf-token').val()},
                 dataType: 'html',
                 success: function(data){
                     var rep = JSON.parse(data);
-                    console.log(rep);
+                    //console.log(rep);
                     if(rep.code == 200)
                     {
                         photo_counter--;

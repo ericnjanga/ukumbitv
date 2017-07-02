@@ -1209,7 +1209,7 @@ class AdminController extends Controller
     public function deleteUpload(Request $request)
     {
 
-        $filename = $request->id;
+        $filename = public_path('images').'/'.$request->id;
 
         if(!$filename)
         {
@@ -1220,7 +1220,61 @@ class AdminController extends Controller
 
 
 
-        return response()->json(['success' => $request->id]);
+        return response()->json(['success' => $request->id, 'path' => $filename]);
+    }
+
+    public function createMovie(Request $request)
+    {
+        $image = $request->file('file');
+        $imageName = time().$image->getClientOriginalName();
+        $image->move(public_path('images'),$imageName);
+
+        $video = $request->file('video');
+        $videoName = time().$video->getClientOriginalName();
+        $video->move(public_path('movies'), $videoName);
+
+        $adminVideo = new AdminVideo();
+        $adminVideo->title = $request->title;
+        $adminVideo->description = $request->description;
+        $adminVideo->category_id = $request->category;
+        $adminVideo->sub_category_id = 1;
+        $adminVideo->genre_id = 0;
+        $adminVideo->video = 'https://ukumbitv.com/movies/'.$videoName;
+        $adminVideo->trailer_video = 'trailer url';
+        $adminVideo->default_image = 'https://ukumbitv.com/images/'.$imageName;
+        $adminVideo->banner_image = '';
+        $adminVideo->ratings = 5;
+        $adminVideo->reviews = $request->reviews;
+        $adminVideo->status = 1;
+        $adminVideo->is_approved = 1;
+        $adminVideo->is_home_slider = 0;
+        $adminVideo->is_banner = 0;
+        $adminVideo->uploaded_by = 'admin';
+        $adminVideo->publish_time = '2017-06-05 10:45:00';
+        $adminVideo->duration = $request->duration;
+        $adminVideo->trailer_duration = '00:00:00';
+        $adminVideo->edited_by = 'admin';
+        $adminVideo->watch_count = 1;
+        $adminVideo->video_type = 1;
+        $adminVideo->video_upload_type = 2;
+
+        $adminVideo->save();
+
+        $images = explode(';', $request->images);
+
+        foreach ($images as $image) {
+            $adminVideoImages = new AdminVideoImage();
+            $adminVideoImages->admin_video_id = $adminVideo->id;
+            $adminVideoImages->image = 'https://ukumbitv.com/images/'.$image;
+            $adminVideoImages->is_default = 0;
+            $adminVideoImages->position = 2;
+            $adminVideoImages->save();
+        }
+
+
+
+
+        return response()->json($adminVideo);
     }
 
     public function edit_video(Request $request) {

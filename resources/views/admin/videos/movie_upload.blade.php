@@ -50,15 +50,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label for="datepicker" class="">{{tr('publish_time')}} * </label>
-
-                                            <input type="text" name="publish_time" placeholder="Select the Publish Time i.e YYYY-MM-DD" class="form-control pull-right" id="datepicker">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
 
@@ -111,7 +103,7 @@
 
                                                 <label for="category" class="">Select category *</label>
 
-                                                <select id="category" name="category_id" class="form-control">
+                                                <select required id="category" name="category_id" class="form-control">
                                                     @foreach($categories as $category)
                                                     <option value="{{$category->id}}">{{$category->name}}</option>
                                                     @endforeach
@@ -124,7 +116,7 @@
 
                                         <label for="year" class="">Select year *</label>
 
-                                        <select id="year" name="year_id" class="form-control">
+                                        <select required id="year" name="year_id" class="form-control">
                                             @for ($i = 2017; $i > 1900; $i--)
                                                 <option value="{{$i}}">{{$i}}</option>
                                             @endfor
@@ -138,7 +130,7 @@
 
                                         <label for="director" class="">Select directors *</label>
 
-                                        <select id="director" name="director_id" class="form-control">
+                                        <select required id="director" name="director_id" class="form-control">
                                             @foreach($directors as $director)
                                                 <option value="{{$director->id}}">{{$director->name}}</option>
                                             @endforeach
@@ -152,7 +144,7 @@
 
                                         <label for="actor" class="">Select actors *</label>
 
-                                        <select id="actor" name="actor_id" class="form-control">
+                                        <select required id="actor" name="actor_id" class="form-control">
                                             @foreach($actors as $actor)
                                                 <option value="{{$actor->id}}">{{$actor->name}}</option>
                                             @endforeach
@@ -163,44 +155,16 @@
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="form-group">
-                                        <label for="default_image" class="">{{tr('default_image')}} *</label>
-                                        <input type="file" id="default_image" accept="image/png,image/jpeg" name="default_image" placeholder="{{tr('default_image')}}" style="display:none" onchange="loadFile(this,'default_img')" required>
-                                        <div>
-                                            <img src="{{asset('images/320x150.png')}}" style="width:150px;height:75px;"
-                                                 onclick="$('#default_image').click();return false;" id="default_img"/>
-                                        </div>
-                                        <p class="help-block">{{tr('image_validate')}} {{tr('rectangle_image')}}</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="other_image1" class="">{{tr('other_image1')}} * </label>
-                                        <input type="file" id="other_image1" accept="image/png,image/jpeg" name="other_image1" placeholder="{{tr('other_image1')}}" style="display:none" onchange="loadFile(this,'other_img1')" required>
-                                        <div>
-                                            <img src="{{asset('images/320x150.png')}}" style="width:150px;height:75px;"
-                                                 onclick="$('#other_image1').click();return false;" id="other_img1"/>
-                                        </div>
-                                        <p class="help-block">{{tr('image_validate')}} {{tr('rectangle_image')}}</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="other_image2" class="">{{tr('other_image2')}} *</label>
-                                        <input type="file" id="other_image2" accept="image/png,image/jpeg" name="other_image2" placeholder="{{tr('other_image2')}}" style="display:none" onchange="loadFile(this,'other_img2')" required>
-                                        <div>
-                                            <img src="{{asset('images/320x150.png')}}" style="width:150px;height:75px;"
-                                                 onclick="$('#other_image2').click();return false;" id="other_img2"/>
-                                        </div>
-                                        <p class="help-block">{{tr('image_validate')}} {{tr('rectangle_image')}}</p>
+                                        <label for="default_image" class="">Default image *</label>
+                                        <input required type="file" id="default_image" name="default_image">
+                                        <p class="help-block">{{tr('image_validate')}}</p>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="form-group">
                                         <label for="video" class="">{{tr('video')}}</label>
-                                        <input type="file" id="video" accept="video/mp4" name="video" placeholder="{{tr('picture')}}">
+                                        <input required type="file" id="video" accept="video/mp4" name="video" placeholder="{{tr('picture')}}">
                                         <p class="help-block">{{tr('video_validate')}}</p>
                                     </div>
                                 </div>
@@ -210,12 +174,13 @@
 
                             <div class="clearfix"></div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-info-full">Finish</button>
                     </form>
+
                 </div>
             </section>
         </div>
     </div>
+
 
     <div class="row">
         <div class="col-md-offset-1 col-md-10">
@@ -292,6 +257,7 @@
 
         </div>
     </div>
+    <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="createMovie()">Finish</button>
     <!-- End Dropzone Preview Template -->
 
 
@@ -316,6 +282,41 @@
 
 
     <script type="text/javascript">
+        function createMovie() {
+            var defImg= $('#default_image');
+            var video = $('#video');
+            var fd = new FormData;
+
+            fd.append('file', defImg.prop('files')[0]);
+            fd.append('video', video.prop('files')[0]);
+            fd.append('_token', $('#csrf-token').val());
+            fd.append('title', $('#title').val());
+            fd.append('duration', $('#duration').val());
+            fd.append('description', $('#description').val());
+            fd.append('reviews', $('#reviews').val());
+            fd.append('category', $('#category').val());
+            fd.append('year', $('#year').val());
+            fd.append('director', $('#director').val());
+            fd.append('actor', $('#actor').val());
+
+            fd.append('images', dropImages.join(';'));
+
+
+            $.ajax({
+                type: 'POST',
+                url: 'create-movie',
+                contentType: false,
+                processData: false,
+                data: fd,
+                dataType: 'html',
+                success: function(data){
+                    var rep = JSON.parse(data);
+                    console.log(rep);
+                    alert('Movie successful created!');
+                }
+            });
+        }
+
 
         var cat_url = "{{ url('select/sub_category')}}";
         var step3 = "{{REQUEST_STEP_3}}";
