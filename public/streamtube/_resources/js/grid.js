@@ -202,9 +202,9 @@ var Grid = (function() {
 		settings = $.extend( true, {}, settings, config );
 
 
-		console.log('>>>>$grid.imagesLoaded', $grid.imagesLoaded);
 		// preload all images
 		$grid.imagesLoaded( function() {
+		console.log('>>>>$grid.imagesLoaded----');
 
 			// save item´s size and offset
 			saveItemInfo( true );
@@ -253,6 +253,8 @@ var Grid = (function() {
 		// close the item if already expanded.
 		// also close if clicking on the item´s cross
 		initItemsEvents( $items );
+
+		console.log('>>>>$items=', $items);
 		
 		// on window resize get the window´s size again
 		// reset some values..
