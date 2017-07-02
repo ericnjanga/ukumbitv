@@ -1,1 +1,1 @@
-"use strict";$(function(){console.log(">>>>>",$(".page-videos").length),console.log(">>>>>Grid=",Grid),$(".page-videos").length>0&&Grid.init()});
+"use strict";$(function(){$(".page-videos").length>0&&Grid.init()});

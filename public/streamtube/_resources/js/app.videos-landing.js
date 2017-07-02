@@ -1,12 +1,10 @@
 'use strict';
 
-//Grid system script prepended here
-//...
+
 
 //Initiate the grid system (only on the video page)
-$(function() {
-	console.log('>>>>>', $('.page-videos').length);
-	console.log('>>>>>Grid=', Grid);
+//(Depends on 'grid.js')
+$(function() { 
 	if($('.page-videos').length > 0){
 		Grid.init();
 	}
