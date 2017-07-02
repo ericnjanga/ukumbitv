@@ -10,7 +10,7 @@
 	    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 	    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/app.css')}}"> 
 	    <link rel="shortcut icon" type="image/png" href="{{asset('streamtube/images/logo2-fav.png')}}"/>
-	    <script src="{{asset('streamtube/js/vendors/modernizr.custom.js')}}"></script>
+	    <script src="{{asset('streamtube/js/vendors/modernizr-custom.js')}}"></script>
 	    <!--  
 	    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/style.css')}}">
 	    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/responsive.css')}}"> --> 

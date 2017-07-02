@@ -717,11 +717,11 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/vendors\/modernizr.custom.js": {
+	"\/js\/vendors\/modernizr-custom.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/vendors\/modernizr.custom-min.js",
+		"oAP": "\/js\/vendors\/modernizr-custom-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
