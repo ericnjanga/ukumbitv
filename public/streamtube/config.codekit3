@@ -27,6 +27,15 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/_resources\/js\/grid.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/_resources\/js\/grid-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/_resources\/scss\/app.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -694,24 +703,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/grid-system\/grid.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/grid-system\/grid-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/js\/grid-system\/modernizr.custom.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/grid-system\/modernizr.custom-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"\/js\/vendors\/bootstrap.min.js": {
 		"ft": 64,
 		"mi": 1,
@@ -806,6 +797,14 @@
 "hooks": [
 	],
 "manualImportLinks": {
+	"\/_resources\/js\/app.videos-landing.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/_resources\/js\/grid.js",
+			"position": 0,
+			"type": 0
+			}
+		]
 	},
 "projectAttributes": {
 	"creationDate": 519915997,
