@@ -23,15 +23,7 @@
 			.col {
 		    padding-left: 2px;
 		    padding-right: 2px;
-			}
-			.video-thumbnail {
-				.caption {
-					display: none;
-				}
-			}
-			.img-responsive {
-				border-radius: 4px;
-			}
+			} 
 		}
 	}
 
@@ -71,8 +63,7 @@
     padding-right: 10px;
 	}
 	.img-responsive {
-		border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+		border-radius: 4px;
 	}
 	.video-thumbnail-accordion{
 		border-bottom-left-radius: 4px;
@@ -85,6 +76,7 @@
 		background-color: #292734;
 		border-width: 0px;
 		.caption{
+			display: none;
 			position: relative;
 			padding: 20px;
 			min-height: 100px;
