@@ -1,1 +1,1 @@
-"use strict";jQuery;
+"use strict";$(function(){$(".page-videos").length>0&&Grid.init()});

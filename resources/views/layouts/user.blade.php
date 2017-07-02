@@ -10,7 +10,7 @@
 	    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 	    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/app.css')}}"> 
 	    <link rel="shortcut icon" type="image/png" href="{{asset('streamtube/images/logo2-fav.png')}}"/>
-	    <script src="{{asset('streamtube/js/vendors/modernizr.custom.js')}}"></script>
+	    <script src="{{asset('streamtube/js/vendors/modernizr-custom.js')}}"></script>
 	    <!--  
 	    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/style.css')}}">
 	    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/responsive.css')}}"> --> 
@@ -22,6 +22,222 @@
 
     <div class="main-content video-content">
     	@include('layouts.user.latest-uploads.hero-carousel')
+
+    	<div class="container">
+    		
+			<div class="main">
+				<ul id="og-grid" class="og-grid">
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
+						</a>
+					</li>
+					<li>
+						<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+						</a>
+					</li>
+				</ul>
+				<p>Filler text by <a href="http://veggieipsum.com/">Veggie Ipsum</a></p>
+				<a id="og-additems" href="#">add more</a>
+			</div>
+    	</div>
+
+
+
+
+
+
 
 			<div class="container video-container">
 				<div class="row">
@@ -214,12 +430,6 @@
 				    </div>
 				  </div> 
 				  {{--video-thumbnail--}}
-
- 
- 
-
-
-
 				</div><!--row-->
 			</div><!--container-->
 			
@@ -231,9 +441,20 @@
     </div>
 
     @include('layouts.user.footer')
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-	    <script src="{{asset('streamtube/js/app.videos-landing.js')}}"></script>
+ 		
+ 		<!--<script src="{{asset('streamtube/_resources/js/grid.js')}}"></script>-->
+ 		<script src="{{asset('streamtube/js/grid.js')}}"></script>
+ 		<script src="{{asset('streamtube/js/app.videos-landing.js')}}"></script>
+
+		<!--<script>
+			$(function() {
+				Grid.init();
+			});
+		</script>-->
+  	<!-- Video Page script -->
+	  <!--<script src="{{asset('streamtube/js/app.videos-landing.js')}}"></script>-->
     @yield('scripts') 
 	</body>
 </html>

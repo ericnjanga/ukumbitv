@@ -1,12 +1,11 @@
 'use strict';
 
-(function($){
 
-	// //some code
-	// $('body').on('mouseenter', '.video-thumbnail', function(){
-	// 	$(this).find('a[data-toggle="collapse"]').trigger('click'); 
-	// }).on('mouseleave', '.video-thumbnail', function(){
-	// 	$(this).find('a[data-toggle="collapse"]').trigger('click'); 
-	// });
 
-})(jQuery);
+//Initiate the grid system (only on the video page)
+//(Depends on 'grid.js')
+$(function() { 
+	if($('.page-videos').length > 0){
+		Grid.init();
+	}
+});
