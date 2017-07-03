@@ -349,7 +349,7 @@ var Grid = (function() {
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading )
 			//append also 'play icon'
-			.append('<div class="og-playicon-frame"><i class="fa fa-play" aria-hidden="true"></i></div>');
+			.append('<a href="" class="og-playicon-frame"><i class="fa fa-play" aria-hidden="true"></i></a>');
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
