@@ -349,7 +349,7 @@ var Grid = (function() {
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading )
 			//append also 'play icon'
-			.append('<a href="" class="og-playicon-frame"><i class="fa fa-play" aria-hidden="true"></i></a>');
+			.append('<a href="" class="og-btn-play"><i class="fa fa-play" aria-hidden="true"></i></a>');
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
@@ -377,6 +377,9 @@ var Grid = (function() {
 
 			// update current value
 			current = this.$item.index();
+
+			//Upade play button href
+			this.$item.find('.og-btn-play').attr('href',$itemEl.attr( 'href' ));
 
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),

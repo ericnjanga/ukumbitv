@@ -51,24 +51,34 @@ $color-expender : #999;
 	left: 50%;
 	margin: -20px 0 0 -15px;
 }
-.og-playicon-frame{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
-    /* padding: 30px; */
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    border: 5px solid #fff;
-    /* font-size: 20px; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   .fa{
-   	    font-size: 40px;
-   }
+.og-btn-play{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  /* padding: 30px; */
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 5px solid #fff;
+  /* font-size: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 	.fa{
+ 	  font-size: 40px;
+ 	  color: #fff;
+ 	}
+}
+
+.og-btn-play{
+	&:hover{
+		transform: scale(1.4,1.4);
+		.fa{
+			color: $color-primary;
+		}
+	}
 }
 
 .og-title {
