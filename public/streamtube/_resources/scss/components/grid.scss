@@ -37,6 +37,7 @@
 	// height: inherit;
 }
 
+$color-expender : #777;
 .og-grid li.og-expanded > a::after {
 	top: auto;
 	border: solid transparent;
@@ -45,7 +46,7 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-bottom-color: #ddd;
+	border-bottom-color: $color-expender;
 	border-width: 15px;
 	left: 50%;
 	margin: -20px 0 0 -15px;
@@ -53,7 +54,8 @@
 
 .og-expander {
 	position: absolute;
-	background: #ddd;
+	background: $color-expender;
+	border: 5px solid $color-expender;
 	top: auto;
 	left: 0;
 	width: 100%;
