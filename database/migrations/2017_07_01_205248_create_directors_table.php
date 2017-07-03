@@ -15,7 +15,7 @@ class CreateDirectorsTable extends Migration
         Schema::create('directors', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('image')->default('http://placehold.it/300x200');
+            $table->string('bio')->default('http://placehold.it/300x200');
             $table->timestamps();
         });
     }
