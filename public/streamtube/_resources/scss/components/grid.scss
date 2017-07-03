@@ -113,6 +113,7 @@ $color-expender : #999;
 	top: 20px;
 	right: 20px;
 	cursor: pointer;
+	z-index: 10;
 }
 
 .og-close::before,
@@ -122,7 +123,7 @@ $color-expender : #999;
 	width: 100%;
 	top: 50%;
 	height: 1px;
-	background: #888;
+	background: #fff;
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	transform: rotate(45deg);
@@ -136,7 +137,7 @@ $color-expender : #999;
 
 .og-close:hover::before,
 .og-close:hover::after {
-	background: #333;
+	background: $color-primary;
 }
 
 .og-fullimg,
