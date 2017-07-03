@@ -13,6 +13,10 @@
 	//.carousel,
 	.video-container {
 		margin-bottom: 50px;
+
+		.col{
+			position: initial;
+		}
 	
 		// for small screens ...
 		@media (max-width: 767px) {
