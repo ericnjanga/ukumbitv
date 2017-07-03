@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Actor;
+use App\Director;
 use Illuminate\Http\Request;
 
 use App\Requests;
@@ -46,6 +48,8 @@ use App\Helpers\EnvEditorHelper;
 
 use App\Flag;
 
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
 use Validator;
 
 use Hash;
@@ -1165,6 +1169,174 @@ class AdminController extends Controller
                 ->with('sub_page' ,'add-video');
 
     }
+
+    public function add_movie()
+    {
+        $categories = Category::where('categories.is_approved' , 1)
+            ->select('categories.id as id' , 'categories.name' , 'categories.picture' ,
+                'categories.is_series' ,'categories.status' , 'categories.is_approved')
+            ->leftJoin('sub_categories' , 'categories.id' , '=' , 'sub_categories.category_id')
+            ->groupBy('sub_categories.category_id')
+            ->havingRaw("COUNT(sub_categories.id) > 0")
+            ->orderBy('categories.name' , 'asc')
+            ->get();
+
+        $actors = Actor::all();
+        $directors = Director::all();
+
+        return view('admin.videos.movie_upload')
+            ->with('categories', $categories)
+            ->with('actors', $actors)
+            ->with('directors', $directors)
+            ->with('page', 'videos');
+    }
+
+    public function add_movie_process(Request $request)
+    {
+
+    }
+
+    public function postUpload(Request $request)
+    {
+
+        $image = $request->file('file');
+        $imageName = time().$image->getClientOriginalName();
+        $image->move(public_path('images'),$imageName);
+        return response()->json(['success'=>$imageName]);
+
+    }
+
+    public function deleteUpload(Request $request)
+    {
+
+        $filename = public_path('images').'/'.$request->id;
+
+        if(!$filename)
+        {
+            return 0;
+        }
+
+        File::delete($filename);
+
+
+
+        return response()->json(['success' => $request->id, 'path' => $filename]);
+    }
+
+    public function createMovie(Request $request)
+    {
+        $image = $request->file('file');
+        $imageName = time().$image->getClientOriginalName();
+        $image->move(public_path('images'),$imageName);
+
+        $video = $request->file('video');
+        $videoName = time().$video->getClientOriginalName();
+        $video->move(public_path('movies'), $videoName);
+
+        $adminVideo = new AdminVideo();
+        $adminVideo->title = $request->title;
+        $adminVideo->description = $request->description;
+        $adminVideo->category_id = $request->category;
+        $adminVideo->sub_category_id = 1;
+        $adminVideo->genre_id = 0;
+        $adminVideo->video = 'https://ukumbitv.com/movies/'.$videoName;
+        $adminVideo->trailer_video = 'trailer url';
+        $adminVideo->default_image = 'https://ukumbitv.com/images/'.$imageName;
+        $adminVideo->banner_image = '';
+        $adminVideo->ratings = 5;
+        $adminVideo->reviews = 'review';
+        $adminVideo->status = 1;
+        $adminVideo->is_approved = 1;
+        $adminVideo->is_home_slider = 0;
+        $adminVideo->is_banner = 0;
+        $adminVideo->uploaded_by = 'admin';
+        $adminVideo->publish_time = '2017-06-05 10:45:00';
+        $adminVideo->duration = $request->duration;
+        $adminVideo->trailer_duration = '00:00:00';
+        $adminVideo->edited_by = 'admin';
+        $adminVideo->watch_count = 1;
+        $adminVideo->video_type = 1;
+        $adminVideo->video_upload_type = 2;
+        $adminVideo->actors = $request->actor;
+        $adminVideo->directors = $request->director;
+
+        $adminVideo->save();
+
+        $images = explode(';', $request->images);
+
+        foreach ($images as $image) {
+            $adminVideoImages = new AdminVideoImage();
+            $adminVideoImages->admin_video_id = $adminVideo->id;
+            $adminVideoImages->image = 'https://ukumbitv.com/images/'.$image;
+            $adminVideoImages->is_default = 0;
+            $adminVideoImages->position = 2;
+            $adminVideoImages->save();
+        }
+
+
+
+
+        return response()->json($adminVideo);
+    }
+
+    //Actors
+    public function actors(Request $request) {
+
+        $actors = Actor::all();
+
+        return view('admin.actors.actors')->with('actors' , $actors)
+            ->withPage('actors')
+            ->with('sub_page','view-actors');
+
+    }
+
+    public function add_actor(Request $request) {
+
+        return view('admin.actors.actor_upload')
+            ->withPage('actors');
+
+    }
+
+    public function createActor(Request $request)
+    {
+        $actor = new Actor();
+        $actor->name = $request->title;
+        $actor->bio = $request->description;
+        $actor->save();
+
+        return response()->json($actor);
+    }
+
+
+    //Directors
+    public function directors(Request $request) {
+
+        $directors = Director::all();
+
+        return view('admin.directors.directors')->with('directors' , $directors)
+            ->withPage('directors')
+            ->with('sub_page','view-directors');
+
+    }
+
+    public function add_director(Request $request) {
+
+        return view('admin.directors.director_upload')
+            ->withPage('directors');
+
+    }
+
+    public function createDirector(Request $request)
+    {
+        $director = new Director();
+        $director->name = $request->title;
+        $director->bio = $request->description;
+        $director->save();
+
+        return response()->json($director);
+    }
+
+
 
     public function edit_video(Request $request) {
 

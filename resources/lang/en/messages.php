@@ -516,6 +516,22 @@ return array(
 	'select_sub_category' => 'Select Sub Category',
 	'select_genre' => 'Select Genre',
 	'publish' => 'Publish',
+
+    //movies
+    'movies' => 'Movies',
+    'add_movie' => 'Add movie',
+    'view_movies'	=>	'All Movies',
+
+
+    //actors
+    'actors' => 'Actors',
+    'add_actor' => 'Add actor',
+    'view_actors' => 'View actors',
+
+    //directors
+    'directors' => 'Directors',
+    'add_director' => 'Add director',
+    'view_directors' => 'View directors',
 	
 	'ratings' => 'Ratings',
 	'reviews' => 'Reviews',

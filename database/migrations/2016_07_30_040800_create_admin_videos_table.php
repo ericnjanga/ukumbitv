@@ -18,11 +18,12 @@ class CreateAdminVideosTable extends Migration
             $table->string('description');
             $table->integer('category_id');
             $table->integer('sub_category_id');
-            $table->integer('genar_id');
+            $table->integer('genre_id');
             $table->integer('video');
             $table->integer('trailer_video');
             $table->string('ratings');
             $table->string('reviews');
+            $table->string('actors')->nullable();
             $table->timestamps();
         });
     }

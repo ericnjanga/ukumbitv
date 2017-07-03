@@ -85,6 +85,13 @@ class ApplicationController extends Controller {
 
     }
 
+    public function jobs(Request $request) {
+
+
+        return view('static.jobs');
+
+    }
+
     public function privacy(Request $request) {
 
         $page = Page::where('type', 'privacy')->first();;
