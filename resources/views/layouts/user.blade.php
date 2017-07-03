@@ -38,7 +38,7 @@
 							<!-- <h3>{{$video->title}}</h3> -->
 							<li class="col">
 								<a href="#" data-largesrc="http://via.placeholder.com/1000x660/250/ffffff/000000" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-									<img src="https://via.placeholder.com/250x170" alt="img01"/>
+									<img class="og-tmb1" src="https://via.placeholder.com/250x170" alt="img01"/>
 								</a>
 							</li>
 						@endforeach
