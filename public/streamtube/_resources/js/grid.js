@@ -380,7 +380,7 @@ var Grid = (function() {
 
 			//Upade play button href
 			console.log('>>>>og-btn-play=', this.$item.find('.og-btn-play'));
-			console.log('>>>>this.$item===', this.$item.html() );
+			console.log('>>>>this.$item.href===',this.$item.attr( 'href' ) );
 			this.$item.find('.og-btn-play').attr('href', this.$item.attr( 'href' ));
 
 			// update preview´s content
