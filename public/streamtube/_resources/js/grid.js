@@ -379,7 +379,8 @@ var Grid = (function() {
 			current = this.$item.index();
 
 			//Upade play button href
-			this.$item.find('.og-btn-play').attr('href',$itemEl.attr( 'href' ));
+			console.log('>>>>og-btn-play=', this.$item.find('.og-btn-play'));
+			// this.$item.find('.og-btn-play').attr('href',$itemEl.attr( 'href' ));
 
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),
