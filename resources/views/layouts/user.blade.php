@@ -36,104 +36,19 @@
 					<ul id="og-grid" class="og-grid video-content list-unstyled clearfix">
 						@foreach($videos as $video) 
 							<li class="col"> 
-								<p>{{$video}}</p>
-								<a href="https://www.ukumbitv.com/watch/{{$video->watchid}}" data-largesrc="http://via.placeholder.com/1000x660/250/ffffff/000000" data-title="{{$video->title}}" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> 
-									<img class="og-tmb1" src="https://via.placeholder.com/250x170" alt="img01"/>
+								<!--
+								{"id":2,"title":"Sample Video","description":"Sample Video","category_id":"1","sub_category_id":"1","genre_id":"0","video":"https:\/\/ukumbitv.com\/uploads\/videos\/original\/994420650bd0f400f90b365b3e2d25355779f677.mp4","trailer_video":"https:\/\/ukumbitv.com\/uploads\/videos\/original\/90be4aa8f7d92fce852d6377c33d3ae3880d5b20.mp4","default_image":"https:\/\/ukumbitv.com\/uploads\/images\/bcbe22984f787736e440b086828dda8024595d69.jpg","banner_image":"","ratings":"5","reviews":"Sample Video","status":"1","is_approved":"1","is_home_slider":"0","is_banner":"0","uploaded_by":"admin","publish_time":"2017-06-01 00:00:00","duration":"00:10:00","trailer_duration":"00:00:00","video_resolutions":"","trailer_video_resolutions":"","compress_status":"1","trailer_compress_status":"1","video_resize_path":null,"trailer_resize_path":null,"edited_by":"admin","watch_count":"1","type_of_user":"0","type_of_subscription":"0","amount":"0","created_at":"2017-06-01 14:01:57","updated_at":"2017-06-01 14:05:11","video_type":"1","video_upload_type":"2","actors":null,"directors":null,"watchid":"201707030106451"}
+							-->
+								<a href="https://www.ukumbitv.com/watch/{{$video->watchid}}" data-largesrc="http://via.placeholder.com/1000x660/250/ffffff/000000" data-title="{{$video->title}}" data-description="{{$video->description}}"> 
+									<img class="og-tmb1" src="https://via.placeholder.com/250x170" alt="{{$video->title}}"/>
 								</a>
 							</li>
 						@endforeach
 
-
-<!--
-						<li class="col">
-							<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-								<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
-							</a>
-						</li>
-						<li class="col">
-							<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-								<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
-							</a>
- 						</li>
-						<li class="col">
-							<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-								<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
-							</a>
-						</li>
-						<li class="col">
-							<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-								<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
-							</a>
-						</li>
-						<li class="col">
-							<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-								<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
-							</a>
-						</li>
-						<li class="col">
-							<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
-								<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/2.jpg" alt="img02"/>
-							</a>
-						</li>
-						<li class="col">
-							<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
-								<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/3.jpg" alt="img03"/>
-							</a>
-						</li>
-						<li class="col">
-							<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-								<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
-							</a>
-						</li> -->
 					</ul> 
 				</div>
     	</div>
-
-
-
-
-
-
-
-			<!-- <div class="container video-container">
-				<div class="row">
-		    	<div class="col col-xs-6 col-md-3">
-				    <div class="thumbnail video-thumbnail">
-				    	<i class="fa fa-play-circle" aria-hidden="true"></i>
-				      <img src="http://via.placeholder.com/500x420" class="img-responsive" alt="...">
-				      <div class="caption">  
-								<div class="panel-group thumbnail-info2 video-thumbnail-accordion" id="accordion1a" role="tablist" aria-multiselectable="true">
-								  <div class="panel panel-default">
-								    <div class="panel-heading" role="tab" id="heading1a">
-
-							        <h3 class="thumbnail-title">[Title]</h3>
-							        <div class="thumbnail-info1">
-							        	<time class="ib">[year]</time>, <div class="ib">[Country]</div>
-							        </div>
-
-											
-							        <a role="button" class="sr-only" data-toggle="collapse" data-parent="#accordion1a" href="#collapse1a" aria-expanded="true" aria-controls="collapse1a">
-							          {{trans('more_info')}}
-							        </a> 
-								    </div>
-								    <div id="collapse1a" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1a">
-								      <div class="panel-body">
-								        Danish sweet roll candy canes dragée tart powder gummi bears. Chocolate pastry cookie lollipop liquorice. Cheesecake gingerbread gingerbread pastry jujubes powder caramels.
-								      </div>
-								    </div>
-								  </div> 
-								</div>  
-				      </div> 
-				    </div>
-				  </div> 
-				  {{--video-thumbnail--}}
-				 
  
-				</div> 
-			</div>  -->
-			
-
-
     	<!-- 
       @yield('content') 
     	-->
