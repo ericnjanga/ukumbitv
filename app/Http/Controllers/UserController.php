@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\AdminVideo;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -74,6 +75,9 @@ class UserController extends Controller {
             $suggestions  = Helper::suggestion_videos(WEB);
             $categories = get_categories();
 
+            $videos = AdminVideo::all();
+
+
             return view('user.index')
                         ->with('page' , 'home')
                         ->with('subPage' , 'home')
@@ -82,7 +86,8 @@ class UserController extends Controller {
                         ->with('trendings' , $trendings)
                         ->with('watch_lists' , $watch_lists)
                         ->with('suggestions' , $suggestions)
-                        ->with('categories' , $categories);
+                        ->with('categories' , $categories)
+                        ->with('videos', $videos);
         } else {
             return redirect()->route('installTheme');
         }
