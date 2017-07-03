@@ -38,7 +38,7 @@
 							<!-- <h3>{{$video->title}}</h3> -->
 							<li class="col">
 								<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-									<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>
+									<img src="https://via.placeholder.com/250x150" alt="img01"/>
 								</a>
 							</li>
 						@endforeach
