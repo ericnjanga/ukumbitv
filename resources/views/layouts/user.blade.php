@@ -33,9 +33,11 @@
 		<!-- place videos loop here!!!! -->
 		<!-- place videos loop here!!!! -->
 		<!-- place videos loop here!!!! -->
-    <div style="background: turquoise; padding: 40px;">
-    	
-    </div>
+	<div style="background: turquoise; padding: 40px;">
+		@foreach($videos as $video)
+			<h3>{{$video->title}}</h3>
+		@endforeach
+	</div>
 		<!-- place videos loop here!!!! -->
 		<!-- place videos loop here!!!! -->
 		<!-- place videos loop here!!!! -->
