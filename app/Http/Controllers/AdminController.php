@@ -1244,7 +1244,7 @@ class AdminController extends Controller
         $adminVideo->default_image = 'https://ukumbitv.com/images/'.$imageName;
         $adminVideo->banner_image = '';
         $adminVideo->ratings = 5;
-        $adminVideo->reviews = $request->reviews;
+        $adminVideo->reviews = 'review';
         $adminVideo->status = 1;
         $adminVideo->is_approved = 1;
         $adminVideo->is_home_slider = 0;
@@ -1257,6 +1257,8 @@ class AdminController extends Controller
         $adminVideo->watch_count = 1;
         $adminVideo->video_type = 1;
         $adminVideo->video_upload_type = 2;
+        $adminVideo->actors = $request->actor;
+        $adminVideo->directors = $request->director;
 
         $adminVideo->save();
 
@@ -1276,6 +1278,65 @@ class AdminController extends Controller
 
         return response()->json($adminVideo);
     }
+
+    //Actors
+    public function actors(Request $request) {
+
+        $actors = Actor::all();
+
+        return view('admin.actors.actors')->with('actors' , $actors)
+            ->withPage('actors')
+            ->with('sub_page','view-actors');
+
+    }
+
+    public function add_actor(Request $request) {
+
+        return view('admin.actors.actor_upload')
+            ->withPage('actors');
+
+    }
+
+    public function createActor(Request $request)
+    {
+        $actor = new Actor();
+        $actor->name = $request->title;
+        $actor->bio = $request->description;
+        $actor->save();
+
+        return response()->json($actor);
+    }
+
+
+    //Directors
+    public function directors(Request $request) {
+
+        $directors = Director::all();
+
+        return view('admin.directors.directors')->with('directors' , $directors)
+            ->withPage('directors')
+            ->with('sub_page','view-directors');
+
+    }
+
+    public function add_director(Request $request) {
+
+        return view('admin.directors.director_upload')
+            ->withPage('directors');
+
+    }
+
+    public function createDirector(Request $request)
+    {
+        $director = new Director();
+        $director->name = $request->title;
+        $director->bio = $request->description;
+        $director->save();
+
+        return response()->json($director);
+    }
+
+
 
     public function edit_video(Request $request) {
 

@@ -521,6 +521,17 @@ return array(
     'movies' => 'Movies',
     'add_movie' => 'Add movie',
     'view_movies'	=>	'All Movies',
+
+
+    //actors
+    'actors' => 'Actors',
+    'add_actor' => 'Add actor',
+    'view_actors' => 'View actors',
+
+    //directors
+    'directors' => 'Directors',
+    'add_director' => 'Add director',
+    'view_directors' => 'View directors',
 	
 	'ratings' => 'Ratings',
 	'reviews' => 'Reviews',

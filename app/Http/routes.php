@@ -307,6 +307,15 @@ Route::group(['prefix' => 'admin'], function(){
     Route::post('add/movie-upload-image/delete', ['as' => 'movie-upload-remove', 'uses' =>'AdminController@deleteUpload']);
     Route::post('add/create-movie', ['as' => 'create-movie', 'uses' =>'AdminController@createMovie']);
 
+    //actors
+    Route::get('/actors', 'AdminController@actors')->name('admin.actors');
+    Route::get('/add/actor', 'AdminController@add_actor')->name('admin.add.actor');
+    Route::post('add/create-actor', ['as' => 'create-actor', 'uses' =>'AdminController@createActor']);
+
+    //directors
+    Route::get('/directors', 'AdminController@directors')->name('admin.directors');
+    Route::get('/add/director', 'AdminController@add_director')->name('admin.add.director');
+    Route::post('add/create-director', ['as' => 'create-director', 'uses' =>'AdminController@createDirector']);
     // Slider Videos
 
     Route::get('/slider/video/{id}', 'AdminController@slider_video')->name('admin.slider.video');

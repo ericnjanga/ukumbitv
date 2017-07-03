@@ -63,40 +63,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label for="ratings" class="">{{tr('ratings')}} *</label>
-                                            <div class="starRating">
-                                                <input id="rating5" type="radio" name="ratings" value="5">
-                                                <label for="rating5">5</label>
-
-                                                <input id="rating4" type="radio" name="ratings" value="4">
-                                                <label for="rating4">4</label>
-
-                                                <input id="rating3" type="radio" name="ratings" value="3">
-                                                <label for="rating3">3</label>
-
-                                                <input id="rating2" type="radio" name="ratings" value="2">
-                                                <label for="rating2">2</label>
-
-                                                <input id="rating1" type="radio" name="ratings" value="1">
-                                                <label for="rating1">1</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <label for="description" class="">{{tr('description')}} * </label>
                                             <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label for="reviews" class="">{{tr('reviews')}} * </label>
-                                            <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="reviews" name="reviews"></textarea>
-                                        </div>
-                                    </div>
+
                                 </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="category_id">
                                             <div class="form-group">
@@ -130,7 +103,7 @@
 
                                         <label for="director" class="">Select directors *</label>
 
-                                        <select required id="director" name="director_id" class="form-control">
+                                        <select multiple required id="director" name="director_id" class="form-control">
                                             @foreach($directors as $director)
                                                 <option value="{{$director->id}}">{{$director->name}}</option>
                                             @endforeach
@@ -293,7 +266,6 @@
             fd.append('title', $('#title').val());
             fd.append('duration', $('#duration').val());
             fd.append('description', $('#description').val());
-            fd.append('reviews', $('#reviews').val());
             fd.append('category', $('#category').val());
             fd.append('year', $('#year').val());
             fd.append('director', $('#director').val());

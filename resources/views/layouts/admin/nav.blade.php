@@ -62,6 +62,30 @@
 
             </li>
 
+            <li class="treeview" id="actors">
+                <a href="{{route('admin.actors')}}">
+                    <i class="fa fa-smile-o"></i> <span>{{tr('actors')}}</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+                <ul class="treeview-menu">
+                    <li id="add-video"><a href="{{route('admin.add.actor')}}"><i class="fa fa-circle-o"></i>{{tr('add_actor')}}</a></li>
+                    <li id="view-videos"><a href="{{route('admin.actors')}}"><i class="fa fa-circle-o"></i>{{tr('view_actors')}}</a></li>
+                </ul>
+
+            </li>
+
+            <li class="treeview" id="directots">
+                <a href="{{route('admin.directors')}}">
+                    <i class="fa fa-smile-o"></i> <span>{{tr('directors')}}</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+                <ul class="treeview-menu">
+                    <li id="add-video"><a href="{{route('admin.add.director')}}"><i class="fa fa-circle-o"></i>{{tr('add_director')}}</a></li>
+                    <li id="view-videos"><a href="{{route('admin.directors')}}"><i class="fa fa-circle-o"></i>{{tr('view_directors')}}</a></li>
+                </ul>
+
+            </li>
+
             <li class="treeview" id="videos">
                 <a href="{{route('admin.videos')}}">
                     <i class="fa fa-video-camera"></i> <span>{{tr('videos')}}</span> <i class="fa fa-angle-left pull-right"></i>
