@@ -256,6 +256,7 @@
 
     <script type="text/javascript">
         function createMovie() {
+            $( '.overlay' ).css( 'display', 'block' );
             var defImg= $('#default_image');
             var video = $('#video');
             var fd = new FormData;
@@ -284,7 +285,12 @@
                 success: function(data){
                     var rep = JSON.parse(data);
                     console.log(rep);
+                    $( '.overlay' ).css( 'display', 'none' );
                     alert('Movie successful created!');
+                },
+                error: function (data) {
+                    $( '.overlay' ).css( 'display', 'none' );
+                    alert('error '+data);
                 }
             });
         }
