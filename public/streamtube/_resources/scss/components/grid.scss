@@ -75,9 +75,9 @@ $color-expender : #999;
 .og-btn-play{
 	&:hover{
 		transform: scale(1.4,1.4);
+			text-decoration: none;
 		.fa{
 			color: $color-primary;
-			text-decoration: none;
 		}
 	}
 }
