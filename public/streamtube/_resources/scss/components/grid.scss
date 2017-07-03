@@ -11,6 +11,11 @@
 	margin: 10px 5px 0 5px;
 	vertical-align: top;
 	height: 250px;
+
+	// for medium and large screens ...
+	@media (min-width: 768px) {
+		width: 25%;
+	}
 }
 
 .og-grid li > a,
