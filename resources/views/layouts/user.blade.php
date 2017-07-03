@@ -25,7 +25,7 @@
 
     	<div class="container video-container"> 
 				<div class="row">
-					<ul id="og-grid" class="og-grid-">
+					<ul id="og-grid" class="og-grid- video-content list-unstyled clearfix">
 						<li class="col col-xs-6 col-md-3">
 							<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
 								<img src="https://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/images/thumbs/1.jpg" alt="img01"/>

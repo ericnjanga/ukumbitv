@@ -12,6 +12,7 @@
 
 	//.carousel,
 	.video-container {
+		position: relative;
 		margin-bottom: 50px;
 
 		.col{
@@ -62,10 +63,10 @@
 
 
 .video-content {
-	// .col {
-	// 	padding-left: 10px;
- //    padding-right: 10px;
-	// }
+	.col {
+		padding-left: 5px;
+    padding-right: 5px;
+	}
 	// .img-responsive {
 	// 	border-radius: 4px;
 	// }
