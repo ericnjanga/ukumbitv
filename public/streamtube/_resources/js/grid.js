@@ -392,10 +392,7 @@ var Grid = (function() {
 			this.$href.attr( 'href', eldata.href );
 
 
-
 			//Upade play button href
-			console.log('>>>>og-btn-play=', this.$item.find('.og-btn-play'));
-			console.log('>>>>eldata.href===',eldata.href );
 			this.$item.find('.og-btn-play').attr('href', eldata.href);
 
 
