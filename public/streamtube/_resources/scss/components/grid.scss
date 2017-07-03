@@ -77,6 +77,9 @@ $color-expender : #999;
 .og-details {
 	p {
 		color: #000; 
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 22px;
 	}
 }
 
@@ -164,13 +167,7 @@ $color-expender : #999;
 	padding: 40px 0 10px;
 	margin-bottom: 10px;
 }
-
-.og-details p {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 22px;
-	color: #999;
-}
+ 
 
 .og-details a {
 	font-weight: 700;
