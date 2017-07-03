@@ -20,6 +20,42 @@
 	<body class="page-videos"> 
     @include('layouts.user.header')
 
+
+
+
+
+
+
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+    <div style="background: turquoise; padding: 40px;">
+    	
+    </div>
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+		<!-- place videos loop here!!!! -->
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="main-content video-content">
     	@include('layouts.user.latest-uploads.hero-carousel')
 
