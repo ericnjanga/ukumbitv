@@ -10,6 +10,13 @@
     width: 100%;
 	}//main-nav
 
+
+	.col.og-expanded{
+		img {
+			border: 5px solid $color-primary;
+		}
+	}
+
 	//.carousel,
 	.video-container {
 		position: relative;

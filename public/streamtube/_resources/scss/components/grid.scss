@@ -37,7 +37,7 @@
 	// height: inherit;
 }
 
-$color-expender : #777;
+$color-expender : #999;
 .og-grid li.og-expanded > a::after {
 	top: auto;
 	border: solid transparent;
@@ -51,6 +51,17 @@ $color-expender : #777;
 	left: 50%;
 	margin: -20px 0 0 -15px;
 }
+
+.og-title {
+	color: #fff; 
+}
+.og-details {
+	p {
+		color: #000; 
+	}
+}
+
+
 
 .og-expander {
 	position: absolute;
