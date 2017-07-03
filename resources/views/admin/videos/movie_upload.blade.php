@@ -230,6 +230,7 @@
 
         </div>
     </div>
+    <progress id="progressbar" value="0" max="100"></progress>
     <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="createMovie()">Finish</button>
     <!-- End Dropzone Preview Template -->
 
@@ -273,7 +274,7 @@
             fd.append('actor', $('#actor').val());
 
             fd.append('images', dropImages.join(';'));
-
+            var progressBar = $('#progressbar');
 
             $.ajax({
                 type: 'POST',
@@ -282,6 +283,19 @@
                 processData: false,
                 data: fd,
                 dataType: 'html',
+                xhr: function(){
+                    var xhr = $.ajaxSettings.xhr(); // получаем объект XMLHttpRequest
+                    xhr.upload.addEventListener('progress', function(evt){ // добавляем обработчик события progress (onprogress)
+                        if(evt.lengthComputable) { // если известно количество байт
+                            // высчитываем процент загруженного
+                            var percentComplete = Math.ceil(evt.loaded / evt.total * 100);
+                            // устанавливаем значение в атрибут value тега <progress>
+                            // и это же значение альтернативным текстом для браузеров, не поддерживающих <progress>
+                            progressBar.val(percentComplete).text('Uploaded ' + percentComplete + '%');
+                        }
+                    }, false);
+                    return xhr;
+                },
                 success: function(data){
                     var rep = JSON.parse(data);
                     console.log(rep);
