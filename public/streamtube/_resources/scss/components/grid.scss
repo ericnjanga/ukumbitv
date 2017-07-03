@@ -64,7 +64,7 @@
 }
 
 .og-expander-inner {
-	padding: 50px 30px;
+	// padding: 50px 30px;
 	height: 100%;
 }
 
@@ -119,6 +119,7 @@
 }
 
 .og-fullimg img {
+	float: left;
 	display: inline-block;
 	max-height: 100%;
 	max-width: 100%;
