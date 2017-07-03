@@ -46,7 +46,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
 
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="https://www.ukumbitv.com">
 				<img class="img-brand" src="{{asset('streamtube/images/logo1.png')}}" alt='UkumbiTv' />
       </a>
 

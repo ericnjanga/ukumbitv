@@ -82,12 +82,15 @@
 			color: #ccc;
 			padding-top: 10px;
     	padding-bottom: 10px;
+    	&:hover{
+    		color: $color-primary;
+    	}
 		}
 
 		.navbar-nav>.active>a { 
-	    background-color: $color-primary!important;
-	    color: #fff;
-	    border-radius: 50px;
+	    background-color: transparent!important;
+	    color: $color-primary;//!important;
+	    border-bottom: 3px solid $color-primary;//!important; 
 		}
 
 		//background .....
