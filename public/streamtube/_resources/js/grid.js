@@ -378,11 +378,6 @@ var Grid = (function() {
 			// update current value
 			current = this.$item.index();
 
-			//Upade play button href
-			console.log('>>>>og-btn-play=', this.$item.find('.og-btn-play'));
-			console.log('>>>>this.$item.href===',this.$item.attr( 'href' ) );
-			this.$item.find('.og-btn-play').attr('href', this.$item.attr( 'href' ));
-
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),
 				eldata = {
@@ -395,6 +390,14 @@ var Grid = (function() {
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
+
+
+
+			//Upade play button href
+			console.log('>>>>og-btn-play=', this.$item.find('.og-btn-play'));
+			console.log('>>>>eldata.href===',eldata.href );
+			this.$item.find('.og-btn-play').attr('href', eldata.href);
+
 
 			var self = this;
 			
