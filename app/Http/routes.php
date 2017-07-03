@@ -399,6 +399,10 @@ Route::get('video/{id}', 'UserController@single_video')->name('user.single');
 
 Route::get('newvideo/{id}', 'UserController@single_newvideo')->name('user.single'); // Added By Vishnu
 
+Route::get('watch/{id}', 'UserController@watchVideo')->name('user.single');
+
+
+
 // Social Login
 
 Route::post('/social', array('as' => 'SocialLogin' , 'uses' => 'SocialAuthController@redirect'));

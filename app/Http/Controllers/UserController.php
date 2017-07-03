@@ -92,6 +92,25 @@ class UserController extends Controller {
             return redirect()->route('installTheme');
         }
     }
+
+    public function watchVideo($id)
+    {
+        $video = AdminVideo::where('watchid', $id)->first();
+        $videos = AdminVideo::all();
+
+        $main_video = $video->video;
+        $trailer_video = "";
+        $wishlist_status = $history_status = WISHLIST_EMPTY;
+
+        return view('user.single_newvideo')
+            ->with('trailer_video' , $trailer_video)
+            ->with('main_video' , $main_video)
+            ->with('videoStreamUrl', $main_video)
+            ->with('history_status' , $history_status)
+            ->with('videos' , $videos)
+            ->with('video', $video);
+    }
+
 //Added New function by Vishnu
 
     public function single_newvideo($id) {
@@ -813,8 +832,10 @@ class UserController extends Controller {
      */
     public function payment()
     {
+        $videos = AdminVideo::all();
         return view('user.userpayment')
                     ->with('page' , 'profile')
-                    ->with('subPage' , 'user-profile');
+                    ->with('subPage' , 'user-profile')
+                    ->with('videos', $videos);
     }
 }

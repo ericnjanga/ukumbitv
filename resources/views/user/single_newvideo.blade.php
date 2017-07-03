@@ -473,7 +473,7 @@ textarea[name=comments] {
                             jQuery('#trailer_video_setup_error').css("display", "block");
 
                             confirm('The video format is not supported in this browser. Please open with some other browser.');
-                        
+
                         });
 
                         @if(!$history_status && Auth::check())
@@ -494,14 +494,14 @@ textarea[name=comments] {
                                        }
                                     }
                                 });
-                                
+
                             });
 
                         @endif
-                    
+
                     }
 
-                @endif                
+                @endif
 
             //hang on event of form with id=myform
             jQuery("form[name='add_to_wishlist']").submit(function(e) {

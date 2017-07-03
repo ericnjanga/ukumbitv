@@ -1225,6 +1225,8 @@ class AdminController extends Controller
 
     public function createMovie(Request $request)
     {
+
+
         $image = $request->file('file');
         $imageName = time().$image->getClientOriginalName();
         $image->move(public_path('images'),$imageName);
@@ -1259,6 +1261,7 @@ class AdminController extends Controller
         $adminVideo->video_upload_type = 2;
         $adminVideo->actors = $request->actor;
         $adminVideo->directors = $request->director;
+        $adminVideo->watchid = date('YmdHis');
 
         $adminVideo->save();
 

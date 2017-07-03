@@ -24,6 +24,8 @@ class CreateAdminVideosTable extends Migration
             $table->string('ratings');
             $table->string('reviews');
             $table->string('actors')->nullable();
+            $table->string('directors')->nullable();
+            $table->string('watchid')->nullable();
             $table->timestamps();
         });
     }
