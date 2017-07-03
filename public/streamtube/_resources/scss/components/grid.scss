@@ -10,7 +10,7 @@
 	display: inline-block;
 	margin: 5px;
 	vertical-align: top;
-	height: 250px;
+	// height: 250px;
 
 	// for medium and large screens ...
 	@media (min-width: 768px) {
@@ -24,6 +24,8 @@
 	outline: none;
 	display: block;
 	position: relative;
+	width: 100%;
+	height: inherit;
 }
 
 .og-grid li.og-expanded > a::after {
