@@ -33,8 +33,11 @@ textarea[name=comments] {
 
                         <div class="col-sm-12 col-md-12 play-video">
                             <video width="400" height="300" controls="controls" poster="{{$video->default_image}}">
-
-                                <source src="{{$video->video}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                @if (Auth::guest())
+                                NO PLAY
+                                @else
+                                    <source src="{{$video->video}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                    @endif
 
                                 Tag video not supported your browser.
 
