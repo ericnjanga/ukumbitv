@@ -110,6 +110,7 @@ class UserController extends Controller {
             ->with('videoStreamUrl', $main_video)
             ->with('history_status' , $history_status)
             ->with('videos' , $videos)
+            ->with('videoTitle' , $video)
             ->with('video', $video);
     }
 
