@@ -102,6 +102,8 @@ class UserController extends Controller {
         $trailer_video = "";
         $wishlist_status = $history_status = WISHLIST_EMPTY;
 
+
+
         return view('user.single_newvideo')
             ->with('trailer_video' , $trailer_video)
             ->with('main_video' , $main_video)

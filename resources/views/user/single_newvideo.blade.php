@@ -26,14 +26,23 @@ textarea[name=comments] {
           <!--  @include('layouts.user.nav')-->
 
             <div class="page-inner col-sm-12 col-md-12 profile-edit">
-            
+
                 <div class="profile-content">
 
                     <div class="row">
 
                         <div class="col-sm-12 col-md-12 play-video">
+                            <video width="400" height="300" controls="controls" poster="{{$video->default_image}}">
 
-                            @include('user.videos.streaming')
+                                <source src="{{$video->video}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+
+                                Tag video not supported your browser.
+
+                            </video>
+                            <br>
+                            <div class="fb-comments" data-href="https://ukumbitv.com/watch/{{$video->watchid}}" data-numposts="5"></div>
+
+                            {{--@include('user.videos.streaming')--}}
 
                             <?php /*?><div class="main-content">
                                 <div class="video-content">
@@ -45,13 +54,13 @@ textarea[name=comments] {
                                                 </div>
                                                 <div class="watch-duration">
 
-                                                    <form method="post" name="watch_main_video">  
-                                                        
+                                                    <form method="post" name="watch_main_video">
+
                                                         @if(Auth::check())
 
 															<div class="pull-left">
-                                                            @if(watchFullVideo(Auth::user()->id, Auth::user()->user_type, $video) ==  1)                             
-                                                            
+                                                            @if(watchFullVideo(Auth::user()->id, Auth::user()->user_type, $video) ==  1)
+
                                                                 <button type="submit" id="watch_main_video_button" class="watch-button" style="background:green;">{{tr('watch_main_video')}}</button>
 
                                                                 <!-- <p>{{tr('duration')}} {{$video->duration}}</p> -->
@@ -69,7 +78,7 @@ textarea[name=comments] {
 
                                                                 <div class="modal fade cus-mod" id="paypal" role="dialog">
                                                                     <div class="modal-dialog">
-                                                                    
+
                                                                       <!-- Modal content-->
                                                                       <div class="modal-content">
 
@@ -83,16 +92,16 @@ textarea[name=comments] {
                                                                                 <!-- <p>Please Pay to see the full video</p>  -->
                                                                                 @if($video->amount > 0)
                                                                                     <a href="{{route('videoPaypal' , $video->admin_video_id)}}" class="btn btn-danger">{{tr('paynow')}}</a>
-                                                                                @else 
+                                                                                @else
                                                                                     <a href="{{route('paypal' , Auth::user()->id)}}" class="btn btn-danger">{{tr('paynow')}}</a>
                                                                                 @endif
                                                                             </div>
 
-                                                                            
+
                                                                       </div>
-                                                                      
+
                                                                     </div>
-                                                                
+
                                                                 </div>
 
                                                             @endif
@@ -100,7 +109,7 @@ textarea[name=comments] {
                                                         <div class="pull-right">
                                                             @if($flaggedVideo == '')
                                                                 <button onclick="showReportForm();" type="button" class="report-button"><i class="fa fa-flag"></i> {{tr('report')}}</button>
-                                                            @else 
+                                                            @else
                                                                 <a href="{{route('user.remove.report_video', $flaggedVideo->id)}}" class="btn btn-warning"><i class="fa fa-flag"></i> {{tr('remove_report')}}</a>
                                                             @endif
 
@@ -112,7 +121,7 @@ textarea[name=comments] {
 
                                                             <div class="modal fade cus-mod" id="watchMainVideo" role="dialog">
                                                                 <div class="modal-dialog">
-                                                                
+
                                                                   <!-- Modal content-->
                                                                   <div class="modal-content">
 
@@ -127,23 +136,23 @@ textarea[name=comments] {
                                                                         </div>
 
                                                                   </div>
-                                                                  
+
                                                                 </div>
                                                             </div>
-                                                        
+
                                                         @endif
 
                                                     </form>
 
                                                 </div>
-                                                
+
                                             </div>
 
                                             <div class="video-description">
                                                 <h4>{{tr('description')}}</h4>
                                                 <p>{{$video->description}}</p>
-                                            </div><!--end of video-description-->                                       
-                                        </div><!--end of video-title-->                                                             
+                                            </div><!--end of video-description-->
+                                        </div><!--end of video-title-->
                                     </div><!--end of details-->
 
                                     @if ($flaggedVideo == '')
@@ -151,7 +160,7 @@ textarea[name=comments] {
                                             <form name="report_video" method="post" id="report_video" action="{{route('user.add.spam_video')}}">
                                                 <b>Report this Video ?</b>
                                                 <br>
-                                                @foreach($report_video as $report) 
+                                                @foreach($report_video as $report)
                                                     <input type="radio" name="reason" value="{{$report->value}}" required> {{$report->value}}<br>
                                                 @endforeach
                                                 <input type="hidden" name="video_id" value="{{$video->admin_video_id}}" />
@@ -165,7 +174,7 @@ textarea[name=comments] {
                                     @endif
 
                                     <div class="more-content">
-                                        
+
                                         <div class="share-details row">
 
                                             <form name="add_to_wishlist" method="post" id="add_to_wishlist" action="{{route('user.add.wishlist')}}">
@@ -184,7 +193,7 @@ textarea[name=comments] {
                                                             <button style="background-color:rgb(229, 45, 39);" type="submit" id="added_wishlist" data-toggle="tooltip" title="Add to My List">
                                                                 <i class="fa fa-heart"></i>
                                                                 <span>{{tr('added_wishlist')}}</span>
-                                                            </button> 
+                                                            </button>
                                                         </div>
                                                         @endif
                                                     @else
@@ -197,11 +206,11 @@ textarea[name=comments] {
                                                                 <button type="submit" id="added_wishlist" data-toggle="tooltip" title="Add to My List">
                                                                     <i class="fa fa-heart"></i>
                                                                     <span>{{tr('add_to_wishlist')}}</span>
-                                                                </button> 
+                                                                </button>
                                                             </div>
                                                         @endif
                                                     @endif
-                                                
+
                                                 @else
                                                     <!-- Login Popup -->
                                                 @endif
@@ -210,16 +219,16 @@ textarea[name=comments] {
 
                                             <div class="share">
                                                 <a class="share-fb" target="_blank" href="http://www.facebook.com/sharer.php?u={{route('user.single',$video->admin_video_id)}}">
-                                                    
+
                                                     <i class="fa fa-facebook"></i>{{tr('share_on_fb')}}
-                                                    
+
                                                 </a>
 
                                                 <a class="share-twitter" target="_blank" href="http://twitter.com/share?text={{$video->title}}...&url={{route('user.single',$video->admin_video_id)}}">
-                                                   
+
                                                     <i class="fa fa-twitter"></i>{{tr('share_on_twitter')}}
-                                                    
-                                                </a> 
+
+                                                </a>
                                             </div><!--end of share-->
 
                                             <div class="stars ratings">
@@ -230,29 +239,29 @@ textarea[name=comments] {
                                                 <a href="#"><i @if($video->ratings > 5) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
                                             </div><!--end of stars-->
 
-                                        </div><!--end of share-details-->                               
+                                        </div><!--end of share-details-->
                                     </div>
                                     <!--end of more-content-->
 
                                 </div><!--end of video-content-->
-                                
+
                                 @if(count($comments) > 0) <div class="v-comments"> @endif
 
-                                    @if(count($comments) > 0) 
+                                    @if(count($comments) > 0)
                                         <h3>{{tr('comments')}}
                                             <span class="c-380" id="comment_count">{{count($comments)}}</span>
-                                        </h3> 
+                                        </h3>
                                     @endif
-                                    
+
                                     <div class="com-content">
                                         @if(Auth::check())
 
                                             <div class="image-form">
                                                 <div class="comment-box1">
                                                     <div class="com-image">
-                                                        <img style="width:48px;height:48px" src="{{Auth::user()->picture}}">                                    
+                                                        <img style="width:48px;height:48px" src="{{Auth::user()->picture}}">
                                                     </div><!--end od com-image-->
-                                                    
+
                                                     <div id="comment_form">
                                                         <div>
                                                             <form method="post" id="comment_sent" name="comment_sent" action="{{route('user.add.comment')}}">
@@ -263,16 +272,16 @@ textarea[name=comments] {
 
                                                                 <input style="float:right;margin-bottom:10px;display:none" type="submit" name="submit" value="send">
                                                             </form>
-                                                        </div>                                      
+                                                        </div>
                                                     </div>  <!--end of comment-form-->
-                                                </div>                                                              
-                                            
+                                                </div>
+
                                             </div>
 
                                         @endif
 
                                         @if(count($comments) > 0)
-                                        
+
                                             <div class="feed-comment">
 
                                                 <span id="new-comment"></span>
@@ -281,7 +290,7 @@ textarea[name=comments] {
 
                                                     <div class="display-com">
                                                         <div class="com-image">
-                                                            <img style="width:48px;height:48px" src="{{$comment->picture}}">                                    
+                                                            <img style="width:48px;height:48px" src="{{$comment->picture}}">
                                                         </div><!--end od com-image-->
 
                                                         <div class="display-comhead">
@@ -289,9 +298,9 @@ textarea[name=comments] {
                                                                 <a href="#"><h5 style="float:left">{{$comment->username}}</h5></a>
                                                                 <a href="#" class="text-none"><p>{{$comment->created_at->diffForHumans()}}</p></a>
                                                                 <p class="com-para">{{$comment->comment}}</p>
-                                                            </span>             
-                                                            
-                                                        </div><!--display-comhead-->                                        
+                                                            </span>
+
+                                                        </div><!--display-comhead-->
                                                     </div><!--display-com-->
 
                                                 @endforeach
@@ -304,13 +313,13 @@ textarea[name=comments] {
                                                 <span id="new-comment"></span>
                                             </div>
                                             <!-- <p>{{tr('no_comments')}}</p> -->
-                                        
+
                                         @endif
-                                            
+
                                     </div>
 
                                 @if(count($comments) > 0) </div> @endif<!--end of v-comments-->
-                                                                
+
                             </div><?php */?>
 
                             <!--end of main-content-->
@@ -323,7 +332,7 @@ textarea[name=comments] {
                             <div class="up-next">
                                 <h4 class="sugg-head1">{{tr('suggestions')}}</h4>
 
-                                <ul class="video-sugg"> 
+                                <ul class="video-sugg">
 
                                     @foreach($suggestions as $suggestion)
                                         <li class="sugg-list row">
@@ -331,17 +340,17 @@ textarea[name=comments] {
                                                  <div class="video-image">
                                                     <div class="video-image-outer">
                                                         <a href="{{route('user.single' , $suggestion->admin_video_id)}}"><img src="{{$suggestion->default_image}}"></a>
-                                                    </div>                       
+                                                    </div>
                                                 </div><!--video-image-->
 
                                                 <div class="sugg-head">
-                                                    <div class="suggn-title">                                          
+                                                    <div class="suggn-title">
                                                         <h5><a href="{{route('user.single' , $suggestion->admin_video_id)}}">{{$suggestion->title}}</a></h5>
                                                     </div><!--end of sugg-title-->
 
                                                     <div class="sugg-description">
                                                         <p>{{tr('duration')}}: {{$suggestion->duration}}</p>
-                                                    </div><!--end of sugg-description--> 
+                                                    </div><!--end of sugg-description-->
 
                                                     <span class="stars">
                                                         <a href="#"><i @if($suggestion->ratings > 1) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
@@ -349,36 +358,36 @@ textarea[name=comments] {
                                                         <a href="#"><i @if($suggestion->ratings > 3) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
                                                         <a href="#"><i @if($suggestion->ratings > 4) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
                                                         <a href="#"><i @if($suggestion->ratings > 5) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
-                                                    </span>                                                       
+                                                    </span>
                                                 </div><!--end of sugg-head-->
-                                    
+
                                             </div><!--end of main-video-->
                                         </li><!--end of sugg-list-->
                                     @endforeach
-                                   
-                                    
+
+
                                 </ul>
                             </div><!--end of up-next-->
-                                                
+
                         </div><?php */?><!--end of col-sm-4-->
 
                     </div>
                 </div>
-            
+
             </div>
 
         </div><!--y-content-row-->
     </div>
 
     <!--end of y-content-->
-    
+
 @endsection
 
 @section('scripts')
     <script type="text/javascript">
         $(document).ready(function(){
             $('.video-y-menu').addClass('hidden');
-        }); 
+        });
         function showReportForm() {
             var divId = document.getElementById('report_video_form').style.display;
             if (divId == 'none') {
@@ -394,8 +403,8 @@ textarea[name=comments] {
     <script>jwplayer.key="{{envfile('JWPLAYER_KEY')}}";</script>
 
     <script type="text/javascript">
-        
-        jQuery(document).ready(function(){   
+
+        jQuery(document).ready(function(){
 
                 // Opera 8.0+
                 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
@@ -526,7 +535,7 @@ textarea[name=comments] {
                                 if(data.status == 1) {
                                     jQuery('#status').val("0");
 
-                                    jQuery('#wishlist_id').val(data.wishlist_id); 
+                                    jQuery('#wishlist_id').val(data.wishlist_id);
                                     jQuery("#added_wishlist").css({'background':'rgb(229, 45, 39)','color' : '#FFFFFF'});
                                     jQuery("#added_wishlist").append('<i class="fa fa-heart"> {{tr('added_wishlist')}}');
                                 } else {
@@ -625,7 +634,7 @@ textarea[name=comments] {
 
                             var playerInstance = jwplayer("main-video-player");
 
-                            @if($videoStreamUrl) 
+                            @if($videoStreamUrl)
 
                             playerInstance.setup({
                                 file: "{{$videoStreamUrl}}",
@@ -647,7 +656,7 @@ textarea[name=comments] {
                                 "sharing": {
                                     "sites": ["reddit","facebook","twitter"]
                                   }
-                            
+
                             });
                             @else
                                 var videoPath = "{{$videoPath}}";
@@ -685,7 +694,7 @@ textarea[name=comments] {
                                     "sharing": {
                                         "sites": ["reddit","facebook","twitter"]
                                       }
-                                
+
                                 });
 
                             @endif
@@ -697,10 +706,10 @@ textarea[name=comments] {
                                 jQuery('#main_video_setup_error').css("display", "block");
 
                                 confirm('The video format is not supported in this browser. Please option some other browser.');
-                            
+
                             });
                         }
-                    
+
                     @else
                         jQuery('#main_video_error').show();
                         jQuery('#trailer_video_error').hide();
@@ -708,8 +717,8 @@ textarea[name=comments] {
 
                     jQuery("#trailer-video-player").hide();
                     jQuery("#main-video-player").show();
-                
-                
+
+
 
                     // Remove trailer video url, to stop the autoplay while playing main video
 
