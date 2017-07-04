@@ -40,7 +40,7 @@ textarea[name=comments] {
 
                             </video>
                             <br>
-                            <div class="fb-comments" data-href="https://ukumbitv.com/watch/{{$video->watchid}}" data-numposts="5"></div>
+                            <div class="fb-comments" data-colorscheme="dark" data-href="https://ukumbitv.com/watch/{{$video->watchid}}" data-numposts="5"></div>
 
                             {{--@include('user.videos.streaming')--}}
 
