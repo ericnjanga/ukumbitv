@@ -14,7 +14,7 @@ class VerifyUser
     //List of paths allowed to access while user not logged in
     private $allowed_paths = ['login', 'register', 'social', 'callback/facebook',
         'admin', 'email', 'setlocale', 'setlocale/fr', 'setlocale/en', 'about-us',
-        'terms-of-use', 'privacy-statement', 'jobs', 'watch'];
+        'terms-of-use', 'privacy-statement', 'jobs', 'watch/1'];
     /**
      * Handle an incoming request.
      *
@@ -39,7 +39,7 @@ class VerifyUser
             }
         } else {
             //Allowed paths while not logged in
-            if (!$request->is('email/*') && !$request->is('admin/*') && !$request->is('watch/*') && !$request->is('social/*') && !in_array($request->path(), $this->allowed_paths)) {
+            if (!$request->is('email/*') && !$request->is('admin/*') && !$request->is('social/*') && !in_array($request->path(), $this->allowed_paths)) {
                 return redirect(route('user.login.form'));
             }
         }

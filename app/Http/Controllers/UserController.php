@@ -78,7 +78,7 @@ class UserController extends Controller {
             $videos = AdminVideo::all();
 
 
-            return view('user.index')
+            return view('user.home-video')
                         ->with('page' , 'home')
                         ->with('subPage' , 'home')
                         ->with('wishlists' , $wishlists)
