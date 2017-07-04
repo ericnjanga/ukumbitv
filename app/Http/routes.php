@@ -97,7 +97,7 @@ if(!defined('BANNER')) define('BANNER' , 'banner');
 if(!defined('WEB')) define('WEB' , 1);
 
 
-Route::get('/test' , 'ApplicationController@test');
+
 Route::get('/email/verification' , 'ApplicationController@email_verify')->name('email.verify');
 // Installation
 
@@ -139,6 +139,7 @@ Route::get('/terms-of-use', 'ApplicationController@terms')->name('user.terms-con
 
 Route::get('/about-us', 'ApplicationController@about')->name('user.about');
 Route::get('/jobs', 'ApplicationController@jobs')->name('user.jobs');
+Route::get('/test' , 'ApplicationController@test');
 
 // Video upload 
 
@@ -399,7 +400,9 @@ Route::get('video/{id}', 'UserController@single_video')->name('user.single');
 
 Route::get('newvideo/{id}', 'UserController@single_newvideo')->name('user.single'); // Added By Vishnu
 
-Route::get('watch/{id}', 'UserController@watchVideo')->name('user.single');
+Route::get('watch/{id}', 'UserController@watchVideo')->name('user.singleVideo');
+Route::get('watch', 'UserController@watchVideo')->name('user.singleVideo');
+
 
 
 

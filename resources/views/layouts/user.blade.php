@@ -38,7 +38,7 @@
 
 
 
-    	
+
       @yield('content')
 
 
@@ -56,7 +56,7 @@
 			});
 		</script>-->
   	<!-- Video Page script -->
-	  <!--<script src="{{asset('streamtube/js/app.videos-landing.js')}}"></script>-->
+
     @yield('scripts') 
 	</body>
 </html>

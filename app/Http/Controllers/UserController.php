@@ -48,7 +48,7 @@ class UserController extends Controller {
     {
         $this->UserAPI = $API;
         
-        $this->middleware('auth', ['except' => ['index','single_video','all_categories' ,'category_videos' , 'sub_category_videos' , 'contact','trending']]);
+        $this->middleware('auth', ['except' => ['watchVideo', 'index','single_video','all_categories' ,'category_videos' , 'sub_category_videos' , 'contact','trending']]);
     }
 
     /**
@@ -112,6 +112,7 @@ class UserController extends Controller {
             ->with('videos' , $videos)
             ->with('video', $video);
     }
+
 
 //Added New function by Vishnu
 
