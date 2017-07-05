@@ -1,46 +1,3 @@
-<!-- <div class="main-nav">
-	<div class="container">
-		<div class="col-md-12">
-	    <div class="brand pull-left">
-	      <a href="{{route('user.dashboard')}}" alt="UKUMBITV" class="y-image">
-	      	<img src="{{asset('streamtube/images/logo1.png')}}" alt='UkumbiTv' />
-	      </a>
-	    </div>
-
-	    <div class="main-nav__additional-links pull-right">
-
-			@if(App::isLocale('fr'))
-	      		<a href="{{url('setlocale/en')}}">English</a>
-			@else
-	      		<a href="{{url('setlocale/fr')}}">Français</a>
-			@endif
-	    </div> 
-
-
-
-
-			
-      <div class="y-button profile-button">
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          	fklfenwf fwekfew
-    				<span class="caret"></span> 
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="{{route('user.profile')}}">{{tr('account')}}</a></li> 
-            <li role="separator" class="divider"></li>
-            <li><a href="{{route('user.logout')}}">{{tr('logout')}}</a></li>
-          </ul>
-        </div>
-      </div> 
-
-	  </div>
-	</div> 
-</div> -->
-
-    
-
-
 <nav class="main-nav navbar navbar-default">
   <div class="container container-fluid-">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -84,12 +41,10 @@
 						<span class="user-name">[user name]</span>
            	<span class="caret"></span>
           </a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="{{route('user.profile')}}">{{tr('account')}}</a></li> 
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="{{route('user.logout')}}">{{tr('logout')}}</a></li>
           </ul>
         </li>
       </ul>

@@ -23,45 +23,28 @@
 	</head>
 
 	<body class="page-videos">
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=1900426896906624";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=1900426896906624";
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
     @include('layouts.user.header')
 
-
-
-
-
- 
-
-  
-
-
-
-
-      @yield('content')
-
+		@yield('content')
 
     @include('layouts.user.footer')
+
+
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
- 		
- 		<!--<script src="{{asset('streamtube/_resources/js/grid.js')}}"></script>-->
+ 		 
  		<script src="{{asset('streamtube/js/grid.js')}}"></script>
- 		<script src="{{asset('streamtube/js/app.videos-landing.js')}}"></script>
-
-		<!--<script>
-			$(function() {
-				Grid.init();
-			});
-		</script>-->
-  	<!-- Video Page script -->
-
+ 		<script src="{{asset('streamtube/js/app.videos-landing.js')}}"></script> 
+  	<!-- Video Page additional scripts --> 
     @yield('scripts') 
 	</body>
 </html>
