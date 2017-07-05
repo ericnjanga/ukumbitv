@@ -27,6 +27,20 @@
 	}
 }
 
+//Increase size of thumbnail on hover 
+//(if there is no touch event)
+.no-touchevents {
+	.og-tmb { 
+		&:hover {
+			.og-tmb1 {
+				transform: scale(1.5,1.5);
+				transition: all ease-out 0.2s; 
+			}
+		}
+	}
+}
+
+
 .og-grid li > a,
 .og-grid li > a img {
 	border: none;
