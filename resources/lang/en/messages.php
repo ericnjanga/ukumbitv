@@ -139,9 +139,9 @@ return array(
 	'change'	=> 	'Change',
 	'upgrade' => 'Upgrade',
 	'submit'	=>	'Submit',
-	'join_for_free_month'	=>	'Join free for a month',
-	'you_get_per_month'	=>	'For $2 a month, you get',
-	'first_month_free'	=>	'The first month is free',
+	'join_for_free_week'	=>	'Join / first week is free',
+	'you_get_per_month'	=>	'For $3 a month, you get',
+	'first_week_free'	=>	'The first week is free',
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',

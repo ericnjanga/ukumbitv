@@ -139,9 +139,9 @@ return array(
 	'change'	=> 	'Change',
 	'upgrade' => 'Upgrade',
 	'submit' 						=> 'Soumettre',
-	'join_for_free_month'	=>	'Abonnement gratuit le 1er mois',
-	'you_get_per_month'		=>	'Pour 2 $ par mois, vous obtenez',
-	'first_month_free'		=>	'Le premier mois est gratuit',
+	'join_for_free_week'	=>	'Abonnement / première semaine gratuite',
+	'you_get_per_month'		=>	'Pour 3$ par mois, vous obtenez',
+	'first_week_free'		=>	'Le première semaine est gratuite',
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',

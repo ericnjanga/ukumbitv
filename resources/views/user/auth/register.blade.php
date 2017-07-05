@@ -70,7 +70,7 @@ page-register
           <input type="password" name="password_confirmation" class="form-control" id="confirm_password" placeholder="{{trans('messages.confirm_password')}}">
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block">{{trans('messages.join_for_free_month')}}</button>
+        <button type="submit" class="btn btn-primary btn-block">{{trans('messages.join_for_free_week')}}</button>
 
       	<!-- [Additional links] -->
 				<footer class="text-center">
@@ -90,7 +90,7 @@ page-register
 
 	  @include('snippet.offers')
 
-  	<h3 class="cta-title txt-color-primary text-center">{{trans('messages.first_month_free')}}!</h3>
+  	<h3 class="cta-title txt-color-primary text-center">{{trans('messages.first_week_free')}}!</h3>
   </div>   
 </div><!--form-background end-->
 
