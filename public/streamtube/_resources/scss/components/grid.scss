@@ -135,7 +135,7 @@ $color-expender : #999;
 
 .og-expander-inner {
 	// padding: 50px 30px;
-	height: 100%;
+	// height: 100%;
 }
 
 .og-close {
@@ -176,18 +176,20 @@ $color-expender : #999;
 
 
 @media screen and (max-width: 999px) {
-
+	.og-expander-inner {
+		display: flex;
+    flex-direction: column-reverse;
+	}
 	.og-fullimg,
 	.og-details {
 		width: 100%;
-		left: 0;
+		// left: 0;
 	}
-	.og-details {
-		position: absolute;
-		bottom: 0;
-	}
+	// .og-details {
+	// 	position: absolute;
+	// 	bottom: 0;
+	// }
 	// .og-details { float: none; width: 100%; }
-	
 }
 
 @media screen and (min-width: 1000px) {
