@@ -19,6 +19,8 @@
 
 
 @import 'components/grid.scss'; 
+//Hidding elements of language 'A' when language 'B' is active
+@import 'components/lang-elt-control.scss'; 
 @import 'components/carousel.scss'; 
 @import 'components/form.scss'; 
 @import 'components/frosting-glass.scss'; 

@@ -1,0 +1,9 @@
+
+/**
+ * Hidding elements of language 'A' when language 'B' is active
+ * ------------------------------------------------------------
+**/
+body.lang-en [data-lang="fr"],
+body.lang-fr [data-lang="en"]{
+	display: none;
+}

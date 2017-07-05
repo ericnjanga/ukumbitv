@@ -101,6 +101,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/_resources\/scss\/components\/lang-elt-control.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/_resources\/scss\/components\/lang-elt-control.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/_resources\/scss\/global\/animations.scss": {
 		"aP": 0,
 		"bl": 0,

@@ -22,7 +22,7 @@
 	    @yield('styles') 
 	</head>
 
-	<body class="page-videos">
+	<body class="lang-{{App::getLocale()}} page-videos">
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
