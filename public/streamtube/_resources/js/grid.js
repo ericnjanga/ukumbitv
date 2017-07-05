@@ -461,7 +461,7 @@ var Grid = (function() {
 		},
 		calcHeight : function() {
 
-			console.log('>>>this=', this);
+			console.log('>>>this.og-details=', this.$item.find('.og-details').height());
 			console.log('>>>this.$item=', this.$item);
 
 			var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
