@@ -344,9 +344,8 @@ var Grid = (function() {
 			// create Preview structure:
 			this.$title = $( '<h3 class="og-title"></h3>' );
 			this.$description = $( '<p></p>' );
-			this.$href_EN = $( '<a href="#" data-lang="en" class="og-btn-play-sm">Play Video</a>' );
-			this.$href_FR = $( '<a href="#" data-lang="fr" class="og-btn-play-sm">Jouer La Video</a>' );
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href_EN, this.$href_FR );
+			this.$href_EN = $( '<a href="#" data-lang="en" class="og-btn-play-sm">Play Video</a>' ); 
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading )
 			//append also 'play icon'
@@ -394,8 +393,7 @@ var Grid = (function() {
 
 			//Upade play button href
 			this.$item.find('.og-btn-play').attr('href', eldata.href);
-			this.$href_EN.attr( 'href', eldata.href );
-			this.$href_FR.attr( 'href', eldata.href );
+			this.$href_EN.attr( 'href', eldata.href ); 
 
 
 			var self = this;
@@ -462,6 +460,9 @@ var Grid = (function() {
 
 		},
 		calcHeight : function() {
+
+			console.log('>>>this=', this);
+			console.log('>>>this.$item=', this.$item);
 
 			var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
 				itemHeight = winsize.height;

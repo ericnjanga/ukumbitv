@@ -182,14 +182,11 @@ $color-expender : #999;
 	}
 	.og-fullimg,
 	.og-details {
-		width: 100%;
-		// left: 0;
+		width: 100%; 
 	}
-	// .og-details {
-	// 	position: absolute;
-	// 	bottom: 0;
-	// }
-	// .og-details { float: none; width: 100%; }
+	.og-details {
+	  margin-bottom: 30px;
+	} 
 }
 
 @media screen and (min-width: 1000px) {
