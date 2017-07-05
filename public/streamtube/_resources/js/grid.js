@@ -372,6 +372,8 @@ var Grid = (function() {
 				var $currentItem = $items.eq( current );
 				$currentItem.removeClass( 'og-expanded' );
 				this.$item.addClass( 'og-expanded' );
+				console.log('>>>1=', $currentItem.find('.og-tmb1'));
+				console.log('>>>1=', this.$item.find('.og-tmb1'));
 				this.$item.find('.og-tmb1').addClass( 'og-parent-expanded' );
 				// position the preview correctly
 				this.positionPreview();
