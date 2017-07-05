@@ -210,10 +210,11 @@ $color-expender : #999;
 
 .og-fullimg {
 	text-align: center;
+	og-fullimg;
 }
 
 .og-fullimg img {
-	float: left;
+	// float: left;
 	display: inline-block;
 	max-height: 100%;
 	max-width: 100%;
