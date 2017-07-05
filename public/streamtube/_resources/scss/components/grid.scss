@@ -100,7 +100,11 @@ $color-expender : #999;
 }
 
 .og-title {
-	color: #fff; 
+	color: #fff;  
+	font-weight: 300;
+	font-size: 52px;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
 }
 .og-details {
 	p {
@@ -135,11 +139,12 @@ $color-expender : #999;
 }
 
 .og-close {
+	$btn-pos : 0; //20px;
 	position: absolute;
 	width: 40px;
 	height: 40px;
-	top: 20px;
-	right: 20px;
+	top: $btn-pos;
+	right: $btn-pos;
 	cursor: pointer;
 	z-index: 10;
 }
@@ -172,7 +177,7 @@ $color-expender : #999;
 .og-details {
 	width: 65%;
 	float: left;
-	height: 100%;
+	// height: 100%;
 	overflow: hidden;
 	position: relative;
 }
@@ -193,12 +198,7 @@ $color-expender : #999;
 	max-width: 100%;
 }
 
-.og-details h3 {
-	font-weight: 300;
-	font-size: 52px;
-	padding: 40px 0 10px;
-	margin-bottom: 10px;
-}
+
  
 
 .og-details a {
