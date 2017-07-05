@@ -28,13 +28,15 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right"> 
-      	<li>
+      	<!-- hidding search for now -->
+      	<!-- ...................... -->
+      	<!-- <li>
       		<form class="navbar-form navbar-left">
 		        <div class="form-group">
 		          <input type="text" class="form-control search-control" placeholder="Search">
 		        </div> 
 		      </form>
-      	</li>
+      	</li> -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
           	<img src="http://via.placeholder.com/40x40" data-pin-nopin="true" class="img-circle">
