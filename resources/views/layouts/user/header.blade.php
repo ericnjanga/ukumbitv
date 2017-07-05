@@ -39,8 +39,8 @@
       	</li> -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          	<img src="http://via.placeholder.com/40x40" data-pin-nopin="true" class="img-circle">
-						<span class="user-name">[user name]</span>
+          	<img src="{{Auth::user()->picture}}" style="width:40px;height:40px;" data-pin-nopin="true" class="img-circle">
+						<span class="user-name">{{Auth::user()->name}}</span>
            	<span class="caret"></span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
