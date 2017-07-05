@@ -29,11 +29,16 @@
 
 //Increase size of thumbnail on hover 
 //(if there is no touch event)
+//(and column is not expanded)
 .no-touchevents {
-	.og-tmb1 { 
-		transition: all ease-out 0.2s;  
-		&:hover { 
-			transform: scale(1.5,1.5);
+	.og-grid{
+		.col:not(.og-expanded) {
+			.og-tmb1 { 
+				transition: all ease-out 0.2s;  
+				&:hover { 
+					transform: scale(1.5,1.5);
+				}
+			}
 		}
 	}
 }
