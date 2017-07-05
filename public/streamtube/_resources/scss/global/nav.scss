@@ -55,7 +55,9 @@
 	
 	// for medium and large screens ...
 	@media (min-width: 768px) {
+		$container-height: 70px;
 		.container {
+			height: $container-height;
 			display: flex;
     	align-items: center;
     	.navbar-brand {
@@ -64,7 +66,7 @@
     	.navbar-collapse{
     		display: flex!important;
 		    align-items: center;
-		    height: 70px!important;
+		    height: $container-height!important;
 		    flex: 1;
     	}
     	.navbar-right {
