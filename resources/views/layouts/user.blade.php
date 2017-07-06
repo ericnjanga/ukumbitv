@@ -16,10 +16,9 @@
 	    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/app.css')}}"> 
 	    <link rel="shortcut icon" type="image/png" href="{{asset('streamtube/images/logo2-fav.png')}}"/>
 	    <script src="{{asset('streamtube/js/vendors/modernizr-custom.js')}}"></script>
-	    <!--  
-	    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/style.css')}}">
-	    <link rel="stylesheet" type="text/css" href="{{asset('streamtube/css/responsive.css')}}"> --> 
 	    @yield('styles') 
+
+	    @yield('headscripts')
 	</head>
 
 	<body class="lang-{{App::getLocale()}} page-videos">

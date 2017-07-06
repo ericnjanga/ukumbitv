@@ -1,393 +1,89 @@
 @extends('layouts.user')
 
 @section('styles')
+<!--
  <link href="{{asset('assets/css/newvideo1.css')}}" rel="stylesheet">
   <script src="{{asset('assets/js/newvideo1.js')}}"></script>
-<style type="text/css">
-.common-youtube {
-    min-height: 0px !important;
-}
-textarea[name=comments] {
-    resize: none;
-}
-.youtube-nav,footer{display:none;}
-.profile-content{margin-top:0px !important;}
-
-</style>
-
+-->
 @endsection
+
+
+
+@section('headscripts')
+	<script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer.js"></script>
+@endsection
+
+
 
 @section('content')
 
-    <div class="y-content">
+<div id="player"></div>
+<script type="text/javascript">
+    var conf = {
+        key:       "bb175f20-6e3a-4edb-af12-619f8e67c88e",
+        source: {
+          dash:        "{{$video->video}}",
+          hls:         "{{$video->video}}",
+          progressive: "{{$video->video}}",
+          poster:      "//bitmovin-a.akamaihd.net/content/MI201109210084_1/poster.jpg"
+        }
+    };
+    var player = bitmovin.player("player");
+    player.setup(conf).then(function(value) {
+        // Success
+        console.log("Successfully created bitmovin player instance");
+    }, function(reason) {
+        // Error!
+        console.log("Error while creating bitmovin player instance");
+    });
+</script>
 
-        <div class="row y-content-row">
 
-          <!--  @include('layouts.user.nav')-->
 
-            <div class="page-inner col-sm-12 col-md-12 profile-edit">
+<div class="fb-share-button" data-href="https://ukumbitv.com/watch/{{$video->watchid}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fukumbitv.com%2Fwatch%2F{{$video->watchid}}&amp;src=sdkpreparse">Share</a></div>
+  <div class="fb-comments" data-colorscheme="dark" data-href="https://ukumbitv.com/watch/{{$video->watchid}}" data-numposts="5"></div>
+</div>
 
-                <div class="profile-content">
 
-                    <div class="row">
+<!-- 
 
-                        <div class="col-sm-12 col-md-12 play-video">
-                            <video width="400" height="300" controls="controls" poster="{{$video->default_image}}">
-                                @if (Auth::guest())
-                                NO PLAY
-                                @else
-                                    <source src="{{$video->video}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                                    @endif
+<div class="">
+  <video width="400" height="300" controls="controls" poster="{{$video->default_image}}">
+      @if (Auth::guest())
+      NO PLAY
+      @else
+          <source src="{{$video->video}}" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+          @endif
 
-                                Tag video not supported your browser.
+      Tag video not supported your browser.
 
-                            </video>
-                            <br>
-                            <div class="fb-share-button" data-href="https://ukumbitv.com/watch/{{$video->watchid}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fukumbitv.com%2Fwatch%2F{{$video->watchid}}&amp;src=sdkpreparse">Share</a></div>
-                            <div class="fb-comments" data-colorscheme="dark" data-href="https://ukumbitv.com/watch/{{$video->watchid}}" data-numposts="5"></div>
+  </video>
+  <br>
+   -->
 
-                            {{--@include('user.videos.streaming')--}}
 
-                            <?php /*?><div class="main-content">
-                                <div class="video-content">
-                                    <div class="details">
-                                        <div class="video-title">
-                                            <div class="title row">
-                                                <div style="width: 55%;">
-                                                    <h3>{{$video->title}}</h3>
-                                                </div>
-                                                <div class="watch-duration">
 
-                                                    <form method="post" name="watch_main_video">
 
-                                                        @if(Auth::check())
 
-															<div class="pull-left">
-                                                            @if(watchFullVideo(Auth::user()->id, Auth::user()->user_type, $video) ==  1)
 
-                                                                <button type="submit" id="watch_main_video_button" class="watch-button" style="background:green;">{{tr('watch_main_video')}}</button>
 
-                                                                <!-- <p>{{tr('duration')}} {{$video->duration}}</p> -->
-                                                            @else
-
-                                                                @if(envfile('PAYPAL_ID') && envfile('PAYPAL_SECRET'))
-
-                                                                    <button  type="button" class="watch-button" data-toggle="modal" data-target="#paypal"  style="background:green;">{{tr('watch_main_video')}}</button>
-                                                                @else
-
-                                                                    <button  type="button" class="watch-button" disabled  style="background:green;">{{tr('watch_main_video')}}</button>
-                                                                @endif
-
-
-
-                                                                <div class="modal fade cus-mod" id="paypal" role="dialog">
-                                                                    <div class="modal-dialog">
-
-                                                                      <!-- Modal content-->
-                                                                      <div class="modal-content">
-
-                                                                            <div class="modal-header">
-                                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                                                <h4 class="modal-title text-center">{{tr('pay_now_content')}}</h4>
-                                                                            </div>
-
-
-                                                                            <div class="modal-body">
-                                                                                <!-- <p>Please Pay to see the full video</p>  -->
-                                                                                @if($video->amount > 0)
-                                                                                    <a href="{{route('videoPaypal' , $video->admin_video_id)}}" class="btn btn-danger">{{tr('paynow')}}</a>
-                                                                                @else
-                                                                                    <a href="{{route('paypal' , Auth::user()->id)}}" class="btn btn-danger">{{tr('paynow')}}</a>
-                                                                                @endif
-                                                                            </div>
-
-
-                                                                      </div>
-
-                                                                    </div>
-
-                                                                </div>
-
-                                                            @endif
-                                                        </div>
-                                                        <div class="pull-right">
-                                                            @if($flaggedVideo == '')
-                                                                <button onclick="showReportForm();" type="button" class="report-button"><i class="fa fa-flag"></i> {{tr('report')}}</button>
-                                                            @else
-                                                                <a href="{{route('user.remove.report_video', $flaggedVideo->id)}}" class="btn btn-warning"><i class="fa fa-flag"></i> {{tr('remove_report')}}</a>
-                                                            @endif
-
-                                                        </div>
-                                                        <div class="clearfix"></div>
-                                                        @else
-
-                                                            <button type="button" class="watch-button" data-toggle="modal" data-target="#watchMainVideo">{{tr('watch_main_video')}}</button>
-
-                                                            <div class="modal fade cus-mod" id="watchMainVideo" role="dialog">
-                                                                <div class="modal-dialog">
-
-                                                                  <!-- Modal content-->
-                                                                  <div class="modal-content">
-
-                                                                        <div class="modal-header">
-                                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                                            <h4 class="modal-title text-center">{{tr('pay_now_login_content')}}</h4>
-                                                                        </div>
-
-                                                                        <div class="modal-body text-center">
-                                                                            <!-- <p>Click here to login</p>  -->
-                                                                            <a href="{{route('user.login.form')}}" class="btn btn-danger">{{tr('login')}}</a>
-                                                                        </div>
-
-                                                                  </div>
-
-                                                                </div>
-                                                            </div>
-
-                                                        @endif
-
-                                                    </form>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="video-description">
-                                                <h4>{{tr('description')}}</h4>
-                                                <p>{{$video->description}}</p>
-                                            </div><!--end of video-description-->
-                                        </div><!--end of video-title-->
-                                    </div><!--end of details-->
-
-                                    @if ($flaggedVideo == '')
-                                        <div class="more-content" style="display: none;" id="report_video_form">
-                                            <form name="report_video" method="post" id="report_video" action="{{route('user.add.spam_video')}}">
-                                                <b>Report this Video ?</b>
-                                                <br>
-                                                @foreach($report_video as $report)
-                                                    <input type="radio" name="reason" value="{{$report->value}}" required> {{$report->value}}<br>
-                                                @endforeach
-                                                <input type="hidden" name="video_id" value="{{$video->admin_video_id}}" />
-                                                <p class="help-block"><small>If you report this video, you won't see again the same video in anywhere in your account except "Spam Videos". If you want to continue to report this video as same. Click continue and proceed the same.</small></p>
-                                                <div class="pull-right">
-                                                    <button class="btn btn-success btn-sm">Mark as Spam</button>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </form>
-                                        </div>
-                                    @endif
-
-                                    <div class="more-content">
-
-                                        <div class="share-details row">
-
-                                            <form name="add_to_wishlist" method="post" id="add_to_wishlist" action="{{route('user.add.wishlist')}}">
-                                                @if(Auth::check())
-
-                                                    <input type="hidden" value="{{$video->admin_video_id}}" name="admin_video_id">
-
-                                                    @if(count($wishlist_status) == 1)
-
-                                                        <input type="hidden" id="status" value="0" name="status">
-
-                                                        <input type="hidden" id="wishlist_id" value="{{$wishlist_status->id}}" name="wishlist_id">
-
-                                                        @if($flaggedVideo == '')
-                                                        <div class="mylist">
-                                                            <button style="background-color:rgb(229, 45, 39);" type="submit" id="added_wishlist" data-toggle="tooltip" title="Add to My List">
-                                                                <i class="fa fa-heart"></i>
-                                                                <span>{{tr('added_wishlist')}}</span>
-                                                            </button>
-                                                        </div>
-                                                        @endif
-                                                    @else
-
-                                                        <input type="hidden" id="status" value="1" name="status">
-
-                                                        <input type="hidden" id="wishlist_id" value="" name="wishlist_id">
-                                                        @if($flaggedVideo == '')
-                                                            <div class="mylist">
-                                                                <button type="submit" id="added_wishlist" data-toggle="tooltip" title="Add to My List">
-                                                                    <i class="fa fa-heart"></i>
-                                                                    <span>{{tr('add_to_wishlist')}}</span>
-                                                                </button>
-                                                            </div>
-                                                        @endif
-                                                    @endif
-
-                                                @else
-                                                    <!-- Login Popup -->
-                                                @endif
-
-                                            </form>
-
-                                            <div class="share">
-                                                <a class="share-fb" target="_blank" href="http://www.facebook.com/sharer.php?u={{route('user.single',$video->admin_video_id)}}">
-
-                                                    <i class="fa fa-facebook"></i>{{tr('share_on_fb')}}
-
-                                                </a>
-
-                                                <a class="share-twitter" target="_blank" href="http://twitter.com/share?text={{$video->title}}...&url={{route('user.single',$video->admin_video_id)}}">
-
-                                                    <i class="fa fa-twitter"></i>{{tr('share_on_twitter')}}
-
-                                                </a>
-                                            </div><!--end of share-->
-
-                                            <div class="stars ratings">
-                                                <a href="#"><i @if($video->ratings > 1) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
-                                                <a href="#"><i @if($video->ratings > 2) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
-                                                <a href="#"><i @if($video->ratings > 3) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
-                                                <a href="#"><i @if($video->ratings > 4) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
-                                                <a href="#"><i @if($video->ratings > 5) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
-                                            </div><!--end of stars-->
-
-                                        </div><!--end of share-details-->
-                                    </div>
-                                    <!--end of more-content-->
-
-                                </div><!--end of video-content-->
-
-                                @if(count($comments) > 0) <div class="v-comments"> @endif
-
-                                    @if(count($comments) > 0)
-                                        <h3>{{tr('comments')}}
-                                            <span class="c-380" id="comment_count">{{count($comments)}}</span>
-                                        </h3>
-                                    @endif
-
-                                    <div class="com-content">
-                                        @if(Auth::check())
-
-                                            <div class="image-form">
-                                                <div class="comment-box1">
-                                                    <div class="com-image">
-                                                        <img style="width:48px;height:48px" src="{{Auth::user()->picture}}">
-                                                    </div><!--end od com-image-->
-
-                                                    <div id="comment_form">
-                                                        <div>
-                                                            <form method="post" id="comment_sent" name="comment_sent" action="{{route('user.add.comment')}}">
-
-                                                                <input type="hidden" value="{{$video->admin_video_id}}" name="admin_video_id">
-
-                                                                <textarea rows="10" id="comment" name="comments" placeholder="{{tr('add_comment_msg')}}"></textarea>
-
-                                                                <input style="float:right;margin-bottom:10px;display:none" type="submit" name="submit" value="send">
-                                                            </form>
-                                                        </div>
-                                                    </div>  <!--end of comment-form-->
-                                                </div>
-
-                                            </div>
-
-                                        @endif
-
-                                        @if(count($comments) > 0)
-
-                                            <div class="feed-comment">
-
-                                                <span id="new-comment"></span>
-
-                                                @foreach($comments as $c =>  $comment)
-
-                                                    <div class="display-com">
-                                                        <div class="com-image">
-                                                            <img style="width:48px;height:48px" src="{{$comment->picture}}">
-                                                        </div><!--end od com-image-->
-
-                                                        <div class="display-comhead">
-                                                            <span class="sub-comhead">
-                                                                <a href="#"><h5 style="float:left">{{$comment->username}}</h5></a>
-                                                                <a href="#" class="text-none"><p>{{$comment->created_at->diffForHumans()}}</p></a>
-                                                                <p class="com-para">{{$comment->comment}}</p>
-                                                            </span>
-
-                                                        </div><!--display-comhead-->
-                                                    </div><!--display-com-->
-
-                                                @endforeach
-
-                                            </div>
-
-                                        @else
-                                            <div class="feed-comment">
-
-                                                <span id="new-comment"></span>
-                                            </div>
-                                            <!-- <p>{{tr('no_comments')}}</p> -->
-
-                                        @endif
-
-                                    </div>
-
-                                @if(count($comments) > 0) </div> @endif<!--end of v-comments-->
-
-                            </div><?php */?>
-
-                            <!--end of main-content-->
-
-                        </div>
-
-                        <!--end of col-sm-8 and play-video-->
-
-                        <?php /*?><div class="col-sm-12 col-md-4 side-video custom-side">
-                            <div class="up-next">
-                                <h4 class="sugg-head1">{{tr('suggestions')}}</h4>
-
-                                <ul class="video-sugg">
-
-                                    @foreach($suggestions as $suggestion)
-                                        <li class="sugg-list row">
-                                            <div class="main-video">
-                                                 <div class="video-image">
-                                                    <div class="video-image-outer">
-                                                        <a href="{{route('user.single' , $suggestion->admin_video_id)}}"><img src="{{$suggestion->default_image}}"></a>
-                                                    </div>
-                                                </div><!--video-image-->
-
-                                                <div class="sugg-head">
-                                                    <div class="suggn-title">
-                                                        <h5><a href="{{route('user.single' , $suggestion->admin_video_id)}}">{{$suggestion->title}}</a></h5>
-                                                    </div><!--end of sugg-title-->
-
-                                                    <div class="sugg-description">
-                                                        <p>{{tr('duration')}}: {{$suggestion->duration}}</p>
-                                                    </div><!--end of sugg-description-->
-
-                                                    <span class="stars">
-                                                        <a href="#"><i @if($suggestion->ratings > 1) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
-                                                        <a href="#"><i @if($suggestion->ratings > 2) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
-                                                        <a href="#"><i @if($suggestion->ratings > 3) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
-                                                        <a href="#"><i @if($suggestion->ratings > 4) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
-                                                        <a href="#"><i @if($suggestion->ratings > 5) style="color:gold" @endif class="fa fa-star" aria-hidden="true"></i></a>
-                                                    </span>
-                                                </div><!--end of sugg-head-->
-
-                                            </div><!--end of main-video-->
-                                        </li><!--end of sugg-list-->
-                                    @endforeach
-
-
-                                </ul>
-                            </div><!--end of up-next-->
-
-                        </div><?php */?><!--end of col-sm-4-->
-
+<!--     <div class="y-content"> 
+        <div class="row y-content-row">  
+            <div class="page-inner col-sm-12 col-md-12 profile-edit"> 
+                <div class="profile-content"> 
+                    <div class="row"> 
                     </div>
-                </div>
+                </div> 
+            </div> 
+        </div> 
+    </div> -->
 
-            </div>
-
-        </div><!--y-content-row-->
-    </div>
-
-    <!--end of y-content-->
+   
 
 @endsection
 
 @section('scripts')
+<!--
     <script type="text/javascript">
         $(document).ready(function(){
             $('.video-y-menu').addClass('hidden');
@@ -403,8 +99,8 @@ textarea[name=comments] {
     </script>
 
     <script src="{{asset('jwplayer/jwplayer.js')}}"></script>
-
     <script>jwplayer.key="{{envfile('JWPLAYER_KEY')}}";</script>
+ 
 
     <script type="text/javascript">
 
@@ -769,5 +465,5 @@ textarea[name=comments] {
         });
 
     </script>
-
+-->
 @endsection
