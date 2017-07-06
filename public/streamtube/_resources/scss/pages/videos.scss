@@ -3,7 +3,12 @@
 
 
 
-.page-videos {
+.page-homevideos {
+/*Hide singlevideo navigation here*/
+	.main-nav-singlevideo{
+		display : none;
+	}
+
 	.main-nav {
 		position: fixed;
     z-index: 99;

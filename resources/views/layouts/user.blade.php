@@ -21,7 +21,7 @@
 	    @yield('headscripts')
 	</head>
 
-	<body class="lang-{{App::getLocale()}} page-videos">
+	<body class="lang-{{App::getLocale()}} @yield('body-class')">
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -31,7 +31,8 @@
           fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
 
-    @include('layouts.user.header-video')
+    @include('layouts.user.header-homevideo')
+    @include('layouts.user.header-singlevideo')
 
 		@yield('content')
 

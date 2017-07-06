@@ -1,22 +1,29 @@
 @extends('layouts.user')
 
+
+@section('body-class')
+page-singlevideo
+@endsection 
+
+
 @section('styles')
-<!--
- <link href="{{asset('assets/css/newvideo1.css')}}" rel="stylesheet">
-  <script src="{{asset('assets/js/newvideo1.js')}}"></script>
--->
 <style>
+/*Hide homevideo navigation here*/
+.page-singlevideos .main-nav-homevideo{
+	display : none;
+}
+
 /*Removing "bitmovin" watermark logo from player*/
 .bmpui-ui-watermark {
   display: none;
 }
 
-.btn-back {
+/*.btn-back {
 	position: absolute;
 	top: 40px;
 	left: 40px;
 	z-index: 9999999999;
-}
+}*/
 
 #player {
 	margin-bottom: 30px;
@@ -34,8 +41,8 @@
 
 @section('content')
 
-
-<button id="btn-back" class="btn btn-back" style="display:none;">return</button>
+<!-- 
+<button id="btn-back" class="btn btn-back" style="display:none;">return</button> -->
 <div id="player">{{$video->video}}</div>
 <script type="text/javascript">
 	//Setup here:
@@ -88,7 +95,7 @@
 
 @section('scripts')
 <script>
-	var $btn_back = $('#btn-back'),
+	var $nav = $('.main-nav-singlevideo'),
 			t_hide_btn = 0;
 	//...
 	$('body').mousemove(function( event ) {
@@ -96,8 +103,8 @@
 
 		clearTimeout(t_hide_btn);
 
-		if($btn_back.is(':hidden')){
-			$btn_back.fadeIn('slow');
+		if($nav.is(':hidden')){
+			$nav.fadeIn('slow');
 		}
 		
 	  
@@ -109,7 +116,7 @@
 		    // $('.fall').fadeOut('slow');
 		    // $('.fall').remove();
 		    t_hide_btn = setTimeout(function(){
-		    	$btn_back.fadeOut('slow');
+		    	$nav.fadeOut('slow');
 		    }, 2000);
 		  }
 		}, 1000)

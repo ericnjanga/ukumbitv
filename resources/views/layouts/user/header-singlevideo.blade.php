@@ -1,4 +1,4 @@
-<nav class="main-nav navbar navbar-default">
+<nav class="main-nav-singlevideo main-nav navbar navbar-default">
   <div class="container container-fluid-">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -20,7 +20,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active">
+        <li class="active-">
         	<a href="#">
         		<i class="fa fa-facebook-official" aria-hidden="true"></i>
         		{{trans('comment_and_share')}} 

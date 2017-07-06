@@ -1,13 +1,16 @@
 @extends('layouts.user')
 
-@section('styles')
 
+@section('body-class')
+page-homevideo
+@endsection 
+
+
+@section('styles')
 @endsection
 
+
 @section('content')
-
-
-
     <div class="main-content video-content">
         @include('layouts.user.latest-uploads.hero-carousel')
 
