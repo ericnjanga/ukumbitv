@@ -2,11 +2,11 @@
   <div class="container container-fluid-">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-
-      <a id="btn-history-back" class="navbar-brand" href="#">
+			
+			<button id="btn-history-back" class="btn btn-link navbar-brand">
 				<i class="fa fa-arrow-circle-left" aria-hidden="true"></i> 
 				{{trans('back-to-browse')}} 
-      </a>
+			</button> 
 
 
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
