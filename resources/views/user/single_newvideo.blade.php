@@ -21,6 +21,7 @@
 <script type="text/javascript">
     var conf = {
         key:       "bb175f20-6e3a-4edb-af12-619f8e67c88e",
+        autoplay : true,
         source: {
           dash:        "{{$video->video}}",
           hls:         "{{$video->video}}",
