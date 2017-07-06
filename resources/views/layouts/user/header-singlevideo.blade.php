@@ -5,7 +5,7 @@
 			
 			<button id="btn-history-back" class="btn btn-link navbar-brand">
 				<i class="fa fa-arrow-circle-left" aria-hidden="true"></i> 
-				{{trans('back-to-browse')}} 
+				{{trans('messages.back-to-browse')}} 
 			</button> 
 
 
@@ -21,9 +21,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active-">
-        	<a href="#">
+        	<a href="#comment_or_share">
         		<i class="fa fa-facebook-official" aria-hidden="true"></i>
-        		{{trans('comment_and_share')}} 
+        		{{trans('messages.comment_or_share')}} 
         </li> 
       </ul> 
     </div><!-- /.navbar-collapse -->

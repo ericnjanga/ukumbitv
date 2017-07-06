@@ -673,6 +673,6 @@ return array(
   'translate_website_in' => 'Traduire le site web en',,
 
   'back_to_browse' => 'Retour aux vidéos',
-  'comment_and_share' => 'Commenter and Partager',
+  'comment_or_share' => 'Commenter ou Partager',
 
 );

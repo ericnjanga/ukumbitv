@@ -49,6 +49,7 @@ page-singlevideo
 
 <!-- Facebook comment and share -->
 <div class="container">
+	<a name="comment_or_share"></a>
 	<div class="row">
 		<!-- Facebook comment -->
 		<div class="col-md-6">
