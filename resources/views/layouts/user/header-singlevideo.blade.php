@@ -5,17 +5,17 @@
 			
 			<button id="btn-history-back" class="btn btn-link navbar-brand">
 				<i class="fa fa-arrow-circle-left" aria-hidden="true"></i> 
-				{{trans('messages.back-to-browse')}} 
+				{{trans('messages.back_to_browse')}} 
 			</button> 
 
 
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">{{trans('messages.Toggle_navigation')}}</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>    
-    </div>
+    </div>'Toggle_navigation'
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

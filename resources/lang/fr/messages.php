@@ -674,5 +674,6 @@ return array(
 
   'back_to_browse' => 'Retour aux vidéos',
   'comment_or_share' => 'Commenter ou Partager',
+  'Toggle_navigation' => 'Basculer le menu',
 
 );

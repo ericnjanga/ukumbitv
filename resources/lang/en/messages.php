@@ -690,6 +690,7 @@ return array(
 
   'back_to_browse' => 'Back to Browse', 
   'comment_or_share' => 'Comment or Share',
+  'Toggle_navigation' => 'Toggle navigation',
 
  
 );
