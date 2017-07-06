@@ -11,7 +11,7 @@
   display: none;
 }
 
-.btn-return {
+.btn-back {
 	position: absolute;
 	top: 40px;
 	left: 40px;
@@ -68,17 +68,38 @@
 
 
 
-
+$('#btn-back').is(':hidden')
 
 
 @section('scripts')
 <script>
+	var $btn_back = $('#btn-back'),
+			t_hide_btn = 0;
+	//...
 	$('body').mousemove(function( event ) {
 		console.log('move');
-		$('#btn-back').fadeIn('fast');
-	  // var msg = "Handler for .mousemove() called at ";
-	  // msg += event.pageX + ", " + event.pageY;
-	  // $( "#log" ).append( "<div>" + msg + "</div>" );
+
+		clearTimeout(t_hide_btn);
+		
+		if($btn_back.is(':hidden')){
+			$btn_back.fadeIn('slow');
+		}
+		
+	  
+
+	  var lastTimeMouseMoved = new Date().getTime();
+		var t = setTimeout(function() {
+		  var currentTime = new Date().getTime();
+		  if (currentTime - lastTimeMouseMoved > 1000) {
+		    // $('.fall').fadeOut('slow');
+		    // $('.fall').remove();
+		    t_hide_btn = setTimeout(function(){
+		    	$btn_back.fadeOut('slow');
+		    }, 2000);
+		  }
+		}, 1000)
+
+
 	});
 </script>
 @endsection
