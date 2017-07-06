@@ -9,7 +9,7 @@ page-singlevideo
 @section('styles')
 <style>
 /*Hide homevideo navigation here*/
-.page-singlevideos .main-nav-homevideo{
+.page-singlevideo .main-nav-homevideo{
 	display : none;
 }
 
