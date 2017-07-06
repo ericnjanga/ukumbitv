@@ -670,5 +670,9 @@ return array(
   'jobs' => 'Emplois',
   'Movies' => 'Films',
   'TvShows' => 'Séries Télé',
-  'translate_website_in' => 'Traduire le site web en',
+  'translate_website_in' => 'Traduire le site web en',,
+
+  'back_to_browse' => 'Retour aux vidéos',
+  'comment_and_share' => 'Commenter and Partager',
+
 );

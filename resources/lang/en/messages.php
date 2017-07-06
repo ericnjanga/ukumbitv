@@ -688,6 +688,8 @@ return array(
   'TvShows' => 'Tv Shows',
   'translate_website_in' => 'Translate website in',
 
+  'back_to_browse' => 'Back to Browse', 
+  'comment_and_share' => 'Comment and Share',
 
-
+ 
 );
