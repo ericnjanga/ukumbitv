@@ -2,7 +2,7 @@
 
 
 @section('body-class')
-page-homevideo
+page-homevideos
 @endsection 
 
 
