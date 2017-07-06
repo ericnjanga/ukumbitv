@@ -17,26 +17,26 @@
 
 @section('content')
 
-<div id="player"></div>
+<div id="player">{{$video->video}}</div>
 <script type="text/javascript">
-    var conf = {
-        key:       "bb175f20-6e3a-4edb-af12-619f8e67c88e",
-        autoplay : true,
-        source: {
-          dash:        "{{$video->video}}",
-          hls:         "{{$video->video}}",
-          progressive: "{{$video->video}}",
-          poster:      "//bitmovin-a.akamaihd.net/content/MI201109210084_1/poster.jpg"
-        }
-    };
-    var player = bitmovin.player("player");
-    player.setup(conf).then(function(value) {
-        // Success
-        console.log("Successfully created bitmovin player instance");
-    }, function(reason) {
-        // Error!
-        console.log("Error while creating bitmovin player instance");
-    });
+    // var conf = {
+    //     key:       "bb175f20-6e3a-4edb-af12-619f8e67c88e",
+    //     autoplay : true,
+    //     source: {
+    //       dash:        "{{$video->video}}",
+    //       hls:         "{{$video->video}}",
+    //       progressive: "{{$video->video}}",
+    //       poster:      "//bitmovin-a.akamaihd.net/content/MI201109210084_1/poster.jpg"
+    //     }
+    // };
+    // var player = bitmovin.player("player");
+    // player.setup(conf).then(function(value) {
+    //     // Success
+    //     console.log("Successfully created bitmovin player instance");
+    // }, function(reason) {
+    //     // Error!
+    //     console.log("Error while creating bitmovin player instance");
+    // });
 </script>
 
 
