@@ -3,9 +3,9 @@
 	<head>
 		@if (isset($videoTitle->title))
 			<title>UkumbiTV, watch {{$videoTitle->title}}</title>
-			@else
+		@else
 			<title>{{trans('messages.site_name')}} - {{trans('messages.website_description')}}</title>
-			@endif
+		@endif
 
 	    
 
