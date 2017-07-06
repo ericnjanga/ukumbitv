@@ -10,6 +10,13 @@
 .bmpui-ui-watermark {
   display: none;
 }
+
+.btn-return {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	z-index: 9999999999;
+}
 </style>
 @endsection
 
@@ -23,6 +30,8 @@
 
 @section('content')
 
+
+<button class="btn btn-return">return</button>
 <div id="player">{{$video->video}}</div>
 <script type="text/javascript">
 	//Setup here:
