@@ -5,6 +5,12 @@
  <link href="{{asset('assets/css/newvideo1.css')}}" rel="stylesheet">
   <script src="{{asset('assets/js/newvideo1.js')}}"></script>
 -->
+<style>
+/*Removing "bitmovin" watermark logo from player*/
+.bmpui-ui-watermark {
+  display: none;
+}
+</style>
 @endsection
 
 
