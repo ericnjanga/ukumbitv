@@ -18,11 +18,11 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/_resources\/js\/app.single-videos.js": {
+	"\/_resources\/js\/app.single-video.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/app.single-videos.js",
+		"oAP": "\/js\/app.single-video.js",
 		"oF": 2,
 		"sC": 1,
 		"tS": 0
@@ -720,20 +720,20 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/js\/app.home-videos.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/app.home-videos-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/app.unauth.decor.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/app.unauth.decor-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/js\/app.videos-landing.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/app.videos-landing-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
