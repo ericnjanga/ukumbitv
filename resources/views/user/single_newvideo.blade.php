@@ -17,6 +17,10 @@
 	left: 40px;
 	z-index: 9999999999;
 }
+
+#player {
+	margin-bottom: 30px;
+}
 </style>
 @endsection
 
@@ -68,7 +72,7 @@
 
 
 
-$('#btn-back').is(':hidden')
+ 
 
 
 @section('scripts')
@@ -80,7 +84,7 @@ $('#btn-back').is(':hidden')
 		console.log('move');
 
 		clearTimeout(t_hide_btn);
-		
+
 		if($btn_back.is(':hidden')){
 			$btn_back.fadeIn('slow');
 		}
