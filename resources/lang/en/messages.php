@@ -532,6 +532,11 @@ return array(
     'directors' => 'Directors',
     'add_director' => 'Add director',
     'view_directors' => 'View directors',
+
+    //langs
+    'langs' => 'Languages',
+    'add_lang' => 'Add language',
+    'view_langs' => 'View languages',
 	
 	'ratings' => 'Ratings',
 	'reviews' => 'Reviews',

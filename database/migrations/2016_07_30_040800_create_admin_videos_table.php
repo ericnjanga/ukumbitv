@@ -26,6 +26,8 @@ class CreateAdminVideosTable extends Migration
             $table->string('actors')->nullable();
             $table->string('directors')->nullable();
             $table->string('watchid')->nullable();
+            $table->integer('lang_id')->nullable();
+            $table->string('year')->nullable();
             $table->timestamps();
         });
     }
