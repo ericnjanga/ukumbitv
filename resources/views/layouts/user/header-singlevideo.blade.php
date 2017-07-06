@@ -3,7 +3,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
 
-      <a class="navbar-brand" href="https://www.ukumbitv.com">
+      <a id="btn-history-back" class="navbar-brand" href="#">
 				<i class="fa fa-arrow-circle-left" aria-hidden="true"></i> 
 				{{trans('back-to-browse')}} 
       </a>

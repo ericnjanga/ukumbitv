@@ -1,0 +1,1 @@
+"use strict";$(function(){$(".page-homevideos").length>0&&Grid.init()});

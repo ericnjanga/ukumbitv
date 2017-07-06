@@ -1,0 +1,19 @@
+/*Hide homevideo navigation here*/
+.page-singlevideo {
+	.main-nav-homevideo{
+		display : none;
+	}
+	
+	.main-nav-singlevideo{
+		position: fixed;
+	}
+	/*Removing "bitmovin" watermark logo from player*/
+	.bmpui-ui-watermark {
+	  display: none;
+	} 
+	#player {
+		margin-bottom: 30px;
+	}
+}
+ 
+

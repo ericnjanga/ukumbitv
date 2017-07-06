@@ -7,28 +7,6 @@ page-singlevideo
 
 
 @section('styles')
-<style>
-/*Hide homevideo navigation here*/
-.page-singlevideo .main-nav-homevideo{
-	display : none;
-}
-
-/*Removing "bitmovin" watermark logo from player*/
-.bmpui-ui-watermark {
-  display: none;
-}
-
-/*.btn-back {
-	position: absolute;
-	top: 40px;
-	left: 40px;
-	z-index: 9999999999;
-}*/
-
-#player {
-	margin-bottom: 30px;
-}
-</style>
 @endsection
 
 
@@ -40,12 +18,10 @@ page-singlevideo
 
 
 @section('content')
-
-<!-- 
-<button id="btn-back" class="btn btn-back" style="display:none;">return</button> -->
 <div id="player">{{$video->video}}</div>
 <script type="text/javascript">
-	//Setup here:
+	//INITIALIZE PLAYER:
+	//-----------------
 	//https://app.bitmovin.com/player/embed
   var conf = {
       key:       "bb175f20-6e3a-4edb-af12-619f8e67c88e",
@@ -71,21 +47,19 @@ page-singlevideo
 
 
 
-
+<!-- Facebook comment and share -->
 <div class="container">
 	<div class="row">
+		<!-- Facebook comment -->
 		<div class="col-md-6">
 			<div class="fb-comments" data-colorscheme="dark" data-href="https://ukumbitv.com/watch/{{$video->watchid}}" data-numposts="5"></div>
 		</div>
+		<!-- Facebook share -->
 		<div class="col-md-6">
 			<div class="fb-share-button" data-href="https://ukumbitv.com/watch/{{$video->watchid}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fukumbitv.com%2Fwatch%2F{{$video->watchid}}&amp;src=sdkpreparse">Share</a></div>
 		</div>
 	</div>
 </div>
-
-
-  
-  
 @endsection
 
 
@@ -93,35 +67,7 @@ page-singlevideo
  
 
 
+
 @section('scripts')
-<script>
-	var $nav = $('.main-nav-singlevideo'),
-			t_hide_btn = 0;
-	//...
-	$('body').mousemove(function( event ) {
-		console.log('move');
-
-		clearTimeout(t_hide_btn);
-
-		if($nav.is(':hidden')){
-			$nav.fadeIn('slow');
-		}
-		
-	  
-
-	  var lastTimeMouseMoved = new Date().getTime();
-		var t = setTimeout(function() {
-		  var currentTime = new Date().getTime();
-		  if (currentTime - lastTimeMouseMoved > 1000) {
-		    // $('.fall').fadeOut('slow');
-		    // $('.fall').remove();
-		    t_hide_btn = setTimeout(function(){
-		    	$nav.fadeOut('slow');
-		    }, 2000);
-		  }
-		}, 1000)
-
-
-	});
-</script>
+  <script src="{{asset('streamtube/js/app.single-video.js')}}"></script>
 @endsection
