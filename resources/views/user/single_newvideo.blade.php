@@ -52,11 +52,11 @@ page-singlevideo
 	<a name="comment_or_share"></a>
 	<div class="row">
 		<!-- Facebook comment -->
-		<div class="col-md-6">
+		<div class="col-comment col-md-6">
 			<div class="fb-comments" data-colorscheme="dark" data-href="https://ukumbitv.com/watch/{{$video->watchid}}" data-numposts="5"></div>
 		</div>
 		<!-- Facebook share -->
-		<div class="col-md-6">
+		<div class="col-share col-md-6">
 			<div class="fb-share-button" data-href="https://ukumbitv.com/watch/{{$video->watchid}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fukumbitv.com%2Fwatch%2F{{$video->watchid}}&amp;src=sdkpreparse">Share</a></div>
 		</div>
 	</div>
