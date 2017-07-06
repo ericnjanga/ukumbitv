@@ -24,6 +24,7 @@
         	<a href="#comment_or_share">
         		<i class="fa fa-facebook-official" aria-hidden="true"></i>
         		{{trans('messages.comment_or_share')}} 
+        	</a>
         </li> 
       </ul> 
     </div><!-- /.navbar-collapse -->
