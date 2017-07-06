@@ -18,7 +18,7 @@ page-singlevideo
 
 
 @section('content')
-<div id="player">{{$video->video}}</div>
+<div id="player"></div>
 <script type="text/javascript">
 	//INITIALIZE PLAYER:
 	//-----------------
