@@ -244,6 +244,7 @@ return array(
 	'no_account' 				=> 'Pas de compte',
 	'sign_up_now' 			=> 'S\'inscrire maintenant',
 	'login_via_fb' 			=> 'Connexion via facebook',
+	'register_via_fb' 	=> 'Enregistrement Via Facebook',
 	'login_via_twitter' => 'Login Via Twitter',
 	'login_via_google' => 'Login Via Google',
 	'login_via_social' => 'Login via Social Profile',
