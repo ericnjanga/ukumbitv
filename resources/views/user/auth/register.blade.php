@@ -11,41 +11,37 @@ page-register
 <div class="main-content">
   <div class="rectangle panel-register frosting-glass"> 
     <h3 class="page-title text-center">{{trans('messages.signup')}}</h3>
+
+ 
+		<div class="fb-login text-center">
+			@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
+        <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
+            <input type="hidden" value="facebook" name="provider" id="provider">
+            <!-- <a href="#"> -->
+              <button type="submit" class="btn-link" style="font-size: 20px;">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                {{trans('messages.register_via_fb')}}
+              </button>
+            <!-- </a> -->
+
+            <p style="opacity:0.8;"><small><i>{{trans('messages.Skip_registration_process')}}</i></small></p>
+        </form>
+	    @endif 
+    </div> 
+
+
+
+
+
  
     <form class="signup-form" role="form" method="POST" action="{{ url('/register') }}">
-
-
-
-
-
-			<div class="fb-login text-center">
-				@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
-          <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
-              <input type="hidden" value="facebook" name="provider" id="provider">
-              <!-- <a href="#"> -->
-                <button type="submit" class="btn-link" style="font-size: 20px;">
-                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                  {{trans('messages.register_via_fb')}}
-                </button>
-              <!-- </a> -->
-
-              <p style="opacity:0.8;"><small><i>{{trans('messages.Skip_registration_process')}}</i></small></p>
-          </form>
-		    @endif 
-      </div> 
-
-
+ 
 
       <div>
       	<hr style="margin: 40px;">
       	<h4 class="text-center" style="margin-bottom: 30px;">{{trans('messages.register_via_email')}}</h4>
       </div>
-
-
-
-
-
-
+ 
 
         {!! csrf_field() !!}
 				
