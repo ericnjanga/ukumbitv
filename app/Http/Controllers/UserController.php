@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\AdminVideo;
+use App\Videoimage;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -97,6 +98,7 @@ class UserController extends Controller {
     {
         $video = AdminVideo::where('watchid', $id)->first();
         $videos = AdminVideo::all();
+        $images = Videoimage::where('video_id', $id)->first();
 
         $main_video = $video->video;
         $trailer_video = "";
@@ -111,6 +113,7 @@ class UserController extends Controller {
             ->with('history_status' , $history_status)
             ->with('videos' , $videos)
             ->with('videoTitle' , $video)
+            ->with('images' , $images)
             ->with('video', $video);
     }
 

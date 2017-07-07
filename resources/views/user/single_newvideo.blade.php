@@ -31,7 +31,7 @@ page-singlevideo
 		  }, 
       source: { 
         progressive: "{{$video->video}}",
-        poster:      "{{movie->imgBillboard}}"
+        poster:      "{{$images->imgBillboard}}"
       }
   };
   var player = bitmovin.player("player");
