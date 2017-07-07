@@ -307,6 +307,10 @@ Route::group(['prefix' => 'admin'], function(){
     Route::post('movie-upload-image', ['as' => 'movie-upload-images', 'uses' =>'AdminController@postUpload']);
     Route::post('add/movie-upload-image/delete', ['as' => 'movie-upload-remove', 'uses' =>'AdminController@deleteUpload']);
     Route::post('add/create-movie', ['as' => 'create-movie', 'uses' =>'AdminController@createMovie']);
+    Route::post('delete-movie', ['as' => 'delete-movie', 'uses' =>'AdminController@deleteMovie']);
+    Route::post('update-movie', ['as' => 'update-movie', 'uses' =>'AdminController@updateMovie']);
+    Route::get('edit-movie/{id}', ['as' => 'edit-movie', 'uses' =>'AdminController@editMovie']);
+
 
     //actors
     Route::get('/actors', 'AdminController@actors')->name('admin.actors');
@@ -317,6 +321,11 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/directors', 'AdminController@directors')->name('admin.directors');
     Route::get('/add/director', 'AdminController@add_director')->name('admin.add.director');
     Route::post('add/create-director', ['as' => 'create-director', 'uses' =>'AdminController@createDirector']);
+
+    //langs
+    Route::get('/langs', 'AdminController@langs')->name('admin.langs');
+    Route::get('/add/lang', 'AdminController@add_lang')->name('admin.add.lang');
+    Route::post('add/create-lang', ['as' => 'create-lang', 'uses' =>'AdminController@createLang']);
     // Slider Videos
 
     Route::get('/slider/video/{id}', 'AdminController@slider_video')->name('admin.slider.video');

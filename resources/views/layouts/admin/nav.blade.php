@@ -68,8 +68,8 @@
                 </a>
 
                 <ul class="treeview-menu">
-                    <li id="add-video"><a href="{{route('admin.add.actor')}}"><i class="fa fa-circle-o"></i>{{tr('add_actor')}}</a></li>
-                    <li id="view-videos"><a href="{{route('admin.actors')}}"><i class="fa fa-circle-o"></i>{{tr('view_actors')}}</a></li>
+                    <li id="add-actor"><a href="{{route('admin.add.actor')}}"><i class="fa fa-circle-o"></i>{{tr('add_actor')}}</a></li>
+                    <li id="view-actors"><a href="{{route('admin.actors')}}"><i class="fa fa-circle-o"></i>{{tr('view_actors')}}</a></li>
                 </ul>
 
             </li>
@@ -80,8 +80,20 @@
                 </a>
 
                 <ul class="treeview-menu">
-                    <li id="add-video"><a href="{{route('admin.add.director')}}"><i class="fa fa-circle-o"></i>{{tr('add_director')}}</a></li>
-                    <li id="view-videos"><a href="{{route('admin.directors')}}"><i class="fa fa-circle-o"></i>{{tr('view_directors')}}</a></li>
+                    <li id="add-director"><a href="{{route('admin.add.director')}}"><i class="fa fa-circle-o"></i>{{tr('add_director')}}</a></li>
+                    <li id="view-directors"><a href="{{route('admin.directors')}}"><i class="fa fa-circle-o"></i>{{tr('view_directors')}}</a></li>
+                </ul>
+
+            </li>
+
+            <li class="treeview" id="langs">
+                <a href="{{route('admin.langs')}}">
+                    <i class="fa fa-smile-o"></i> <span>{{tr('langs')}}</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+                <ul class="treeview-menu">
+                    <li id="add-lang"><a href="{{route('admin.add.lang')}}"><i class="fa fa-circle-o"></i>{{tr('add_lang')}}</a></li>
+                    <li id="view-langs"><a href="{{route('admin.langs')}}"><i class="fa fa-circle-o"></i>{{tr('view_langs')}}</a></li>
                 </ul>
 
             </li>

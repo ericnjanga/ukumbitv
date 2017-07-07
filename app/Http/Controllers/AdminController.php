@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Actor;
 use App\Director;
+use App\Lang;
+use App\Videoimage;
 use Illuminate\Http\Request;
 
 use App\Requests;
@@ -50,6 +52,8 @@ use App\Flag;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 use Validator;
 
 use Hash;
@@ -1140,7 +1144,7 @@ class AdminController extends Controller
                              'admin_videos.trailer_compress_status',
                              'admin_videos.status','admin_videos.uploaded_by',
                              'admin_videos.edited_by','admin_videos.is_approved',
-
+                            'admin_videos.watchid',
                              'categories.name as category_name' , 'sub_categories.name as sub_category_name' ,
                              'genres.name as genre_name')
                     ->orderBy('admin_videos.created_at' , 'desc')
@@ -1183,16 +1187,130 @@ class AdminController extends Controller
 
         $actors = Actor::all();
         $directors = Director::all();
+        $langs = Lang::all();
 
         return view('admin.videos.movie_upload')
             ->with('categories', $categories)
             ->with('actors', $actors)
             ->with('directors', $directors)
+            ->with('langs', $langs)
             ->with('page', 'videos');
     }
 
     public function add_movie_process(Request $request)
     {
+
+    }
+
+    public function deleteMovie(Request $request)
+    {
+        $movie = AdminVideo::find($request->id);
+        Storage::disk('public')->deleteDirectory('images/'.$movie->watchid);
+        Storage::disk('public')->deleteDirectory('movies/'.$movie->watchid);
+        $movie->delete();
+
+        $images = Videoimage::where('video_id', $request->id)->first();
+        $images->delete();
+
+        return response()->json(['success'=>'movie deleted']);
+    }
+
+    public function editMovie($id)
+    {
+        $categories = Category::where('categories.is_approved' , 1)
+            ->select('categories.id as id' , 'categories.name' , 'categories.picture' ,
+                'categories.is_series' ,'categories.status' , 'categories.is_approved')
+            ->leftJoin('sub_categories' , 'categories.id' , '=' , 'sub_categories.category_id')
+            ->groupBy('sub_categories.category_id')
+            ->havingRaw("COUNT(sub_categories.id) > 0")
+            ->orderBy('categories.name' , 'asc')
+            ->get();
+
+        $movie = AdminVideo::find($id);
+        $actors = Actor::all();
+        $directors = Director::all();
+        $langs = Lang::all();
+        $images = Videoimage::where('video_id', $id)->first();
+
+        $dirArr = explode(',', $movie->director);
+        $actArr = explode(',', $movie->actors);
+
+        return view('admin.videos.movie_edit')
+            ->with('categories', $categories)
+            ->with('video', $movie)
+            ->with('actors', $actors)
+            ->with('directors', $directors)
+            ->with('images', $images)
+            ->with('actArr', $actArr)
+            ->with('dirArr', $dirArr)
+            ->with('page', 'videos')
+            ->with('langs', $langs);
+
+    }
+
+    public function updateMovie(Request $request)
+    {
+
+
+
+        $video = AdminVideo::find($request->id);
+        $specialId = $video->watchid;
+        $imgUrl = url('/images/'.$specialId.'/');
+        $videoUrl = url('/movies/'.$specialId.'/');
+        $video->title = $request->title;
+        $video->duration = $request->duration;
+        $video->description = $request->description;
+        $video->category_id = $request->category;
+        $video->year = $request->year;
+        $video->directors = $request->director;
+        $video->actors = $request->actor;
+        $video->lang_id = $request->lang;
+        if(!empty($request->file('video'))){
+            $video1 = $request->file('video');
+            $videoName = '/'.time().$video1->getClientOriginalName();
+            $video1->move(public_path('movies/'.$specialId), $videoName);
+//            DELETE FILE
+            $video->video = $videoUrl.$videoName;
+        }
+        $video->save();
+
+        $images = Videoimage::where('video_id', $video->id)->first();
+        if(!empty($request->file('billboard_image'))){
+            $billboard_image = $request->file('billboard_image');
+            $billboard_image_name = '/billboard'.time().$billboard_image->getClientOriginalName();
+            $billboard_image->move(public_path('images/'.$specialId),$billboard_image_name);
+            $images->imgBillboard = $imgUrl.$billboard_image_name;
+        }
+        if(!empty($request->file('small_image1'))){
+            $small_image1 = $request->file('small_image1');
+            $small_image1_name = '/small_image1'.time().$small_image1->getClientOriginalName();
+            $small_image1->move(public_path('images/'.$specialId),$small_image1_name);
+            $images->imgSmall1 = $imgUrl.$small_image1_name;
+        }
+        if(!empty($request->file('small_image2'))){
+            $small_image2 = $request->file('small_image2');
+            $small_image2_name = '/small_image2'.time().$small_image2->getClientOriginalName();
+            $small_image2->move(public_path('images/'.$specialId),$small_image2_name);
+            $images->imgSmall2 = $imgUrl.$small_image2_name;
+        }
+        if(!empty($request->file('small_image3'))){
+            $small_image3 = $request->file('small_image3');
+            $small_image3_name = '/small_image3'.time().$small_image3->getClientOriginalName();
+            $small_image3->move(public_path('images/'.$specialId),$small_image3_name);
+            $images->imgSmall3 = $imgUrl.$small_image3_name;
+        }
+        if(!empty($request->file('preview_image'))){
+            $preview_image = $request->file('preview_image');
+            $preview_image_name = '/preview_image'.time().$preview_image->getClientOriginalName();
+            $preview_image->move(public_path('images/'.$specialId),$preview_image_name);
+            $images->imgPreview = $imgUrl.$preview_image_name;
+        }
+
+        $images->save();
+
+
+        return response()->json(['success'=>'movie updated']);
+
 
     }
 
@@ -1225,15 +1343,33 @@ class AdminController extends Controller
 
     public function createMovie(Request $request)
     {
+        $specialId = date('YmdHis');
+        $imgUrl = url('/images/'.$specialId.'/');
+        $videoUrl = url('/movies/'.$specialId.'/');
 
+        $billboard_image = $request->file('billboard_image');
+        $billboard_image_name = '/billboard'.time().$billboard_image->getClientOriginalName();
+        $billboard_image->move(public_path('images/'.$specialId),$billboard_image_name);
 
-        $image = $request->file('file');
-        $imageName = time().$image->getClientOriginalName();
-        $image->move(public_path('images'),$imageName);
+        $small_image1 = $request->file('small_image1');
+        $small_image1_name = '/small_image1'.time().$small_image1->getClientOriginalName();
+        $small_image1->move(public_path('images/'.$specialId),$small_image1_name);
+
+        $small_image2 = $request->file('small_image2');
+        $small_image2_name = '/small_image2'.time().$small_image2->getClientOriginalName();
+        $small_image2->move(public_path('images/'.$specialId),$small_image2_name);
+
+        $small_image3 = $request->file('small_image3');
+        $small_image3_name = '/small_image3'.time().$small_image3->getClientOriginalName();
+        $small_image3->move(public_path('images/'.$specialId),$small_image3_name);
+
+        $preview_image = $request->file('preview_image');
+        $preview_image_name = '/preview_image'.time().$preview_image->getClientOriginalName();
+        $preview_image->move(public_path('images/'.$specialId),$preview_image_name);
 
         $video = $request->file('video');
-        $videoName = time().$video->getClientOriginalName();
-        $video->move(public_path('movies'), $videoName);
+        $videoName = '/'.time().$video->getClientOriginalName();
+        $video->move(public_path('movies/'.$specialId), $videoName);
 
         $adminVideo = new AdminVideo();
         $adminVideo->title = $request->title;
@@ -1241,9 +1377,9 @@ class AdminController extends Controller
         $adminVideo->category_id = $request->category;
         $adminVideo->sub_category_id = 1;
         $adminVideo->genre_id = 0;
-        $adminVideo->video = 'https://ukumbitv.com/movies/'.$videoName;
+        $adminVideo->video = $videoUrl.$videoName;
         $adminVideo->trailer_video = 'trailer url';
-        $adminVideo->default_image = 'https://ukumbitv.com/images/'.$imageName;
+        $adminVideo->default_image = $imgUrl.$billboard_image_name;
         $adminVideo->banner_image = '';
         $adminVideo->ratings = 5;
         $adminVideo->reviews = 'review';
@@ -1261,25 +1397,53 @@ class AdminController extends Controller
         $adminVideo->video_upload_type = 2;
         $adminVideo->actors = $request->actor;
         $adminVideo->directors = $request->director;
-        $adminVideo->watchid = date('YmdHis');
+        $adminVideo->watchid = $specialId;
+        $adminVideo->lang_id = $request->lang;
+        $adminVideo->year = $request->year;
 
         $adminVideo->save();
 
-        $images = explode(';', $request->images);
+        $images = new Videoimage();
+        $images->video_id = $adminVideo->id;
+        $images->imgBillboard = $imgUrl.$billboard_image_name;
+        $images->imgSmall1 = $imgUrl.$small_image1_name;
+        $images->imgSmall2 = $imgUrl.$small_image2_name;
+        $images->imgSmall3 = $imgUrl.$small_image3_name;
+        $images->imgPreview = $imgUrl.$preview_image_name;
+        $images->save();
 
-        foreach ($images as $image) {
-            $adminVideoImages = new AdminVideoImage();
-            $adminVideoImages->admin_video_id = $adminVideo->id;
-            $adminVideoImages->image = 'https://ukumbitv.com/images/'.$image;
-            $adminVideoImages->is_default = 0;
-            $adminVideoImages->position = 2;
-            $adminVideoImages->save();
-        }
 
 
 
 
         return response()->json($adminVideo);
+    }
+
+    //langs
+    public function langs(Request $request) {
+
+        $langs = Lang::all();
+
+        return view('admin.langs.langs')->with('langs' , $langs)
+            ->withPage('langs')
+            ->with('sub_page','view-langs');
+
+    }
+
+    public function add_lang(Request $request) {
+
+        return view('admin.langs.lang_upload')
+            ->withPage('langs');
+
+    }
+
+    public function createLang(Request $request)
+    {
+        $lang = new Lang();
+        $lang->title = $request->title;
+        $lang->save();
+
+        return response()->json($lang);
     }
 
     //Actors

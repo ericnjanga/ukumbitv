@@ -8,7 +8,7 @@ use  Carbon\Carbon;
 @section('content-header', tr('dashboard'))
 
 @section('breadcrumb')
-    <li class="active"><i class="fa fa-dashboard"></i> {{tr('dashboard')}}</a></li>
+    <li class="active"><i class="fa fa-dashboard"></i><a> {{tr('dashboard')}}</a></li>
 @endsection
 
 <style type="text/css">

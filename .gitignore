@@ -7,3 +7,5 @@ Homestead.json
 .env
 /nbproject
 /.idea
+/public/images
+/public/movies
