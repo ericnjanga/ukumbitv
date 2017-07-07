@@ -24,6 +24,7 @@ use App\Flag;
 
 use Auth;
 
+use phpDocumentor\Reflection\Types\Object_;
 use Validator;
 
 use Setting;
@@ -99,6 +100,10 @@ class UserController extends Controller {
         $video = AdminVideo::where('watchid', $id)->first();
         $videos = AdminVideo::all();
         $images = Videoimage::where('video_id', $video->id)->first();
+        if ($images == null)
+        {
+            $images = [];
+        }
 
         $main_video = $video->video;
         $trailer_video = "";
