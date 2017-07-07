@@ -18,25 +18,34 @@ page-register
 
 
 
-			<div class="fb-login">
+			<div class="fb-login text-center">
 				@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
           <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
               <input type="hidden" value="facebook" name="provider" id="provider">
               <!-- <a href="#"> -->
-                <button type="submit" class="btn-link">
+                <button type="submit" class="btn-link" style="font-size: 20px;">
                   <i class="fa fa-facebook-official" aria-hidden="true"></i>
                   {{trans('messages.login_via_fb')}}
                 </button>
               <!-- </a> -->
+
+              <p style="opacity:0.8;"><i>{{trans('messages.Skip_registration_process')}}</i></p>
           </form>
 		    @endif 
       </div> 
 
 
 
+      <div>
+      	<hr>
+      	<h4>{{trans('messages.register_via_email')}}</h4>
+      </div>
 
 
-      
+
+
+
+
 
         {!! csrf_field() !!}
 				

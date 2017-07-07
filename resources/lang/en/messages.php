@@ -245,6 +245,7 @@ return array(
 	'sign_up_now' => 'Sign up now',
 	'login_via_fb' => 'Login Via Facebook',
 	'register_via_fb' => 'Register Via Facebook',
+	'register_via_email' => 'Register Via Email',
 	'login_via_twitter' => 'Login Via Twitter',
 	'login_via_google' => 'Login Via Google',
 	'login_via_social' => 'Login via Social Profile',
@@ -697,6 +698,8 @@ return array(
   'back_to_browse' => 'Back to Browse', 
   'comment_or_share' => 'Comment or Share',
   'Toggle_navigation' => 'Toggle navigation',
+
+  'Skip_registration_process' => 'Skip the borring registration process'
 
  
 );
