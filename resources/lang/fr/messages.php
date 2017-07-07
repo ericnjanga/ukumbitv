@@ -245,6 +245,7 @@ return array(
 	'sign_up_now' 			=> 'S\'inscrire maintenant',
 	'login_via_fb' 			=> 'Connexion via facebook',
 	'register_via_fb' 	=> 'Enregistrement Via Facebook',
+	'register_via_email' => 'Enregistrement Via Email',
 	'login_via_twitter' => 'Login Via Twitter',
 	'login_via_google' => 'Login Via Google',
 	'login_via_social' => 'Login via Social Profile',
@@ -676,5 +677,7 @@ return array(
   'back_to_browse' => 'Retour aux vidéos',
   'comment_or_share' => 'Commenter ou Partager',
   'Toggle_navigation' => 'Basculer le menu',
+
+  'Skip_registration_process' => 'Evitez toutes les tracasseries d\'enregitrement et accedez directement au site'
 
 );
