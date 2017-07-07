@@ -98,7 +98,7 @@ class UserController extends Controller {
     {
         $video = AdminVideo::where('watchid', $id)->first();
         $videos = AdminVideo::all();
-        $images = Videoimage::where('video_id', $id)->first();
+        $images = Videoimage::where('video_id', $video->id)->first();
 
         $main_video = $video->video;
         $trailer_video = "";
