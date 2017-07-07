@@ -25,11 +25,11 @@ page-register
               <!-- <a href="#"> -->
                 <button type="submit" class="btn-link" style="font-size: 20px;">
                   <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                  {{trans('messages.login_via_fb')}}
+                  {{trans('messages.register_via_fb')}}
                 </button>
               <!-- </a> -->
 
-              <p style="opacity:0.8;"><i>{{trans('messages.Skip_registration_process')}}</i></p>
+              <p style="opacity:0.8;"><small><i>{{trans('messages.Skip_registration_process')}}</i></small></p>
           </form>
 		    @endif 
       </div> 
@@ -37,8 +37,8 @@ page-register
 
 
       <div>
-      	<hr>
-      	<h4>{{trans('messages.register_via_email')}}</h4>
+      	<hr style="margin: 40px;">
+      	<h4 class="text-center" style="margin-bottom: 30px;">{{trans('messages.register_via_email')}}</h4>
       </div>
 
 
