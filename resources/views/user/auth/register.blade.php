@@ -38,7 +38,7 @@ page-register
  
 
       <div>
-      	<hr style="margin: 40px;">
+      	<hr style="margin:40px; margin-top:10px;">
       	<h4 class="text-center" style="margin-bottom: 30px;">{{trans('messages.register_via_email')}}</h4>
       </div>
  
