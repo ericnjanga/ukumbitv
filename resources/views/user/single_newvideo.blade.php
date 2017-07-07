@@ -31,7 +31,7 @@ page-singlevideo
 		  }, 
       source: { 
         progressive: "{{$video->video}}",
-        poster:      "//bitmovin-a.akamaihd.net/content/MI201109210084_1/poster.jpg"
+        poster:      "{{movie->imgBillboard}}"
       }
   };
   var player = bitmovin.player("player");
