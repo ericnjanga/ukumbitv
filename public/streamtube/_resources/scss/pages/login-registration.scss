@@ -131,12 +131,33 @@ $rectangle-width: 360px;
 			.list-unstyled {
 				margin: auto;
 				line-height: 3.5em;
+				li {
+					line-height: 24px;
+				}
 			}
 			.cta-title{
 				margin-top: auto;
 			}
 		}
 	}//main-content
+
+	.fb-login{
+		.btn-link {
+			font-size: 20px;
+		}
+		p{
+			opacity:0.8; margin-top:10px;
+		}
+	}//fb-login
+
+	.signup-form{
+		.sep{
+			margin:40px;
+		}
+		.sep-title {
+			margin-bottom: 30px;
+		}
+	}//signup-form
 }
 //page-register
 

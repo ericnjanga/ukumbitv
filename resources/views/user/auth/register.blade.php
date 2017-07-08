@@ -17,12 +17,12 @@ page-register
 			@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
         <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
           <input type="hidden" value="facebook" name="provider" id="provider"> 
-          <button type="submit" class="btn-link" style="font-size: 20px;">
+          <button type="submit" class="btn-link">
             <i class="fa fa-facebook-official" aria-hidden="true"></i>
             {{trans('messages.register_via_fb')}}
           </button> 
 
-          <p style="opacity:0.8; margin-top:10px;"><small><i>{{trans('messages.Skip_registration_process')}}</i></small></p>
+          <p><small><i>{{trans('messages.Skip_registration_process')}}</i></small></p>
         </form>
 	    @endif 
     </div> 
@@ -36,8 +36,8 @@ page-register
  
 
       <div>
-      	<hr style="margin:40px;">
-      	<h4 class="text-center" style="margin-bottom: 30px;">{{trans('messages.register_via_email')}}</h4>
+      	<hr class="sep">
+      	<h4 class="sep-title text-center">{{trans('messages.register_via_email')}}</h4>
       </div>
  
 
