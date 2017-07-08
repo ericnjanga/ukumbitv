@@ -1209,7 +1209,7 @@ class AdminController extends Controller
         Storage::disk('public')->deleteDirectory('movies/'.$movie->watchid);
         $movie->delete();
 
-        $images = Videoimage::where('video_id', $request->id)->first();
+        $images = Videoimage::where('admin_video_id', $request->id)->first();
         $images->delete();
 
         return response()->json(['success'=>'movie deleted']);
@@ -1230,7 +1230,7 @@ class AdminController extends Controller
         $actors = Actor::all();
         $directors = Director::all();
         $langs = Lang::all();
-        $images = Videoimage::where('video_id', $id)->first();
+        $images = Videoimage::where('admin_video_id', $id)->first();
 
         $dirarr = explode(',', $movie->directors);
         $actArr = explode(',', $movie->actors);
@@ -1274,7 +1274,7 @@ class AdminController extends Controller
         }
         $video->save();
 
-        $images = Videoimage::where('video_id', $video->id)->first();
+        $images = Videoimage::where('admin_video_id', $video->id)->first();
         if(!empty($request->file('billboard_image'))){
             $billboard_image = $request->file('billboard_image');
             $billboard_image_name = '/billboard'.time().$billboard_image->getClientOriginalName();
@@ -1404,7 +1404,7 @@ class AdminController extends Controller
         $adminVideo->save();
 
         $images = new Videoimage();
-        $images->video_id = $adminVideo->id;
+        $images->admin_video_id = $adminVideo->id;
         $images->imgBillboard = $imgUrl.$billboard_image_name;
         $images->imgSmall1 = $imgUrl.$small_image1_name;
         $images->imgSmall2 = $imgUrl.$small_image2_name;
