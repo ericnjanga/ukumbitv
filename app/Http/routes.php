@@ -303,12 +303,12 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::get('/add/movie', 'AdminController@add_movie')->name('admin.add.movie');
     Route::post('/add/movie', 'AdminController@add_movie_process')->name('admin.save.movie');
+    Route::post('edit-movie/update-movie', 'AdminController@updateMovie')->name('admin.update.movie');
 
     Route::post('movie-upload-image', ['as' => 'movie-upload-images', 'uses' =>'AdminController@postUpload']);
     Route::post('add/movie-upload-image/delete', ['as' => 'movie-upload-remove', 'uses' =>'AdminController@deleteUpload']);
     Route::post('add/create-movie', ['as' => 'create-movie', 'uses' =>'AdminController@createMovie']);
     Route::post('delete-movie', ['as' => 'delete-movie', 'uses' =>'AdminController@deleteMovie']);
-    Route::post('update-movie', ['as' => 'update-movie', 'uses' =>'AdminController@updateMovie']);
     Route::get('edit-movie/{id}', ['as' => 'edit-movie', 'uses' =>'AdminController@editMovie']);
 
 

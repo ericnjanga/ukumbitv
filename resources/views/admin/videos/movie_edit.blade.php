@@ -115,7 +115,7 @@
 
                                         <select multiple required id="director" name="director_id" class="form-control">
                                             @foreach($directors as $director)
-                                                <option value="{{$director->id}}" @if(array_search($director->id, $dirArr)) selected @endif>{{$director->name}}</option>
+                                                <option value="{{$director->id}}" @foreach($dirarr as $dira) @if($dira == $director->id) selected @endif @endforeach>{{$director->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -129,7 +129,7 @@
 
                                         <select multiple required id="actor" name="actor_id" class="form-control">
                                             @foreach($actors as $actor)
-                                                <option value="{{$actor->id}}" @if(array_search($actor->id, $actArr)) selected @endif>{{$actor->name}}</option>
+                                                <option value="{{$actor->id}}" @foreach($actArr as $act) @if($act == $actor->id) selected @endif @endforeach>{{$actor->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -207,9 +207,10 @@
             </section>
         </div>
     </div>
-
     <progress id="progressbar" value="0" max="100"></progress>
-    <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="createMovie()">Save</button>
+    <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="editMovie()">Save</button>
+
+
 
 
 
@@ -297,10 +298,10 @@
                     return xhr;
                 },
                 success: function(data){
-                    var rep = JSON.parse(data);
-                    console.log(rep);
+                    //var rep = JSON.parse(data);
+                    //console.log(rep);
                     $( '.overlay' ).css( 'display', 'none' );
-                    alert('Movie successful created!');
+                    alert('Movie successful edited!');
                 },
                 error: function (data) {
                     $( '.overlay' ).css( 'display', 'none' );

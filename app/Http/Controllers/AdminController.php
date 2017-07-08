@@ -1232,7 +1232,7 @@ class AdminController extends Controller
         $langs = Lang::all();
         $images = Videoimage::where('video_id', $id)->first();
 
-        $dirArr = explode(',', $movie->director);
+        $dirarr = explode(',', $movie->directors);
         $actArr = explode(',', $movie->actors);
 
         return view('admin.videos.movie_edit')
@@ -1242,7 +1242,7 @@ class AdminController extends Controller
             ->with('directors', $directors)
             ->with('images', $images)
             ->with('actArr', $actArr)
-            ->with('dirArr', $dirArr)
+            ->with('dirarr', $dirarr)
             ->with('page', 'videos')
             ->with('langs', $langs);
 
