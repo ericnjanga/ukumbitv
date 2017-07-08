@@ -18,6 +18,9 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!-- hidding [#movies and #TvShow menu links] for now -->
+      <!-- ...................... -->
+      <!--  
       <ul class="nav navbar-nav">
         <li class="active">
         	<a href="#">
@@ -25,10 +28,11 @@
         		<span class="sr-only">(current)</span></a>
         </li>
         <li><a href="#">{{trans('TvShows')}}</a></li> 
-      </ul>
+      </ul> 
+    	-->
       
       <ul class="nav navbar-nav navbar-right"> 
-      	<!-- hidding search for now -->
+      	<!-- hidding [search] for now -->
       	<!-- ...................... -->
       	<!-- <li>
       		<form class="navbar-form navbar-left">
