@@ -2,10 +2,10 @@
 
 return [
 
-    'website_offer_1' => 'Diffusion illimitée de films et émission télé',
-    'website_offer_2' => '(offer 2)',
-    'website_offer_3' => '(offer 3)',
-    'website_offer_4' => '(offer 4)',
-    'website_offer_5' => '(offer 5)',
+    'website_offer_1' => 'Films africains originaux',
+    'website_offer_2' => 'Séries télé africaines originales',
+    'website_offer_3' => 'Comédies africaines originales',
+    'website_offer_4' => 'Entretiens exclusifs derrière les coulisses',
+    'website_offer_5' => 'Streaming de contenu illimité (format HD inclus)', 
 
 ];
