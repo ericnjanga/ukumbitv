@@ -77,7 +77,9 @@ class UserController extends Controller {
             $suggestions  = Helper::suggestion_videos(WEB);
             $categories = get_categories();
 
-            $videos = AdminVideo::all();
+            $videos = AdminVideo::with('videoimage')->get();
+
+
 
 
             return view('user.home-video')
@@ -99,7 +101,7 @@ class UserController extends Controller {
     {
         $video = AdminVideo::where('watchid', $id)->first();
         $videos = AdminVideo::all();
-        $images = Videoimage::where('video_id', $video->id)->first();
+        $images = Videoimage::where('admin_video_id', $video->id)->first();
         if ($images == null)
         {
             $images = [];

@@ -8,10 +8,18 @@ use DB;
 
 class AdminVideo extends Model
 {
-	public function videoImage()
+
+    public function videoimage()
+    {
+        return $this->hasOne('App\Videoimage');
+    }
+
+	public function videosImage()
     {
         return $this->hasMany('App\AdminVideoImage');
     }
+
+
 
     public function userHistory()
     {
