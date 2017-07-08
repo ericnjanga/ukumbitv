@@ -116,12 +116,8 @@ $rectangle-width: 360px;
 				margin-left: $rect-space; 
 			}
 		}
-		// @media screen and (min-width: ($rectangle-width * 2) + ($rect-space * 2)) and (min-height: 900px) {
-		//   display: flex;
-		//   flex-direction: column;
-		//   justify-content: space-between; 
-		//   height: 100vh;
-		// }
+		
+		
 		.panel-offers{
 			display: flex;
 			flex-direction: column; 
@@ -132,7 +128,14 @@ $rectangle-width: 360px;
 				margin: auto;
 				line-height: 3.5em;
 				li {
+					padding-left: 30px;
 					line-height: 24px;
+					margin-bottom: 30px;
+				}
+				.svg-icon {
+					position: absolute;
+			    top: 0;
+			    left: 0;
 				}
 			}
 			.cta-title{
