@@ -1,4 +1,3 @@
-
 {{-- INSPIRATION --}}
 {{-- INSPIRATION --}}
 {{-- INSPIRATION --}}
@@ -8,18 +7,9 @@ https://jobs.netflix.com/jobs
 {{-- INSPIRATION --}}
 {{-- INSPIRATION --}}
 {{-- INSPIRATION --}}
+@extends('static.legal-master-page') 
 
 
-
-@extends('static.legal-master-page')
-
-
-
-
-{{-- Assign "page-login" class to body --}}
-@section('body-class')
-page-legal
-@endsection
 
 
 {{-- page title --}}
