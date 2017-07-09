@@ -38,12 +38,14 @@
                             <tbody>
                             @foreach($actors as $i => $actor)
 
-                                <tr>
+                                <tr id="row{{$actor->id}}">
                                     <td>{{$i+1}}</td>
                                     <td>{{$actor->name}}</td>
                                     <td>{{$actor->bio}}</td>
                                     <td>
-                                        <button class="btn btn-danger">DELETE</button></td>
+                                        <a href="edit-actor/{{$actor->id}}" class="btn btn-primary">Edit</a>
+                                        <button class="btn btn-danger" onclick="return confirmDelete({{$actor->id}});">Delete</button>
+                                    </td>
                                 </tr>
 
 
@@ -59,4 +61,36 @@
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        function confirmDelete(id) {
+
+            if (confirm("Remove actor?")) {
+                var fd = new FormData;
+
+                fd.append('_token', $('#csrf-token').val());
+                fd.append('id', id);
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'delete-actor',
+                    contentType: false,
+                    processData: false,
+                    data: fd,
+                    dataType: 'html',
+                    success: function(data){
+                        var rep = JSON.parse(data);
+                        alert('Actor successful deleted!'+id);
+                        $('#row'+id).css('display', 'none');
+                    },
+                    error: function (data) {
+                        alert('error '+data);
+                    }
+                });
+            }
+
+        }
+    </script>
 @endsection

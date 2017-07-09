@@ -25,11 +25,11 @@
                     <a href="{{route('admin.add.category')}}" class="btn btn-default pull-right">{{tr('add_category')}}</a>
                 </div>
 
-                <form class="form-horizontal" action="{{route('admin.save.category')}}" method="POST" enctype="multipart/form-data" role="form">
+                <form class="form-horizontal" method="POST" enctype="multipart/form-data" role="form">
 
                     <div class="box-body">
 
-                        <input type="hidden" name="id" value="{{$category->id}}">
+                        <input type="hidden" id="catid" name="id" value="{{$category->id}}">
 
                         <div class="form-group">
                             <label for="name" class="col-sm-1 control-label">{{tr('name')}}</label>
@@ -47,31 +47,122 @@
                             @endif
 
                             <div class="col-sm-10" style="margin-left:70px !important">
-                                <input type="file" accept="image/png, image/jpeg" id="picture" name="picture" placeholder="{{tr('picture')}}">
+                                <input type="file" accept="image/png, image/jpeg" id="picture" name="picture" placeholder="{{tr('picture')}}" onchange="previewUploadedPhoto('picture', 'previewArea');">
+                                <div id="previewArea"></div>
                                 <p class="help-block">{{tr('image_validate')}} {{tr('image_square')}}</p>
                             </div>
-                            
+
                         </div>
 
-                        <div class="checkbox">
-                            <label for="picture" class="col-sm-1 control-label"></label>
-                            <label>
-                                <input type="checkbox" name="is_series" value="1" @if($category->is_series) checked @endif> {{tr('is_series')}}
-                            </label>
-                        </div>
 
                     </div>
 
-                    <div class="box-footer">
-                        <button type="reset" class="btn btn-danger">{{tr('cancel')}}</button>
-                        <button type="submit" class="btn btn-success pull-right">{{tr('submit')}}</button>
-                    </div>
+
                 </form>
-            
+
             </div>
 
         </div>
 
     </div>
+<div class="box-footer">
+    <progress id="progressbar" value="0" max="100"></progress>
+    <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="editCategory()">Save</button>
+</div>
+@endsection
+
+@section('scripts')
+
+    <script type="text/javascript">
+        function editCategory() {
+            var picture = $('#picture').prop('files')[0];
+            var fd = new FormData;
+
+            if(picture !== undefined){
+                fd.append('picture', picture);
+            }
+            fd.append('_token', $('#csrf-token').val());
+            fd.append('name', $('#name').val());
+            fd.append('id', $('#catid').val());
+
+            //fd.append('images', dropImages.join(';'));
+            var progressBar = $('#progressbar');
+
+            $.ajax({
+                type: 'POST',
+                url: 'update-category',
+                contentType: false,
+                processData: false,
+                data: fd,
+                dataType: 'html',
+                xhr: function(){
+                    var xhr = $.ajaxSettings.xhr(); // получаем объект XMLHttpRequest
+                    xhr.upload.addEventListener('progress', function(evt){ // добавляем обработчик события progress (onprogress)
+                        if(evt.lengthComputable) { // если известно количество байт
+                            // высчитываем процент загруженного
+                            var percentComplete = Math.ceil(evt.loaded / evt.total * 100);
+                            // устанавливаем значение в атрибут value тега <progress>
+                            // и это же значение альтернативным текстом для браузеров, не поддерживающих <progress>
+                            progressBar.val(percentComplete).text('Uploaded ' + percentComplete + '%');
+                        }
+                    }, false);
+                    return xhr;
+                },
+                success: function(data){
+                    //var rep = JSON.parse(data);
+                    //console.log(rep);
+                    alert('Category successful edited!');
+                },
+                error: function (data) {
+                    alert('error '+data);
+                }
+            });
+        }
+
+        function previewUploadedPhoto(controlID, previewID) {
+            var imgWidth = 300;
+            var imgHeight = 300;
+            var imgSize = '300x300';
+            if (document.getElementById(controlID).files) {
+                var file = document.getElementById(controlID).files[0];
+                if (file.type.match("image.*")) {
+                    if (parseInt(file.size) <= 4 * 1024 * 1024) {
+                        var reader = new FileReader();
+                        reader.onload = (function (theFile) {
+                            return function (e) {
+                                var img = new Image();
+                                img.src = e.target.result;
+
+                                img.onload = function () {
+                                    if (img.width < imgWidth || img.height < imgHeight) {
+                                        $("#" + previewID).html("<b class='alert-danger'>The image size should be "+imgSize+"</b>");
+                                        file.value = null;
+                                    }
+                                    else {
+                                        $("#" + previewID).html('<img class="thumb img-responsive" src="' + e.target.result + '" title="' + theFile.name + '" style="max-width:200px" />');
+                                    }
+                                };
+                            };
+                        })(file);
+                        reader.readAsDataURL(file);
+                    }
+                    else {
+                        $("#" + previewID).html("<b class='alert-danger'>The maximum image size is 4 MB</b>");
+                        file.value = null;
+                    }
+                }
+                else {
+                    $("#" + previewID).html("<b class='alert-danger'>This file is not an image. please choose the image</b>");
+                    file.value = null;
+                }
+            }
+        }
+
+    </script>
+
+
+
+
+
 
 @endsection
