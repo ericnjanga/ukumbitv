@@ -18,7 +18,7 @@
           <div class="box box-primary">
           	<div class="box-header label-primary">
                 <b style="font-size:18px;">{{tr('categories')}}</b>
-                <a href="{{route('admin.add.category')}}" class="btn btn-default pull-right">{{tr('add_category')}}</a>
+                {{--<a href="{{route('admin.add.category')}}" class="btn btn-default pull-right">{{tr('add_category')}}</a>--}}
             </div>
             <div class="box-body">
 
@@ -31,8 +31,6 @@
 						      <th>{{tr('id')}}</th>
 						      <th>{{tr('category')}}</th>
 						      <th>{{tr('picture')}}</th>
-						      <th>{{tr('is_series')}}</th>
-						      <th>{{tr('status')}}</th>
 						      <th>{{tr('action')}}</th>
 						    </tr>
 						</thead>
@@ -40,72 +38,17 @@
 						<tbody>
 							@foreach($categories as $i => $category)
 
-							    <tr>
+							    <tr id="row{{$category->id}}">
 							      	<td>{{$i+1}}</td>
 							      	<td>{{$category->name}}</td>
 							      	<td>
 	                                	<img style="height: 30px;" src="{{$category->picture}}">
 	                            	</td>
 
-	                            	<td>
-							      		@if($category->is_series)
-							      			<span class="label label-success">{{tr('yes')}}</span>
-							       		@else
-							       			<span class="label label-warning">{{tr('no')}}</span>
-							       		@endif
-							       	</td>
-
-							      <td>
-							      		@if($category->is_approved)
-							      			<span class="label label-success">{{tr('approved')}}</span>
-							       		@else
-							       			<span class="label label-warning">{{tr('pending')}}</span>
-							       		@endif
-							       </td>
-							      <td>
-            							<ul class="admin-action btn btn-default">
-            								
-            								<li class="dropup">
-            								
-								                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-								                  {{tr('action')}} <span class="caret"></span>
-								                </a>
-								                <ul class="dropdown-menu">
-								                  	<li role="presentation">
-                                                        @if(Setting::get('admin_delete_control'))
-                                                            <a role="button" href="javascript:;" class="btn disabled" style="text-align: left">{{tr('edit')}}</a>
-                                                        @else
-                                                            <a role="menuitem" tabindex="-1" href="{{route('admin.edit.category' , array('id' => $category->id))}}">{{tr('edit')}}</a>
-                                                        @endif
-                                                    </li>
-								                  	<li role="presentation">
-
-									                  	@if(Setting::get('admin_delete_control'))
-
-										                  	<a role="button" href="javascript:;" class="btn disabled" style="text-align: left">{{tr('delete')}}</a>
-
-										                @else
-
-								                  			<a role="menuitem" tabindex="-1" onclick="return confirm('Are you sure?')" href="{{route('admin.delete.category' , array('category_id' => $category->id))}}">{{tr('delete')}}</a>
-								                  		@endif
-								                  	</li>
-
-													<li class="divider" role="presentation"></li>
-
-								                  	@if($category->is_approved)
-								                  		<li role="presentation"><a role="menuitem" tabindex="-1" href="{{route('admin.category.approve' , array('id' => $category->id , 'status' =>0))}}">{{tr('decline')}}</a></li>
-								                  	@else
-								                  		<li role="presentation"><a role="menuitem" tabindex="-1" href="{{route('admin.category.approve' , array('id' => $category->id , 'status' => 1))}}">{{tr('approve')}}</a></li>
-								                  	@endif
-
-								                  	<li class="divider" role="presentation"></li>
-
-								                  	<li role="presentation"><a role="menuitem" tabindex="-1" href="{{route('admin.add.sub_category' , array('category' => $category->id))}}">{{tr('add_sub_category')}}</a></li>
-								                  	<li role="presentation"><a role="menuitem" tabindex="-1" href="{{route('admin.sub_categories' , array('category' => $category->id))}}">{{tr('view_sub_categories')}}</a></li>
-								                </ul>
-              								</li>
-            							</ul>
-							      </td>
+									<td>
+										<a href="edit-category/{{$category->id}}" class="btn btn-primary">Edit</a>
+										<button class="btn btn-danger" onclick="return confirmDelete({{$category->id}});">Delete</button>
+									</td>
 							    </tr>
 							@endforeach
 						</tbody>
@@ -118,4 +61,36 @@
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+	<script type="text/javascript">
+        function confirmDelete(id) {
+
+            if (confirm("Remove category?")) {
+                var fd = new FormData;
+
+                fd.append('_token', $('#csrf-token').val());
+                fd.append('id', id);
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'delete-category',
+                    contentType: false,
+                    processData: false,
+                    data: fd,
+                    dataType: 'html',
+                    success: function(data){
+                        var rep = JSON.parse(data);
+                        alert('Category successful deleted!'+id);
+                        $('#row'+id).css('display', 'none');
+                    },
+                    error: function (data) {
+                        alert('error '+data);
+                    }
+                });
+            }
+
+        }
+	</script>
 @endsection

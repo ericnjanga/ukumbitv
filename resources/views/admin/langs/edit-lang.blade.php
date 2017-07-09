@@ -1,18 +1,16 @@
 @extends('layouts.admin')
 
-@section('title', tr('add_category'))
+@section('title', 'Edit Language')
 
-@section('content-header', tr('add_category'))
+@section('content-header', 'Edit Language')
 
 @section('breadcrumb')
-    <li><a href="{{route('admin.dashboard')}}"><i class="fa fa-dashboard"></i>{{tr('home')}}</a></li>
-    <li><a href="{{route('admin.categories')}}"><i class="fa fa-suitcase"></i> {{tr('categories')}}</a></li>
-    <li class="active">{{tr('add_category')}}</li>
+
 @endsection
 
 @section('content')
 
-@include('notification.notify')
+    @include('notification.notify')
 
     <div class="row">
 
@@ -21,62 +19,56 @@
             <div class="box box-primary">
 
                 <div class="box-header label-primary">
-                    <b style="font-size:18px;">{{tr('add_category')}}</b>
-                    <a href="{{route('admin.categories')}}" class="btn btn-default pull-right">{{tr('categories')}}</a>
+                    <b style="font-size:18px;">Edit director</b>
+                    <a href="{{route('admin.add.lang')}}" class="btn btn-default pull-right">Add Language</a>
                 </div>
 
                 <form class="form-horizontal" method="POST" enctype="multipart/form-data" role="form">
 
                     <div class="box-body">
 
-                        <div class="form-group">
-                            <label for="name" class="col-sm-1 control-label">{{tr('name')}} *</label>
-                            <div class="col-sm-10">
-                                <input type="text" required class="form-control" id="name" name="name" placeholder="Category Name">
-                            </div>
-                        </div>
+                        <input type="hidden" id="langid" name="id" value="{{$lang->id}}">
 
                         <div class="form-group">
-                            <label for="picture" class="col-sm-1 control-label">{{tr('picture')}} *</label>
+                            <label for="name" class="col-sm-1 control-label">{{tr('name')}}</label>
                             <div class="col-sm-10">
-                                <input type="file" required accept="image/png, image/jpeg" id="picture" name="picture" placeholder="{{tr('picture')}}" onchange="previewUploadedPhoto('picture', 'previewArea');">
-                                <div id="previewArea"></div>
-                                <p class="help-block">{{tr('image_validate')}} {{tr('image_square')}}</p>
+                                <input type="text" required class="form-control" value="{{$lang->title}}" id="name" name="name">
                             </div>
                         </div>
 
 
                     </div>
+
+
                 </form>
-            
+
             </div>
 
         </div>
 
     </div>
-<div class="box-footer">
-    <progress id="progressbar" value="0" max="100"></progress>
-    <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="createCategory()">Save</button>
-</div>
-
+    <div class="box-footer">
+        <progress id="progressbar" value="0" max="100"></progress>
+        <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="editLang()">Save</button>
+    </div>
 @endsection
 
 @section('scripts')
 
     <script type="text/javascript">
-        function createCategory() {
+        function editLang() {
             var fd = new FormData;
 
-            fd.append('picture', $('#picture').prop('files')[0]);
             fd.append('_token', $('#csrf-token').val());
             fd.append('name', $('#name').val());
+            fd.append('id', $('#langid').val());
 
-
+            //fd.append('images', dropImages.join(';'));
             var progressBar = $('#progressbar');
 
             $.ajax({
                 type: 'POST',
-                url: 'create-category',
+                url: 'update-lang',
                 contentType: false,
                 processData: false,
                 data: fd,
@@ -95,9 +87,9 @@
                     return xhr;
                 },
                 success: function(data){
-                    var rep = JSON.parse(data);
-                    console.log(rep);
-                    alert('Category successful created!');
+                    //var rep = JSON.parse(data);
+                    //console.log(rep);
+                    alert('Language successful edited!');
                 },
                 error: function (data) {
                     alert('error '+data);
@@ -146,4 +138,9 @@
 
     </script>
 
-    @endsection
+
+
+
+
+
+@endsection

@@ -311,21 +311,36 @@ Route::group(['prefix' => 'admin'], function(){
     Route::post('delete-movie', ['as' => 'delete-movie', 'uses' =>'AdminController@deleteMovie']);
     Route::get('edit-movie/{id}', ['as' => 'edit-movie', 'uses' =>'AdminController@editMovie']);
 
+    //category
+    Route::post('add/create-category', ['as' => 'create-category', 'uses' =>'AdminController@createCategory']);
+    Route::post('delete-category', ['as' => 'delete-category', 'uses' =>'AdminController@deleteCategory']);
+    Route::get('edit-category/{id}', ['as' => 'edit-category', 'uses' =>'AdminController@editCategory']);
+    Route::post('edit-category/update-category', 'AdminController@updateCategory')->name('admin.update.category');
+
 
     //actors
     Route::get('/actors', 'AdminController@actors')->name('admin.actors');
     Route::get('/add/actor', 'AdminController@add_actor')->name('admin.add.actor');
     Route::post('add/create-actor', ['as' => 'create-actor', 'uses' =>'AdminController@createActor']);
+    Route::post('delete-actor', ['as' => 'delete-actor', 'uses' =>'AdminController@deleteActor']);
+    Route::get('edit-actor/{id}', ['as' => 'edit-actor', 'uses' =>'AdminController@editActor']);
+    Route::post('edit-actor/update-actor', 'AdminController@updateActor')->name('admin.update.actor');
 
     //directors
     Route::get('/directors', 'AdminController@directors')->name('admin.directors');
     Route::get('/add/director', 'AdminController@add_director')->name('admin.add.director');
     Route::post('add/create-director', ['as' => 'create-director', 'uses' =>'AdminController@createDirector']);
+    Route::post('delete-director', ['as' => 'delete-director', 'uses' =>'AdminController@deleteDirector']);
+    Route::get('edit-director/{id}', ['as' => 'edit-director', 'uses' =>'AdminController@editDirector']);
+    Route::post('edit-director/update-director', 'AdminController@updateDirector')->name('admin.update.director');
 
     //langs
     Route::get('/langs', 'AdminController@langs')->name('admin.langs');
     Route::get('/add/lang', 'AdminController@add_lang')->name('admin.add.lang');
     Route::post('add/create-lang', ['as' => 'create-lang', 'uses' =>'AdminController@createLang']);
+    Route::post('delete-lang', ['as' => 'delete-lang', 'uses' =>'AdminController@deleteLang']);
+    Route::get('edit-lang/{id}', ['as' => 'edit-lang', 'uses' =>'AdminController@editLang']);
+    Route::post('edit-lang/update-lang', 'AdminController@updateLang')->name('admin.update.lang');
     // Slider Videos
 
     Route::get('/slider/video/{id}', 'AdminController@slider_video')->name('admin.slider.video');

@@ -37,11 +37,13 @@
                             <tbody>
                             @foreach($langs as $i => $lang)
 
-                                <tr>
+                                <tr id="row{{$lang->id}}">
                                     <td>{{$i+1}}</td>
                                     <td>{{$lang->title}}</td>
                                     <td>
-                                        <button class="btn btn-danger">DELETE</button></td>
+                                        <a href="edit-lang/{{$lang->id}}" class="btn btn-primary">Edit</a>
+                                        <button class="btn btn-danger" onclick="return confirmDelete({{$lang->id}});">Delete</button>
+                                    </td>
                                 </tr>
 
 
@@ -57,4 +59,36 @@
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        function confirmDelete(id) {
+
+            if (confirm("Remove actor?")) {
+                var fd = new FormData;
+
+                fd.append('_token', $('#csrf-token').val());
+                fd.append('id', id);
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'delete-lang',
+                    contentType: false,
+                    processData: false,
+                    data: fd,
+                    dataType: 'html',
+                    success: function(data){
+                        var rep = JSON.parse(data);
+                        alert('Language successful deleted!'+id);
+                        $('#row'+id).css('display', 'none');
+                    },
+                    error: function (data) {
+                        alert('error '+data);
+                    }
+                });
+            }
+
+        }
+    </script>
 @endsection

@@ -54,6 +54,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use PhpParser\Node\Scalar\MagicConst\Dir;
 use Validator;
 
 use Hash;
@@ -1446,6 +1447,38 @@ class AdminController extends Controller
         return response()->json($lang);
     }
 
+    public function deleteLang(Request $request)
+    {
+        $lang = Lang::find($request->id);
+        $lang->delete();
+
+
+        return response()->json(['success'=>'Language deleted']);
+    }
+
+    public function editLang($id)
+    {
+        $lang = Lang::find($id);
+
+
+        return view('admin.langs.edit-lang')
+            ->with('lang', $lang)
+            ->with('page', 'lang');
+    }
+
+    public function updateLang(Request $request)
+    {
+        $lang = Lang::find($request->id);
+        $lang->title = $request->name;
+
+
+        $lang->save();
+
+
+        return response()->json($lang);
+
+    }
+
     //Actors
     public function actors(Request $request) {
 
@@ -1472,6 +1505,38 @@ class AdminController extends Controller
         $actor->save();
 
         return response()->json($actor);
+    }
+
+    public function deleteActor(Request $request)
+    {
+        $actor = Actor::find($request->id);
+        $actor->delete();
+
+
+        return response()->json(['success'=>'actor deleted']);
+    }
+
+    public function editActor($id)
+    {
+        $actor = Actor::find($id);
+
+
+        return view('admin.actors.edit-actor')
+            ->with('actor', $actor)
+            ->with('page', 'actor');
+    }
+
+    public function updateActor(Request $request)
+    {
+        $actor = Actor::find($request->id);
+        $actor->name = $request->name;
+        $actor->bio = $request->bio;
+
+        $actor->save();
+
+
+        return response()->json($actor);
+
     }
 
 
@@ -1501,6 +1566,103 @@ class AdminController extends Controller
         $director->save();
 
         return response()->json($director);
+    }
+
+    public function deleteDirector(Request $request)
+    {
+        $director = Director::find($request->id);
+        $director->delete();
+
+
+        return response()->json(['success'=>'director deleted']);
+    }
+
+    public function editDirector($id)
+    {
+        $director = Director::find($id);
+
+
+        return view('admin.directors.edit-director')
+            ->with('director', $director)
+            ->with('page', 'director');
+    }
+
+    public function updateDirector(Request $request)
+    {
+        $director = Director::find($request->id);
+        $director->name = $request->name;
+        $director->bio = $request->bio;
+
+        $director->save();
+
+
+        return response()->json($director);
+
+    }
+
+    //category
+
+    public function createCategory(Request $request)
+    {
+
+
+        $image = $request->file('picture');
+        $image_name = '/'.time().$image->getClientOriginalName();
+        $image->move(public_path('images/categories'),$image_name);
+
+        $imgUrl = url('/images/categories'.$image_name);
+
+        $category = new Category();
+        $category->name = $request->name;
+        $category->picture = $imgUrl;
+        $category->is_series = 0;
+        $category->status = 1;
+        $category->is_approved = 1;
+        $category->created_by = 0;
+
+        $category->save();
+
+        return response()->json($category);
+    }
+
+    public function editCategory($id)
+    {
+        $category = Category::find($id);
+
+
+        return view('admin.categories.edit-category')
+            ->with('category', $category)
+            ->with('page', 'category');
+    }
+
+    public function deleteCategory(Request $request)
+    {
+        $category = Category::find($request->id);
+        $category->delete();
+
+
+        return response()->json(['success'=>'category deleted']);
+    }
+
+    public function updateCategory(Request $request)
+    {
+        $category = Category::find($request->id);
+        $category->name = $request->name;
+
+        $imgUrl = url('/images/categories/');
+        if(!empty($request->file('picture'))){
+            $image = $request->file('picture');
+            $image_name = '/'.time().$image->getClientOriginalName();
+            $image->move(public_path('images/categories'),$image_name);
+            $imagePath = $imgUrl.$image_name;
+            $category->picture = $imagePath;
+        }
+
+        $category->save();
+
+
+        return response()->json($category);
+
     }
 
 
