@@ -12,7 +12,7 @@ page-legal
 
 
 @section('content') 
-  @if($data) <?php echo $data->description; ?> @else {{tr('terms_conditions')}} @endif 
+	@include('static.txt-terms-en')
 @endsection
 
 
