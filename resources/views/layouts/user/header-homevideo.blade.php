@@ -50,7 +50,7 @@
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
             <li><a href="{{route('user.profile')}}">{{tr('account')}}</a></li> 
             <li role="separator" class="divider"></li>
-            <li><a href="{{route('user.logout')}}">{{tr('logout')}}</a></li>
+            <li><a href="{{route('user.logout')}}">{{tr('sign_out_of_ukumbiTV')}}</a></li>
           </ul>
         </li>
       </ul>
