@@ -12,7 +12,11 @@ page-legal
 
 
 @section('content') 
-	@include('static.txt-terms-{{App::getLocale()}}')
+	@if(App::isLocale('en'))
+    @include('static.txt-terms-en')
+	@else
+    @include('static.txt-terms-fr')
+	@endif
 @endsection
 
 
