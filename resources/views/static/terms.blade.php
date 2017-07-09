@@ -9,6 +9,12 @@ page-legal
 @endsection
 
 
+{{-- page title --}}
+@section('page-title')
+{{trans('messages.terms_of_use')}}
+@endsection
+
+
 
 
 @section('content') 

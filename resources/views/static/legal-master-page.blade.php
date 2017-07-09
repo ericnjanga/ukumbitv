@@ -2,7 +2,7 @@
 <html class="no-js">
 	<head>
 		@if (isset($videoTitle->title))
-			<title>UkumbiTV ...</title>
+			<title>UkumbiTV | @yield('page-title')</title>
 		@else
 			<title>{{trans('messages.site_name')}} - {{trans('messages.website_description')}}</title>
 		@endif
