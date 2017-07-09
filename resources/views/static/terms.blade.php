@@ -5,7 +5,7 @@
 
 {{-- Assign "page-login" class to body --}}
 @section('body-class')
-page-page-legal
+page-legal
 @endsection
 
 
