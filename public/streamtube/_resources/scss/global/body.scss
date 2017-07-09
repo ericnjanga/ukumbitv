@@ -4,7 +4,6 @@ body{
 	background-color: #fff;  
 	line-height: 1.0;
 	letter-spacing: 0.5px; 
-	background-color: #110f1c; //$color-secondary;
 
 	//Crisp text
 	-webkit-font-smoothing: antialiased;
@@ -12,6 +11,17 @@ body{
 
 	//...
 	overflow-x: hidden;
+	
+	//Dark theme for non legal pages
+	&:not(.page-legal){
+		background-color: #110f1c; //$color-secondary;
+	}
+}
+
+
+
+body.page-legal {
+	background-color: #f3f3f3;
 }
 
 
