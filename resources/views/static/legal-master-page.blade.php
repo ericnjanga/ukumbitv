@@ -21,8 +21,15 @@
 	<body class="lang-{{App::getLocale()}} @yield('body-class')">
 
     @include('layouts.user.header-info') 
-
-		@yield('content')
+		
+		<div class="container main-content">
+		  <div class="row">
+		  	<div class="col-md-12">
+		  		@yield('content')
+		  	</div>
+		  </div>
+		</div><!-- main-content -->
+		
 
     @include('layouts.user.footer')
 

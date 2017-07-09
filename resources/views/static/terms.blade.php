@@ -5,16 +5,18 @@
 
 {{-- Assign "page-login" class to body --}}
 @section('body-class')
-page-legal
+page-page-legal
 @endsection
 
 
-<div class="main-content">
-  @if($data) <?php echo $data->description; ?> @else {{tr('terms_conditions')}} @endif
-</div><!-- main-content -->
 
 
+@section('content') 
+  @if($data) <?php echo $data->description; ?> @else {{tr('terms_conditions')}} @endif 
 @endsection
+
+
+
 
 @section('scripts')
 @endsection
