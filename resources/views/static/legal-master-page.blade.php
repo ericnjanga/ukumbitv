@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html class="no-js">
-	<head>
-		@if (isset($videoTitle->title))
-			<title>UkumbiTV | @yield('page-title')</title>
-		@else
-			<title>{{trans('messages.site_name')}} - {{trans('messages.website_description')}}</title>
-		@endif
+	<head> 
+		<title>UkumbiTV - @yield('page-title')</title>
+		 
 
 	    <meta name="viewport" content="width=device-width,  initial-scale=1">
 	    <link rel="stylesheet" href="{{asset('streamtube/css/bootstrap.min.css')}}"> 
