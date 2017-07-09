@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 	<head> 
-		<title>UkumbiTV - @yield('page-title')</title>
+		<title>UkumbiTV | @yield('page-title')</title>
 		 
 
 	    <meta name="viewport" content="width=device-width,  initial-scale=1">

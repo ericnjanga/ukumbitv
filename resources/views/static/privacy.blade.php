@@ -1,11 +1,17 @@
 @extends('static.legal-master-page')
 
-@section('content')
+
 
 
 {{-- Assign "page-login" class to body --}}
 @section('body-class')
 page-legal
+@endsection
+
+
+{{-- page title --}}
+@section('page-title')
+{{trans('messages.privacy_statement')}}
 @endsection
 
 

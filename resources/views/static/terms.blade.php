@@ -1,6 +1,6 @@
 @extends('static.legal-master-page')
 
-@section('content')
+
 
 
 {{-- Assign "page-login" class to body --}}
