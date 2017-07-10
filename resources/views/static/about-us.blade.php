@@ -2,7 +2,7 @@
 {{-- INSPIRATION --}}
 {{-- INSPIRATION --}}
 {{-- INSPIRATION --}}
-https://tympanus.net/codrops/about/
+{{-- https://tympanus.net/codrops/about/ --}}
 {{-- INSPIRATION --}}
 {{-- INSPIRATION --}}
 {{-- INSPIRATION --}}
