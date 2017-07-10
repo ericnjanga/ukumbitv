@@ -27,6 +27,17 @@
 	}
 }
 
+.og-info-n1{
+	font-weight: bold;    
+  margin-bottom: 10px;
+	.og-year, .og-category, .og-duration{
+		display: inline-block;
+	}
+	.og-year, .og-category{
+		margin-right: 10px;
+	}
+}
+
 //Increase size of thumbnail on hover 
 //(if there is no touch event)
 //(and column is not expanded)
