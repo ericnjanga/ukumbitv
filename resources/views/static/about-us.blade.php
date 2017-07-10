@@ -1,3 +1,12 @@
+{{-- INSPIRATION --}}
+{{-- INSPIRATION --}}
+{{-- INSPIRATION --}}
+{{-- INSPIRATION --}}
+https://tympanus.net/codrops/about/
+{{-- INSPIRATION --}}
+{{-- INSPIRATION --}}
+{{-- INSPIRATION --}}
+{{-- INSPIRATION --}}
 @extends('static.legal-master-page') 
 
 
