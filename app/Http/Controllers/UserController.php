@@ -83,7 +83,7 @@ class UserController extends Controller {
             $allCategories = Category::all();
 
             foreach ($allCategories as $k){
-                $v = AdminVideo::with('videoimage')->where('category_id', $k->id)->first();
+                $v = AdminVideo::orderby('id', 'desc')->with('videoimage')->where('category_id', $k->id)->first();
                 if ($v != NULL) {
                     array_push($lastVideos, $v);
                     }
