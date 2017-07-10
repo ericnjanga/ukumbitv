@@ -36,16 +36,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="picture" class="col-sm-1 control-label">{{tr('picture')}} *</label>
-                            <div class="col-sm-10">
-                                <input type="file" required accept="image/png, image/jpeg" id="picture" name="picture" placeholder="{{tr('picture')}}" onchange="previewUploadedPhoto('picture', 'previewArea');">
-                                <div id="previewArea"></div>
-                                <p class="help-block">{{tr('image_validate')}} {{tr('image_square')}}</p>
-                            </div>
-                        </div>
-
-
                     </div>
                 </form>
             
@@ -67,7 +57,6 @@
         function createCategory() {
             var fd = new FormData;
 
-            fd.append('picture', $('#picture').prop('files')[0]);
             fd.append('_token', $('#csrf-token').val());
             fd.append('name', $('#name').val());
 

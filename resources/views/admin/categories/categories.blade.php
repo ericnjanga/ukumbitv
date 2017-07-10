@@ -30,7 +30,6 @@
 						    <tr>
 						      <th>{{tr('id')}}</th>
 						      <th>{{tr('category')}}</th>
-						      <th>{{tr('picture')}}</th>
 						      <th>{{tr('action')}}</th>
 						    </tr>
 						</thead>
@@ -41,9 +40,6 @@
 							    <tr id="row{{$category->id}}">
 							      	<td>{{$i+1}}</td>
 							      	<td>{{$category->name}}</td>
-							      	<td>
-	                                	<img style="height: 30px;" src="{{$category->picture}}">
-	                            	</td>
 
 									<td>
 										<a href="edit-category/{{$category->id}}" class="btn btn-primary">Edit</a>

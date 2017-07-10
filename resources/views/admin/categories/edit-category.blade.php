@@ -38,22 +38,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-
-                            <label for="picture" class="col-sm-1 control-label">{{tr('picture')}}</label>
-
-                            @if($category->picture)
-                                <img style="height: 90px;margin-bottom: 15px; border-radius:2em;" src="{{$category->picture}}">
-                            @endif
-
-                            <div class="col-sm-10" style="margin-left:70px !important">
-                                <input type="file" accept="image/png, image/jpeg" id="picture" name="picture" placeholder="{{tr('picture')}}" onchange="previewUploadedPhoto('picture', 'previewArea');">
-                                <div id="previewArea"></div>
-                                <p class="help-block">{{tr('image_validate')}} {{tr('image_square')}}</p>
-                            </div>
-
-                        </div>
-
 
                     </div>
 
@@ -75,12 +59,10 @@
 
     <script type="text/javascript">
         function editCategory() {
-            var picture = $('#picture').prop('files')[0];
+
             var fd = new FormData;
 
-            if(picture !== undefined){
-                fd.append('picture', picture);
-            }
+
             fd.append('_token', $('#csrf-token').val());
             fd.append('name', $('#name').val());
             fd.append('id', $('#catid').val());

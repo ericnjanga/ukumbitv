@@ -103,7 +103,7 @@
  							<table cellpadding="0" cellspacing="0" border="0" cellpadding="0" align="center" width="400">
 								<tr>
 									<td> 
-										<p style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-align:center;">{{trans('messages.welcome_email_footer_msg1')}} <a href="https://www.ukumbitv.com" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">ukumbitv</a>. </p>
+										<p style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-align:center;">{{trans('messages.welcome_email_footer_msg1')}} <a href="https://ukumbitv.com" style="font-size:10px; color:#ccc; font-family: Roboto,sans-serif; text-decoration:underline;">ukumbitv</a>. </p>
 
 
 										<p style="text-align:center; color:#ccc; text-align:center;">

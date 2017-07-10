@@ -1177,14 +1177,7 @@ class AdminController extends Controller
 
     public function add_movie()
     {
-        $categories = Category::where('categories.is_approved' , 1)
-            ->select('categories.id as id' , 'categories.name' , 'categories.picture' ,
-                'categories.is_series' ,'categories.status' , 'categories.is_approved')
-            ->leftJoin('sub_categories' , 'categories.id' , '=' , 'sub_categories.category_id')
-            ->groupBy('sub_categories.category_id')
-            ->havingRaw("COUNT(sub_categories.id) > 0")
-            ->orderBy('categories.name' , 'asc')
-            ->get();
+        $categories = Category::all();
 
         $actors = Actor::all();
         $directors = Director::all();
@@ -1218,14 +1211,7 @@ class AdminController extends Controller
 
     public function editMovie($id)
     {
-        $categories = Category::where('categories.is_approved' , 1)
-            ->select('categories.id as id' , 'categories.name' , 'categories.picture' ,
-                'categories.is_series' ,'categories.status' , 'categories.is_approved')
-            ->leftJoin('sub_categories' , 'categories.id' , '=' , 'sub_categories.category_id')
-            ->groupBy('sub_categories.category_id')
-            ->havingRaw("COUNT(sub_categories.id) > 0")
-            ->orderBy('categories.name' , 'asc')
-            ->get();
+        $categories = Category::all();
 
         $movie = AdminVideo::find($id);
         $actors = Actor::all();
@@ -1605,16 +1591,9 @@ class AdminController extends Controller
     public function createCategory(Request $request)
     {
 
-
-        $image = $request->file('picture');
-        $image_name = '/'.time().$image->getClientOriginalName();
-        $image->move(public_path('images/categories'),$image_name);
-
-        $imgUrl = url('/images/categories'.$image_name);
-
         $category = new Category();
         $category->name = $request->name;
-        $category->picture = $imgUrl;
+        $category->picture = 'sss';
         $category->is_series = 0;
         $category->status = 1;
         $category->is_approved = 1;
@@ -1648,15 +1627,7 @@ class AdminController extends Controller
     {
         $category = Category::find($request->id);
         $category->name = $request->name;
-
-        $imgUrl = url('/images/categories/');
-        if(!empty($request->file('picture'))){
-            $image = $request->file('picture');
-            $image_name = '/'.time().$image->getClientOriginalName();
-            $image->move(public_path('images/categories'),$image_name);
-            $imagePath = $imgUrl.$image_name;
-            $category->picture = $imagePath;
-        }
+        $category->picture = 'sss';
 
         $category->save();
 
