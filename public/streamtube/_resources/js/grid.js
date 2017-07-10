@@ -346,7 +346,7 @@ var Grid = (function() {
 			this.$description = $( '<p></p>' );
 
 			//...
-			this.$theyear 		= $( '<time class="og-year"></time>' );
+			this.$theyear 		= $( '<span class="og-year"></span>' );
 			this.$thecategory = $( '<span class="og-category"></span>' );
 			this.$theduration = $( '<span class="og-duration"></span>' );
 			this.$info1 			= $( '<div class="og-info-n1"></div>' ).append( this.$theyear, this.$thecategory, this.$theduration );
