@@ -389,15 +389,19 @@ var Grid = (function() {
 			// update preview´s content
 			var $itemEl = this.$item.children( 'a' ),
 				eldata = {
-					href : $itemEl.attr( 'href' ),
-					largesrc : $itemEl.data( 'largesrc' ),
-					title : $itemEl.data( 'title' ),
-					description : $itemEl.data( 'description' )
+					href 			: $itemEl.attr( 'href' ),
+					largesrc 	: $itemEl.data( 'largesrc' ),
+					title 		: $itemEl.data( 'title' ),
+					description : $itemEl.data( 'description' ),
+					theyear 		: $itemEl.data( 'year' ),
+					duration : $itemEl.data( 'duration' ),
+					category : 'Comedy'
 				};
 
+			//...
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description ); 
-			this.$thecategory.html( 'Comedy' );
+			this.$thecategory.html( eldata.category );
 			this.$theyear.html( eldata.year );
 			this.$theduration = $( eldata.duration );
 			console.log('*****eldata=', eldata);
