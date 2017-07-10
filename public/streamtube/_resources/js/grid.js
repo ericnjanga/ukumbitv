@@ -403,7 +403,7 @@ var Grid = (function() {
 			this.$description.html( eldata.description ); 
 			this.$thecategory.html( eldata.category );
 			this.$theyear.html( eldata.year );
-			this.$theduration = $( eldata.duration );
+			this.$theduration.html( eldata.duration );
 			console.log('*****eldata=', eldata);
  
 
