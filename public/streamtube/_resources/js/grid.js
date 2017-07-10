@@ -342,10 +342,18 @@ var Grid = (function() {
 	Preview.prototype = {
 		create : function() {
 			// create Preview structure:
-			this.$title = $( '<h3 class="og-title"></h3>' );
+			this.$title 			= $( '<h3 class="og-title"></h3>' );
 			this.$description = $( '<p></p>' );
+
+			//...
+			this.$theyear 		= $( '<time class="og-year"></time>' );
+			this.$thecategory = $( '<span class="og-category"></span>' );
+			this.$theduration = $( '<span class="og-duration"></span>' );
+			this.$info1 			= $( '<div class="og-info-n1"></div>' ).append( this.$theyear, this.$thecategory, this.$theduration );
+
+			//...
 			this.$href_EN = $( '<a href="#" data-lang="en" class="og-btn-play-sm">Play Video</a>' ); 
-			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description );
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$info1, this.$description );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading )
 			//append also 'play icon'
@@ -388,8 +396,11 @@ var Grid = (function() {
 				};
 
 			this.$title.html( eldata.title );
-			this.$description.html( eldata.description );
-
+			this.$description.html( eldata.description ); 
+			this.$thecategory.html( 'Comedy' );
+			this.$theyear.html( eldata.year );
+			this.$theduration = $( eldata.duration );
+ 
 
 			//Upade play button href
 			this.$item.find('.og-btn-play').attr('href', eldata.href);
