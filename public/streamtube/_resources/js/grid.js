@@ -400,6 +400,7 @@ var Grid = (function() {
 			this.$thecategory.html( 'Comedy' );
 			this.$theyear.html( eldata.year );
 			this.$theduration = $( eldata.duration );
+			console.log('*****eldata.duration=', eldata.duration);
  
 
 			//Upade play button href
