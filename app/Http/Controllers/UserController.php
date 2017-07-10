@@ -79,8 +79,15 @@ class UserController extends Controller {
 
             $videos = AdminVideo::with('videoimage')->get();
 
+            $lastVideos = [];
+            $allCategories = Category::all();
 
-
+            foreach ($allCategories as $k){
+                $v = AdminVideo::with('videoimage')->where('category_id', $k->id)->first();
+                if ($v != NULL) {
+                    array_push($lastVideos, $v);
+                    }
+            }
 
             return view('user.home-video')
                         ->with('page' , 'home')
@@ -91,6 +98,7 @@ class UserController extends Controller {
                         ->with('watch_lists' , $watch_lists)
                         ->with('suggestions' , $suggestions)
                         ->with('categories' , $categories)
+                        ->with('videos_by_cat' , $lastVideos)
                         ->with('videos', $videos);
         } else {
             return redirect()->route('installTheme');
