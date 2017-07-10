@@ -393,7 +393,7 @@ var Grid = (function() {
 					largesrc 	: $itemEl.data( 'largesrc' ),
 					title 		: $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
-					theyear 		: $itemEl.data( 'year' ),
+					theyear 		: $itemEl.data( 'theyear' ),
 					duration : $itemEl.data( 'duration' ),
 					category : 'Comedy'
 				};
