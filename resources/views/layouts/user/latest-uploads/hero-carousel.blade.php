@@ -10,12 +10,13 @@
   <div class="carousel-inner" role="listbox">
     @foreach($videos_by_cat as $i => $video)
     <div class="item @if($i == 0) active @endif">
-    	<img src="{{$video->videoimage->imgBillboard}}" class="img-responsive">
-      <!-- <img src="https://ukumbitv.com/streamtube/images/deco/car-x9fwkuz94596.jpg" alt="..."> -->
-      <div class="carousel-caption">
+      <a href="{{url('/')}}/watch/{{$video->watchid}}">
+    		<img src="{{$video->videoimage->imgBillboard}}" class="img-responsive">
+    	</a>
+      <!-- <div class="carousel-caption">
       	<h3>{{$video->title}}</h3>
         <p>{{$video->description}}</p>
-      </div>
+      </div> -->
     </div>
     @endforeach
   </div>
