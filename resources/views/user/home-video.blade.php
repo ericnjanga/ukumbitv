@@ -47,13 +47,13 @@ page-homevideos
 
 <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content" style="border-radius: 0;">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="videoModalLabel">Modal title</h4>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body" style="padding:0;">
+        <img src="https://via.placeholder.com/1000x600" alt="" class="img-responsive">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

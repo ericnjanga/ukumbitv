@@ -1,1 +1,1 @@
-"use strict";$(function(){$(".page-homevideos").length>0&&Grid.init(),$("body").on("click",'a[data-toggle="modal"]',function(o){o.preventDefault(),console.log("...",$(this))})});
+"use strict";$(function(){$(".page-homevideos").length>0&&$("body").on("click",'a[data-toggle="modal"]',function(o){o.preventDefault(),console.log("...",$(this))})});
