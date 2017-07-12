@@ -29,7 +29,7 @@ page-homevideos
           -->
             <a href="#" data-largesrc="{{$video->videoimage->imgPreview}}" data-title="{{$video->title}}" data-description="{{$video->description}}" data-theyear="{{$video->year}}" data-duration="{{$video->duration}}"  data-toggle="modal" data-target="#videoModal">
 
-	    					<img class="img-loading" src="{{asset('streamtube/images/loader.gif')}}"/>
+	    					<!--<img class="img-loading" src="{{asset('streamtube/images/loader.gif')}}"/>-->
                 <img class="og-tmb1 lazy" data-src="{{$video->videoimage->imgSmall1}}" src="http://via.placeholder.com/500x340" alt="{{$video->title}}"/>
 
                  
