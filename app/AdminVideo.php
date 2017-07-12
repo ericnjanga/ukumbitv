@@ -1,54 +1,38 @@
 <?php
-
 namespace App;
-
 use Illuminate\Database\Eloquent\Model;
-
 use DB;
-
 class AdminVideo extends Model
 {
-
     public function videoimage()
     {
         return $this->hasOne('App\Videoimage');
     }
-
-	public function videosImage()
+    public function videosImage()
     {
         return $this->hasMany('App\AdminVideoImage');
     }
-
-
-
     public function userHistory()
     {
         return $this->hasMany('App\UserHistory');
     }
-
     public function userRating()
     {
         return $this->hasMany('App\UserRating');
     }
-
     public function userWishlist()
     {
         return $this->hasMany('App\Wishlist');
     }
-
-
     public function category() {
         return $this->belongsTo('App\Category');
     }
-
     public function subCategory() {
         return $this->belongsTo('App\SubCategory');
     }
-
     public function genreName() {
         return $this->belongsTo('App\Genre');
     }
-
     /**
      * Get the flag record associated with the video.
      */
@@ -56,7 +40,6 @@ class AdminVideo extends Model
     {
         return $this->hasMany('App\Flag', 'video_id', 'id');
     }
-
     /**
      * Get the pay per view record associated with the video.
      */
@@ -64,60 +47,51 @@ class AdminVideo extends Model
     {
         return $this->hasMany('App\PayPerView', 'video_id', 'id');
     }
-
     public static function boot()
     {
-        //execute the parent's boot method 
+        //execute the parent's boot method
         parent::boot();
-
         //delete your related models here, for example
-        static::deleting(function($video)
-        {
-            if (count($video->videoImage) > 0) {
-                foreach($video->videoImage as $image)
-                {
-                    $image->delete();
-                } 
-            }
-
-            if (count($video->userHistory) > 0) {
-                foreach($video->userHistory as $history)
-                {
-                    $history->delete();
-                } 
-            }
-
-            if (count($video->userRating) > 0) {
-                foreach($video->userRating as $rating)
-                {
-                    $rating->delete();
-                } 
-            }
-
-            if (count($video->userFlags) > 0) {
-                foreach($video->userFlags as $flag)
-                {
-                    $flag->delete();
-                } 
-            }
-
-            if (count($video->userVideoSubscription) > 0) {
-                foreach($video->userVideoSubscription as $videoSubscription)
-                {
-                    $videoSubscription->delete();
-                } 
-            }
-
-            if (count($video->userWishlist) > 0) {
-                foreach($video->userWishlist as $wishlist)
-                {
-                    $wishlist->delete();
-                } 
-            }
-        });	
-
+//        static::deleting(function($video)
+//        {
+//            if (count($video->videoImage) > 0) {
+//                foreach($video->videoImage as $image)
+//                {
+//                    $image->delete();
+//                }
+//            }
+//            if (count($video->userHistory) > 0) {
+//                foreach($video->userHistory as $history)
+//                {
+//                    $history->delete();
+//                }
+//            }
+//            if (count($video->userRating) > 0) {
+//                foreach($video->userRating as $rating)
+//                {
+//                    $rating->delete();
+//                }
+//            }
+//            if (count($video->userFlags) > 0) {
+//                foreach($video->userFlags as $flag)
+//                {
+//                    $flag->delete();
+//                }
+//            }
+//            if (count($video->userVideoSubscription) > 0) {
+//                foreach($video->userVideoSubscription as $videoSubscription)
+//                {
+//                    $videoSubscription->delete();
+//                }
+//            }
+//            if (count($video->userWishlist) > 0) {
+//                foreach($video->userWishlist as $wishlist)
+//                {
+//                    $wishlist->delete();
+//                }
+//            }
+//        });
     }
-
     /**
      * Scope a query to only include active users.
      *
