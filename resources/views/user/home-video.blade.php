@@ -28,7 +28,11 @@ page-homevideos
               
           -->
             <a href="#" data-largesrc="{{$video->videoimage->imgPreview}}" data-title="{{$video->title}}" data-description="{{$video->description}}" data-theyear="{{$video->year}}" data-duration="{{$video->duration}}"  data-toggle="modal" data-target="#videoModal">
-                <img class="og-tmb1" src="{{$video->videoimage->imgSmall1}}" alt="{{$video->title}}"/>
+
+	    					<img src="{{asset('streamtube/images/loader.gif')}}"/>
+                <img class="og-tmb1 b-lazy" data-src="{{$video->videoimage->imgSmall1}}" src="http://via.placeholder.com/500x340" alt="{{$video->title}}"/>
+
+                 
             </a> 
           </li>
         @endforeach 
@@ -86,6 +90,7 @@ page-homevideos
 @endsection
 
 @section('scripts')
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
  	<!--<script src="{{asset('streamtube/js/grid.js')}}"></script>-->
   <script src="{{asset('streamtube/js/app.home-videos.js')}}"></script>
 @endsection

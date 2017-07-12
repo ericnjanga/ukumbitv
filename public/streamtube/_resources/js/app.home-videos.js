@@ -6,6 +6,15 @@
 //(Depends on 'grid.js')
 $(function() { 
 	if($('.page-homevideos').length > 0){
+
+
+        
+    // Initialize lazy load librairy
+    //http://dinbror.dk/blog/blazy/?ref=demo-page
+    var bLazy = new Blazy();
+
+
+
 		// Grid.init();
 
 		//Open video description in a modal when link is clicked

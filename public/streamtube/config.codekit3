@@ -617,6 +617,14 @@
 		"oAP": "\/images\/favicon.ico",
 		"oF": 0
 		},
+	"\/images\/loader.gif": {
+		"ft": 4194304,
+		"iS": 39610,
+		"oA": 0,
+		"oAP": "\/images\/loader.gif",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/images\/logo1.png": {
 		"ft": 32768,
 		"iS": 4215,
