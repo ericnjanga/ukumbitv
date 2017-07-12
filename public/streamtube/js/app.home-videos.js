@@ -1,1 +1,1 @@
-"use strict";$(function(){$(".page-homevideos").length>0&&$("body").on("click",'a[data-toggle="modal"]',function(o){o.preventDefault(),console.log("...",$(this))})});
+"use strict";$(function(){if($(".page-homevideos").length>0){var t=$("#videoModalLabel");$("body").on("click",'a[data-toggle="modal"]',function(e){e.preventDefault(),t.html($(this).data("title")),console.log("...",$(this))})}});

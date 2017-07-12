@@ -9,10 +9,11 @@ $(function() {
 		// Grid.init();
 
 		//Open video description in a modal when link is clicked
+		var $videoTitle = $('#videoModalLabel');
 		$('body').on('click', 'a[data-toggle="modal"]', function(event){
 			event.preventDefault();
 
-
+			$videoTitle.html($(this).data('title'));
 			console.log('...', $(this));
 		});
 	}
