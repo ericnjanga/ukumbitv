@@ -1,0 +1,19 @@
+
+
+.video-modal{
+	.modal-content {
+		border-radius: 0;
+	}
+	.modal-body{
+		padding:0;
+	}
+	.videoModalDesc{
+		padding: 15px;
+	}
+	.modal-title{
+		text-transform: capitalize;
+	}
+	.close:hover{
+		color: $color-primary!important;
+	}
+}

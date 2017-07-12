@@ -10,11 +10,21 @@ $(function() {
 
 		//Open video description in a modal when link is clicked
 		var $videoTitle = $('#videoModalLabel');
+		var $videoDesc = $('#videoModalDesc');
+		var $videoYear = $('#videoModalYear');
+		var $videoCat = $('#videoModalCat');
+		var $videoDur = $('#videoModalDur');
+
+
 		$('body').on('click', 'a[data-toggle="modal"]', function(event){
 			event.preventDefault();
 
 			$videoTitle.html($(this).data('title'));
-			console.log('...', $(this));
+			$videoDesc.html($(this).data('description'));
+			$videoYear.html($(this).data('theyear'));
+			// $videoCat.html($(this).data('description'));
+			$videoDur.html($(this).data('duration'));
+			// console.log('...', $(this));
 		});
 	}
 
