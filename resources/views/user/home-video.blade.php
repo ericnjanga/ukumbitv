@@ -51,19 +51,18 @@ page-homevideos
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="videoModalLabel">Modal title</h4>
-        <ul class="list-inline">
+        <ul class="meta-list1 list-inline">
         	<li id="videoModalYear"></li>
         	<li id="videoModalCat">
-        		<span class="label">Comedy</span>
+        		<span class="label label-info">Comedy</span>
         	</li>
+        	<li id="videoModalDur"></li>
         </ul>
       </div>
       <div class="modal-body">
-      	<a href="{{url('/')}}/watch/{{$video->watchid}}"><img src="https://via.placeholder.com/1000x600" alt="" class="img-responsive">
+      	<a href="{{url('/')}}/watch/{{$video->watchid}}"><img id="videoModalImg" src="https://via.placeholder.com/1000x600" alt="" class="img-responsive">
       	</a> 
-      	<div id="videoModalDesc" class="videoModalDesc">
-      		
-      	</div>
+      	<div id="videoModalDesc" class="videoModalDesc"></div>
       </div>
       <div class="modal-footer">
         <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->

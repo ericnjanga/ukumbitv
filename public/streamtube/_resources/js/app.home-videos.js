@@ -14,6 +14,9 @@ $(function() {
 		var $videoYear = $('#videoModalYear');
 		var $videoCat = $('#videoModalCat');
 		var $videoDur = $('#videoModalDur');
+		var $videoImg = $('#videoModalImg');
+
+		
 
 
 		$('body').on('click', 'a[data-toggle="modal"]', function(event){
@@ -24,6 +27,7 @@ $(function() {
 			$videoYear.html($(this).data('theyear'));
 			// $videoCat.html($(this).data('description'));
 			$videoDur.html($(this).data('duration'));
+			$videoImg.attr({src:$(this).data('largesrc')});
 			// console.log('...', $(this));
 		});
 	}

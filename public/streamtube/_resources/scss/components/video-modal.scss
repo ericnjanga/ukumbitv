@@ -12,8 +12,13 @@
 	}
 	.modal-title{
 		text-transform: capitalize;
+		margin-bottom: 5px;
 	}
 	.close:hover{
 		color: $color-primary!important;
+	}
+	.meta-list1{
+		margin-bottom: 0;
+		color: #888;
 	}
 }
