@@ -8,4 +8,14 @@ $(function() {
 	if($('.page-homevideos').length > 0){
 		Grid.init();
 	}
+
+
+
+	//Open video description in a modal when link is clicked
+	$('body').on('click', 'a[data-toggle="modal"]', function(event){
+		event.preventDefault();
+
+
+		console.log('...', $(this));
+	});
 });
