@@ -60,13 +60,13 @@ page-homevideos
         </ul>
       </div>
       <div class="modal-body">
-      	<a href="{{url('/')}}/watch/{{$video->watchid}}"><img id="videoModalImg" src="https://via.placeholder.com/1000x600" alt="" class="img-responsive">
+      	<a href="{{url('/')}}/watch/{{$video->watchid}}"><img id="videoModalImg" src="https://via.placeholder.com/1000x600" alt="" class="img-responsive videoModalImg">
       	</a> 
       	<div id="videoModalDesc" class="videoModalDesc"></div>
       </div>
       <div class="modal-footer">
         <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-        <a href="{{url('/')}}/watch/{{$video->watchid}}" class="btn btn-primary">{{trans('messages.watch_video')}}</a> 
+        <a href="{{url('/')}}/watch/{{$video->watchid}}" class="btn btn-primary col-xs-4 col-xs-offset-8">{{trans('messages.watch_video')}}</a> 
       </div>
     </div>
   </div>
