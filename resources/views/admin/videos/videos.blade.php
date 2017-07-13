@@ -18,7 +18,7 @@
 
           	<div class="box-header label-primary">
                 <b style="font-size:18px;">{{tr('videos')}}</b>
-                
+
             </div>
 
             <div class="box-body">

@@ -85,7 +85,7 @@
 
                                 </div>
 
-                                <button class="button expanded" type="submit" name="submit">{{tr('register')}}</button>
+                                <button style="visibility: hidden" class="button expanded" type="submit" name="submit">{{tr('register')}}</button>
 
                                 <p class="loginclick">
 
