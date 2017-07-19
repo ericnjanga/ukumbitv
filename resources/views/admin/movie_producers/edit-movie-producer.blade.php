@@ -27,10 +27,11 @@
                         <div class="tab-pane active" role="tabpanel" id="step1"> 
                             <div style="margin-left: 15px"><small>Note : <span style="color:red">*</span> fields are mandatory. Please fill and click next.</small></div>
                             <hr>
-                            <div class="">
+                            <div class="row">
                                 <input type="hidden" value="1" name="ajax_key">
                                 <input type="hidden" id="producerid" value="{{$producer->id}}">
-                                <div class="col-md-6">
+                              <div class="col-md-12">
+                              	<div class="col-md-6">
                                     <div class="form-group">
                                         <label for="name" class="">Name * </label>
                                         <input type="text" required class="form-control" id="name" name="name" value="{{$producer->name}}">
@@ -80,8 +81,7 @@
                                       <textarea  style="overflow:auto;resize:none" class="form-control" rows="4" cols="50" id="description" name="description">{{$producer->description}}</textarea>
                                   </div>
                                 </div><!-- col-md-6 -->
-
-
+                              </div><!-- col-md-12 --> 
                             </div>
                         </div>
                     </div>
