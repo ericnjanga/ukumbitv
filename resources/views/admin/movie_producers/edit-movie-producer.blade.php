@@ -45,6 +45,15 @@
                                         <label for="royalties" class="">Royalties (0-100) * </label>
                                         <input type="number" min="0" max="100" required class="form-control" id="royalties" name="royalties" value="{{$producer->royalties}}">
                                     </div>
+
+
+                                    <div class="input-group" style="border:3px solid red;">
+  <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+  <span class="input-group-addon" id="basic-addon2">@example.com</span>
+</div>
+
+
+
                                     <div class="form-group">
 
                                         <label for="agent" class="">Select providers *</label>
