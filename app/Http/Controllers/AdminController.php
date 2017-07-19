@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Actor;
 use App\Director;
 use App\Lang;
+use App\MovieProducer;
+use App\ProducerAgent;
 use App\Videoimage;
 use Illuminate\Http\Request;
 
@@ -1182,12 +1184,14 @@ class AdminController extends Controller
         $actors = Actor::all();
         $directors = Director::all();
         $langs = Lang::all();
+        $producers = MovieProducer::all();
 
         return view('admin.videos.movie_upload')
             ->with('categories', $categories)
             ->with('actors', $actors)
             ->with('directors', $directors)
             ->with('langs', $langs)
+            ->with('producers', $producers)
             ->with('page', 'videos');
     }
 
@@ -1218,6 +1222,7 @@ class AdminController extends Controller
         $directors = Director::all();
         $langs = Lang::all();
         $images = Videoimage::where('admin_video_id', $id)->first();
+        $producers = MovieProducer::all();
 
         $dirarr = explode(',', $movie->directors);
         $actArr = explode(',', $movie->actors);
@@ -1230,6 +1235,7 @@ class AdminController extends Controller
             ->with('images', $images)
             ->with('actArr', $actArr)
             ->with('dirarr', $dirarr)
+            ->with('producers', $producers)
             ->with('page', 'videos')
             ->with('langs', $langs);
 
@@ -1249,6 +1255,7 @@ class AdminController extends Controller
         $video->description = $request->description;
         $video->category_id = $request->category;
         $video->year = $request->year;
+        $video->movie_producer_id = $request->producer;
         $video->directors = $request->director;
         $video->actors = $request->actor;
         $video->lang_id = $request->lang;
@@ -1387,6 +1394,7 @@ class AdminController extends Controller
         $adminVideo->watchid = $specialId;
         $adminVideo->lang_id = $request->lang;
         $adminVideo->year = $request->year;
+        $adminVideo->movie_producer_id = $request->producer;
 
         $adminVideo->save();
 
@@ -1462,6 +1470,160 @@ class AdminController extends Controller
 
 
         return response()->json($lang);
+
+    }
+
+    //Producer agents
+    public function producerAgents(Request $request) {
+
+        $agents = ProducerAgent::all();
+
+        return view('admin.producer_agents.producer_agents')->with('agents' , $agents)
+            ->withPage('producer_agents')
+            ->with('sub_page','view-producer_agents');
+
+    }
+
+    public function addProducerAgent(Request $request) {
+
+        $providers = MovieProducer::all();
+
+        return view('admin.producer_agents.producer-agent_upload')
+            ->with('providers', $providers)
+            ->withPage('producer_agents');
+
+    }
+
+    public function createProducerAgent(Request $request)
+    {
+        $agent = new ProducerAgent();
+        $agent->name = $request->name;
+        $agent->royalties = $request->royalties;
+        $agent->contract_expiration = $request->contract_expiration;
+        $agent->providers = $request->providers;
+        $agent->email = $request->email;
+        $agent->password = $request->password;
+        $agent->description = $request->description;
+        $agent->save();
+
+        return response()->json($agent);
+    }
+
+    public function deleteProducerAgent(Request $request)
+    {
+        $agent = ProducerAgent::find($request->id);
+        $agent->delete();
+
+
+        return response()->json(['success'=>'Agent deleted']);
+    }
+
+    public function editProducerAgent($id)
+    {
+        $agent = ProducerAgent::find($id);
+        $dirarr = explode(',', $agent->providers);
+        $providers = MovieProducer::all();
+
+
+        return view('admin.producer_agents.edit-producer-agent')
+            ->with('agent', $agent)
+            ->with('dirarr', $dirarr)
+            ->with('providers', $providers)
+            ->with('page', 'agent');
+    }
+
+    public function updateProducerAgent(Request $request)
+    {
+        $agent = ProducerAgent::find($request->id);
+        $agent->name = $request->name;
+        $agent->royalties = $request->royalties;
+        $agent->contract_expiration = $request->contract_expiration;
+        $agent->providers = $request->providers;
+        $agent->email = $request->email;
+        $agent->password = $request->password;
+        $agent->description = $request->description;
+
+
+        $agent->save();
+
+
+        return response()->json($agent);
+
+    }
+
+    //Movie producer
+    public function movieProducers(Request $request) {
+
+        $producers = MovieProducer::all();
+
+        return view('admin.movie_producers.movie_producers')->with('producers' , $producers)
+            ->withPage('movie_producers')
+            ->with('sub_page','view-movie_producers');
+
+    }
+
+    public function addMovieProducers(Request $request) {
+
+        $agents = ProducerAgent::all();
+
+        return view('admin.movie_producers.movie-producer_upload')
+            ->with('agents', $agents)
+            ->withPage('movie_producers');
+
+    }
+
+    public function createMovieProducer(Request $request)
+    {
+        $producer = new MovieProducer();
+        $producer->name = $request->name;
+        $producer->royalties = $request->royalties;
+        $producer->contract_expiration = $request->contract_expiration;
+        $producer->producer_agent_id = $request->agent;
+        $producer->email = $request->email;
+        $producer->password = $request->password;
+        $producer->description = $request->description;
+        $producer->save();
+
+        return response()->json($producer);
+    }
+
+    public function deleteMovieProducer(Request $request)
+    {
+        $producer = MovieProducer::find($request->id);
+        $producer->delete();
+
+
+        return response()->json(['success'=>'Movie producer deleted']);
+    }
+
+    public function editMovieProducer($id)
+    {
+        $producer = MovieProducer::find($id);
+        $agents = ProducerAgent::all();
+
+
+        return view('admin.movie_producers.edit-movie-producer')
+            ->with('producer', $producer)
+            ->with('agents', $agents)
+            ->with('page', 'producer');
+    }
+
+    public function updateMovieProducer(Request $request)
+    {
+        $producer = MovieProducer::find($request->id);
+        $producer->name = $request->name;
+        $producer->royalties = $request->royalties;
+        $producer->contract_expiration = $request->contract_expiration;
+        $producer->producer_agent_id = $request->agent;
+        $producer->email = $request->email;
+        $producer->password = $request->password;
+        $producer->description = $request->description;
+
+
+        $producer->save();
+
+
+        return response()->json($producer);
 
     }
 

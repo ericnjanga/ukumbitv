@@ -112,6 +112,20 @@
                                 </div>
                                 <div class="clearfix"></div>
 
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="lang_id">
+                                    <div class="form-group">
+
+                                        <label for="producer" class="">Select movie producer *</label>
+
+                                        <select required id="producer" name="producer_id" class="form-control">
+                                            @foreach($producers as $producer)
+                                                <option value="{{$producer->id}}">{{$producer->name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="director_id">
                                     <div class="form-group">
 
@@ -331,6 +345,7 @@
             fd.append('director', $('#director').val());
             fd.append('actor', $('#actor').val());
             fd.append('lang', $('#lang').val());
+            fd.append('producer', $('#producer').val());
 
             //fd.append('images', dropImages.join(';'));
             var progressBar = $('#progressbar');

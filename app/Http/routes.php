@@ -341,6 +341,24 @@ Route::group(['prefix' => 'admin'], function(){
     Route::post('delete-lang', ['as' => 'delete-lang', 'uses' =>'AdminController@deleteLang']);
     Route::get('edit-lang/{id}', ['as' => 'edit-lang', 'uses' =>'AdminController@editLang']);
     Route::post('edit-lang/update-lang', 'AdminController@updateLang')->name('admin.update.lang');
+
+    //producer agent
+    Route::get('/producer-agents', 'AdminController@producerAgents')->name('admin.producer-agents');
+    Route::get('/add/producer-agent', 'AdminController@addProducerAgent')->name('admin.add.producer-agent');
+    Route::post('add/create-producer-agent', ['as' => 'create-producer-agent', 'uses' =>'AdminController@createProducerAgent']);
+    Route::post('delete-producer-agent', ['as' => 'delete-producer-agent', 'uses' =>'AdminController@deleteProducerAgent']);
+    Route::get('edit-producer-agent/{id}', ['as' => 'edit-producer-agent', 'uses' =>'AdminController@editProducerAgent']);
+    Route::post('edit-producer-agent/update-producer-agent', 'AdminController@updateProducerAgent')->name('admin.update.producer-agent');
+
+    //movie producer
+    Route::get('/movie-producers', 'AdminController@movieProducers')->name('admin.movie-producers');
+    Route::get('/add/movie-producer', 'AdminController@addMovieProducers')->name('admin.add.movie-producer');
+    Route::post('add/create-movie-producer', ['as' => 'create-movie-producer', 'uses' =>'AdminController@createMovieProducer']);
+    Route::post('delete-movie-producer', ['as' => 'delete-movie-producer', 'uses' =>'AdminController@deleteMovieProducer']);
+    Route::get('edit-movie-producer/{id}', ['as' => 'edit-movie-producer', 'uses' =>'AdminController@editMovieProducer']);
+    Route::post('edit-movie-producer/update-movie-producer', 'AdminController@updateMovieProducer')->name('admin.update.movie-producer');
+
+
     // Slider Videos
 
     Route::get('/slider/video/{id}', 'AdminController@slider_video')->name('admin.slider.video');
