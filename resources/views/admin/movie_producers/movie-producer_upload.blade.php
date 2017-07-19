@@ -61,7 +61,7 @@
                                       </div>
                                       <div class="form-group">
 
-                                          <label for="provider" class="">Select providers *</label>
+                                          <label for="provider" class="">Select Agent *</label>
 
                                           <select required id="agent" name="agent_id" class="form-control">
                                               @foreach($agents as $agent)
