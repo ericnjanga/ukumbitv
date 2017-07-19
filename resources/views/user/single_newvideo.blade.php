@@ -18,6 +18,12 @@ page-singlevideo
 
 
 @section('content')
+
+	<!-- ..................[section1]................... -->
+	<!-- Who can watch the video:  --> 
+	<!-- 1) Is a subscriber -->
+	<!-- 2) [Is within the one week grace period] or [is in good payment standing with paypal] --> 
+	<!-- ..................................  -->
 	@if(Auth::check())
 		<div id="player"></div>
 		<script type="text/javascript">
@@ -60,11 +66,26 @@ page-singlevideo
 				</div>
 			</div>
 		</div>
-  @else
+	<!-- ..................[section1]................... -->
+	<!-- ..................[section1]................... -->
+	<!-- ..................[section1]................... -->
+  @else 
 
+
+	<!-- ..................[section2]................... -->
+	<!-- Those who can't watch the video:  -->
   	<div>
-  		space for unauth users
+  		<ul>
+  			<li>Display little info about the movie</li>
+  			<!-- If the person is a subscriber:  -->
+  			<li>Display a link to the payment page</li>
+  			<!-- If the person is not a subscriber:  -->
+  			<li>Display a link to the registration page</li>
+  		</ul>
   	</div>
+	<!-- ..................[section2]................... -->
+	<!-- ..................[section2]................... -->
+	<!-- ..................[section2]................... -->
 
   @endif 
 @endsection
