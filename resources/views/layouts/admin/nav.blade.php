@@ -83,7 +83,6 @@
                     <li id="add-director"><a href="{{route('admin.add.director')}}"><i class="fa fa-circle-o"></i>{{tr('add_director')}}</a></li>
                     <li id="view-directors"><a href="{{route('admin.directors')}}"><i class="fa fa-circle-o"></i>{{tr('view_directors')}}</a></li>
                 </ul>
-
             </li>
 
             <li class="treeview" id="langs">
@@ -109,6 +108,28 @@
                     <li id="view-videos"><a href="{{route('admin.videos')}}"><i class="fa fa-circle-o"></i>{{tr('view_videos')}}</a></li>
                 </ul>
 
+            </li>
+
+            <li class="treeview" id="producer-agents">
+                <a href="{{route('admin.producer-agents')}}">
+                    <i class="fa fa-smile-o"></i> <span>Producer Agents</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+                <ul class="treeview-menu">
+                    <li id="add-producer-agent"><a href="{{route('admin.add.producer-agent')}}"><i class="fa fa-circle-o"></i>Add Producer Agent</a></li>
+                    <li id="view-producer-agents"><a href="{{route('admin.producer-agents')}}"><i class="fa fa-circle-o"></i>View Producer Agent</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview" id="movie-producers">
+                <a href="{{route('admin.movie-producers')}}">
+                    <i class="fa fa-smile-o"></i> <span>Movie Producers</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+                <ul class="treeview-menu">
+                    <li id="add-movie-producer"><a href="{{route('admin.add.movie-producer')}}"><i class="fa fa-circle-o"></i>Add Movie Producer</a></li>
+                    <li id="view-movie-producers"><a href="{{route('admin.movie-producers')}}"><i class="fa fa-circle-o"></i>View Movie Producer</a></li>
+                </ul>
             </li>
 
 
