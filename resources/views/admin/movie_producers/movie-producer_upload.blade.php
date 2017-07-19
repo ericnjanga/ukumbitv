@@ -36,52 +36,57 @@
 
                     <form id="movie-producer-upload" method="POST" enctype="multipart/form-data" role="form">
                         <div class="tab-content">
-                            <div class="tab-pane active" role="tabpanel" id="step1">
-                                <!-- <h3>Video Details</h3> -->
+                            <div class="tab-pane active" role="tabpanel" id="step1"> 
                                 <div style="margin-left: 15px"><small>Note : <span style="color:red">*</span> fields are mandatory. Please fill and click next.</small></div>
                                 <hr>
-                                <div class="">
-                                    <input type="hidden" value="1" name="ajax_key">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label for="name" class="">Name * </label>
-                                            <input type="text" required class="form-control" id="name" name="name" placeholder="name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="datepicker" class="">Contract expiration * </label>
+                                <div class="row">
+                                  <input type="hidden" value="1" name="ajax_key">
+                                  <div class="col-md-12">
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label for="name" class="">Name * </label>
+                                          <input type="text" required class="form-control" id="name" name="name" placeholder="name">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="datepicker" class="">Contract expiration * </label>
 
-                                            <input type="text" name="contract_expiration" placeholder="Select the contract expiration i.e YYYY-MM-DD" class="form-control pull-right" id="datepicker">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="royalties" class="">Royalties (0-100) * </label>
-                                            <input type="number" min="0" max="100" required class="form-control" id="royalties" name="royalties" placeholder="royalties">
-                                        </div>
-                                        <div class="form-group">
+                                          <input type="text" name="contract_expiration" placeholder="Select the contract expiration i.e YYYY-MM-DD" class="form-control pull-right" id="datepicker">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="royalties" class="">Royalties (0-100) * </label>
+                                        <div class="input-group">
+                                        	<input type="number" min="0" max="100" required class="form-control" id="royalties" name="royalties" placeholder="royalties" aria-describedby="basic-addon2">
+																		  		<span class="input-group-addon" id="basic-addon2">%</span>
+                                        </div> 
+                                      </div>
+                                      <div class="form-group">
 
-                                            <label for="provider" class="">Select providers *</label>
+                                          <label for="provider" class="">Select providers *</label>
 
-                                            <select required id="agent" name="agent_id" class="form-control">
-                                                @foreach($agents as $agent)
-                                                    <option value="{{$agent->id}}">{{$agent->name}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="email" class="">Email * </label>
-                                            <input type="email" required class="form-control" id="email" name="email" placeholder="email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password" class="">Password * </label>
-                                            <input type="password" required class="form-control" id="password" name="password" placeholder="password">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="description" class="">Description </label>
-                                            <textarea  style="overflow:auto;resize:none" class="form-control" rows="4" cols="50" id="description" name="description"></textarea>
-                                        </div>
-                                    </div>
+                                          <select required id="agent" name="agent_id" class="form-control">
+                                              @foreach($agents as $agent)
+                                                  <option value="{{$agent->id}}">{{$agent->name}}</option>
+                                              @endforeach
+                                          </select>
+                                      </div>
+                                    </div><!-- col-md-6 -->
 
-
-                                </div>
+                                    <div class="col-md-6"> 
+                                      <div class="form-group">
+                                          <label for="email" class="">Email * </label>
+                                          <input type="email" required class="form-control" id="email" name="email" placeholder="email">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="password" class="">Password * </label>
+                                          <input type="password" required class="form-control" id="password" name="password" placeholder="password">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="description" class="">Description </label>
+                                          <textarea  style="overflow:auto;resize:none" class="form-control" rows="4" cols="50" id="description" name="description"></textarea>
+                                      </div>
+                                    </div><!-- col-md-6 -->
+																	</div><!-- col-md-12 --> 
+                                </div><!-- row --> 
                             </div>
                         </div>
 
