@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="form-group">
 
-                                        <label for="provider" class="">Select providers *</label>
+                                        <label for="provider" class="">Select Affiliated Movie Providers *</label>
 
                                         <select multiple required id="provider" name="provider_id" class="form-control">
                                             @foreach($providers as $provider)
