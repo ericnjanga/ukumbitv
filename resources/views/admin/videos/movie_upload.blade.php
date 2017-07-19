@@ -41,80 +41,62 @@
                                 <!-- <h3>Video Details</h3> -->
                                 <div style="margin-left: 15px"><small>Note : <span style="color:red">*</span> fields are mandatory. Please fill and click next.</small></div>
                                 <hr>
-                                <div class="">
-                                    <input type="hidden" value="1" name="ajax_key">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label for="title" class="">{{tr('title')}} * </label>
-                                            <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}">
-                                        </div>
-                                    </div>
+                                <div class="row">
+                                  <input type="hidden" value="1" name="ajax_key">
 
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
+                                  <div class="col-md-12">
+                                  	<div class="col-md-6">
+                                      <div class="form-group">
+                                          <label for="title" class="">{{tr('title')}} * </label>
+                                          <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}">
+                                      </div>
 
-                                            <div class="input-group">
-                                                <div class="input-group-addon">
-                                                    <i class="fa fa-calendar"></i>
-                                                </div>
-                                                <input required type="text" name="duration" class="form-control" data-inputmask="'alias': 'hh:mm:ss'" data-mask id="duration">
+                                      <div class="form-group">
+                                        <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
+
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
                                             </div>
+                                            <input required type="text" name="duration" class="form-control" data-inputmask="'alias': 'hh:mm:ss'" data-mask id="duration">
                                         </div>
-                                    </div>
+                                      </div>
 
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label for="description" class="">{{tr('description')}} * </label>
-                                            <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
-                                        </div>
-                                    </div>
+                                      <div class="form-group">
+                                        <label for="description" class="">{{tr('description')}} * </label>
+                                        <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
+                                      </div>
 
-                                </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="category_id">
-                                            <div class="form-group">
+                                      <div id="category" class="form-group"> 
+                                        <label for="category" class="">Select category *</label> 
+                                        <select required id="category" name="category_id" class="form-control">
+                                            @foreach($categories as $category)
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                            @endforeach
+                                        </select>
+                                      </div>
 
-                                                <label for="category" class="">Select category *</label>
-
-                                                <select required id="category" name="category_id" class="form-control">
-                                                    @foreach($categories as $category)
-                                                    <option value="{{$category->id}}">{{$category->name}}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="year_id">
-                                    <div class="form-group">
-
-                                        <label for="year" class="">Select year *</label>
-
+                                      <div id="year_id" class="form-group"> 
+                                        <label for="year" class="">Select year *</label> 
                                         <select required id="year" name="year_id" class="form-control">
                                             @for ($i = 2017; $i > 1900; $i--)
                                                 <option value="{{$i}}">{{$i}}</option>
                                             @endfor
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
+                                    	</div>
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="lang_id">
-                                    <div class="form-group">
 
-                                        <label for="lang" class="">Select language *</label>
+	                                    <div id="lang_id" class="form-group"> 
+	                                      <label for="lang" class="">Select language *</label>
 
-                                        <select required id="lang" name="lang_id" class="form-control">
-                                            @foreach($langs as $lang)
-                                                <option value="{{$lang->id}}">{{$lang->title}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
+	                                      <select required id="lang" name="lang_id" class="form-control">
+	                                          @foreach($langs as $lang)
+	                                              <option value="{{$lang->id}}">{{$lang->title}}</option>
+	                                          @endforeach
+	                                      </select>
+	                                    </div>
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="lang_id">
-                                    <div class="form-group">
-
+	                                    <div class="form-group"> 
                                         <label for="producer" class="">Select movie producer *</label>
 
                                         <select required id="producer" name="producer_id" class="form-control">
@@ -122,13 +104,9 @@
                                                 <option value="{{$producer->id}}">{{$producer->name}}</option>
                                             @endforeach
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="director_id">
-                                    <div class="form-group">
-
+	                                    </div>
+ 
+	                                    <div class="form-group"> 
                                         <label for="director" class="">Select directors *</label>
 
                                         <select multiple required id="director" name="director_id" class="form-control">
@@ -136,13 +114,9 @@
                                                 <option value="{{$director->id}}">{{$director->name}}</option>
                                             @endforeach
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
+	                                    </div>
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="actor_id">
-                                    <div class="form-group">
-
+	                                    <div class="form-group"> 
                                         <label for="actor" class="">Select actors *</label>
 
                                         <select multiple required id="actor" name="actor_id" class="form-control">
@@ -150,64 +124,61 @@
                                                 <option value="{{$actor->id}}">{{$actor->name}}</option>
                                             @endforeach
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-{{--Images--}}
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="billboard_image" class="">Billboard  image *</label>
-                                        <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
-                                        <div id="previewArea1"></div>
-                                        <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1200x650)</p>
-                                    </div>
-                                </div>
+	                                    </div> 
+                                    </div><!-- col-md-6 -->
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="small_image1" class="">Small image 1 *</label>
-                                        <input required type="file" id="small_image1" name="small_image1" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image1', 'previewArea2', 'small');">
-                                        <div id="previewArea2"></div>
-                                        <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-                                    </div>
-                                </div>
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="small_image2" class="">Small image 2 *</label>
-                                        <input required type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small');">
-                                        <div id="previewArea3"></div>
-                                        <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-                                    </div>
-                                </div>
+                                    <div class="col-md-6">  
+	                                    <div class="form-group">
+	                                        <label for="billboard_image" class="">Billboard  image *</label>
+	                                        <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
+	                                        <div id="previewArea1"></div>
+	                                        <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1200x650)</p>
+	                                    </div>
+	                                   
+	                                    <div class="form-group">
+	                                        <label for="small_image1" class="">Small image 1 *</label>
+	                                        <input required type="file" id="small_image1" name="small_image1" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image1', 'previewArea2', 'small');">
+	                                        <div id="previewArea2"></div>
+	                                        <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+	                                    </div>
+	                                
+	                                    <div class="form-group">
+	                                        <label for="small_image2" class="">Small image 2 *</label>
+	                                        <input required type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small');">
+	                                        <div id="previewArea3"></div>
+	                                        <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+	                                    </div>
+	                                 
+	                                    <div class="form-group">
+	                                        <label for="small_image3" class="">Small image 3 *</label>
+	                                        <input required type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small');">
+	                                        <div id="previewArea4"></div>
+	                                        <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+	                                    </div>
+	                                 
+	                                    <div class="form-group">
+	                                        <label for="preview_image" class="">Preview image *</label>
+	                                        <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
+	                                        <div id="previewArea5"></div>
+	                                        <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1000x600)</p>
+	                                    </div>
+	                                 
+	                                		{{--images end--}}
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="small_image3" class="">Small image 3 *</label>
-                                        <input required type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small');">
-                                        <div id="previewArea4"></div>
-                                        <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-                                    </div>
-                                </div>
+	                                    <div class="form-group">
+	                                        <label for="video" class="">{{tr('video')}}</label>
+	                                        <input required type="file" id="video" accept="video/mp4" name="video">
+	                                        <p class="help-block">{{tr('video_validate')}}</p>
+	                                    </div> 
+                                    </div><!-- col-md-6 -->
+                                  </div><!-- col-md-12 -->
+                                     
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="preview_image" class="">Preview image *</label>
-                                        <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
-                                        <div id="previewArea5"></div>
-                                        <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1000x600)</p>
-                                    </div>
-                                </div>
+                                </div><!-- row -->
+ 
 
-                                {{--images end--}}
-
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="video" class="">{{tr('video')}}</label>
-                                        <input required type="file" id="video" accept="video/mp4" name="video">
-                                        <p class="help-block">{{tr('video_validate')}}</p>
-                                    </div>
-                                </div>
+                                  
 
 
                             </div>
