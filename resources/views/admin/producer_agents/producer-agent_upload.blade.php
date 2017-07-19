@@ -40,9 +40,11 @@
                                 <!-- <h3>Video Details</h3> -->
                                 <div style="margin-left: 15px"><small>Note : <span style="color:red">*</span> fields are mandatory. Please fill and click next.</small></div>
                                 <hr>
-                                <div class="">
+                                <div class="row">
                                     <input type="hidden" value="1" name="ajax_key">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <div class="col-md-12">
+                                  	
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="name" class="">Name * </label>
                                             <input type="text" required class="form-control" id="name" name="name" placeholder="name">
@@ -54,7 +56,10 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="royalties" class="">Royalties (0-100) * </label>
-                                            <input type="number" min="0" max="100" required class="form-control" id="royalties" name="royalties" placeholder="royalties">
+                                            <div class="input-group">
+                                            	<input type="number" min="0" max="100" required class="form-control" id="royalties" name="royalties" placeholder="royalties" aria-describedby="basic-addon2">
+																		  				<span class="input-group-addon" id="basic-addon2">%</span> 
+                                            </div>
                                         </div>
                                         <div class="form-group">
 
@@ -66,19 +71,24 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="email" class="">Email * </label>
-                                            <input type="email" required class="form-control" id="email" name="email" placeholder="email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password" class="">Password * </label>
-                                            <input type="password" required class="form-control" id="password" name="password" placeholder="password">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="description" class="">Description </label>
-                                            <textarea  style="overflow:auto;resize:none" class="form-control" rows="4" cols="50" id="description" name="description"></textarea>
-                                        </div>
-                                    </div>
+                                    </div><!-- col-md-6 -->
+
+                                    <div class="col-md-6"> 
+                                      <div class="form-group">
+                                          <label for="email" class="">Email * </label>
+                                          <input type="email" required class="form-control" id="email" name="email" placeholder="email">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="password" class="">Password * </label>
+                                          <input type="password" required class="form-control" id="password" name="password" placeholder="password">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="description" class="">Description </label>
+                                          <textarea  style="overflow:auto;resize:none" class="form-control" rows="4" cols="50" id="description" name="description"></textarea>
+                                      </div>
+                                    </div><!-- col-md-6 -->
+                                  </div><!-- col-md-12 -->
+
 
 
                                 </div>
