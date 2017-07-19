@@ -92,7 +92,7 @@
 
                 <ul class="treeview-menu">
                     <li id="add-video"><a href="{{route('admin.add.movie')}}"><i class="fa fa-circle-o"></i>{{tr('add_movie')}}</a></li>
-                    <li id="add-video"><a href="{{route('admin.add.video')}}"><i class="fa fa-circle-o"></i>{{tr('add_video')}}</a></li>
+                    <!-- <li id="add-video"><a href="{{route('admin.add.video')}}"><i class="fa fa-circle-o"></i>{{tr('add_video')}}</a></li> -->
                     <li id="view-videos"><a href="{{route('admin.videos')}}"><i class="fa fa-circle-o"></i>{{tr('view_videos')}}</a></li>
                 </ul>
 
