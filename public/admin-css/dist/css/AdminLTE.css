@@ -5025,6 +5025,10 @@ Inspiration: https://dribbble.com/shots/1456853-Form-fields-UI/attachments/21595
   background-color: #E8F0FA;
   padding-left: 20px;
   padding-right: 20px;
+  
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 .content-wrapper-admin input[type="text"]:hover, 
 .content-wrapper-admin input[type="email"]:hover,
