@@ -17,39 +17,37 @@
 
             <p class="text-center mb30"></p>
 
-            <div class="form-inputs">
-                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+            <div class="row">
+              <div class="col-md-12 form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
-                    <input type="email" class="form-control input-lg" name="email" placeholder="Your Username">
+                  <input type="email" class="form-control input-lg" name="email" placeholder="Your Username">
 
-                    @if ($errors->has('email'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
-                    @endif
-
-                </div>
-
-                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-
-                    <input type="password" class="form-control input-lg" name="password" placeholder="Your Password">
-
-                    @if ($errors->has('password'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                    @endif
-
-                </div>
+                  @if ($errors->has('email'))
+                      <span class="help-block">
+                          <strong>{{ $errors->first('email') }}</strong>
+                      </span>
+                  @endif 
+              </div>
 
 
-            </div>
+              <div class="col-md-12 form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 
-            <div class="col-md-6 col-md-offset-3">
-                <button class="btn btn-success btn-block mb15" type="submit">
-                    <h5><span><i class="fa fa-btn fa-sign-in"></i> {{tr('login')}}</span></h5>
-                </button>
-            </div>
+                  <input type="password" class="form-control input-lg" name="password" placeholder="Your Password">
+
+                  @if ($errors->has('password'))
+                      <span class="help-block">
+                          <strong>{{ $errors->first('password') }}</strong>
+                      </span>
+                  @endif 
+              </div>
+
+
+	            <div class="col-md-12">
+	                <button class="btn btn-success btn-block mb15" type="submit">
+	                    <h5><span><i class="fa fa-btn fa-sign-in"></i> {{tr('login')}}</span></h5>
+	                </button>
+	            </div>  
+            </div><!-- row -->
 
             <div class="form-group">
                     <a style="margin-left:100px" class="btn btn-link" href="{{ url('/admin/password/reset') }}">{{tr('reset_password')}}</a>
