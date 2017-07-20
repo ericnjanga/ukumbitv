@@ -35,13 +35,13 @@
       </div>
 			
 
-			<div class="col-md-12">
-		    <progress id="progressbar" style="width:100%" value="0" max="100"></progress>
+			<div class="col-md-4 col-md-offset-8 form-group">
+		    <button class="btn btn-submit btn-block" id="finishBtn" onclick="createCategory()">Save</button>
 			</div>
 			
 
-			<div class="col-md-4 col-md-offset-4">
-		    <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="createCategory()">Save</button>
+			<div class="col-md-12 form-group">
+		    <progress id="progressbar" style="width:100%" value="0" max="100"></progress>
 			</div>
     </div>
 
