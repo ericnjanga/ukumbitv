@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="login-box-body" style="height:275px; border:2px solid red;">
+    <div class="login-box-body tab-content">
 
 
         <form class="form-layout" role="form" method="POST" action="{{ url('/admin/login') }}">
