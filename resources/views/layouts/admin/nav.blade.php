@@ -35,16 +35,14 @@
             </li>
 
 
-            <li class="treeview" id="categories">
+            <li id="categories" data-btn-add="{{route('admin.add.category')}}" data-btn-view="{{route('admin.categories')}}"> 
                 <a href="{{route('admin.categories')}}">
                     <i class="fa fa-suitcase"></i> <span>{{tr('categories')}}</span> <i class="fa fa-angle-left pull-right"></i>
-                </a>
-
-                <ul class="treeview-menu">
+                </a> 
+                <!-- <ul class="treeview-menu">
                     <li id="add-category"><a href="{{route('admin.add.category')}}"><i class="fa fa-circle-o"></i>{{tr('add_category')}}</a></li>
                     <li id="view-categories"><a href="{{route('admin.categories')}}"><i class="fa fa-circle-o"></i>{{tr('view_categories')}}</a></li>
-                </ul>
-
+                </ul> --> 
             </li>
 
             <li class="treeview" id="actors">

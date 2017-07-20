@@ -176,6 +176,9 @@
           else if (page_url.indexOf('user') > -1 || page_url.indexOf('users') > -1){
           	var $menu_item = $('#sidebar-menu > #users'); 
           }
+          else if (page_url.indexOf('category') > -1 || page_url.indexOf('categories') > -1){
+          	var $menu_item = $('#sidebar-menu > #categories'); 
+          }
 
           if($menu_item.length > 0){ 
           	$btn_qc1.attr('href', $menu_item.data('btn-add'));
