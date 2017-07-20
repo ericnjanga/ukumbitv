@@ -32,7 +32,7 @@
 						      <th>{{tr('username')}}</th>
 						      <th>{{tr('email')}}</th>
 						      <th>{{tr('mobile')}}</th>
-						      <th>{{tr('upgrade')}}</th>
+						      <!-- <th>{{tr('upgrade')}}</th> -->
 						      <th>{{tr('validity_days')}}</th>
 						      <th>{{tr('action')}}</th>
 						    </tr>
@@ -46,14 +46,14 @@
 							      	<td>{{$user->name}}</td>
 							      	<td>{{$user->email}}</td>
 							      	<td>{{$user->mobile}}</td>
-							      	<td>
+							      	<!-- <td>
 							      		@if($user->is_moderator)
 							      			<a onclick="return confirm('Are you sure?');" href="{{route('user.upgrade.disable' , array('id' => $user->id, 'moderator_id' => $user->moderator_id))}}" class="label label-warning">{{tr('disable')}}</a>
 							      		@else
 							      			<a onclick="return confirm('Are you sure?');" href="{{route('admin.user.upgrade' , array('id' => $user->id ))}}" class="label label-danger">{{tr('upgrade')}}</a>
 							      		@endif
 
-							      </td>
+							      </td> -->
 							      <td>
 							      	@if($user->user_type)
                                         {{get_expiry_days($user->id)}}
