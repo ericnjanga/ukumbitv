@@ -310,6 +310,11 @@ a:focus {
 .login-title a {
   color: #ffffff;
 }
+.login-title{
+	text-shadow: 1px 1px 1px #333;
+	font-size: 30px;
+	margin-bottom: 50px;
+}
 .main-header .logo {
   -webkit-transition: width 0.3s ease-in-out;
   -o-transition: width 0.3s ease-in-out;
@@ -3253,7 +3258,7 @@ table.text-center th {
 }
 .login-box .link-reset:hover {
 	text-decoration: underline;
-	color: orange;
+	color: #fff;
 }
 .login-box input[type="email"]::-webkit-input-placeholder,
 .login-box input[type="password"]::-webkit-input-placeholder { 
