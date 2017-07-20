@@ -18,12 +18,12 @@
 
         <div class="col-md-10">
 
-            <div class="box box-primary">
+            <div class="box tab-content-user-add">
 
-                <div class="box-header label-primary">
+                <!-- <div class="box-header label-primary">
                     <b style="font-size:18px;">{{tr('add_user')}}</b>
                     <a href="{{route('admin.users')}}" class="btn btn-default pull-right">{{tr('view_users')}}</a>
-                </div>
+                </div> -->
 
                 <form class="form-horizontal" action="{{route('admin.save.user')}}" method="POST" enctype="multipart/form-data" role="form">
 

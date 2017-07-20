@@ -71,6 +71,12 @@
 .tab-content-movie-view{
 	border-top: 4px solid lime;
 }
+.tab-content-user-view{
+	border-top: 4px solid purple;
+}
+.tab-content-user-add{
+	border-top: 4px solid chocolate;
+}
 
 
 
