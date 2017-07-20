@@ -43,12 +43,12 @@
 
 
 	            <div class="col-md-6 col-md-offset-6" style="margin-bottom: 10px;">
-                <button class="btn btn-success btn-block mb15" type="submit">
+                <button class="btn btn-submit btn-block" type="submit">
                   Continue
                 </button>
 	            </div>  
-	            <div class="col-md-6 col-md-offset-6 form-group text-right">
-	              <a href="{{ url('/admin/password/reset') }}">{{tr('reset_password')}}</a>
+	            <div class="col-md-6 col-md-offset-6 form-group text-center">
+	              <a class="link-reset" href="{{ url('/admin/password/reset') }}">Forgot password?</a>
 	            </div>
             </div><!-- row -->
 

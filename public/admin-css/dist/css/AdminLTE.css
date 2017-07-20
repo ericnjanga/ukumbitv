@@ -3230,6 +3230,25 @@ table.text-center th {
 .login-box .form-group {
 	margin-bottom: 30px;
 }
+.login-box .btn-submit {
+	background-color: #666;
+	color: #ddd;
+	height: 45px;
+}
+.login-box .btn-submit:hover {
+	background-color: orange;
+	color: #666;
+}
+.login-box .btn-submit,
+.login-box .link-reset {
+	font-size: 16px;
+}
+.login-box .link-reset {
+	color: #666;
+}
+.login-box .link-reset:hover {
+	text-decoration: underline;
+}
 .login-box input[type="email"]::-webkit-input-placeholder,
 .login-box input[type="password"]::-webkit-input-placeholder { 
   color: #666;
