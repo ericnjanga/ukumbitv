@@ -58,6 +58,18 @@
             <!-- Main content -->
             <section class="content">
                 @yield('content')
+
+							<style>
+								.quick-controls .btn {
+									border-radius: 50px;
+								}
+							</style>
+              <div class="quick-controls">
+              	<a href="#" class="btn btn-primary">+</a>
+              	<a href="#" class="btn btn-default">
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+              	</a>
+              </div>
             </section>
 
         </div>
