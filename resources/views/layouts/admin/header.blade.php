@@ -2,7 +2,7 @@
     <!-- Logo -->
     <a href="" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini">{{Setting::get('site_name')}}</span>
+        <span class="logo-mini">UkumbiTV - Admin</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg">{{Setting::get('site_name')}}</span>
     </a>
@@ -13,7 +13,7 @@
         <!-- <a href="" class="btn btn-sm btn-default ml15">Hello</a> -->
 
         <!-- Sidebar toggle button-->
-        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" style="display:none;">
             <span class="sr-only">{{trans('messages.Toggle_navigation')}}</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
