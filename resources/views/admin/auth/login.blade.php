@@ -48,7 +48,7 @@
 	                </button>
 	            </div>  
 	            <div class="col-md-6 col-md-offset-6 form-group text-right">
-	                    <a style="margin-left:100px" class="btn btn-link" href="{{ url('/admin/password/reset') }}">{{tr('reset_password')}}</a>
+	              <a class="btn btn-link" href="{{ url('/admin/password/reset') }}">{{tr('reset_password')}}</a>
 	            </div>
             </div><!-- row -->
 
