@@ -3275,7 +3275,7 @@ table.text-center th {
 /* Change the white to any color ;) */
 .login-box input[type="email"]:-webkit-autofill,
 .login-box input[type="password"]:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px white inset;
+    -webkit-box-shadow: 0 0 0 30px #999 inset;
 }
  
 .login-box,
