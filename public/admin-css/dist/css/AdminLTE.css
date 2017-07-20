@@ -3227,8 +3227,8 @@ table.text-center th {
 	padding-right: 0;
 	border-color: #666;
 }
-.login-box input[type="email"]:focused,
-.login-box input[type="password"]:focused {
+.login-box input[type="email"]:focus,
+.login-box input[type="password"]:focus {
 	background-color: transparent; 
 	border-color: orange;
 }
