@@ -15,7 +15,7 @@
         </div>
 
         <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu">
+        <ul id="sidebar-menu" class="sidebar-menu">
 
             <li id="dashboard">
               <a href="{{route('admin.dashboard')}}">
@@ -85,7 +85,7 @@
 
             </li>
 
-            <li class="treeview" id="videos">
+            <li class="treeview" id="videos" data-btn-add="{{route('admin.add.movie')}}" data-btn-view="{{route('admin.videos')}}">
                 <a href="{{route('admin.videos')}}">
                     <i class="fa fa-video-camera"></i> <span>{{tr('videos')}}</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
