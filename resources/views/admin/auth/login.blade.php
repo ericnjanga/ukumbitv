@@ -42,13 +42,13 @@
               </div>
 
 
-	            <div class="col-md-6 col-md-offset-6">
-	                <button class="btn btn-success btn-block mb15" type="submit">
-	                    <h5><span><i class="fa fa-btn fa-sign-in"></i> {{tr('login')}}</span></h5>
-	                </button>
+	            <div class="col-md-6 col-md-offset-6" style="margin-bottom: 10px;">
+                <button class="btn btn-success btn-block mb15" type="submit">
+                  Continue
+                </button>
 	            </div>  
 	            <div class="col-md-6 col-md-offset-6 form-group text-right">
-	              <a class="btn btn-link" href="{{ url('/admin/password/reset') }}">{{tr('reset_password')}}</a>
+	              <a href="{{ url('/admin/password/reset') }}">{{tr('reset_password')}}</a>
 	            </div>
             </div><!-- row -->
 
