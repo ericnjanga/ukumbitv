@@ -14,35 +14,37 @@
 
 @include('notification.notify')
 
-    <div class="row">
+    <div class="row"> 
+      <div class="col-md-12"> 
+        <div class="box tab-content tab-content-addcat">
 
-        <div class="col-md-12">
+            <!-- <div class="box-header label-primary">
+                <b style="font-size:18px;">{{tr('add_category')}}</b>
+                <a href="{{route('admin.categories')}}" class="btn btn-default pull-right">{{tr('categories')}}</a>
+            </div> -->
 
-            <div class="box tab-content tab-content-addcat">
-
-                <!-- <div class="box-header label-primary">
-                    <b style="font-size:18px;">{{tr('add_category')}}</b>
-                    <a href="{{route('admin.categories')}}" class="btn btn-default pull-right">{{tr('categories')}}</a>
-                </div> -->
-
-                <form method="POST" enctype="multipart/form-data" role="form">
-                  <div class="box-body"> 
-                    <div class="form-group col-sm-12">
-                      <label for="name" class="control-label">{{tr('name')}} *</label>
-                      <input type="text" required class="form-control" id="name" name="name" placeholder="Category Name">
-                    </div> 
-                  </div>
-                </form>
-            
+          <form method="POST" enctype="multipart/form-data" role="form">
+            <div class="box-body"> 
+              <div class="form-group col-sm-12">
+                <label for="name" class="control-label">{{tr('name')}} *</label>
+                <input type="text" required class="form-control" id="name" name="name" placeholder="Category Name">
+              </div> 
             </div>
+          </form> 
+        </div> 
+      </div>
+			
 
-        </div>
+			<div class="col-md-12">
+		    <progress id="progressbar" style="width:100%" value="0" max="100"></progress>
+			</div>
+			
 
+			<div class="col-md-4 col-md-offset-4">
+		    <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="createCategory()">Save</button>
+			</div>
     </div>
-<div class="box-footer">
-    <progress id="progressbar" value="0" max="100"></progress>
-    <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="createCategory()">Save</button>
-</div>
+
 
 @endsection
 
