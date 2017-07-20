@@ -24,7 +24,7 @@
             </div> -->
 
           <form method="POST" enctype="multipart/form-data" role="form">
-            <div class="box-body"> 
+            <div class="row"> 
               <div class="form-group col-sm-12">
                 <label for="name" class="control-label">{{tr('name')}} *</label>
                 <input type="text" required class="form-control" id="name" name="name" placeholder="Category Name">

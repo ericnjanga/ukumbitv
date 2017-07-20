@@ -27,7 +27,7 @@
 
                 <form class="form-horizontal-" action="{{route('admin.save.user')}}" method="POST" enctype="multipart/form-data" role="form">
 
-                    <div class="box-body row">
+                    <div class="row">
 
                         <div class="form-group col-sm-12">
                           <label for="email" class="control-label">{{tr('email')}}</label>
