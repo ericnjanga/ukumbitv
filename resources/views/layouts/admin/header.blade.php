@@ -1,10 +1,9 @@
 <header class="main-header">
     <!-- Logo -->
     <a href="" class="logo">
-        <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini">UkumbiTV - Admin</span>
-        <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg">{{Setting::get('site_name')}}</span>
+    	UkumbiTV - Admin 
+      <!-- <span class="logo-mini">UkumbiTV - Admin</span> 
+        <span class="logo-lg">{{Setting::get('site_name')}}</span> -->
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
