@@ -62,10 +62,27 @@
 							<style>
 								.quick-controls .btn {
 									border-radius: 50px;
+									width: 50px;
+							    height: 50px;
+							    font-size: 1.5em;
+							    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+									-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+									box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 								}
+								.quick-controls {
+									position: fixed;
+							    bottom: 50px;
+							    right: 40px;
+								}
+								.btn-primary {
+									background-color: #00D1FF;
+								}
+								    
 							</style>
               <div class="quick-controls">
-              	<a href="#" class="btn btn-primary">+</a>
+              	<a href="#" class="btn btn-primary">
+              		<i class="fa fa-plus" aria-hidden="true"></i>
+              	</a>
               	<a href="#" class="btn btn-default">
 									<i class="fa fa-pencil" aria-hidden="true"></i>
               	</a>
