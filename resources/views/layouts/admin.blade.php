@@ -50,7 +50,7 @@
 
         <div class="content-wrapper">
 
-            <section class="content-header" style="border:5px solid red;">
+            <section class="content-header">
                 <h1>@yield('content-header')<small>@yield('content-sub-header')</small></h1>
                 <ol class="breadcrumb">@yield('breadcrumb')</ol>
             </section>
