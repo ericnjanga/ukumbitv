@@ -16,27 +16,22 @@
 
     <div class="row">
 
-        <div class="col-md-10">
+        <div class="col-md-12">
 
-            <div class="box box-primary">
+            <div class="box tab-content tab-content-addcat">
 
-                <div class="box-header label-primary">
+                <!-- <div class="box-header label-primary">
                     <b style="font-size:18px;">{{tr('add_category')}}</b>
                     <a href="{{route('admin.categories')}}" class="btn btn-default pull-right">{{tr('categories')}}</a>
-                </div>
+                </div> -->
 
-                <form class="form-horizontal" method="POST" enctype="multipart/form-data" role="form">
-
-                    <div class="box-body">
-
-                        <div class="form-group">
-                            <label for="name" class="col-sm-1 control-label">{{tr('name')}} *</label>
-                            <div class="col-sm-10">
-                                <input type="text" required class="form-control" id="name" name="name" placeholder="Category Name">
-                            </div>
-                        </div>
-
-                    </div>
+                <form method="POST" enctype="multipart/form-data" role="form">
+                  <div class="box-body"> 
+                    <div class="form-group col-sm-12">
+                      <label for="name" class="control-label">{{tr('name')}} *</label>
+                      <input type="text" required class="form-control" id="name" name="name" placeholder="Category Name">
+                    </div> 
+                  </div>
                 </form>
             
             </div>
