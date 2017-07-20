@@ -22,7 +22,9 @@
         <div class="navbar-custom-menu">
 
             <ul class="nav navbar-nav">
-
+							<li>
+								<a href="https://www.pinterest.com/pin/237564949076657603/" target="_blank">** Inspiration **</a>
+							</li>
                 <li class="dropdown notifications-menu"> 
                     <a href="{{url('/')}}" class="btn btn-link" target="_blank"> 
                         <i class="fa fa-external-link"></i>  
