@@ -169,8 +169,13 @@
 
 
           if(page_url.indexOf('movie') > -1 || page_url.indexOf('videos') > -1){
-          	var $menu_item = $('#sidebar-menu > #videos');
-          	console.log('>>>>>', $menu_item.data('btn-add'), '>>>>>', $menu_item.data('btn-view'));
+          	var $menu_item = $('#sidebar-menu > #videos'); 
+          }
+          else if (page_url.indexOf('user') > -1 || page_url.indexOf('users') > -1){
+          	var $menu_item = $('#sidebar-menu > #users'); 
+          }
+
+          if($menu_item.length > 0){ 
           	$btn_qc1.attr('href', $menu_item.data('btn-add'));
           	$btn_qc2.attr('href', $menu_item.data('btn-view'));
           }
