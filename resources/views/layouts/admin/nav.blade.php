@@ -24,7 +24,7 @@
               
             </li>
 
-            <li class="treeview" id="users" data-btn-add="{{route('admin.add.user')}}" data-btn-view="{{route('admin.users')}}">  
+            <li id="users" data-btn-add="{{route('admin.add.user')}}" data-btn-view="{{route('admin.users')}}">  
                 <a href="#">
                     <i class="fa fa-user"></i> <span>{{tr('users')}}</span> <i class="fa fa-angle-left pull-right"></i>
                 </a> 
