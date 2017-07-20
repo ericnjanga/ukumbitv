@@ -30,7 +30,7 @@
 
     </div>
 
-    <div class="login-box">
+    <div class="login-box" style="border:10px solid red!important;">
 
         <div class="login-logo">
              <a href="{{route('admin.login')}}"><b> 
