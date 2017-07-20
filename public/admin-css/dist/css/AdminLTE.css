@@ -5025,7 +5025,9 @@ table.text-center th {
 /*
 Inspiration: https://dribbble.com/shots/1456853-Form-fields-UI/attachments/215953
 */
-.content-wrapper-admin input[type="text"] {
+.content-wrapper-admin input[type="text"], 
+.content-wrapper-admin input[type="email"] {
     height: 45px;
+    border-width: 0;
     background-color: #E8F0FA;
 }

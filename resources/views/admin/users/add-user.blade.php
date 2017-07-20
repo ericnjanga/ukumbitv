@@ -25,41 +25,33 @@
                     <a href="{{route('admin.users')}}" class="btn btn-default pull-right">{{tr('view_users')}}</a>
                 </div> -->
 
-                <form class="form-horizontal" action="{{route('admin.save.user')}}" method="POST" enctype="multipart/form-data" role="form">
+                <form class="form-horizontal-" action="{{route('admin.save.user')}}" method="POST" enctype="multipart/form-data" role="form">
 
-                    <div class="box-body">
+                    <div class="box-body row">
 
-                        <div class="form-group">
-                            <label for="email" class="col-sm-1 control-label">{{tr('email')}}</label>
-                            <div class="col-sm-10">
-                                <input type="email" maxlength="255" required class="form-control" id="email" name="email" placeholder="{{tr('email')}}">
-                            </div>
+                        <div class="form-group col-sm-12">
+                          <label for="email" class="control-label">{{tr('email')}}</label>
+                          <input type="email" maxlength="255" required class="form-control" id="email" name="email" placeholder="{{tr('email')}}">
                         </div>
 
-                        <div class="form-group">
-                            <label for="username" class="col-sm-1 control-label">{{tr('username')}}</label>
+                        <div class="form-group col-sm-12">
+                          <label for="username" class="control-label">{{tr('username')}}</label>
 
-                            <div class="col-sm-10">
-                                <input type="text" required name="name" class="form-control" id="username" placeholder="{{tr('name')}}">
-                            </div>
+                          <input type="text" required name="name" class="form-control" id="username" placeholder="{{tr('name')}}">
                         </div>
 
-                        <div class="form-group">
-                            <label for="mobile" class="col-sm-1 control-label">{{tr('mobile')}}</label>
+                        <div class="form-group col-sm-12">
+                            <label for="mobile" class="control-label">{{tr('mobile')}}</label>
 
-                            <div class="col-sm-10">
-                                <input type="text" required name="mobile" class="form-control" id="mobile" placeholder="{{tr('mobile')}}" minlength="6" maxlength="13" pattern="[0-9]{6,}">
+                            <input type="text" required name="mobile" class="form-control" id="mobile" placeholder="{{tr('mobile')}}" minlength="6" maxlength="13" pattern="[0-9]{6,}">
                                 <br>
                                  <small style="color:brown">Note : The mobile must be between 6 and 13 digits.</small>
-                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="is_guest" class="col-sm-1 control-label">{{tr('guest')}}</label>
+                        <div class="form-group col-sm-12">
+                            <label for="is_guest" class="control-label">{{tr('guest')}}</label>
 
-                            <div class="col-sm-10">
-                                <input type="checkbox" name="is_guest" value="1">
-                            </div>
+                            <input type="checkbox" name="is_guest" value="1">
                         </div>
 
                     </div>
