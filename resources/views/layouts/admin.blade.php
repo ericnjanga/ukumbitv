@@ -159,13 +159,15 @@
                 "autoWidth": false
             });
 
-          //....
-          var page_url = document.location.href;
-          $btn_qc1 = $('#btn-qc-add')
-          $btn_qc2 = $('#btn-qc-view')
+          //Assign "view" and "add" button urls based on the page
+          //......................................................
+          //......................................................
+          var page_url = document.location.href,
+          		$btn_qc1 = $('#btn-qc-add');
+          		$btn_qc2 = $('#btn-qc-view');
 
-          console.log('>>>>>', page_url.indexOf('movie'));
-          console.log('>>>>>', page_url.indexOf('videos'));
+          // console.log('>>>>>', page_url.indexOf('movie'));
+          // console.log('>>>>>', page_url.indexOf('videos'));
 
 
           if(page_url.indexOf('movie') > -1 || page_url.indexOf('videos') > -1){
@@ -178,10 +180,8 @@
           if($menu_item.length > 0){ 
           	$btn_qc1.attr('href', $menu_item.data('btn-add'));
           	$btn_qc2.attr('href', $menu_item.data('btn-view'));
-          }
-
-        });
-
+          } 
+        }); 
     </script>
 
     @yield('scripts')

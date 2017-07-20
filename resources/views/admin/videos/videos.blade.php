@@ -14,7 +14,7 @@
     @include('notification.notify')
 	<div class="row">
         <div class="col-xs-12">
-          <div class="box tab-content-movie-view">
+          <div class="box tab-content tab-content-movie-view">
 
           	<!-- <div class="box-header label-primary">
                 <b style="font-size:18px;">{{tr('videos')}}</b> 

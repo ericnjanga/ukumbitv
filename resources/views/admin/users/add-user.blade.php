@@ -18,7 +18,7 @@
 
         <div class="col-md-10">
 
-            <div class="box tab-content-user-add">
+            <div class="box tab-content tab-content-user-add">
 
                 <!-- <div class="box-header label-primary">
                     <b style="font-size:18px;">{{tr('add_user')}}</b>

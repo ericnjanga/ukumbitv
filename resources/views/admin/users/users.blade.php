@@ -15,7 +15,7 @@
 
 	<div class="row">
         <div class="col-xs-12">
-          <div class="box tab-content-user-view">
+          <div class="box tab-content tab-content-user-view">
           	<!-- <div class="box-header label-primary">
                 <b style="font-size:18px;">...{{tr('users')}}</b>
                 <a href="{{route('admin.add.user')}}" class="btn btn-default pull-right">{{tr('add_user')}}</a>

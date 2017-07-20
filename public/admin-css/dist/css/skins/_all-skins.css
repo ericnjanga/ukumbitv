@@ -73,7 +73,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49638c', end
 
 
 
-.tab-content-movie-add{
+.tab-content {
+	background-color: #093f78;
+}
+/*.tab-content-movie-add{
 	border-top: 4px solid turquoise;
 }
 .tab-content-movie-view{
@@ -84,7 +87,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49638c', end
 }
 .tab-content-user-add{
 	border-top: 4px solid chocolate;
-}
+}*/
 
 
 
