@@ -85,17 +85,15 @@
 
             </li>
 
-            <li class="treeview" id="videos" data-btn-add="{{route('admin.add.movie')}}" data-btn-view="{{route('admin.videos')}}">
+            <li class="treeview--" id="videos--" data-btn-add="{{route('admin.add.movie')}}" data-btn-view="{{route('admin.videos')}}">
                 <a href="{{route('admin.videos')}}">
                     <i class="fa fa-video-camera"></i> <span>{{tr('videos')}}</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
 
-                <ul class="treeview-menu">
-                    <li id="add-video"><a href="{{route('admin.add.movie')}}"><i class="fa fa-circle-o"></i>{{tr('add_movie')}}</a></li>
-                    <!-- <li id="add-video"><a href="{{route('admin.add.video')}}"><i class="fa fa-circle-o"></i>{{tr('add_video')}}</a></li> -->
+                <!-- <ul class="treeview-menu">
+                    <li id="add-video"><a href="{{route('admin.add.movie')}}"><i class="fa fa-circle-o"></i>{{tr('add_movie')}}</a></li> 
                     <li id="view-videos"><a href="{{route('admin.videos')}}"><i class="fa fa-circle-o"></i>{{tr('view_videos')}}</a></li>
-                </ul>
-
+                </ul>  -->
             </li>
 
             <li class="treeview" id="producer-agents">
