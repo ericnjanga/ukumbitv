@@ -25,8 +25,8 @@
             </li>
 
             <li id="users" data-btn-add="{{route('admin.add.user')}}" data-btn-view="{{route('admin.users')}}">  
-                <a href="#">
-                    <i class="fa fa-user"></i> <span>{{tr('users')}}</span> <i class="fa fa-angle-left pull-right"></i>
+                <a href="{{route('admin.add.user')}}">
+                    <i class="fa fa-user"></i> <span>{{tr('users')}}</span> 
                 </a> 
                 <!-- <ul class="treeview-menu">
                     <li id="add-user"><a href="{{route('admin.add.user')}}"><i class="fa fa-circle-o"></i>{{tr('add_user')}}</a></li>
