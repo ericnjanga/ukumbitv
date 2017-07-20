@@ -300,10 +300,15 @@ a:focus {
 }
 
 .main-header .logo,
-.login-title {
-	
+.login-title { 
+  line-height: 50px;
+  font-size: 20px;
   font-weight: 300;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.main-header .logo,
+.login-title a {
+  color: #ffffff;
 }
 .main-header .logo {
   -webkit-transition: width 0.3s ease-in-out;
@@ -312,8 +317,6 @@ a:focus {
   display: block;
   float: left;
   height: 50px;
-  font-size: 20px;
-  line-height: 50px;
   text-align: center;
   width: 230px;
   padding: 0 15px;
