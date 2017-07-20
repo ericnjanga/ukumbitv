@@ -92,11 +92,11 @@
 								    
 							</style>
               <div class="quick-controls">
-              	<a href="#" class="btn btn-primary">
+              	<a id="btn-qc-add" href="#" class="btn btn-primary">
               		<i class="fa fa-plus" aria-hidden="true"></i>
               	</a>
-              	<a href="#" class="btn btn-edit btn-default">
-									<i class="fa fa-pencil" aria-hidden="true"></i>
+              	<a id="btn-qc-view" href="#" class="btn btn-edit btn-default">
+									<i class="fa fa-eye" aria-hidden="true"></i>
               	</a>
               </div>
             </section>
@@ -158,7 +158,20 @@
                 "info": true,
                 "autoWidth": false
             });
+
+          //....
+          var page_url = document.location.href;
+          $btn_qc1 = $('#btn-qc-add')
+          $btn_qc2 = $('#btn-qc-view')
+          if(page_url.indexOf('movie') > -1 && page_url.indexOf('video') > -1){
+          	var $menu_item = $('#sidebar-menu > #videos');
+          	console.log('>>>>>', $menu_item.data('btn-add'), '>>>>>', $menu_item.data('btn-view'));
+          	$btn_qc1.attr('href', $menu_item.data('btn-add'));
+          	$btn_qc2.attr('href', $menu_item.data('btn-view'));
+          }
+
         });
+
     </script>
 
     @yield('scripts')
