@@ -3271,6 +3271,12 @@ table.text-center th {
 .login-box input[type="password"]:-moz-placeholder { /* Firefox 18- */
   color: #999;
 }
+
+/* Change the white to any color ;) */
+.login-box input[type="email"]:-webkit-autofill,
+.login-box input[type="password"]:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
  
 .login-box,
 .register-box {
