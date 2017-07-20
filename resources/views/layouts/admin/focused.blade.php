@@ -18,7 +18,7 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="{{asset('admin-css/plugins/iCheck/square/blue.css')}}">
 
-    <link rel="shortcut icon" href="@if( Setting::get('site_icon')) {{ Setting::get('site_icon') }} @else {{asset('favicon.png')}} @endif">
+    <link rel="shortcut icon" href="https://ukumbitv.com/streamtube/images/logo2-fav.png">
 
 </head>
 
