@@ -5011,6 +5011,7 @@ Inspiration: https://dribbble.com/shots/1456853-Form-fields-UI/attachments/21595
 .content-wrapper-admin input[type="email"],
 .content-wrapper-admin input[type="password"],
 .content-wrapper-admin input[type="text"],
+.content-wrapper-admin .btn-submit,
 .login-box input[type="email"],
 .login-box input[type="password"],
 .login-box .btn-submit,
