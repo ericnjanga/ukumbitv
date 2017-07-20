@@ -14,40 +14,24 @@
 
 @include('notification.notify')
 
-    <div class="row">
-
-        <div class="col-md-10">
-
-            <div class="box box-primary">
-
-                <div class="box-header label-primary">
-                    <b style="font-size:18px;">{{tr('edit_category')}}</b>
-                    <a href="{{route('admin.add.category')}}" class="btn btn-default pull-right">{{tr('add_category')}}</a>
-                </div>
-
-                <form class="form-horizontal" method="POST" enctype="multipart/form-data" role="form">
-
-                    <div class="box-body">
-
-                        <input type="hidden" id="catid" name="id" value="{{$category->id}}">
-
-                        <div class="form-group">
-                            <label for="name" class="col-sm-1 control-label">{{tr('name')}}</label>
-                            <div class="col-sm-10">
-                                <input type="text" required class="form-control" value="{{$category->name}}" id="name" name="name" placeholder="Category Name">
-                            </div>
-                        </div>
-
-
-                    </div>
-
-
-                </form>
-
-            </div>
-
-        </div>
-
+    <div class="row"> 
+        <div class="col-md-12"> 
+            <div class="box tab-content tab-content-editcat"> 
+              <!-- <div class="box-header label-primary">
+                  <b style="font-size:18px;">{{tr('edit_category')}}</b>
+                  <a href="{{route('admin.add.category')}}" class="btn btn-default pull-right">{{tr('add_category')}}</a>
+              </div> --> 
+              <form class="form-horizontal-" method="POST" enctype="multipart/form-data" role="form"> 
+                <div class="row"> 
+                  <input type="hidden" id="catid" name="id" value="{{$category->id}}"> 
+                  <div class="form-group col-sm-12">
+                      <label for="name" class="control-label">{{tr('name')}}</label>
+                      <input type="text" required class="form-control" value="{{$category->name}}" id="name" name="name" placeholder="Category Name">
+                  </div> 
+                </div>  
+              </form> 
+            </div> 
+        </div> 
     </div>
 <div class="box-footer">
     <progress id="progressbar" value="0" max="100"></progress>
