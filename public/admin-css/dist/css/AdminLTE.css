@@ -3227,6 +3227,11 @@ table.text-center th {
 	padding-right: 0;
 	border-color: #666;
 }
+.login-box input[type="email"]:focused,
+.login-box input[type="password"]:focused {
+	background-color: transparent; 
+	border-color: orange;
+}
 .login-box .form-group {
 	margin-bottom: 30px;
 }
@@ -3248,6 +3253,7 @@ table.text-center th {
 }
 .login-box .link-reset:hover {
 	text-decoration: underline;
+	color: orange;
 }
 .login-box input[type="email"]::-webkit-input-placeholder,
 .login-box input[type="password"]::-webkit-input-placeholder { 
