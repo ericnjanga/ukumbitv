@@ -163,7 +163,12 @@
           var page_url = document.location.href;
           $btn_qc1 = $('#btn-qc-add')
           $btn_qc2 = $('#btn-qc-view')
-          if(page_url.indexOf('movie') > -1 && page_url.indexOf('video') > -1){
+
+          console.log('>>>>>', page_url.indexOf('movie'));
+          console.log('>>>>>', page_url.indexOf('videos'));
+
+
+          if(page_url.indexOf('movie') > -1 || page_url.indexOf('videos') > -1){
           	var $menu_item = $('#sidebar-menu > #videos');
           	console.log('>>>>>', $menu_item.data('btn-add'), '>>>>>', $menu_item.data('btn-view'));
           	$btn_qc1.attr('href', $menu_item.data('btn-add'));
