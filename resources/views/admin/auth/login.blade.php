@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="login-box-body tab-content">
+    <div class="">
 
 
         <form class="form-layout" role="form" method="POST" action="{{ url('/admin/login') }}">
