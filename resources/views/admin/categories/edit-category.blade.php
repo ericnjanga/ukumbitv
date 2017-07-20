@@ -15,28 +15,42 @@
 @include('notification.notify')
 
     <div class="row"> 
-        <div class="col-md-12"> 
-            <div class="box tab-content tab-content-editcat"> 
-              <!-- <div class="box-header label-primary">
-                  <b style="font-size:18px;">{{tr('edit_category')}}</b>
-                  <a href="{{route('admin.add.category')}}" class="btn btn-default pull-right">{{tr('add_category')}}</a>
-              </div> --> 
-              <form class="form-horizontal-" method="POST" enctype="multipart/form-data" role="form"> 
-                <div class="row"> 
-                  <input type="hidden" id="catid" name="id" value="{{$category->id}}"> 
-                  <div class="form-group col-sm-12">
-                      <label for="name" class="control-label">{{tr('name')}}</label>
-                      <input type="text" required class="form-control" value="{{$category->name}}" id="name" name="name" placeholder="Category Name">
-                  </div> 
-                </div>  
-              </form> 
-            </div> 
+      <div class="col-md-12"> 
+        <div class="box tab-content tab-content-editcat"> 
+          <!-- <div class="box-header label-primary">
+              <b style="font-size:18px;">{{tr('edit_category')}}</b>
+              <a href="{{route('admin.add.category')}}" class="btn btn-default pull-right">{{tr('add_category')}}</a>
+          </div> --> 
+          <form class="form-horizontal-" method="POST" enctype="multipart/form-data" role="form"> 
+            <div class="row"> 
+              <input type="hidden" id="catid" name="id" value="{{$category->id}}"> 
+              <div class="form-group col-sm-12">
+                  <label for="name" class="control-label">{{tr('name')}}</label>
+                  <input type="text" required class="form-control" value="{{$category->name}}" id="name" name="name" placeholder="Category Name">
+              </div> 
+            </div>  
+          </form> 
         </div> 
-    </div>
-<div class="box-footer">
+      </div> 
+
+
+			
+
+			<div class="col-md-4 col-md-offset-8 form-group">
+		    <button class="btn btn-submit btn-block" id="finishBtn" onclick="createCategory()">Save</button>
+			</div>
+			
+
+			<div class="col-md-12 form-group">
+		    <progress id="progressbar" style="width:100%" value="0" max="100"></progress>
+			</div>
+
+
+    </div><!-- row -->
+<!-- <div class="box-footer">
     <progress id="progressbar" value="0" max="100"></progress>
     <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="editCategory()">Save</button>
-</div>
+</div> -->
 @endsection
 
 @section('scripts')

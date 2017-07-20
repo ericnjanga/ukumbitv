@@ -43,7 +43,7 @@
 			<div class="col-md-12 form-group">
 		    <progress id="progressbar" style="width:100%" value="0" max="100"></progress>
 			</div>
-    </div>
+    </div><!-- row -->
 
 
 @endsection
