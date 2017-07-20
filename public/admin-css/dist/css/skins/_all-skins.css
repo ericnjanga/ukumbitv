@@ -60,7 +60,15 @@
 .skin-blue .wrapper,
 .skin-blue .main-sidebar,
 .skin-blue .left-side {
-  background-color: #222d32;
+  /*background-color: #222d32;*/
+  background: rgba(73,99,140,1);
+background: -moz-linear-gradient(-45deg, rgba(73,99,140,1) 0%, rgba(2,14,33,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(73,99,140,1)), color-stop(100%, rgba(2,14,33,1)));
+background: -webkit-linear-gradient(-45deg, rgba(73,99,140,1) 0%, rgba(2,14,33,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(73,99,140,1) 0%, rgba(2,14,33,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(73,99,140,1) 0%, rgba(2,14,33,1) 100%);
+background: linear-gradient(135deg, rgba(73,99,140,1) 0%, rgba(2,14,33,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49638c', endColorstr='#020e21', GradientType=1 );
 }
 
 
