@@ -93,11 +93,12 @@ body {
     transform: translate(230px, 0);
   }
 }
+
+
 .content-wrapper,
-.right-side {
-  min-height: 100%;
-  /*background-color: #ddd;*/
-  z-index: 800;
+.right-side,
+.login-page,
+.register-page {
   background: rgba(221,221,221,1);
 background: -moz-linear-gradient(-45deg, rgba(221,221,221,1) 0%, rgba(143,143,143,1) 100%);
 background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(221,221,221,1)), color-stop(100%, rgba(143,143,143,1)));
@@ -106,6 +107,13 @@ background: -o-linear-gradient(-45deg, rgba(221,221,221,1) 0%, rgba(143,143,143,
 background: -ms-linear-gradient(-45deg, rgba(221,221,221,1) 0%, rgba(143,143,143,1) 100%);
 background: linear-gradient(135deg, rgba(221,221,221,1) 0%, rgba(143,143,143,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#8f8f8f', GradientType=1 );
+}
+
+
+.content-wrapper,
+.right-side {
+  min-height: 100%; 
+  z-index: 800;
 }
 .main-footer {
   background: #fff;
@@ -3212,10 +3220,6 @@ table.text-center th {
 .login-logo a,
 .register-logo a {
   color: #444;
-}
-.login-page,
-.register-page {
-  background: #d2d6de;
 }
 .login-box,
 .register-box {

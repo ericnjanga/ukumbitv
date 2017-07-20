@@ -14,7 +14,7 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{asset('admin-css/bootstrap/css/ionicons.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('admin-css/dist/css/AdminLTE.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin-css/dist/css/AdminLTE.css')}}">
     <!-- iCheck -->
     <link rel="stylesheet" href="{{asset('admin-css/plugins/iCheck/square/blue.css')}}">
 
