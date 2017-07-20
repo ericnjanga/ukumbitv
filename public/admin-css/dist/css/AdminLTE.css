@@ -3230,7 +3230,7 @@ table.text-center th {
 .login-box input[type="email"]:focus,
 .login-box input[type="password"]:focus {
 	background-color: transparent; 
-	border-color: orange;
+	border-color: #ccc;
 }
 .login-box .form-group {
 	margin-bottom: 30px;
@@ -3257,19 +3257,19 @@ table.text-center th {
 }
 .login-box input[type="email"]::-webkit-input-placeholder,
 .login-box input[type="password"]::-webkit-input-placeholder { 
-  color: #666;
+  color: #999;
 }
 .login-box input[type="email"]::-moz-placeholder,
 .login-box input[type="password"]::-moz-placeholder { /* Firefox 19+ */
-  color: #666;
+  color: #999;
 }
 .login-box input[type="email"]:-ms-input-placeholder,
 .login-box input[type="password"]:-ms-input-placeholder { /* IE 10+ */
-  color: #666;
+  color: #999;
 }
 .login-box input[type="email"]:-moz-placeholder,
 .login-box input[type="password"]:-moz-placeholder { /* Firefox 18- */
-  color: #666;
+  color: #999;
 }
  
 .login-box,
