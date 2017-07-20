@@ -23,6 +23,9 @@
 
             <ul class="nav navbar-nav">
 							<li>
+								<a href="https://dribbble.com/shots/1456853-Form-fields-UI/attachments/215953" target="_blank">** Form Inspiration **</a>
+							</li>
+							<li>
 								<a href="https://www.pinterest.com/pin/237564949076657603/" target="_blank">** Design Inspiration **</a>
 							</li>
                 <li class="dropdown notifications-menu"> 
