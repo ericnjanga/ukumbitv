@@ -14,14 +14,8 @@
     @include('notification.notify')
 	<div class="row">
         <div class="col-xs-12">
-          <div class="box tab-content tab-content-movie-view">
-
-          	<!-- <div class="box-header label-primary">
-                <b style="font-size:18px;">{{tr('videos')}}</b> 
-            </div> -->
-
-            <div class="box-body">
-
+          <div class="box tab-content tab-content-movie-view"> 
+            <div class="row"> 
             	@if(count($videos) > 0)
 
 	              	<table id="example1" class="table table-bordered table-striped">

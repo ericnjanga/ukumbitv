@@ -18,13 +18,7 @@
 
         <div class="col-md-12">
 
-            <div class="box tab-content tab-content-user-add">
-
-                <!-- <div class="box-header label-primary">
-                    <b style="font-size:18px;">{{tr('add_user')}}</b>
-                    <a href="{{route('admin.users')}}" class="btn btn-default pull-right">{{tr('view_users')}}</a>
-                </div> -->
-
+            <div class="box tab-content tab-content-user-add"> 
                 <form class="form-horizontal-" action="{{route('admin.save.user')}}" method="POST" enctype="multipart/form-data" role="form">
 
                     <div class="row">

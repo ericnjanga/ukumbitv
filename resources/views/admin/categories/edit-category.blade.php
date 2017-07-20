@@ -16,11 +16,7 @@
 
     <div class="row"> 
       <div class="col-md-12"> 
-        <div class="box tab-content tab-content-editcat"> 
-          <!-- <div class="box-header label-primary">
-              <b style="font-size:18px;">{{tr('edit_category')}}</b>
-              <a href="{{route('admin.add.category')}}" class="btn btn-default pull-right">{{tr('add_category')}}</a>
-          </div> --> 
+        <div class="box tab-content tab-content-editcat">  
           <form class="form-horizontal-" method="POST" enctype="multipart/form-data" role="form"> 
             <div class="row"> 
               <input type="hidden" id="catid" name="id" value="{{$category->id}}"> 
@@ -47,10 +43,6 @@
 
 
     </div><!-- row -->
-<!-- <div class="box-footer">
-    <progress id="progressbar" value="0" max="100"></progress>
-    <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="editCategory()">Save</button>
-</div> -->
 @endsection
 
 @section('scripts')

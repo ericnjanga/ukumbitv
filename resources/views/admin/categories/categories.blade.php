@@ -15,12 +15,12 @@
 
 	<div class="row">
         <div class="col-xs-12">
-          <div class="box box-primary">
-          	<div class="box-header label-primary">
+          <div class="box tab-content tab-content-categories">
+          	<!-- <div class="box-header label-primary">
                 <b style="font-size:18px;">{{tr('categories')}}</b>
                 {{--<a href="{{route('admin.add.category')}}" class="btn btn-default pull-right">{{tr('add_category')}}</a>--}}
-            </div>
-            <div class="box-body">
+            </div> -->
+            <div class="row">
 
             	@if(count($categories) > 0)
 

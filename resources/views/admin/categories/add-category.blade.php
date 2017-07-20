@@ -16,13 +16,7 @@
 
     <div class="row"> 
       <div class="col-md-12"> 
-        <div class="box tab-content tab-content-addcat">
-
-            <!-- <div class="box-header label-primary">
-                <b style="font-size:18px;">{{tr('add_category')}}</b>
-                <a href="{{route('admin.categories')}}" class="btn btn-default pull-right">{{tr('categories')}}</a>
-            </div> -->
-
+        <div class="box tab-content tab-content-addcat"> 
           <form method="POST" enctype="multipart/form-data" role="form">
             <div class="row"> 
               <div class="form-group col-sm-12">
