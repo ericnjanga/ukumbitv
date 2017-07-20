@@ -20,7 +20,7 @@
             <div class="form-inputs">
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
-                    <input type="email" class="form-control input-lg" name="email" placeholder="Demo : admin@streamhash.com">
+                    <input type="email" class="form-control input-lg" name="email" placeholder="Your Username">
 
                     @if ($errors->has('email'))
                         <span class="help-block">
@@ -32,7 +32,7 @@
 
                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 
-                    <input type="password" class="form-control input-lg" name="password" placeholder="Demo : 123456">
+                    <input type="password" class="form-control input-lg" name="password" placeholder="Your Password">
 
                     @if ($errors->has('password'))
                         <span class="help-block">
