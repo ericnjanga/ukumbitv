@@ -48,7 +48,7 @@
 
         @include('layouts.admin.nav')
 
-        <div class="content-wrapper">
+        <div class="content-wrapper content-wrapper-admin">
 
             <section class="content-header">
                 <h1>@yield('content-header')<small>@yield('content-sub-header')</small></h1>

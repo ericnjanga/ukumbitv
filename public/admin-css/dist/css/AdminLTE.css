@@ -4999,3 +4999,33 @@ table.text-center th {
     white-space: normal !important;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Inspiration: https://dribbble.com/shots/1456853-Form-fields-UI/attachments/215953
+*/
+.content-wrapper-admin input[type="text"] {
+    height: 45px;
+    background-color: #E8F0FA;
+}
