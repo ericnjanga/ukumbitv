@@ -24,14 +24,10 @@
 
             <ul class="nav navbar-nav">
 
-                <li class="dropdown notifications-menu">
-
-                    <a href="{{url('/')}}" class="btn btn-link" target="_blank" style="color:black"> 
-                        <i class="fa fa-external-link"></i>
-                        <b> Visit Website</b>
-                        <span class="label label-warning"></span>
-                    </a>
-
+                <li class="dropdown notifications-menu"> 
+                    <a href="{{url('/')}}" class="btn btn-link" target="_blank"> 
+                        <i class="fa fa-external-link"></i>  
+                    </a> 
                 </li>
 
                 <li class="dropdown user user-menu">
