@@ -3282,6 +3282,17 @@ table.text-center th {
 .login-box input[type="password"]:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px #ccc inset;
 }
+
+
+.login-box input[type="email"],
+.login-box input[type="password"],
+.login-box .btn-submit,
+.login-box .link-reset{
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
  
 .login-box,
 .register-box {

@@ -34,7 +34,7 @@
 
         <h1 class="login-title text-center">
           <a href="{{route('admin.login')}}">
-            UkumbiTV - Admin
+            UkumbiTV Admin
           </a>
         </h1>
 
