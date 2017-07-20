@@ -32,9 +32,10 @@
 
     <div class="login-box" style="border:10px solid red!important;">
 
-        <h1 class="login-title">
-          <a href="{{route('admin.login')}}"><b> 
-            UkumbiTV - Admin</a>
+        <h1 class="login-title text-center">
+          <a href="{{route('admin.login')}}">
+            UkumbiTV - Admin
+          </a>
         </h1>
 
         @yield('content')
