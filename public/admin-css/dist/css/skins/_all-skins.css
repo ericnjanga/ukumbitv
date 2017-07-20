@@ -62,6 +62,21 @@
 .skin-blue .left-side {
   background-color: #222d32;
 }
+
+
+
+.tab-content-movie-add{
+	border-top: 4px solid turquoise;
+}
+.tab-content-movie-view{
+	border-top: 4px solid lime;
+}
+
+
+
+
+
+
 .skin-blue .user-panel > .info,
 .skin-blue .user-panel > .info > a {
   color: #fff;

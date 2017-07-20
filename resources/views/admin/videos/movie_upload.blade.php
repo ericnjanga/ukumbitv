@@ -36,9 +36,8 @@
 
 
                     <form id="video-upload" method="POST" enctype="multipart/form-data" role="form" action="{{route('admin.save.movie')}}">
-                        <div class="tab-content" style="border-top: 4px solid red;">
-                            <div class="tab-pane active" role="tabpanel" id="step1">
-                                <!-- <h3>Video Details</h3> -->
+                        <div class="tab-content tab-content-movie-add">
+                            <div class="tab-pane active" role="tabpanel" id="step1"> 
                                 <div style="margin-left: 15px"><small>Note : <span style="color:red">*</span> fields are mandatory. Please fill and click next.</small></div>
                                 <hr>
                                 <div class="row">
