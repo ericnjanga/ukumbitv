@@ -37,7 +37,7 @@
 
             <li id="categories" data-btn-add="{{route('admin.add.category')}}" data-btn-view="{{route('admin.categories')}}"> 
                 <a href="{{route('admin.categories')}}">
-                    <i class="fa fa-suitcase"></i> <span>{{tr('categories')}}</span> <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-suitcase"></i> <span>{{tr('categories')}}</span>
                 </a> 
                 <!-- <ul class="treeview-menu">
                     <li id="add-category"><a href="{{route('admin.add.category')}}"><i class="fa fa-circle-o"></i>{{tr('add_category')}}</a></li>
