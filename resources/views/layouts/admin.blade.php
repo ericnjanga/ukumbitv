@@ -29,9 +29,9 @@
     <link rel="stylesheet" href="{{ asset('admin-css/plugins/select2/select2.min.css')}}">
 
       <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('admin-css/dist/css/AdminLTE.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin-css/dist/css/AdminLTE.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('admin-css/dist/css/skins/_all-skins.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('admin-css/dist/css/skins/_all-skins.css')}}">
 
     <link rel="stylesheet" href="{{ asset('admin-css/dist/css/custom.css')}}">
 
