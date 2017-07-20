@@ -37,7 +37,7 @@
 			
 
 			<div class="col-md-4 col-md-offset-8 form-group">
-		    <button class="btn btn-submit btn-block" id="finishBtn" onclick="createCategory()">Save</button>
+		    <button class="btn btn-submit btn-block" id="finishBtn" onclick="ditCategory()">Save</button>
 			</div>
 			
 
