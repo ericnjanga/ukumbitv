@@ -36,19 +36,19 @@
 
             <li id="actors" data-btn-add="{{route('admin.add.actor')}}" data-btn-view="{{route('admin.actors')}}"> 
               <a href="{{route('admin.actors')}}">
-                  <i class="fa fa-smile-o"></i> <span>{{tr('actors')}}</span> <i class="fa fa-angle-left pull-right"></i>
+                  <i class="fa fa-smile-o"></i> <span>{{tr('actors')}}</span> 
               </a>  
             </li>
 
             <li id="directors" data-btn-add="{{route('admin.add.director')}}" data-btn-view="{{route('admin.directors')}}"> 
               <a href="{{route('admin.directors')}}">
-                  <i class="fa fa-smile-o"></i> <span>{{tr('directors')}}</span> <i class="fa fa-angle-left pull-right"></i>
+                  <i class="fa fa-smile-o"></i> <span>{{tr('directors')}}</span> 
               </a>  
             </li>
 
             <li id="langs" data-btn-add="{{route('admin.add.lang')}}" data-btn-view="{{route('admin.langs')}}"> 
               <a href="{{route('admin.langs')}}">
-                  <i class="fa fa-smile-o"></i> <span>{{tr('langs')}}</span> <i class="fa fa-angle-left pull-right"></i>
+                  <i class="fa fa-smile-o"></i> <span>{{tr('langs')}}</span> 
               </a>  
             </li>
 
@@ -60,20 +60,20 @@
 
             <li id="producer_agents" data-btn-add="{{route('admin.add.producer-agent')}}" data-btn-view="{{route('admin.producer-agents')}}">
               <a href="{{route('admin.producer-agents')}}">
-                  <i class="fa fa-smile-o"></i> <span>Producer Agents</span> <i class="fa fa-angle-left pull-right"></i>
+                  <i class="fa fa-smile-o"></i> <span>Producer Agents</span> 
               </a>
             </li>
 
             <li id="movie_producers" data-btn-add="{{route('admin.add.movie-producer')}}" data-btn-view="{{route('admin.movie-producers')}}">
               <a href="{{route('admin.movie-producers')}}">
-                  <i class="fa fa-smile-o"></i> <span>Movie Producers</span> <i class="fa fa-angle-left pull-right"></i>
+                  <i class="fa fa-smile-o"></i> <span>Movie Producers</span> 
               </a>  
             </li>
 
             
             <li id="payments" data-btn-add="{{route('admin.user.payments')}}" data-btn-view="{{route('admin.user.payments')}}">
               <a href="{{route('admin.user.payments')}}">
-                  <i class="fa fa-credit-card"></i> <span>{{tr('payments')}}</span> <i class="fa fa-angle-left pull-right"></i>
+                  <i class="fa fa-credit-card"></i> <span>{{tr('payments')}}</span> 
               </a>
               <!-- <ul class="treeview-menu">
                   <li id="user-payments"><a href="{{route('admin.user.payments')}}">
@@ -117,7 +117,7 @@
 						<div style="display:none;">
 	            <li class="treeview" id="moderators">
 	                <a href="#">
-	                    <i class="fa fa-users"></i> <span>{{tr('moderators')}}</span> <i class="fa fa-angle-left pull-right"></i>
+	                    <i class="fa fa-users"></i> <span>{{tr('moderators')}}</span> 
 	                </a>
 
 	                <ul class="treeview-menu">
@@ -137,7 +137,7 @@
 	            </li>
 	            <li class="treeview" id="pages_id">
 	                <a href="{{route('viewPages')}}">
-	                    <i class="fa fa-book"></i> <span>{{tr('pages')}}</span> <i class="fa fa-angle-left pull-right"></i>
+	                    <i class="fa fa-book"></i> <span>{{tr('pages')}}</span> 
 	                </a>
 	                <ul class="treeview-menu">
 	                    <li id="add_page"><a href="{{route('addPage')}}"><i class="fa fa-circle-o"></i>{{tr('add_page')}}</a></li>
@@ -156,7 +156,7 @@
 	            </li>
 	            <li class="treeview" id="banner-videos">
 	                <a href="{{route('admin.banner.videos')}}">
-	                    <i class="fa fa-university"></i> <span>{{tr('banner_videos')}}</span> <i class="fa fa-angle-left pull-right"></i>
+	                    <i class="fa fa-university"></i> <span>{{tr('banner_videos')}}</span> 
 	                </a>
 
 	                <ul class="treeview-menu">
