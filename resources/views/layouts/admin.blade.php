@@ -90,10 +90,10 @@
 								    
 							</style>
               <div class="quick-controls">
-              	<a id="btn-qc-add" href="#" class="btn btn-primary" data-placement="top" title="Create a new record">
+              	<a id="btn-qc-add" href="#" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Create a new record">
               		<i class="fa fa-plus" aria-hidden="true"></i>
               	</a>
-              	<a id="btn-qc-view" href="#" class="btn btn-edit btn-default" data-placement="top" title="View records list">
+              	<a id="btn-qc-view" href="#" class="btn btn-edit btn-default" data-toggle="tooltip" data-placement="top" title="View records list">
 									<i class="fa fa-eye" aria-hidden="true"></i>
               	</a>
               </div>
