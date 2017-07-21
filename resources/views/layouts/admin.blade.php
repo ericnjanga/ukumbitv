@@ -201,7 +201,7 @@
 
     @yield('scripts')
 
-    <script type="text/javascript">
+    <script type="text/javascript">  console.log('....>>>', {{$page}} );
         $("#{{$page}}").addClass("active");
         @if(isset($sub_page)) $("#{{$sub_page}}").addClass("active"); @endif
     </script>
