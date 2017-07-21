@@ -58,13 +58,13 @@
               </a> 
             </li>
 
-            <li id="producer-agents" data-btn-add="{{route('admin.add.producer-agent')}}" data-btn-view="{{route('admin.producer-agents')}}">
+            <li id="producer_agents" data-btn-add="{{route('admin.add.producer-agent')}}" data-btn-view="{{route('admin.producer-agents')}}">
               <a href="{{route('admin.producer-agents')}}">
                   <i class="fa fa-smile-o"></i> <span>Producer Agents</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
             </li>
 
-            <li id="movie-producers" data-btn-add="{{route('admin.add.movie-producer')}}" data-btn-view="{{route('admin.movie-producers')}}">
+            <li id="movie_producers" data-btn-add="{{route('admin.add.movie-producer')}}" data-btn-view="{{route('admin.movie-producers')}}">
               <a href="{{route('admin.movie-producers')}}">
                   <i class="fa fa-smile-o"></i> <span>Movie Producers</span> <i class="fa fa-angle-left pull-right"></i>
               </a>  
