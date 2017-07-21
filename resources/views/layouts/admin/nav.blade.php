@@ -15,116 +15,74 @@
         </div>
 
         <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul id="sidebar-menu" class="sidebar-menu">
-
+        <ul id="sidebar-menu" class="sidebar-menu"> 
             <li id="dashboard">
               <a href="{{route('admin.dashboard')}}">
                 <i class="fa fa-dashboard"></i> <span>{{tr('dashboard')}}</span>
               </a>
-              
             </li>
 
             <li id="users" data-btn-add="{{route('admin.add.user')}}" data-btn-view="{{route('admin.users')}}">  
-                <a href="{{route('admin.add.user')}}">
-                    <i class="fa fa-user"></i> <span>{{tr('users')}}</span> 
-                </a> 
-                <!-- <ul class="treeview-menu">
-                    <li id="add-user"><a href="{{route('admin.add.user')}}"><i class="fa fa-circle-o"></i>{{tr('add_user')}}</a></li>
-                    <li id="view-user"><a href="{{route('admin.users')}}"><i class="fa fa-circle-o"></i>{{tr('view_users')}}</a></li>
-                </ul> --> 
+              <a href="{{route('admin.users')}}">
+                  <i class="fa fa-user"></i> <span>{{tr('users')}}</span> 
+              </a>  
             </li>
-
-
+ 
             <li id="categories" data-btn-add="{{route('admin.add.category')}}" data-btn-view="{{route('admin.categories')}}"> 
-                <a href="{{route('admin.categories')}}">
-                    <i class="fa fa-suitcase"></i> <span>{{tr('categories')}}</span>
-                </a> 
-                <!-- <ul class="treeview-menu">
-                    <li id="add-category"><a href="{{route('admin.add.category')}}"><i class="fa fa-circle-o"></i>{{tr('add_category')}}</a></li>
-                    <li id="view-categories"><a href="{{route('admin.categories')}}"><i class="fa fa-circle-o"></i>{{tr('view_categories')}}</a></li>
-                </ul> --> 
+              <a href="{{route('admin.categories')}}">
+                  <i class="fa fa-suitcase"></i> <span>{{tr('categories')}}</span>
+              </a>   
             </li>
 
-            <li class="treeview" id="actors">
-                <a href="{{route('admin.actors')}}">
-                    <i class="fa fa-smile-o"></i> <span>{{tr('actors')}}</span> <i class="fa fa-angle-left pull-right"></i>
-                </a>
-
-                <ul class="treeview-menu">
-                    <li id="add-actor"><a href="{{route('admin.add.actor')}}"><i class="fa fa-circle-o"></i>{{tr('add_actor')}}</a></li>
-                    <li id="view-actors"><a href="{{route('admin.actors')}}"><i class="fa fa-circle-o"></i>{{tr('view_actors')}}</a></li>
-                </ul>
-
+            <li id="actors" data-btn-add="{{route('admin.add.actor')}}" data-btn-view="{{route('admin.actors')}}"> 
+              <a href="{{route('admin.actors')}}">
+                  <i class="fa fa-smile-o"></i> <span>{{tr('actors')}}</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>  
             </li>
 
-            <li class="treeview" id="directots">
-                <a href="{{route('admin.directors')}}">
-                    <i class="fa fa-smile-o"></i> <span>{{tr('directors')}}</span> <i class="fa fa-angle-left pull-right"></i>
-                </a>
-
-                <ul class="treeview-menu">
-                    <li id="add-director"><a href="{{route('admin.add.director')}}"><i class="fa fa-circle-o"></i>{{tr('add_director')}}</a></li>
-                    <li id="view-directors"><a href="{{route('admin.directors')}}"><i class="fa fa-circle-o"></i>{{tr('view_directors')}}</a></li>
-                </ul>
+            <li id="directors" data-btn-add="{{route('admin.add.director')}}" data-btn-view="{{route('admin.directors')}}"> 
+              <a href="{{route('admin.directors')}}">
+                  <i class="fa fa-smile-o"></i> <span>{{tr('directors')}}</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>  
             </li>
 
-            <li class="treeview" id="langs">
-                <a href="{{route('admin.langs')}}">
-                    <i class="fa fa-smile-o"></i> <span>{{tr('langs')}}</span> <i class="fa fa-angle-left pull-right"></i>
-                </a>
-
-                <ul class="treeview-menu">
-                    <li id="add-lang"><a href="{{route('admin.add.lang')}}"><i class="fa fa-circle-o"></i>{{tr('add_lang')}}</a></li>
-                    <li id="view-langs"><a href="{{route('admin.langs')}}"><i class="fa fa-circle-o"></i>{{tr('view_langs')}}</a></li>
-                </ul>
-
+            <li id="langs" data-btn-add="{{route('admin.add.lang')}}" data-btn-view="{{route('admin.langs')}}"> 
+              <a href="{{route('admin.langs')}}">
+                  <i class="fa fa-smile-o"></i> <span>{{tr('langs')}}</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>  
             </li>
 
             <li id="videos" data-btn-add="{{route('admin.add.movie')}}" data-btn-view="{{route('admin.videos')}}">
-                <a href="{{route('admin.videos')}}">
-                    <i class="fa fa-video-camera"></i> <span>{{tr('videos')}}</span>
-                </a> 
-                <!-- <ul class="treeview-menu">
-                    <li id="add-video"><a href="{{route('admin.add.movie')}}"><i class="fa fa-circle-o"></i>{{tr('add_movie')}}</a></li> 
-                    <li id="view-videos"><a href="{{route('admin.videos')}}"><i class="fa fa-circle-o"></i>{{tr('view_videos')}}</a></li>
-                </ul>  -->
+              <a href="{{route('admin.videos')}}">
+                  <i class="fa fa-video-camera"></i> <span>{{tr('videos')}}</span>
+              </a> 
             </li>
 
-            <li class="treeview" id="producer-agents">
-                <a href="{{route('admin.producer-agents')}}">
-                    <i class="fa fa-smile-o"></i> <span>Producer Agents</span> <i class="fa fa-angle-left pull-right"></i>
-                </a>
-
-                <ul class="treeview-menu">
-                    <li id="add-producer-agent"><a href="{{route('admin.add.producer-agent')}}"><i class="fa fa-circle-o"></i>Add Producer Agent</a></li>
-                    <li id="view-producer-agents"><a href="{{route('admin.producer-agents')}}"><i class="fa fa-circle-o"></i>View Producer Agent</a></li>
-                </ul>
+            <li id="producer-agents" data-btn-add="{{route('admin.add.producer-agent')}}" data-btn-view="{{route('admin.producer-agents')}}">
+              <a href="{{route('admin.producer-agents')}}">
+                  <i class="fa fa-smile-o"></i> <span>Producer Agents</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
             </li>
 
-            <li class="treeview" id="movie-producers">
-                <a href="{{route('admin.movie-producers')}}">
-                    <i class="fa fa-smile-o"></i> <span>Movie Producers</span> <i class="fa fa-angle-left pull-right"></i>
-                </a>
-
-                <ul class="treeview-menu">
-                    <li id="add-movie-producer"><a href="{{route('admin.add.movie-producer')}}"><i class="fa fa-circle-o"></i>Add Movie Producer</a></li>
-                    <li id="view-movie-producers"><a href="{{route('admin.movie-producers')}}"><i class="fa fa-circle-o"></i>View Movie Producer</a></li>
-                </ul>
+            <li id="movie-producers" data-btn-add="{{route('admin.add.movie-producer')}}" data-btn-view="{{route('admin.movie-producers')}}">
+              <a href="{{route('admin.movie-producers')}}">
+                  <i class="fa fa-smile-o"></i> <span>Movie Producers</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>  
             </li>
 
             
-            <li id="payments">
-                <a href="{{route('admin.user.payments')}}">
-                    <i class="fa fa-credit-card"></i> <span>{{tr('payments')}}</span> <i class="fa fa-angle-left pull-right"></i>
-                </a>
-                <ul class="treeview-menu">
-                    <li id="user-payments"><a href="{{route('admin.user.payments')}}">
-                        <i class="fa fa-credit-card"></i> <span>{{tr('user_payments')}}</span>
-                    </a></li>
-                    <li id="video-subscription"><a href="{{route('admin.user.video-payments')}}">
-                        <i class="fa fa-credit-card"></i> <span>{{tr('video_payments')}}</span>
-                    </a></li>
-                </ul>
+            <li id="payments" data-btn-add="{{route('admin.user.payments')}}" data-btn-view="{{route('admin.user.payments')}}">
+              <a href="{{route('admin.user.payments')}}">
+                  <i class="fa fa-credit-card"></i> <span>{{tr('payments')}}</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <!-- <ul class="treeview-menu">
+                  <li id="user-payments"><a href="{{route('admin.user.payments')}}">
+                      <i class="fa fa-credit-card"></i> <span>{{tr('user_payments')}}</span>
+                  </a></li>
+                  <li id="video-subscription"><a href="{{route('admin.user.video-payments')}}">
+                      <i class="fa fa-credit-card"></i> <span>{{tr('video_payments')}}</span>
+                  </a></li>
+              </ul> -->
             </li>
 
 
