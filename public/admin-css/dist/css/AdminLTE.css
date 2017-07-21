@@ -4961,8 +4961,8 @@ Inspiration: https://dribbble.com/shots/1456853-Form-fields-UI/attachments/21595
 }
 .content-wrapper-admin .btn-submit,
 .login-box .btn-submit {
-	background-color: #666;
-	color: #ddd;
+	background-color: #15A4FA;
+	color: #fff;
 	height: 45px;
 }
 .content-wrapper-admin .btn-submit:hover,
