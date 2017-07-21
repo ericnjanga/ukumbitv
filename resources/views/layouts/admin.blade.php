@@ -90,10 +90,10 @@
 								    
 							</style>
               <div class="quick-controls">
-              	<a id="btn-qc-add" href="#" class="btn btn-primary">
+              	<a id="btn-qc-add" href="#" class="btn btn-primary" data-placement="top" title="Create a new record">
               		<i class="fa fa-plus" aria-hidden="true"></i>
               	</a>
-              	<a id="btn-qc-view" href="#" class="btn btn-edit btn-default">
+              	<a id="btn-qc-view" href="#" class="btn btn-edit btn-default" data-placement="top" title="View records list">
 									<i class="fa fa-eye" aria-hidden="true"></i>
               	</a>
               </div>
@@ -163,10 +163,7 @@
           var page_url = document.location.href,
           		$btn_qc1 = $('#btn-qc-add');
           		$btn_qc2 = $('#btn-qc-view');
-
-          // console.log('>>>>>', page_url.indexOf('movie'));
-          // console.log('>>>>>', page_url.indexOf('videos'));
-
+  
 					if (page_url.indexOf('user') > -1 || page_url.indexOf('users') > -1){
           	var $menu_item = $('#sidebar-menu > #users'); 
           }
@@ -201,7 +198,7 @@
 
     @yield('scripts')
 
-    <script type="text/javascript">  console.log('....>>>', {{$page}} );
+    <script type="text/javascript">
         $("#{{$page}}").addClass("active");
         @if(isset($sub_page)) $("#{{$sub_page}}").addClass("active"); @endif
     </script>
