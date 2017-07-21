@@ -26,7 +26,7 @@
             </div>
           </form> 
         </div> 
-      </div>
+      </div><!-- col-md-12 -->
 			
 
 			<div class="col-md-4 col-md-offset-8 form-group">

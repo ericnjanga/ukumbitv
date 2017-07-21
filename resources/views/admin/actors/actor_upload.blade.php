@@ -25,58 +25,33 @@
 @endsection
 
 @section('content')
+  @include('notification.notify')
 
-    @include('notification.notify')
+  <div class="row">
+    <div class="col-lg-12"> 
+      <div class="box tab-content tab-content-addactor"> 
+        <form id="actor-upload" method="POST" enctype="multipart/form-data" role="form">
+        	<div class="row">
+        		<div class="form-group col-sm-12">
+              <input type="hidden" value="1" name="ajax_key">
+              <label for="title" class="">Name * </label>
+              <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}">
+						</div><!-- form-group -->
 
+            <div class="form-group col-sm-12">
+              <label for="description" class="">BIO * </label>
+              <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
+            </div> 
+        	</div><!-- row --> 
+        </form> 
+      </div>
+    </div><!-- col-md-12 -->
+		
 
-    <div class="row">
-        <div class="col-lg-12">
-            <section>
-                <div class="wizard">
-
-
-                    <form id="actor-upload" method="POST" enctype="multipart/form-data" role="form">
-                        <div class="tab-content">
-                            <div class="tab-pane active" role="tabpanel" id="step1">
-                                <!-- <h3>Video Details</h3> -->
-                                <div style="margin-left: 15px"><small>Note : <span style="color:red">*</span> fields are mandatory. Please fill and click next.</small></div>
-                                <hr>
-                                <div class="">
-                                    <input type="hidden" value="1" name="ajax_key">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label for="title" class="">Name * </label>
-                                            <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}">
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label for="description" class="">BIO * </label>
-                                            <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </form>
-
-                </div>
-            </section>
-        </div>
-    </div>
-    <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="createActor()">Finish</button>
-
-
-
-    <div class="overlay">
-        <div id="loading-img"></div>
-    </div>
-
+		<div class="col-md-4 col-md-offset-8 form-group">
+	    <button class="btn btn-submit btn-block" id="finishBtn" onclick="createActor()">Save</button>
+		</div> 
+  </div><!-- row --> 
 @endsection
 
 @section('scripts')
