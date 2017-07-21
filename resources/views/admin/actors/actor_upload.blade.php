@@ -40,7 +40,7 @@
 
             <div class="form-group col-sm-12">
               <label for="description" class="">BIO * </label>
-              <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
+              <textarea class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
             </div> 
         	</div><!-- row --> 
         </form> 
