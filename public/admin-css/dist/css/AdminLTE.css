@@ -2220,8 +2220,8 @@ a:focus {
   background-color: #e7e7e7;
 }
 .btn-primary {
-  background-color: #3c8dbc;
-  border-color: #367fa9;
+  background-color: #15A4FA;
+  border-width: 0;
 }
 .btn-primary:hover,
 .btn-primary:active,

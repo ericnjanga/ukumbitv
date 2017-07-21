@@ -83,9 +83,7 @@
 									-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 									box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 								}
-								.btn-primary {
-									background-color: #00D1FF;
-								}
+								 
 								.btn-edit {
 									margin-left: 10px;
 								}
