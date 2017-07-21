@@ -129,6 +129,72 @@
 
                                     <div class="col-md-6">  
 	                                    <div class="form-group">
+                                        <label for="video-country" class="">Select Country *</label>
+                                        <!-- integrate to dabatase -->
+                                        <!-- integrate to dabatase -->
+                                        <select name="video-country" id="video-country" class="form-control">
+                                        	<option value="">Algeria</option>
+																					<option value="">Angola</option> 
+																					<option value="">Benin</option>
+																					<option value="">Botswana</option>
+																					<option value="">Burkina Faso</option>
+																					<option value="">Burundi</option> 
+																					<option value="">Cabo Verde</option>
+																					<option value="">Cameroon</option>
+																					<option value="">Central African Republic (CAR)</option>
+																					<option value="">Chad</option>
+																					<option value="">Comoros</option>
+																					<option value="">Democratic Republic of the Congo</option>
+																					<option value="">Republic of the Congo</option>
+																					<option value="">Cote d'Ivoire</option> 
+																					<option value="">Djibouti</option> 
+																					<option value="">Egypt</option>
+																					<option value="">Equatorial Guinea</option>
+																					<option value="">Eritrea</option>
+																					<option value="">Ethiopia</option> 
+																					<option value="">Gabon</option>
+																					<option value="">Gambia</option>
+																					<option value="">Ghana</option>
+																					<option value="">Guinea</option>
+																					<option value="">Guinea-Bissau</option> 
+																					<option value="">Kenya</option> 
+																					<option value="">Lesotho</option>
+																					<option value="">Liberia</option>
+																					<option value="">Libya</option> 
+																					<option value="">Madagascar</option>
+																					<option value="">Malawi</option>
+																					<option value="">Mali</option>
+																					<option value="">Mauritania</option>
+																					<option value="">Mauritius</option>
+																					<option value="">Morocco</option>
+																					<option value="">Mozambique</option> 
+																					<option value="">Namibia</option>
+																					<option value="">Niger</option>
+																					<option value="">Nigeria</option> 
+																					<option value="">Rwanda</option> 
+																					<option value="">Sao Tome and Principe</option>
+																					<option value="">Senegal</option>
+																					<option value="">Seychelles</option>
+																					<option value="">Sierra Leone</option>
+																					<option value="">Somalia</option>
+																					<option value="">South Africa</option>
+																					<option value="">South Sudan</option>
+																					<option value="">Sudan</option>
+																					<option value="">Swaziland</option> 
+																					<option value="">Tanzania</option>
+																					<option value="">Togo</option>
+																					<option value="">Tunisia</option> 
+																					<option value="">Uganda</option> 
+																					<option value="">Zambia</option>
+																					<option value="">Zimbabwe</option>
+                                        </select> 
+                                        <!-- integrate to dabatase -->
+                                        <!-- integrate to dabatase -->
+	                                    </div>
+
+ 
+
+	                                    <div class="form-group">
 	                                        <label for="billboard_image" class="">Billboard  image *</label>
 	                                        <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
 	                                        <div id="previewArea1"></div>
