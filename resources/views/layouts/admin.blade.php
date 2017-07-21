@@ -216,6 +216,13 @@
             //Money Euro
             $("[data-mask]").inputmask();
         });
+
+
+
+        //Initalize tooltips
+        $(function () {
+				  $('[data-toggle="tooltip"]').tooltip()
+				});
     </script>
 
 
