@@ -108,7 +108,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49638c', end
 .skin-blue .sidebar-menu > li:hover > a,
 .skin-blue .sidebar-menu > li.active > a {
   color: #777;
-  background: #ddd; 
+  background: #E8F0FA;
 }
 .skin-blue .sidebar-menu > li > .treeview-menu {
   margin: 0 1px;
