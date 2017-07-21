@@ -99,14 +99,21 @@ body {
 .right-side,
 .login-page,
 .register-page {
-  background: rgba(221,221,221,1);
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8f0fa+0,becadb+100 */
+background: #e8f0fa; /* Old browsers */
+background: -moz-linear-gradient(top,  #e8f0fa 0%, #becadb 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #e8f0fa 0%,#becadb 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #e8f0fa 0%,#becadb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8f0fa', endColorstr='#becadb',GradientType=0 ); /* IE6-9 */
+
+  /*background: rgba(221,221,221,1);
 background: -moz-linear-gradient(-45deg, rgba(221,221,221,1) 0%, rgba(143,143,143,1) 100%);
 background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(221,221,221,1)), color-stop(100%, rgba(143,143,143,1)));
 background: -webkit-linear-gradient(-45deg, rgba(221,221,221,1) 0%, rgba(143,143,143,1) 100%);
 background: -o-linear-gradient(-45deg, rgba(221,221,221,1) 0%, rgba(143,143,143,1) 100%);
 background: -ms-linear-gradient(-45deg, rgba(221,221,221,1) 0%, rgba(143,143,143,1) 100%);
 background: linear-gradient(135deg, rgba(221,221,221,1) 0%, rgba(143,143,143,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#8f8f8f', GradientType=1 );
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#8f8f8f', GradientType=1 );*/
 }
 
 
