@@ -44,7 +44,7 @@
                                     <td>{{$director->bio}}</td>
                                     <td>
                                         <a href="edit-director/{{$director->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <button class="btn btn-danger" onclick="return confirmDelete({{$director->id}});">Delete</button>
+                                        <button class="btn btn-danger" onclick="return confirmDelete({{$director->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                     </td>
                                 </tr>
 

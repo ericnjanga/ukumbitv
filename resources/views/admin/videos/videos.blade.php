@@ -70,7 +70,7 @@
 							      	{{--</td>--}}
 								    <td>
 										<a href="edit-movie/{{$video->video_id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-										<button class="btn btn-danger" onclick="return confirmDelete({{$video->video_id}});">Delete</button>
+										<button class="btn btn-danger" onclick="return confirmDelete({{$video->video_id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
             							{{--<ul class="admin-action btn btn-default">--}}
             								{{--<li class="dropup">--}}
 								                {{--<a class="dropdown-toggle" data-toggle="dropdown" href="#">--}}
