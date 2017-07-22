@@ -39,7 +39,7 @@
 
 						<div class="col-md-12 mb35">
 							<fieldset class="blk col-md-12"> 
-								<small>Indicate the type of this video:</small>
+								<legend>Indicate the type of this video:</legend>
 		            <ul class="list-inline" style="padding:0;">
 		            	<li>
 		            		<label class="radio-inline">
@@ -217,7 +217,7 @@
 							<!-- IMAGES -->
 							<!-- IMAGES -->
               <fieldset class="blk col-md-12"> 
-								<small>Add images to this video:</small>
+								<legend>Add images to this video:</legend>
 	              <div class="form-group">
 	                  <label for="billboard_image" class="">Billboard  image *</label>
 	                  <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
