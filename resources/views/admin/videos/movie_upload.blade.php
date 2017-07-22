@@ -69,7 +69,7 @@
 
             
           	<div class="col-md-6">
-          		<fieldset class="blk col-md-12">
+          		<fieldset class="blk col-md-12 mb35">
 								<legend>Video Common Information</legend>
           			
 	              <div class="form-group">
@@ -197,7 +197,7 @@
 
 
             <div class="col-md-6"> 
-          		<fieldset class="blk col-md-12">
+          		<fieldset class="blk col-md-12 mb35">
 								<legend>Complementary Info 2</legend>
 
 	              <div class="form-group"> 
