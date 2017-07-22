@@ -37,6 +37,7 @@
             <input type="hidden" value="1" name="ajax_key">
 
 						<div class="col-md-12"> 
+							<small>Mcakcackdsk cskmcsdcs</small>
 	            <ul class="list-inline">
 	            	<li>
 	            		<label for="video-type" class="radio-inline">
