@@ -4,7 +4,7 @@
 
  <!--breadcrumbs-->
 
-<section id="breadcrumb">
+<section id="breadcrumb" style="border:20p solid orange;">
     <div class="row">
         <div class="large-12 columns">
             <nav aria-label="You are here:" role="navigation">
