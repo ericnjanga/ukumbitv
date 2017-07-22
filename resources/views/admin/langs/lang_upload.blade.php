@@ -35,11 +35,13 @@
     <div class="col-lg-12"> 
       <div class="box tab-content tab-content-langadd"> 
         <form id="lang-upload" method="POST" enctype="multipart/form-data" role="form">
-          <div class="form-group col-sm-12">
-            <input type="hidden" value="1" name="ajax_key">
-            <label for="title" class="">Title * </label>
-            <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}"> 
-          </div>    
+        	<div class="row">
+	          <div class="form-group col-sm-12">
+	            <input type="hidden" value="1" name="ajax_key">
+	            <label for="title" class="">Title * </label>
+	            <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}"> 
+	          </div>  
+        	</div> <!-- row -->   
         </form> 
       </div> 
     </div>
@@ -50,7 +52,7 @@
 		</div> 
   </div><!-- row --> 
 
- 
+
 
 
   <div class="overlay">
