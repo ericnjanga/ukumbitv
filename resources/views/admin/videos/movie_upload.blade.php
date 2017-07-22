@@ -211,41 +211,50 @@
               </div>
 
 
+							
 
-              <div class="form-group">
-                  <label for="billboard_image" class="">Billboard  image *</label>
-                  <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
-                  <div id="previewArea1"></div>
-                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1200x650)</p>
-              </div>
-             
-              <div class="form-group">
-                  <label for="small_image1" class="">Small image 1 *</label>
-                  <input required type="file" id="small_image1" name="small_image1" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image1', 'previewArea2', 'small');">
-                  <div id="previewArea2"></div>
-                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-              </div>
-          
-              <div class="form-group">
-                  <label for="small_image2" class="">Small image 2 *</label>
-                  <input required type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small');">
-                  <div id="previewArea3"></div>
-                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-              </div>
-           
-              <div class="form-group">
-                  <label for="small_image3" class="">Small image 3 *</label>
-                  <input required type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small');">
-                  <div id="previewArea4"></div>
-                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-              </div>
-           
-              <div class="form-group">
-                  <label for="preview_image" class="">Preview image *</label>
-                  <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
-                  <div id="previewArea5"></div>
-                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1000x600)</p>
-              </div>
+
+							<!-- IMAGES -->
+							<!-- IMAGES -->
+              <fieldset class="blk col-md-12"> 
+								<small>Add images to this video:</small>
+	              <div class="form-group">
+	                  <label for="billboard_image" class="">Billboard  image *</label>
+	                  <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
+	                  <div id="previewArea1"></div>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1200x650)</p>
+	              </div>
+	             
+	              <div class="form-group">
+	                  <label for="small_image1" class="">Small image 1 *</label>
+	                  <input required type="file" id="small_image1" name="small_image1" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image1', 'previewArea2', 'small');">
+	                  <div id="previewArea2"></div>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+	              </div>
+	          
+	              <div class="form-group">
+	                  <label for="small_image2" class="">Small image 2 *</label>
+	                  <input required type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small');">
+	                  <div id="previewArea3"></div>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+	              </div>
+	           
+	              <div class="form-group">
+	                  <label for="small_image3" class="">Small image 3 *</label>
+	                  <input required type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small');">
+	                  <div id="previewArea4"></div>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+	              </div>
+	           
+	              <div class="form-group">
+	                  <label for="preview_image" class="">Preview image *</label>
+	                  <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
+	                  <div id="previewArea5"></div>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1000x600)</p>
+	              </div>
+              </fieldset>
+							<!-- IMAGES -->
+							<!-- IMAGES -->
            
           		{{--images end--}}
 

@@ -4913,7 +4913,10 @@ table.text-center th {
 /*
 Inspiration: https://dribbble.com/shots/1456853-Form-fields-UI/attachments/215953
 */
-.content-wrapper-admin input[type="text"], 
+.content-wrapper-admin select,
+.content-wrapper-admin input[type="text"],
+.content-wrapper-admin input[type="password"], 
+.content-wrapper-admin input[type="number"],
 .content-wrapper-admin input[type="email"] {
   height: 45px; 
 }
