@@ -15,47 +15,39 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="box tab-content tab-content-actorsview"> 
-        <div class="box-header label-primary">
-            <b style="font-size:18px;">{{tr('actors')}}</b>
-        </div>
+        @if(count($actors) > 0)
+          <table id="table-actorsview" class="table table-bordered table-striped">
 
-        <div class="box-body">
+              <thead>
+              <tr>
+                  <th>{{tr('id')}}</th>
+                  <th>Name</th>
+                  <th>BIO</th>
+                  <th>{{tr('action')}}</th>
+              </tr>
+              </thead>
 
-            @if(count($actors) > 0)
+              <tbody>
+              @foreach($actors as $i => $actor)
 
-                <table id="example1" class="table table-bordered table-striped">
-
-                    <thead>
-                    <tr>
-                        <th>{{tr('id')}}</th>
-                        <th>Name</th>
-                        <th>BIO</th>
-                        <th>{{tr('action')}}</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    @foreach($actors as $i => $actor)
-
-                        <tr id="row{{$actor->id}}">
-                            <td>{{$i+1}}</td>
-                            <td>{{$actor->name}}</td>
-                            <td>{{$actor->bio}}</td>
-                            <td>
-                                <a href="edit-actor/{{$actor->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                <button class="btn btn-danger" onclick="return confirmDelete({{$actor->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                            </td>
-                        </tr>
+                  <tr id="row{{$actor->id}}">
+                      <td>{{$i+1}}</td>
+                      <td>{{$actor->name}}</td>
+                      <td>{{$actor->bio}}</td>
+                      <td>
+                          <a href="edit-actor/{{$actor->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                          <button class="btn btn-danger" onclick="return confirmDelete({{$actor->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                      </td>
+                  </tr>
 
 
 
-                    @endforeach
-                    </tbody>
-                </table>
-            @else
-                <h3 class="no-result">{{tr('no_video_found')}}</h3>
-            @endif
-        </div>
+              @endforeach
+              </tbody>
+          </table>
+        @else
+          <h3 class="no-result">{{tr('no_video_found')}}</h3>
+        @endif
       </div>
     </div>
   </div>

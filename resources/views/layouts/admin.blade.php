@@ -147,6 +147,14 @@
     <!-- page script -->
     <script>
         $(function () {
+            $("#table-actorsview").DataTable({
+						  "columns": [ 
+						    null,
+						    null,
+						    { "width": "50%" },
+						    { "width": "20%" }
+						  ]
+						} );
             $("#example1").DataTable();
             $('#example2').DataTable({
                 "paging": true,
