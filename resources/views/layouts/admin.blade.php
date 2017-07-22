@@ -155,7 +155,7 @@
 						    { "width": "10%" }
 						  ]
 						} );
-            $('#table-categoriesview, #table-directorsview').DataTable({
+            $('#table-categoriesview, #table-directorsview, #table-langsview').DataTable({
 						  "columns": [ 
 						    null,
 						    null, 

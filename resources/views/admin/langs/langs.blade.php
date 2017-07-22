@@ -11,53 +11,39 @@
 
 @section('content')
 
-    @include('notification.notify')
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary">
+  @include('notification.notify')
+  <div class="row">
+    <div class="col-xs-12">
+    	<div class="box tab-content tab-content-langsview"> 
+        @if(count($langs) > 0) 
+          <table id="table-langsview" class="table table-bordered table-striped"> 
+            <thead>
+              <tr>
+                  <th>{{tr('id')}}</th>
+                  <th>Title</th>
+                  <th>{{tr('action')}}</th>
+              </tr>
+            </thead>
 
-                <div class="box-header label-primary">
-                    <b style="font-size:18px;">{{tr('langs')}}</b>
-                </div>
-
-                <div class="box-body">
-
-                    @if(count($langs) > 0)
-
-                        <table id="example1" class="table table-bordered table-striped">
-
-                            <thead>
-                            <tr>
-                                <th>{{tr('id')}}</th>
-                                <th>Title</th>
-                                <th>{{tr('action')}}</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            @foreach($langs as $i => $lang)
-
-                                <tr id="row{{$lang->id}}">
-                                    <td>{{$i+1}}</td>
-                                    <td>{{$lang->title}}</td>
-                                    <td>
-                                        <a href="edit-lang/{{$lang->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <button class="btn btn-danger" onclick="return confirmDelete({{$lang->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
-
-
-
-                            @endforeach
-                            </tbody>
-                        </table>
-                    @else
-                        <h3 class="no-result">No languages found!</h3>
-                    @endif
-                </div>
-            </div>
-        </div>
+            <tbody>
+            @foreach($langs as $i => $lang) 
+              <tr id="row{{$lang->id}}">
+                  <td>{{$i+1}}</td>
+                  <td>{{$lang->title}}</td>
+                  <td>
+                      <a href="edit-lang/{{$lang->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                      <button class="btn btn-danger" onclick="return confirmDelete({{$lang->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  </td>
+              </tr> 
+            @endforeach
+            </tbody>
+          </table>
+        @else
+          <h3 class="no-result">No languages found!</h3>
+        @endif 
+      </div>
     </div>
+  </div>
 
 @endsection
 
