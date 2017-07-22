@@ -147,7 +147,7 @@
     <!-- page script -->
     <script>
         $(function () {
-            $("#table-actorsview, #table-categoriesview").DataTable({
+            $('#table-actorsview').DataTable({
 						  "columns": [ 
 						    null,
 						    null,
@@ -155,6 +155,15 @@
 						    { "width": "10%" }
 						  ]
 						} );
+            $('#table-categoriesview, #table-directorsview').DataTable({
+						  "columns": [ 
+						    null,
+						    null, 
+						    { "width": "10%" }
+						  ]
+						} );
+
+
             $("#example1").DataTable();
             $('#example2').DataTable({
                 "paging": true,

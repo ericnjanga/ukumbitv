@@ -13,52 +13,43 @@
 
     @include('notification.notify')
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary">
+      <div class="col-xs-12">
+    		<div class="box tab-content tab-content-directorsview">  
+          @if(count($directors) > 0) 
+            <table id="table-directorsview" class="table table-bordered table-striped">
 
-                <div class="box-header label-primary">
-                    <b style="font-size:18px;">{{tr('directors')}}</b>
-                </div>
+                <thead>
+                <tr>
+                    <th>{{tr('id')}}</th>
+                    <th>Name</th>
+                    <th>BIO</th>
+                    <th>{{tr('action')}}</th>
+                </tr>
+                </thead>
 
-                <div class="box-body">
+                <tbody>
+                @foreach($directors as $i => $director)
 
-                    @if(count($directors) > 0)
-
-                        <table id="example1" class="table table-bordered table-striped">
-
-                            <thead>
-                            <tr>
-                                <th>{{tr('id')}}</th>
-                                <th>Name</th>
-                                <th>BIO</th>
-                                <th>{{tr('action')}}</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            @foreach($directors as $i => $director)
-
-                                <tr id="row{{$director->id}}">
-                                    <td>{{$i+1}}</td>
-                                    <td>{{$director->name}}</td>
-                                    <td>{{$director->bio}}</td>
-                                    <td>
-                                        <a href="edit-director/{{$director->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <button class="btn btn-danger" onclick="return confirmDelete({{$director->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                                    </td>
-                                </tr>
+                    <tr id="row{{$director->id}}">
+                        <td>{{$i+1}}</td>
+                        <td>{{$director->name}}</td>
+                        <td>{{$director->bio}}</td>
+                        <td>
+                            <a href="edit-director/{{$director->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <button class="btn btn-danger" onclick="return confirmDelete({{$director->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
 
 
 
-                            @endforeach
-                            </tbody>
-                        </table>
-                    @else
-                        <h3 class="no-result">{{tr('no_video_found')}}</h3>
-                    @endif
-                </div>
-            </div>
+                @endforeach
+                </tbody>
+            </table>
+          @else
+            <h3 class="no-result">{{tr('no_video_found')}}</h3>
+          @endif 
         </div>
+      </div>
     </div>
 
 @endsection
