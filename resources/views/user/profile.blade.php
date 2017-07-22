@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="y-content">
+<div class="y-content" style="border:20p solid orange;">
     <div class="row y-content-row">
         @include('layouts.user.nav')
 
