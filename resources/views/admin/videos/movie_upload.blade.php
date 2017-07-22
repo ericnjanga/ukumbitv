@@ -233,10 +233,24 @@
         </form><!-- form -->
       </div> <!-- tab-content -->
     </div>
-  </div><!-- row -->
+			
 
-  <progress id="progressbar" value="0" max="100"></progress>
-  <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="createMovie()">Save</button>
+		<div class="col-md-4 col-md-offset-8 form-group">
+	    <button class="btn btn-submit btn-block" id="finishBtn" onclick="createMovie()">Save</button>
+		</div>
+		
+
+		<div class="col-md-12 form-group">
+	    <progress id="progressbar" style="width:100%" value="0" max="100"></progress>
+		</div> 
+  </div><!-- row -->
+ 
+
+
+
+
+
+
 
 
   {{--<div class="row">--}}
