@@ -118,16 +118,51 @@ class AdminController extends Controller
 
         $view = last_days(10);
 
+        $user = Auth::guard('admin')->user()->type;
+        if ($user == 'producer'){
+            $producer = MovieProducer::where('email', $user->email)->first();
+            $agent = ProducerAgent::find($producer->agent);
+            return view('admin.dashboard.dashboard-producer')->withPage('dashboard-producer')
+                ->with('sub_page','')
+                ->with('user_count' , $user_count)
+                ->with('video_count' , $video_count)
+                ->with('provider_count' , $provider_count)
+                ->with('get_registers' , $get_registers)
+                ->with('view' , $view)
+                ->with('total_revenue' , $total_revenue)
+                ->with('recent_users' , $recent_users)
+                ->with('recent_videos' , $recent_videos)
+                ->with('producer', $producer)
+                ->with('agent', $agent);
+        } elseif ($user == 'agent') {
+            $agent = ProducerAgent::where('email', $user->email)->first();
+            $providers = explode(',', $agent->providers);
+
+            return view('admin.dashboard.dashboard-agent')->withPage('dashboard-agent')
+                ->with('sub_page','')
+                ->with('user_count' , $user_count)
+                ->with('video_count' , $video_count)
+                ->with('provider_count' , $provider_count)
+                ->with('get_registers' , $get_registers)
+                ->with('view' , $view)
+                ->with('total_revenue' , $total_revenue)
+                ->with('recent_users' , $recent_users)
+                ->with('recent_videos' , $recent_videos)
+                ->with('agent', $agent)
+                ->with('providers', $providers);
+        } else {
+
         return view('admin.dashboard.dashboard')->withPage('dashboard')
-                    ->with('sub_page','')
-                    ->with('user_count' , $user_count)
-                    ->with('video_count' , $video_count)
-                    ->with('provider_count' , $provider_count)
-                    ->with('get_registers' , $get_registers)
-                    ->with('view' , $view)
-                    ->with('total_revenue' , $total_revenue)
-                    ->with('recent_users' , $recent_users)
-                    ->with('recent_videos' , $recent_videos);
+            ->with('sub_page','')
+            ->with('user_count' , $user_count)
+            ->with('video_count' , $video_count)
+            ->with('provider_count' , $provider_count)
+            ->with('get_registers' , $get_registers)
+            ->with('view' , $view)
+            ->with('total_revenue' , $total_revenue)
+            ->with('recent_users' , $recent_users)
+            ->with('recent_videos' , $recent_videos);
+        }
     }
 
     public function profile() {
@@ -1496,17 +1531,31 @@ class AdminController extends Controller
 
     public function createProducerAgent(Request $request)
     {
+
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:admins',
+            'password' => 'required|min:6',
+        ]);
+
         $agent = new ProducerAgent();
         $agent->name = $request->name;
         $agent->royalties = $request->royalties;
         $agent->contract_expiration = $request->contract_expiration;
         $agent->providers = $request->providers;
         $agent->email = $request->email;
-        $agent->password = $request->password;
+        $agent->password = bcrypt($request->password);
         $agent->description = $request->description;
         $agent->save();
 
-        return response()->json($agent);
+        $admin = new Admin();
+        $admin->name = $request->name;
+        $admin->email = $request->email;
+        $admin->password = bcrypt($request->password);
+        $admin->type = 'agent';
+        $admin->save();
+
+        return response()->json(['agent' => $agent, 'admin' => $admin]);
     }
 
     public function deleteProducerAgent(Request $request)
@@ -1574,17 +1623,37 @@ class AdminController extends Controller
 
     public function createMovieProducer(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:admins',
+            'password' => 'required|min:6'
+        ]);
+
         $producer = new MovieProducer();
         $producer->name = $request->name;
         $producer->royalties = $request->royalties;
         $producer->contract_expiration = $request->contract_expiration;
         $producer->producer_agent_id = $request->agent;
         $producer->email = $request->email;
-        $producer->password = $request->password;
+        $producer->password = bcrypt($request->password);
         $producer->description = $request->description;
         $producer->save();
 
-        return response()->json($producer);
+//        $admin = Admin::create([
+//            'name' => $request->name,
+//            'email' => $request->email,
+//            'password' => bcrypt($request->password),
+//            'type' => 'producer' //producer
+//        ]);
+
+        $admin = new Admin();
+        $admin->name = $request->name;
+        $admin->email = $request->email;
+        $admin->password = bcrypt($request->password);
+        $admin->type = 'producer';
+        $admin->save();
+
+        return response()->json(['producer' => $producer, 'admin' => $admin]);
     }
 
     public function deleteMovieProducer(Request $request)

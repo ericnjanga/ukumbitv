@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\AdminVideo;
+use App\UserHistory;
 use App\Videoimage;
 use Illuminate\Http\Request;
 
@@ -118,6 +119,14 @@ class UserController extends Controller {
         $main_video = $video->video;
         $trailer_video = "";
         $wishlist_status = $history_status = WISHLIST_EMPTY;
+
+        if (Auth::check()) {
+            $hist = new UserHistory();
+            $hist->user_id = Auth::id();
+            $hist->admin_video_id = $video->id;
+            $hist->status = 0;
+            $hist->save();
+        }
 
 
 

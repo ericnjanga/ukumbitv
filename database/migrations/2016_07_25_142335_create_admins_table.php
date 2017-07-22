@@ -27,6 +27,7 @@ class CreateAdminsTable extends Migration
             $table->string('token');
             $table->string('token_expiry');
             $table->rememberToken();
+            $table->string('type')->nullable();
             $table->timestamps();
         });
     }
