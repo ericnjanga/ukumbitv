@@ -39,7 +39,7 @@
 
 						<div class="col-md-12 mb35">
 							<fieldset class="blk col-md-12"> 
-								<legend>Indicate the type of this video</legend>
+								<legend>Video Type</legend>
 		            <ul class="list-inline" style="padding:0;">
 		            	<li class="mr20">
 		            		<label class="radio-inline">
@@ -70,7 +70,7 @@
             
           	<div class="col-md-6">
           		<fieldset class="blk col-md-12">
-								<legend>Common information to all videos</legend>
+								<legend>Video Common Information</legend>
           			
 	              <div class="form-group">
 	                <label for="title" class="">{{tr('title')}} * </label>
@@ -230,7 +230,7 @@
 							<!-- IMAGES -->
 							<!-- IMAGES -->
               <fieldset class="blk col-md-12"> 
-								<legend>Add images to this video</legend>
+								<legend>Video Posters</legend>
 	              <div class="form-group">
 	                  <label for="billboard_image" class="">Billboard  image *</label>
 	                  <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
