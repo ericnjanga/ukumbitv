@@ -32,7 +32,7 @@
     <div class="row">
         <div class="col-lg-12">
             <section>
-                <div class="wizard">
+                <div class="wizard" style="border:10px dashed;">
 
 
                     <form id="video-upload" method="POST" enctype="multipart/form-data" role="form" action="{{route('admin.save.movie')}}">
