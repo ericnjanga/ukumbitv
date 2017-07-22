@@ -4917,8 +4917,11 @@ Inspiration: https://dribbble.com/shots/1456853-Form-fields-UI/attachments/21595
 .content-wrapper-admin input[type="email"] {
   height: 45px; 
 }
-.content-wrapper-admin input[type="text"], 
+.content-wrapper-admin select,
+.content-wrapper-admin input[type="password"],
 .content-wrapper-admin input[type="email"],
+.content-wrapper-admin input[type="password"],
+.content-wrapper-admin input[type="number"],
 .content-wrapper-admin textarea { 
   border-width: 0;
   background-color: #E8F0FA;
