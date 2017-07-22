@@ -11,63 +11,55 @@
 
 @section('content')
 
-    @include('notification.notify')
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary">
+  @include('notification.notify')
+  <div class="row">
+    <div class="col-xs-12">
+    	<div class="box tab-content tab-content-prodagentview"> 
+        <div class="row"> 
+          @if(count($agents) > 0) 
+            <table id="table-prodagentview" class="table table-bordered table-striped"> 
+              <thead>
+              <tr>
+                  <th>id</th>
+                  <th>Name</th>
+                  <th>Royalties</th>
+                  <th>Contract expiration</th>
+                  <th>Providers</th>
+                  <th>Email</th>
+                  <th>Description</th>
+                  <th>{{tr('action')}}</th>
+              </tr>
+              </thead>
 
-                <div class="box-header label-primary">
-                    <b style="font-size:18px;">Producer Agents</b>
-                </div>
+              <tbody>
+              @foreach($agents as $i => $agent)
 
-                <div class="box-body">
-
-                    @if(count($agents) > 0)
-
-                        <table id="example1" class="table table-bordered table-striped">
-
-                            <thead>
-                            <tr>
-                                <th>id</th>
-                                <th>Name</th>
-                                <th>Royalties</th>
-                                <th>Contract expiration</th>
-                                <th>Providers</th>
-                                <th>Email</th>
-                                <th>Description</th>
-                                <th>{{tr('action')}}</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            @foreach($agents as $i => $agent)
-
-                                <tr id="row{{$agent->id}}">
-                                    <td>{{$i+1}}</td>
-                                    <td>{{$agent->name}}</td>
-                                    <td>{{$agent->royalties}}</td>
-                                    <td>{{$agent->contract_expiration}}</td>
-                                    <td>Providers</td>
-                                    <td>{{$agent->email}}</td>
-                                    <td>{{$agent->description}}</td>
-                                    <td>
-                                        <a href="edit-producer-agent/{{$agent->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <button class="btn btn-danger" onclick="return confirmDelete({{$agent->id}});">Delete</button>
-                                    </td>
-                                </tr>
+                  <tr id="row{{$agent->id}}">
+                      <td>{{$i+1}}</td>
+                      <td>{{$agent->name}}</td>
+                      <td>{{$agent->royalties}}</td>
+                      <td>{{$agent->contract_expiration}}</td>
+                      <td>Providers</td>
+                      <td>{{$agent->email}}</td>
+                      <td>{{$agent->description}}</td>
+                      <td>
+                       	<a href="edit-producer-agent/{{$agent->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                        <button class="btn btn-danger" onclick="return confirmDelete({{$agent->id}});" data-toggle="tooltip" data-placement="top" data-original-title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                      </td>
+                  </tr>
 
 
 
-                            @endforeach
-                            </tbody>
-                        </table>
-                    @else
-                        <h3 class="no-result">No agents found!</h3>
-                    @endif
-                </div>
-            </div>
+              @endforeach
+              </tbody>
+            </table>
+          @else
+            <h3 class="no-result">No agents found!</h3>
+          @endif
         </div>
+      </div>
     </div>
+  </div>
 
 @endsection
 
