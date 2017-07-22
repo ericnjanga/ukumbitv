@@ -147,12 +147,12 @@
     <!-- page script -->
     <script>
         $(function () {
-            $("#table-actorsview").DataTable({
+            $("#table-actorsview, #table-categoriesview").DataTable({
 						  "columns": [ 
 						    null,
 						    null,
-						    { "width": "30%" },
-						    { "width": "20%" }
+						    { "width": "50%" },
+						    { "width": "10%" }
 						  ]
 						} );
             $("#example1").DataTable();

@@ -15,9 +15,9 @@
 
 	<div class="row">
         <div class="col-xs-12">
-          <div class="box tab-content tab-content-categories"> 
+          <div class="box tab-content tab-content-categoriesview"> 
           	@if(count($categories) > 0) 
-	            <table id="example1" class="table table-bordered table-striped">
+	            <table id="table-categoriesview" class="table table-bordered table-striped">
 								<thead>
 								    <tr>
 								      <th>{{tr('id')}}</th>
