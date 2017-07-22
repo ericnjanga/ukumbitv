@@ -1496,17 +1496,31 @@ class AdminController extends Controller
 
     public function createProducerAgent(Request $request)
     {
+
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:admins',
+            'password' => 'required|min:6',
+        ]);
+
         $agent = new ProducerAgent();
         $agent->name = $request->name;
         $agent->royalties = $request->royalties;
         $agent->contract_expiration = $request->contract_expiration;
         $agent->providers = $request->providers;
         $agent->email = $request->email;
-        $agent->password = $request->password;
+        $agent->password = bcrypt($request->password);
         $agent->description = $request->description;
         $agent->save();
 
-        return response()->json($agent);
+        $admin = new Admin();
+        $admin->name = $request->name;
+        $admin->email = $request->email;
+        $admin->password = bcrypt($request->password);
+        $admin->type = 'agent';
+        $admin->save();
+
+        return response()->json(['agent' => $agent, 'admin' => $admin]);
     }
 
     public function deleteProducerAgent(Request $request)
@@ -1574,17 +1588,37 @@ class AdminController extends Controller
 
     public function createMovieProducer(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:admins',
+            'password' => 'required|min:6'
+        ]);
+
         $producer = new MovieProducer();
         $producer->name = $request->name;
         $producer->royalties = $request->royalties;
         $producer->contract_expiration = $request->contract_expiration;
         $producer->producer_agent_id = $request->agent;
         $producer->email = $request->email;
-        $producer->password = $request->password;
+        $producer->password = bcrypt($request->password);
         $producer->description = $request->description;
         $producer->save();
 
-        return response()->json($producer);
+//        $admin = Admin::create([
+//            'name' => $request->name,
+//            'email' => $request->email,
+//            'password' => bcrypt($request->password),
+//            'type' => 'producer' //producer
+//        ]);
+
+        $admin = new Admin();
+        $admin->name = $request->name;
+        $admin->email = $request->email;
+        $admin->password = bcrypt($request->password);
+        $admin->type = 'producer';
+        $admin->save();
+
+        return response()->json(['producer' => $producer, 'admin' => $admin]);
     }
 
     public function deleteMovieProducer(Request $request)
