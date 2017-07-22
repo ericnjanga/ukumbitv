@@ -37,8 +37,8 @@
             <input type="hidden" value="1" name="ajax_key">
 						
 
-						<div class="col-md-12">
-							<fieldset class="blk col-md-12 mb"> 
+						<div class="col-md-12 mb35">
+							<fieldset class="blk col-md-12"> 
 								<small>Indicate the type of this video:</small>
 		            <ul class="list-inline" style="padding:0;">
 		            	<li>

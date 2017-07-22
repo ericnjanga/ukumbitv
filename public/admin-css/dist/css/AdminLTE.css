@@ -4940,11 +4940,14 @@ Inspiration: https://dribbble.com/shots/1456853-Form-fields-UI/attachments/21595
 
 
 
+.content-wrapper-admin small,
+.content-wrapper-admin label {
+	color: #6C7587;
+  /*color: #333C4E;*/
+}
 .content-wrapper-admin label {
   text-transform: uppercase;
-  font-weight: bold;
-  color: #6C7587;
-  /*color: #333C4E;*/
+  font-weight: bold; 
 }
 .content-wrapper-admin .tab-content{
     padding: 30px;	
