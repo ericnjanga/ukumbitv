@@ -31,205 +31,204 @@
 
   <div class="row">
     <div class="col-lg-12"> 
-      <div class="tab-content tab-content-movie-add"> 
+      <div class="box tab-content tab-content-movie-add"> 
         <form id="video-upload" method="POST" enctype="multipart/form-data" role="form" action="{{route('admin.save.movie')}}"> 
           <div class="row">
             <input type="hidden" value="1" name="ajax_key"> 
-            <div class="col-md-12">
-            	<div class="col-md-6">
-                <div class="form-group">
-                    <label for="title" class="">{{tr('title')}} * </label>
-                    <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}">
-                </div>
-
-                <div class="form-group">
-                  <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
-
-                  <div class="input-group">
-                      <div class="input-group-addon">
-                          <i class="fa fa-calendar"></i>
-                      </div>
-                      <input required type="text" name="duration" class="form-control" data-inputmask="'alias': 'hh:mm:ss'" data-mask id="duration">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="description" class="">{{tr('description')}} * </label>
-                  <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
-                </div>
-
-                <div id="category" class="form-group"> 
-                  <label for="category" class="">Select category *</label> 
-                  <select required id="category" name="category_id" class="form-control">
-                      @foreach($categories as $category)
-                      <option value="{{$category->id}}">{{$category->name}}</option>
-                      @endforeach
-                  </select>
-                </div>
-
-                <div id="year_id" class="form-group"> 
-                  <label for="year" class="">Select year *</label> 
-                  <select required id="year" name="year_id" class="form-control">
-                      @for ($i = 2017; $i > 1900; $i--)
-                          <option value="{{$i}}">{{$i}}</option>
-                      @endfor
-                  </select>
-              	</div>
-
-
-                <div id="lang_id" class="form-group"> 
-                  <label for="lang" class="">Select language *</label>
-
-                  <select required id="lang" name="lang_id" class="form-control">
-                      @foreach($langs as $lang)
-                          <option value="{{$lang->id}}">{{$lang->title}}</option>
-                      @endforeach
-                  </select>
-                </div>
-
-                <div class="form-group"> 
-                  <label for="producer" class="">Select movie producer *</label>
-
-                  <select required id="producer" name="producer_id" class="form-control">
-                      @foreach($producers as $producer)
-                          <option value="{{$producer->id}}">{{$producer->name}}</option>
-                      @endforeach
-                  </select>
-                </div>
-
-                <div class="form-group"> 
-                  <label for="director" class="">Select directors *</label>
-
-                  <select multiple required id="director" name="director_id" class="form-control">
-                      @foreach($directors as $director)
-                          <option value="{{$director->id}}">{{$director->name}}</option>
-                      @endforeach
-                  </select>
-                </div>
-
-                <div class="form-group"> 
-                  <label for="actor" class="">Select actors *</label>
-
-                  <select multiple required id="actor" name="actor_id" class="form-control">
-                      @foreach($actors as $actor)
-                          <option value="{{$actor->id}}">{{$actor->name}}</option>
-                      @endforeach
-                  </select>
-                </div> 
-              </div><!-- col-md-6 -->
-
-
-              <div class="col-md-6">  
-                <div class="form-group">
-                  <label for="video-country" class="">Select Country *</label>
-                  <!-- integrate to dabatase -->
-                  <!-- integrate to dabatase -->
-                  <select name="video-country" id="video-country" class="form-control">
-                  	<option value="">Algeria</option>
-										<option value="">Angola</option> 
-										<option value="">Benin</option>
-										<option value="">Botswana</option>
-										<option value="">Burkina Faso</option>
-										<option value="">Burundi</option> 
-										<option value="">Cabo Verde</option>
-										<option value="">Cameroon</option>
-										<option value="">Central African Republic (CAR)</option>
-										<option value="">Chad</option>
-										<option value="">Comoros</option>
-										<option value="">Democratic Republic of the Congo</option>
-										<option value="">Republic of the Congo</option>
-										<option value="">Cote d'Ivoire</option> 
-										<option value="">Djibouti</option> 
-										<option value="">Egypt</option>
-										<option value="">Equatorial Guinea</option>
-										<option value="">Eritrea</option>
-										<option value="">Ethiopia</option> 
-										<option value="">Gabon</option>
-										<option value="">Gambia</option>
-										<option value="">Ghana</option>
-										<option value="">Guinea</option>
-										<option value="">Guinea-Bissau</option> 
-										<option value="">Kenya</option> 
-										<option value="">Lesotho</option>
-										<option value="">Liberia</option>
-										<option value="">Libya</option> 
-										<option value="">Madagascar</option>
-										<option value="">Malawi</option>
-										<option value="">Mali</option>
-										<option value="">Mauritania</option>
-										<option value="">Mauritius</option>
-										<option value="">Morocco</option>
-										<option value="">Mozambique</option> 
-										<option value="">Namibia</option>
-										<option value="">Niger</option>
-										<option value="">Nigeria</option> 
-										<option value="">Rwanda</option> 
-										<option value="">Sao Tome and Principe</option>
-										<option value="">Senegal</option>
-										<option value="">Seychelles</option>
-										<option value="">Sierra Leone</option>
-										<option value="">Somalia</option>
-										<option value="">South Africa</option>
-										<option value="">South Sudan</option>
-										<option value="">Sudan</option>
-										<option value="">Swaziland</option> 
-										<option value="">Tanzania</option>
-										<option value="">Togo</option>
-										<option value="">Tunisia</option> 
-										<option value="">Uganda</option> 
-										<option value="">Zambia</option>
-										<option value="">Zimbabwe</option>
-                  </select> 
-                  <!-- integrate to dabatase -->
-                  <!-- integrate to dabatase -->
-                </div>
-
-
-
-                <div class="form-group">
-                    <label for="billboard_image" class="">Billboard  image *</label>
-                    <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
-                    <div id="previewArea1"></div>
-                    <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1200x650)</p>
-                </div>
-               
-                <div class="form-group">
-                    <label for="small_image1" class="">Small image 1 *</label>
-                    <input required type="file" id="small_image1" name="small_image1" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image1', 'previewArea2', 'small');">
-                    <div id="previewArea2"></div>
-                    <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-                </div>
             
-                <div class="form-group">
-                    <label for="small_image2" class="">Small image 2 *</label>
-                    <input required type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small');">
-                    <div id="previewArea3"></div>
-                    <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-                </div>
-             
-                <div class="form-group">
-                    <label for="small_image3" class="">Small image 3 *</label>
-                    <input required type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small');">
-                    <div id="previewArea4"></div>
-                    <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-                </div>
-             
-                <div class="form-group">
-                    <label for="preview_image" class="">Preview image *</label>
-                    <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
-                    <div id="previewArea5"></div>
-                    <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1000x600)</p>
-                </div>
-             
-            		{{--images end--}}
+          	<div class="col-md-6">
+              <div class="form-group">
+                  <label for="title" class="">{{tr('title')}} * </label>
+                  <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}">
+              </div>
 
-                <div class="form-group">
-                    <label for="video" class="">{{tr('video')}}</label>
-                    <input required type="file" id="video" accept="video/mp4" name="video">
-                    <p class="help-block">{{tr('video_validate')}}</p>
-                </div> 
-              </div><!-- col-md-6 -->
-            </div><!-- col-md-12 --> 
+              <div class="form-group">
+                <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
+
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <input required type="text" name="duration" class="form-control" data-inputmask="'alias': 'hh:mm:ss'" data-mask id="duration">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="description" class="">{{tr('description')}} * </label>
+                <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
+              </div>
+
+              <div id="category" class="form-group"> 
+                <label for="category" class="">Select category *</label> 
+                <select required id="category" name="category_id" class="form-control">
+                    @foreach($categories as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                    @endforeach
+                </select>
+              </div>
+
+              <div id="year_id" class="form-group"> 
+                <label for="year" class="">Select year *</label> 
+                <select required id="year" name="year_id" class="form-control">
+                    @for ($i = 2017; $i > 1900; $i--)
+                        <option value="{{$i}}">{{$i}}</option>
+                    @endfor
+                </select>
+            	</div>
+
+
+              <div id="lang_id" class="form-group"> 
+                <label for="lang" class="">Select language *</label>
+
+                <select required id="lang" name="lang_id" class="form-control">
+                    @foreach($langs as $lang)
+                        <option value="{{$lang->id}}">{{$lang->title}}</option>
+                    @endforeach
+                </select>
+              </div>
+
+              <div class="form-group"> 
+                <label for="producer" class="">Select movie producer *</label>
+
+                <select required id="producer" name="producer_id" class="form-control">
+                    @foreach($producers as $producer)
+                        <option value="{{$producer->id}}">{{$producer->name}}</option>
+                    @endforeach
+                </select>
+              </div>
+
+              <div class="form-group"> 
+                <label for="director" class="">Select directors *</label>
+
+                <select multiple required id="director" name="director_id" class="form-control">
+                    @foreach($directors as $director)
+                        <option value="{{$director->id}}">{{$director->name}}</option>
+                    @endforeach
+                </select>
+              </div>
+
+              <div class="form-group"> 
+                <label for="actor" class="">Select actors *</label>
+
+                <select multiple required id="actor" name="actor_id" class="form-control">
+                    @foreach($actors as $actor)
+                        <option value="{{$actor->id}}">{{$actor->name}}</option>
+                    @endforeach
+                </select>
+              </div> 
+            </div><!-- col-md-6 -->
+
+
+            <div class="col-md-6">  
+              <div class="form-group">
+                <label for="video-country" class="">Select Country *</label>
+                <!-- integrate to dabatase -->
+                <!-- integrate to dabatase -->
+                <select name="video-country" id="video-country" class="form-control">
+                	<option value="">Algeria</option>
+									<option value="">Angola</option> 
+									<option value="">Benin</option>
+									<option value="">Botswana</option>
+									<option value="">Burkina Faso</option>
+									<option value="">Burundi</option> 
+									<option value="">Cabo Verde</option>
+									<option value="">Cameroon</option>
+									<option value="">Central African Republic (CAR)</option>
+									<option value="">Chad</option>
+									<option value="">Comoros</option>
+									<option value="">Democratic Republic of the Congo</option>
+									<option value="">Republic of the Congo</option>
+									<option value="">Cote d'Ivoire</option> 
+									<option value="">Djibouti</option> 
+									<option value="">Egypt</option>
+									<option value="">Equatorial Guinea</option>
+									<option value="">Eritrea</option>
+									<option value="">Ethiopia</option> 
+									<option value="">Gabon</option>
+									<option value="">Gambia</option>
+									<option value="">Ghana</option>
+									<option value="">Guinea</option>
+									<option value="">Guinea-Bissau</option> 
+									<option value="">Kenya</option> 
+									<option value="">Lesotho</option>
+									<option value="">Liberia</option>
+									<option value="">Libya</option> 
+									<option value="">Madagascar</option>
+									<option value="">Malawi</option>
+									<option value="">Mali</option>
+									<option value="">Mauritania</option>
+									<option value="">Mauritius</option>
+									<option value="">Morocco</option>
+									<option value="">Mozambique</option> 
+									<option value="">Namibia</option>
+									<option value="">Niger</option>
+									<option value="">Nigeria</option> 
+									<option value="">Rwanda</option> 
+									<option value="">Sao Tome and Principe</option>
+									<option value="">Senegal</option>
+									<option value="">Seychelles</option>
+									<option value="">Sierra Leone</option>
+									<option value="">Somalia</option>
+									<option value="">South Africa</option>
+									<option value="">South Sudan</option>
+									<option value="">Sudan</option>
+									<option value="">Swaziland</option> 
+									<option value="">Tanzania</option>
+									<option value="">Togo</option>
+									<option value="">Tunisia</option> 
+									<option value="">Uganda</option> 
+									<option value="">Zambia</option>
+									<option value="">Zimbabwe</option>
+                </select> 
+                <!-- integrate to dabatase -->
+                <!-- integrate to dabatase -->
+              </div>
+
+
+
+              <div class="form-group">
+                  <label for="billboard_image" class="">Billboard  image *</label>
+                  <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
+                  <div id="previewArea1"></div>
+                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1200x650)</p>
+              </div>
+             
+              <div class="form-group">
+                  <label for="small_image1" class="">Small image 1 *</label>
+                  <input required type="file" id="small_image1" name="small_image1" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image1', 'previewArea2', 'small');">
+                  <div id="previewArea2"></div>
+                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+              </div>
+          
+              <div class="form-group">
+                  <label for="small_image2" class="">Small image 2 *</label>
+                  <input required type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small');">
+                  <div id="previewArea3"></div>
+                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+              </div>
+           
+              <div class="form-group">
+                  <label for="small_image3" class="">Small image 3 *</label>
+                  <input required type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small');">
+                  <div id="previewArea4"></div>
+                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+              </div>
+           
+              <div class="form-group">
+                  <label for="preview_image" class="">Preview image *</label>
+                  <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
+                  <div id="previewArea5"></div>
+                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1000x600)</p>
+              </div>
+           
+          		{{--images end--}}
+
+              <div class="form-group">
+                  <label for="video" class="">{{tr('video')}}</label>
+                  <input required type="file" id="video" accept="video/mp4" name="video">
+                  <p class="help-block">{{tr('video_validate')}}</p>
+              </div> 
+            </div><!-- col-md-6 --> 
           </div><!-- row --> 
         </form><!-- form -->
       </div> <!-- tab-content -->
