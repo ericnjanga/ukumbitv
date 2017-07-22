@@ -28,7 +28,7 @@
 <div class="row">
     <div class="col-lg-12">
         <section>
-        <div class="wizard">
+        <div class="wizard" style="border:5px solid red;">
             <div class="wizard-inner">
                 <div class="connecting-line"></div>
                 <ul class="nav nav-tabs" role="tablist">
