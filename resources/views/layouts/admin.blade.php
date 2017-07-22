@@ -90,10 +90,10 @@
 								    
 							</style>
               <div class="quick-controls">
-              	<a id="btn-qc-add" href="#" class="btn btn-primary">
+              	<a id="btn-qc-add" href="#" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Create a new record">
               		<i class="fa fa-plus" aria-hidden="true"></i>
               	</a>
-              	<a id="btn-qc-view" href="#" class="btn btn-edit btn-default">
+              	<a id="btn-qc-view" href="#" class="btn btn-edit btn-default" data-toggle="tooltip" data-placement="top" title="View records list">
 									<i class="fa fa-eye" aria-hidden="true"></i>
               	</a>
               </div>
@@ -163,22 +163,33 @@
           var page_url = document.location.href,
           		$btn_qc1 = $('#btn-qc-add');
           		$btn_qc2 = $('#btn-qc-view');
-
-          // console.log('>>>>>', page_url.indexOf('movie'));
-          // console.log('>>>>>', page_url.indexOf('videos'));
-
-
-          if(page_url.indexOf('movie') > -1 || page_url.indexOf('videos') > -1){
-          	var $menu_item = $('#sidebar-menu > #videos'); 
-          }
-          else if (page_url.indexOf('user') > -1 || page_url.indexOf('users') > -1){
+  
+					if (page_url.indexOf('user') > -1 || page_url.indexOf('users') > -1){
           	var $menu_item = $('#sidebar-menu > #users'); 
           }
           else if (page_url.indexOf('category') > -1 || page_url.indexOf('categories') > -1){
           	var $menu_item = $('#sidebar-menu > #categories'); 
           }
+          else if(page_url.indexOf('actor') > -1 || page_url.indexOf('actors') > -1){
+          	var $menu_item = $('#sidebar-menu > #actors'); 
+          }
+          else if(page_url.indexOf('director') > -1 || page_url.indexOf('directors') > -1){
+          	var $menu_item = $('#sidebar-menu > #directors'); 
+          }
+          else if(page_url.indexOf('lang') > -1 || page_url.indexOf('langs') > -1){
+          	var $menu_item = $('#sidebar-menu > #langs'); 
+          }
+          else if(page_url.indexOf('movie') > -1 || page_url.indexOf('videos') > -1){
+          	var $menu_item = $('#sidebar-menu > #videos'); 
+          }
+          else if(page_url.indexOf('producer-agent') > -1 || page_url.indexOf('producer-agents') > -1){
+          	var $menu_item = $('#sidebar-menu > #producer-agents'); 
+          }
+          else if (page_url.indexOf('movie-producer') > -1 || page_url.indexOf('movie-producers') > -1){
+          	var $menu_item = $('#sidebar-menu > #movie-producers'); 
+          }
 
-          if($menu_item.length > 0){ 
+          if($menu_item!==undefined && $menu_item.length > 0){ 
           	$btn_qc1.attr('href', $menu_item.data('btn-add'));
           	$btn_qc2.attr('href', $menu_item.data('btn-view'));
           } 
@@ -205,6 +216,13 @@
             //Money Euro
             $("[data-mask]").inputmask();
         });
+
+
+
+        //Initalize tooltips
+        $(function () {
+				  $('[data-toggle="tooltip"]').tooltip()
+				});
     </script>
 
 
