@@ -200,10 +200,10 @@
           	var $menu_item = $('#sidebar-menu > #videos'); 
           }
           else if(page_url.indexOf('producer-agent') > -1 || page_url.indexOf('producer-agents') > -1){
-          	var $menu_item = $('#sidebar-menu > #producer-agents'); 
+          	var $menu_item = $('#sidebar-menu > #producer_agents'); 
           }
           else if (page_url.indexOf('movie-producer') > -1 || page_url.indexOf('movie-producers') > -1){
-          	var $menu_item = $('#sidebar-menu > #movie-producers'); 
+          	var $menu_item = $('#sidebar-menu > #movie_producers'); 
           }
 
           if($menu_item!==undefined && $menu_item.length > 0){ 
