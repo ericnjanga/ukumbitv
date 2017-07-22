@@ -4942,8 +4942,9 @@ Inspiration: https://dribbble.com/shots/1456853-Form-fields-UI/attachments/21595
 
 .content-wrapper-admin label {
   text-transform: uppercase;
-  font-weight: normal;
-  color: #333C4E;
+  font-weight: bold;
+  color: #6C7587;
+  /*color: #333C4E;*/
 }
 .content-wrapper-admin .tab-content{
     padding: 30px;	
@@ -5036,10 +5037,18 @@ Inspiration: https://dribbble.com/shots/1456853-Form-fields-UI/attachments/21595
 }
 
 
+.content-wrapper-admin .form-group {
+  margin-bottom: 35px;
+}
 
 
+
+/* utilities*/
 fieldset.blk {
 	border: 2px dashed #AFBED5;
+}
+.mb35{
+	margin-bottom: 35px;
 }
 
 

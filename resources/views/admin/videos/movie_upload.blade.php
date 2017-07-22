@@ -35,24 +35,31 @@
         <form id="video-upload" method="POST" enctype="multipart/form-data" role="form" action="{{route('admin.save.movie')}}"> 
           <div class="row">
             <input type="hidden" value="1" name="ajax_key">
+						
 
-						<fieldset class="blk col-md-12 mb"> 
-							<small>Indicate the type of this video:</small>
-	            <ul class="list-inline" style="padding:0;">
-	            	<li>
-	            		<label class="radio-inline">
-	            			<input type="radio" name="video-type" id="video-type-movie" value="movie" checked> 
-	            			Movie
-	            		</label>
-	            	</li>
-	            	<li>
-	            		<label class="radio-inline">
-	            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshow"> 
-	            			TvShow
-	            		</label>
-	            	</li>
-	            </ul><!-- col-md-12 --> 
-						</fieldset>
+						<div class="col-md-12">
+							<fieldset class="blk col-md-12 mb"> 
+								<small>Indicate the type of this video:</small>
+		            <ul class="list-inline" style="padding:0;">
+		            	<li>
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-type" id="video-type-movie" value="movie" checked> 
+		            			Movie
+		            		</label>
+		            	</li>
+		            	<li>
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshow"> 
+		            			TvShow
+		            		</label>
+		            	</li>
+		            </ul><!-- col-md-12 --> 
+							</fieldset> 
+						</div>
+
+
+
+
 
             
           	<div class="col-md-6">
