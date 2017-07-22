@@ -14,51 +14,49 @@
   @include('notification.notify')
   <div class="row">
     <div class="col-xs-12">
-    	<div class="box tab-content tab-content-prodagentview"> 
-        <div class="row"> 
-          @if(count($agents) > 0) 
-            <table id="table-prodagentview" class="table table-bordered table-striped"> 
-              <thead>
-              <tr>
-                  <th>id</th>
-                  <th>Name</th>
-                  <th>Royalties</th>
-                  <th>Contract expiration</th>
-                  <!--
-                  DON'T NEED THESE INFORMATIONS RIGHT HERE
-                  <th>Movie Producers</th>
-                  <th>Email</th>
-                  <th>Description</th>
-               	 	-->
-                  <th>{{tr('action')}}</th>
-              </tr>
-              </thead>
+    	<div class="box tab-content tab-content-prodagentview">  
+        @if(count($agents) > 0) 
+          <table id="table-prodagentview" class="table table-bordered table-striped"> 
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Royalties</th>
+                <th>Contract expiration</th>
+                <!--
+                DON'T NEED THESE INFORMATIONS RIGHT HERE
+                <th>Movie Producers</th>
+                <th>Email</th>
+                <th>Description</th>
+             	 	-->
+                <th>{{tr('action')}}</th>
+            </tr>
+            </thead>
 
-              <tbody>
-              @foreach($agents as $i => $agent) 
-                <tr id="row{{$agent->id}}">
-                  <td>{{$i+1}}</td>
-                  <td>{{$agent->name}}</td>
-                  <td>{{$agent->royalties}}%</td>
-                  <td>{{$agent->contract_expiration}}</td>
-                  <!--
-                  DON'T NEED THESE INFORMATIONS RIGHT HERE
-                  <td>Movie Producers</td>
-                  <td>{{$agent->email}}</td>
-                  <td>{{$agent->description}}</td>
-               	 	-->
-                  <td>
-                   	<a href="edit-producer-agent/{{$agent->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                    <button class="btn btn-danger" onclick="return confirmDelete({{$agent->id}});" data-toggle="tooltip" data-placement="top" data-original-title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                  </td>
-                </tr> 
-              @endforeach
-              </tbody>
-            </table>
-          @else
-            <h3 class="no-result">No agents found!</h3>
-          @endif
-        </div>
+            <tbody>
+            @foreach($agents as $i => $agent) 
+              <tr id="row{{$agent->id}}">
+                <td>{{$i+1}}</td>
+                <td>{{$agent->name}}</td>
+                <td>{{$agent->royalties}}%</td>
+                <td>{{$agent->contract_expiration}}</td>
+                <!--
+                DON'T NEED THESE INFORMATIONS RIGHT HERE
+                <td>Movie Producers</td>
+                <td>{{$agent->email}}</td>
+                <td>{{$agent->description}}</td>
+             	 	-->
+                <td>
+                 	<a href="edit-producer-agent/{{$agent->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                  <button class="btn btn-danger" onclick="return confirmDelete({{$agent->id}});" data-toggle="tooltip" data-placement="top" data-original-title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                </td>
+              </tr> 
+            @endforeach
+            </tbody>
+          </table>
+        @else
+          <h3 class="no-result">No agents found!</h3>
+        @endif 
       </div>
     </div>
   </div>
