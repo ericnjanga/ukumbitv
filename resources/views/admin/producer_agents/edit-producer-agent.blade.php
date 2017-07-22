@@ -57,7 +57,7 @@
               </div>
               <div class="form-group">
                 <label for="description" class="">Description </label>
-                <textarea class="form-control" rows="6" cols="50" id="description" name="description">{{$agent->description}}</textarea>
+                <textarea class="form-control" rows="7" cols="50" id="description" name="description">{{$agent->description}}</textarea>
               </div>
             </div><!-- col-md-6 -->
           </div><!-- row -->  
