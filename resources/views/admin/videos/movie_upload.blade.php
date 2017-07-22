@@ -34,7 +34,24 @@
       <div class="box tab-content tab-content-movie-add"> 
         <form id="video-upload" method="POST" enctype="multipart/form-data" role="form" action="{{route('admin.save.movie')}}"> 
           <div class="row">
-            <input type="hidden" value="1" name="ajax_key"> 
+            <input type="hidden" value="1" name="ajax_key">
+
+
+            <ul class="col-md-12">
+            	<li>
+            		<label for="video-type" class="radio-inline">
+            			<input type="radio" name="video-type" id="video-type-movie" value="movie"> 
+            			Movie
+            		</label>
+            	</li>
+            	<li>
+            		<label for="video-type" class="radio-inline">
+            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshow"> 
+            			TvShow
+            		</label>
+            	</li>
+            </ul><!-- col-md-12 --> 
+
             
           	<div class="col-md-6">
               <div class="form-group">
