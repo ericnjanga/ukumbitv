@@ -24,9 +24,12 @@
                   <th>Name</th>
                   <th>Royalties</th>
                   <th>Contract expiration</th>
-                  <th>Providers</th>
-                  <!-- <th>Email</th> -->
-                  <!-- <th>Description</th> -->
+                  <!--
+                  DON'T NEED THESE INFORMATIONS RIGHT HERE
+                  <th>Movie Producers</th>
+                  <th>Email</th>
+                  <th>Description</th>
+               	 	-->
                   <th>{{tr('action')}}</th>
               </tr>
               </thead>
@@ -38,9 +41,12 @@
                   <td>{{$agent->name}}</td>
                   <td>{{$agent->royalties}}%</td>
                   <td>{{$agent->contract_expiration}}</td>
-                  <td>Providers</td>
-                  <!-- <td>{{$agent->email}}</td> -->
-                  <!-- <td>{{$agent->description}}</td> -->
+                  <!--
+                  DON'T NEED THESE INFORMATIONS RIGHT HERE
+                  <td>Movie Producers</td>
+                  <td>{{$agent->email}}</td>
+                  <td>{{$agent->description}}</td>
+               	 	-->
                   <td>
                    	<a href="edit-producer-agent/{{$agent->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                     <button class="btn btn-danger" onclick="return confirmDelete({{$agent->id}});" data-toggle="tooltip" data-placement="top" data-original-title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>

@@ -162,6 +162,15 @@
 						    { "width": "10%" }
 						  ]
 						} );
+            $('#table-prodagentview').DataTable({
+						  "columns": [ 
+						    null,
+						    null, 
+						    null,
+						    null, 
+						    { "width": "10%" }
+						  ]
+						} );
 
 
             $("#example1").DataTable();
