@@ -69,26 +69,33 @@
 
             
           	<div class="col-md-6">
-              <div class="form-group">
-                  <label for="title" class="">{{tr('title')}} * </label>
-                  <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}">
-              </div>
+          		<fieldset class="blk col-md-12">
+								<legend>Common information to all videos</legend>
+          			
+	              <div class="form-group">
+	                <label for="title" class="">{{tr('title')}} * </label>
+	                <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}">
+	              </div>
 
-              <div class="form-group">
-                <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
+	              <div class="form-group">
+	                <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
 
-                <div class="input-group">
-                    <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                    </div>
-                    <input required type="text" name="duration" class="form-control" data-inputmask="'alias': 'hh:mm:ss'" data-mask id="duration">
-                </div>
-              </div>
+	                <div class="input-group">
+	                    <div class="input-group-addon">
+	                        <i class="fa fa-calendar"></i>
+	                    </div>
+	                    <input required type="text" name="duration" class="form-control" data-inputmask="'alias': 'hh:mm:ss'" data-mask id="duration">
+	                </div>
+	              </div>
 
-              <div class="form-group">
-                <label for="description" class="">{{tr('description')}} * </label>
-                <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
-              </div>
+	              <div class="form-group">
+	                <label for="description" class="">{{tr('description')}} * </label>
+	                <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
+	              </div>
+          		</fieldset><!-- fieldset -->
+
+
+
 
               <div id="category" class="form-group"> 
                 <label for="category" class="">Select category *</label> 
