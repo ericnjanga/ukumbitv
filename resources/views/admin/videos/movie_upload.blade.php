@@ -39,18 +39,24 @@
 
 						<div class="col-md-12 mb35">
 							<fieldset class="blk col-md-12"> 
-								<legend>Indicate the type of this video:</legend>
+								<legend>Indicate the type of this video</legend>
 		            <ul class="list-inline" style="padding:0;">
-		            	<li>
+		            	<li class="mr20">
 		            		<label class="radio-inline">
 		            			<input type="radio" name="video-type" id="video-type-movie" value="movie" checked> 
 		            			Movie
 		            		</label>
 		            	</li>
-		            	<li>
+		            	<li class="mr20">
 		            		<label class="radio-inline">
 		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshow"> 
 		            			TvShow
+		            		</label>
+		            	</li>
+		            	<li class="mr20">
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-type" id="video-type-episode" value="episode"> 
+		            			Episode
 		            		</label>
 		            	</li>
 		            </ul><!-- col-md-12 --> 
@@ -217,7 +223,7 @@
 							<!-- IMAGES -->
 							<!-- IMAGES -->
               <fieldset class="blk col-md-12"> 
-								<legend>Add images to this video:</legend>
+								<legend>Add images to this video</legend>
 	              <div class="form-group">
 	                  <label for="billboard_image" class="">Billboard  image *</label>
 	                  <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
