@@ -10,7 +10,7 @@
             </div>
             <div class="pull-left info">
                 <p>{{Auth::guard('admin')->user()->name}}</p>
-                <a href="{{route('admin.profile')}}">{{ tr('admin') }}</a>
+                <a href="{{route('admin.profile')}}">{{ Auth::guard('admin')->user()->type }}</a>
             </div>
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -20,6 +20,8 @@
                     <i class="fa fa-dashboard"></i> <span>{{tr('dashboard')}}</span>
                 </a>
             </li>
+
+            @if(Auth::guard('admin')->user()->type == 'admin')
             <li id="users" data-btn-add="{{route('admin.add.user')}}" data-btn-view="{{route('admin.users')}}">
                 <a href="{{route('admin.users')}}">
                     <i class="fa fa-user"></i> <span>{{tr('users')}}</span>
@@ -151,6 +153,7 @@
             </div>
             <!-- not needed menu items -->
             <!-- not needed menu items -->
+                @endif
         </ul>
     </section>
     <!-- /.sidebar -->

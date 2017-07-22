@@ -118,16 +118,51 @@ class AdminController extends Controller
 
         $view = last_days(10);
 
+        $user = Auth::guard('admin')->user()->type;
+        if ($user == 'producer'){
+            $producer = MovieProducer::where('email', $user->email)->first();
+            $agent = ProducerAgent::find($producer->agent);
+            return view('admin.dashboard.dashboard-producer')->withPage('dashboard-producer')
+                ->with('sub_page','')
+                ->with('user_count' , $user_count)
+                ->with('video_count' , $video_count)
+                ->with('provider_count' , $provider_count)
+                ->with('get_registers' , $get_registers)
+                ->with('view' , $view)
+                ->with('total_revenue' , $total_revenue)
+                ->with('recent_users' , $recent_users)
+                ->with('recent_videos' , $recent_videos)
+                ->with('producer', $producer)
+                ->with('agent', $agent);
+        } elseif ($user == 'agent') {
+            $agent = ProducerAgent::where('email', $user->email)->first();
+            $providers = explode(',', $agent->providers);
+
+            return view('admin.dashboard.dashboard-agent')->withPage('dashboard-agent')
+                ->with('sub_page','')
+                ->with('user_count' , $user_count)
+                ->with('video_count' , $video_count)
+                ->with('provider_count' , $provider_count)
+                ->with('get_registers' , $get_registers)
+                ->with('view' , $view)
+                ->with('total_revenue' , $total_revenue)
+                ->with('recent_users' , $recent_users)
+                ->with('recent_videos' , $recent_videos)
+                ->with('agent', $agent)
+                ->with('providers', $providers);
+        } else {
+
         return view('admin.dashboard.dashboard')->withPage('dashboard')
-                    ->with('sub_page','')
-                    ->with('user_count' , $user_count)
-                    ->with('video_count' , $video_count)
-                    ->with('provider_count' , $provider_count)
-                    ->with('get_registers' , $get_registers)
-                    ->with('view' , $view)
-                    ->with('total_revenue' , $total_revenue)
-                    ->with('recent_users' , $recent_users)
-                    ->with('recent_videos' , $recent_videos);
+            ->with('sub_page','')
+            ->with('user_count' , $user_count)
+            ->with('video_count' , $video_count)
+            ->with('provider_count' , $provider_count)
+            ->with('get_registers' , $get_registers)
+            ->with('view' , $view)
+            ->with('total_revenue' , $total_revenue)
+            ->with('recent_users' , $recent_users)
+            ->with('recent_videos' , $recent_videos);
+        }
     }
 
     public function profile() {
