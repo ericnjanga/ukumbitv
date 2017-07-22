@@ -151,7 +151,7 @@
 						  "columns": [ 
 						    null,
 						    null,
-						    { "width": "50%" },
+						    { "width": "30%" },
 						    { "width": "20%" }
 						  ]
 						} );
