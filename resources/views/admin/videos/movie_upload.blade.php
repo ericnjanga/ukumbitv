@@ -36,17 +36,17 @@
           <div class="row">
             <input type="hidden" value="1" name="ajax_key">
 
-						<fieldset class="blk col-md-12"> 
-							<small>Mcakcackdsk cskmcsdcs</small>
+						<fieldset class="blk col-md-12 mb"> 
+							<small>Indicate the type of this video:</small>
 	            <ul class="list-inline" style="padding:0;">
 	            	<li>
-	            		<label for="video-type" class="radio-inline">
+	            		<label class="radio-inline">
 	            			<input type="radio" name="video-type" id="video-type-movie" value="movie" checked> 
 	            			Movie
 	            		</label>
 	            	</li>
 	            	<li>
-	            		<label for="video-type" class="radio-inline">
+	            		<label class="radio-inline">
 	            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshow"> 
 	            			TvShow
 	            		</label>
