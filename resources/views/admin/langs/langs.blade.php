@@ -41,7 +41,7 @@
                                     <td>{{$i+1}}</td>
                                     <td>{{$lang->title}}</td>
                                     <td>
-                                        <a href="edit-lang/{{$lang->id}}" class="btn btn-primary">Edit</a>
+                                        <a href="edit-lang/{{$lang->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                         <button class="btn btn-danger" onclick="return confirmDelete({{$lang->id}});">Delete</button>
                                     </td>
                                 </tr>

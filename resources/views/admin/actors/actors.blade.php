@@ -43,7 +43,7 @@
                                     <td>{{$actor->name}}</td>
                                     <td>{{$actor->bio}}</td>
                                     <td>
-                                        <a href="edit-actor/{{$actor->id}}" class="btn btn-primary">Edit</a>
+                                        <a href="edit-actor/{{$actor->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                         <button class="btn btn-danger" onclick="return confirmDelete({{$actor->id}});">Delete</button>
                                     </td>
                                 </tr>

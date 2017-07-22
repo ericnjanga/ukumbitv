@@ -51,7 +51,7 @@
                                     <td>{{$agent->email}}</td>
                                     <td>{{$agent->description}}</td>
                                     <td>
-                                        <a href="edit-producer-agent/{{$agent->id}}" class="btn btn-primary">Edit</a>
+                                        <a href="edit-producer-agent/{{$agent->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                         <button class="btn btn-danger" onclick="return confirmDelete({{$agent->id}});">Delete</button>
                                     </td>
                                 </tr>

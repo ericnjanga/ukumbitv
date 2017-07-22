@@ -69,7 +69,7 @@
 								       	{{--@endif--}}
 							      	{{--</td>--}}
 								    <td>
-										<a href="edit-movie/{{$video->video_id}}" class="btn btn-primary">Edit</a>
+										<a href="edit-movie/{{$video->video_id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 										<button class="btn btn-danger" onclick="return confirmDelete({{$video->video_id}});">Delete</button>
             							{{--<ul class="admin-action btn btn-default">--}}
             								{{--<li class="dropup">--}}
