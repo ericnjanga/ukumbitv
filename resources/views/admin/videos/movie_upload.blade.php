@@ -36,12 +36,12 @@
           <div class="row">
             <input type="hidden" value="1" name="ajax_key">
 
-						<div class="col-md-12"> 
+						<fieldset class="blk col-md-12"> 
 							<small>Mcakcackdsk cskmcsdcs</small>
-	            <ul class="list-inline">
+	            <ul class="list-inline" style="padding:0;">
 	            	<li>
 	            		<label for="video-type" class="radio-inline">
-	            			<input type="radio" name="video-type" id="video-type-movie" value="movie"> 
+	            			<input type="radio" name="video-type" id="video-type-movie" value="movie" checked> 
 	            			Movie
 	            		</label>
 	            	</li>
@@ -52,7 +52,7 @@
 	            		</label>
 	            	</li>
 	            </ul><!-- col-md-12 --> 
-						</div>
+						</fieldset>
 
             
           	<div class="col-md-6">
