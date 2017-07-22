@@ -95,133 +95,141 @@
           		</fieldset><!-- fieldset -->
 
 
+          		<fieldset class="blk col-md-12">
+								<legend>Complementary Info 1</legend>
 
+	              <div id="category" class="form-group"> 
+	                <label for="category" class="">Select category *</label> 
+	                <select required id="category" name="category_id" class="form-control">
+	                    @foreach($categories as $category)
+	                    <option value="{{$category->id}}">{{$category->name}}</option>
+	                    @endforeach
+	                </select>
+	              </div>
 
-              <div id="category" class="form-group"> 
-                <label for="category" class="">Select category *</label> 
-                <select required id="category" name="category_id" class="form-control">
-                    @foreach($categories as $category)
-                    <option value="{{$category->id}}">{{$category->name}}</option>
-                    @endforeach
-                </select>
-              </div>
+	              <div id="year_id" class="form-group"> 
+	                <label for="year" class="">Select year *</label> 
+	                <select required id="year" name="year_id" class="form-control">
+	                    @for ($i = 2017; $i > 1900; $i--)
+	                        <option value="{{$i}}">{{$i}}</option>
+	                    @endfor
+	                </select>
+	            	</div>
+	 
+	              <div id="lang_id" class="form-group"> 
+	                <label for="lang" class="">Select language *</label>
 
-              <div id="year_id" class="form-group"> 
-                <label for="year" class="">Select year *</label> 
-                <select required id="year" name="year_id" class="form-control">
-                    @for ($i = 2017; $i > 1900; $i--)
-                        <option value="{{$i}}">{{$i}}</option>
-                    @endfor
-                </select>
-            	</div>
+	                <select required id="lang" name="lang_id" class="form-control">
+	                    @foreach($langs as $lang)
+	                        <option value="{{$lang->id}}">{{$lang->title}}</option>
+	                    @endforeach
+	                </select>
+	              </div>
 
-
-              <div id="lang_id" class="form-group"> 
-                <label for="lang" class="">Select language *</label>
-
-                <select required id="lang" name="lang_id" class="form-control">
-                    @foreach($langs as $lang)
-                        <option value="{{$lang->id}}">{{$lang->title}}</option>
-                    @endforeach
-                </select>
-              </div>
-
-              <div class="form-group"> 
-                <label for="producer" class="">Select movie producer *</label>
-
-                <select required id="producer" name="producer_id" class="form-control">
-                    @foreach($producers as $producer)
-                        <option value="{{$producer->id}}">{{$producer->name}}</option>
-                    @endforeach
-                </select>
-              </div>
-
-              <div class="form-group"> 
-                <label for="director" class="">Select directors *</label>
-
-                <select multiple required id="director" name="director_id" class="form-control">
-                    @foreach($directors as $director)
-                        <option value="{{$director->id}}">{{$director->name}}</option>
-                    @endforeach
-                </select>
-              </div>
-
-              <div class="form-group"> 
-                <label for="actor" class="">Select actors *</label>
-
-                <select multiple required id="actor" name="actor_id" class="form-control">
-                    @foreach($actors as $actor)
-                        <option value="{{$actor->id}}">{{$actor->name}}</option>
-                    @endforeach
-                </select>
-              </div> 
+	              <div class="form-group">
+	                <label for="video-country" class="">Select Country *</label>
+	                <!-- integrate to dabatase -->
+	                <!-- integrate to dabatase -->
+	                <select name="video-country" id="video-country" class="form-control">
+	                	<option value="">Algeria</option>
+										<option value="">Angola</option> 
+										<option value="">Benin</option>
+										<option value="">Botswana</option>
+										<option value="">Burkina Faso</option>
+										<option value="">Burundi</option> 
+										<option value="">Cabo Verde</option>
+										<option value="">Cameroon</option>
+										<option value="">Central African Republic (CAR)</option>
+										<option value="">Chad</option>
+										<option value="">Comoros</option>
+										<option value="">Democratic Republic of the Congo</option>
+										<option value="">Republic of the Congo</option>
+										<option value="">Cote d'Ivoire</option> 
+										<option value="">Djibouti</option> 
+										<option value="">Egypt</option>
+										<option value="">Equatorial Guinea</option>
+										<option value="">Eritrea</option>
+										<option value="">Ethiopia</option> 
+										<option value="">Gabon</option>
+										<option value="">Gambia</option>
+										<option value="">Ghana</option>
+										<option value="">Guinea</option>
+										<option value="">Guinea-Bissau</option> 
+										<option value="">Kenya</option> 
+										<option value="">Lesotho</option>
+										<option value="">Liberia</option>
+										<option value="">Libya</option> 
+										<option value="">Madagascar</option>
+										<option value="">Malawi</option>
+										<option value="">Mali</option>
+										<option value="">Mauritania</option>
+										<option value="">Mauritius</option>
+										<option value="">Morocco</option>
+										<option value="">Mozambique</option> 
+										<option value="">Namibia</option>
+										<option value="">Niger</option>
+										<option value="">Nigeria</option> 
+										<option value="">Rwanda</option> 
+										<option value="">Sao Tome and Principe</option>
+										<option value="">Senegal</option>
+										<option value="">Seychelles</option>
+										<option value="">Sierra Leone</option>
+										<option value="">Somalia</option>
+										<option value="">South Africa</option>
+										<option value="">South Sudan</option>
+										<option value="">Sudan</option>
+										<option value="">Swaziland</option> 
+										<option value="">Tanzania</option>
+										<option value="">Togo</option>
+										<option value="">Tunisia</option> 
+										<option value="">Uganda</option> 
+										<option value="">Zambia</option>
+										<option value="">Zimbabwe</option>
+	                </select> 
+	                <!-- integrate to dabatase -->
+	                <!-- integrate to dabatase -->
+	              </div>
+          		</fieldset><!-- fieldset --> 
             </div><!-- col-md-6 -->
 
 
-            <div class="col-md-6">  
-              <div class="form-group">
-                <label for="video-country" class="">Select Country *</label>
-                <!-- integrate to dabatase -->
-                <!-- integrate to dabatase -->
-                <select name="video-country" id="video-country" class="form-control">
-                	<option value="">Algeria</option>
-									<option value="">Angola</option> 
-									<option value="">Benin</option>
-									<option value="">Botswana</option>
-									<option value="">Burkina Faso</option>
-									<option value="">Burundi</option> 
-									<option value="">Cabo Verde</option>
-									<option value="">Cameroon</option>
-									<option value="">Central African Republic (CAR)</option>
-									<option value="">Chad</option>
-									<option value="">Comoros</option>
-									<option value="">Democratic Republic of the Congo</option>
-									<option value="">Republic of the Congo</option>
-									<option value="">Cote d'Ivoire</option> 
-									<option value="">Djibouti</option> 
-									<option value="">Egypt</option>
-									<option value="">Equatorial Guinea</option>
-									<option value="">Eritrea</option>
-									<option value="">Ethiopia</option> 
-									<option value="">Gabon</option>
-									<option value="">Gambia</option>
-									<option value="">Ghana</option>
-									<option value="">Guinea</option>
-									<option value="">Guinea-Bissau</option> 
-									<option value="">Kenya</option> 
-									<option value="">Lesotho</option>
-									<option value="">Liberia</option>
-									<option value="">Libya</option> 
-									<option value="">Madagascar</option>
-									<option value="">Malawi</option>
-									<option value="">Mali</option>
-									<option value="">Mauritania</option>
-									<option value="">Mauritius</option>
-									<option value="">Morocco</option>
-									<option value="">Mozambique</option> 
-									<option value="">Namibia</option>
-									<option value="">Niger</option>
-									<option value="">Nigeria</option> 
-									<option value="">Rwanda</option> 
-									<option value="">Sao Tome and Principe</option>
-									<option value="">Senegal</option>
-									<option value="">Seychelles</option>
-									<option value="">Sierra Leone</option>
-									<option value="">Somalia</option>
-									<option value="">South Africa</option>
-									<option value="">South Sudan</option>
-									<option value="">Sudan</option>
-									<option value="">Swaziland</option> 
-									<option value="">Tanzania</option>
-									<option value="">Togo</option>
-									<option value="">Tunisia</option> 
-									<option value="">Uganda</option> 
-									<option value="">Zambia</option>
-									<option value="">Zimbabwe</option>
-                </select> 
-                <!-- integrate to dabatase -->
-                <!-- integrate to dabatase -->
-              </div>
+
+
+
+            <div class="col-md-6"> 
+          		<fieldset class="blk col-md-12">
+								<legend>Complementary Info 2</legend>
+
+	              <div class="form-group"> 
+	                <label for="producer" class="">Select movie producer *</label>
+
+	                <select required id="producer" name="producer_id" class="form-control">
+	                    @foreach($producers as $producer)
+	                        <option value="{{$producer->id}}">{{$producer->name}}</option>
+	                    @endforeach
+	                </select>
+	              </div>
+
+	              <div class="form-group"> 
+	                <label for="director" class="">Select directors *</label>
+
+	                <select multiple required id="director" name="director_id" class="form-control">
+	                    @foreach($directors as $director)
+	                        <option value="{{$director->id}}">{{$director->name}}</option>
+	                    @endforeach
+	                </select>
+	              </div>
+
+	              <div class="form-group"> 
+	                <label for="actor" class="">Select actors *</label>
+
+	                <select multiple required id="actor" name="actor_id" class="form-control">
+	                    @foreach($actors as $actor)
+	                        <option value="{{$actor->id}}">{{$actor->name}}</option>
+	                    @endforeach
+	                </select>
+	              </div> 
+          		</fieldset><!-- fieldset -->  
 
 
 							
