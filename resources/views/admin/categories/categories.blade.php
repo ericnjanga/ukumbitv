@@ -22,7 +22,7 @@
 								    <tr>
 								      <th>{{tr('id')}}</th>
 								      <th>{{tr('category')}}</th>
-								      <th style="border:10px solid red;">{{tr('action')}}</th>
+								      <th>{{tr('action')}}</th>
 								    </tr>
 								</thead>
 
