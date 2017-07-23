@@ -79,8 +79,8 @@ use  Carbon\Carbon;
 
             <div class="small-box label-primary">
                 <div class="inner">
-                    <h3></h3>
-                    <p>Producer agent</p>
+                    <h3>{{count($videos)}}</h3>
+                    <p>Movies in stock</p>
                 </div>
 
                 <div class="icon">
@@ -94,8 +94,23 @@ use  Carbon\Carbon;
 
             <div class="small-box label-primary">
                 <div class="inner">
-                    <h3>$1000</h3>
-                    <p>Money made by producers</p>
+                    <h3>1</h3>
+                    <p>Movies watched</p>
+                </div>
+
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-xs-6">
+
+            <div class="small-box label-primary">
+                <div class="inner">
+                    <h3>{{$views}}</h3>
+                    <p>Views</p>
                 </div>
 
                 <div class="icon">

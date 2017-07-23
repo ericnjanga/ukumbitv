@@ -120,8 +120,16 @@ class AdminController extends Controller
 
         $user = Auth::guard('admin')->user();
         if ($user->type == 'producer'){
+
             $producer = MovieProducer::where('email', $user->email)->first();
             $agent = ProducerAgent::find($producer->agent);
+            $videos = AdminVideo::with('userHistory')->where('movie_producer_id', $producer->id)->get();
+            $views = 0;
+            foreach ($videos as $video){
+                $views += count($video->userHistory);
+            }
+            //dd($views);
+
             return view('admin.dashboard.dashboard-producer')->withPage('dashboard-producer')
                 ->with('sub_page','')
                 ->with('user_count' , $user_count)
@@ -133,7 +141,9 @@ class AdminController extends Controller
                 ->with('recent_users' , $recent_users)
                 ->with('recent_videos' , $recent_videos)
                 ->with('producer', $producer)
-                ->with('agent', $agent);
+                ->with('agent', $agent)
+                ->with('videos', $videos)
+                ->with('views', $views);
         } elseif ($user->type == 'agent') {
            // dd($user);
             $agent = ProducerAgent::where('email', $user->email)->first();
@@ -151,7 +161,7 @@ class AdminController extends Controller
                 ->with('recent_videos' , $recent_videos)
                 ->with('agent', $agent)
                 ->with('providers', $providers);
-            
+
         } else {
 
         return view('admin.dashboard.dashboard')->withPage('dashboard')
