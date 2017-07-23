@@ -1,9 +1,10 @@
-@extends('layouts.user')
+
+@extends('static.legal-master-page')
 
 @section('content')
 
-<div class="container" style="border:20px solid orange;">
-  <div class="row y-content-row">
+<div class="container">
+  <div class="row">
     <!-- @include('layouts.user.nav') -->
 
     <div class="page-inner col-sm-9 col-md-10 profile-edit">
