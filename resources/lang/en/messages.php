@@ -284,7 +284,7 @@ return array(
 	'add_to' => 'ADD TO',
 
 	// Profile
-
+	'account' => 'Account',
 	'my_account' => 'My Account',
 	'welcome_user'	=> 	'Welcome',
 

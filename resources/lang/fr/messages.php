@@ -284,8 +284,8 @@ return array(
 	'add_to' => 'ADD TO',
 
 	// Profile
-
-	'my_account' => 'My Account',
+	'account' => 'Compte',
+	'my_account' => 'Mon Compte',
 	'welcome_user'	=> 	'Welcome',
 
 	'payment_method'	=> 	'Payment Method',

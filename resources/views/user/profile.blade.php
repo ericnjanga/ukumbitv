@@ -3,14 +3,33 @@
 
 
 @section('content-title')
-????
+{{trans('messages.account')}}
 @endsection
 
 @section('content')
+ 	<div class="row">
+ 		<section class="blk">
+ 			<div class="col-md-3">
+ 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi nobis eius est. Enim, velit, beatae natus praesentium adipisci aut, ex iste alias sed dignissimos ratione corrupti temporibus impedit aliquid optio!
+ 			</div>
+ 			<div class="col-md-9">
+ 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt necessitatibus exercitationem aliquid provident tenetur impedit amet error, veniam eligendi nam commodi modi porro optio ab non autem quae magni.
+ 			</div>
+ 		</section>
+ 	</div><!-- row -->
 
-<!-- <div class="container">
-  <div class="row"> -->
-    <!-- @include('layouts.user.nav') -->
+
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+
 
     <div class="page-inner col-sm-9 col-md-10 profile-edit">
         
@@ -105,7 +124,6 @@
 
     </div>
 
-<!--   </div>
-</div> -->
+ 
 
 @endsection
