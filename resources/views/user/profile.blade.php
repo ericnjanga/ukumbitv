@@ -4,7 +4,7 @@
 
 <div class="y-content" style="border:20px solid orange;">
   <div class="row y-content-row">
-    @include('layouts.user.nav')
+    <!-- @include('layouts.user.nav') -->
 
     <div class="page-inner col-sm-9 col-md-10 profile-edit">
         
