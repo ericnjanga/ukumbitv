@@ -1,6 +1,11 @@
 
 @extends('static.legal-master-page')
 
+
+@section('content-title')
+????
+@endsection
+
 @section('content')
 
 <div class="container">

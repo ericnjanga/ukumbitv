@@ -22,7 +22,7 @@
 		<div class="container main-content">
 		  <div class="row">
 		  	<div class="col-md-12">
-		  		<h1>yield('content-title')</h1>
+		  		<h1>@yield('content-title')</h1>
 		  		@yield('content')
 		  	</div>
 		  </div>
