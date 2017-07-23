@@ -80,7 +80,7 @@ use  Carbon\Carbon;
             <div class="small-box label-primary">
                 <div class="inner">
                     <h3></h3>
-                    <p>Movies producers</p>
+                    <p>Producer agent</p>
                 </div>
 
                 <div class="icon">
