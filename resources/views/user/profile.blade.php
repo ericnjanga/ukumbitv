@@ -8,8 +8,8 @@
 
 @section('content')
 
-<div class="container">
-  <div class="row">
+<!-- <div class="container">
+  <div class="row"> -->
     <!-- @include('layouts.user.nav') -->
 
     <div class="page-inner col-sm-9 col-md-10 profile-edit">
@@ -105,7 +105,7 @@
 
     </div>
 
-  </div>
-</div>
+<!--   </div>
+</div> -->
 
 @endsection
