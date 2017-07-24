@@ -206,7 +206,7 @@
           	var $menu_item = $('#sidebar-menu > #langs'); 
           }
           //For movies (exclude movie producers)
-          else if(page_url.indexOf('movie') > -1 || page_url.indexOf('videos') > -1 && (page_url.indexOf('movie-producer') == -1){
+          else if(page_url.indexOf('movie') > -1 || page_url.indexOf('videos') > -1 && page_url.indexOf('movie-producer') == -1){
           	var $menu_item = $('#sidebar-menu > #videos'); 
           }
           else if(page_url.indexOf('producer-agent') > -1 || page_url.indexOf('producer-agents') > -1){
@@ -214,8 +214,9 @@
           }
           else if (page_url.indexOf('movie-producer') > -1 || page_url.indexOf('movie-producers') > -1){
           	var $menu_item = $('#sidebar-menu > #movie_producers'); 
-          }
+          } 
 
+          //Assig link values
           if($menu_item!==undefined && $menu_item.length > 0){ 
           	$btn_qc1.attr('href', $menu_item.data('btn-add'));
           	$btn_qc2.attr('href', $menu_item.data('btn-view'));
