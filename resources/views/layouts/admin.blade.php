@@ -205,7 +205,8 @@
           else if(page_url.indexOf('lang') > -1 || page_url.indexOf('langs') > -1){
           	var $menu_item = $('#sidebar-menu > #langs'); 
           }
-          else if(page_url.indexOf('movie') > -1 || page_url.indexOf('videos') > -1){
+          //For movies (exclude movie producers)
+          else if(page_url.indexOf('movie') > -1 || page_url.indexOf('videos') > -1 && (page_url.indexOf('movie-producer') == -1){
           	var $menu_item = $('#sidebar-menu > #videos'); 
           }
           else if(page_url.indexOf('producer-agent') > -1 || page_url.indexOf('producer-agents') > -1){
