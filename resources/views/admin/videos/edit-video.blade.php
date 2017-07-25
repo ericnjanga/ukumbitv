@@ -25,7 +25,7 @@
 @include('notification.notify')
 
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-12" style="border:10px solid;">
         <section>
         <div class="wizard">
             <div class="wizard-inner">
