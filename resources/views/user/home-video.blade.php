@@ -74,8 +74,8 @@ src="http://via.placeholder.com/500x340"
       		<div>
       			
       			<!-- Hide this if there is no actors -->
-      			<ul class="list-inline">
-      				<li>Starring: </li>
+      			<ul class="list-inline" style="margin-bottom: 3px;">
+      				<li style="opacity: 0.6;">Starring: </li>
       				<!-- display actors here -->
       				<li><i>Actor name 1</i></li>
       				<li><i>Actor name 2</i></li>
@@ -86,8 +86,8 @@ src="http://via.placeholder.com/500x340"
       			
 
       			<!-- Hide this if there is no director -->
-      			<ul class="list-inline">
-      				<li>Director: </li>
+      			<ul class="list-inline" style="margin-bottom: 3px;">
+      				<li style="opacity: 0.6;">Director: </li>
       				<!-- display director here -->
       				<li><i>Director</i></li>
       				<!-- display director here -->
@@ -96,8 +96,8 @@ src="http://via.placeholder.com/500x340"
       			
 
       			<!-- Hide this if there is no tags -->
-      			<ul class="list-inline">
-      				<li>Genres: </li>
+      			<ul class="list-inline" style="margin-bottom: 3px;">
+      				<li style="opacity: 0.6;">Genres: </li>
       				<!-- list tags here -->
       				<li><a href="#">tag1</a></li>
       				<li><a href="#">tag2</a></li>
