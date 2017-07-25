@@ -70,14 +70,29 @@ src="http://via.placeholder.com/500x340"
       	<a href="{{url('/')}}/watch/{{$video->watchid}}"><img id="videoModalImg" src="https://via.placeholder.com/1000x600" alt="" class="img-responsive videoModalImg">
       	</a> 
       	<div id="videoModalDesc" class="videoModalDesc"></div>
-      	<div id="videoMeta" class="videoMeta" style="padding:15px 0;">
+      	<div id="videoMeta" class="videoMeta" style="padding:0 15px;">
       		<div>
-      			Genres: 
+      			
+      			<!-- Hide this if there is no director -->
       			<ul class="list-inline">
+      				<li>Director: </li>
+      				<!-- display director here -->
+      				<li><i>Director</i></li>
+      				<!-- display director here -->
+      			</ul>
+      			<!-- Hide this if there is no director -->
+      			
+
+      			<!-- Hide this if there is no tags -->
+      			<ul class="list-inline">
+      				<li>Genres: </li>
+      				<!-- list tags here -->
       				<li><a href="#">tag1</a></li>
       				<li><a href="#">tag2</a></li>
       				<li><a href="#">tag3</a></li>
+      				<!-- list tags here -->
       			</ul>
+      			<!-- Hide this if there is no tags -->
       		</div>
       	</div>
       </div>
