@@ -73,6 +73,18 @@ src="http://via.placeholder.com/500x340"
       	<div id="videoMeta" class="videoMeta" style="padding:0 15px;">
       		<div>
       			
+      			<!-- Hide this if there is no actors -->
+      			<ul class="list-inline">
+      				<li>Starring: </li>
+      				<!-- display actors here -->
+      				<li><i>Actor name 1</i></li>
+      				<li><i>Actor name 2</i></li>
+      				<li><i>Actor name 3</i></li>
+      				<!-- display actors here -->
+      			</ul>
+      			<!-- Hide this if there is no actors -->
+      			
+
       			<!-- Hide this if there is no director -->
       			<ul class="list-inline">
       				<li>Director: </li>
