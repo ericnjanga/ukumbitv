@@ -95,7 +95,7 @@
           		</fieldset><!-- fieldset -->
 
 
-          		<fieldset class="blk col-md-12">
+          		<fieldset class="blk col-md-12 mb35">
 								<legend>Complementary Info 1</legend>
 
 	              <div id="year_id" class="form-group"> 
@@ -187,13 +187,21 @@
 								<legend>Taxonomy</legend>
 
 	              <div id="category" class="form-group"> 
-	                <label for="category" class="">Select category *</label> 
+	                <label for="category" class="">Select category</label> 
 	                <select required id="category" name="category_id" class="form-control">
 	                    @foreach($categories as $category)
 	                    <option value="{{$category->id}}">{{$category->name}}</option>
 	                    @endforeach
 	                </select>
 	              </div>
+
+	              <div id="tags" class="form-group"> 
+	                <label for="tags" class="">Add tags</label> 
+	                <div style="min-height:100px; background-color: #E8F0FA;">
+	                	
+	                </div>
+	              </div>
+
           		</fieldset><!-- fieldset --> 
             </div><!-- col-md-6 -->
 
