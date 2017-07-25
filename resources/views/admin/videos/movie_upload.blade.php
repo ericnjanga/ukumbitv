@@ -197,9 +197,12 @@
 
 	              <div id="tags" class="form-group"> 
 	                <label for="tags" class="">Add tags</label> 
+	                <!-- add tagging system here -->
+	                <!-- add tagging system here -->
 	                <div style="min-height:100px; background-color: #E8F0FA;">
-	                	
 	                </div>
+	                <!-- add tagging system here -->
+	                <!-- add tagging system here -->
 	              </div>
 
           		</fieldset><!-- fieldset --> 

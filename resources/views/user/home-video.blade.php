@@ -70,6 +70,16 @@ src="http://via.placeholder.com/500x340"
       	<a href="{{url('/')}}/watch/{{$video->watchid}}"><img id="videoModalImg" src="https://via.placeholder.com/1000x600" alt="" class="img-responsive videoModalImg">
       	</a> 
       	<div id="videoModalDesc" class="videoModalDesc"></div>
+      	<div id="videoMeta" class="videoMeta">
+      		<div>
+      			Genres: 
+      			<ul class="list-inline">
+      				<li><a href="#">tag1</a></li>
+      				<li><a href="#">tag2</a></li>
+      				<li><a href="#">tag3</a></li>
+      			</ul>
+      		</div>
+      	</div>
       </div>
       <div class="modal-footer">
         <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
