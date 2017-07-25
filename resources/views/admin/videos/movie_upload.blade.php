@@ -98,15 +98,6 @@
           		<fieldset class="blk col-md-12">
 								<legend>Complementary Info 1</legend>
 
-	              <div id="category" class="form-group"> 
-	                <label for="category" class="">Select category *</label> 
-	                <select required id="category" name="category_id" class="form-control">
-	                    @foreach($categories as $category)
-	                    <option value="{{$category->id}}">{{$category->name}}</option>
-	                    @endforeach
-	                </select>
-	              </div>
-
 	              <div id="year_id" class="form-group"> 
 	                <label for="year" class="">Select year *</label> 
 	                <select required id="year" name="year_id" class="form-control">
@@ -188,6 +179,20 @@
 	                </select> 
 	                <!-- integrate to dabatase -->
 	                <!-- integrate to dabatase -->
+	              </div>
+          		</fieldset><!-- fieldset --> 
+
+
+          		<fieldset class="blk col-md-12">
+								<legend>Taxonomy</legend>
+
+	              <div id="category" class="form-group"> 
+	                <label for="category" class="">Select category *</label> 
+	                <select required id="category" name="category_id" class="form-control">
+	                    @foreach($categories as $category)
+	                    <option value="{{$category->id}}">{{$category->name}}</option>
+	                    @endforeach
+	                </select>
 	              </div>
           		</fieldset><!-- fieldset --> 
             </div><!-- col-md-6 -->
