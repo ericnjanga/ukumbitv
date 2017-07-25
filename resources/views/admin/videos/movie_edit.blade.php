@@ -27,7 +27,7 @@
 
     <div class="row">
       <div class="col-lg-12">
-        <section>
+        <section style="border:10px solid red;">
           <div class="wizard">
 
 
