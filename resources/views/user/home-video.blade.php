@@ -70,7 +70,7 @@ src="http://via.placeholder.com/500x340"
       	<a href="{{url('/')}}/watch/{{$video->watchid}}"><img id="videoModalImg" src="https://via.placeholder.com/1000x600" alt="" class="img-responsive videoModalImg">
       	</a> 
       	<div id="videoModalDesc" class="videoModalDesc"></div>
-      	<div id="videoMeta" class="videoMeta">
+      	<div id="videoMeta" class="videoMeta" style="padding:15px 0;">
       		<div>
       			Genres: 
       			<ul class="list-inline">
