@@ -12,234 +12,317 @@
 
     <link rel="stylesheet" href="{{asset('admin-css/plugins/iCheck/all.css')}}">
 
-
-
-
-
 @endsection
-
 
 
 @section('content')
 
+  <div class="row">
+    <div class="col-lg-12"> 
+      <div class="box tab-content tab-content-movie-edit"> 
+        <form id="video-upload" method="POST" enctype="multipart/form-data" role="form" action="{{route('admin.save.movie')}}">
+              
+          <div class="row">
+            <input type="hidden" value="1" name="ajax_key">
+						
+						<!-- select video type -->
+						<div class="col-md-12 mb35">
+							<fieldset class="blk col-md-12"> 
+								<legend>Video Type</legend>
+		            <ul class="list-inline" style="padding:0;">
+		            	<li class="mr20">
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-type" id="video-type-movie" value="movie" checked> 
+		            			Movie
+		            		</label>
+		            	</li>
+		            	<li class="mr20">
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshow"> 
+		            			TvShow
+		            		</label>
+		            	</li>
+		            	<li class="mr20">
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-type" id="video-type-episode" value="episode"> 
+		            			Episode
+		            		</label>
+		            	</li>
+		            </ul><!-- col-md-12 --> 
+							</fieldset> 
+						</div>
 
 
+ 
+            <!-- Left column -->
+          	<div class="col-md-6">
+          		<fieldset class="blk col-md-12 mb35">
+								<legend>Video Common Information</legend>
+          			
+	              <div class="form-group">
+	                <label for="title" class="">{{tr('title')}} * </label>
+	                <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}" value="{{$video->title}}">
+	              </div>
 
-    <div class="row">
-      <div class="col-lg-12">
-        <section style="border:10px solid red;">
-          <div class="wizard">
+	              <div class="form-group">
+	                <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
+
+	                <div class="input-group">
+	                    <div class="input-group-addon">
+	                        <i class="fa fa-calendar"></i>
+	                    </div>
+	                    <input required type="text" name="duration" class="form-control" data-inputmask="'alias': 'hh:mm:ss'" data-mask id="duration" value="{{$video->duration}}">
+	                </div>
+	              </div>
+
+	              <div class="form-group">
+	                <label for="description" class="">{{tr('description')}} * </label>
+	                <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description">{{$video->description}}</textarea>
+	              </div>
+          		</fieldset><!-- fieldset -->
 
 
-            <form id="video-upload" method="POST" enctype="multipart/form-data" role="form" action="{{route('admin.save.movie')}}">
-              <div class="tab-content">
-                <div class="tab-pane active" role="tabpanel" id="step1">
+          		<fieldset class="blk col-md-12 mb35">
+								<legend>Complementary Info 1</legend>
 
-                  <div style="margin-left: 15px"><small>Note : <span style="color:red">*</span> fields are mandatory. Please fill and click next.</small></div>
-                  <hr>
-                  <div class="row">
-                    <input type="hidden" value="1" name="ajax_key">
-                    <div class="col-md-12">
-                    	<div class="col-md-6">
-                    		<div class="form-group">
-                          <label for="title" class="">{{tr('title')}} * </label>
-                          <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}" value="{{$video->title}}">
-                        </div>
+	              <div id="year_id" class="form-group"> 
+	                <label for="year" class="">Select year *</label>  
+                  <select required id="year" name="year_id" class="form-control">
+                      @for ($i = 2017; $i > 1900; $i--)
+                          <option value="{{$i}}" @if($video->year == $i) selected @endif>{{$i}}</option>
+                      @endfor
+                  </select>
+	            	</div>
+	 
+	              <div id="lang_id" class="form-group"> 
+	                <label for="lang" class="">Select language *</label>
+                  <select required id="lang" name="lang_id" class="form-control">
+                      @foreach($langs as $lang)
+                          <option value="{{$lang->id}}" @if($video->lang_id == $lang->id) selected @endif>{{$lang->title}}</option>
+                      @endforeach
+                  </select>
+	              </div>
 
-                        <div class="form-group">
-                          <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
+	              <div class="form-group">
+	                <label for="video-country" class="">Select Country *</label>
+	                <!-- integrate to dabatase -->
+	                <!-- integrate to dabatase -->
+	                <select name="video-country" id="video-country" class="form-control">
+	                	<option value="">Algeria</option>
+										<option value="">Angola</option> 
+										<option value="">Benin</option>
+										<option value="">Botswana</option>
+										<option value="">Burkina Faso</option>
+										<option value="">Burundi</option> 
+										<option value="">Cabo Verde</option>
+										<option value="">Cameroon</option>
+										<option value="">Central African Republic (CAR)</option>
+										<option value="">Chad</option>
+										<option value="">Comoros</option>
+										<option value="">Democratic Republic of the Congo</option>
+										<option value="">Republic of the Congo</option>
+										<option value="">Cote d'Ivoire</option> 
+										<option value="">Djibouti</option> 
+										<option value="">Egypt</option>
+										<option value="">Equatorial Guinea</option>
+										<option value="">Eritrea</option>
+										<option value="">Ethiopia</option> 
+										<option value="">Gabon</option>
+										<option value="">Gambia</option>
+										<option value="">Ghana</option>
+										<option value="">Guinea</option>
+										<option value="">Guinea-Bissau</option> 
+										<option value="">Kenya</option> 
+										<option value="">Lesotho</option>
+										<option value="">Liberia</option>
+										<option value="">Libya</option> 
+										<option value="">Madagascar</option>
+										<option value="">Malawi</option>
+										<option value="">Mali</option>
+										<option value="">Mauritania</option>
+										<option value="">Mauritius</option>
+										<option value="">Morocco</option>
+										<option value="">Mozambique</option> 
+										<option value="">Namibia</option>
+										<option value="">Niger</option>
+										<option value="">Nigeria</option> 
+										<option value="">Rwanda</option> 
+										<option value="">Sao Tome and Principe</option>
+										<option value="">Senegal</option>
+										<option value="">Seychelles</option>
+										<option value="">Sierra Leone</option>
+										<option value="">Somalia</option>
+										<option value="">South Africa</option>
+										<option value="">South Sudan</option>
+										<option value="">Sudan</option>
+										<option value="">Swaziland</option> 
+										<option value="">Tanzania</option>
+										<option value="">Togo</option>
+										<option value="">Tunisia</option> 
+										<option value="">Uganda</option> 
+										<option value="">Zambia</option>
+										<option value="">Zimbabwe</option>
+	                </select> 
+	                <!-- integrate to dabatase -->
+	                <!-- integrate to dabatase -->
+	              </div>
+          		</fieldset><!-- fieldset --> 
 
-                          <div class="input-group">
-                              <div class="input-group-addon">
-                                  <i class="fa fa-calendar"></i>
-                              </div>
-                              <input required type="text" name="duration" class="form-control" data-inputmask="'alias': 'hh:mm:ss'" data-mask id="duration" value="{{$video->duration}}">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label for="description" class="">{{tr('description')}} * </label>
-                          <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description">{{$video->description}}</textarea>
-                        </div>
-                        <div class="form-group"> 
-                          <label for="category" class="">Select category *</label> 
-                          <select required id="category" name="category_id" class="form-control">
-                              @foreach($categories as $category)
-                                  <option value="{{$category->id}}" @if($video->category_id == $category->id) selected @endif>{{$category->name}}</option>
-                              @endforeach
-                          </select>
-                      	</div>
-                      	<div class="form-group"> 
-                          <label for="year" class="">Select year *</label> 
-                          <select required id="year" name="year_id" class="form-control">
-                              @for ($i = 2017; $i > 1900; $i--)
-                                  <option value="{{$i}}" @if($video->year == $i) selected @endif>{{$i}}</option>
-                              @endfor
-                          </select>
-                      	</div>
-												<div class="form-group"> 
-                          <label for="lang" class="">Select language *</label> 
-                          <select required id="lang" name="lang_id" class="form-control">
-                              @foreach($langs as $lang)
-                                  <option value="{{$lang->id}}" @if($video->lang_id == $lang->id) selected @endif>{{$lang->title}}</option>
-                              @endforeach
-                          </select>
-                      	</div>
-                      	<div class="form-group"> 
-                          <label for="director" class="">Select directors *</label> 
-                          <select multiple required id="director" name="director_id" class="form-control">
-                              @foreach($directors as $director)
-                                  <option value="{{$director->id}}" @foreach($dirarr as $dira) @if($dira == $director->id) selected @endif @endforeach>{{$director->name}}</option>
-                              @endforeach
-                          </select>
-                      	</div>
-                      	<div class="form-group"> 
-                          <label for="actor" class="">Select actors *</label> 
-                          <select multiple required id="actor" name="actor_id" class="form-control">
-                              @foreach($actors as $actor)
-                                  <option value="{{$actor->id}}" @foreach($actArr as $act) @if($act == $actor->id) selected @endif @endforeach>{{$actor->name}}</option>
-                              @endforeach
-                          </select>
-                      	</div> 
-                    	</div><!-- col-md-6 -->
-                      
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="video-country" class="">Select Country *</label>
-                          <!-- integrate to dabatase -->
-                          <!-- integrate to dabatase -->
-                          <select name="video-country" id="video-country" class="form-control">
-                          	<option value="">Algeria</option>
-														<option value="">Angola</option> 
-														<option value="">Benin</option>
-														<option value="">Botswana</option>
-														<option value="">Burkina Faso</option>
-														<option value="">Burundi</option> 
-														<option value="">Cabo Verde</option>
-														<option value="">Cameroon</option>
-														<option value="">Central African Republic (CAR)</option>
-														<option value="">Chad</option>
-														<option value="">Comoros</option>
-														<option value="">Democratic Republic of the Congo</option>
-														<option value="">Republic of the Congo</option>
-														<option value="">Cote d'Ivoire</option> 
-														<option value="">Djibouti</option> 
-														<option value="">Egypt</option>
-														<option value="">Equatorial Guinea</option>
-														<option value="">Eritrea</option>
-														<option value="">Ethiopia</option> 
-														<option value="">Gabon</option>
-														<option value="">Gambia</option>
-														<option value="">Ghana</option>
-														<option value="">Guinea</option>
-														<option value="">Guinea-Bissau</option> 
-														<option value="">Kenya</option> 
-														<option value="">Lesotho</option>
-														<option value="">Liberia</option>
-														<option value="">Libya</option> 
-														<option value="">Madagascar</option>
-														<option value="">Malawi</option>
-														<option value="">Mali</option>
-														<option value="">Mauritania</option>
-														<option value="">Mauritius</option>
-														<option value="">Morocco</option>
-														<option value="">Mozambique</option> 
-														<option value="">Namibia</option>
-														<option value="">Niger</option>
-														<option value="">Nigeria</option> 
-														<option value="">Rwanda</option> 
-														<option value="">Sao Tome and Principe</option>
-														<option value="">Senegal</option>
-														<option value="">Seychelles</option>
-														<option value="">Sierra Leone</option>
-														<option value="">Somalia</option>
-														<option value="">South Africa</option>
-														<option value="">South Sudan</option>
-														<option value="">Sudan</option>
-														<option value="">Swaziland</option> 
-														<option value="">Tanzania</option>
-														<option value="">Togo</option>
-														<option value="">Tunisia</option> 
-														<option value="">Uganda</option> 
-														<option value="">Zambia</option>
-														<option value="">Zimbabwe</option>
-                          </select> 
-                          <!-- integrate to dabatase -->
-                          <!-- integrate to dabatase -->
-                        </div>
 
-                        
-                      	{{--Images--}}
-                      	<div class="form-group">
-                          <label for="billboard_image" class="">Billboard  image *</label>
-                          <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
-                          <img class="thumb img-responsive" src="{{$images->imgBillboard}}" style="max-width:200px" />
-                          <div id="previewArea1"></div>
-                          <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1200x650)</p>
-                      	</div>
+          		<fieldset class="blk col-md-12">
+								<legend>Taxonomy</legend>
 
-                      	<div class="form-group">
-                          <label for="small_image1" class="">Small image 1 *</label>
-                          <input required type="file" id="small_image1" name="small_image1" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image1', 'previewArea2', 'small');">
-                          <img class="thumb img-responsive" src="{{$images->imgSmall1}}" style="max-width:200px" />
-                          <div id="previewArea2"></div>
-                          <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-                      	</div>
+	              <div id="category" class="form-group"> 
+	                <label for="category" class="">Select category</label> 
+                  <select required id="category" name="category_id" class="form-control">
+                      @foreach($categories as $category)
+                          <option value="{{$category->id}}" @if($video->category_id == $category->id) selected @endif>{{$category->name}}</option>
+                      @endforeach
+                  </select>
+	              </div>
 
-                      	<div class="form-group">
-                          <label for="small_image2" class="">Small image 2 *</label>
-                          <input required type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small');">
-                          <img class="thumb img-responsive" src="{{$images->imgSmall2}}" style="max-width:200px" />
-                          <div id="previewArea3"></div>
-                          <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-                      	</div>
+	              <div id="tags" class="form-group"> 
+	                <label for="tags" class="">Add tags</label> 
+	                <!-- add tagging system here -->
+	                <!-- add tagging system here -->
+	                <div style="min-height:100px; background-color: #E8F0FA;">
+	                </div>
+	                <!-- add tagging system here -->
+	                <!-- add tagging system here -->
+	              </div>
 
-                      	<div class="form-group">
-                          <label for="small_image3" class="">Small image 3 *</label>
-                          <input required type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small');">
-                          <img class="thumb img-responsive" src="{{$images->imgSmall3}}" style="max-width:200px" />
-                          <div id="previewArea4"></div>
-                          <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
-                      	</div>
+          		</fieldset><!-- fieldset --> 
+            </div><!-- col-md-6 -->
 
-                      	<div class="form-group">
-                          <label for="preview_image" class="">Preview image *</label>
-                          <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
-                          <img class="thumb img-responsive" src="{{$images->imgPreview}}" style="max-width:200px" />
-                          <div id="previewArea5"></div>
-                          <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1000x600)</p>
-                      	</div>
 
-                      	<div class="form-group">
-                          <label for="video" class="">{{tr('video')}}</label>
-                          <input required type="file" id="video" accept="video/mp4" name="video">
-                          <p class="help-block">{{tr('video_validate')}}</p>
-                      	</div>
+ 
+            <!-- Right column -->
+            <div class="col-md-6"> 
+          		<fieldset class="blk col-md-12 mb35">
+								<legend>Complementary Info 2</legend>
 
-                      	{{--images end--}}
-                      </div><!-- col-md-6 -->
-                    </div><!-- col-md-12 --> 
-                  </div><!-- row --> 
-                </div>
-                <input type="hidden" id="video_id" value="{{$video->id}}">
-                <div class="clearfix"></div>
-              </div>
-            </form>
+	              <div class="form-group"> 
+	                <label for="producer" class="">Select movie producer *</label>
 
-          </div>
-        </section>
+	                <select required id="producer" name="producer_id" class="form-control">
+	                    @foreach($producers as $producer)
+	                        <option value="{{$producer->id}}">{{$producer->name}}</option>
+	                    @endforeach
+	                </select>
+	              </div>
+
+	              <div class="form-group"> 
+	                <label for="director" class="">Select directors *</label> 
+                  <select multiple required id="director" name="director_id" class="form-control">
+                      @foreach($directors as $director)
+                          <option value="{{$director->id}}" @foreach($dirarr as $dira) @if($dira == $director->id) selected @endif @endforeach>{{$director->name}}</option>
+                      @endforeach
+                  </select>
+	              </div>
+
+	              <div class="form-group"> 
+	                <label for="actor" class="">Select actors *</label>
+                  <select multiple required id="actor" name="actor_id" class="form-control">
+                      @foreach($actors as $actor)
+                          <option value="{{$actor->id}}" @foreach($actArr as $act) @if($act == $actor->id) selected @endif @endforeach>{{$actor->name}}</option>
+                      @endforeach
+                  </select>
+	              </div> 
+          		</fieldset><!-- fieldset -->  
+  
+							<!-- IMAGES -->
+              <fieldset class="blk col-md-12 mb35"> 
+								<legend>Video Posters</legend> 
+              	{{--Images--}}
+              	<div class="form-group">
+                  <label for="billboard_image" class="">Billboard  image *</label>
+                  <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
+                  <img class="thumb img-responsive" src="{{$images->imgBillboard}}" style="max-width:200px" />
+                  <div id="previewArea1"></div>
+                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1200x650)</p>
+              	</div>
+
+              	<div class="form-group">
+                  <label for="small_image1" class="">Small image 1 *</label>
+                  <input required type="file" id="small_image1" name="small_image1" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image1', 'previewArea2', 'small');">
+                  <img class="thumb img-responsive" src="{{$images->imgSmall1}}" style="max-width:200px" />
+                  <div id="previewArea2"></div>
+                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+              	</div>
+
+              	<div class="form-group">
+                  <label for="small_image2" class="">Small image 2 *</label>
+                  <input required type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small');">
+                  <img class="thumb img-responsive" src="{{$images->imgSmall2}}" style="max-width:200px" />
+                  <div id="previewArea3"></div>
+                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+              	</div>
+
+              	<div class="form-group">
+                  <label for="small_image3" class="">Small image 3 *</label>
+                  <input required type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small');">
+                  <img class="thumb img-responsive" src="{{$images->imgSmall3}}" style="max-width:200px" />
+                  <div id="previewArea4"></div>
+                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+              	</div>
+
+              	<div class="form-group">
+                  <label for="preview_image" class="">Preview image *</label>
+                  <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
+                  <img class="thumb img-responsive" src="{{$images->imgPreview}}" style="max-width:200px" />
+                  <div id="previewArea5"></div>
+                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1000x600)</p>
+              	</div>
+
+              	<div class="form-group">
+                  <label for="video" class="">{{tr('video')}}</label>
+                  <input required type="file" id="video" accept="video/mp4" name="video">
+                  <p class="help-block">{{tr('video_validate')}}</p>
+              	</div> 
+              	{{--images end--}}
+              </fieldset>
+							<!-- IMAGES -->  
+  
+          		<fieldset class="blk col-md-12 mb35">
+								<legend>Video file</legend>
+								
+	              <div class="form-group">
+	                  <label for="video" class="">{{tr('video')}}</label>
+	                  <input required type="file" id="video" accept="video/mp4" name="video">
+	                  <p class="help-block">{{tr('video_validate')}}</p>
+	              </div> 
+          		</fieldset><!-- fieldset -->  
+            </div><!-- col-md-6 --> 
+ 
+          	<input type="hidden" id="video_id" value="{{$video->id}}">
+          </div><!-- row --> 
+	           
+        </form><!-- form -->
       </div>
-    </div>
-    <progress id="progressbar" value="0" max="100"></progress>
-    <button class="btn btn-primary btn-info-full" id="finishBtn" onclick="editMovie()">Save</button>
+      </div><!-- tab-content -->
+    </div><!-- col-lg-12 -->
+			
+
+		<div class="col-md-4 col-md-offset-8 form-group">
+	    <button class="btn btn-submit btn-block" id="finishBtn" onclick="editMovie()">Save</button>
+		</div>
+		
+
+		<div class="col-md-12 form-group">
+	    <progress id="progressbar" style="width:100%" value="0" max="100"></progress>
+		</div> 
+  </div><!-- row -->
 
 
 
 
 
 
-    <div class="overlay">
+
+
+    <!-- <div class="overlay">
         <div id="loading-img"></div>
-    </div>
+    </div> -->
 
 @endsection
 

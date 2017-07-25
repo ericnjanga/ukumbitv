@@ -6,15 +6,11 @@
 
 @section('styles')
 
-  <link rel="stylesheet" href="{{asset('assets/css/wizard.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/wizard.css')}}">
 
-  <link rel="stylesheet" href="{{asset('admin-css/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin-css/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css')}}">
 
-  <link rel="stylesheet" href="{{asset('admin-css/plugins/iCheck/all.css')}}">
-
-  {{--<link rel="stylesheet" href="{{asset('packages/dropzone/dropzone.css')}}">--}}
-
-
+    <link rel="stylesheet" href="{{asset('admin-css/plugins/iCheck/all.css')}}">
 
 @endsection
 
@@ -28,7 +24,6 @@
 
   @include('notification.notify')
 
-
   <div class="row">
     <div class="col-lg-12"> 
       <div class="box tab-content tab-content-movie-add"> 
@@ -36,7 +31,7 @@
           <div class="row">
             <input type="hidden" value="1" name="ajax_key">
 						
-
+						<!-- select video type -->
 						<div class="col-md-12 mb35">
 							<fieldset class="blk col-md-12"> 
 								<legend>Video Type</legend>
@@ -64,10 +59,8 @@
 						</div>
 
 
-
-
-
-            
+ 
+            <!-- Left column -->
           	<div class="col-md-6">
           		<fieldset class="blk col-md-12 mb35">
 								<legend>Video Common Information</legend>
@@ -209,9 +202,8 @@
             </div><!-- col-md-6 -->
 
 
-
-
-
+ 
+            <!-- Right column -->
             <div class="col-md-6"> 
           		<fieldset class="blk col-md-12 mb35">
 								<legend>Complementary Info 2</legend>
@@ -246,13 +238,8 @@
 	                </select>
 	              </div> 
           		</fieldset><!-- fieldset -->  
-
-
-							
-
-
-							<!-- IMAGES -->
-							<!-- IMAGES -->
+  
+							{{--Images--}}
               <fieldset class="blk col-md-12 mb35"> 
 								<legend>Video Posters</legend>
 	              <div class="form-group">
@@ -290,14 +277,8 @@
 	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1000x600)</p>
 	              </div>
               </fieldset>
-							<!-- IMAGES -->
-							<!-- IMAGES -->
-           
-          		{{--images end--}}
-
-
-
-
+							{{--images end--}} 
+  
           		<fieldset class="blk col-md-12 mb35">
 								<legend>Video file</legend>
 								
@@ -306,13 +287,12 @@
 	                  <input required type="file" id="video" accept="video/mp4" name="video">
 	                  <p class="help-block">{{tr('video_validate')}}</p>
 	              </div> 
-          		</fieldset><!-- fieldset --> 
-
+          		</fieldset><!-- fieldset -->  
             </div><!-- col-md-6 --> 
           </div><!-- row --> 
         </form><!-- form -->
-      </div> <!-- tab-content -->
-    </div>
+      </div><!-- tab-content -->
+    </div><!-- col-lg-12 -->
 			
 
 		<div class="col-md-4 col-md-offset-8 form-group">
