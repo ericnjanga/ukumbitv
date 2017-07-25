@@ -295,11 +295,19 @@
            
           		{{--images end--}}
 
-              <div class="form-group">
-                  <label for="video" class="">{{tr('video')}}</label>
-                  <input required type="file" id="video" accept="video/mp4" name="video">
-                  <p class="help-block">{{tr('video_validate')}}</p>
-              </div> 
+
+
+
+          		<fieldset class="blk col-md-12 mb35">
+								<legend>Video file</legend>
+								
+	              <div class="form-group">
+	                  <label for="video" class="">{{tr('video')}}</label>
+	                  <input required type="file" id="video" accept="video/mp4" name="video">
+	                  <p class="help-block">{{tr('video_validate')}}</p>
+	              </div> 
+          		</fieldset><!-- fieldset --> 
+
             </div><!-- col-md-6 --> 
           </div><!-- row --> 
         </form><!-- form -->

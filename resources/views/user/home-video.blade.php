@@ -76,11 +76,11 @@ src="http://via.placeholder.com/500x340"
       			<!-- Hide this if there is no actors -->
       			<ul class="list-inline" style="margin-bottom: 3px;">
       				<li style="opacity: 0.6;">Starring: </li>
-      				<!-- display actors here -->
-      				<li><i>Actor name 1</i></li>
-      				<li><i>Actor name 2</i></li>
-      				<li><i>Actor name 3</i></li>
-      				<!-- display actors here -->
+      				<li>
+      					<!-- display actors here -->
+      					<i>Actor name 1</i>, <i>Actor name 2</i>, <i>Actor name 3</i>
+      					<!-- display actors here -->
+      				</li>
       			</ul>
       			<!-- Hide this if there is no actors -->
       			
