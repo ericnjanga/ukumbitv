@@ -49,7 +49,7 @@ use  Carbon\Carbon;
 
           	<div class="small-box bg-red">
             	<div class="inner">
-              		<h3>{{$agent->contract_expiration}}</h3>
+              		<h3>{{date('F d, Y', strtotime($agent->contract_expiration))}}</h3>
               		<p>Contract ends</p>
             	</div>
             	
