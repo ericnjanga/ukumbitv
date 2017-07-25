@@ -98,11 +98,11 @@ src="http://via.placeholder.com/500x340"
       			<!-- Hide this if there is no tags -->
       			<ul class="list-inline" style="margin-bottom: 3px;">
       				<li style="opacity: 0.6;">Genres: </li>
-      				<!-- list tags here -->
-      				<li><a href="#">tag1</a></li>
-      				<li><a href="#">tag2</a></li>
-      				<li><a href="#">tag3</a></li>
-      				<!-- list tags here -->
+      				<li>
+      					<!-- list tags here -->
+      					<a href="#">tag1</a>, <a href="#">tag2</a>, <a href="#">tag3</a>
+      					<!-- list tags here -->
+      				</li>
       			</ul>
       			<!-- Hide this if there is no tags -->
       		</div>
