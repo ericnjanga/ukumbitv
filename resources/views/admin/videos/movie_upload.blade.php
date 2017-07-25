@@ -253,7 +253,7 @@
 
 							<!-- IMAGES -->
 							<!-- IMAGES -->
-              <fieldset class="blk col-md-12"> 
+              <fieldset class="blk col-md-12 mb35"> 
 								<legend>Video Posters</legend>
 	              <div class="form-group">
 	                  <label for="billboard_image" class="">Billboard  image *</label>
