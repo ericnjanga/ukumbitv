@@ -19,9 +19,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav"> 
+      	<!-- categories list here -->
+      	<!-- categories list here -->
         <li><a href="#">category 1</a></li> 
         <li><a href="#">category 2</a></li> 
         <li><a href="#">category 3</a></li> 
+      	<!-- categories list here -->
+      	<!-- categories list here -->
       </ul> 
       <!-- hidding [#movies and #TvShow menu links] for now -->
       <!-- ...................... -->
