@@ -9,7 +9,19 @@
 @section('content')
  	<div class="row">
  		<div class="col-md-12">
- 			<section class="blk col-md-12" style="border-top: 1px solid #999;">
+
+ 			<hr>
+
+ 			<div class="row">
+ 				<div class="col-md-3">
+		 				<h2>Membership &amp; billing</h2>
+		 				<a href="#" class="btn btn-default btn-block">Cancel Membership</a>
+		 			</div>
+		 			<div class="col-md-9">
+		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt necessitatibus exercitationem aliquid provident tenetur impedit amet error, veniam eligendi nam commodi modi porro optio ab non autem quae magni.
+		 			</div> 
+ 			</div>
+ 			<!-- <section class="blk col-md-12" style="border-top: 1px solid #999;">
 	 			<div class="row">
 		 			<div class="col-md-3">
 		 				<h2>Membership &amp; billing</h2>
@@ -19,8 +31,11 @@
 		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt necessitatibus exercitationem aliquid provident tenetur impedit amet error, veniam eligendi nam commodi modi porro optio ab non autem quae magni.
 		 			</div> 
 	 			</div>
-	 		</section>
+	 		</section> -->
  		</div>
+
+
+
  		<!-- <section class="blk col-md-12" style="border-top: 1px solid #999;">
  			<div class="row">
 	 			<div class="col-md-3">
