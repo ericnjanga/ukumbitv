@@ -94,7 +94,7 @@
           @endif
 
           <div class="form-group">
-              <label for="mobile">{{trans('messages..mobile')}}</label>
+              <label for="mobile">{{trans('messages.mobile')}}</label>
               <input type="mobile" value="{{Auth::user()->mobile}}" name="mobile" class="form-control" id="mobile" aria-describedby="emailHelp" placeholder="Enter mobile">
           
           </div>
@@ -105,7 +105,7 @@
           </div>
                 
           <div class="change-pwd save-pro-btn">
-              <button type="submit" class="btn btn-default btn-block btn-cta">{{trans('submit')}}</button>
+              <button type="submit" class="btn btn-default btn-block btn-cta">{{trans('messages.submit')}}</button>
           </div>                                              
 
       </form>
