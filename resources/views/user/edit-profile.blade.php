@@ -54,7 +54,7 @@
   <div class="col-sm-6 profile-view">
     <div class="edit-profile profile-view">
       <div class="edit-form"> 
-        <!-- <h4 class="edit-head">{{tr('edit_profile')}}</h4> -->
+        <!-- <h4 class="edit-head">{{trans('edit_profile')}}</h4> -->
         
         <div class="image-profile edit-image">
             @if(Auth::user()->picture)
@@ -73,20 +73,20 @@
       <form  action="{{ route('user.profile.save') }}" method="POST" enctype="multipart/form-data">
 
            <div class="form-group">
-              <label for="exampleInputFile">{{tr('messages.upload_image')}}</label>
+              <label for="exampleInputFile">{{trans('messages.upload_image')}}</label>
               <input type="file" name="picture" class="form-control-file" accept="image/png, image/jpeg" id="exampleInputFile" aria-describedby="fileHelp">
-              <p class="help-block">{{tr('image_validate')}} {{tr('image_square')}}</p>
+              <p class="help-block">{{trans('image_validate')}} {{trans('image_square')}}</p>
           </div>
 
           <div class="form-group">
-              <label for="username">{{tr('messages.username')}}</label>
+              <label for="username">{{trans('messages.username')}}</label>
               <input required value="{{Auth::user()->name}}" name="name" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter username">
           </div>
 
           @if(Auth::user()->login_by == 'manual')
 
               <div class="form-group">
-                  <label for="email">{{tr('email')}}</label>
+                  <label for="email">{{trans('email')}}</label>
                   <input type="email" value="{{Auth::user()->email}}" name="email" disabled class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
               
               </div>
@@ -94,7 +94,7 @@
           @endif
 
           <div class="form-group">
-              <label for="mobile">{{tr('mobile')}}</label>
+              <label for="mobile">{{trans('messages..mobile')}}</label>
               <input type="mobile" value="{{Auth::user()->mobile}}" name="mobile" class="form-control" id="mobile" aria-describedby="emailHelp" placeholder="Enter mobile">
           
           </div>
@@ -105,7 +105,7 @@
           </div>
                 
           <div class="change-pwd save-pro-btn">
-              <button type="submit" class="btn btn-default btn-block btn-cta">{{tr('submit')}}</button>
+              <button type="submit" class="btn btn-default btn-block btn-cta">{{trans('submit')}}</button>
           </div>                                              
 
       </form>
@@ -117,7 +117,7 @@
   <?php $wishlist = wishlist(Auth::user()->id); ?>
   @if(count($wishlist)) 
     <div class="mylist-profile col-sm-5">
-        <h4 class="mylist-head">{{tr('wishlist')}}</h4>
+        <h4 class="mylist-head">{{trans('wishlist')}}</h4>
 
         <ul class="history-list profile-history">
 
@@ -133,7 +133,7 @@
                             <div class="history-head row">
                                 <div class="cross-title">
                                     <h5><a href="{{route('user.single' , $video->admin_video_id)}}">{{$video->title}}</a></h5>
-                                    <p class="duration">{{tr('duration')}}: {{$video->duration}}</p>
+                                    <p class="duration">{{trans('duration')}}: {{$video->duration}}</p>
                                 </div> 
                                 <div class="cross-mark">
                                     <a onclick="return confirm('Are you sure?');" href="{{route('user.delete.wishlist' , array('wishlist_id' => $video->wishlist_id))}}"><i class="fa fa-times" aria-hidden="true"></i></a>
