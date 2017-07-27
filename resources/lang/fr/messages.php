@@ -124,6 +124,8 @@ return array(
 	'help'	=>	'Help',
 	'contact' => 'Contact Us',
 	'about_us' => 'À propos',
+	'alittle_about_yourself' => 'Quelque chose vous concernant',
+	'profile_update' => 'Mise à jour du profile',
 	'terms_conditions' => 'Terms and Conditions',
 	'privacy' => 'Privacy',
 

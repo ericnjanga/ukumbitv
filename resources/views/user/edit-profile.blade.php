@@ -96,8 +96,8 @@ Update Profile
           
           </div>
                 
-          <div class="form-group">
-              <label for="about">{{tr('about')}}</label>
+          <div class="form-group"> 
+              <label for="about">{{trans('messages.alittle_about_yourself')}}</label>
               <textarea name="description" class="form-control" id="about" rows="5">{{Auth::user()->description}}</textarea>
           </div>
                 
