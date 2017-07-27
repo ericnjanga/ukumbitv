@@ -164,7 +164,7 @@ return array(
 	'date' => 'Date',
 
 	'message' => 'Message',
-	'upload_image' => 'Upload Image',
+	'upload_image' => 'Soumettre une image',
 	'amount'	=> 	'Amount',
 	'currency' 	=>	'Currency',
 
@@ -184,7 +184,7 @@ return array(
 
 	'id'	=>	'ID',
 	'name'							=>	'Nom',
-	'username' => 'Username',
+	'username' => 'Nom d\'utilisateur',
 	'email'							=>	'Adresse electronique',
 	'password'					=>	'Mot de passe',
 	'mobile'	=>	'Mobile',
@@ -304,7 +304,7 @@ return array(
 
 	'user_mobile'	=>	'User Mobile',
 
-	'profile_update'	=> 	'Profile Update',
+	'profile_update'	=> 	'Mise à jour du profile',
 
 	'you_are'	=>	'You are',
 	'payment_details'	=>	'Payment Details',
