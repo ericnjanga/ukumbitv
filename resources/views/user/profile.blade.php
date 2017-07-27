@@ -21,6 +21,7 @@
 			margin-bottom: 15px;
 	    font-size: 18px;
 	    text-transform: uppercase;
+	    color: #999;
 		}
 		.p-acc .btn-cta {
 			max-width: 200px;
