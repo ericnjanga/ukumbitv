@@ -33,6 +33,10 @@ Update Profile
 
 
 <div class="p-acc row">   
+
+ 			<hr>
+
+ 			
   <div class="col-sm-6 profile-view">
     <div class="edit-profile profile-view">
       <div class="edit-form"> 
