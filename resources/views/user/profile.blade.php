@@ -7,17 +7,44 @@
 @endsection
 
 @section('content')
- 	<div class="row">
+	<style>
+		.p-acc hr { 
+    	border-top: 1px solid #999;
+		}
+		.p-acc h2 {
+			margin-top: 0;
+			margin-bottom: 15px;
+	    font-size: 20px;
+	    text-transform: uppercase;
+		}
+		.p-acc .btn-cta {
+			max-width: 200px;
+    	padding: 10px;
+		}
+	</style>
+ 	<div class="p-acc row">
  		<div class="col-md-12">
 
  			<hr>
 
  			<div class="row">
- 				<div class="col-md-3">
+ 				<div class="col-md-4">
 		 				<h2>Membership &amp; billing</h2>
 		 				<a href="#" class="btn btn-default btn-block">Cancel Membership</a>
 		 			</div>
-		 			<div class="col-md-9">
+		 			<div class="col-md-8">
+		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt necessitatibus exercitationem aliquid provident tenetur impedit amet error, veniam eligendi nam commodi modi porro optio ab non autem quae magni.
+		 			</div> 
+ 			</div>
+
+ 			<hr>
+
+ 			<div class="row">
+ 				<div class="col-md-4">
+		 				<h2>Membership &amp; billing</h2>
+		 				<a href="#" class="btn btn-default btn-block">Cancel Membership</a>
+		 			</div>
+		 			<div class="col-md-8">
 		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt necessitatibus exercitationem aliquid provident tenetur impedit amet error, veniam eligendi nam commodi modi porro optio ab non autem quae magni.
 		 			</div> 
  			</div>
