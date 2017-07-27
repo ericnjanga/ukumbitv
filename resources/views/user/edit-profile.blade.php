@@ -31,6 +31,7 @@ Update Profile
 		.p-acc .btn-cta {
 			background-color: #ec174f;
 			color: #fff;
+			height: initial;
 		}
 		.p-acc .btn-cta:hover {
 			opacity: 0.7;
@@ -97,7 +98,7 @@ Update Profile
                 
           <div class="form-group">
               <label for="about">{{tr('about')}}</label>
-              <textarea name="description" class="form-control" id="about" rows="3">{{Auth::user()->description}}</textarea>
+              <textarea name="description" class="form-control" id="about" rows="5">{{Auth::user()->description}}</textarea>
           </div>
                 
           <div class="change-pwd save-pro-btn">
