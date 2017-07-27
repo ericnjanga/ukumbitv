@@ -34,12 +34,19 @@
 
  			<div class="row">
  				<div class="col-md-4">
-		 				<h2>Membership &amp; billing</h2>
-		 				<a href="#" class="btn btn-default btn-block btn-cta">Cancel Membership</a>
-		 			</div>
-		 			<div class="col-md-8">
-		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt necessitatibus exercitationem aliquid provident tenetur impedit amet error, veniam eligendi nam commodi modi porro optio ab non autem quae magni.
-		 			</div> 
+	 				<h2>Membership &amp; billing</h2>
+	 				<a href="#" class="btn btn-default btn-block btn-cta">Cancel Membership</a>
+	 			</div>
+	 			<div class="col-md-8">
+	 				<div class="row">
+	 					<div class="col-md-6 text-left">
+	 						
+	 					</div>
+	 					<div class="col-md-6 text-right">
+	 						<a href="#">Update profile (image, username and more)</a>
+	 					</div>
+	 				</div>
+	 			</div> 
  			</div>
 
  			<hr>
@@ -47,7 +54,6 @@
  			<div class="row">
  				<div class="col-md-4">
 		 				<h2>PLAN DETAILS</h2>
-		 				<a href="#" class="btn btn-default btn-block btn-cta">Cancel Membership</a>
 		 			</div>
 		 			<div class="col-md-8">
 		 				<div class="row">
