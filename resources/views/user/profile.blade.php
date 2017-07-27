@@ -19,7 +19,7 @@
 		.p-acc h2 {
 			margin-top: 0;
 			margin-bottom: 15px;
-	    font-size: 20px;
+	    font-size: 18px;
 	    text-transform: uppercase;
 		}
 		.p-acc .btn-cta {
@@ -46,11 +46,18 @@
 
  			<div class="row">
  				<div class="col-md-4">
-		 				<h2>Membership &amp; billing</h2>
+		 				<h2>PLAN DETAILS</h2>
 		 				<a href="#" class="btn btn-default btn-block btn-cta">Cancel Membership</a>
 		 			</div>
 		 			<div class="col-md-8">
-		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt necessitatibus exercitationem aliquid provident tenetur impedit amet error, veniam eligendi nam commodi modi porro optio ab non autem quae magni.
+		 				<div class="row">
+		 					<div class="col-md-6 text-left">
+		 						<b>Plan B</b>
+		 					</div>
+		 					<div class="col-md-6 text-right">
+		 						<a href="#">Change Plan</a>
+		 					</div>
+		 				</div>
 		 			</div> 
  			</div>
  			<!-- <section class="blk col-md-12" style="border-top: 1px solid #999;">
