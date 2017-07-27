@@ -27,6 +27,14 @@ Update Profile
 			max-width: 200px;
     	padding: 10px;
 		}
+
+		.p-acc .btn-cta {
+			background-color: #ec174f;
+			color: #fff;
+		}
+		.p-acc .btn-cta:hover {
+			opacity: 0.7;
+		}
 	</style>
 
 
@@ -93,7 +101,7 @@ Update Profile
           </div>
                 
           <div class="change-pwd save-pro-btn">
-              <button type="submit" class="btn btn-primary">{{tr('submit')}}</button>
+              <button type="submit" class="btn btn-default btn-block btn-cta">{{tr('submit')}}</button>
           </div>                                              
 
       </form>
