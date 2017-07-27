@@ -34,7 +34,7 @@ Update Profile
 
 <div class="p-acc row">   
 
- 	<div class="col-sm-6">
+ 	<div class="col-sm-12">
  		<hr>
  	</div>
 
