@@ -8,6 +8,9 @@
 
 @section('content')
 	<style>
+		h1 { 
+    	margin-bottom: 0;
+		}
 		.p-acc hr { 
     	border-top: 1px solid #999;
 		}
@@ -30,7 +33,7 @@
  			<div class="row">
  				<div class="col-md-4">
 		 				<h2>Membership &amp; billing</h2>
-		 				<a href="#" class="btn btn-default btn-block">Cancel Membership</a>
+		 				<a href="#" class="btn btn-default btn-block btn-cta">Cancel Membership</a>
 		 			</div>
 		 			<div class="col-md-8">
 		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt necessitatibus exercitationem aliquid provident tenetur impedit amet error, veniam eligendi nam commodi modi porro optio ab non autem quae magni.
@@ -42,7 +45,7 @@
  			<div class="row">
  				<div class="col-md-4">
 		 				<h2>Membership &amp; billing</h2>
-		 				<a href="#" class="btn btn-default btn-block">Cancel Membership</a>
+		 				<a href="#" class="btn btn-default btn-block btn-cta">Cancel Membership</a>
 		 			</div>
 		 			<div class="col-md-8">
 		 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt necessitatibus exercitationem aliquid provident tenetur impedit amet error, veniam eligendi nam commodi modi porro optio ab non autem quae magni.
