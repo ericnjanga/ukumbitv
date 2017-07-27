@@ -187,7 +187,7 @@ return array(
 	'username' => 'Nom d\'utilisateur',
 	'email'							=>	'Adresse electronique',
 	'password'					=>	'Mot de passe',
-	'mobile'	=>	'Mobile',
+	'mobile'	=>	'Tel mobile',
 	'picture'	=>	'Picture',
 	'first_name'	=>	'First Name',
 	'last_name'	=>	'Last Name',
