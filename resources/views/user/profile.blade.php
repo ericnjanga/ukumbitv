@@ -39,11 +39,15 @@
 	 			</div>
 	 			<div class="col-md-8">
 	 				<div class="row">
-	 					<div class="col-md-6 text-left">
-	 						
-	 					</div>
+	 					<div class="col-md-6 text-left"></div>
 	 					<div class="col-md-6 text-right">
-	 						<a href="#">Update profile (image, username and more)</a>
+	 						<a href="{{route('user.update.profile')}}">Update profile (image, username and more)</a>
+	 					</div>
+	 				</div>
+	 				<div class="row">
+	 					<div class="col-md-6 text-left"></div>
+	 					<div class="col-md-6 text-right">
+	 						<a href="{{route('paypal' , Auth::user()->id)}}">Update billing information</a>
 	 					</div>
 	 				</div>
 	 			</div> 
