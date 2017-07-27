@@ -3,6 +3,7 @@
 
 
 @section('content-title')
+{{trans('messages.profile_update')}}
 Update Profile
 @endsection
 

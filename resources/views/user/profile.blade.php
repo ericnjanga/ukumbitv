@@ -33,16 +33,17 @@
 
  			<hr>
 
+
  			<div class="row">
  				<div class="col-md-4">
-	 				<h2>Membership &amp; billing</h2>
-	 				<a href="#" class="btn btn-default btn-block btn-cta">Cancel Membership</a>
+	 				<h2>{{trans('messages.Membership_billing')}}</h2>
+	 				<a href="#" class="btn btn-default btn-block btn-cta">{{trans('messages.Cancel_Membership')}}</a>
 	 			</div>
 	 			<div class="col-md-8">
 	 				<div class="row" style="margin-bottom: 15px;">
 	 					<div class="col-md-6 text-left"></div>
 	 					<div class="col-md-6 text-right">
-	 						<a href="{{route('user.update.profile')}}">Update profile (image, username and more)</a>
+	 						<a href="{{route('user.update.profile')}}">{{trans('messages.Update_profile_blurb')}}</a>
 	 					</div>
 	 				</div>
 	 				<div class="row">

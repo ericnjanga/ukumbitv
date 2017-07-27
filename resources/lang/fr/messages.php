@@ -673,6 +673,14 @@ return array(
   'comment_or_share' => 'Commenter ou Partager',
   'Toggle_navigation' => 'Basculer le menu',
 
-  'Skip_registration_process' => 'Evitez toutes les tracasseries d\'enregitrement et accedez directement au site'
+  'Skip_registration_process' => 'Evitez toutes les tracasseries d\'enregitrement et accedez directement au site',
+
+
+
+  'Membership_billing' => 'Adhésion et facturation',
+  'Cancel_Membership' => 'Annuler l\'adhésion',
+  'Update_profile_blurb' => 'Mise à jour du profil (image, nom d\'utilisateur et plus)',
+  'Update_billing_information' => 'Mettre à jour les informations de facturation',
+
 
 );

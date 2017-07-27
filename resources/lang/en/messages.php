@@ -694,7 +694,14 @@ return array(
   'comment_or_share' => 'Comment or Share',
   'Toggle_navigation' => 'Toggle navigation',
 
-  'Skip_registration_process' => 'Skip the borring registration process'
+  'Skip_registration_process' => 'Skip the borring registration process',
+
+
+
+  'Membership_billing' => 'Membership &amp; billing',
+  'Cancel_Membership' => 'Cancel Membership',
+  'Update_profile_blurb' => 'Update profile (image, username and more)',
+  'Update_billing_information' => 'Update billing information',
 
  
 );
