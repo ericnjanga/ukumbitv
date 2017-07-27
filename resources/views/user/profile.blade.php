@@ -49,7 +49,7 @@
 	 				<div class="row">
 	 					<div class="col-md-6 text-left"></div>
 	 					<div class="col-md-6 text-right">
-	 						<a href="{{route('paypal' , Auth::user()->id)}}">Update billing information</a>
+	 						<a href="{{route('paypal' , Auth::user()->id)}}">{{trans('messages.Update_billing_information')}}</a>
 	 					</div>
 	 				</div>
 	 			</div> 
@@ -59,7 +59,7 @@
 
  			<div class="row">
  				<div class="col-md-4">
-		 				<h2>PLAN DETAILS</h2>
+		 				<h2>{{trans('messages.plan_details')}}</h2>
 		 			</div>
 		 			<div class="col-md-8">
 		 				<div class="row">
@@ -67,7 +67,7 @@
 		 						<b>Plan B</b>
 		 					</div>
 		 					<div class="col-md-6 text-right">
-		 						<a href="#">Change Plan</a>
+		 						<a href="#">{{trans('messages.change_plan')}}</a>
 		 					</div>
 		 				</div>
 		 			</div> 

@@ -703,5 +703,10 @@ return array(
   'Update_profile_blurb' => 'Update profile (image, username and more)',
   'Update_billing_information' => 'Update billing information',
 
+
+
+  'plan_details' => 'Plan Details',
+  'change_plan' => 'Change Plan',
+
  
 );

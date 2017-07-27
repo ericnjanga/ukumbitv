@@ -683,4 +683,9 @@ return array(
   'Update_billing_information' => 'Mettre à jour les informations de facturation',
 
 
+
+  'plan_details' => 'Détails du plan',
+  'change_plan' => 'Changer le plan',
+
+
 );
