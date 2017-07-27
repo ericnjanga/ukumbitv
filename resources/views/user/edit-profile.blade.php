@@ -34,13 +34,15 @@ Update Profile
 
 <div class="p-acc row">   
 
- 			<hr>
+ 	<div class="col-sm-6">
+ 		<hr>
+ 	</div>
 
- 			
+
   <div class="col-sm-6 profile-view">
     <div class="edit-profile profile-view">
       <div class="edit-form"> 
-        <h4 class="edit-head">{{tr('edit_profile')}}</h4>
+        <!-- <h4 class="edit-head">{{tr('edit_profile')}}</h4> -->
         
         <div class="image-profile edit-image">
             @if(Auth::user()->picture)
