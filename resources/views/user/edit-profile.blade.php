@@ -24,6 +24,9 @@ Update Profile
 	    text-transform: uppercase;
 	    color: #999;
 		}
+		.p-acc .text-right {
+			line-height: 20px;
+		}
 		.p-acc .btn-cta {
 			max-width: 200px;
     	padding: 10px;
