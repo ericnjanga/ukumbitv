@@ -71,6 +71,18 @@
 		 				</div>
 		 			</div> 
  			</div><!-- row -->
+
+
+
+
+			<!--     
+			CHANGE PASSWORD BUTTON
+			.....................  
+				<a href="{{route('user.change.password')}}" class="btn btn-danger">{{tr('change_password')}}</a> -->
+
+
+
+
  			 
  		</div><!-- col-md-12 -->  
  	</div><!-- p-acc -->

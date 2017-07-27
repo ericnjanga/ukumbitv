@@ -1,6 +1,11 @@
 
 @extends('static.legal-master-page')
 
+
+@section('content-title')
+Update Profile
+@endsection
+
 @section('content')
 	<style>
 		h1 { 
@@ -83,9 +88,6 @@
                 
           <div class="change-pwd save-pro-btn">
               <button type="submit" class="btn btn-primary">{{tr('submit')}}</button>
-
-              <a href="{{route('user.change.password')}}" class="btn btn-danger">{{tr('change_password')}}</a>
-
           </div>                                              
 
       </form>
