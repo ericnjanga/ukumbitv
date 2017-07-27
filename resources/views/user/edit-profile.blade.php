@@ -35,16 +35,16 @@
         
         <div class="image-profile edit-image">
             @if(Auth::user()->picture)
-            <img src="{{Auth::user()->picture}}">
+            <img src="{{Auth::user()->picture}}" class="img-responsive">
             @else
-                <img src="{{asset('placeholder.png')}}">
+              <img src="{{asset('placeholder.png')}}" class="img-responsive">
             @endif                               
         </div><!--end of image-profile-->        
       </div><!--end of edit-form-->                           
     </div><!--end of edit-profile-->
   </div><!--profile-view end--> 
 
-  
+
 
   <div class="col-sm-6 editform-content"> 
       <form  action="{{ route('user.profile.save') }}" method="POST" enctype="multipart/form-data">
