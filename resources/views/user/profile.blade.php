@@ -13,6 +13,8 @@
 		}
 		.p-acc hr { 
     	border-top: 1px solid #999;
+    	margin-top: 30px;
+    	margin-bottom: 30px;
 		}
 		.p-acc h2 {
 			margin-top: 0;
