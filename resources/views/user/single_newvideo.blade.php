@@ -24,7 +24,7 @@ page-singlevideo
 	<!-- 1) Is a subscriber -->
 	<!-- 2) [Is within the one week grace period] or [is in good payment standing with paypal] --> 
 	<!-- ..................................  -->
-	@if(Auth::check())
+
 		<iframe src="https://player.vimeo.com/video/{{$videoId}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		{{--<div id="player"></div>--}}
 		{{--<script type="text/javascript">--}}
@@ -68,7 +68,7 @@ page-singlevideo
 	<!-- ..................[section1]................... -->
 	<!-- ..................[section1]................... -->
 	<!-- ..................[section1]................... -->
-  @else 
+
 
 
 	<!-- ..................[section2]................... -->
@@ -86,7 +86,7 @@ page-singlevideo
 	<!-- ..................[section2]................... -->
 	<!-- ..................[section2]................... -->
 
-  @endif 
+
 @endsection
 
 

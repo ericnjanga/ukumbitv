@@ -1325,8 +1325,8 @@ class AdminController extends Controller
             $token = Config::get('app.vimeo.access_token');
 
             $lib = new Vimeo($client_id, $client_secret, $token);
-            $video = $request->file('video');
-            $uri = $lib->upload($video);
+            $videoFile = $request->file('video');
+            $uri = $lib->upload($videoFile);
             $video->video = $uri;
         }
 

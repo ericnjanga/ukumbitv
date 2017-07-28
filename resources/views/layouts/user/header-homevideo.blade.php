@@ -50,6 +50,7 @@
 		        </div> 
 		      </form>
       	</li> -->
+          @if(Auth::check())
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
           	<img src="{{Auth::user()->picture}}" style="width:40px;height:40px;" data-pin-nopin="true" class="img-circle">
@@ -62,6 +63,7 @@
             <li><a href="{{route('user.logout')}}">{{trans('messages.sign_out_of_ukumbiTV')}}</a></li>
           </ul>
         </li>
+              @endif
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
