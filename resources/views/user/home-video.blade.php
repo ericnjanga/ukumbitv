@@ -38,6 +38,70 @@ src="http://via.placeholder.com/500x340"
                  
             </a> 
           </li>
+
+			  <div class="modal fade video-modal" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+				  <div class="modal-dialog" role="document">
+					  <div class="modal-content">
+						  <div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							  <h4 class="modal-title" id="videoModalLabel">Modal title</h4>
+							  <ul class="meta-list1 list-inline">
+								  <li id="videoModalYear"></li>
+								  <li id="videoModalCat">
+									  <span class="label label-info">Comedy</span>
+								  </li>
+								  <li id="videoModalDur"></li>
+							  </ul>
+						  </div>
+						  <div class="modal-body">
+							  <a href="{{url('/')}}/watch/{{$video->watchid}}"><img id="videoModalImg" src="https://via.placeholder.com/1000x600" alt="" class="img-responsive videoModalImg">
+							  </a>
+							  <div id="videoModalDesc" class="videoModalDesc"></div>
+							  <div id="videoMeta" class="videoMeta" style="padding:0 15px;">
+								  <div>
+
+									  <!-- Hide this if there is no actors -->
+									  <ul class="list-inline" style="margin-bottom: 3px;">
+										  <li style="opacity: 0.6;">Starring: </li>
+										  <li>
+											  <!-- display actors here -->
+											  <i>Actor name 1</i>, <i>Actor name 2</i>, <i>Actor name 3</i>
+											  <!-- display actors here -->
+										  </li>
+									  </ul>
+									  <!-- Hide this if there is no actors -->
+
+
+									  <!-- Hide this if there is no director -->
+									  <ul class="list-inline" style="margin-bottom: 3px;">
+										  <li style="opacity: 0.6;">Director: </li>
+										  <!-- display director here -->
+										  <li><i>Director</i></li>
+										  <!-- display director here -->
+									  </ul>
+									  <!-- Hide this if there is no director -->
+
+
+									  <!-- Hide this if there is no tags -->
+									  <ul class="list-inline" style="margin-bottom: 3px;">
+										  <li style="opacity: 0.6;">Genres: </li>
+										  <li>
+											  <!-- list tags here -->
+											  <a href="#">tag1</a>, <a href="#">tag2</a>, <a href="#">tag3</a>
+											  <!-- list tags here -->
+										  </li>
+									  </ul>
+									  <!-- Hide this if there is no tags -->
+								  </div>
+							  </div>
+						  </div>
+						  <div class="modal-footer">
+							  <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+							  <a href="{{url('/')}}/watch/{{$video->watchid}}" class="btn btn-primary col-xs-4 col-xs-offset-8">{{trans('messages.watch_video')}}</a>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
         @endforeach 
       </ul>
     </div>
@@ -52,69 +116,7 @@ src="http://via.placeholder.com/500x340"
 
 
 
-<div class="modal fade video-modal" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="videoModalLabel">Modal title</h4>
-        <ul class="meta-list1 list-inline">
-        	<li id="videoModalYear"></li>
-        	<li id="videoModalCat">
-        		<span class="label label-info">Comedy</span>
-        	</li>
-        	<li id="videoModalDur"></li>
-        </ul>
-      </div>
-      <div class="modal-body">
-      	<a href="{{url('/')}}/watch/{{$video->watchid}}"><img id="videoModalImg" src="https://via.placeholder.com/1000x600" alt="" class="img-responsive videoModalImg">
-      	</a> 
-      	<div id="videoModalDesc" class="videoModalDesc"></div>
-      	<div id="videoMeta" class="videoMeta" style="padding:0 15px;">
-      		<div>
-      			
-      			<!-- Hide this if there is no actors -->
-      			<ul class="list-inline" style="margin-bottom: 3px;">
-      				<li style="opacity: 0.6;">Starring: </li>
-      				<li>
-      					<!-- display actors here -->
-      					<i>Actor name 1</i>, <i>Actor name 2</i>, <i>Actor name 3</i>
-      					<!-- display actors here -->
-      				</li>
-      			</ul>
-      			<!-- Hide this if there is no actors -->
-      			
 
-      			<!-- Hide this if there is no director -->
-      			<ul class="list-inline" style="margin-bottom: 3px;">
-      				<li style="opacity: 0.6;">Director: </li>
-      				<!-- display director here -->
-      				<li><i>Director</i></li>
-      				<!-- display director here -->
-      			</ul>
-      			<!-- Hide this if there is no director -->
-      			
-
-      			<!-- Hide this if there is no tags -->
-      			<ul class="list-inline" style="margin-bottom: 3px;">
-      				<li style="opacity: 0.6;">Genres: </li>
-      				<li>
-      					<!-- list tags here -->
-      					<a href="#">tag1</a>, <a href="#">tag2</a>, <a href="#">tag3</a>
-      					<!-- list tags here -->
-      				</li>
-      			</ul>
-      			<!-- Hide this if there is no tags -->
-      		</div>
-      	</div>
-      </div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-        <a href="{{url('/')}}/watch/{{$video->watchid}}" class="btn btn-primary col-xs-4 col-xs-offset-8">{{trans('messages.watch_video')}}</a> 
-      </div>
-    </div>
-  </div>
-</div>
 
 
 

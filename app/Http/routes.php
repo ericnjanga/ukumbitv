@@ -445,6 +445,7 @@ Route::get('newvideo/{id}', 'UserController@single_newvideo')->name('user.single
 Route::get('watch/{id}', 'UserController@watchVideo')->name('user.singleVideo');
 Route::get('watch', 'UserController@watchVideo')->name('user.singleVideo');
 
+Route::get('vimeo', 'UserController@vimeoVideo');
 
 
 

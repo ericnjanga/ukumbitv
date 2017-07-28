@@ -52,6 +52,8 @@ use App\Helpers\EnvEditorHelper;
 
 use App\Flag;
 
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
@@ -79,6 +81,7 @@ use App\Jobs\CompressVideo;
 
 
 use App\Jobs\NormalPushNotification;
+use Vimeo\Vimeo;
 
 class AdminController extends Controller
 {
@@ -1226,6 +1229,8 @@ class AdminController extends Controller
 
     public function add_movie()
     {
+
+
         $categories = Category::all();
 
         $actors = Actor::all();
@@ -1274,6 +1279,8 @@ class AdminController extends Controller
         $dirarr = explode(',', $movie->directors);
         $actArr = explode(',', $movie->actors);
 
+        $videoId = substr($movie->video, 8);
+
         return view('admin.videos.movie_edit')
             ->with('categories', $categories)
             ->with('video', $movie)
@@ -1284,7 +1291,8 @@ class AdminController extends Controller
             ->with('dirarr', $dirarr)
             ->with('producers', $producers)
             ->with('page', 'videos')
-            ->with('langs', $langs);
+            ->with('langs', $langs)
+            ->with('videoId', $videoId);
 
     }
 
@@ -1297,6 +1305,7 @@ class AdminController extends Controller
         $specialId = $video->watchid;
         $imgUrl = url('/images/'.$specialId.'/');
         $videoUrl = url('/movies/'.$specialId.'/');
+
         $video->title = $request->title;
         $video->duration = $request->duration;
         $video->description = $request->description;
@@ -1306,13 +1315,21 @@ class AdminController extends Controller
         $video->directors = $request->director;
         $video->actors = $request->actor;
         $video->lang_id = $request->lang;
+        $video->country = $request->video_country;
+        $video->video_type = $request->video_type;
+
+
         if(!empty($request->file('video'))){
-            $video1 = $request->file('video');
-            $videoName = '/'.time().$video1->getClientOriginalName();
-            $video1->move(public_path('movies/'.$specialId), $videoName);
-//            DELETE FILE
-            $video->video = $videoUrl.$videoName;
+            $client_id = Config::get('app.vimeo.client_id');
+            $client_secret = Config::get('app.vimeo.client_secret');
+            $token = Config::get('app.vimeo.access_token');
+
+            $lib = new Vimeo($client_id, $client_secret, $token);
+            $video = $request->file('video');
+            $uri = $lib->upload($video);
+            $video->video = $uri;
         }
+
         $video->save();
 
         $images = Videoimage::where('admin_video_id', $video->id)->first();
@@ -1384,6 +1401,19 @@ class AdminController extends Controller
 
     public function createMovie(Request $request)
     {
+        $client_id = Config::get('app.vimeo.client_id');
+        $client_secret = Config::get('app.vimeo.client_secret');
+        $token = Config::get('app.vimeo.access_token');
+
+        $lib = new Vimeo($client_id, $client_secret, $token);
+        $video = $request->file('video');
+        $uri = $lib->upload($video);
+
+//        return response()->json($uri);
+        //$video = $request->file('video');
+
+
+
         $specialId = date('YmdHis');
         $imgUrl = url('/images/'.$specialId.'/');
         $videoUrl = url('/movies/'.$specialId.'/');
@@ -1396,21 +1426,24 @@ class AdminController extends Controller
         $small_image1_name = '/small_image1'.time().$small_image1->getClientOriginalName();
         $small_image1->move(public_path('images/'.$specialId),$small_image1_name);
 
-        $small_image2 = $request->file('small_image2');
-        $small_image2_name = '/small_image2'.time().$small_image2->getClientOriginalName();
-        $small_image2->move(public_path('images/'.$specialId),$small_image2_name);
+        if($request->hasFile('small_image2')){
+            $small_image2 = $request->file('small_image2');
+            $small_image2_name = '/small_image2'.time().$small_image2->getClientOriginalName();
+            $small_image2->move(public_path('images/'.$specialId),$small_image2_name);
+            $small2 = $imgUrl.$small_image2_name;
+        } else { $small2 = null; }
 
-        $small_image3 = $request->file('small_image3');
-        $small_image3_name = '/small_image3'.time().$small_image3->getClientOriginalName();
-        $small_image3->move(public_path('images/'.$specialId),$small_image3_name);
+        if($request->hasFile('small_image3')) {
+            $small_image3 = $request->file('small_image3');
+            $small_image3_name = '/small_image3' . time() . $small_image3->getClientOriginalName();
+            $small_image3->move(public_path('images/' . $specialId), $small_image3_name);
+            $small3 = $imgUrl.$small_image3_name;
+        } else { $small3 = null; }
 
         $preview_image = $request->file('preview_image');
         $preview_image_name = '/preview_image'.time().$preview_image->getClientOriginalName();
         $preview_image->move(public_path('images/'.$specialId),$preview_image_name);
 
-        $video = $request->file('video');
-        $videoName = '/'.time().$video->getClientOriginalName();
-        $video->move(public_path('movies/'.$specialId), $videoName);
 
         $adminVideo = new AdminVideo();
         $adminVideo->title = $request->title;
@@ -1418,7 +1451,7 @@ class AdminController extends Controller
         $adminVideo->category_id = $request->category;
         $adminVideo->sub_category_id = 1;
         $adminVideo->genre_id = 0;
-        $adminVideo->video = $videoUrl.$videoName;
+        $adminVideo->video = $uri;
         $adminVideo->trailer_video = 'trailer url';
         $adminVideo->default_image = $imgUrl.$billboard_image_name;
         $adminVideo->banner_image = '';
@@ -1434,7 +1467,7 @@ class AdminController extends Controller
         $adminVideo->trailer_duration = '00:00:00';
         $adminVideo->edited_by = 'admin';
         $adminVideo->watch_count = 1;
-        $adminVideo->video_type = 1;
+        $adminVideo->video_type = $request->video_type;
         $adminVideo->video_upload_type = 2;
         $adminVideo->actors = $request->actor;
         $adminVideo->directors = $request->director;
@@ -1442,6 +1475,7 @@ class AdminController extends Controller
         $adminVideo->lang_id = $request->lang;
         $adminVideo->year = $request->year;
         $adminVideo->movie_producer_id = $request->producer;
+        $adminVideo->country = $request->video_country;
 
         $adminVideo->save();
 
@@ -1449,8 +1483,8 @@ class AdminController extends Controller
         $images->admin_video_id = $adminVideo->id;
         $images->imgBillboard = $imgUrl.$billboard_image_name;
         $images->imgSmall1 = $imgUrl.$small_image1_name;
-        $images->imgSmall2 = $imgUrl.$small_image2_name;
-        $images->imgSmall3 = $imgUrl.$small_image3_name;
+        $images->imgSmall2 = $small2;
+        $images->imgSmall3 = $small3;
         $images->imgPreview = $imgUrl.$preview_image_name;
         $images->save();
 

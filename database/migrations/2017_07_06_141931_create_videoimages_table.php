@@ -17,8 +17,8 @@ class CreateVideoimagesTable extends Migration
             $table->integer('video_id');
             $table->string('imgBillboard'); //1200x650
             $table->string('imgSmall1');
-            $table->string('imgSmall2');    //500x340
-            $table->string('imgSmall3');
+            $table->string('imgSmall2')->nullable();    //500x340
+            $table->string('imgSmall3')->nullable();
             $table->string('imgPreview');   //1000x600
             $table->timestamps();
         });

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "767ddd62dc699001820d2ec64ace6bb2",
+    "content-hash": "93953c9a1069aadb1a765801a315609e",
     "packages": [
         {
             "name": "anlutro/l4-settings",
@@ -2547,6 +2547,47 @@
                 "Laravel 5 env"
             ],
             "time": "2017-02-08T16:58:57+00:00"
+        },
+        {
+            "name": "vimeo/vimeo-api",
+            "version": "1.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vimeo/vimeo.php.git",
+                "reference": "34a2b06801db3318ebb983821945293773691915"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vimeo/vimeo.php/zipball/34a2b06801db3318ebb983821945293773691915",
+                "reference": "34a2b06801db3318ebb983821945293773691915",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Vimeo\\": "src/Vimeo"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vimeo",
+                    "homepage": "http://vimeo.com"
+                }
+            ],
+            "description": "Official PHP library for the Vimeo API.",
+            "homepage": "https://github.com/vimeo/vimeo.php",
+            "keywords": [
+                "video",
+                "vimeo"
+            ],
+            "time": "2016-12-02T16:03:55+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

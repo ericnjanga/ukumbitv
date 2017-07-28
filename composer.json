@@ -14,7 +14,8 @@
         "paypal/rest-api-sdk-php": "*",
         "vidhyar2612/enveditor": "^1.1",
         "olaferlandsen/ffmpeg-php-class": "^0.1.4",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "vimeo/vimeo-api": "^1.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

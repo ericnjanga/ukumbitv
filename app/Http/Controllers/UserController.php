@@ -35,6 +35,7 @@ use Exception;
 use App\PayPerView;
 
 use Log;
+use Vimeo\Vimeo;
 
 
 class UserController extends Controller {
@@ -78,7 +79,7 @@ class UserController extends Controller {
             $suggestions  = Helper::suggestion_videos(WEB);
             $categories = get_categories();
 
-            $videos = AdminVideo::with('videoimage')->get();
+            $videos = AdminVideo::with('videoimage')->orderBy('id', 'desc')->get();
 
             $lastVideos = [];
             $allCategories = Category::all();
@@ -106,6 +107,22 @@ class UserController extends Controller {
         }
     }
 
+    public function vimeoVideo()
+    {
+        $client_id = '105bb6f8cebedfe7708618ea8723701d13048d73';
+        $client_secret = 'F3wa2utJ9BMumoZ3/0jQ5Uwv6Oj/C77NRCgCWKpkk7RPEgOhU4IyR0aXY1rhvc2Amclad3mdJKFuRMOz46vjDJflRsE0E0lJ0t8V9ETI7BAuH15MXaifVlmrgXnSjDs6';
+        $access_token = '659bb3e7403fc463fee853d83a298827';
+
+        //$vimeoModel = new \Vimeo\Vimeo($client_id, $client_secret);
+        $lib = new Vimeo('105bb6f8cebedfe7708618ea8723701d13048d73', 'F3wa2utJ9BMumoZ3/0jQ5Uwv6Oj/C77NRCgCWKpkk7RPEgOhU4IyR0aXY1rhvc2Amclad3mdJKFuRMOz46vjDJflRsE0E0lJ0t8V9ETI7BAuH15MXaifVlmrgXnSjDs6', '659bb3e7403fc463fee853d83a298827');
+        $file_name = public_path('movies/20170719133233/1500471153321.mp4');
+
+        $uri = $lib->upload($file_name);
+        $video_data = $lib->request($uri);
+        $link = $video_data['body']['link'];
+        dd($link);
+    }
+
     public function watchVideo($id)
     {
         $video = AdminVideo::where('watchid', $id)->first();
@@ -115,6 +132,8 @@ class UserController extends Controller {
         {
             $images = [];
         }
+
+        $videoId = substr($video->video, 8);
 
         $main_video = $video->video;
         $trailer_video = "";
@@ -138,7 +157,8 @@ class UserController extends Controller {
             ->with('videos' , $videos)
             ->with('videoTitle' , $video)
             ->with('images' , $images)
-            ->with('video', $video);
+            ->with('video', $video)
+            ->with('videoId', $videoId);
     }
 
 
