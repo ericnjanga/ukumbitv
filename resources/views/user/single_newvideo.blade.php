@@ -65,13 +65,14 @@ page-singlevideo
 		}
 		.not-auth-frame:after{
 			content: '';
-			background-color: rgba(0,0,0,0.7);
+			background-color: rgba(0,0,0,0.5);
 		}
 		.description{
 			margin-top: 100px;
 		}
 		.description h1,
 		.description p{
+			color: #fff;
 			margin-bottom: 40px;
 		}
 		.description .btn {
