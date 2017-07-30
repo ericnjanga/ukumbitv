@@ -17,7 +17,7 @@ page-homevideos
   <div class="container video-container">
     <div class="row">
       <ul id="og-grid" class="og-grid video-content list-unstyled clearfix">
-        @foreach($videos as $video)
+        @foreach($videos as $indexKey => $video)
           <li class="col">
               <!--
               {{$video}}
@@ -27,7 +27,7 @@ page-homevideos
           	
               
           -->
-            <a href="#" data-largesrc="{{$video->videoimage->imgPreview}}" data-title="{{$video->title}}" data-description="{{$video->description}}" data-theyear="{{$video->year}}" data-duration="{{$video->duration}}"  data-toggle="modal" data-target="#videoModal">
+            <a href="#" data-largesrc="{{$video->videoimage->imgPreview}}" data-title="{{$video->title}}" data-description="{{$video->description}}" data-theyear="{{$video->year}}" data-duration="{{$video->duration}}"  data-toggle="modal" data-target="#videoModal{{$indexKey}}">
 
 	    					<!--<img class="img-loading" src="{{asset('streamtube/images/loader.gif')}}"/>
 
@@ -39,7 +39,7 @@ src="http://via.placeholder.com/500x340"
             </a> 
           </li>
 
-			  <div class="modal fade video-modal" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+			  <div class="modal fade video-modal" id="videoModal{{$indexKey}}" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel{{$indexKey}}">
 				  <div class="modal-dialog" role="document">
 					  <div class="modal-content">
 						  <div class="modal-header">

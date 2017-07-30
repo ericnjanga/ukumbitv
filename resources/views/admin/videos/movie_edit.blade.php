@@ -109,7 +109,7 @@
 	                <!-- integrate to dabatase -->
 	                <select name="video-country" id="video-country" class="form-control">
                         @foreach(trans('countries.countries') as $tran))
-                        <option value="{{$tran}}">{{$tran}}</option>
+                        <option @if($video->country == $tran) selected @endif value="{{$tran}}">{{$tran}}</option>
                         @endforeach
 	                </select> 
 	                <!-- integrate to dabatase -->
