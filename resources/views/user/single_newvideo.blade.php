@@ -51,26 +51,37 @@ page-singlevideo
 	<!-- ..................[section2]................... -->
 	@else
 	<style>
-		.videopanel{
-
+		.videopanel.not-auth .description{
+			margin-top: 50px;
 		}
 		.videopanel.not-auth{
 			position: absolute;
 			width: 100%;
 			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.btn-secondary {
+			background-color: #3B5998;
 		}
 	</style>
-		<div class"not-auth videopanel" style="background: url({{ $images->imgBillboard }})">
-			
-			<ul> 
-				<!-- If the person is a subscriber:  -->
-				<li>TITLE: {{ $video->title }}</li>
-				<!-- If the person is not a subscriber:  -->
-				<li>
-					<a href="{{ route('user.login.form') }}">LOGIN</a>
-					<a href="{{ route('user.register.form') }}">REGISTER</a>
-				</li>
-			</ul>
+		<div class"not-auth videopanel" style="background: url({{ $images->imgBillboard }})"></div>
+
+		<div class="container">
+			<div class="row">
+				<div class="description col-md-3 col-md-offset-9">
+					<h1>{{ $video->title }}</h1>
+					<p>{{ $video->description }}</p>
+					<footer class="row">
+						<div class="col-md-12">
+							<a class="btn btn-block btn-primary" href="{{ route('user.login.form') }}">LOGIN</a>
+						</div>
+						<div class="col-md-12">
+							<a class="btn btn-block btn-secondary" href="{{ route('user.register.form') }}">REGISTER</a>
+						</div>
+					</footer>
+				</div>
+			</div>
 		</div>
 	@endif
 
