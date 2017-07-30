@@ -92,18 +92,21 @@ page-singlevideo
 			position: absolute;
 			top: 10px;
 		}
-		.container.img-brand{
+		.banner-logo{
 			position: absolute;
 			top: 0;
 			left: 0;
-			z-index: 3;
+			z-index: 3;    
+			padding-top: 15px;
 		}
 	</style>
 		<div class="videopanel">
-			<div class="container img-brand">
-				<a href="#">
-					<img src="https://ukumbitv.com/streamtube/images/logo1.png" alt="UkumbiTv" data-pin-nopin="true">
-				</a>
+			<div class="banner-logo">
+				<div class="container img-brand">
+					<a href="#">
+						<img src="https://ukumbitv.com/streamtube/images/logo1.png" alt="UkumbiTv" data-pin-nopin="true">
+					</a>
+				</div> 
 			</div>
 			
 
