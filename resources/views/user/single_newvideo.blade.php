@@ -88,10 +88,10 @@ page-singlevideo
 			position: relative;
 			z-index: 2;
 		}
-		.img-brand{
+		/*.img-brand{
 			position: absolute;
 			top: 10px;
-		}
+		}*/
 		.banner-logo{
 			position: absolute;
 			top: 0;
