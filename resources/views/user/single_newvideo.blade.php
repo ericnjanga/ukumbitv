@@ -51,38 +51,54 @@ page-singlevideo
 	<!-- ..................[section2]................... -->
 	@else
 	<style>
-		.videopanel.not-auth .description{
-			margin-top: 50px;
+		.videopanel {
+			position: relative;
+			min-height: 700px;
 		}
-		.videopanel.not-auth{
+		.not-auth-frame{
 			position: absolute;
 			width: 100%;
 			height: 100%;
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
+		.not-auth-frame .description{
+			margin-top: 100px;
+		}
+		.not-auth-frame .description h1,
+		.not-auth-frame .description p{
+			margin-bottom: 40px;
+		}
+		.not-auth-frame .description .btn {
+			margin-bottom: 20px;
+			height: 35px;
+			border-width: 0px;
+		}
 		.btn-secondary {
 			background-color: #3B5998;
+			color: #fff;
 		}
 	</style>
-		<div class="not-auth videopanel" style="background: url({{ $images->imgBillboard }})"></div>
+		<div class="videopanel">
+			<div class="not-auth-frame" style="background: url({{ $images->imgBillboard }})"></div>
 
-		<div class="container">
-			<div class="row">
-				<div class="description col-md-3 col-md-offset-9">
-					<h1>{{ $video->title }}</h1>
-					<p>{{ $video->description }}</p>
-					<footer class="row">
-						<div class="col-md-12">
-							<a class="btn btn-block btn-primary" href="{{ route('user.login.form') }}">LOGIN</a>
-						</div>
-						<div class="col-md-12">
-							<a class="btn btn-block btn-secondary" href="{{ route('user.register.form') }}">REGISTER</a>
-						</div>
-					</footer>
+			<div class="container">
+				<div class="row">
+					<div class="description col-md-3 col-md-offset-6">
+						<h1>{{ $video->title }}</h1>
+						<p>{{ $video->description }}</p>
+						<footer class="row">
+							<div class="col-md-12">
+								<a class="btn btn-block btn-primary" href="{{ route('user.login.form') }}">LOGIN</a>
+							</div>
+							<div class="col-md-12">
+								<a class="btn btn-block btn-secondary" href="{{ route('user.register.form') }}">REGISTER</a>
+							</div>
+						</footer>
+					</div>
 				</div>
 			</div>
-		</div>
+		</div><!-- videopanel -->
 	@endif
 
 @endsection
