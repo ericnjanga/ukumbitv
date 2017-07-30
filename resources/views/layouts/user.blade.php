@@ -31,8 +31,7 @@
           fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
 
-    @include('layouts.user.header-homevideo')
-    @include('layouts.user.header-singlevideo')
+    @include('layouts.user.header-homevideo') 
 
 		@yield('content')
 

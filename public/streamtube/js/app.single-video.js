@@ -1,1 +1,1 @@
-"use strict";if($(".page-singlevideo").length>0){var $nav=$(".main-nav-singlevideo"),hide_timeout=0,hide_delay=4e3;$("body").mousemove(function(e){clearTimeout(hide_timeout),$nav.is(":hidden")&&$nav.fadeIn("slow");var i=(new Date).getTime(),t=setTimeout(function(){(new Date).getTime()-i>1e3&&(hide_timeout=setTimeout(function(){$nav.fadeOut("slow")},hide_delay))},1e3)}),$("body").on("click","#btn-history-back",function(){window.history.back()})}
+"use strict";

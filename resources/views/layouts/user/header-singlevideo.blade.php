@@ -1,3 +1,4 @@
+<!-- was trying to emulate the NETFLIX style "back" button plus Facebook comment redirection -->
 <nav class="main-nav-singlevideo main-nav navbar navbar-default">
   <div class="container container-fluid-">
     <!-- Brand and toggle get grouped for better mobile display -->
