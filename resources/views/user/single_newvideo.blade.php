@@ -18,7 +18,7 @@ page-singlevideo
 
 
 @section('content')
-
+	@if(Auth::check())
 	<!-- ..................[section1]................... -->
 	<!-- Who can watch the video:  --> 
 	<!-- 1) Is a subscriber -->
@@ -65,7 +65,22 @@ page-singlevideo
 	<!-- ..................[section2]................... -->
 	<!-- ..................[section2]................... -->
 	<!-- ..................[section2]................... -->
-
+	@else
+		<div>
+			<ul>
+				<li>
+					<img src="{{ $images->imgBillboard }}">
+				</li>
+				<!-- If the person is a subscriber:  -->
+				<li>TITLE: {{ $video->title }}</li>
+				<!-- If the person is not a subscriber:  -->
+				<li>
+					<a href="{{ route('user.login.form') }}">LOGIN</a>
+					<a href="{{ route('user.register.form') }}">REGISTER</a>
+				</li>
+			</ul>
+		</div>
+	@endif
 
 @endsection
 
