@@ -12,7 +12,7 @@ page-singlevideo
 
 
 @section('headscripts')
-	<script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer.js"></script>
+	
 @endsection
 
 
@@ -26,29 +26,7 @@ page-singlevideo
 	<!-- ..................................  -->
 
 		<iframe src="https://player.vimeo.com/video/{{$videoId}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		{{--<div id="player"></div>--}}
-		{{--<script type="text/javascript">--}}
 
-		  {{--var conf = {--}}
-		      {{--key:       "bb175f20-6e3a-4edb-af12-619f8e67c88e",--}}
-		       {{--playback: {--}}
-				    {{--autoplay                : true,--}}
-				    {{--// muted                   : false--}}
-				  {{--}, --}}
-		      {{--source: { --}}
-		        {{--progressive: "{{$video->video}}",--}}
-		        {{--poster:      "{{$images->imgBillboard}}"--}}
-		      {{--}--}}
-		  {{--};--}}
-		  {{--var player = bitmovin.player("player");--}}
-		  {{--player.setup(conf).then(function(value) {--}}
-		      {{--// Success--}}
-		      {{--console.log("Successfully created bitmovin player instance");--}}
-		  {{--}, function(reason) {--}}
-		      {{--// Error!--}}
-		      {{--console.log("Error while creating bitmovin player instance");--}}
-		  {{--});--}}
-		{{--</script>--}}
 
 
 		<!-- Facebook comment and share -->
