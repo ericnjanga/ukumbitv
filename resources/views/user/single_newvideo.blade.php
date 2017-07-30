@@ -64,6 +64,7 @@ page-singlevideo
 			background-size: cover;
 		}
 		.not-auth-frame:after{
+			content: '';
 			background-color: rgba(0,0,0,0.7);
 		}
 		.description{
