@@ -79,6 +79,7 @@ page-singlevideo
 			margin-bottom: 15px;
 			padding: 12px;
 			border-width: 0px;
+			max-width: 300px;
 		}
 		.btn-secondary {
 			background-color: #3B5998;
@@ -98,7 +99,7 @@ page-singlevideo
 			left: 0;    
 			width: 100%;
 			z-index: 3;    
-			padding-top: 15px;
+			padding-top: 20px;
 		}
 	</style>
 		<div class="videopanel">
