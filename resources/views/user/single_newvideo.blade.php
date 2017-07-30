@@ -55,12 +55,16 @@ page-singlevideo
 			position: relative;
 			min-height: 700px;
 		}
+		.not-auth-frame:after,
 		.not-auth-frame{
 			position: absolute;
 			width: 100%;
 			height: 100%;
 			background-repeat: no-repeat;
 			background-size: cover;
+		}
+		.not-auth-frame:after{
+			background-color: rgba(0,0,0,0.7);
 		}
 		.description{
 			margin-top: 100px;
@@ -70,13 +74,17 @@ page-singlevideo
 			margin-bottom: 40px;
 		}
 		.description .btn {
-			margin-bottom: 20px;
+			margin-bottom: 15px;
 			padding: 12px;
 			border-width: 0px;
 		}
 		.btn-secondary {
 			background-color: #3B5998;
 			color: #fff;
+		}
+		.container{
+			position: relative;
+			z-index: 2;
 		}
 	</style>
 		<div class="videopanel">
