@@ -125,7 +125,8 @@ class UserController extends Controller {
 
     public function watchVideo($id)
     {
-        $video = AdminVideo::where('watchid', $id)->first();
+        $video = AdminVideo::where('watchid', $id)->firstOrFail();
+
         $videos = AdminVideo::all();
         $images = Videoimage::where('admin_video_id', $video->id)->first();
         if ($images == null)
