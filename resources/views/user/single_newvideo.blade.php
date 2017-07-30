@@ -104,7 +104,7 @@ page-singlevideo
 		<div class="videopanel">
 			<div class="banner-logo">
 				<div class="container img-brand">
-					<a href="#">
+					<a href="https://ukumbitv.com/">
 						<img src="https://ukumbitv.com/streamtube/images/logo1.png" alt="UkumbiTv" data-pin-nopin="true">
 					</a>
 				</div> 
