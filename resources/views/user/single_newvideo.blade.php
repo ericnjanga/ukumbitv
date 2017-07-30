@@ -71,7 +71,7 @@ page-singlevideo
 		}
 		.description .btn {
 			margin-bottom: 20px;
-			height: 35px;
+			padding: 12px;
 			border-width: 0px;
 		}
 		.btn-secondary {
