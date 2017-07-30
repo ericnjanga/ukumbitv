@@ -18,7 +18,7 @@
 
 </head>
 <body>
-<div class="off-canvas-wrapper">
+<div class="off-canvas-wrapper" style="border:10px solid red;">
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
         <div class="off-canvas-content" data-off-canvas-content>
