@@ -63,7 +63,7 @@ src="http://via.placeholder.com/500x340"
 									  <!-- Hide this if there is no actors -->
 									  <ul class="list-inline" style="margin-bottom: 3px;">
 										  <li style="opacity: 0.6;">Starring: </li>
-										  <li>
+										  <li style="width: 80%;">
 											  <!-- display actors here -->
 											  <i>Actor name 1</i>, <i>Actor name 2</i>, <i>Actor name 3</i>
 											  <!-- display actors here -->
@@ -76,7 +76,7 @@ src="http://via.placeholder.com/500x340"
 									  <ul class="list-inline" style="margin-bottom: 3px;">
 										  <li style="opacity: 0.6;">Director: </li>
 										  <!-- display director here -->
-										  <li><i>Director</i></li>
+										  <li style="width: 80%;"><i>Director</i></li>
 										  <!-- display director here -->
 									  </ul>
 									  <!-- Hide this if there is no director -->
@@ -85,9 +85,21 @@ src="http://via.placeholder.com/500x340"
 									  <!-- Hide this if there is no tags -->
 									  <ul class="list-inline" style="margin-bottom: 3px;">
 										  <li style="opacity: 0.6;">Genres: </li>
-										  <li>
+										  <li style="width: 80%;">
 											  <!-- list tags here -->
 											  <a href="#">tag1</a>, <a href="#">tag2</a>, <a href="#">tag3</a>
+											  <!-- list tags here -->
+										  </li>
+									  </ul>
+									  <!-- Hide this if there is no tags -->
+
+
+									  <!-- Hide this if there is no tags -->
+									  <ul class="list-inline" style="margin-bottom: 3px;">
+										  <li style="opacity: 0.6;">Country: </li>
+										  <li style="width: 80%;">
+											  <!-- list tags here -->
+											  <a href="#">... country ...</a>
 											  <!-- list tags here -->
 										  </li>
 									  </ul>
