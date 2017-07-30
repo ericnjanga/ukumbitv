@@ -65,7 +65,7 @@ page-singlevideo
 			background-color: #3B5998;
 		}
 	</style>
-		<div class"not-auth videopanel" style="background: url({{ $images->imgBillboard }})"></div>
+		<div class="not-auth videopanel" style="background: url({{ $images->imgBillboard }})"></div>
 
 		<div class="container">
 			<div class="row">
