@@ -25,7 +25,8 @@ page-singlevideo
 	<!-- 2) [Is within the one week grace period] or [is in good payment standing with paypal] --> 
 	<!-- ..................................  -->
 
-		<iframe src="https://player.vimeo.com/video/{{$videoId}}" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+		<iframe src="https://player.vimeo.com/video/{{$videoId}}" autoplay="true" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 
