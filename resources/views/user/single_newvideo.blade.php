@@ -88,8 +88,24 @@ page-singlevideo
 			position: relative;
 			z-index: 2;
 		}
+		.img-brand{
+			position: absolute;
+			top: 10px;
+		}
+		.container.img-brand{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 	</style>
 		<div class="videopanel">
+			<div class="container img-brand">
+				<a href="#">
+					<img src="https://ukumbitv.com/streamtube/images/logo1.png" alt="UkumbiTv" data-pin-nopin="true">
+				</a>
+			</div>
+			
+
 			<div class="not-auth-frame" style="background: url({{ $images->imgBillboard }})"></div>
 
 			<div class="container">
