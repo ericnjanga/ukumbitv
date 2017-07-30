@@ -62,14 +62,14 @@ page-singlevideo
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
-		.not-auth-frame .description{
+		.description{
 			margin-top: 100px;
 		}
-		.not-auth-frame .description h1,
-		.not-auth-frame .description p{
+		.description h1,
+		.description p{
 			margin-bottom: 40px;
 		}
-		.not-auth-frame .description .btn {
+		.description .btn {
 			margin-bottom: 20px;
 			height: 35px;
 			border-width: 0px;
