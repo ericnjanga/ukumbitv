@@ -96,6 +96,7 @@ page-singlevideo
 			position: absolute;
 			top: 0;
 			left: 0;
+			z-index: 3;
 		}
 	</style>
 		<div class="videopanel">
