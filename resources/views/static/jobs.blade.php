@@ -7,7 +7,7 @@
 {{-- INSPIRATION --}}
 {{-- INSPIRATION --}}
 {{-- INSPIRATION --}}
-@extends('static.legal-master-page') 
+@extends('static.masterpage-legal')
 
 
 

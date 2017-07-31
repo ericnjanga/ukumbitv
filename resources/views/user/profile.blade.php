@@ -1,5 +1,5 @@
 
-@extends('static.legal-master-page')
+@extends('static.masterpage-legal')
 
 
 @section('content-title')
