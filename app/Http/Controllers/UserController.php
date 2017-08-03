@@ -91,6 +91,7 @@ class UserController extends Controller {
                     }
             }
 
+
             return view('user.home-video')
                         ->with('page' , 'home')
                         ->with('subPage' , 'home')
@@ -105,6 +106,27 @@ class UserController extends Controller {
         } else {
             return redirect()->route('installTheme');
         }
+    }
+
+    public function getVideosByTag($id)
+    {
+        $videos = AdminVideo::with('videoimage')->where('tags', 'LIKE', '%'.$id.'%')->orderBy('id', 'desc')->get();
+
+        $lastVideos = [];
+        $allCategories = Category::all();
+
+        foreach ($allCategories as $k){
+            $v = AdminVideo::orderby('id', 'desc')->with('videoimage')->where('category_id', $k->id)->first();
+            if ($v != NULL) {
+                array_push($lastVideos, $v);
+            }
+        }
+
+        return view('user.home-video')
+            ->with('page' , 'Videos by tag')
+            ->with('subPage' , 'Videos by tag')
+            ->with('videos_by_cat' , $lastVideos)
+            ->with('videos', $videos);
     }
 
     public function vimeoVideo()

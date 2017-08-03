@@ -87,8 +87,10 @@ src="http://via.placeholder.com/500x340"
 										  <li style="opacity: 0.6;">Genres: </li>
 										  <li style="width: 80%;">
 											  <!-- list tags here -->
-											  <a href="#">tag1</a>, <a href="#">tag2</a>, <a href="#">tag3</a>
+											  @foreach(explode(',', $video->tags) as $tag)
+											  <a href="/tag/{{$tag}}">{{$tag}}</a>
 											  <!-- list tags here -->
+											  @endforeach
 										  </li>
 									  </ul>
 									  <!-- Hide this if there is no tags -->
