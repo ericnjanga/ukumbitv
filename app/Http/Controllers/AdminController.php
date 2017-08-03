@@ -7,6 +7,7 @@ use App\Director;
 use App\Lang;
 use App\MovieProducer;
 use App\ProducerAgent;
+use App\Tag;
 use App\Videoimage;
 use Illuminate\Http\Request;
 
@@ -1237,6 +1238,11 @@ class AdminController extends Controller
         $directors = Director::all();
         $langs = Lang::all();
         $producers = MovieProducer::all();
+        $tags = [];
+        foreach (Tag::all() as $tag){
+            array_push($tags, $tag->name);
+        }
+        $tags = implode(',', $tags);
 
         return view('admin.videos.movie_upload')
             ->with('categories', $categories)
@@ -1244,7 +1250,8 @@ class AdminController extends Controller
             ->with('directors', $directors)
             ->with('langs', $langs)
             ->with('producers', $producers)
-            ->with('page', 'videos');
+            ->with('page', 'videos')
+            ->with('tags', $tags);
     }
 
     public function add_movie_process(Request $request)
@@ -1281,6 +1288,12 @@ class AdminController extends Controller
 
         $videoId = substr($movie->video, 8);
 
+        $tags = [];
+        foreach (Tag::all() as $tag){
+            array_push($tags, $tag->name);
+        }
+        $tags = implode(',', $tags);
+
         return view('admin.videos.movie_edit')
             ->with('categories', $categories)
             ->with('video', $movie)
@@ -1292,7 +1305,8 @@ class AdminController extends Controller
             ->with('producers', $producers)
             ->with('page', 'videos')
             ->with('langs', $langs)
-            ->with('videoId', $videoId);
+            ->with('videoId', $videoId)
+            ->with('tags', $tags);
 
     }
 
@@ -1306,6 +1320,19 @@ class AdminController extends Controller
         $imgUrl = url('/images/'.$specialId.'/');
         $videoUrl = url('/movies/'.$specialId.'/');
 
+        $tagsNew = mb_strtolower($request->tags);
+        $tagsArr = explode(',', $tagsNew);
+
+
+        foreach ($tagsArr as $tagvar) {
+            $tag = Tag::where('name', $tagvar)->first();
+            if($tag == null) {
+                $newTag = new Tag();
+                $newTag->name = $tagvar;
+                $newTag->save();
+            }
+        }
+
 
         $video->title = $request->title;
         $video->duration = $request->duration;
@@ -1318,7 +1345,7 @@ class AdminController extends Controller
         $video->lang_id = $request->lang;
         $video->country = $request->video_country;
         $video->video_type = $request->video_type;
-        $video->tags = mb_strtolower($request->tags);
+        $video->tags = $tagsNew;
 
 
         if(!empty($request->file('video'))){
@@ -1446,6 +1473,20 @@ class AdminController extends Controller
         $preview_image_name = '/preview_image'.time().$preview_image->getClientOriginalName();
         $preview_image->move(public_path('images/'.$specialId),$preview_image_name);
 
+        $tagsNew = mb_strtolower($request->tags);
+        $tagsArr = explode(',', $tagsNew);
+
+
+        foreach ($tagsArr as $tagvar) {
+            $tag = Tag::where('name', $tagvar)->first();
+            if($tag == null) {
+                $newTag = new Tag();
+                $newTag->name = $tagvar;
+                $newTag->save();
+            }
+        }
+
+
 
         $adminVideo = new AdminVideo();
         $adminVideo->title = $request->title;
@@ -1478,7 +1519,7 @@ class AdminController extends Controller
         $adminVideo->year = $request->year;
         $adminVideo->movie_producer_id = $request->producer;
         $adminVideo->country = $request->video_country;
-        $adminVideo->tags = mb_strtolower($request->tags);
+        $adminVideo->tags = $tagsNew;
 
         $adminVideo->save();
 

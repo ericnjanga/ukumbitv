@@ -132,14 +132,16 @@
                   </select>
 	              </div>
 
-	              <div id="tags" class="form-group"> 
-	                <label for="tags" class="">Add tags</label> 
-	                <!-- add tagging system here -->
-	                <!-- add tagging system here -->
-                      <input type="text" value="{{$video->tags}}" data-role="tagsinput" id="tags" class="form-control">
-	                <!-- add tagging system here -->
-	                <!-- add tagging system here -->
-	              </div>
+                    <div id="tags" class="form-group category-container">
+                        <label for="tags_id" class="">Add tags</label>
+                        <!-- add tagging system here -->
+                        <!-- add tagging system here -->
+                        {{--<div style="min-height:100px; background-color: #E8F0FA;">--}}
+                        <input type="text" value="{{$video->tags}}" data-role="tagsinput" id="tags_id" class="form-control">
+                    {{--</div>--}}
+                    <!-- add tagging system here -->
+                        <!-- add tagging system here -->
+                    </div>
 
           		</fieldset><!-- fieldset --> 
             </div><!-- col-md-6 -->
@@ -282,6 +284,7 @@
     <script src="{{asset('admin-css/plugins/iCheck/icheck.min.js')}}"></script>
 
     <script src="{{asset('packages/bootstrap-tagsinput/bootstrap-tagsinput.js')}}"></script>
+    <script src="{{asset('packages/bootstrap-tagsinput/typeahead.bundle.js')}}"></script>
 
 
 
@@ -289,6 +292,35 @@
 
 
     <script type="text/javascript">
+
+        var string = '{{$tags}}';
+        var data = string.split(',');
+        console.log(data);
+        var citynames = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            local: $.map(data, function (city) {
+                return {
+                    name: city
+                };
+            })
+        });
+        citynames.initialize();
+
+        $('#tags_id').tagsinput({
+            typeaheadjs: [{
+                minLength: 1,
+                highlight: true,
+            },{
+                minlength: 1,
+                name: 'citynames',
+                displayKey: 'name',
+                valueKey: 'name',
+                source: citynames.ttAdapter()
+            }],
+            freeInput: true
+        });
+
         function editMovie() {
 
             var tagsArr = $('.alltags').map(function(){
