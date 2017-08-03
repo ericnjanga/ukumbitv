@@ -147,55 +147,55 @@
     <!-- page script -->
     <script>
         $(function () {
-            $('#table-actorsview').DataTable({
-						  "columns": [ 
-						    null,
-						    null,
-						    { "width": "50%" },
-						    { "width": "10%" }
-						  ]
-						} );
-            $('#table-categoriesview').DataTable({
-						  "columns": [ 
-						    null,
-						    null, 
-						    { "width": "10%" }
-						  ]
-						} );
-            $('#table-langsview').DataTable({
-						  "columns": [ 
-						    null,
-						    null, 
-						    { "width": "10%" }
-						  ]
-						} );
-            $('#table-directorsview').DataTable({
-						  "columns": [ 
-						    null,
-						    null, 
-						    { "width": "10%" }
-						  ]
-						} );
-            $('#table-prodagentview').DataTable({
-						  "columns": [ 
-						    null,
-						    null, 
-						    null,
-						    null, 
-						    { "width": "10%" }
-						  ]
-						} );
+      //       $('#table-actorsview').DataTable({
+						//   "columns": [ 
+						//     null,
+						//     null,
+						//     { "width": "50%" },
+						//     { "width": "10%" }
+						//   ]
+						// } );
+      //       $('#table-categoriesview').DataTable({
+						//   "columns": [ 
+						//     null,
+						//     null, 
+						//     { "width": "10%" }
+						//   ]
+						// } );
+      //       $('#table-langsview').DataTable({
+						//   "columns": [ 
+						//     null,
+						//     null, 
+						//     { "width": "10%" }
+						//   ]
+						// } );
+      //       $('#table-directorsview').DataTable({
+						//   "columns": [ 
+						//     null,
+						//     null, 
+						//     { "width": "10%" }
+						//   ]
+						// } );
+      //       $('#table-prodagentview').DataTable({
+						//   "columns": [ 
+						//     null,
+						//     null, 
+						//     null,
+						//     null, 
+						//     { "width": "10%" }
+						//   ]
+						// } );
 
 
-            $("#example1").DataTable();
-            $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false
-            });
+      //       $("#example1").DataTable();
+      //       $('#example2').DataTable({
+      //           "paging": true,
+      //           "lengthChange": false,
+      //           "searching": false,
+      //           "ordering": true,
+      //           "info": true,
+      //           "autoWidth": false
+      //       });
 
           //Assign "view" and "add" button urls based on the page
           //......................................................
