@@ -21,9 +21,9 @@
       <ul class="nav navbar-nav"> 
       	<!-- categories list here -->
       	<!-- categories list here -->
-        <li><a href="#">category 1</a></li> 
-        <li><a href="#">category 2</a></li> 
-        <li><a href="#">category 3</a></li> 
+          @foreach($categories as $category)
+             <li><a href="/category/{{str_slug($category->name)}}">{{ $category->name }}</a></li>
+          @endforeach
       	<!-- categories list here -->
       	<!-- categories list here -->
       </ul> 

@@ -124,8 +124,8 @@
 								<legend>Taxonomy</legend>
 
 	              <div id="category" class="form-group"> 
-	                <label for="category" class="">Select category</label> 
-                  <select required id="category" name="category_id" class="form-control">
+	                <label for="category_id" class="">Select category</label>
+                  <select required id="category_id" name="category_id" class="form-control">
                       @foreach($categories as $category)
                           <option value="{{$category->id}}" @if($video->category_id == $category->id) selected @endif>{{$category->name}}</option>
                       @endforeach
@@ -330,7 +330,7 @@
             fd.append('title', $('#title').val());
             fd.append('duration', $('#duration').val());
             fd.append('description', $('#description').val());
-            fd.append('category', $('#category').val());
+            fd.append('category', $('#category_id').val());
             fd.append('year', $('#year').val());
             fd.append('director', $('#director').val());
             fd.append('actor', $('#actor').val());

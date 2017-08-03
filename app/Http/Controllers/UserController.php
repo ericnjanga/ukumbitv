@@ -100,7 +100,7 @@ class UserController extends Controller {
                         ->with('trendings' , $trendings)
                         ->with('watch_lists' , $watch_lists)
                         ->with('suggestions' , $suggestions)
-                        ->with('categories' , $categories)
+                        ->with('categories' , $allCategories)
                         ->with('videos_by_cat' , $lastVideos)
                         ->with('videos', $videos);
         } else {
@@ -128,6 +128,35 @@ class UserController extends Controller {
         return view('user.home-video')
             ->with('page' , 'Videos by tag')
             ->with('subPage' , 'Videos by tag')
+            ->with('categories' , $allCategories)
+            ->with('videos_by_cat' , $lastVideos)
+            ->with('videos', $videos);
+    }
+
+    public function getVideosByCategory($id)
+    {
+        $category = Category::where('name', $id)
+            ->orWhere('name', str_replace('-', ' ', $id))
+            ->firstOrFail();
+
+        $videos = AdminVideo::with('videoimage')
+            ->where('category_id', $category->id)
+            ->orderBy('id', 'desc')->get();
+
+        $lastVideos = [];
+        $allCategories = Category::all();
+
+        foreach ($allCategories as $k){
+            $v = AdminVideo::orderby('id', 'desc')->with('videoimage')->where('category_id', $k->id)->first();
+            if ($v != NULL) {
+                array_push($lastVideos, $v);
+            }
+        }
+
+        return view('user.home-video')
+            ->with('page' , 'Videos by tag')
+            ->with('subPage' , 'Videos by tag')
+            ->with('categories' , $allCategories)
             ->with('videos_by_cat' , $lastVideos)
             ->with('videos', $videos);
     }
