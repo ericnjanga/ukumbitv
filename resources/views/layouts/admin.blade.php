@@ -155,23 +155,24 @@
 						    { "width": "10%" }
 						  ]
 						} );
-            $('#table-categoriesview').DataTable({
+            $('#table-categoriesview, #table-langsview').DataTable({
 						  "columns": [ 
 						    null,
 						    null, 
 						    { "width": "10%" }
 						  ]
 						} );
-            $('#table-langsview').DataTable({
-						  "columns": [ 
-						    null,
-						    null, 
-						    { "width": "10%" }
-						  ]
-						} );
+      //       $('#table-langsview').DataTable({
+						//   "columns": [ 
+						//     null,
+						//     null, 
+						//     { "width": "10%" }
+						//   ]
+						// } );
             $('#table-directorsview').DataTable({
 						  "columns": [ 
 						    null,
+						    null, 
 						    null, 
 						    { "width": "10%" }
 						  ]
