@@ -1306,6 +1306,7 @@ class AdminController extends Controller
         $imgUrl = url('/images/'.$specialId.'/');
         $videoUrl = url('/movies/'.$specialId.'/');
 
+
         $video->title = $request->title;
         $video->duration = $request->duration;
         $video->description = $request->description;
@@ -1317,7 +1318,7 @@ class AdminController extends Controller
         $video->lang_id = $request->lang;
         $video->country = $request->video_country;
         $video->video_type = $request->video_type;
-        $video->tags = $request->tags;
+        $video->tags = mb_strtolower($request->tags);
 
 
         if(!empty($request->file('video'))){
@@ -1477,7 +1478,7 @@ class AdminController extends Controller
         $adminVideo->year = $request->year;
         $adminVideo->movie_producer_id = $request->producer;
         $adminVideo->country = $request->video_country;
-        $adminVideo->tags = $request->tags;
+        $adminVideo->tags = mb_strtolower($request->tags);
 
         $adminVideo->save();
 
