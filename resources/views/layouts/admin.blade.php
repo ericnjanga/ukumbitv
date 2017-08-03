@@ -201,6 +201,7 @@
           }
           else if(page_url.indexOf('director') > -1 || page_url.indexOf('directors') > -1){
           	var $menu_item = $('#sidebar-menu > #directors'); 
+          	console.log('>>>>$menu_item=', $menu_item);
           }
           else if(page_url.indexOf('lang') > -1 || page_url.indexOf('langs') > -1){
           	var $menu_item = $('#sidebar-menu > #langs'); 
