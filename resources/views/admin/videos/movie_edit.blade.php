@@ -172,7 +172,7 @@
 
 	              <div class="form-group"> 
 	                <label for="actor" class="">Select actors *</label>
-                  <select multiple required id="actor" name="actor_id" class="form-control">
+                  <select multiple required id="actor" name="actor_id" class="form-control" style="height:150px;">
                       @foreach($actors as $actor)
                           <option value="{{$actor->id}}" @foreach($actArr as $act) @if($act == $actor->id) selected @endif @endforeach>{{$actor->name}}</option>
                       @endforeach
