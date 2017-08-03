@@ -248,24 +248,24 @@
 
     <script type="text/javascript">
         
-        $(function () {
-            //Initialize Select2 Elements
-            $(".select2").select2();
+    //     $(function () {
+    //         //Initialize Select2 Elements
+    //         $(".select2").select2();
 
-            //Datemask dd/mm/yyyy
-            $("#datemask").inputmask("dd:mm:yyyy", {"placeholder": "hh:mm:ss"});
-            //Datemask2 mm/dd/yyyy
-            // $("#datemask2").inputmask("hh:mm:ss", {"placeholder": "hh:mm:ss"});
-            //Money Euro
-            $("[data-mask]").inputmask();
-        });
+    //         //Datemask dd/mm/yyyy
+    //         $("#datemask").inputmask("dd:mm:yyyy", {"placeholder": "hh:mm:ss"});
+    //         //Datemask2 mm/dd/yyyy
+    //         // $("#datemask2").inputmask("hh:mm:ss", {"placeholder": "hh:mm:ss"});
+    //         //Money Euro
+    //         $("[data-mask]").inputmask();
+    //     });
 
 
 
-        //Initalize tooltips
-        $(function () {
-				  $('[data-toggle="tooltip"]').tooltip()
-				});
+    //     //Initalize tooltips
+    //     $(function () {
+				//   $('[data-toggle="tooltip"]').tooltip()
+				// });
     </script>
 
 
