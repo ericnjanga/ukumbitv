@@ -30,6 +30,7 @@ class CreateAdminVideosTable extends Migration
             $table->string('year')->nullable();
             $table->integer('movie_producer_id')->nullable();
             $table->string('country')->nullable();
+            $table->string('tags')->nullable()->default(NULL);
             $table->timestamps();
         });
     }

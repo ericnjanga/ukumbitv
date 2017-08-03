@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="{{asset('admin-css/plugins/iCheck/all.css')}}">
 
+    <link rel="stylesheet" href="{{asset('packages/bootstrap-tagsinput/bootstrap-tagsinput.css')}}">
+
 @endsection
 
 
@@ -134,8 +136,7 @@
 	                <label for="tags" class="">Add tags</label> 
 	                <!-- add tagging system here -->
 	                <!-- add tagging system here -->
-	                <div style="min-height:100px; background-color: #E8F0FA;">
-	                </div>
+                      <input type="text" value="{{$video->tags}}" data-role="tagsinput" id="tags" class="form-control">
 	                <!-- add tagging system here -->
 	                <!-- add tagging system here -->
 	              </div>
@@ -280,6 +281,8 @@
 
     <script src="{{asset('admin-css/plugins/iCheck/icheck.min.js')}}"></script>
 
+    <script src="{{asset('packages/bootstrap-tagsinput/bootstrap-tagsinput.js')}}"></script>
+
 
 
 
@@ -287,6 +290,13 @@
 
     <script type="text/javascript">
         function editMovie() {
+
+            var tagsArr = $('.alltags').map(function(){
+                return $.trim($(this).text());
+            }).get();
+
+            var tags = tagsArr.join();
+
             $( '.overlay' ).css( 'display', 'block' );
             var video = $('#video-file').prop('files')[0];
             var bill = $('#billboard_image').prop('files')[0];
@@ -294,6 +304,7 @@
             var small2 = $('#small_image2').prop('files')[0];
             var small3 = $('#small_image3').prop('files')[0];
             var preview = $('#preview_image').prop('files')[0];
+
             //alert(video);
             var fd = new FormData;
 
@@ -327,6 +338,7 @@
             fd.append('id', $('#video_id').val());
             fd.append('video_country', $('#video-country').val());
             fd.append('video_type', $("input[name=video-type]:checked").val());
+            fd.append('tags', tags);
 
             //fd.append('images', dropImages.join(';'));
             var progressBar = $('#progressbar');

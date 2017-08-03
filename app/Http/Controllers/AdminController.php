@@ -1317,6 +1317,7 @@ class AdminController extends Controller
         $video->lang_id = $request->lang;
         $video->country = $request->video_country;
         $video->video_type = $request->video_type;
+        $video->tags = $request->tags;
 
 
         if(!empty($request->file('video'))){
@@ -1476,6 +1477,7 @@ class AdminController extends Controller
         $adminVideo->year = $request->year;
         $adminVideo->movie_producer_id = $request->producer;
         $adminVideo->country = $request->video_country;
+        $adminVideo->tags = $request->tags;
 
         $adminVideo->save();
 
