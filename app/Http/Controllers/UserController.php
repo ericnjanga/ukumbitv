@@ -110,7 +110,10 @@ class UserController extends Controller {
 
     public function getVideosByTag($id)
     {
-        $videos = AdminVideo::with('videoimage')->where('tags', 'LIKE', '%'.$id.'%')->orderBy('id', 'desc')->get();
+        $videos = AdminVideo::with('videoimage')
+            ->where('tags', 'LIKE', '%'.$id.'%')
+            ->orWhere('tags', 'LIKE', '%'.str_replace('-', ' ', $id).'%')
+            ->orderBy('id', 'desc')->get();
 
         $lastVideos = [];
         $allCategories = Category::all();
