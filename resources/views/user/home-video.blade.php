@@ -88,7 +88,7 @@ src="http://via.placeholder.com/500x340"
 										  <li style="width: 80%;">
 											  <!-- list tags here -->
 											  @foreach(explode(',', $video->tags) as $tag)
-											  <a href="/tag/{{$tag}}">{{$tag}}</a>
+											  <a href="/tag/{{str_slug($tag)}}">{{$tag}}</a>
 											  <!-- list tags here -->
 											  @endforeach
 										  </li>
