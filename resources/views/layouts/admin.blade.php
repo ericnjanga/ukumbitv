@@ -147,14 +147,14 @@
     <!-- page script -->
     <script>
         $(function () {
-      //       $('#table-actorsview').DataTable({
-						//   "columns": [ 
-						//     null,
-						//     null,
-						//     { "width": "50%" },
-						//     { "width": "10%" }
-						//   ]
-						// } );
+            $('#table-actorsview').DataTable({
+						  "columns": [ 
+						    null,
+						    null,
+						    { "width": "50%" },
+						    { "width": "10%" }
+						  ]
+						} );
       //       $('#table-categoriesview').DataTable({
 						//   "columns": [ 
 						//     null,
