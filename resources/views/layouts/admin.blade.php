@@ -155,27 +155,27 @@
 						    { "width": "10%" }
 						  ]
 						} );
-      //       $('#table-categoriesview').DataTable({
-						//   "columns": [ 
-						//     null,
-						//     null, 
-						//     { "width": "10%" }
-						//   ]
-						// } );
-      //       $('#table-langsview').DataTable({
-						//   "columns": [ 
-						//     null,
-						//     null, 
-						//     { "width": "10%" }
-						//   ]
-						// } );
-      //       $('#table-directorsview').DataTable({
-						//   "columns": [ 
-						//     null,
-						//     null, 
-						//     { "width": "10%" }
-						//   ]
-						// } );
+            $('#table-categoriesview').DataTable({
+						  "columns": [ 
+						    null,
+						    null, 
+						    { "width": "10%" }
+						  ]
+						} );
+            $('#table-langsview').DataTable({
+						  "columns": [ 
+						    null,
+						    null, 
+						    { "width": "10%" }
+						  ]
+						} );
+            $('#table-directorsview').DataTable({
+						  "columns": [ 
+						    null,
+						    null, 
+						    { "width": "10%" }
+						  ]
+						} );
       //       $('#table-prodagentview').DataTable({
 						//   "columns": [ 
 						//     null,
