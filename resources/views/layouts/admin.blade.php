@@ -155,7 +155,21 @@
 						    { "width": "10%" }
 						  ]
 						} );
-            $('#table-categoriesview, #table-directorsview, #table-langsview').DataTable({
+            $('#table-categoriesview').DataTable({
+						  "columns": [ 
+						    null,
+						    null, 
+						    { "width": "10%" }
+						  ]
+						} );
+            $('#table-langsview').DataTable({
+						  "columns": [ 
+						    null,
+						    null, 
+						    { "width": "10%" }
+						  ]
+						} );
+            $('#table-directorsview').DataTable({
 						  "columns": [ 
 						    null,
 						    null, 
