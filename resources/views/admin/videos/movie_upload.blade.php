@@ -238,7 +238,12 @@
 	                  <label for="video" class="">{{tr('video')}}</label>
 	                  <input required type="file" id="video" accept="video/mp4" name="video">
 	                  <p class="help-block">{{tr('video_validate')}}</p>
-	              </div> 
+	              </div>
+
+                    <div class="form-group">
+                        <label for="vimeoid" class="">Vimeo video ID ex: 227573689  </label>
+                        <input type="text" class="form-control" id="vimeoid" name="vimeoid" placeholder="Vimeo video ID">
+                    </div>
           		</fieldset><!-- fieldset -->  
             </div><!-- col-md-6 --> 
           </div><!-- row --> 
@@ -426,6 +431,7 @@
             fd.append('lang', $('#lang').val());
             fd.append('producer', $('#producer').val());
             fd.append('video_country', $('#video-country').val());
+            fd.append('vimeoid', $('#vimeoid').val());
             fd.append('tags', tags);
             fd.append('video_type', $("input[name=video-type]:checked").val());
 

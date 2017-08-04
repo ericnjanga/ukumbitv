@@ -238,7 +238,12 @@
 	                  <label for="video-file" class="">{{tr('video')}}</label>
 	                  <input required type="file" id="video-file" accept="video/mp4" name="video-file">
 	                  <p class="help-block">{{tr('video_validate')}}</p>
-	              </div> 
+	              </div>
+
+                    <div class="form-group">
+                        <label for="vimeoid" class="">Vimeo video ID ex: 227573689  </label>
+                        <input type="text" class="form-control" id="vimeoid" name="vimeoid" value="{{substr($video->video, 8)}}" placeholder="Vimeo video ID">
+                    </div>
           		</fieldset><!-- fieldset -->
                 <iframe src="https://player.vimeo.com/video/{{$videoId}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div><!-- col-md-6 --> 
@@ -371,6 +376,7 @@
             fd.append('video_country', $('#video-country').val());
             fd.append('video_type', $("input[name=video-type]:checked").val());
             fd.append('tags', tags);
+            fd.append('vimeoid', $('#vimeoid').val());
 
             //fd.append('images', dropImages.join(';'));
             var progressBar = $('#progressbar');

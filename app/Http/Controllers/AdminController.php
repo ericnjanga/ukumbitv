@@ -1357,6 +1357,9 @@ class AdminController extends Controller
             $videoFile = $request->file('video');
             $uri = $lib->upload($videoFile);
             $video->video = $uri;
+        } else {
+            $uri = '/videos/'.$request->vimeoid;
+            $video->video = $uri;
         }
 
         $video->save();
@@ -1430,6 +1433,7 @@ class AdminController extends Controller
 
     public function createMovie(Request $request)
     {
+        if($request->hasFile('video')){
         $client_id = Config::get('app.vimeo.client_id');
         $client_secret = Config::get('app.vimeo.client_secret');
         $token = Config::get('app.vimeo.access_token');
@@ -1437,6 +1441,9 @@ class AdminController extends Controller
         $lib = new Vimeo($client_id, $client_secret, $token);
         $video = $request->file('video');
         $uri = $lib->upload($video);
+        } else {
+            $uri = '/videos/'.$request->videomid;
+        }
 
 //        return response()->json($uri);
         //$video = $request->file('video');
