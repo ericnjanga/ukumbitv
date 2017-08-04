@@ -204,7 +204,7 @@ class UserController extends Controller {
             $hist->save();
         }
 
-
+        $categories = get_categories();
 
         return view('user.single_newvideo')
             ->with('trailer_video' , $trailer_video)
@@ -215,7 +215,8 @@ class UserController extends Controller {
             ->with('videoTitle' , $video)
             ->with('images' , $images)
             ->with('video', $video)
-            ->with('videoId', $videoId);
+            ->with('videoId', $videoId)
+            ->with('categories', $categories);
     }
 
 
