@@ -245,8 +245,14 @@
                         <input type="text" class="form-control" id="vimeoid" name="vimeoid" value="{{substr($video->video, 8)}}" placeholder="Vimeo video ID">
                     </div>
           		</fieldset><!-- fieldset -->
-                <iframe src="https://player.vimeo.com/video/{{$videoId}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div><!-- col-md-6 --> 
+
+
+            <div class="col-md-12">
+              <iframe src="https://player.vimeo.com/video/{{$videoId}}" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div><!-- col-md-12 --> 
+
+
  
           	<input type="hidden" id="video_id" value="{{$video->id}}">
           </div><!-- row --> 
