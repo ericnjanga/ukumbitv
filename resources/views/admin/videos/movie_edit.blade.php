@@ -248,7 +248,8 @@
             </div><!-- col-md-6 --> 
 
 
-            <div class="col-md-12">
+            <div class="blk col-md-12 mb35">
+							<legend>Video Preview</legend>
               <iframe src="https://player.vimeo.com/video/{{$videoId}}" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div><!-- col-md-12 --> 
 
