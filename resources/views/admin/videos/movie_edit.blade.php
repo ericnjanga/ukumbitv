@@ -247,11 +247,13 @@
           		</fieldset><!-- fieldset -->
             </div><!-- col-md-6 --> 
 
-
-            <fieldset class="blk col-md-12 mb35">
-							<legend>Video Preview</legend>
-              <iframe src="https://player.vimeo.com/video/{{$videoId}}" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </fieldset><!-- col-md-12 --> 
+						
+						<div class="col-md-12">
+	            <fieldset class="blk col-md-12 mb35">
+								<legend>Video Preview</legend>
+	              <iframe src="https://player.vimeo.com/video/{{$videoId}}" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	            </fieldset><!-- col-md-12 -->  
+						</div><!-- col-md-12 --> 
 
 
  
