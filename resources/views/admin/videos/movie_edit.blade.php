@@ -23,11 +23,7 @@
     <div class="col-lg-12"> 
       <div class="box tab-content tab-content-movie-edit"> 
         <form id="video-upload" method="POST" enctype="multipart/form-data" role="form" action="{{route('admin.save.movie')}}"> 
-          <div class="row">
-
-
-
-
+          <div class="row"> 
             <input type="hidden" value="1" name="ajax_key">
 						
 						<!-- select video type -->
