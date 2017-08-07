@@ -4,6 +4,10 @@ use Illuminate\Database\Eloquent\Model;
 use DB;
 class AdminVideo extends Model
 {
+    public function movieProducer()
+    {
+        return $this->hasOne('App\MovieProducer');
+    }
     public function videoimage()
     {
         return $this->hasOne('App\Videoimage');

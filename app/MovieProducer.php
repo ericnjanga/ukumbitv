@@ -11,4 +11,9 @@ class MovieProducer extends Model
     protected $fillable = [
         'name', 'royalties', 'contract_expiration', 'producer_agent_id', 'email', 'password', 'description'
     ];
+
+    public function adminVideos()
+    {
+        return $this->hasMany('App\AdminVideo');
+    }
 }

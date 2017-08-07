@@ -158,7 +158,7 @@
 
 	                <select required id="producer" name="producer_id" class="form-control">
 	                    @foreach($producers as $producer)
-	                        <option value="{{$producer->id}}">{{$producer->name}}</option>
+	                        <option value="{{$producer->id}}" @if($video->movie_producer_id == $producer->id) selected @endif>{{$producer->name}}</option>
 	                    @endforeach
 	                </select>
 	              </div>
@@ -386,6 +386,7 @@
             fd.append('video_type', $("input[name=video-type]:checked").val());
             fd.append('tags', tags);
             fd.append('vimeoid', $('#vimeoid').val());
+            fd.append('producer', $('#producer').val());
 
             //fd.append('images', dropImages.join(';'));
             var progressBar = $('#progressbar');

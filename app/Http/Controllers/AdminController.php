@@ -1182,7 +1182,9 @@ class AdminController extends Controller
         $videos = AdminVideo::leftJoin('categories' , 'admin_videos.category_id' , '=' , 'categories.id')
                     ->leftJoin('sub_categories' , 'admin_videos.sub_category_id' , '=' , 'sub_categories.id')
                     ->leftJoin('genres' , 'admin_videos.genre_id' , '=' , 'genres.id')
-                    ->select('admin_videos.id as video_id' ,'admin_videos.title' , 
+                    ->leftJoin('movie_producers' , 'admin_videos.movie_producer_id' , '=' , 'movie_producers.id')
+                    ->leftJoin('producer_agents' , 'movie_producers.producer_agent_id' , '=' , 'producer_agents.id')
+                    ->select('admin_videos.id as video_id' ,'admin_videos.title' ,
                              'admin_videos.description' , 'admin_videos.ratings' , 
                              'admin_videos.reviews' , 'admin_videos.created_at as video_date' ,
                              'admin_videos.default_image',
@@ -1199,11 +1201,13 @@ class AdminController extends Controller
                              'admin_videos.status','admin_videos.uploaded_by',
                              'admin_videos.edited_by','admin_videos.is_approved',
                             'admin_videos.watchid',
+                        'movie_producers.name as producer_name',
+                        'producer_agents.name as agent_name',
                              'categories.name as category_name' , 'sub_categories.name as sub_category_name' ,
                              'genres.name as genre_name')
                     ->orderBy('admin_videos.created_at' , 'desc')
                     ->get();
-
+        //dd($videos);
         return view('admin.videos.videos')->with('videos' , $videos)
                     ->withPage('videos')
                     ->with('sub_page','view-videos');

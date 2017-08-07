@@ -36,8 +36,8 @@
 								      	<td>{{$i+1}}</td>
 											<td>{{substr($video->title , 0,25)}}...</td>
 								      	<td>{{$video->category_name}}</td>
-								      	<td>Movie Producer name</td>
-								      	<td>Producer Agent</td>
+								      	<td>{{$video->producer_name}}</td>
+								      	<td>{{$video->agent_name}}</td>
 								      	{{--@if(Setting::get('theme') == 'default')--}}
 								      	{{--<td>--}}
 								      		{{--@if($video->is_home_slider == 0 && $video->is_approved && $video->status)--}}
