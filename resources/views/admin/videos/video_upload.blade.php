@@ -370,7 +370,7 @@
 
     <script src="{{asset('admin-css/plugins/iCheck/icheck.min.js')}}"></script>
 
-    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script src="https://malsup.github.com/jquery.form.js"></script>
 
     
     <script type="text/javascript">

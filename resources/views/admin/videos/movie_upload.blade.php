@@ -375,7 +375,7 @@
     {{--<script src="{{asset('packages/dropzone/dropzone.js')}}"></script>--}}
     {{--<script src="{{asset('packages/dropzone/dropzone-config.js')}}"></script>--}}
 
-    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script src="https://malsup.github.com/jquery.form.js"></script>
 
 
     <script type="text/javascript">
