@@ -206,6 +206,19 @@
 						    { "width": "10%" }
 						  ]
 						} );
+            $('#table-payplansview').DataTable({
+                "columns": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    { "width": "10%" }
+                ]
+            } );
 
 
       //       $("#example1").DataTable();
@@ -250,7 +263,11 @@
           }
           else if (page_url.indexOf('movie-producer') > -1 || page_url.indexOf('movie-producers') > -1){
           	var $menu_item = $('#sidebar-menu > #movie_producers'); 
-          } 
+          }
+          else if (page_url.indexOf('payment-plan') > -1 || page_url.indexOf('payment-plans') > -1){
+            var $menu_item = $('#sidebar-menu > #payment_plans');
+            console.log($menu_item.data());
+          }
 
           //Assig link values
           if($menu_item!==undefined && $menu_item.length > 0){ 

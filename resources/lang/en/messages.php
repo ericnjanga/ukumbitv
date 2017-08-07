@@ -530,6 +530,11 @@ return array(
     'add_director' => 'Add director',
     'view_directors' => 'View directors',
 
+    //payment plans
+    'pay_plans' => 'Payment plans',
+    'add_pay_plan' => 'Add payment plan',
+    'view_pay_plans' => 'View payment plans',
+
     //langs
     'langs' => 'Languages',
     'add_lang' => 'Add language',

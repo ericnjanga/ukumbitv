@@ -342,6 +342,14 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('edit-lang/{id}', ['as' => 'edit-lang', 'uses' =>'AdminController@editLang']);
     Route::post('edit-lang/update-lang', 'AdminController@updateLang')->name('admin.update.lang');
 
+    //payment plans
+    Route::get('/payment-plans', 'AdminController@payPlans')->name('admin.pay-plans');
+    Route::get('/add/payment-plan', 'AdminController@addPayPlan')->name('admin.add.pay-plan');
+    Route::post('add/create-payment-plan', ['as' => 'create-payment-plan', 'uses' =>'AdminController@createPayPlan']);
+    Route::post('delete-payment-plan', ['as' => 'delete-payment-plan', 'uses' =>'AdminController@deletePayPlan']);
+    Route::get('edit-payment-plan/{id}', ['as' => 'edit-payment-plan', 'uses' =>'AdminController@editPayPlan']);
+    Route::post('edit-payment-plan/update-payment-plan', 'AdminController@updatePayPlan')->name('admin.update.pay-plan');
+
     //producer agent
     Route::get('/producer-agents', 'AdminController@producerAgents')->name('admin.producer-agents');
     Route::get('/add/producer-agent', 'AdminController@addProducerAgent')->name('admin.add.producer-agent');

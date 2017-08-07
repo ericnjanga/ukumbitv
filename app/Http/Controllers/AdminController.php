@@ -6,6 +6,7 @@ use App\Actor;
 use App\Director;
 use App\Lang;
 use App\MovieProducer;
+use App\PaymentPlan;
 use App\ProducerAgent;
 use App\Tag;
 use App\Videoimage;
@@ -101,7 +102,6 @@ class AdminController extends Controller
     }
 
     public function dashboard() {
-
 
         $admin = Admin::first();
 
@@ -1597,6 +1597,65 @@ class AdminController extends Controller
     }
 
     public function updateLang(Request $request)
+    {
+        $lang = Lang::find($request->id);
+        $lang->title = $request->name;
+
+
+        $lang->save();
+
+
+        return response()->json($lang);
+
+    }
+
+    //payment plans
+    public function payPlans(Request $request) {
+
+        $pay_plans = PaymentPlan::all();
+
+        return view('admin.payment_plans.payment_plans')->with('pay_plans' , $pay_plans)
+            ->withPage('payment_plans');
+            //->with('sub_page','view-payment_plans');
+
+    }
+
+    public function addPayPlan(Request $request) {
+
+        return view('admin.paymen_plans.payment_plan_upload')
+            ->withPage('langs');
+
+    }
+
+    public function createPayPlan(Request $request)
+    {
+        $lang = new Lang();
+        $lang->title = $request->title;
+        $lang->save();
+
+        return response()->json($lang);
+    }
+
+    public function deletePayPlan(Request $request)
+    {
+        $lang = Lang::find($request->id);
+        $lang->delete();
+
+
+        return response()->json(['success'=>'Language deleted']);
+    }
+
+    public function editPayPlan($id)
+    {
+        $lang = Lang::find($id);
+
+
+        return view('admin.langs.edit-lang')
+            ->with('lang', $lang)
+            ->with('page', 'lang');
+    }
+
+    public function updatePayPlan(Request $request)
     {
         $lang = Lang::find($request->id);
         $lang->title = $request->name;
