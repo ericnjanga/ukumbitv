@@ -8,7 +8,7 @@ $(function () {
   //......................................................
   //......................................................
   var page_url = document.location.href,
-  		$btn_qc1 = $('#btn-qc-add');
+  		$btn_qc1 = $('#btn-qc-add'),
   		$btn_qc2 = $('#btn-qc-view');
 
 	if (page_url.indexOf('user') > -1 || page_url.indexOf('users') > -1){
