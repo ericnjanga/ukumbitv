@@ -9,6 +9,28 @@ page-login
 @endsection
 
 
+<style>
+	body {
+		    background-image: url(https://agora-file-storage-prod.s3.amazonaws.com/workplace/attachment/12513…H6S7YUFH752A&Expires=1502148785&Signature=pJ6QKgEoHpE%2FFPNlZuRGhTCRZyw%3D);
+    background-size: cover;
+	}
+</style>
+
+
+
+
+<div class="fb-login">
+				@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
+          <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
+             <input type="hidden" value="facebook" name="provider" id="provider"> 
+             <button type="submit" class="btn-link">
+              <i class="fa fa-facebook-official" aria-hidden="true"></i>
+              {{trans('messages.login_via_fb')}}
+            </button> 
+          </form>
+		    @endif 
+      </div> 
+
 <!--
 <div class="main-content">
   <div class="rectangle frosting-glass">
@@ -97,5 +119,7 @@ page-login
 @endsection
 
 @section('scripts')
+<!--
   <script src="{{asset('streamtube/js/app.unauth.decor.js')}}"></script>
+-->
 @endsection
