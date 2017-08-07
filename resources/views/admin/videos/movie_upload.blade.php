@@ -53,7 +53,13 @@
 		            	<li class="mr20">
 		            		<label class="radio-inline">
 		            			<input type="radio" name="video-type" id="video-type-episode" value="episode"> 
-		            			Episode
+		            			Web Serie
+		            		</label>
+		            	</li>
+		            	<li class="mr20">
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-type" id="video-type-episode" value="episode"> 
+		            			Documentary
 		            		</label>
 		            	</li>
 		            </ul><!-- col-md-12 --> 
