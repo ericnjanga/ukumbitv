@@ -14,9 +14,13 @@ Select payment plan
 			<div class="col-md-4">
 				<h2>Plan name: {{$payPlan->name}}</h2>
 				<p>Price: ${{$payPlan->price}}</p>
+				<p>Description: {{$payPlan->description}}</p>
 				<br>
 				<h3>Products:</h3>
-				<p>1. {{$payPlan->product1}}</p>
+				<p>{{$payPlan->product1}}</p>
+				<p>{{$payPlan->product2}}</p>
+				<p>{{$payPlan->product3}}</p>
+				<p>{{$payPlan->product4}}</p>
 				<a href="#" class="btn btn-primary">
 					Select plan
 				</a>
