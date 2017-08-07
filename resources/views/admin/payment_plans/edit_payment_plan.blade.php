@@ -15,7 +15,7 @@
     <div class="row"> 
     	<div class="col-lg-12"> 
       	<div class="box tab-content tab-content-planedit">  
-          <form class="form-horizontal" method="POST" enctype="multipart/form-data" role="form"> 
+          <form method="POST" enctype="multipart/form-data" role="form"> 
             <div class="row">
               <input type="hidden" id="payplanid" name="id" value="{{$payPlan->id}}">
  
