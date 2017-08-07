@@ -49,25 +49,28 @@
 	 
 	            <!-- Right column -->
 	          	<div class="col-md-6">
-	              <div class="form-group">
-	                  <label for="product1" class="">Product 1 *</label>
-	                  <textarea  style="overflow:auto;resize:none" class="form-control" required rows="2" cols="50" id="product1" name="product1">{{$payPlan->product1}}</textarea>
-	              </div>
+	          		<fieldset class="blk col-md-12 mb35">
+									<legend>Basic Information</legend>
+		              <div class="form-group">
+		                  <label for="product1" class="">Product 1 *</label>
+		                  <textarea  style="overflow:auto;resize:none" class="form-control" required rows="2" cols="50" id="product1" name="product1">{{$payPlan->product1}}</textarea>
+		              </div>
 
-	              <div class="form-group">
-	                  <label for="product2" class="">Product 2</label>
-	                  <textarea  style="overflow:auto;resize:none" class="form-control" rows="2" cols="50" id="product2" name="product2">{{$payPlan->product2}}</textarea>
-	              </div>
+		              <div class="form-group">
+		                  <label for="product2" class="">Product 2</label>
+		                  <textarea  style="overflow:auto;resize:none" class="form-control" rows="2" cols="50" id="product2" name="product2">{{$payPlan->product2}}</textarea>
+		              </div>
 
-	              <div class="form-group">
-	                  <label for="product3" class="">Product 3</label>
-	                  <textarea  style="overflow:auto;resize:none" class="form-control" rows="2" cols="50" id="product3" name="product3">{{$payPlan->product3}}</textarea>
-	              </div>
+		              <div class="form-group">
+		                  <label for="product3" class="">Product 3</label>
+		                  <textarea  style="overflow:auto;resize:none" class="form-control" rows="2" cols="50" id="product3" name="product3">{{$payPlan->product3}}</textarea>
+		              </div>
 
-	              <div class="form-group">
-	                  <label for="product4" class="">Product 4</label>
-	                  <textarea  style="overflow:auto;resize:none" class="form-control" rows="2" cols="50" id="product4" name="product4">{{$payPlan->product4}}</textarea>
-	              </div>
+		              <div class="form-group">
+		                  <label for="product4" class="">Product 4</label>
+		                  <textarea  style="overflow:auto;resize:none" class="form-control" rows="2" cols="50" id="product4" name="product4">{{$payPlan->product4}}</textarea>
+		              </div>
+	          		</fieldset><!-- fieldset -->
 	          	</div>
 	          	<!-- Right column -->
 
