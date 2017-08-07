@@ -64,7 +64,7 @@
                 </a>
             </li>
 
-                <li id="payment_plans" data-btn-add="{{route('admin.add.pay-plans')}}" data-btn-view="{{route('admin.pay-plans')}}">
+                <li id="payment_plans" data-btn-add="{{route('admin.add.pay-plan')}}" data-btn-view="{{route('admin.pay-plans')}}">
                     <a href="{{route('admin.pay-plans')}}">
                         <i class="fa fa-credit-card"></i> <span>{{tr('pay_plans')}}</span>
                     </a>
