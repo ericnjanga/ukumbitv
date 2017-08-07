@@ -177,7 +177,7 @@
 	              </div>
 
 	              <div class="form-group"> 
-	                <label for="director" class="">Select directors *</label>
+	                <label for="director" class="">Select The Director *</label>
 
 	                <select multiple required id="director" name="director_id" class="form-control">
 	                    @foreach($directors as $director)

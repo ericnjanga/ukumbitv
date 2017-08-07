@@ -170,7 +170,7 @@
 	              </div>
 
 	              <div class="form-group"> 
-	                <label for="director" class="">Select directors *</label> 
+	                <label for="director" class="">Select The Director *</label> 
                   <select multiple required id="director" name="director_id" class="form-control" style="height:100px;">
                       @foreach($directors as $director)
                           <option value="{{$director->id}}" @foreach($dirarr as $dira) @if($dira == $director->id) selected @endif @endforeach>{{$director->name}}</option>
