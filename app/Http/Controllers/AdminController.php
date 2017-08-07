@@ -1622,49 +1622,61 @@ class AdminController extends Controller
 
     public function addPayPlan(Request $request) {
 
-        return view('admin.paymen_plans.payment_plan_upload')
-            ->withPage('langs');
+        return view('admin.payment_plans.payment_plan_upload')
+            ->withPage('payment_plan');
 
     }
 
     public function createPayPlan(Request $request)
     {
-        $lang = new Lang();
-        $lang->title = $request->title;
-        $lang->save();
+        $payPlan = new PaymentPlan();
+        $payPlan->name = $request->name;
+        $payPlan->price = money_format('%i', $request->price);
+        $payPlan->description = $request->description;
+        $payPlan->product1 = $request->product1;
+        $payPlan->product2 = $request->product2;
+        $payPlan->product3 = $request->product3;
+        $payPlan->product4 = $request->product4;
+        $payPlan->save();
 
-        return response()->json($lang);
+        return response()->json($payPlan);
     }
 
     public function deletePayPlan(Request $request)
     {
-        $lang = Lang::find($request->id);
-        $lang->delete();
+        $payPlan = PaymentPlan::find($request->id);
+        $payPlan->delete();
 
 
-        return response()->json(['success'=>'Language deleted']);
+        return response()->json(['success'=>'Payment plan deleted']);
     }
 
     public function editPayPlan($id)
     {
-        $lang = Lang::find($id);
+        $payPlan = PaymentPlan::find($id);
 
 
-        return view('admin.langs.edit-lang')
-            ->with('lang', $lang)
-            ->with('page', 'lang');
+        return view('admin.payment_plans.edit_payment_plan')
+            ->with('payPlan', $payPlan)
+            ->with('page', 'payPlan');
     }
 
     public function updatePayPlan(Request $request)
     {
-        $lang = Lang::find($request->id);
-        $lang->title = $request->name;
+        $payPlan = PaymentPlan::find($request->id);
+        $payPlan->name = $request->name;
+        $payPlan->price = money_format('%i', $request->price);
+        $payPlan->description = $request->description;
+        $payPlan->product1 = $request->product1;
+        $payPlan->product2 = $request->product2;
+        $payPlan->product3 = $request->product3;
+        $payPlan->product4 = $request->product4;
 
 
-        $lang->save();
+        $payPlan->save();
 
 
-        return response()->json($lang);
+        return response()->json($payPlan);
 
     }
 

@@ -266,7 +266,6 @@
           }
           else if (page_url.indexOf('payment-plan') > -1 || page_url.indexOf('payment-plans') > -1){
             var $menu_item = $('#sidebar-menu > #payment_plans');
-            console.log($menu_item.data());
           }
 
           //Assig link values

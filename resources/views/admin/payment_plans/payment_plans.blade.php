@@ -43,7 +43,7 @@
                   <td>{{$pay_plan->product3}}</td>
                   <td>{{$pay_plan->product4}}</td>
                   <td>
-                      <a href="edit-pay-plan/{{$pay_plan->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                      <a href="edit-payment-plan/{{$pay_plan->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                       <button class="btn btn-danger" onclick="return confirmDelete({{$pay_plan->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
                   </td>
               </tr> 
@@ -71,14 +71,14 @@
 
                 $.ajax({
                     type: 'POST',
-                    url: 'delete-lang',
+                    url: 'delete-payment-plan',
                     contentType: false,
                     processData: false,
                     data: fd,
                     dataType: 'html',
                     success: function(data){
                         var rep = JSON.parse(data);
-                        alert('Language successful deleted!'+id);
+                        alert('Payment paln successful deleted!'+id);
                         $('#row'+id).css('display', 'none');
                     },
                     error: function (data) {
