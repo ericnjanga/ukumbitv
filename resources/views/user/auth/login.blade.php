@@ -9,12 +9,6 @@ page-login
 @endsection
 
 
-<style>
-	body {
-		    background-image: url(https://agora-file-storage-prod.s3.amazonaws.com/workplace/attachment/12513…H6S7YUFH752A&Expires=1502148785&Signature=pJ6QKgEoHpE%2FFPNlZuRGhTCRZyw%3D);
-    background-size: cover;
-	}
-</style>
 
 
 
