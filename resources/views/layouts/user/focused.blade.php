@@ -40,29 +40,17 @@
 	<body class="@yield('body-class')"> 
 
 
+ 
 
-<style>
-	body {
-		    background-image: url(https://agora-file-storage-prod.s3.amazonaws.com/workplace/attachment/12513…H6S7YUFH752A&Expires=1502148785&Signature=pJ6QKgEoHpE%2FFPNlZuRGhTCRZyw%3D);
-    background-size: cover;
-	}
-</style>
-
-
-@include('layouts.user.focused-nav')
-		 @yield('content')
-
-
-<!--
-    
-      --> 
+		@include('layouts.user.focused-nav')
+		@yield('content')
     @include('layouts.user.footer') 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- background images slider
+    <!-- background images slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>  
-     -->
+    
     @yield('scripts')
 	</body>
 </html>
