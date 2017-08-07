@@ -67,6 +67,7 @@ body {
   background: #fff;
   line-height: 1.15;
 }
+
 #app {
   display: -webkit-box;
   display: -webkit-flex;
@@ -81,6 +82,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 header {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -98,4 +100,33 @@ main {
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+}
+
+input, textarea, keygen, select, button {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+}
+
+button {
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+ul {
+  li {
+    list-style-type: none;
+  }
 }
