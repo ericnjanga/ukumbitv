@@ -175,10 +175,7 @@
     <script src="{{asset('admin-resources/js/admin-sidebar-nav.js')}}"></script>
     <script src="{{asset('admin-resources/js/admin-datatables.js')}}"></script>
 
-    <!-- page script -->
-    <script>
-    </script>
-
+     
     @yield('scripts')
 
     <script type="text/javascript">

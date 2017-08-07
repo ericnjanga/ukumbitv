@@ -23,11 +23,12 @@
                   <th>Name</th>
                   <th>Price</th>
                   <th>Description</th>
-                  <th>Product 1</th>
+                  <!-- <th>Product 1</th>
                   <th>Product 2</th>
                   <th>Product 3</th>
                   <th>Product 4</th>
-                  <th>{{tr('action')}}</th>
+                   -->
+                   <th>{{tr('action')}}</th>
               </tr>
             </thead>
 
@@ -38,10 +39,10 @@
                   <td>{{$pay_plan->name}}</td>
                   <td>{{$pay_plan->price}}</td>
                   <td>{{$pay_plan->description}}</td>
-                  <td>{{$pay_plan->product1}}</td>
+                  <!-- <td>{{$pay_plan->product1}}</td>
                   <td>{{$pay_plan->product2}}</td>
                   <td>{{$pay_plan->product3}}</td>
-                  <td>{{$pay_plan->product4}}</td>
+                  <td>{{$pay_plan->product4}}</td> -->
                   <td>
                       <a href="edit-payment-plan/{{$pay_plan->id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                       <button class="btn btn-danger" onclick="return confirmDelete({{$pay_plan->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
