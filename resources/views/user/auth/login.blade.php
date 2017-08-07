@@ -9,6 +9,7 @@ page-login
 @endsection
 
 
+<!--
 <div class="main-content">
   <div class="rectangle frosting-glass">
 
@@ -37,8 +38,7 @@ page-login
     <form role="form" method="POST" action="{{ url('/login') }}">
 
     	{{-- [email] for group --}}
-      <div class="form-group">
-          <!-- <label for="email">{{trans('messages.email')}}</label> -->
+      <div class="form-group"> 
           <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="{{trans('messages.email')}}">
       </div>
 
@@ -50,8 +50,7 @@ page-login
         <strong>{{ $errors->first('password') }}</strong> 
       </div>
       @endif 
-      <div class="form-group">
-        <!-- <label for="password">{{trans('messages.password')}}</label> -->
+      <div class="form-group"> 
         <input type="password" name="password" class="form-control" id="password" placeholder="{{trans('messages.password')}}"> 
       </div>
 
@@ -91,9 +90,9 @@ page-login
    
     
 
-  </div><!-- rectangle -->    
-</div><!-- main-content -->
-
+  </div>
+</div>
+-->
 
 @endsection
 
