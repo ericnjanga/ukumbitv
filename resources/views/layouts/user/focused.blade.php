@@ -39,19 +39,14 @@
 
 	<body class="@yield('body-class')"> 
 
-		<h1>????</h1>
-		<h1>????</h1>
-		<h1>????</h1>
-		<h1>????</h1>
-		<h1>????</h1>
-		<h1>????</h1>
-		<h1>????</h1>
-		
+		 
+<!--
     @include('layouts.user.focused-nav')
 
     @yield('content')
 
     @include('layouts.user.footer') 
+  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- background images slider -->
