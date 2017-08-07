@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\AdminVideo;
+use App\PaymentPlan;
 use App\UserHistory;
 use App\Videoimage;
 use Illuminate\Http\Request;
@@ -946,5 +947,14 @@ class UserController extends Controller {
                     ->with('page' , 'profile')
                     ->with('subPage' , 'user-profile')
                     ->with('videos', $videos);
+    }
+
+    //Payment plans
+
+    public function selectPayPlan()
+    {
+        $payPlans = PaymentPlan::all();
+        return view('user.select_payment_plan')
+            ->with('payPlans', $payPlans);
     }
 }

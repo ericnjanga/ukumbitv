@@ -70,7 +70,7 @@
 		 						<b>Plan B</b>
 		 					</div>
 		 					<div class="col-md-6 text-right">
-		 						<a href="#">{{trans('messages.change_plan')}}</a>
+		 						<a href="{{route('user.select-pay-plan')}}">{{trans('messages.change_plan')}}</a>
 		 					</div>
 		 				</div>
 		 			</div> 

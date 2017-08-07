@@ -349,6 +349,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::post('delete-payment-plan', ['as' => 'delete-payment-plan', 'uses' =>'AdminController@deletePayPlan']);
     Route::get('edit-payment-plan/{id}', ['as' => 'edit-payment-plan', 'uses' =>'AdminController@editPayPlan']);
     Route::post('edit-payment-plan/update-payment-plan', 'AdminController@updatePayPlan')->name('admin.update.pay-plan');
+    Route::get('select-payment-plan', 'UserController@selectPayPlan')->name('user.select-pay-plan');
 
     //producer agent
     Route::get('/producer-agents', 'AdminController@producerAgents')->name('admin.producer-agents');
