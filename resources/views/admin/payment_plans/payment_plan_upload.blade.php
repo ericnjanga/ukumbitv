@@ -33,16 +33,22 @@
  -->
   <div class="row">
     <div class="col-lg-12"> 
-      <div class="box tab-content tab-content-langadd"> 
+      <div class="box tab-content tab-content-planadd">  
         <form id="lang-upload" method="POST" enctype="multipart/form-data" role="form">
         	<div class="row">
 
-	          <div class="form-group col-sm-12">
-	            <input type="hidden" value="1" name="ajax_key">
-	            <label for="name" class="">Name * </label>
-	            <input type="text" required class="form-control" id="name" name="name" placeholder="Name">
-	          </div>
 
+ 
+            <!-- Left column -->
+          	<div class="col-md-6">
+          		<fieldset class="blk col-md-12 mb35">
+								<legend>Basic Information</legend>
+			          <div class="form-group">
+			            <input type="hidden" value="1" name="ajax_key">
+			            <label for="name" class="">Name * </label>
+			            <input type="text" required class="form-control" id="name" name="name" placeholder="Name">
+			          </div>
+ 
                 <div class="form-group col-sm-12">
                     <label for="price" class="">Price $ * </label>
                     <input type="number" required class="form-control" id="price" name="price" placeholder="Price $">
@@ -52,6 +58,16 @@
                     <label for="description" class="">Description </label>
                     <textarea  style="overflow:auto;resize:none" class="form-control" required rows="4" cols="50" id="description" name="description"></textarea>
                 </div>
+							</fieldset><!-- fieldset -->
+          	</div>
+          	<!-- Left column -->
+
+
+ 
+            <!-- Right column -->
+          	<div class="col-md-6">
+          		<fieldset class="blk col-md-12 mb35">
+								<legend>List of products</legend>
 
                 <div class="form-group col-sm-12">
                     <label for="product1" class="">Product 1 *</label>
@@ -72,6 +88,12 @@
                     <label for="product4" class="">Product 4</label>
                     <textarea  style="overflow:auto;resize:none" class="form-control" required rows="2" cols="50" id="product4" name="product4"></textarea>
                 </div>
+							</fieldset><!-- fieldset -->
+          	</div>
+          	<!-- Right column -->
+
+
+
 
         	</div> <!-- row -->   
         </form> 
