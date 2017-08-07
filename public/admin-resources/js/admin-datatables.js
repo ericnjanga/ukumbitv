@@ -38,10 +38,10 @@ $(function () {
             null,
             null,
             null,
-            null,
-            null,
-            null,
-            null,
+            // null,
+            // null,
+            // null,
+            // null,
             { "width": "10%" }
         ]
     } );
