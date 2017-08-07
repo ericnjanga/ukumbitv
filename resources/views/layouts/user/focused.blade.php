@@ -39,11 +39,13 @@
 
 	<body class="@yield('body-class')"> 
 
+		 @yield('content')
+
 		 
 <!--
     @include('layouts.user.focused-nav')
 
-    @yield('content')
+    
 
     @include('layouts.user.footer') 
   -->
