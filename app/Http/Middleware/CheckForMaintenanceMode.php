@@ -27,7 +27,7 @@ class CheckForMaintenanceMode
     public function handle($request, Closure $next)
     {
 
-        if (Auth::check() || $request->is('social') || $request->is('callback/*') || $request->is('/')) {
+        if (Auth::check() || $request->is('social') || $request->is('callback/*')) {
             return $next($request);
         }
         throw new HttpException(503);
