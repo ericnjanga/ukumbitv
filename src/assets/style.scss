@@ -236,6 +236,32 @@ ul {
   }
 }
 
+.butn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 0 5px;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.butn-orange{
+  background-color: #eeb33d;
+  color: #343436;
+  &:hover{
+    border: 2px solid #eeb33d;
+    background-color: transparent;
+    color:  #eeb33d;
+  }
+}
 .header-wrap{
   background-color: #eeeeee;
 }
@@ -396,6 +422,7 @@ img{
   border: 1px solid #e8e6e9;
   background-color: #ffffff;
   overflow: auto;
+  z-index: 10;
 }
 .search-list{
   li{
@@ -419,7 +446,7 @@ img{
   right: 15px;
   width: 215px;
   padding: 10px 0 0 0;
-  z-index: 2;
+  z-index: 10;
 }
 .account-list{
   background-color: #fff;
@@ -547,6 +574,126 @@ img{
     color: #424242;
     &:hover{
       cursor: default;
+    }
+  }
+}
+.layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.35);
+  z-index: -1;
+}
+.upper{
+  text-transform: uppercase;
+}
+.main-top-block{
+  position: relative;
+  height: 360px;
+  padding: 37px 39px;
+  img{
+    width: 100%;
+    height: 360px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+.main-wrap{
+  margin: 30px 0;
+}
+.video-info-block{
+  .video-title{
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0 0 10px 0;
+  }
+  .video-info-text{
+    margin: 0 0 5px 0;
+    width: 40%;
+    .age{
+      color: #424242;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 20px;
+      display: inline-block;
+      background-color: #f58e4b;
+      padding: 0 10px;
+      margin: 0 3px 0 0;
+    }
+    .date{
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      display: inline-block;
+      margin: 0 3px 0 0;
+    }
+    .genre{
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      display: inline-block;
+    }
+  }
+  .series-text{
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    margin: 0 0 10px 0;
+    min-height: 40px;
+  }
+  .actors-block{
+    margin: 0 0 10px 0;
+    min-height: 120px;
+    width: 40%;
+    .actors-title{
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 14px;
+      margin: 0 0 8px 0;
+    }
+    .actors-list{
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 19px;
+    }
+  }
+  .butn-block{
+    .butn-orange{
+      width: 160px;
+    }
+    .butn-play{
+      width: 95px;
+      margin: 0 27px 0 0;
+      .icon{
+        font-size: 18px;
+        display: inline-block;
+        margin: 0 1px 0 0;
+        position: relative;
+        top: 2px;
+      }
+    }
+    .butn-share{
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 19px;
+    }
+    .butn-like{
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 19px;
     }
   }
 }
