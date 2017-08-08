@@ -3,6 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Contracts\Foundation\Application;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Setting;
 
 /**
@@ -11,6 +13,13 @@ use Setting;
  */
 class VerifyUser
 {
+
+    protected $app;
+
+    public function __construct(Application $app)
+    {
+        $this->app = $app;
+    }
     //List of paths allowed to access while user not logged in
     private $allowed_paths = ['login', 'register', 'social', 'callback/facebook',
         'admin', 'email', 'setlocale', 'setlocale/fr', 'setlocale/en', 'about-us',
@@ -33,7 +42,7 @@ class VerifyUser
                 return redirect(route('user.login.form'))->with('flash_error', trans('messages.email_verify_alert'));
             }
             //Get if user made subscription payment
-            if (!$user->userPaymentExpieryDateValid($user) && ($request->is('video/*') || $request->is('newvideo/*'))) { 
+            if (!$user->userPaymentExpieryDateValid($user) && ($request->is('video/*') || $request->is('newvideo/*'))) {
                 //!$request->is('payment') && !$request->is('logout') && !$request->is('paypal/*')
                 return redirect(route('user.userpayment'))->with('flash_warning', tr('make_paypal_subscription'));
             }
@@ -43,7 +52,7 @@ class VerifyUser
                 return redirect(route('user.login.form'));
             }
         }
-        
+
         return $next($request);
     }
 }

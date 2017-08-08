@@ -40,7 +40,22 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Be right back.</div>
+                <div class="title">Coming soon.</div>
+
+                <footer class="text-center">
+                    <div class="fb-login">
+                        @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
+                            <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
+                                <input type="hidden" value="facebook" name="provider" id="provider">
+                                <button type="submit" class="btn-link">
+                                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                    {{trans('messages.login_via_fb')}}
+                                </button>
+                            </form>
+                        @endif
+                    </div>
+
+                </footer>
             </div>
         </div>
     </body>
