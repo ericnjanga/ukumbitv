@@ -1,7 +1,7 @@
 <template>
     <div class="header-wrap">
         <header>
-            <section class="main-header">
+            <div class="main-header">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-sm-2">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </header>
     </div>
 
