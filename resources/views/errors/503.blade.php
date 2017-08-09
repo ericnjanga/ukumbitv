@@ -7,40 +7,48 @@
 
         <style>
             html, body {
-                height: 100%;
+              height: 100%;
             }
 
             body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #333;
-                display: table;
-                /*font-weight: 100;*/
-                font-family: 'Lato';
-                background-size: cover;
-                background-image: url("{{asset('streamtube/images/bg-youtube.jpg')}}");
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              color: #333;
+              display: table;
+              /*font-weight: 100;*/
+              font-family: 'Lato';
+              background-size: cover;
+              background-image: url("{{asset('streamtube/images/bg-youtube.jpg')}}");
             }
 
             .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: top;
+              text-align: center;
+              display: table-cell;
+              vertical-align: top;
             }
 
             .content {
-                text-align: center;
-                display: inline-block;
+              text-align: center;
+              display: inline-block;
             }
 
             .title {
             	margin-top: 20px;
-                font-size: 30px;
-                    text-transform: uppercase;
-                /*margin-bottom: 40px;*/
+              font-size: 30px;
+              text-transform: uppercase; 
             }
-            .demo span{
+            #demo {
+            	margin: 20px;
+            	font-size: 70px;
+            }
+            #demo span{
             	color: #999;
+            }
+            .btn-link {
+            	padding: 10px;
+					    background: rgba(0,0,0,0.2);
+					    border: 0;
             }
         </style>
     </head>
@@ -50,7 +58,7 @@
                 <div class="title">Lauching soon</div>
 
                 <!-- Display the countdown timer in an element -->
-								<p id="demo" style="margin:0; font-size:50px;"></p>
+								<p id="demo"></p>
 
 
 
