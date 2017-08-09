@@ -43,7 +43,7 @@
             	font-size: 70px;
             }
             #demo span{
-            	color: #999;
+            	color: #666;
             }
             .btn-link {
             	padding: 10px;
