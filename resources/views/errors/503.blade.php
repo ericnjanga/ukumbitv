@@ -19,6 +19,7 @@
                 font-weight: 100;
                 font-family: 'Lato';
                 border:10px solid #eee;
+                background-image: url("{{asset('images/bg-youtube.jpg')}}");
             }
 
             .container {
