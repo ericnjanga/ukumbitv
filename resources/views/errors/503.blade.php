@@ -19,7 +19,8 @@
                 font-weight: 100;
                 font-family: 'Lato';
                 border:10px solid #eee;
-                background-image: url("{{asset('images/bg-youtube.jpg')}}");
+                background-size: cover;
+                background-image: url("{{asset('streamtube/images/bg-youtube.jpg')}}");
             }
 
             .container {
