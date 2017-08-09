@@ -16,7 +16,7 @@
                 width: 100%;
                 color: #B0BEC5;
                 display: table;
-                font-weight: 100;
+                /*font-weight: 100;*/
                 font-family: 'Lato';
                 background-size: cover;
                 background-image: url("{{asset('streamtube/images/bg-youtube.jpg')}}");
@@ -25,7 +25,7 @@
             .container {
                 text-align: center;
                 display: table-cell;
-                vertical-align: middle;
+                vertical-align: top;
             }
 
             .content {
@@ -34,8 +34,10 @@
             }
 
             .title {
-                font-size: 72px;
-                margin-bottom: 40px;
+            	margin-top: 20px;
+                font-size: 30px;
+                    text-transform: uppercase;
+                /*margin-bottom: 40px;*/
             }
         </style>
     </head>
@@ -62,7 +64,7 @@
 
 
                 <!-- Display the countdown timer in an element -->
-<p id="demo"></p>
+<p id="demo" style="margin:0; font-size:50px;"></p>
 
 <script>
 // Set the date we're counting down to
@@ -84,8 +86,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("demo").innerHTML = days + "<span>:</span>" + hours + "<span>:</span>" + minutes + "<span>:</span>" + seconds;
 
   // If the count down is finished, write some text 
   if (distance < 0) {
