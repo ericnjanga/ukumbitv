@@ -47,7 +47,13 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Coming soon.</div>
+                <div class="title">Lauching soon</div>
+
+                <!-- Display the countdown timer in an element -->
+								<p id="demo" style="margin:0; font-size:50px;"></p>
+
+
+
 
                 <footer class="text-center">
                     <div class="fb-login">
@@ -56,7 +62,7 @@
                                 <input type="hidden" value="facebook" name="provider" id="provider">
                                 <button type="submit" class="btn-link">
                                     <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                                    {{trans('messages.login_via_fb')}}
+                                    Admin Login
                                 </button>
                             </form>
                         @endif
@@ -66,8 +72,6 @@
 
 
 
-                <!-- Display the countdown timer in an element -->
-<p id="demo" style="margin:0; font-size:50px;"></p>
 
 <script>
 // Set the date we're counting down to
