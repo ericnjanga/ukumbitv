@@ -14,7 +14,7 @@
                 margin: 0;
                 padding: 0;
                 width: 100%;
-                color: #B0BEC5;
+                color: #333;
                 display: table;
                 /*font-weight: 100;*/
                 font-family: 'Lato';
@@ -38,6 +38,9 @@
                 font-size: 30px;
                     text-transform: uppercase;
                 /*margin-bottom: 40px;*/
+            }
+            .demo span{
+            	color: #999;
             }
         </style>
     </head>
