@@ -87,8 +87,8 @@
                                 </div>
                                 <div class="butn-block">
                                     <div class="play-block">
-                                        <a href="" class="butn butn-orange butn-play upper"><span class="icon icon-play-arrow"></span>Play</a>
-                                        <a href="" class="butn butn-orange upper">Add to list</a>
+                                        <a href="" class="butn butn-orange-dark butn-play upper"><span class="icon icon-play-arrow"></span>Play</a>
+                                        <a href="" class="butn butn-orange-dark upper">Add to list</a>
                                     </div>
                                     <div class="share-block">
                                         <a href="" class="butn-share"><span>f</span>Share</a>
