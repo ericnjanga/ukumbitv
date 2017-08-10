@@ -17,7 +17,7 @@ export default new Router({
       path: '/landing',
       name: 'landing',
       component: resolve => require(['@/components/landing'], resolve)
-    }
+    },
     {
       path: '/video',
       name: 'video',

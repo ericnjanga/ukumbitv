@@ -1,7 +1,7 @@
 <template>
     <div class="header-wrap">
 
-        <header v-if="$route.name == 'landing'">
+        <header v-if="$route.name === 'landing'">
             <div class="landing-header">
                 <div class="layer"></div>
                 <div class="container">
@@ -37,7 +37,7 @@
             </div>
         </header>
 
-        <header v-else="$route.name == 'landing'">
+        <header v-else>
             <div class="main-header">
                 <div class="container">
                     <div class="row align-items-center">

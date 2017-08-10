@@ -100,7 +100,7 @@
                         <div class="video-slider-wrap">
                             <div class="title">New Videos</div>
                             <div class="video-slider-block-wrap">
-                                <div id="slider" class="video-slider-block">
+                                <div class="video-slider-block">
                                     <div class="video-item-block">
                                         <div class="video-item">
                                             <div class="video-img">
@@ -255,7 +255,7 @@
   export default {
 
     mounted: function () {
-      $('#slider').slick({
+      $('.video-slider-block').slick({
         dots: false,
         infinite: false,
         speed: 300,
