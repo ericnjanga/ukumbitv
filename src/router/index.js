@@ -47,6 +47,72 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: resolve => require(['@/components/about'], resolve)
+    },
+    {
+      path: '/mypackage',
+      name: 'mypackage',
+      component: resolve => require(['@/components/mypackage'], resolve)
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: resolve => require(['@/components/signup'], resolve)
+    },
+    {
+      path: '/confirmmail',
+      name: 'confirmmail',
+      component: resolve => require(['@/components/confirmmail'], resolve)
+    },
+    {
+      path: '/signin',
+      name: 'signin',
+      component: resolve => require(['@/components/signin'], resolve)
+    },
+    {
+      path: '/resetpas',
+      name: 'resetpas',
+      component: resolve => require(['@/components/resetpas'], resolve)
+    },
+    {
+      path: '/checkmail',
+      name: 'checkmail',
+      component: resolve => require(['@/components/checkmail'], resolve)
+    },
+    {
+      path: '/newpas',
+      name: 'newpas',
+      component: resolve => require(['@/components/newpas'], resolve)
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: resolve => require(['@/components/contact'], resolve)
+    },
+    {
+      path: '/jobs',
+      name: 'jobs',
+      component: resolve => require(['@/components/jobs'], resolve)
+    },
+    {
+      path: '/job',
+      name: 'job',
+      component: resolve => require(['@/components/job'], resolve)
+    },
+    {
+      path: '/helpcenter',
+      name: 'helpcenter',
+      component: resolve => require(['@/components/helpcenter'], resolve)
+    },
+    {
+      path: '/help',
+      name: 'help',
+      component: resolve => require(['@/components/help'], resolve)
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: resolve => require(['@/components/privacy'], resolve)
     }
+
   ]
 })
