@@ -41,10 +41,7 @@
             #demo {
             	margin: 20px;
             	font-size: 70px;
-            }
-            #demo span{
-            	color: #666;
-            }
+            } 
             .btn-link {
             	padding: 10px;
 					    background: rgba(0,0,0,0.2);
