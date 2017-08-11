@@ -119,7 +119,7 @@
                                 </ul>
                             </div>
                             <div class="video-slider-block-wrap">
-                                <div class="video-slider-block center">
+                                <div class="video-slider-block">
                                     <div class="video-item-block">
                                         <div class="video-item video-item-dis">
                                             <div class="video-img">
@@ -346,7 +346,7 @@
                         <div class="video-slider-wrap">
                             <div class="title">Similar Videos</div>
                             <div class="video-slider-block-wrap">
-                                <div class="video-slider-block center">
+                                <div class="video-slider-block">
                                     <div class="video-item-block">
                                         <div class="video-item">
                                             <div class="video-img">
@@ -491,7 +491,7 @@
   export default {
 
     mounted: function () {
-      $('.center').slick({
+      $('.video-slider-block').slick({
         dots: false,
         infinite: false,
 //        centerMode: true,

@@ -22,6 +22,11 @@ export default new Router({
       path: '/video',
       name: 'video',
       component: resolve => require(['@/components/video'], resolve)
+    },
+    {
+      path: '/list',
+      name: 'list',
+      component: resolve => require(['@/components/list'], resolve)
     }
   ]
 })
