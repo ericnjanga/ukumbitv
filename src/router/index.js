@@ -37,6 +37,11 @@ export default new Router({
       path: '/category',
       name: 'category',
       component: resolve => require(['@/components/category'], resolve)
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: resolve => require(['@/components/search'], resolve)
     }
   ]
 })
