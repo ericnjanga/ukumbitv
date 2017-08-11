@@ -13,7 +13,7 @@ class AddGenreIdToAdminVideosTable extends Migration
     public function up()
     {
         Schema::table('admin_videos', function (Blueprint $table) {
-            DB::statement('ALTER TABLE  admin_videos CHANGE  genar_id  genre_id INT(11) NOT NULL');
+//            DB::statement('ALTER TABLE  admin_videos CHANGE  genar_id  genre_id INT(11) NOT NULL');
             DB::statement('ALTER TABLE  admin_videos CHANGE  video  video varchar(255) NOT NULL');
             DB::statement('ALTER TABLE  admin_videos CHANGE  trailer_video  trailer_video varchar(255) NOT NULL');
         });
