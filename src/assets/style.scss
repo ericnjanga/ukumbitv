@@ -2212,3 +2212,72 @@ img{
 margin: 0 0 12px 0;
   }
 }
+.page-header{
+  .logo-block{
+    text-align: center;
+  }
+  .butn-signin{
+    color: #303333;
+    &:hover {
+      color: #eeb33d;
+    }
+  }
+  .butn-free{
+    &:hover {
+      background-color: #fff;
+      border: 2px solid #303333;
+    }
+  }
+}
+.title-page{
+  color: #424242;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 26px;
+  margin: 0 0 25px 0;
+}
+.content-block{
+  margin: 40px 0 90px;
+  .img-block{
+    height: 270px;
+    width: 540px;
+    margin: 0 0 45px 0;
+    img{
+      width: 100%;
+      height: 270px;
+    }
+  }
+  p{
+    color: #757575;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+  .butn{
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+  }
+  .title-page-add{
+    color: #616161;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    margin: 0 0 7px 0;
+  }
+  .text-add{
+    color: #616161;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    text-align: center;
+    margin: 0 0 35px 0;
+  }
+  .content-block-bottom{
+    margin: 56px 0 0 0;
+    padding: 57px 0 0 0;
+    border-top: 1px solid #e0e0e0;
+  }
+}
