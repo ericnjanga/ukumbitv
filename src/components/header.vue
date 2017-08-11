@@ -71,7 +71,7 @@
                                     <a href="" class="login-upgrade">upgrade package</a>
                                 </div>
                                 <div class="img-block">
-                                    <span class="icon icon-man-user"></span>
+                                    <span class="icon icon-man-user icon-no-photo"></span>
                                     <!--<img src="~@/assets/img/no-img.png" alt="">-->
                                     <div class="account-block">
                                         <ul class="account-list">

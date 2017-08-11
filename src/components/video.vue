@@ -119,134 +119,134 @@
                                 </ul>
                             </div>
                             <div class="video-slider-block-wrap">
-                                <div class="video-slider-block">
+                                <div class="video-slider-block center">
                                     <div class="video-item-block">
-                                        <div class="video-item">
+                                        <div class="video-item video-item-dis">
                                             <div class="video-img">
                                                 <img src="~@/assets/img/video1.png" alt="">
                                             </div>
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>25
-                                                </div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>125</div>
+                                                <div class="butn-dis"><span class="icon icon-thumbs-down-hand"></span>19</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="video-item-block">
-                                        <div class="video-item">
+                                        <div class="video-item video-item-dis">
                                             <div class="video-img">
                                                 <img src="~@/assets/img/video2.png" alt="">
                                             </div>
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158
-                                                </div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>125</div>
+                                                <div class="butn-dis"><span class="icon icon-thumbs-down-hand"></span>19</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="video-item-block">
-                                        <div class="video-item">
+                                        <div class="video-item video-item-dis">
                                             <div class="video-img">
                                                 <img src="~@/assets/img/video3.png" alt="">
                                             </div>
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158
-                                                </div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>125</div>
+                                                <div class="butn-dis"><span class="icon icon-thumbs-down-hand"></span>19</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="video-item-block">
-                                        <div class="video-item">
+                                        <div class="video-item video-item-dis">
                                             <div class="video-img">
                                                 <img src="~@/assets/img/video4.png" alt="">
                                             </div>
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158
-                                                </div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>125</div>
+                                                <div class="butn-dis"><span class="icon icon-thumbs-down-hand"></span>19</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="video-item-block">
-                                        <div class="video-item">
+                                        <div class="video-item video-item-dis">
                                             <div class="video-img">
                                                 <img src="~@/assets/img/video5.png" alt="">
                                             </div>
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158
-                                                </div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>125</div>
+                                                <div class="butn-dis"><span class="icon icon-thumbs-down-hand"></span>19</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="video-item-block">
-                                        <div class="video-item">
+                                        <div class="video-item video-item-dis">
                                             <div class="video-img">
                                                 <img src="~@/assets/img/video1.png" alt="">
                                             </div>
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158
-                                                </div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>125</div>
+                                                <div class="butn-dis"><span class="icon icon-thumbs-down-hand"></span>19</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="video-item-block">
-                                        <div class="video-item">
+                                        <div class="video-item video-item-dis">
                                             <div class="video-img">
                                                 <img src="~@/assets/img/video2.png" alt="">
                                             </div>
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158
-                                                </div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>125</div>
+                                                <div class="butn-dis"><span class="icon icon-thumbs-down-hand"></span>19</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="video-item-block">
-                                        <div class="video-item">
+                                        <div class="video-item video-item-dis">
                                             <div class="video-img">
                                                 <img src="~@/assets/img/video3.png" alt="">
                                             </div>
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158
-                                                </div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>125</div>
+                                                <div class="butn-dis"><span class="icon icon-thumbs-down-hand"></span>19</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="video-item-block">
-                                        <div class="video-item">
+                                        <div class="video-item video-item-dis">
                                             <div class="video-img">
                                                 <img src="~@/assets/img/video4.png" alt="">
                                             </div>
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158
-                                                </div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>125</div>
+                                                <div class="butn-dis"><span class="icon icon-thumbs-down-hand"></span>19</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="video-item-block">
-                                        <div class="video-item">
+                                        <div class="video-item video-item-dis">
                                             <div class="video-img">
                                                 <img src="~@/assets/img/video5.png" alt="">
                                             </div>
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158
-                                                </div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>125</div>
+                                                <div class="butn-dis"><span class="icon icon-thumbs-down-hand"></span>19</div>
                                             </div>
                                         </div>
                                     </div>
@@ -298,7 +298,27 @@
                             <div class="comment-block">
                                 <div class="comment">
                                     <div class="img-block">
-                                        <img src="" alt="">
+                                        <!--<span class="icon icon-man-user"></span>-->
+                                        <img src="~@/assets/img/face.jpg" alt="">
+                                    </div>
+                                    <div class="comment-text-block">
+                                        <div class="comment-name">Alexandr Longname</div>
+                                        <p class="comment-text">Sadly, as the plot proceeds, Sanders begins to duck ... bothersome concepts. He picks a more sentimental path, which leads Major, following the example of Jason Bourne, on a quest to discover who she truly is.</p>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="img-block">
+                                        <span class="icon icon-man-user icon-no-photo"></span>
+                                    </div>
+                                    <div class="comment-text-block">
+                                        <div class="comment-name">Alexandr Longname</div>
+                                        <p class="comment-text">Sadly, as the plot proceeds, Sanders begins to duck ... bothersome concepts. He picks a more sentimental path, which leads Major, following the example of Jason Bourne, on a quest to discover who she truly is.</p>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <div class="img-block">
+                                        <!--<span class="icon icon-man-user"></span>-->
+                                        <img src="~@/assets/img/face.jpg" alt="">
                                     </div>
                                     <div class="comment-text-block">
                                         <div class="comment-name">Alexandr Longname</div>
@@ -306,19 +326,159 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="" class="butn butn-orange">Load more</a>
+                            <a href="" class="butn butn-orange-white butn-large">Load more</a>
                         </div>
-                        <div class="form-block">
-                            <form action="" action="" method="">
-                                <div class="input-wrap">
-                                    <textarea name="" id=""></textarea>
+                        <div class="form-block-wrap">
+                            <div class="form-block">
+                                <div class="title-form">Write your review</div>
+                                <form action="" action="" method="">
+                                    <div class="input-wrap textarea-wrap">
+                                        <textarea name="" id=""></textarea>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <label for="">Enter your e-mail <span>*</span></label>
+                                        <input type="email" name="email">
+                                    </div>
+                                    <button type="submit" class="butn butn-orange butn-large">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="video-slider-wrap">
+                            <div class="title">Similar Videos</div>
+                            <div class="video-slider-block-wrap">
+                                <div class="video-slider-block center">
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video1.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>25
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video2.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video3.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video4.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video5.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video1.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video2.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video3.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video4.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video5.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="input-wrap">
-                                    <label for="">Enter your e-mail  *</label>
-                                    <input type="email" name="email">
-                                </div>
-                                <button type="submit" class="butn butn-orange">Submit</button>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -331,9 +491,11 @@
   export default {
 
     mounted: function () {
-      $('.video-slider-block').slick({
+      $('.center').slick({
         dots: false,
         infinite: false,
+//        centerMode: true,
+//        centerPadding: '60px',
         speed: 300,
         slidesToShow: 5,
         slidesToScroll: 1,

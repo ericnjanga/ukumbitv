@@ -109,7 +109,7 @@
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
                                             </div>
                                         </div>
                                     </div>
@@ -121,7 +121,7 @@
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
                                             </div>
                                         </div>
                                     </div>
@@ -133,7 +133,7 @@
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +145,7 @@
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
                                             </div>
                                         </div>
                                     </div>
@@ -157,7 +157,7 @@
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
                                             </div>
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
                                             </div>
                                         </div>
                                     </div>
@@ -181,7 +181,7 @@
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
                                             </div>
                                         </div>
                                     </div>
@@ -193,7 +193,7 @@
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
                                             </div>
                                         </div>
                                     </div>
@@ -205,7 +205,7 @@
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
                                             </div>
                                         </div>
                                     </div>
@@ -217,7 +217,7 @@
                                             <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
-                                                <div href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
                                             </div>
                                         </div>
                                     </div>
