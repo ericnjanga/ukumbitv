@@ -71,7 +71,28 @@
                     </div>
                     <div class="col-sm-10">
                         <div class="video-list-wrap">
-                            <div class="title">Episodes</div>
+                            <div class="title">My List</div>
+                            <div class="filter-block-wrap">
+                                <div class="filter-block">
+                                    <span>Sort by:</span>
+                                    <a href="">all</a>
+                                    <a href="">popular</a>
+                                    <a href="">hight rate</a>
+                                    <a href="">year released</a>
+                                    <a href="">A-z</a>
+                                    <a href="">Z-a</a>
+                                </div>
+                                <div class="filter-block">
+                                    <span>Tags:</span>
+                                    <a href="">all</a>
+                                    <a href="">action</a>
+                                    <a href="">drama</a>
+                                    <a href="">romance</a>
+                                    <a href="">suspense</a>
+                                    <a href="">horror</a>
+                                    <a href="">drama</a>
+                                </div>
+                            </div>
                             <div class="video-list-block-wrap">
                                 <div class="video-list-block">
                                     <div class="video-item-block">
@@ -194,8 +215,68 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video3.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video4.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video5.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video1.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="~@/assets/img/video2.png" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the Fallen</div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>158</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <a href="" class="butn butn-orange-white butn-large">Load more</a>
                             </div>
                         </div>
                     </div>
