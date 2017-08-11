@@ -21,6 +21,15 @@
       <ul class="nav navbar-nav"> 
       	<!-- categories list here -->
       	<!-- categories list here -->
+          {{--trial system--}}
+          @if(isset($trialCount))
+          <li style="color: white">Free video remain: {{$trialCount}}</li>
+              @if($trialCount == 0)
+                  <li><a href="{{route('user.select-pay-plan')}}">SELECT PAYMENT PLAN</a></li>
+                  @endif
+              <li><a href="{{route('user.reset-trial')}}">RESET TRIAL</a></li>
+          @endif
+
           @foreach($categories as $category)
              <li><a href="/category/{{str_slug($category->name)}}">{{ $category->name }}</a></li>
           @endforeach

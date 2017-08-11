@@ -63,7 +63,7 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-
+        $histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
         $database = config('database.connections.mysql.database');
         $username = config('database.connections.mysql.username');
 
@@ -104,7 +104,8 @@ class UserController extends Controller {
                         ->with('suggestions' , $suggestions)
                         ->with('categories' , $categories)
                         ->with('videos_by_cat' , $lastVideos)
-                        ->with('videos', $videos);
+                        ->with('videos', $videos)
+                        ->with('trialCount', 3-count($histories));
         } else {
             return redirect()->route('installTheme');
         }
@@ -181,9 +182,46 @@ class UserController extends Controller {
         dd($link);
     }
 
+    public function checkTrial($id)
+    {
+
+        $histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
+
+        if(count($histories) != 0){
+
+            foreach ($histories as $history) {
+                if($history->admin_video_id == $id) {
+                    return true;
+                }
+            }
+
+            if(count($histories) < 3){
+                return true;
+            }
+
+            return false;
+
+        }
+
+        return true;
+    }
+
+
     public function watchVideo($id)
     {
+        //$histories = Helper::watch_list(\Auth::user()->id,WEB);
+      //  $histories = UserHistory::where('user_id', Auth::id())->distinct()->get();
+        //$histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
+        //dd($histories);
         $video = AdminVideo::where('watchid', $id)->firstOrFail();
+
+        $checkTrial = $this->checkTrial($video->id);
+        if(!$checkTrial){
+            $payPlans = PaymentPlan::all();
+            return view('user.select_payment_plan')
+                ->with('payPlans', $payPlans);
+        }
+
 
         $videos = AdminVideo::all();
         $images = Videoimage::where('admin_video_id', $video->id)->first();
@@ -957,5 +995,15 @@ class UserController extends Controller {
         $payPlans = PaymentPlan::all();
         return view('user.select_payment_plan')
             ->with('payPlans', $payPlans);
+    }
+
+    public function resetTrial()
+    {
+        $trials = UserHistory::where('user_id', Auth::id())->get();
+        foreach ($trials as $trial) {
+            $trial->delete();
+        }
+
+        return back()->with('flash_error' , 'ok');
     }
 }
