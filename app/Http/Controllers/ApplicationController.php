@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\PaymentPlan;
 use Illuminate\Http\Request;
 
 use App\Requests;
@@ -29,6 +30,14 @@ use App\Page;
 class ApplicationController extends Controller {
 
     public $expiry_date = "";
+
+
+    public function main()
+    {
+        return view('r.main',[
+            'payment_plans'=>PaymentPlan::all()
+        ]);
+    }
 
     public function test(Request $request) {
 

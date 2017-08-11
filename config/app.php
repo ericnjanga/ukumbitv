@@ -165,7 +165,8 @@ return [
         anlutro\LaravelSettings\ServiceProvider::class,
         Aws\Laravel\AwsServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
-        vidhyar2612\Enveditor\EnveditorServiceProvider::class
+        vidhyar2612\Enveditor\EnveditorServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class
 
     ],
 

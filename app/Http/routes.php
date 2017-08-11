@@ -127,6 +127,8 @@ Route::get('/payment/expiry', 'ApplicationController@user_payment_expiry')->name
 
 // Static Pages
 
+Route::get('main','ApplicationController@main')->name('user.main');
+
 Route::get('/privacy', 'UserApiController@privacy')->name('user.privacy');
 
 Route::get('/terms', 'UserApiController@terms')->name('user.terms');
