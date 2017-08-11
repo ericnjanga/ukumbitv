@@ -32,6 +32,11 @@ export default new Router({
       path: '/tagvideo',
       name: 'tagvideo',
       component: resolve => require(['@/components/tagvideo'], resolve)
+    },
+    {
+      path: '/category',
+      name: 'category',
+      component: resolve => require(['@/components/category'], resolve)
     }
   ]
 })
