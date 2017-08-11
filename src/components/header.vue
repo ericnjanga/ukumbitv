@@ -21,6 +21,38 @@
             </div>
         </header>
 
+        <header v-else-if="$route.name === 'privacy'">
+            <div class="main-header page-header">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-sm-2 offset-sm-5">
+                            <div class="logo-block">
+                                <img src="~@/assets/img/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-4 offset-sm-1">
+                            <div class="login-block">
+                                <div class="login-info">
+                                    <div class="login-text">100 videos left</div>
+                                    <a href="" class="login-upgrade">upgrade package</a>
+                                </div>
+                                <div class="img-block">
+                                    <span class="icon icon-man-user icon-no-photo"></span>
+                                    <div class="account-block">
+                                        <ul class="account-list">
+                                            <li><a href="">My account</a></li>
+                                            <li><a href="">Plan</a></li>
+                                            <li><a href="">Sign Out</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         <header v-else-if=" $route.name == 'category' || $route.name == 'list' || $route.name == 'main' || $route.name == 'search' || $route.name == 'tagvideo' || $route.name == 'video' ">
             <div class="main-header">
                 <div class="container">
@@ -65,7 +97,6 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>

@@ -15,7 +15,6 @@
                                 <div class="text-add">Fill free to contact us</div>
                                 <a href="" class="butn butn-orange butn-large">Contact us</a>
                             </div>
-
                         </div>
                     </div>
                 </div>
