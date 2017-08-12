@@ -40,16 +40,22 @@
 
 				<style>
 					#countdown {
+						display: -webkit-box;
+						display: -ms-flexbox;
 						display: flex;
 						    width: 100%;
 						height: 50px;
 						margin-top: 25px;
-						justify-content: center;
+						-webkit-box-pack: center;
+						    -ms-flex-pack: center;
+						        justify-content: center;
 					}
 					.count-frame {
 						position: relative;
 				    float: left;
 				    font-family: 'Gotham Pro', sans-serif;
+						display: -webkit-box;
+						display: -ms-flexbox;
 						display: flex;
 						font-size: 20px;
 						margin: 0 5px;
@@ -58,8 +64,12 @@
 						background: #333;
 						color: #fff;
 						border-radius: 10px;
-						align-items: flex-end;
-						justify-content: center;
+						-webkit-box-align: end;
+						    -ms-flex-align: end;
+						        align-items: flex-end;
+						-webkit-box-pack: center;
+						    -ms-flex-pack: center;
+						        justify-content: center;
 						padding-bottom: 8px;
 					}
 					.count-frame:before {
