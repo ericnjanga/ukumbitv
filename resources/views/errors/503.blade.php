@@ -41,7 +41,27 @@
 
         <!-- Display the countdown timer in an element -->
 				<p id="countdown"></p>
-      <!-- <script id="nstimerscr" class="timer" type="text/javascript" src="https://timer.aglichev.ru/timer/e10dbb0cec812df6f6f4a4de73a90925.js"></script> -->
+
+
+
+
+
+
+        <footer class="text-center">
+            <div class="fb-login">
+                @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
+                    <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
+                        <input type="hidden" value="facebook" name="provider" id="provider">
+                        <button type="submit" class="btn-link">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            Admin Login
+                        </button>
+                    </form>
+                @endif
+            </div> 
+        </footer>
+
+                
     </div>
   </div>
 
