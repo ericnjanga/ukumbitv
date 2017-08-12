@@ -58,8 +58,9 @@
 						background: #333;
 						color: #fff;
 						border-radius: 10px;
-						align-items: center;
+						align-items: flex-end;
 						justify-content: center;
+						padding-bottom: 8px;
 					}
 					.count-frame:before {
 						content: 'days';
