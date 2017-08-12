@@ -12,6 +12,9 @@
 /* ==========================================================================
    Start of custom Webflow CSS
    ========================================================================== */
+   body {
+   	    background-image: linear-gradient(45deg, #a9c1c5, #b9d5c2);
+   }
 .line {
   display: block;
   width: 100px;
