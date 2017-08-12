@@ -36,7 +36,7 @@
       </div>
       <div class="h1">Enjoy
         <span class="text-span">Africa's</span>finest cinema</div>
-      <script id="nstimerscr" class="timer" type="text/javascript" src="//timer.aglichev.ru/timer/e10dbb0cec812df6f6f4a4de73a90925.js"></script>
+      <script id="nstimerscr" class="timer" type="text/javascript" src="https://timer.aglichev.ru/timer/e10dbb0cec812df6f6f4a4de73a90925.js"></script>
     </div>
   </div>
   
