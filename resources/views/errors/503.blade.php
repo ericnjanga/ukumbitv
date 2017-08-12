@@ -38,9 +38,27 @@
         <span class="text-span">Africa's</span>finest cinema</div>
 
 
-
+				<style>
+					.countdown {
+						width: 220px;
+						margin: 0 auto;
+					}
+					.count-frame {
+						display: flex;
+						margin: 0 5px;
+						width: 50px;
+						height: 50px;
+						background: #333;
+						color: #fff;
+					}
+				</style>
         <!-- Display the countdown timer in an element -->
-				<div id="countdown" class="text-center"></div>
+				<div id="countdown" class="text-center">
+					<span id="countdown-days" class="count-frame"></span>
+					<span id="countdown-hours" class="count-frame"></span>
+					<span id="countdown-mins" class="count-frame"></span>
+					<span id="countdown-secs" class="count-frame"></span>
+				</div>
 
 
 
@@ -96,7 +114,15 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="countdown"
-  document.getElementById("countdown").innerHTML = days + "<span>:</span>" + hours + "<span>:</span>" + minutes + "<span>:</span>" + seconds;
+  var frame_days = document.getElementById("countdown-days");
+  var frame_hours = document.getElementById("countdown-hours");
+  var frame_mins = document.getElementById("countdown-mins");
+  var frame_secs = document.getElementById("countdown-secs");
+  frame_days.innerHTML = days;
+  frame_hours.innerHTML = hours;
+  frame_mins.innerHTML = mins;
+  frame_secs.innerHTML = secs;
+  // document.getElementById("countdown").innerHTML = days + "<span>:</span>" + hours + "<span>:</span>" + minutes + "<span>:</span>" + seconds;
 
   // If the count down is finished, write some text 
   if (distance < 0) {
