@@ -39,11 +39,12 @@
 
 
 				<style>
-					.countdown {
+					#countdown {
 						width: 220px;
 						margin: 0 auto;
 					}
 					.count-frame {
+						    float: left;
 						display: flex;
 						margin: 0 5px;
 						width: 50px;
