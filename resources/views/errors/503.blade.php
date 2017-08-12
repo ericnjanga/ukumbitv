@@ -40,7 +40,7 @@
 
 
         <!-- Display the countdown timer in an element -->
-				<p id="countdown"></p>
+				<div id="countdown" class="text-center"></div>
 
 
 
@@ -61,7 +61,7 @@
             </div> 
         </footer>
 
-                
+
     </div>
   </div>
 
