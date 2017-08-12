@@ -133,8 +133,8 @@ var x = setInterval(function() {
   var frame_secs = document.getElementById("countdown-secs");
   frame_days.innerHTML = days;
   frame_hours.innerHTML = hours;
-  frame_mins.innerHTML = mins;
-  frame_secs.innerHTML = secs;
+  frame_mins.innerHTML = minutes;
+  frame_secs.innerHTML = seconds;
   // document.getElementById("countdown").innerHTML = days + "<span>:</span>" + hours + "<span>:</span>" + minutes + "<span>:</span>" + seconds;
 
   // If the count down is finished, write some text 
