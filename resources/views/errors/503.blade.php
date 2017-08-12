@@ -63,7 +63,6 @@
 						padding-bottom: 8px;
 					}
 					.count-frame:before {
-						content: 'days';
 						font-size: 12px;
 						color: #ffc93c;
 						position: absolute;
@@ -77,6 +76,18 @@
 						position: absolute;
 				    bottom: 0;
 				    left: 0;
+					}
+					#countdown-days{
+						content: 'Days';
+					}
+					#countdown-hours{
+						content: 'Hours';
+					}
+					#countdown-mins{
+						content: 'Mins';
+					}
+					#countdown-secs{
+						content: 'Secs';
 					}
 				</style>
         <!-- Display the countdown timer in an element -->
