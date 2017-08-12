@@ -40,8 +40,9 @@
 
 				<style>
 					#countdown {
-						width: 220px;
-						margin: 0 auto;
+						display: flex;
+						width: 220px; 
+						height: 50px;
 					}
 					.count-frame {
 						    float: left;
@@ -51,6 +52,9 @@
 						height: 50px;
 						background: #333;
 						color: #fff;
+						border-radius: 10px;
+						align-items: center;
+						justify-content: center;
 					}
 				</style>
         <!-- Display the countdown timer in an element -->
