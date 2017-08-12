@@ -35,14 +35,15 @@
       <div class="line">
       </div>
       <div class="h1">Enjoy
-        <span class="text-span">Africa's</span>finest cinema</div>
+        <span class="text-span">Africa's</span>finest cinema in:</div>
 
 
 				<style>
 					#countdown {
 						display: flex;
-						width: 220px; 
+						    width: 100%;
 						height: 50px;
+						margin-top: 25px;
 					}
 					.count-frame {
 						    float: left;
@@ -55,6 +56,12 @@
 						border-radius: 10px;
 						align-items: center;
 						justify-content: center;
+					}
+
+					.admin-login {
+						position: absolute;
+    bottom: 0;
+    left: 0;
 					}
 				</style>
         <!-- Display the countdown timer in an element -->
@@ -70,7 +77,7 @@
 
 
 
-        <footer class="text-center">
+        <footer class="admin-login text-center">
             <div class="fb-login">
                 @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
                     <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
