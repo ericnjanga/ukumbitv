@@ -60,6 +60,16 @@
 						align-items: center;
 						justify-content: center;
 					}
+					.count-frame:before {
+						content: 'days';
+						font-size: 12px;
+						color: #ffc93c;
+						position: absolute
+						top: 0;
+						left: 0;
+						width: 100%;
+						text-align: center;
+					}
 
 					.admin-login {
 						position: absolute;
