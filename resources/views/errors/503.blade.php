@@ -63,7 +63,7 @@
 						padding-bottom: 8px;
 					}
 					.count-frame:before {
-						font-size: 12px;
+						font-size: 11px;
 						color: #ffc93c;
 						position: absolute;
 						top: 0;
