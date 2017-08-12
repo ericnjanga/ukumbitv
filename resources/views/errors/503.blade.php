@@ -47,6 +47,7 @@
 						justify-content: center;
 					}
 					.count-frame {
+						position: relative;
 				    float: left;
 				    font-family: 'Gotham Pro', sans-serif;
 						display: flex;
@@ -64,7 +65,7 @@
 						content: 'days';
 						font-size: 12px;
 						color: #ffc93c;
-						position: absolute
+						position: absolute;
 						top: 0;
 						left: 0;
 						width: 100%;
