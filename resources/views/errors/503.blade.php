@@ -47,8 +47,10 @@
 						justify-content: center;
 					}
 					.count-frame {
-						    float: left;
+				    float: left;
+				    font-family: 'Gotham Pro', sans-serif;
 						display: flex;
+						font-size: 20px;
 						margin: 0 5px;
 						width: 50px;
 						height: 50px;
@@ -61,8 +63,8 @@
 
 					.admin-login {
 						position: absolute;
-    bottom: 0;
-    left: 0;
+				    bottom: 0;
+				    left: 0;
 					}
 				</style>
         <!-- Display the countdown timer in an element -->
