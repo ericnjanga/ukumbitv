@@ -77,16 +77,16 @@
 				    bottom: 0;
 				    left: 0;
 					}
-					#countdown-days{
+					#countdown-days:before{
 						content: 'Days';
 					}
-					#countdown-hours{
+					#countdown-hours:before{
 						content: 'Hours';
 					}
-					#countdown-mins{
+					#countdown-mins:before{
 						content: 'Mins';
 					}
-					#countdown-secs{
+					#countdown-secs:before{
 						content: 'Secs';
 					}
 				</style>
