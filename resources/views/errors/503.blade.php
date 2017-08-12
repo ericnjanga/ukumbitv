@@ -44,6 +44,7 @@
 						    width: 100%;
 						height: 50px;
 						margin-top: 25px;
+						justify-content: center;
 					}
 					.count-frame {
 						    float: left;
