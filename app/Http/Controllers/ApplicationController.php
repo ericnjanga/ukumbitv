@@ -32,13 +32,6 @@ class ApplicationController extends Controller {
     public $expiry_date = "";
 
 
-    public function main()
-    {
-        return view('r.main',[
-            'payment_plans'=>PaymentPlan::all()
-        ]);
-    }
-
     public function test(Request $request) {
 
         dd($request->all());

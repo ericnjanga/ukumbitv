@@ -4,31 +4,31 @@
    <div class="container">
     <div class="row">
      <div class="col-sm-2 offset-sm-1">
-      <div class="list-title">About us</div>
+      <div class="list-title">{{l("About us")}}</div>
       <ul class="footer-list">
-       <li><a href="">About Us</a></li>
-       <li><a href="">Jobs</a></li>
-       <li><a href="">Contact Us</a></li>
+       <li><a href="{{route("user.about")}}">{{l("About Us")}}</a></li>
+       <li><a href="{{route("user.jobs")}}">{{l("Jobs")}}</a></li>
+       <li><a href="{{route("user.contact")}}">{{l("Contact Us")}}</a></li>
       </ul>
      </div>
      <div class="col-sm-2">
-      <div class="list-title">About The Project</div>
+      <div class="list-title">{{l("About The Project")}}</div>
       <ul class="footer-list">
-       <li><a href="">Privacy Policy</a></li>
-       <li><a href="">Terms of Use</a></li>
-       <li><a href="">Advertising</a></li>
-       <li><a href="">Help center</a></li>
+       <li><a href="{{route("user.privacy")}}">{{l("Privacy Policy")}}</a></li>
+       <li><a href="{{route("user.terms")}}">{{l("Terms of Use")}}</a></li>
+       <li><a href="">{{l("Advertising")}}</a></li>
+       <li><a href="">{{l("Help center")}}</a></li>
       </ul>
      </div>
      <div class="col-sm-2">
-      <div class="list-title">Devices</div>
+      <div class="list-title">{{l("Devices")}}</div>
       <ul class="footer-list">
-       <li><a href="">Mobile</a></li>
-       <li><a href="">TV</a></li>
-       <li><a href="">Media players</a></li>
-       <li><a href="">PC</a></li>
-       <li><a href="">Android</a></li>
-       <li><a href="">Apple</a></li>
+       <li><a href="">{{l("Mobile")}}</a></li>
+       <li><a href="">{{l("TV")}}</a></li>
+       <li><a href="">{{l("Media players")}}</a></li>
+       <li><a href="">{{l("PC")}}</a></li>
+       <li><a href="">{{l("Android")}}</a></li>
+       <li><a href="">{{l("Apple")}}</a></li>
       </ul>
      </div>
      <div class="col-sm-3 offset-sm-1">

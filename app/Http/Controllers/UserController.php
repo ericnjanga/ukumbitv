@@ -54,7 +54,7 @@ class UserController extends Controller {
         $this->UserAPI = $API;
         
 //        $this->middleware('auth', ['except' => ['watchVideo', 'index','single_video','all_categories' ,'category_videos' , 'sub_category_videos' , 'contact','trending']]);
-        $this->middleware('auth', ['except' => []]);
+        $this->middleware('auth', ['except' => ['index']]);
     }
 
     /**
@@ -63,10 +63,16 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
+        //landing page
+        if(!Auth::check()){
+            return view('r.landing',[
+                'payment_plans'=>PaymentPlan::all()
+            ]);
+        }
+
         $histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
         $database = config('database.connections.mysql.database');
         $username = config('database.connections.mysql.username');
-
         if($database && $username && Setting::get('installation_process') == 3) {
             counter('home');
             $watch_lists = $wishlists = array();
