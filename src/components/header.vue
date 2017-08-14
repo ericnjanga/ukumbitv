@@ -53,6 +53,20 @@
             </div>
         </header>
 
+        <header v-else-if="$route.name === 'confirmmail'">
+            <div class="main-header page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <a href="/" class="logo-block">
+                                <img src="~@/assets/img/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         <header v-else-if=" $route.name == 'category' || $route.name == 'list' || $route.name == 'main' || $route.name == 'search' || $route.name == 'tagvideo' || $route.name == 'video' ">
             <div class="main-header">
                 <div class="container">

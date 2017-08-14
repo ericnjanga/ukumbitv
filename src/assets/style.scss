@@ -2434,6 +2434,30 @@ margin: 0 0 12px 0;
     line-height: 14px;
   }
 }
+.notice-block{
+  margin: 40px 0;
+  .title-page {
+    margin: 0 0 35px 0;
+  }
+}
+.bold{
+  font-weight: 700;
+}
+.notice-text{
+  text-align: center;
+  p{
+    font-size: 14px;
+    line-height: 22px;
+    color: #616161;
+    font-weight: 300;
+    span{
+      color: #333333;
+    }
+    a{
+      font-weight: 300;
+    }
+  }
+}
 .input-wrap-error {
   input, select, textarea {
     border: 1px solid #ff6666;
