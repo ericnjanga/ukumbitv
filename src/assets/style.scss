@@ -2448,8 +2448,22 @@ margin: 0 0 12px 0;
     font-weight: 400;
     margin: 40px 0 0 0;
   }
-  .input-wrap{
-
+}
+.newpas-wrap{
+  .title-page {
+    margin: 0 0 27px 0;
+  }
+  .operations-pass{
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin: 5px 0 0 0;
+  }
+  .notice-block{
+    .butn{
+      margin: 30px 0 0 0;
+    }
   }
 }
 .bold{

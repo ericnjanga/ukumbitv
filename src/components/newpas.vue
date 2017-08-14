@@ -2,8 +2,22 @@
     <main>
         <div class="newpas-wrap">
             <div class="container">
-                <div class="row">
-                    newpas
+                <div class="row justify-content-center">
+                    <div class="col-sm-4">
+                        <div class="notice-block">
+                            <div class="title-page">Enter new password</div>
+                            <form action="" action="" method="">
+                                <div class="input-wrap">
+                                    <label>New password <span>*</span></label>
+                                    <input type="email" name="email">
+                                </div>
+                                <div class="operations-pass">
+                                    <a href="">Show password</a>
+                                </div>
+                                <button type="submit" class="butn butn-orange butn-large">Set new password</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
