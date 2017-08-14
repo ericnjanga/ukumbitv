@@ -12,11 +12,11 @@
                             <form action="" action="" method="">
                                 <div class="input-wrap">
                                     <label>Enter your e-mail <span>*</span></label>
-                                    <input type="email" name="email">
+                                    <input type="email" name="email" required>
                                 </div>
                                 <div class="input-wrap">
                                     <label>Password<span>*</span></label>
-                                    <input type="password" name="psw">
+                                    <input type="password" name="psw" required>
                                 </div>
                                 <div class="operations-pass">
                                     <a href="">Show password</a>

@@ -10,7 +10,7 @@
                             <form action="" action="" method="">
                                 <div class="input-wrap">
                                     <label>E-mail <span>*</span></label>
-                                    <input type="email" name="email">
+                                    <input type="email" name="email" required>
                                 </div>
                                 <button type="submit" class="butn butn-orange butn-large">Reset password</button>
                             </form>
