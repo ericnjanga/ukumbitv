@@ -21,7 +21,7 @@
             </div>
         </header>
 
-        <header v-else-if="$route.name === 'privacy' || $route.name === 'signin' || $route.name === 'signup'">
+        <header v-else-if="$route.name === 'privacy' || $route.name === 'signin' || $route.name === 'signup' || $route.name === 'resetpas'">
             <div class="main-header page-header">
                 <div class="container">
                     <div class="row align-items-center">
