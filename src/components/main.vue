@@ -528,5 +528,5 @@
 
     },
   }
-
+//  $(".cb-video").colorbox({iframe:true,width:'90%',height:'80%'});
 </script>
