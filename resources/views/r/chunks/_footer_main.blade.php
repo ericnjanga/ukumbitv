@@ -34,7 +34,7 @@
      <div class="col-sm-3 offset-sm-1">
       <div class="last-block">
        <div class="soc-block">
-        <div class="list-title">Get Social</div>
+        <div class="list-title">{{l('Get Social')}}</div>
         <ul class="social-list">
          <li><a href="" class="icon icon-facebook"></a></li>
          <li><a href="" class="icon icon-twitter"></a></li>
@@ -42,9 +42,9 @@
         </ul>
        </div>
        <div class="lang-block">
-        <span>Language:</span>
-        <a href="">French</a>
-        <a href="" class="active">English</a>
+        <span>{{l('Language')}}:</span>
+        <a href="{{url('setlocale/fr')}}" @if(App::isLocale('fr'))class="active"@endif>{{l('French')}}</a>
+        <a href="{{url('setlocale/en')}}" @if(App::isLocale('en'))class="active"@endif>{{l('English')}}</a>
        </div>
       </div>
      </div>
