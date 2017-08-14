@@ -170,7 +170,7 @@
 
 	              <div class="form-group"> 
 	                <label for="director" class="">Select The Director *</label> 
-                  <select multiple required id="director" name="director_id" class="form-control" style="height:100px;">
+                  <select multiple required id="director" name="director_id" class="form-control" style="height:140px;">
                       @foreach($directors as $director)
                           <option value="{{$director->id}}" @foreach($dirarr as $dira) @if($dira == $director->id) selected @endif @endforeach>{{$director->name}}</option>
                       @endforeach
@@ -179,7 +179,7 @@
 
 	              <div class="form-group"> 
 	                <label for="actor" class="">Select actors *</label>
-                  <select multiple required id="actor" name="actor_id" class="form-control" style="height:200px;">
+                  <select multiple required id="actor" name="actor_id" class="form-control" style="height:240px;">
                       @foreach($actors as $actor)
                           <option value="{{$actor->id}}" @foreach($actArr as $act) @if($act == $actor->id) selected @endif @endforeach>{{$actor->name}}</option>
                       @endforeach

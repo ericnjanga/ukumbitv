@@ -179,7 +179,7 @@
 	              <div class="form-group"> 
 	                <label for="director" class="">Select The Director *</label>
 
-	                <select multiple required id="director" name="director_id" class="form-control">
+	                <select multiple required id="director" name="director_id" class="form-control" style="height:140px;">
 	                    @foreach($directors as $director)
 	                        <option value="{{$director->id}}">{{$director->name}}</option>
 	                    @endforeach
@@ -189,7 +189,7 @@
 	              <div class="form-group"> 
 	                <label for="actor" class="">Select actors *</label>
 
-	                <select multiple required id="actor" name="actor_id" class="form-control">
+	                <select multiple required id="actor" name="actor_id" class="form-control" style="height:240px;">
 	                    @foreach($actors as $actor)
 	                        <option value="{{$actor->id}}">{{$actor->name}}</option>
 	                    @endforeach
