@@ -336,7 +336,7 @@
                                         <textarea name="" id=""></textarea>
                                     </div>
                                     <div class="input-wrap">
-                                        <label for="">Enter your e-mail <span>*</span></label>
+                                        <label>Enter your e-mail <span>*</span></label>
                                         <input type="email" name="email">
                                     </div>
                                     <button type="submit" class="butn butn-orange butn-large">Submit</button>

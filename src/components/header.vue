@@ -6,9 +6,9 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-sm-2 offset-sm-5">
-                            <div class="logo-block">
+                            <a href="/" class="logo-block">
                                 <img src="~@/assets/img/logo.png" alt="">
-                            </div>
+                            </a>
                         </div>
                         <div class="col-sm-1 offset-sm-2">
                             <a href="" class="butn butn-signin">Sing in</a>
@@ -21,14 +21,14 @@
             </div>
         </header>
 
-        <header v-else-if="$route.name === 'privacy'">
+        <header v-else-if="$route.name === 'privacy' || $route.name === 'signin'">
             <div class="main-header page-header">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-sm-2 offset-sm-5">
-                            <div class="logo-block">
+                            <a href="/" class="logo-block">
                                 <img src="~@/assets/img/logo.png" alt="">
-                            </div>
+                            </a>
                         </div>
                         <div class="col-sm-4 offset-sm-1">
                             <div class="login-block">
@@ -58,9 +58,9 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-sm-2">
-                            <div class="logo-block">
+                            <a href="/" class="logo-block">
                                 <img src="~@/assets/img/logo.png" alt="">
-                            </div>
+                            </a>
                         </div>
                         <div class="col-sm-6">
                             <div class="input-wrap search-wrap">
@@ -111,9 +111,9 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-sm-2">
-                            <div class="logo-block">
+                            <a href="/" class="logo-block">
                                 <img src="~@/assets/img/logo.png" alt="">
-                            </div>
+                            </a>
                         </div>
                         <div class="col-sm-1 offset-sm-7">
                             <a href="" class="butn butn-signin">Sing in</a>
