@@ -29,7 +29,7 @@
                             </form>
                             <div class="have-block">
                                 <span>Don’t have an account?</span>
-                                <a href="" class="signup">Sign Up</a>
+                                <a href="" class="sign-butn">Sign Up</a>
                             </div>
                         </div>
                     </div>
