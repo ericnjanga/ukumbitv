@@ -100,7 +100,7 @@ class UserController extends Controller {
             }
 
 
-            return view('user.home-video')
+            return view('r.user.home-video')
                         ->with('page' , 'home')
                         ->with('subPage' , 'home')
                         ->with('wishlists' , $wishlists)

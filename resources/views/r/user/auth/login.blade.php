@@ -11,14 +11,14 @@
                     <div class="text-add">The easiest way for you to sign in is with Facebook</div>
                     <a href="" class="butn butn-large butn-dblue butn-face"><span class="icon icon-facebook"></span>Sign in with Facebook</a>
                     <div class="or-line upper">or</div>
-                    <form action="" method="">
+                    <form action="{{route('user.login.post')}}" method="POST">
                         <div class="input-wrap">
                             <label>Enter your e-mail <span>*</span></label>
                             <input type="email" name="email" required>
                         </div>
                         <div class="input-wrap">
                             <label>Password<span>*</span></label>
-                            <input type="password" name="psw" required>
+                            <input type="password" name="password" required>
                         </div>
                         <div class="operations-pass">
                             <div class="input-wrap checkbox-wrap">
