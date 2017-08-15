@@ -1,3 +1,4 @@
+<div class="header-wrap">
 <header>
     <div class="landing-header">
         <div class="layer"></div>
@@ -33,3 +34,4 @@
         </div>
     </div>
 </header>
+</div>

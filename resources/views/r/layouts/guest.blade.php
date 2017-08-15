@@ -1,7 +1,8 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 15.08.2017
- * Time: 14:30
- */
+@extends('r.layouts.app')
+@section('layout')
+    @include('r.chunks._header_logo')
+    <main>
+        @yield('content')
+    </main>
+    @include('r.chunks._footer_main')
+@endsection

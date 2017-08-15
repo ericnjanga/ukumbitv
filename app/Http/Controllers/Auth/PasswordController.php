@@ -34,7 +34,7 @@ class PasswordController extends Controller
      * @var string
      */
 
-    protected $linkRequestView = 'user.auth.passwords.email';
+    protected $linkRequestView = 'r.user.auth.passwords.email';
 
     /**
      * The password reset view that should be used.

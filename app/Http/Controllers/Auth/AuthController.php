@@ -43,7 +43,7 @@ class AuthController extends Controller
      * @var string
      */
 
-    protected $loginView = 'user.auth.login';
+    protected $loginView = 'r.user.auth.login';
 
     /**
      * The Register form view that should be used.
@@ -51,7 +51,7 @@ class AuthController extends Controller
      * @var string
      */
 
-    protected $registerView = 'user.auth.register';
+    protected $registerView = 'r.user.auth.register';
 
 
     /**

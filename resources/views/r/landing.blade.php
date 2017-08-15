@@ -36,8 +36,12 @@
         <div class="price-wrap">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-sm-10">
+                    <div class="col-sm-8">
                         <div class="title-text">{{l("Pick your price")}}</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-10">
                         <div class="price-list-block">
                             <div class="price-block">
                                 @foreach($payment_plans as $payment_plan)
@@ -91,7 +95,7 @@
                                 {{--<div class="price"><span>$</span> 7</div>--}}
                                 {{--</div>--}}
                             </div>
-                            <a href="{{route('user.register.form')}}" class="butn butn-orange butn-large">{{l("Watch 10 videos for free")}}</a>
+                            <a href="{{route('user.register.form')}}" class="butn butn-orange-white butn-large">{{l("Watch 10 videos for free")}}</a>
                         </div>
                     </div>
                 </div>
@@ -101,8 +105,12 @@
         <div class="bottom-text-wrap">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-sm-8">
+                    <div class="col-sm-6">
                         <div class="title-text">{{l("Seo text")}}</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-8">
                         <p>Scarlett Johansson stars in the visually stunning Ghost in the Shell, an action-packed
                             adventure set in a future world where people are enhanced with technology. Believing she was
                             rescued from near death, Major (Johansson) becomes the first of her kind: a human mind
