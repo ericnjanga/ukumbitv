@@ -27,7 +27,7 @@
                         <div class="col-sm-7">
                             <div class="contact-form">
                                 <div class="title-form">Enter your message</div>
-                                <form action="" action="" method="">
+                                <form action="" method="">
                                     <div class="input-wrap textarea-wrap">
                                         <textarea name="" id=""></textarea>
                                     </div>

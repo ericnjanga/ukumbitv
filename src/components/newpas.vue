@@ -10,7 +10,7 @@
                 <div class="row justify-content-center">
                     <div class="col-sm-4">
                         <div class="notice-block">
-                            <form action="" action="" method="">
+                            <form action="" method="">
                                 <div class="input-wrap">
                                     <label>New password <span>*</span></label>
                                     <input type="email" name="email" required>

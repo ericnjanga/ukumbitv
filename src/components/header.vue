@@ -67,7 +67,7 @@
             </div>
         </header>
 
-        <header v-else-if=" $route.name == 'category' || $route.name == 'list' || $route.name == 'main' || $route.name == 'search' || $route.name == 'tagvideo' || $route.name == 'video' || $route.name == 'myaccount'">
+        <header v-else-if=" $route.name == 'category' || $route.name == 'list' || $route.name == 'main' || $route.name == 'search' || $route.name == 'tagvideo' || $route.name == 'video' || $route.name == 'myaccount' || $route.name == 'mypackage'">
             <div class="main-header">
                 <div class="container">
                     <div class="row align-items-center">

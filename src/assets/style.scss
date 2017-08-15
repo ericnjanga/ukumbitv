@@ -1,102 +1,3 @@
-/* Slider */
-
-//.slick-slider {
-//  position: relative;
-//  display: block;
-//  box-sizing: border-box;
-//  -webkit-touch-callout: none;
-//  -webkit-user-select: none;
-//  -khtml-user-select: none;
-//  -moz-user-select: none;
-//  -ms-user-select: none;
-//  user-select: none;
-//  -ms-touch-action: pan-y;
-//  touch-action: pan-y;
-//  -webkit-tap-highlight-color: transparent;
-//}
-//.slick-list {
-//  position: relative;
-//  overflow: hidden;
-//  display: block;
-//  margin: 0;
-//  padding: 0;
-//
-//  &:focus {
-//    outline: none;
-//  }
-//
-//  &.dragging {
-//    cursor: pointer;
-//    cursor: hand;
-//  }
-//}
-//.slick-slider .slick-track,
-//.slick-slider .slick-list {
-//  -webkit-transform: translate3d(0, 0, 0);
-//  -moz-transform: translate3d(0, 0, 0);
-//  -ms-transform: translate3d(0, 0, 0);
-//  -o-transform: translate3d(0, 0, 0);
-//  transform: translate3d(0, 0, 0);
-//}
-//
-//.slick-track {
-//  position: relative;
-//  left: 0;
-//  top: 0;
-//  display: block;
-//
-//  &:before,
-//  &:after {
-//    content: "";
-//    display: table;
-//  }
-//
-//  &:after {
-//    clear: both;
-//  }
-//
-//  .slick-loading & {
-//    visibility: hidden;
-//  }
-//}
-//.slick-slide {
-//  float: left;
-//  height: 100%;
-//  min-height: 1px;
-//  [dir="rtl"] & {
-//    float: right;
-//  }
-//  img {
-//    display: block;
-//  }
-//  &.slick-loading img {
-//    display: none;
-//  }
-//
-//  display: none;
-//
-//  &.dragging img {
-//    pointer-events: none;
-//  }
-//
-//  .slick-initialized & {
-//    display: block;
-//  }
-//
-//  .slick-loading & {
-//    visibility: hidden;
-//  }
-//
-//  .slick-vertical & {
-//    display: block;
-//    height: auto;
-//    border: 1px solid transparent;
-//  }
-//}
-//.slick-arrow.slick-hidden {
-//  display: none;
-//}
-
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?mmzk1o');
@@ -109,7 +10,6 @@
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -117,320 +17,18 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-mastercard .path1:before {
-  content: "\e91a";
-  color: rgb(255, 182, 0);
-}
-.icon-mastercard .path2:before {
-  content: "\e91b";
-  margin-left: -1em;
-  color: rgb(247, 152, 29);
-}
-.icon-mastercard .path3:before {
-  content: "\e91c";
-  margin-left: -1em;
-  color: rgb(255, 133, 0);
-}
-.icon-mastercard .path4:before {
-  content: "\e91d";
-  margin-left: -1em;
-  color: rgb(255, 80, 80);
-}
-.icon-mastercard .path5:before {
-  content: "\e91e";
-  margin-left: -1em;
-  color: rgb(229, 40, 54);
-}
-.icon-mastercard .path6:before {
-  content: "\e91f";
-  margin-left: -1em;
-  color: rgb(203, 32, 38);
-}
-.icon-mastercard .path7:before {
-  content: "\e920";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-mastercard .path8:before {
-  content: "\e921";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-mastercard .path9:before {
-  content: "\e922";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-mastercard .path10:before {
-  content: "\e923";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-mastercard .path11:before {
-  content: "\e924";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-mastercard .path12:before {
-  content: "\e925";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-mastercard .path13:before {
-  content: "\e926";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-mastercard .path14:before {
-  content: "\e927";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-mastercard .path15:before {
-  content: "\e928";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-mastercard .path16:before {
-  content: "\e929";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-mastercard .path17:before {
-  content: "\e92a";
-  margin-left: -1em;
-  color: rgb(220, 229, 229);
-}
-.icon-mastercard .path18:before {
-  content: "\e92b";
-  margin-left: -1em;
-  color: rgb(220, 229, 229);
-}
-.icon-mastercard .path19:before {
-  content: "\e92c";
-  margin-left: -1em;
-  color: rgb(220, 229, 229);
-}
-.icon-mastercard .path20:before {
-  content: "\e92d";
-  margin-left: -1em;
-  color: rgb(220, 229, 229);
-}
-.icon-mastercard .path21:before {
-  content: "\e92e";
-  margin-left: -1em;
-  color: rgb(220, 229, 229);
-}
-.icon-mastercard .path22:before {
-  content: "\e92f";
-  margin-left: -1em;
-  color: rgb(220, 229, 229);
-}
-.icon-mastercard .path23:before {
-  content: "\e930";
-  margin-left: -1em;
-  color: rgb(220, 229, 229);
-}
-.icon-mastercard .path24:before {
-  content: "\e931";
-  margin-left: -1em;
-  color: rgb(220, 229, 229);
-}
-.icon-mastercard .path25:before {
-  content: "\e932";
-  margin-left: -1em;
-  color: rgb(220, 229, 229);
-}
-.icon-mastercard .path26:before {
-  content: "\e933";
-  margin-left: -1em;
-  color: rgb(220, 229, 229);
-}
 .icon-padlock:before {
   content: "\e934";
 }
-.icon-paypal .path1:before {
-  content: "\e935";
-  color: rgb(50, 166, 206);
-}
-.icon-paypal .path2:before {
-  content: "\e936";
-  margin-left: -1em;
-  color: rgb(26, 128, 173);
-}
-.icon-paypal .path3:before {
-  content: "\e937";
-  margin-left: -1em;
-  color: rgb(50, 166, 206);
-}
-.icon-paypal .path4:before {
-  content: "\e938";
-  margin-left: -1em;
-  color: rgb(26, 128, 173);
-}
-.icon-paypal .path5:before {
-  content: "\e939";
-  margin-left: -1em;
-  color: rgb(50, 166, 206);
-}
-.icon-paypal .path6:before {
-  content: "\e93a";
-  margin-left: -1em;
-  color: rgb(26, 128, 173);
-}
-.icon-paypal .path7:before {
-  content: "\e93b";
-  margin-left: -1em;
-  color: rgb(33, 120, 158);
-}
-.icon-paypal .path8:before {
-  content: "\e93c";
-  margin-left: -1em;
-  color: rgb(26, 91, 128);
-}
-.icon-paypal .path9:before {
-  content: "\e93d";
-  margin-left: -1em;
-  color: rgb(33, 120, 158);
-}
-.icon-paypal .path10:before {
-  content: "\e93e";
-  margin-left: -1em;
-  color: rgb(26, 91, 128);
-}
-.icon-paypal .path11:before {
-  content: "\e93f";
-  margin-left: -1em;
-  color: rgb(33, 120, 158);
-}
-.icon-paypal .path12:before {
-  content: "\e940";
-  margin-left: -1em;
-  color: rgb(26, 91, 128);
-}
-.icon-paypal .path13:before {
-  content: "\e941";
-  margin-left: -1em;
-  color: rgb(6, 67, 94);
-}
-.icon-paypal .path14:before {
-  content: "\e942";
-  margin-left: -1em;
-  color: rgb(6, 67, 94);
-}
-.icon-paypal .path15:before {
-  content: "\e943";
-  margin-left: -1em;
-  color: rgb(6, 67, 94);
-}
-.icon-paypal .path16:before {
-  content: "\e944";
-  margin-left: -1em;
-  color: rgb(34, 115, 170);
-}
-.icon-paypal .path17:before {
-  content: "\e945";
-  margin-left: -1em;
-  color: rgb(34, 115, 170);
-}
-.icon-paypal .path18:before {
-  content: "\e946";
-  margin-left: -1em;
-  color: rgb(34, 115, 170);
-}
-.icon-paypal .path19:before {
-  content: "\e947";
-  margin-left: -1em;
-  color: rgb(50, 166, 206);
-}
-.icon-paypal .path20:before {
-  content: "\e948";
-  margin-left: -1em;
-  color: rgb(50, 166, 206);
-}
+
 .icon-paypal-big-logo:before {
   content: "\e949";
 }
-.icon-visa .path1:before {
-  content: "\e94a";
-  color: rgb(60, 88, 191);
-}
-.icon-visa .path2:before {
-  content: "\e94b";
-  margin-left: -1em;
-  color: rgb(41, 54, 136);
-}
-.icon-visa .path3:before {
-  content: "\e94c";
-  margin-left: -1em;
-  color: rgb(60, 88, 191);
-}
-.icon-visa .path4:before {
-  content: "\e94d";
-  margin-left: -1em;
-  color: rgb(41, 54, 136);
-}
-.icon-visa .path5:before {
-  content: "\e94e";
-  margin-left: -1em;
-  color: rgb(60, 88, 191);
-}
-.icon-visa .path6:before {
-  content: "\e94f";
-  margin-left: -1em;
-  color: rgb(41, 54, 136);
-}
-.icon-visa .path7:before {
-  content: "\e950";
-  margin-left: -1em;
-  color: rgb(60, 88, 191);
-}
-.icon-visa .path8:before {
-  content: "\e951";
-  margin-left: -1em;
-  color: rgb(41, 54, 136);
-}
-.icon-visa .path9:before {
-  content: "\e952";
-  margin-left: -1em;
-  color: rgb(255, 188, 0);
-}
-.icon-visa .path10:before {
-  content: "\e953";
-  margin-left: -1em;
-  color: rgb(247, 152, 29);
-}
-.icon-visa .path11:before {
-  content: "\e954";
-  margin-left: -1em;
-  color: rgb(237, 124, 0);
-}
-.icon-visa .path12:before {
-  content: "\e955";
-  margin-left: -1em;
-  color: rgb(5, 18, 68);
-}
-.icon-visa .path13:before {
-  content: "\e956";
-  margin-left: -1em;
-  color: rgb(5, 18, 68);
-}
-.icon-visa .path14:before {
-  content: "\e957";
-  margin-left: -1em;
-  color: rgb(5, 18, 68);
-}
-.icon-visa .path15:before {
-  content: "\e958";
-  margin-left: -1em;
-  color: rgb(5, 18, 68);
-}
+
 .icon-angle-arrow-pointing-to-right:before {
   content: "\e900";
 }
@@ -578,6 +176,17 @@ body {
   height: 100%;
   background: #fff;
   line-height: 1.15;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 #app {
@@ -674,7 +283,7 @@ ul {
   color: #343436;
   font-size: 16px;
   font-weight: 700;
-  &:hover{
+  &:hover, &:focus, &:active{
     border: 2px solid #eeb33d;
     background-color: transparent;
     color:  #eeb33d;
@@ -689,6 +298,14 @@ ul {
     border: 2px solid #3b5998;
     background-color: #fff;
     color:  #3b5998;
+  }
+}
+.butn-white-trans{
+  border: 2px solid #fff;
+  color: #ffffff;
+  background-color: transparent;
+  &:hover, &:focus, &:active{
+    background-color: #fff;
   }
 }
 .butn-face{
@@ -706,7 +323,7 @@ ul {
   color: #eeb33d;
   background-color: #fff;
   border: 2px solid #eeb33d;
-  &:hover{
+  &:hover, &:focus, &:active{
     background-color: #eeb33d;
     color: #ffffff;
   }
@@ -716,7 +333,7 @@ ul {
   color: #ffffff;
   font-size: 16px;
   font-weight: 300;
-  &:hover{
+  &:hover, &:focus, &:active{
     background-color: #fff;
     color: #eeb33d;
     border: 2px solid #eeb33d;
@@ -1760,7 +1377,7 @@ img{
   margin: 75px 0 90px;
 }
 .price-list-block{
-  .butn{
+  > .butn{
     width: 350px;
     margin: 0 auto;
     display: block;
@@ -1774,9 +1391,10 @@ img{
   display: -ms-flexbox;
   display: flex;
   margin: 0 0 40px 0;
-  .price-item{
+  .price-item {
     width: 25%;
     padding: 0 0 15px 0;
+    position: relative;
     .price-title{
       color: #ffffff;
       font-size: 20px;
@@ -1824,6 +1442,17 @@ img{
         font-weight: 300;
       }
     }
+    .butn{
+      width: 200px;
+      display: block;
+      margin: 10px auto 0;
+    }
+    .butn.active{
+      background-color: #fff;
+      &:hover{
+        cursor: default;
+      }
+    }
   }
   .price-item:nth-child(1){
     background-color: #00f076;
@@ -1832,15 +1461,65 @@ img{
       font-size: 30px;
       font-weight: 300;
     }
+    .butn{
+      &:hover{
+        color: #00f076;
+      }
+    }
+    .butn.active{
+        color: #00f076;
+    }
   }
   .price-item:nth-child(2){
     background-color: #00d7ff;
+    .butn{
+      &:hover{
+        color: #00d7ff;
+      }
+    }
+    .butn.active{
+      color: #00d7ff;
+    }
   }
   .price-item:nth-child(3){
     background-color: #eeb33d;
+    .butn{
+      &:hover{
+        color: #eeb33d;
+      }
+    }
+    .butn.active{
+      color: #eeb33d;
+    }
   }
   .price-item:nth-child(4){
     background-color: #f83647;
+    .butn{
+      &:hover{
+        color: #f83647;
+      }
+    }
+    .butn.active{
+      color: #f83647;
+    }
+  }
+}
+.best-text{
+  width: 100%;
+  height: 40px;
+  background-color: #f83647;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  div{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
   }
 }
 .bottom-text-wrap{
@@ -2169,6 +1848,12 @@ label{
   margin: 0 0 5px 0;
   span{
     color: #fe0000;
+  }
+  .label-add-text{
+    color: #616161;
+    font-weight: 400;
+    font-size: 11px;
+    margin: 0 0 0 10px;
   }
 }
 .video-item.video-item-dis{
@@ -2907,17 +2592,171 @@ option[selected="selected"] {
       margin: 12px 0 30px;
     }
   }
-
+}
+.mypackage-wrap{
+  margin: 10px 0;
+  .title-text{
+    text-align: left;
+  }
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #fff !important;
+  -webkit-text-fill-color: #616161 !important;
+  color: #616161 !important;
+}
+.payment-block-wrap{
+  margin: 35px 0;
+  p{
+    color: #757575;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 14px;
 
-//.error-message {
-//  color: #ff6666;
-//  font-size: 13px;
-//  display: inline-block;
-//}
-//input:-webkit-autofill {
-//  -webkit-box-shadow: inset 0 0 0 50px #fff !important;
-//  -webkit-text-fill-color: #616161 !important;
-//  color: #616161 !important;
-//}
+  }
+}
+.payment-block{
+  margin: 40px 0 50px;
+  .payment-info{
+    border-top: 1px solid #e0e0e0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #424242;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 20px 0;
+    .icon{
+      color: #f83647;
+      font-size: 22px;
+      margin: 0 25px 0 0;
+    }
+  }
+  .butn{
+    width: 255px;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    padding: 0 25px 0 0;
+    &:focus{
+      background-color: #eeb33d;
+      color: #ffffff;
+    }
+    .icon{
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      font-size: 16px;
+      transition: transform 0.3s linear;
+    }
+  }
+  .butn.open{
+    background-color: #eeb33d;
+    color: #ffffff;
+    .icon{
+      transform: rotate(180deg);
+    }
+  }
+}
+.payment-content{
+  .payment-text{
+    border-top: 1px solid #e0e0e0;
+    padding: 20px 0;
+    margin: 40px 0 7px 0;
+  }
+}
+.card-text{
+  margin: 0 0 25px 0;
+  span{
+    color: #424242;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+  }
+  img{
+    margin: 0 0 0 15px;
+  }
+}
+.payment-form-block{
+  border-bottom: 1px solid #e0e0e0;
+  width: 71%;
+  padding: 0 0 43px 0;
+  margin: 0 0 50px 0;
+  form{
+    display: flex;
+    justify-content: space-between;
+    //width: 542px;
+    > div{
+      width: 47%;
+    }
+  }
+  .input-wrap {
+    margin-bottom: 17px;
+  }
+  .date-block{
+    .sublabel{
+      font-size: 13px;
+      font-weight: 400;
+      color: #616161;
+      line-height: 14px;
+      margin: 0 0 5px 0;
+    }
+    .input-wrap {
+      width: 65px;
+      display: inline-block;
+    }
+    span{
+      color: #424242;
+      font-size: 30px;
+      font-weight: 400;
+      position: relative;
+      top: 7px;
+      height: 45px;
+      margin: 0 5px;
+    }
+  }
+  .butn{
+    width: 100%;
+    margin: 20px 0 0 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .payment-form-left{
+    .input-wrap:last-child {
+      width: 64%;
+    }
+  }
+}
+.paypal-block{
+  .card-text{
+    margin: 0 0 20px 0;
+  }
+  .payment-text{
+    margin: 0 0 20px 0;
+  }
+  .butn{
+    width: 255px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+.input-lock{
+  &:after{
+    font-family: 'icomoon';
+    content: "\E934";
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    font-size: 26px;
+    color: #000;
+  }
+}
+.payment-content-block{
+  display: none;
+}

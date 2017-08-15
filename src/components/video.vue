@@ -331,7 +331,7 @@
                         <div class="form-block-wrap">
                             <div class="form-block">
                                 <div class="title-form">Write your review</div>
-                                <form action="" action="" method="">
+                                <form action="" method="">
                                     <div class="input-wrap textarea-wrap">
                                         <textarea name="" id=""></textarea>
                                     </div>

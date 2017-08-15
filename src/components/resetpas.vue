@@ -11,7 +11,7 @@
                     <div class="col-sm-4">
                         <div class="notice-block">
                             <div class="text-add">We will send new password on your e-mail</div>
-                            <form action="" action="" method="">
+                            <form action="" method="">
                                 <div class="input-wrap">
                                     <label>E-mail <span>*</span></label>
                                     <input type="email" name="email" required>
