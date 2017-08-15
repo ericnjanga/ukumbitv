@@ -54,6 +54,11 @@ export default new Router({
       component: resolve => require(['@/components/mypackage'], resolve)
     },
     {
+      path: '/myaccount',
+      name: 'myaccount',
+      component: resolve => require(['@/components/myaccount'], resolve)
+    },
+    {
       path: '/signup',
       name: 'signup',
       component: resolve => require(['@/components/signup'], resolve)
