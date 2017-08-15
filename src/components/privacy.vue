@@ -4,8 +4,12 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-sm-6">
+                        <div class="title-page">Privacy policy</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-6">
                         <div class="content-block">
-                            <div class="title-page">Privacy policy</div>
                             <div class="img-block">
                                 <img src="~@/assets/img/landing-bg.png" alt="">
                             </div>
@@ -15,7 +19,6 @@
                                 <div class="text-add">Fill free to contact us</div>
                                 <a href="" class="butn butn-orange butn-large">Contact us</a>
                             </div>
-
                         </div>
                     </div>
                 </div>

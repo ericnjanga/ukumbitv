@@ -3,9 +3,13 @@
         <div class="newpas-wrap">
             <div class="container">
                 <div class="row justify-content-center">
+                    <div class="col-sm-3">
+                        <div class="title-page">Enter new password</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
                     <div class="col-sm-4">
                         <div class="notice-block">
-                            <div class="title-page">Enter new password</div>
                             <form action="" action="" method="">
                                 <div class="input-wrap">
                                     <label>New password <span>*</span></label>

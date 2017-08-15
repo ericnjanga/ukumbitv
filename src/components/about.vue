@@ -3,9 +3,13 @@
         <div class="about-wrap">
             <div class="container">
                 <div class="row justify-content-center">
+                    <div class="col-sm-5">
+                        <div class="title-page">About us</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
                     <div class="col-sm-6">
                         <div class="content-block">
-                            <div class="title-page">About us</div>
                             <div class="img-block">
                                 <img src="~@/assets/img/landing-bg.png" alt="">
                             </div>

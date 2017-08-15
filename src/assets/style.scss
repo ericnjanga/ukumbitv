@@ -1730,6 +1730,7 @@ img{
     margin: 0 auto;
     display: block;
     font-weight: 400;
+    font-size: 16px;
   }
 }
 .price-block{
@@ -2281,10 +2282,10 @@ margin: 0 0 12px 0;
   font-weight: 700;
   text-align: center;
   line-height: 26px;
-  margin: 0 0 25px 0;
+  margin: 40px 0 25px 0;
 }
 .content-block{
-  margin: 40px 0 90px;
+  margin: 0 0 90px;
   .img-block{
     height: 270px;
     width: 540px;
@@ -2457,7 +2458,7 @@ margin: 0 0 12px 0;
   }
 }
 .notice-block{
-  margin: 40px 0;
+  margin: 10px 0;
   .title-page {
     margin: 0 0 35px 0;
   }
@@ -2472,9 +2473,6 @@ margin: 0 0 12px 0;
   }
 }
 .newpas-wrap{
-  .title-page {
-    margin: 0 0 27px 0;
-  }
   .operations-pass{
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -2664,7 +2662,7 @@ option[selected="selected"] {
   }
 }
 .jobs-block{
-  margin: 40px 0 90px;
+  margin: 0 0 90px;
 }
 .jobs-list{
   display: -webkit-box;

@@ -3,9 +3,13 @@
         <div class="resetpas-wrap">
             <div class="container">
                 <div class="row justify-content-center">
+                    <div class="col-sm-3">
+                        <div class="title-page">Reset password</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
                     <div class="col-sm-4">
                         <div class="notice-block">
-                            <div class="title-page">Reset password</div>
                             <div class="text-add">We will send new password on your e-mail</div>
                             <form action="" action="" method="">
                                 <div class="input-wrap">

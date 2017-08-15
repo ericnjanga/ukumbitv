@@ -33,8 +33,12 @@
             <div class="price-wrap">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-sm-10">
+                        <div class="col-sm-8">
                             <div class="title-text">Pick your price</div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-10">
                             <div class="price-list-block">
                                 <div class="price-block">
                                     <div class="price-item">
@@ -81,7 +85,7 @@
                                         <div class="price"><span>$</span> 7</div>
                                     </div>
                                 </div>
-                                <a href="" class="butn butn-orange butn-large">Watch 10 videos for free</a>
+                                <a href="" class="butn butn-orange-white butn-large">Watch 10 videos for free</a>
                             </div>
                         </div>
                     </div>
@@ -91,8 +95,12 @@
             <div class="bottom-text-wrap">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-sm-8">
+                        <div class="col-sm-6">
                             <div class="title-text">Seo text</div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8">
                             <p >Scarlett Johansson stars in the visually stunning Ghost in the Shell, an action-packed adventure set in a future world where people are enhanced with technology. Believing she was rescued from near death, Major (Johansson) becomes the first of her kind: a human mind inside an artificial body designed to fight the war against cyber-crime. While investigating a dangerous criminal, Major makes a shocking discovery – the corporation that created her lied about her past life in order to control her. Unsure what to believe, Major will stop at nothing to unravel the mystery of her true identity and exact revenge against the corporation she was built to serve.</p>
                         </div>
                     </div>
