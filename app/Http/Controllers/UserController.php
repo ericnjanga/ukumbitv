@@ -138,7 +138,7 @@ class UserController extends Controller {
             }
         }
 
-        return view('user.home-video')
+        return view('r.user.tag-videos')
             ->with('page' , 'Videos by tag')
             ->with('subPage' , 'Videos by tag')
             ->with('categories' , $categories)
@@ -761,7 +761,7 @@ class UserController extends Controller {
 
         $category = Category::find($id);
 
-        return view('user.category-videos')
+        return view('r.user.category-videos')
                     ->with('page' , 'categories')
                     ->with('subPage' , 'categories')
                     ->with('category' , $category)

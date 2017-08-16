@@ -64,6 +64,7 @@
                                     @for($i=1; $i<5; $i++)
                                         <div class="video-item-block">
                                             <div class="video-item video-item-dis">
+
                                                 <div class="video-img">
                                                     <img src="{{asset('r/img/video'.$i.'.png')}}" alt="">
                                                 </div>

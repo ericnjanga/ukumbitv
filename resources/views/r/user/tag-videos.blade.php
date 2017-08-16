@@ -1,6 +1,6 @@
 @extends('r.layouts.user-search')
 @section('content')
-    <div class="search-main-wrap">
+    <div class="tagvideo-wrap">
         <div class="container">
             <div class="row">
                 <div class="col-sm-2">
@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-10">
                     <div class="video-list-wrap">
-                        <div class="title"><span>Search:</span> Transformers</div>
+                        <div class="title">Tom Cruse video</div>
                         <div class="filter-block-wrap">
                             <div class="filter-block">
                                 @include('r.chunks._sort_by')
@@ -40,7 +40,7 @@
                                         </div>
                                     @endfor
                                 @endfor
-
+                            </div>
                             <a href="" class="butn butn-orange-white butn-large">Load more</a>
                         </div>
                     </div>

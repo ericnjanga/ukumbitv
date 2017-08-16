@@ -16,24 +16,24 @@
                     <div class="sub-menu-butn"></div>
                     <ul class="sub-menu">
                         <li>
-                            <a href="">
+                            <a href="{{route('user.category',0)}}">
                                 All movies
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="{{route('user.category',0)}}">
                                 <span class="list-text">Short</span>
                                 <span class="time">10 min</span>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="{{route('user.category',0)}}">
                                 <span class="list-text">Medium</span>
                                 <span class="time">45 min max</span>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="{{route('user.category',0)}}">
                                 <span class="list-text">Feature</span>
                                 <span class="time">45 min up</span>
                             </a>

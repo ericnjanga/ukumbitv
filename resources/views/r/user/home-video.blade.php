@@ -60,12 +60,14 @@
                                 @for($i=0;$i<5;$i++)
                                     <div class="video-item-block">
                                         <div class="video-item">
-                                            <div class="video-img">
-                                                <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
-                                            </div>
-                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the
-                                                Fallen
-                                            </div>
+                                            <a href="{{route('single-video',0)}}">
+                                                <div class="video-img">
+                                                    <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
+                                                </div>
+                                                <div class="video-title ellipsis-gradient">Transformers: Revenge of the
+                                                    Fallen
+                                                </div>
+                                            </a>
                                             <div class="video-info">
                                                 <div class="video-genre">Drama</div>
                                                 <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
@@ -79,54 +81,17 @@
                     <div class="video-slider-wrap">
                         <div class="title">My List</div>
                         <div class="video-slider-block">
-                        @for($i=0;$i<5;$i++)
-                            <div class="video-item-block">
-                                <div class="video-item">
-                                    <div class="video-img">
-                                        <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
-                                    </div>
-                                    <div class="video-title ellipsis-gradient">Transformers: Revenge of the
-                                        Fallen
-                                    </div>
-                                    <div class="video-info">
-                                        <div class="video-genre">Drama</div>
-                                        <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endfor
-
-                        @for($i=0;$i<5;$i++)
-                            <div class="video-item-block">
-                                <div class="video-item">
-                                    <div class="video-img">
-                                        <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
-                                    </div>
-                                    <div class="video-title ellipsis-gradient">Transformers: Revenge of the
-                                        Fallen
-                                    </div>
-                                    <div class="video-info">
-                                        <div class="video-genre">Drama</div>
-                                        <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endfor
-
-                        </div>
-                    </div>
-                    <div class="video-slider-wrap">
-                        <div class="title">Popular Videos</div>
-                        <div class="video-slider-block">
                             @for($i=0;$i<5;$i++)
                                 <div class="video-item-block">
                                     <div class="video-item">
-                                        <div class="video-img">
-                                            <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
-                                        </div>
-                                        <div class="video-title ellipsis-gradient">Transformers: Revenge of the
-                                            Fallen
-                                        </div>
+                                        <a href="{{route('single-video',0)}}">
+                                            <div class="video-img">
+                                                <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the
+                                                Fallen
+                                            </div>
+                                        </a>
                                         <div class="video-info">
                                             <div class="video-genre">Drama</div>
                                             <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
@@ -138,16 +103,61 @@
                             @for($i=0;$i<5;$i++)
                                 <div class="video-item-block">
                                     <div class="video-item">
-                                        <div class="video-img">
-                                            <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
-                                        </div>
-                                        <div class="video-title ellipsis-gradient">Transformers: Revenge of the
-                                            Fallen
-                                        </div>
+                                        <a href="{{route('single-video',0)}}">
+                                            <div class="video-img">
+                                                <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the
+                                                Fallen
+                                            </div>
+                                        </a>
                                         <div class="video-info">
                                             <div class="video-genre">Drama</div>
                                             <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
                                         </div>
+                                    </div>
+                                </div>
+                            @endfor
+
+                        </div>
+                    </div>
+                    <div class="video-slider-wrap">
+                        <div class="title">Popular Videos</div>
+                        <div class="video-slider-block">
+                            @for($i=0;$i<5;$i++)
+                                <div class="video-item-block">
+                                    <div class="video-item">
+                                        <a href="{{route('single-video',0)}}">
+                                            <div class="video-img">
+                                                <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the
+                                                Fallen
+                                            </div>
+                                        </a>
+                                        <div class="video-info">
+                                            <div class="video-genre">Drama</div>
+                                            <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endfor
+
+                            @for($i=0;$i<5;$i++)
+                                <div class="video-item-block">
+                                    <div class="video-item">
+                                        <a href="{{route('single-video',0)}}">
+                                            <div class="video-img">
+                                                <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the
+                                                Fallen
+                                            </div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             @endfor
