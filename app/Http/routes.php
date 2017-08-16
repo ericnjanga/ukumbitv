@@ -97,7 +97,7 @@ if(!defined('BANNER')) define('BANNER' , 'banner');
 if(!defined('WEB')) define('WEB' , 1);
 
 
-
+Route::get('select-payment-plan', 'UserController@selectPayPlan')->name('user.select-pay-plan');
 Route::get('/email/verification' , 'ApplicationController@email_verify')->name('email.verify');
 // Installation
 
@@ -454,7 +454,7 @@ Route::get('newvideo/{id}', 'UserController@single_newvideo')->name('user.single
 
 Route::get('watch/{id}', 'UserController@watchVideo')->name('user.singleVideo');
 //Route::get('watch', 'UserController@watchVideo')->name('user.singleVideo');
-Route::get('select-payment-plan', 'UserController@selectPayPlan')->name('user.select-pay-plan');
+
 
 Route::get('vimeo', 'UserController@vimeoVideo');
 
