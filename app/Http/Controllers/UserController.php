@@ -63,12 +63,15 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        //landing page
+        //#testing
         if(!Auth::check()){
             return view('r.landing',[
                 'payment_plans'=>PaymentPlan::all()
             ]);
+        }else{
+            return view('r.user.home-video');
         }
+        //#end
 
         $histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
         $database = config('database.connections.mysql.database');

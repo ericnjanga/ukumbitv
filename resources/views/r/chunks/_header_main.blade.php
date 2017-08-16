@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="col-sm-1 offset-sm-7">
-                    <a href="{{route('user.login.form')}}" class="butn butn-signin">{{l("Sing in")}}</a>
+                    <a href="{{route('user.login.form')}}" class="butn butn-signin">{{l("Sign in")}}</a>
                 </div>
                 <div class="col-sm-2">
                     <a href="{{route('user.register.form')}}" class="butn butn-free">{{l("Try free trial")}}</a>

@@ -29,4 +29,5 @@ return [
     'Jobs' => 'Jobs',
     'About Us' => 'About Us',
     'About us' => 'About us',
+    'Sign in' => 'Sign in',
 ];

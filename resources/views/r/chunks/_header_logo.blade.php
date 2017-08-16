@@ -27,7 +27,15 @@
                                     </div>
                                 </div>
                             </div>
+                        @else
+                            {{--<div class="col-sm-1 offset-sm-2">--}}
+                                {{--<a href="" class="butn butn-signin">Sign in</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-sm-2">--}}
+                                {{--<a href="" class="butn butn-free">Try free trial</a>--}}
+                            {{--</div>--}}
                         @endif
+
                     </div>
                 </div>
 

@@ -87,6 +87,17 @@ class ApplicationController extends Controller {
 
     }
 
+    public function helpCenter($id=false){
+        if($id !== false){
+            return view('r.static.help');
+        }
+        return view('r.static.help-center');
+    }
+
+    public function advertising(){
+        return view('r.static.advertising');
+    }
+
     public function jobs(Request $request) {
 
 
@@ -110,7 +121,7 @@ class ApplicationController extends Controller {
         $page = Page::where('type', 'terms')->first();;
 
         // dd($page);
-        return view('static.terms')->with('data' , $page)
+        return view('r.static.terms')->with('data' , $page)
                         ->with('page' , 'terms_and_condition')
                         ->with('subPage' , '');
 

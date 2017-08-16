@@ -51,7 +51,7 @@ class AuthController extends Controller
      * @var string
      */
 
-    protected $registerView = 'r.user.auth.register';
+    protected $registerView = 'user.auth.register';
 
 
     /**

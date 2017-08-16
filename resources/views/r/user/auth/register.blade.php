@@ -9,14 +9,14 @@
                         <div class="text-add">The easiest way for you to sign up is with Facebook</div>
                         <a href="" class="butn butn-large butn-dblue butn-face"><span class="icon icon-facebook"></span>Sign up with Facebook</a>
                         <div class="or-line upper">or</div>
-                        <form  action="" method="">
+                        <form  action="{{ url('/register') }}" method="POST">
                             <div class="input-wrap">
                                 <label>Enter your e-mail <span>*</span></label>
                                 <input type="email" name="email" required>
                             </div>
                             <div class="input-wrap">
                                 <label>Password<span>*</span></label>
-                                <input type="password" name="psw" required>
+                                <input type="password" name="password" required>
                             </div>
                             <div class="operations-pass">
                                 <a href="">Show password</a>
@@ -24,9 +24,9 @@
                             <div class="terms-policy">
                                 <p>By clicking Sign Up, I agree to the</p>
                                 <div>
-                                    <a href="">Terms of Service</a>
+                                    <a href="{{route('user.terms-condition')}}">Terms of Service</a>
                                     <span>and</span>
-                                    <a href="">Privacy policy</a>
+                                    <a href="{{route('user.privacy_policy')}}">Privacy policy</a>
                                 </div>
                             </div>
                             <button type="submit" class="butn butn-orange butn-large">Sign Up</button>

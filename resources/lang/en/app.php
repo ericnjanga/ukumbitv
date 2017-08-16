@@ -29,4 +29,5 @@ return [
     'About Us' => 'About Us',
     'About us' => 'About us',
     'Seo text' => 'Seo text',
+    'Sign in' => 'Sign in',
 ];

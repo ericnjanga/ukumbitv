@@ -15,20 +15,20 @@
       <div class="list-title">{{l("About The Project")}}</div>
       <ul class="footer-list">
        <li><a href="{{route("user.privacy_policy")}}">{{l("Privacy Policy")}}</a></li>
-       <li><a href="{{route("user.terms")}}">{{l("Terms of Use")}}</a></li>
-       <li><a href="">{{l("Advertising")}}</a></li>
-       <li><a href="">{{l("Help center")}}</a></li>
+       <li><a href="{{route("user.terms-condition")}}">{{l("Terms of Use")}}</a></li>
+       <li><a href="{{route("user.advertising")}}">{{l("Advertising")}}</a></li>
+       <li><a href="{{route("user.help-center")}}">{{l("Help center")}}</a></li>
       </ul>
      </div>
      <div class="col-sm-2">
       <div class="list-title">{{l("Devices")}}</div>
       <ul class="footer-list">
-       <li><a href="">{{l("Mobile")}}</a></li>
-       <li><a href="">{{l("TV")}}</a></li>
-       <li><a href="">{{l("Media players")}}</a></li>
-       <li><a href="">{{l("PC")}}</a></li>
-       <li><a href="">{{l("Android")}}</a></li>
-       <li><a href="">{{l("Apple")}}</a></li>
+       <li><a href="#">{{l("Mobile")}}</a></li>
+       <li><a href="#">{{l("TV")}}</a></li>
+       <li><a href="#">{{l("Media players")}}</a></li>
+       <li><a href="#">{{l("PC")}}</a></li>
+       <li><a href="#">{{l("Android")}}</a></li>
+       <li><a href="#">{{l("Apple")}}</a></li>
       </ul>
      </div>
      <div class="col-sm-3 offset-sm-1">
