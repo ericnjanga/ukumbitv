@@ -454,6 +454,7 @@ Route::get('newvideo/{id}', 'UserController@single_newvideo')->name('user.single
 
 Route::get('watch/{id}', 'UserController@watchVideo')->name('user.singleVideo');
 //Route::get('watch', 'UserController@watchVideo')->name('user.singleVideo');
+Route::get('select-payment-plan', 'UserController@selectPayPlan')->name('user.select-pay-plan');
 
 Route::get('vimeo', 'UserController@vimeoVideo');
 
@@ -461,7 +462,7 @@ Route::get('/stripe-pay', 'UserController@stripePay')->name('stripe-pay');
 Route::post('/stripe-pay-post', 'UserController@stripePayPost')->name('stripe-pay-post');
 
 //payment plans
-Route::get('select-payment-plan', 'UserController@selectPayPlan')->name('user.select-pay-plan');
+
 Route::get('user-reset-trial', 'UserController@resetTrial')->name('user.reset-trial');
 Route::get('select-payment-plan/{id}', 'UserController@choosePayPlan')->name('user.choose-payplan');
 Route::get('paypal-success-pay/{id}', 'UserController@successPayPalPay');
