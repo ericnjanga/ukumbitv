@@ -464,7 +464,7 @@ Route::post('/stripe-pay-post', 'UserController@stripePayPost')->name('stripe-pa
 Route::get('select-payment-plan', 'UserController@selectPayPlan')->name('user.select-pay-plan');
 Route::get('user-reset-trial', 'UserController@resetTrial')->name('user.reset-trial');
 Route::get('select-payment-plan/{id}', 'UserController@choosePayPlan')->name('user.choose-payplan');
-Route::get('paypal-success-pay', 'UserController@successPayPalPay');
+Route::get('paypal-success-pay/{id}', 'UserController@successPayPalPay');
 
 // Social Login
 

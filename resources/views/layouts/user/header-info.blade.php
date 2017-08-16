@@ -7,7 +7,10 @@
 				<img class="img-brand" src="{{asset('streamtube/images/logo1.png')}}" alt='UkumbiTv' />
       </a>
 
-      <span style="color:white">Your payment plan: </span>
+
+      <span style="color:white">Your payment plan: @if(isset($payplan)) {{$payplan}} @else FREE PLAN @endif</span>
+      <br>
+      <span style="color:white">expiry date: @if(isset($expdate)) {{$expdate}} @else 0 days @endif</span>
 
 
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

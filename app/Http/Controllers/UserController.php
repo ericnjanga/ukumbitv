@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\AdminVideo;
 use App\PaymentPlan;
 use App\UserHistory;
+use App\UserPayment;
 use App\Videoimage;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,7 @@ use App\Flag;
 
 use Auth;
 
+use Illuminate\Support\Facades\URL;
 use Omnipay\Omnipay;
 use phpDocumentor\Reflection\Types\Object_;
 use Validator;
@@ -994,7 +996,18 @@ class UserController extends Controller {
     public function selectPayPlan()
     {
         $payPlans = PaymentPlan::all();
+        $planId = UserPayment::where('user_id', Auth::id())->orderBy('id', 'desc')->first();
+
+        if(count($planId) != 0) {
+            $payPlan = PaymentPlan::find($planId->payment_plan_id);
+            $id = $payPlan->name;
+            $expdate = $planId->expiry_date;
+        }
+        else {$id = NULL;$expdate = NULL;}
+
         return view('user.select_payment_plan')
+            ->with('payplan', $id)
+            ->with('expdate', $expdate)
             ->with('payPlans', $payPlans);
     }
 
@@ -1095,6 +1108,7 @@ class UserController extends Controller {
 
     public function choosePayPlan($id)
     {
+
         $payPlan = PaymentPlan::find($id);
 
         $gateway = Omnipay::create('PayPal_Express');
@@ -1105,8 +1119,8 @@ class UserController extends Controller {
 
         $response = $gateway->purchase(
             array(
-                'cancelUrl' => 'http://ukumbitv.loc/select-payment-plan',
-                'returnUrl' => 'http://ukumbitv.loc/paypal-success-pay',
+                'cancelUrl' => URL::to('/').'/select-payment-plan',
+                'returnUrl' => URL::to('/').'/paypal-success-pay/'.$payPlan->id,
                 'description' => 'Payment plan',
                 'amount' => $payPlan->price,
                 'currency' => 'USD'
@@ -1117,8 +1131,44 @@ class UserController extends Controller {
 
     }
 
-    public function successPayPalPay()
+    public function successPayPalPay($id)
     {
-        return view('user.paypal_success_pay');
+        $payPlan = PaymentPlan::find($id);
+
+        $gateway = Omnipay::create('PayPal_Express');
+        $gateway->setUsername('accounting-facilitator_api1.mungodigital.com');
+        $gateway->setPassword('6R2J5K7SYKMKC5J8');
+        $gateway->setSignature('AFcWxV21C7fd0v3bYYYRCpSSRl31A29KVfo-.eMT26Dj3IuPQ0AjdFfz');
+        $gateway->setTestMode(true);
+
+        $response = $gateway->purchase(
+            array(
+                'cancelUrl' => URL::to('/').'/select-payment-plan',
+                'returnUrl' => URL::to('/').'/paypal-success-pay/'.$payPlan->id,
+                'description' => 'Payment plan',
+                'amount' => $payPlan->price,
+                'currency' => 'USD'
+            )
+        )->send();
+
+        $data = $response->getData();
+
+        if($data['ACK']=='Success'){
+
+            $payment = new UserPayment();
+            $payment->user_id = Auth::id();
+            $payment->payment_id = $data['TOKEN'];
+            $payment->payment_plan_id = $payPlan->id;
+            $payment->amount = $payPlan->price;
+            $payment->expiry_date = $data['TIMESTAMP'];
+            $payment->save();
+
+            $payPlans = PaymentPlan::all();
+
+            return redirect()->action('UserController@selectPayPlan');
+        }
+
+
+        return 'ERROR';
     }
 }
