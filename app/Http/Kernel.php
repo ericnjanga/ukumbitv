@@ -56,8 +56,8 @@ class Kernel extends HttpKernel
         'moderator' => \App\Http\Middleware\AuthenticateModerator::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
-        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-    //    'guest' => \App\Http\Middleware\CheckForMaintenanceMode::class, //off
+      //  'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \App\Http\Middleware\CheckForMaintenanceMode::class, //off
         'guestadmin' => \App\Http\Middleware\RedirectIfAuthenticatedAdmin::class,
         'guestmoderator' => \App\Http\Middleware\RedirectIfAuthenticatedModerator::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
