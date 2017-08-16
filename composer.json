@@ -15,7 +15,8 @@
         "vidhyar2612/enveditor": "^1.1",
         "olaferlandsen/ffmpeg-php-class": "^0.1.4",
         "predis/predis": "^1.1",
-        "vimeo/vimeo-api": "^1.2"
+        "vimeo/vimeo-api": "^1.2",
+        "omnipay/omnipay": "~2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

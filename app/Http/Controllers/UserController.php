@@ -26,6 +26,7 @@ use App\Flag;
 
 use Auth;
 
+use Omnipay\Omnipay;
 use phpDocumentor\Reflection\Types\Object_;
 use Validator;
 
@@ -1005,5 +1006,119 @@ class UserController extends Controller {
         }
 
         return back()->with('flash_error' , 'ok');
+    }
+
+    public function stripePay()
+    {
+        $msg = 'test';
+
+        $gateway = Omnipay::create('Stripe');
+        $gateway->setApiKey('sk_test_BoUW18Zo8GZAgRgZqb4r6Apn');
+
+// Example form data
+        $formData = [
+            'number' => '4242424242424242',
+            'expiryMonth' => '6',
+            'expiryYear' => '2018',
+            'cvv' => '123'
+        ];
+
+// Send purchase request
+        $response = $gateway->purchase(
+            [
+                'amount' => '10.00',
+                'currency' => 'USD',
+                'card' => $formData
+            ]
+        )->send();
+
+// Process response
+        if ($response->isSuccessful()) {
+
+            // Payment was successful
+            return view('errors.503')
+                ->with('msg', 'ok');
+
+        } elseif ($response->isRedirect()) {
+
+            // Redirect to offsite payment gateway
+            $response->redirect();
+
+        } else {
+
+            // Payment failed
+            return view('errors.503')->with('msg', $response->getMessage());
+        }
+
+    }
+
+    public function stripePayPost()
+    {
+        // Setup payment gateway
+        $gateway = Omnipay::create('Stripe');
+        $gateway->setApiKey('sk_test_BoUW18Zo8GZAgRgZqb4r6Apn');
+
+// Example form data
+        $formData = [
+            'number' => '4242424242424242',
+            'expiryMonth' => '6',
+            'expiryYear' => '2018',
+            'cvv' => '123'
+        ];
+
+// Send purchase request
+        $response = $gateway->purchase(
+            [
+                'amount' => '10.00',
+                'currency' => 'USD',
+                'card' => $formData
+            ]
+        )->send();
+
+// Process response
+        if ($response->isSuccessful()) {
+
+            // Payment was successful
+            print_r($response);
+
+        } elseif ($response->isRedirect()) {
+
+            // Redirect to offsite payment gateway
+            $response->redirect();
+
+        } else {
+
+            // Payment failed
+            echo $response->getMessage();
+        }
+    }
+
+    public function choosePayPlan($id)
+    {
+        $payPlan = PaymentPlan::find($id);
+
+        $gateway = Omnipay::create('PayPal_Express');
+        $gateway->setUsername('accounting-facilitator_api1.mungodigital.com');
+        $gateway->setPassword('6R2J5K7SYKMKC5J8');
+        $gateway->setSignature('AFcWxV21C7fd0v3bYYYRCpSSRl31A29KVfo-.eMT26Dj3IuPQ0AjdFfz');
+        $gateway->setTestMode(true);
+
+        $response = $gateway->purchase(
+            array(
+                'cancelUrl' => 'http://ukumbitv.loc/select-payment-plan',
+                'returnUrl' => 'http://ukumbitv.loc/paypal-success-pay',
+                'description' => 'Payment plan',
+                'amount' => $payPlan->price,
+                'currency' => 'USD'
+            )
+        )->send();
+
+        $response->redirect();
+
+    }
+
+    public function successPayPalPay()
+    {
+        return view('user.paypal_success_pay');
     }
 }
