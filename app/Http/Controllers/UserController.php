@@ -387,6 +387,10 @@ class UserController extends Controller {
 	 
 	public function single_video($id) {
 
+	    //#testing
+	    return view('r.user.single-video');
+	    //#end
+
         $video = Helper::get_video_details($id);
 
         $trendings = Helper::trending(WEB);

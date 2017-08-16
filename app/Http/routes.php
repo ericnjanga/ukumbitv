@@ -431,7 +431,7 @@ Route::group(['prefix' => 'admin'], function(){
 Route::get('/', 'UserController@index')->name('user.dashboard');
 Route::get('/tag/{id}', 'UserController@getVideosByTag');
 
-Route::get('/single', 'UserController@single_video');
+Route::get('/single/{id}', 'UserController@single_video')->name('single-video');
 
 Route::get('/user/searchall' , 'ApplicationController@search_video')->name('search');
 

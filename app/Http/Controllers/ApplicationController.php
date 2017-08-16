@@ -307,7 +307,7 @@ class ApplicationController extends Controller {
 
             $videos = Helper::search_video($q,1);
 
-            return view('user.search-result')->with('key' , $q)->with('videos' , $videos)->with('page' , "")->with('subPage' , "");
+            return view('r.user.search-result')->with('key' , $q)->with('videos' , $videos)->with('page' , "")->with('subPage' , "");
         }     
     
     }

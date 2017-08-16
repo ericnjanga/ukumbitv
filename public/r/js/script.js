@@ -31,3 +31,34 @@ $('.video-slider-block').slick({
         }
     ]
 });
+
+$('.series-list-slider').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 12,
+    slidesToScroll: 12,
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+})

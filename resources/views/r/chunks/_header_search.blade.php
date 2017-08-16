@@ -37,7 +37,7 @@
                         </div>
                         <div class="img-block">
                             {{--<span class="icon icon-man-user icon-no-photo"></span>--}}
-                        <img src="{{'r/img/no-img.png'}}" alt="">
+                        <img src="{{asset('r/img/no-img.png')}}" alt="">
                             <div class="account-block">
                                 <ul class="account-list">
                                     <li><a href="">My account</a></li>
