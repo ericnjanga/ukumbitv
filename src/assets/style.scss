@@ -238,7 +238,7 @@ a {
     cursor: pointer;
     color: rgba(34, 152, 212, 0.75);
   }
-  &:hover, &:focus, &:active {
+  &:hover, &:active {
     text-decoration: none;
     color: rgba(34, 152, 212, 0.75);
   }
@@ -283,18 +283,19 @@ ul {
   color: #343436;
   font-size: 16px;
   font-weight: 700;
-  &:hover, &:focus, &:active{
+  &:hover, &:active{
     border: 2px solid #eeb33d;
     background-color: transparent;
     color:  #eeb33d;
   }
+
 }
 .butn-dblue{
   background-color: #3b5998;
   color: #fff;
   font-size: 16px;
   font-weight: 300;
-  &:hover{
+  &:hover, &:active{
     border: 2px solid #3b5998;
     background-color: #fff;
     color:  #3b5998;
@@ -304,7 +305,7 @@ ul {
   border: 2px solid #fff;
   color: #ffffff;
   background-color: transparent;
-  &:hover, &:focus, &:active{
+  &:hover, &:active{
     background-color: #fff;
   }
 }
@@ -323,7 +324,7 @@ ul {
   color: #eeb33d;
   background-color: #fff;
   border: 2px solid #eeb33d;
-  &:hover, &:focus, &:active{
+  &:hover, &:active{
     background-color: #eeb33d;
     color: #ffffff;
   }
@@ -333,7 +334,7 @@ ul {
   color: #ffffff;
   font-size: 16px;
   font-weight: 300;
-  &:hover, &:focus, &:active{
+  &:hover, &:active{
     background-color: #fff;
     color: #eeb33d;
     border: 2px solid #eeb33d;
@@ -351,7 +352,7 @@ input{
   line-height: 44px;
   border: 1px solid #e0e0e0;
   background-color: #ffffff;
-  padding: 0 15px;
+  padding: 0 10px;
   width: 100%;
   color: #616161;
 }
@@ -440,14 +441,16 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 img{
   display: inline-block;
   vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }
 .logo-block{
   height: 60px;
   line-height: 56px;
   display: block;
   img{
-    //width: 100%;
-    //height: 23px;
+    width: 150px;
+    height: auto;
   }
 }
 .search-wrap{
@@ -1750,6 +1753,12 @@ img{
     display: flex;
     margin: 0 0 35px 0;
     .img-block{
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 40px;
+      -ms-flex: 0 0 40px;
+      flex: 0 0 40px;
+      max-width: 40px;
+      width: 40px;
       img{
         border-radius: 50px;
         width: 40px;
@@ -1763,6 +1772,7 @@ img{
         font-size: 14px;
         font-weight: 500;
         line-height: 16px;
+        margin: 0 0 5px 0;
       }
       .comment-text{
         color: #757575;
@@ -2653,14 +2663,14 @@ input:-webkit-autofill {
       right: 10px;
       top: 12px;
       font-size: 16px;
-      transition: transform 0.3s linear;
+      transition: transform 0.5s linear;
     }
   }
   .butn.open{
     background-color: #eeb33d;
     color: #ffffff;
     .icon{
-      transform: rotate(180deg);
+      transform: rotateX(180deg);
     }
   }
 }
