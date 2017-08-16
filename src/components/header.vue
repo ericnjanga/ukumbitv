@@ -21,9 +21,42 @@
             </div>
         </header>
 
-        <header v-else-if="$route.name === 'privacy' || $route.name === 'signin' || $route.name === 'signup' || $route.name === 'resetpas' || $route.name === 'checkmail' || $route.name === 'newpas' || $route.name === 'contact' || $route.name === 'jobs' || $route.name === 'job' || $route.name === 'help' || $route.name === 'helpcenter'">
+        <header v-else-if="$route.name === 'privacy' || $route.name === 'signin' || $route.name === 'signup' || $route.name === 'resetpas' || $route.name === 'checkmail' || $route.name === 'newpas' || $route.name === 'contact' || $route.name === 'jobs'  || $route.name === 'helpcenter'">
             <div class="main-header page-header">
                 <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-sm-2 offset-sm-5">
+                            <a href="/" class="logo-block">
+                                <img src="~@/assets/img/logo.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-4 offset-sm-1">
+                            <div class="login-block">
+                                <div class="login-info">
+                                    <div class="login-text">100 videos left</div>
+                                    <a href="" class="login-upgrade">upgrade package</a>
+                                </div>
+                                <div class="img-block">
+                                    <span class="icon icon-man-user icon-no-photo"></span>
+                                    <div class="account-block">
+                                        <ul class="account-list">
+                                            <li><a href="">My account</a></li>
+                                            <li><a href="">Plan</a></li>
+                                            <li><a href="">Sign Out</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <header v-else-if="$route.name === 'job' || $route.name === 'help'">
+            <div class="main-header page-header">
+                <div class="container">
+                    <a href="" class="butn-back"><span class="icon icon-angle-pointing-to-left"></span></a>
                     <div class="row align-items-center">
                         <div class="col-sm-2 offset-sm-5">
                             <a href="/" class="logo-block">

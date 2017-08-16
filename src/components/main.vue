@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="butn-block">
                                     <div class="play-block">
-                                        <a href="" class="butn butn-orange-dark butn-play upper"><span class="icon icon-play-arrow"></span>Play</a>
+                                        <a href="https://www.youtube.com/embed/Rg6awBglzGU?autoplay=1" class="butn butn-orange-dark butn-play upper cb-video"><span class="icon icon-play-arrow"></span>Play</a>
                                         <a href="" class="butn butn-orange-dark upper">Add to list</a>
                                     </div>
                                     <div class="share-block">
@@ -526,7 +526,23 @@
         ]
       });
 
+
+      if ($(window).width() > 1199) {
+        $(".cb-video").colorbox({iframe:true,width:'90%',height:'80%'});
+      } else if ($(window).width() > 991) {
+        $(".cb-video").colorbox({iframe:true,width:'90%',height:'70%'});
+
+      } else if ($(window).width() > 767) {
+        $(".cb-video").colorbox({iframe:true,width:'90%',height:'55%'});
+
+
+      } else if ($(window).width() > 575) {
+        $(".cb-video").colorbox({iframe:true,width:'90%',height:'45%'});
+      } else {
+        $(".cb-video").colorbox({iframe:true,width:'100%',height:'40%'});
+      }
+
     },
   }
-//  $(".cb-video").colorbox({iframe:true,width:'90%',height:'80%'});
+
 </script>
