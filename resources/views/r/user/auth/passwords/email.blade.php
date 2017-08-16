@@ -1,4 +1,4 @@
-@extends('r.layouts.guest')
+@extends('r.layouts.simple')
 @section('content')
     <div class="resetpas-wrap">
         <div class="container">

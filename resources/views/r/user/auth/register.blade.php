@@ -1,4 +1,4 @@
-@extends('r.layouts.guest')
+@extends('r.layouts.simple')
 @section('content')
     <div class="signup-wrap">
         <div class="container">

@@ -14,7 +14,7 @@
      <div class="col-sm-2">
       <div class="list-title">{{l("About The Project")}}</div>
       <ul class="footer-list">
-       <li><a href="{{route("user.privacy")}}">{{l("Privacy Policy")}}</a></li>
+       <li><a href="{{route("user.privacy_policy")}}">{{l("Privacy Policy")}}</a></li>
        <li><a href="{{route("user.terms")}}">{{l("Terms of Use")}}</a></li>
        <li><a href="">{{l("Advertising")}}</a></li>
        <li><a href="">{{l("Help center")}}</a></li>

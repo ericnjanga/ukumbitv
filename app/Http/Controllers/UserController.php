@@ -814,7 +814,7 @@ class UserController extends Controller {
 
         $contact = Page::where('type', 'contact')->first();
 
-        return view('contact')->with('contact' , $contact)
+        return view('r.contact')->with('contact' , $contact)
                         ->with('page' , 'contact')
                         ->with('subPage' , '');
 
