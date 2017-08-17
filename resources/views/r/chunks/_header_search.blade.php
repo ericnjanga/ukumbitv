@@ -33,7 +33,7 @@
                     <div class="login-block">
                         <div class="login-info">
                             <div class="login-text">100 videos left</div>
-                            <a href="" class="login-upgrade">upgrade package</a>
+                            <a href="{{route('user.package')}}" class="login-upgrade">upgrade package</a>
                         </div>
                         <div class="img-block">
                         <img src="{{asset('r/img/no-img.png')}}" alt="">
