@@ -652,8 +652,9 @@ img{
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 0 10px 0;
   li{
-    margin: 0 15px 0 0;
+    margin: 0 15px 10px 0;
     a{
       width: 30px;
       height: 30px;

@@ -4,7 +4,7 @@
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-2 col-md-3 col-lg-3 col-xl-2 offset-xl-1">
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 offset-xl-1 footer-top-item">
                             <div class="list-title">About us</div>
                             <ul class="footer-list">
                                 <li><a href="">About Us</a></li>
@@ -12,7 +12,7 @@
                                 <li><a href="">Contact Us</a></li>
                             </ul>
                         </div>
-                        <div class="col-sm-2 col-md-3 col-lg-3 col-xl-2">
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 footer-top-item">
                             <div class="list-title">About The Project</div>
                             <ul class="footer-list">
                                 <li><a href="">Privacy Policy</a></li>
@@ -21,7 +21,7 @@
                                 <li><a href="">Help center</a></li>
                             </ul>
                         </div>
-                        <div class="col-sm-2 col-md-3 col-lg-3 col-xl-2">
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 footer-top-item">
                             <div class="list-title">Devices</div>
                             <ul class="footer-list">
                                 <li><a href="">Mobile</a></li>
@@ -32,7 +32,7 @@
                                 <li><a href="">Apple</a></li>
                             </ul>
                         </div>
-                        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 offset-xl-1">
+                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 offset-xl-1 footer-top-item">
                             <div class="last-block">
                                 <div class="soc-block">
                                     <div class="list-title">Get Social</div>

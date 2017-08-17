@@ -8,6 +8,7 @@ import './assets/bootstrap.min.css'
 import './assets/colorbox.css'
 import './assets/slick.scss'
 import './assets/style.scss'
+import './assets/media.scss'
 
 Vue.config.productionTip = false
 
