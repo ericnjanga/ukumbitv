@@ -15,6 +15,9 @@
     display: block;
     margin: 0 0 5px 0;
   }
+  .list-text-item{
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -27,9 +30,29 @@
   .down-block div{
     font-size: 11px;
   }
+  .list-text-item{
+    margin: 0 auto 35px;
+    width: 75%;
+  }
+  .list-text-block:nth-child(2) .list-text-item{
+    margin: 0 auto 35px;
+  }
+  .list-text-block:nth-child(3) .list-text-item{
+    margin: 0 auto;
+  }
+  .price-block .price-item{
+    width: 50%;
+  }
+  .price-block .price-item .includ-list{
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 575px) {
+  .price-block .price-item {
+    width: 290px;
+    margin: 0 auto;
+  }
   .landing-header{
     height: 450px;
   }
@@ -61,6 +84,13 @@
   .landing-header .butn-orange{
     width: 100%;
     margin: 0 auto 30px;
+  }
+  .list-text-item{
+    margin: 0 auto 35px;
+    width: 100%;
+  }
+  .list-text-wrap {
+    margin: 65px 0 75px;
   }
 }
 

@@ -5,7 +5,7 @@
         <div class="list-text-wrap">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3 offset-sm-1 list-text-block">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 offset-xl-1 list-text-block">
                         <div class="list-text-item">
                             <div class="title-text">Best videos ever</div>
                             <span class="icon icon-video"></span>
@@ -13,7 +13,7 @@
                                 adventure set in a future world where people are enhanced </p>
                         </div>
                     </div>
-                    <div class="col-sm-4 list-text-block">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 list-text-block">
                         <div class="list-text-item">
                             <div class="title-text">Watch anywhere</div>
                             <span class="icon icon-monitor-tablet-and-smartohone"></span>
@@ -21,7 +21,7 @@
                                 adventure set in a future world where people are enhanced </p>
                         </div>
                     </div>
-                    <div class="col-sm-3 list-text-block">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 list-text-block">
                         <div class="list-text-item">
                             <div class="title-text">Hight quality</div>
                             <span class="icon icon-computer-screen"></span>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-10">
                         <div class="price-list-block">
                             <div class="price-block">
                                 @foreach($payment_plans as $payment_plan)

@@ -16,7 +16,7 @@
                     <a href="{{route('user.register.form')}}" class="butn butn-free">{{l("Try free trial")}}</a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row align-items-end">
                 <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xl-5 offset-xl-1">
                     <div class="title-white">{{l("Watch great videos")}}</div>
                     <div class="title-white-add upper">{{l("Watch anywhere. enjoy your time")}}</div>
