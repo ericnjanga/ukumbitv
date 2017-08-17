@@ -200,3 +200,9 @@ if ($(window).width() > 1199) {
 } else {
     $(".cb-video").colorbox({iframe:true,width:'100%',height:'40%'});
 }
+
+$("#payinfo").click(function () {
+    $('.payment-content-block').slideToggle(500);
+    $(this).toggleClass("open");
+    return false;
+})

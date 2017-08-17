@@ -142,6 +142,7 @@ Route::get('/jobs/{id?}', 'ApplicationController@jobs')->name('user.jobs');
 Route::get('/test' , 'ApplicationController@test');
 Route::get('/help-center/{id?}','ApplicationController@helpCenter')->name('user.help-center');
 Route::get('/advertising','ApplicationController@advertising')->name('user.advertising');
+Route::get('/package', 'UserController@packages')->name('user.package');
 
 // Video upload 
 
@@ -460,6 +461,7 @@ Route::get('watch/{id}', 'UserController@watchVideo')->name('user.singleVideo');
 //Route::get('watch', 'UserController@watchVideo')->name('user.singleVideo');
 
 Route::get('vimeo', 'UserController@vimeoVideo');
+Route::get('account', 'UserController@account')->name('user.account');
 
 
 
