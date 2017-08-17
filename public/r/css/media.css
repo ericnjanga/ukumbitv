@@ -1,3 +1,7 @@
+@media only screen and (max-width: 1200px) {
+  .list-text-wrap .container:after {
+    left: 10%;
+    width: 80%; } }
 @media only screen and (max-width: 991px) {
   .lang-block span {
     display: block;
@@ -35,6 +39,9 @@
   .price-block .price-item .includ-list {
     text-align: center; } }
 @media only screen and (max-width: 575px) {
+  .price-list-block > .butn {
+    width: 290px; }
+
   .price-block .price-item {
     width: 290px;
     margin: 0 auto; }
