@@ -64,6 +64,11 @@ class UserController extends Controller {
         return view('r.user.account');
     }
 
+    public function packages()
+    {
+        return view('r.user.packages');
+    }
+
     /**
      * Show the user dashboard.
      *

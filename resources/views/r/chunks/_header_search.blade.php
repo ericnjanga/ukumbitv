@@ -40,7 +40,7 @@
                             <div class="account-block">
                                 <ul class="account-list">
                                     <li><a href="{{route('user.account')}}">My account</a></li>
-                                    <li><a href="">Plan</a></li>
+                                    <li><a href="{{route('user.package')}}">Plan</a></li>
                                     <li><a href="{{route('user.logout')}}">Sign Out</a></li>
                                 </ul>
                             </div>

@@ -7,7 +7,7 @@
             </a>
         </li>
         <li>
-            <a href="" class="packages">
+            <a href="{{route("user.package")}}" class="packages">
                                         <span class="icon">
                                             <span class="noicon"></span>
                                         </span>
