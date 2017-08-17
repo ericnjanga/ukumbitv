@@ -57,6 +57,13 @@ class UserController extends Controller {
         $this->middleware('auth', ['except' => ['index']]);
     }
 
+
+
+    public function account()
+    {
+        return view('r.user.account');
+    }
+
     /**
      * Show the user dashboard.
      *

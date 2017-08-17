@@ -36,11 +36,10 @@
                             <a href="" class="login-upgrade">upgrade package</a>
                         </div>
                         <div class="img-block">
-                            {{--<span class="icon icon-man-user icon-no-photo"></span>--}}
                         <img src="{{asset('r/img/no-img.png')}}" alt="">
                             <div class="account-block">
                                 <ul class="account-list">
-                                    <li><a href="">My account</a></li>
+                                    <li><a href="{{route('user.account')}}">My account</a></li>
                                     <li><a href="">Plan</a></li>
                                     <li><a href="{{route('user.logout')}}">Sign Out</a></li>
                                 </ul>

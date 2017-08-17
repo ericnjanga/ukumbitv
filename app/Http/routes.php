@@ -460,6 +460,7 @@ Route::get('watch/{id}', 'UserController@watchVideo')->name('user.singleVideo');
 //Route::get('watch', 'UserController@watchVideo')->name('user.singleVideo');
 
 Route::get('vimeo', 'UserController@vimeoVideo');
+Route::get('account', 'UserController@account')->name('user.account');
 
 
 
