@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{asset('r/css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('r/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('r/css/media.css')}}">
+    <link rel="stylesheet" href="{{asset('r/css/less.css')}}">
     <link>
 </head>
 <body>
