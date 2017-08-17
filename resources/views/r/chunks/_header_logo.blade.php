@@ -2,7 +2,9 @@
     <header>
         <div class="main-header page-header">
             <div class="container">
-
+                @if(isset($back_url))
+                    <a href="{{$back_url}}" class="butn-back"><span class="icon icon-angle-pointing-to-left"></span></a>
+                @endif
                 <div class="row align-items-center">
                     <div class="col-sm-2 offset-sm-5">
                         <a href="{{route('user.dashboard')}}" class="logo-block">

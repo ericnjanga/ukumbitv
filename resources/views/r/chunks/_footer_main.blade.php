@@ -3,7 +3,7 @@
   <div class="footer-top">
    <div class="container">
     <div class="row">
-     <div class="col-sm-2 offset-sm-1">
+     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 offset-xl-1 footer-top-item">
       <div class="list-title">{{l("About us")}}</div>
       <ul class="footer-list">
        <li><a href="{{route("user.about")}}">{{l("About Us")}}</a></li>
@@ -11,7 +11,7 @@
        <li><a href="{{route("user.contact")}}">{{l("Contact Us")}}</a></li>
       </ul>
      </div>
-     <div class="col-sm-2">
+     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 footer-top-item">
       <div class="list-title">{{l("About The Project")}}</div>
       <ul class="footer-list">
        <li><a href="{{route("user.privacy_policy")}}">{{l("Privacy Policy")}}</a></li>
@@ -20,7 +20,7 @@
        <li><a href="{{route("user.help-center")}}">{{l("Help center")}}</a></li>
       </ul>
      </div>
-     <div class="col-sm-2">
+     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 footer-top-item">
       <div class="list-title">{{l("Devices")}}</div>
       <ul class="footer-list">
        <li><a href="#">{{l("Mobile")}}</a></li>
@@ -31,7 +31,7 @@
        <li><a href="#">{{l("Apple")}}</a></li>
       </ul>
      </div>
-     <div class="col-sm-3 offset-sm-1">
+     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 offset-xl-1 footer-top-item">
       <div class="last-block">
        <div class="soc-block">
         <div class="list-title">{{l('Get Social')}}</div>

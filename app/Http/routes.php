@@ -138,7 +138,7 @@ Route::get('/privacy-statement', 'ApplicationController@privacy')->name('user.pr
 Route::get('/terms-of-use', 'ApplicationController@terms')->name('user.terms-condition');
 
 Route::get('/about-us', 'ApplicationController@about')->name('user.about');
-Route::get('/jobs', 'ApplicationController@jobs')->name('user.jobs');
+Route::get('/jobs/{id?}', 'ApplicationController@jobs')->name('user.jobs');
 Route::get('/test' , 'ApplicationController@test');
 Route::get('/help-center/{id?}','ApplicationController@helpCenter')->name('user.help-center');
 Route::get('/advertising','ApplicationController@advertising')->name('user.advertising');

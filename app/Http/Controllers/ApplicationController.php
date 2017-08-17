@@ -89,7 +89,7 @@ class ApplicationController extends Controller {
 
     public function helpCenter($id=false){
         if($id !== false){
-            return view('r.static.help');
+            return view('r.static.help')->with('back_url',route('user.help-center'));
         }
         return view('r.static.help-center');
     }
@@ -98,9 +98,11 @@ class ApplicationController extends Controller {
         return view('r.static.advertising');
     }
 
-    public function jobs(Request $request) {
+    public function jobs(Request $request, $id=false) {
 
-
+        if($id !== false){
+            return view('r.static.job')->with('back_url',route('user.jobs'));
+        }
         return view('r.static.jobs');
 
     }

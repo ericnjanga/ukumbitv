@@ -185,3 +185,18 @@ expander.on('mouseover', function() {
     $('.sub-menu').addClass('index');
 });
 
+
+if ($(window).width() > 1199) {
+    $(".cb-video").colorbox({iframe:true,width:'90%',height:'80%'});
+} else if ($(window).width() > 991) {
+    $(".cb-video").colorbox({iframe:true,width:'90%',height:'70%'});
+
+} else if ($(window).width() > 767) {
+    $(".cb-video").colorbox({iframe:true,width:'90%',height:'55%'});
+
+
+} else if ($(window).width() > 575) {
+    $(".cb-video").colorbox({iframe:true,width:'90%',height:'45%'});
+} else {
+    $(".cb-video").colorbox({iframe:true,width:'100%',height:'40%'});
+}
