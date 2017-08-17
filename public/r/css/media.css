@@ -1,3 +1,7 @@
+@media only screen and (max-width: 1200px) {
+  .list-text-wrap .container:after {
+    left: 10%;
+    width: 80%; } }
 @media only screen and (max-width: 991px) {
   .lang-block span {
     display: block;
@@ -35,6 +39,13 @@
   .price-block .price-item .includ-list {
     text-align: center; } }
 @media only screen and (max-width: 575px) {
+  .sign-block {
+    width: 290px;
+    margin: 40px auto; }
+
+  .price-list-block > .butn {
+    width: 290px; }
+
   .price-block .price-item {
     width: 290px;
     margin: 0 auto; }
@@ -76,6 +87,11 @@
     width: 100%; }
 
   .list-text-wrap {
-    margin: 65px 0 75px; } }
+    margin: 65px 0 75px; }
+
+  .page-header {
+    height: auto; }
+    .page-header .butn-free {
+      margin: 0 auto 15px; } }
 
 /*# sourceMappingURL=media.css.map */

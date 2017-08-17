@@ -105,12 +105,12 @@
         <div class="bottom-text-wrap">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-sm-6">
+                    <div class="col-sm-12 col-md-10 col-lg-7 col-xl-6">
                         <div class="title-text">{{l("Seo text")}}</div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-sm-8">
+                    <div class="col-sm-12 col-md-11 col-lg-9 col-xl-8">
                         <p>Scarlett Johansson stars in the visually stunning Ghost in the Shell, an action-packed
                             adventure set in a future world where people are enhanced with technology. Believing she was
                             rescued from near death, Major (Johansson) becomes the first of her kind: a human mind
