@@ -5,7 +5,7 @@
 <div class="signin-wrap">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-4">
+            <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
                 <div class="sign-block">
                     <div class="title-page">Sign In</div>
                     <div class="text-add">The easiest way for you to sign in is with Facebook</div>
@@ -17,7 +17,7 @@
                             <input type="email" name="email" required>
                         </div>
                         <div class="input-wrap">
-                            <label>Password<span>*</span></label>
+                            <label>Password <span>*</span></label>
                             <input type="password" name="password" required>
                         </div>
                         <div class="operations-pass">
