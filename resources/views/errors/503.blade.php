@@ -141,7 +141,7 @@
 				</div>
 
 
-        <h1>PURCHASE</h1>
+        <!-- <h1>PURCHASE</h1>
         {{--<a href="{{route('stripe-pay')}}" class="btn btn-primary">Buy!</a>--}}
         {{--@if(isset($msg))--}}
             {{--<h2>{{$msg}}</h2>--}}
@@ -160,7 +160,7 @@
             </div>
 
             <button>Submit Payment</button>
-        </form>
+        </form> -->
 
 
 
