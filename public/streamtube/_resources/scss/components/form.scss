@@ -1,0 +1,112 @@
+
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="checkbox"],
+button[type="submit"] {
+	border-radius: 3px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+button[type="submit"]{
+	height: 50px; 
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"]{ 
+	background-color: rgba(255, 255, 255, 0.7);
+	&::placeholder { /* Firefox 19+ */
+	  color: #000;
+	}
+	&:focus{
+	  color: #000!important;
+		background-color: rgba(255,255,255,1);
+	}
+}
+
+input[type="checkbox"]:checked + label{
+	opacity: 1;
+}
+
+
+
+
+.btn-primary { 
+	background-color: $color-primary!important;
+}
+
+.btn-primary, label {
+	&:hover{ 
+		opacity: 0.7;   
+	}
+}
+
+
+
+//Replacing native element appearance by icons
+
+//hide checkbox
+input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0,0,0,0);
+}
+
+input[type="checkbox"] + label:before{ 
+  // transition: all 0.5s ease;
+  margin-right: 10px;
+  content: "\f096"; //unchecked 
+}
+input[type="checkbox"]:checked + label:before{ 
+  content: "\f046"; //checked
+}
+
+
+label { 
+  &:before{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }  
+}
+
+
+
+
+
+
+// .list-opt__item {
+//   //hide checkbox
+//   input[type="checkbox"] {
+//     position: absolute;
+//     clip: rect(0,0,0,0);
+//   }
+
+//   input[type="checkbox"] + label:before{ 
+//     // transition: all 0.5s ease;
+//     margin-right: 10px;
+//     content: "\f096"; //unchecked 
+//   }
+//   input[type="checkbox"]:checked + label:before{ 
+//     content: "\f046"; //checked
+//   }
+
+
+//   label { 
+//     &:before{
+//       display: inline-block;
+//       font: normal normal normal 14px/1 FontAwesome;
+//       font-size: inherit;
+//       text-rendering: auto;
+//       -webkit-font-smoothing: antialiased;
+//       -moz-osx-font-smoothing: grayscale;
+//     }  
+//   }
+// }//.list-opt__item

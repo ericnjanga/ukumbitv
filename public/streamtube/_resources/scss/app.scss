@@ -1,0 +1,32 @@
+/**
+ * Modernizr features:
+ * -------------------
+ * backdropfilter
+ * hover
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+@import 'utilities/vars.scss';
+
+
+@import 'global/animations.scss';
+@import 'global/body.scss';
+@import 'global/links.scss';
+@import 'global/nav.scss';
+@import 'global/footer.scss';
+
+
+@import 'components/grid.scss'; 
+@import 'components/video-modal.scss';
+//Hidding elements of language 'A' when language 'B' is active
+@import 'components/lang-elt-control.scss'; 
+@import 'components/carousel.scss'; 
+@import 'components/form.scss'; 
+@import 'components/frosting-glass.scss'; 
+   
+
+@import 'pages/login-registration.scss';
+@import 'pages/home-videos.scss';
+@import 'pages/single-video.scss';

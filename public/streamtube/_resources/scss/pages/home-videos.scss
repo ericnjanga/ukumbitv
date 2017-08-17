@@ -1,0 +1,76 @@
+
+
+
+
+
+.page-homevideos {
+/*Hide singlevideo navigation here*/
+	.main-nav-singlevideo{
+		display : none;
+	}
+
+	.main-nav {
+		position: fixed;
+    z-index: 99;
+    width: 100%;
+	}//main-nav
+
+
+	.col.og-expanded{
+		.og-tmb1 {
+			border: 5px solid $color-primary;
+		}
+	}
+
+	//.carousel,
+	.video-container {
+		position: relative;
+		margin-bottom: 50px;
+
+		.col{
+			position: initial;
+		}
+	
+		// for small screens ...
+		@media (max-width: 767px) {
+			.row {
+				margin-right: 0;
+    		margin-left: 0;
+			}
+			.col {
+		    padding-left: 2px;
+		    padding-right: 2px;
+			} 
+		}
+	}
+
+	//[xs]......
+	.main-content {
+		padding-top: 250px;
+	
+		// for medium and large screens ...
+		@media (min-width: 768px) {
+			padding-top: 550px;
+		}
+	}
+
+	.billboard {
+		position: absolute;
+    width: 100%;
+    
+    .img-responsive {
+    	width: 100%;
+    }
+	
+		// for small screens ...
+    top: 50px; //mobile nav height
+	
+		// for medium and large screens ...
+		@media (min-width: 768px) {
+			top: 0;
+		}
+	}
+	//[xs]......
+}
+
+ 

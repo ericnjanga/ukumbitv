@@ -1,0 +1,19 @@
+/*Hide homevideo navigation here*/
+.page-singlevideo {
+	.main-nav-homevideo{
+		display : none;
+	}
+	
+	.main-nav-singlevideo{
+		position: fixed;
+	}
+	   
+	.col-comment {
+		margin-top: 40px;
+	}
+	.col-share {
+		margin-top: 48px;
+	}
+}
+ 
+

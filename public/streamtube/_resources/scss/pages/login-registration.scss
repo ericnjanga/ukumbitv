@@ -1,0 +1,215 @@
+
+
+$rectangle-width: 360px;
+
+.page-login,
+.page-register {
+	.rectangle { 
+		position: relative;
+		padding: 30px;
+		width: 100%;
+		max-width: $rectangle-width; 
+
+		// @media screen and (max-height: 899px) {
+		// 	width: $rectangle-width; 
+		// }
+
+		border-radius: 2px;
+		color: #fff;
+
+		.btn-link{
+			color: #fff;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+
+		.page-title { 
+			margin-top: 0;
+			margin-bottom: 30px;
+			font-size: 22px;
+			font-weight: 300; 
+		}
+
+		//inner controls ..
+		.form-group {
+		  margin-bottom: 5px;
+		}
+		.form-control {
+			border: 0px solid #ccc;
+		}
+
+		.form-group-spacearound1{
+	    display: flex;
+			height: 66px;
+	    align-items: center;
+	    margin-bottom: 0;
+		}
+	  
+		span, label {
+			opacity: 0.4;
+		}
+		label {
+			padding-left: 0px;
+		}
+		.checkbox label{
+			display: flex;
+	    align-items: center;
+			&:before{
+				font-size: 20px;
+			} 
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"] {
+			color: #fff;
+		}
+
+		a, 
+		.btn-submit,
+		.page-title {
+			color: #fff; 
+		}
+
+		.fb-login{
+			margin-bottom: 30px;
+			.fa {
+				font-size: 30px;
+				color: #3B5998;
+			}
+		}
+
+		footer {
+			margin-top: 50px;
+		}
+	}//rectangle
+}
+//page-login
+//page-register
+
+
+		$rect-space : 25px;
+
+.page-register {
+	.main-content {
+		display: flex;
+
+		  margin-top: 70px;
+		  margin-bottom: 100px;
+		
+		@media screen and (max-width: ($rectangle-width * 2) + ($rect-space * 2) - 1px) {
+			flex-direction: column;
+	    align-items: center;
+			.panel-register{
+				margin-bottom: $rect-space;
+			}
+		}
+		@media screen and (min-width: ($rectangle-width * 2) + ($rect-space * 2)) {
+		  // justify-content: space-between; 
+		  // height: 100vh;
+			.panel-register{
+				margin-right: $rect-space;
+			}
+			.panel-offers{
+				margin-left: $rect-space; 
+			}
+		}
+		
+
+		.panel-offers{
+			display: flex;
+			flex-direction: column; 
+			.page-title{
+				margin-bottom: auto;
+			}
+			.list-unstyled {
+				margin: auto;
+				line-height: 3.5em;
+				li {
+					position: relative;
+					padding-left: 30px;
+					line-height: 24px;
+					margin-bottom: 30px;
+				}
+				.svg-icon {
+					position: absolute;
+			    top: 0;
+			    left: 0;
+				}
+			}
+			.cta-title{
+				margin-top: auto;
+			}
+		}
+	}//main-content
+
+	.fb-login{
+		.btn-link {
+			font-size: 20px;
+		}
+		p{
+			opacity:0.8; margin-top:10px;
+		}
+	}//fb-login
+
+	.signup-form{
+		.sep{
+			margin:40px;
+		}
+		.sep-title {
+			margin-bottom: 30px;
+		}
+	}//signup-form
+}
+//page-register
+
+
+
+
+//Center Align first bloc horizontally
+.page-login,
+.page-register {
+	.main-content {
+	  display: flex;
+	  align-items: strech;
+	  justify-content: center;
+	}
+}
+//page-login
+//page-register
+
+
+
+.page-login {
+// .page-register {
+	@media screen and (min-height: 900px) {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-between; 
+	  height: 100vh;
+	}
+	@media screen and (max-height: 899px) {
+		.main-content {
+		  margin-top: 70px;
+		  margin-bottom: 100px;
+		}
+	}
+}
+
+
+.page-register {
+	@media screen and (min-width: ($rectangle-width * 2) + ($rect-space * 2)) and (min-height: 900px) {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-between; 
+	  height: 100vh;
+	}
+}
+
+
+
+
+
+ 

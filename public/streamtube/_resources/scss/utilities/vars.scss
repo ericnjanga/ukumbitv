@@ -1,0 +1,26 @@
+
+
+//vars
+$color-primary : #ec174f;
+$color-secondary : #282250;
+
+
+
+
+//utilities
+.txt-color-primary,
+.color-danger {
+	color: $color-primary;
+}
+.txt-color-secondary {
+	color: $color-secondary;
+}
+
+
+//..
+.mb0 {
+	margin-bottom: 0!important;
+}
+.mb30 {
+	margin-bottom: 30px!important;
+}

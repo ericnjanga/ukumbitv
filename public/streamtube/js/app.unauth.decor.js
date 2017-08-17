@@ -1,0 +1,1 @@
+var ukumbitv_deco=function(){function t(t){for(var i,e,n=t.length;n;i=parseInt(Math.random()*n),e=t[--n],t[n]=t[i],t[i]=e);return t}var i=["https://ukumbitv.com/streamtube/images/deco/x9fwkuz94596.jpg"];return{initialize:function(){i=t(i),$.backstretch(i,{duration:3e3,fade:750})}}}();ukumbitv_deco.initialize();
