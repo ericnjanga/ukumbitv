@@ -141,7 +141,7 @@
 				</div>
 
 
-        <h1>PURCHASE</h1>
+       <!--  <h1>PURCHASE</h1>
         {{--<a href="{{route('stripe-pay')}}" class="btn btn-primary">Buy!</a>--}}
         {{--@if(isset($msg))--}}
             {{--<h2>{{$msg}}</h2>--}}
@@ -152,15 +152,15 @@
                     Credit or debit card
                 </label>
                 <div id="card-element">
-                    <!-- a Stripe Element will be inserted here. -->
+                    {{-- a Stripe Element will be inserted here. --}}
                 </div>
 
-                <!-- Used to display Element errors -->
+                {{-- Used to display Element errors --}}
                 <div id="card-errors" role="alert"></div>
             </div>
 
             <button>Submit Payment</button>
-        </form>
+        </form> -->
 
 
 
