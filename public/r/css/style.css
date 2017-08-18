@@ -2181,26 +2181,52 @@ option[selected="selected"] {
         font-size: 20px; }
       .myaccount-wrap .img-block .change-photo-butn:hover {
         box-shadow: none; }
-  .myaccount-wrap .account-form-block .input-wrap:first-child {
-    margin: 0 0 60px 0; }
-    .myaccount-wrap .account-form-block .input-wrap:first-child:after {
-      content: '';
-      height: 1px;
-      background-color: #e0e0e0;
-      display: block;
+  .myaccount-wrap .account-form-block {
+    margin: 0 0 75px 0;
+    position: relative; }
+    .myaccount-wrap .account-form-block > form .input-wrap:first-child {
+      margin: 0 0 60px 0; }
+      .myaccount-wrap .account-form-block > form .input-wrap:first-child:after {
+        content: '';
+        height: 1px;
+        background-color: #e0e0e0;
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -30px; }
+    .myaccount-wrap .account-form-block .input-tel {
+      width: 63%; }
+    .myaccount-wrap .account-form-block .input-wrap {
+      margin: 0 0 5px 0; }
+    .myaccount-wrap .account-form-block .butn {
       width: 100%;
-      position: absolute;
-      left: 0;
-      bottom: -30px; }
-  .myaccount-wrap .account-form-block .input-tel {
-    width: 63%; }
-  .myaccount-wrap .account-form-block .input-wrap {
-    margin: 0 0 5px 0; }
-  .myaccount-wrap .account-form-block .butn {
-    width: 100%;
-    font-weight: 400; }
-  .myaccount-wrap .account-form-block .change-pas {
-    margin: 12px 0 30px; }
+      font-weight: 400;
+      transition: margin 0.3s linear; }
+    .myaccount-wrap .account-form-block .change-pas {
+      margin: 12px 0 30px;
+      color: #2298d4;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px; }
+      .myaccount-wrap .account-form-block .change-pas:hover {
+        cursor: pointer;
+        color: rgba(34, 152, 212, 0.75); }
+
+.change-pas.open + .butn {
+  margin: 230px 0 0 0; }
+
+.change-pas-block {
+  display: none;
+  width: 75%;
+  position: absolute;
+  top: 305px;
+  left: 0;
+  background-color: #fff; }
+  .change-pas-block .operations-pass {
+    display: block;
+    text-align: right;
+    margin: 5px 0 20px; }
 
 .mypackage-wrap {
   margin: 10px 0; }

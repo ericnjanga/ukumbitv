@@ -207,6 +207,13 @@ $("#payinfo").click(function () {
     return false;
 })
 
+$("#change-pas").click(function () {
+  $('.change-pas-block').slideToggle(300)
+                        .toggleClass("open");
+  $(this).toggleClass("open");
+
+})
+
 $("#butn-search").click(function(){
 
   $(".search-wrap").toggleClass("open");
