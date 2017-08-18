@@ -98,10 +98,9 @@ class ApplicationController extends Controller {
         return view('r.static.advertising');
     }
 
-    public function jobs(Request $request, $id=false) {
-
+    public function jobs($id=false) {
         if($id !== false){
-            return view('r.static.job')->with('back_url',route('user.jobs'));
+            return view('r.static.job',['back_url'=>route('user.jobs')]);
         }
         return view('r.static.jobs');
 

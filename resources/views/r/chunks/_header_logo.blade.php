@@ -13,22 +13,7 @@
           </div>
           @if(\Auth::check())
             <div class="col-sm-4 offset-sm-1">
-              <div class="login-block">
-                <div class="login-info">
-                  <div class="login-text">100 videos left</div>
-                  <a href="" class="login-upgrade">upgrade package</a>
-                </div>
-                <div class="img-block">
-                  <img src="{{asset('r/img/no-img.png')}}" alt="">
-                  <div class="account-block">
-                    <ul class="account-list">
-                      <li><a href="">My account</a></li>
-                      <li><a href="">Plan</a></li>
-                      <li><a href="{{route('user.logout')}}">Sign Out</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              @include('r.chunks._login_block')
             </div>
           @else
             <div class="col-sm-2 col-md-2 col-lg-2 col-xl-1 offset-sm-4 offset-md-4 offset-lg-1 offset-xl-2">
