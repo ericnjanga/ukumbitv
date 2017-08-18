@@ -2204,14 +2204,17 @@ option[selected="selected"] {
       font-weight: 400;
       transition: margin 0.3s linear; }
     .myaccount-wrap .account-form-block .change-pas {
-      margin: 12px 0 30px;
-      color: #2298d4;
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 16px; }
-      .myaccount-wrap .account-form-block .change-pas:hover {
-        cursor: pointer;
-        color: rgba(34, 152, 212, 0.75); }
+      margin: 12px 0 30px; }
+
+.like-link {
+  color: #2298d4;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  display: inline-block; }
+  .like-link:hover {
+    cursor: pointer;
+    color: rgba(34, 152, 212, 0.75); }
 
 .change-pas.open + .butn {
   margin: 230px 0 0 0; }

@@ -221,3 +221,11 @@ $("#butn-search").click(function(){
 
   return false;
 })
+
+
+$(".mypass").passField({ /*options*/ });
+
+
+// $(document).on("click", "#show-pas", function () {
+//   $('.a_pf-btn-mask').click();
+// })

@@ -27,7 +27,7 @@
                                 <label>Phone</label>
                                 <input type="tel" name="usrtel">
                             </div>
-                            <div id="change-pas" class="change-pas">Change password</div>
+                            <div id="change-pas" class="change-pas like-link">Change password</div>
 
                             <button type="submit" class="butn butn-orange butn-large">Save Changes</button>
                         </form>
@@ -35,15 +35,15 @@
                             <form action="" method="">
                                 <div class="input-wrap">
                                     <label>Enter current password</label>
-                                    <input type="password" name="old_password">
+                                    <input type="password" name="old_password" class="mypass">
                                 </div>
                                 <div class="input-wrap">
                                     <label>Enter new password</label>
-                                    <input type="password" name="new_password">
+                                    <input  type="password" name="new_password" class="mypass">
                                 </div>
-                                <div class="operations-pass">
-                                    <a href="">Show password</a>
-                                </div>
+                                {{--<div class="operations-pass">--}}
+                                    {{--<span id="show-pas" class="like-link">Show password</span>--}}
+                                {{--</div>--}}
                                 <button type="submit" class="butn butn-orange-white butn-large">Save new password</button>
                             </form>
                         </div>
