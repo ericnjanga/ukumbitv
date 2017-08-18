@@ -15,7 +15,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-//        \App\Http\Middleware\CheckForMaintenanceMode::class,
+    //    \App\Http\Middleware\CheckForMaintenanceMode::class,
         //\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
 
     ];
@@ -34,7 +34,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\Locale::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
            // \App\Http\Middleware\CheckForMaintenanceMode::class,
-         //   \App\Http\Middleware\VerifyUser::class, //off
+            \App\Http\Middleware\VerifyUser::class, //off
             // \App\Http\Middleware\VerifyCsrfToken::class,
         ],
 
@@ -57,7 +57,7 @@ class Kernel extends HttpKernel
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-//        'guest' => \App\Http\Middleware\CheckForMaintenanceMode::class, //off
+       // 'guest' => \App\Http\Middleware\CheckForMaintenanceMode::class, //off
         'guestadmin' => \App\Http\Middleware\RedirectIfAuthenticatedAdmin::class,
         'guestmoderator' => \App\Http\Middleware\RedirectIfAuthenticatedModerator::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,

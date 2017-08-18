@@ -21,7 +21,7 @@ Select payment plan
 				<p>{{$payPlan->product2}}</p>
 				<p>{{$payPlan->product3}}</p>
 				<p>{{$payPlan->product4}}</p>
-				<a href="#" class="btn btn-primary">
+				<a href="select-payment-plan/{{$payPlan->id}}" class="btn btn-primary">
 					Select plan
 				</a>
 			</div>

@@ -97,7 +97,7 @@ if(!defined('BANNER')) define('BANNER' , 'banner');
 if(!defined('WEB')) define('WEB' , 1);
 
 
-
+Route::get('select-payment-plan', 'UserController@selectPayPlan')->name('user.select-pay-plan');
 Route::get('/email/verification' , 'ApplicationController@email_verify')->name('email.verify');
 // Installation
 
@@ -352,8 +352,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::post('delete-payment-plan', ['as' => 'delete-payment-plan', 'uses' =>'AdminController@deletePayPlan']);
     Route::get('edit-payment-plan/{id}', ['as' => 'edit-payment-plan', 'uses' =>'AdminController@editPayPlan']);
     Route::post('edit-payment-plan/update-payment-plan', 'AdminController@updatePayPlan')->name('admin.update.pay-plan');
-    Route::get('select-payment-plan', 'UserController@selectPayPlan')->name('user.select-pay-plan');
-    Route::get('user-reset-trial', 'UserController@resetTrial')->name('user.reset-trial');
+
 
     //producer agent
     Route::get('/producer-agents', 'AdminController@producerAgents')->name('admin.producer-agents');
@@ -460,10 +459,18 @@ Route::get('newvideo/{id}', 'UserController@single_newvideo')->name('user.single
 Route::get('watch/{id}', 'UserController@watchVideo')->name('user.singleVideo');
 //Route::get('watch', 'UserController@watchVideo')->name('user.singleVideo');
 
+
 Route::get('vimeo', 'UserController@vimeoVideo');
 Route::get('account', 'UserController@account')->name('user.account');
 
+Route::get('/stripe-pay', 'UserController@stripePay')->name('stripe-pay');
+Route::post('/stripe-pay-post', 'UserController@stripePayPost')->name('stripe-pay-post');
 
+//payment plans
+
+Route::get('user-reset-trial', 'UserController@resetTrial')->name('user.reset-trial');
+Route::get('select-payment-plan/{id}', 'UserController@choosePayPlan')->name('user.choose-payplan');
+Route::get('paypal-success-pay/{id}', 'UserController@successPayPalPay');
 
 // Social Login
 

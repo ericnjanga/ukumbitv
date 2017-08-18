@@ -8,6 +8,11 @@
       </a>
 
 
+      <span style="color:white">Your payment plan: @if(isset($payplan)) {{$payplan}} @else FREE PLAN @endif</span>
+      <br>
+      <span style="color:white">expiry date: @if(isset($expdate)) {{$expdate}} @else 0 days @endif</span>
+
+
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">{{trans('messages.Toggle_navigation')}}</span>
         <span class="icon-bar"></span>
