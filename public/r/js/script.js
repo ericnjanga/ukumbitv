@@ -206,3 +206,11 @@ $("#payinfo").click(function () {
     $(this).toggleClass("open");
     return false;
 })
+
+$("#butn-search").click(function(){
+
+  $(".search-wrap").toggleClass("open");
+  $(".login-block").toggleClass("open");
+
+  return false;
+})
