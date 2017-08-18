@@ -9,6 +9,16 @@
     left: 10%;
     width: 80%; } }
 @media only screen and (max-width: 991px) {
+  .jobs-list .jods-item p {
+    padding: 0 5px; }
+
+  .jobs-list {
+    margin: 0 -15px; }
+
+  .jobs-list .jods-item {
+    width: 100%;
+    padding: 0 15px; }
+
   .lang-block span {
     display: block;
     margin: 0 0 5px 0; }
@@ -28,6 +38,19 @@
       height: auto;
       max-width: 100%; } }
 @media only screen and (max-width: 767px) {
+  .chapter-list {
+    margin: 0 0 55px 0; }
+
+  .jobs-list .jods-item {
+    width: 50%;
+    margin: 0 auto 45px; }
+
+  .jobs-list {
+    display: block; }
+
+  .jobs-wrap .content-block-bottom {
+    margin: 75px 0 0 0; }
+
   .footer-top {
     padding: 35px 0 0px; }
 
@@ -56,6 +79,31 @@
   .resetpas-wrap {
     margin: 0 0 55px 0; } }
 @media only screen and (max-width: 575px) {
+  .social-list {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+  .social-list li {
+    margin: 0 7px 10px; }
+
+  .footer-top {
+    text-align: center; }
+
+  .helpcenter-wrap .title-page {
+    margin: 15px 0 45px; }
+
+  .article-list li {
+    margin: 0 0 15px 0; }
+
+  .article-list li a {
+    font-size: 16px;
+    line-height: 26px; }
+
+  .jobs-list .jods-item {
+    width: 100%; }
+
   .content-block .img-block {
     margin: 0 0 35px 0; }
 

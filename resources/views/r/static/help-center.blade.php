@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2">
                     <ul class="chapter-list">
                         <li><a href=""><span class="square"></span>My account</a></li>
                         <li><a href=""><span class="square"></span>Payments</a></li>
@@ -17,7 +17,7 @@
                         <li><a href=""><span class="square"></span>Other</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-6 offset-sm-1">
+                <div class="col-sm-12 col-md-7 col-lg-6 col-xl-6 offset-xl-1">
                     <ul class="article-list">
                         <li><a href="{{route('user.help-center',0)}}">TV Shows & Movies</a></li>
                         <li><a href="{{route('user.help-center',0)}}">Your plan will determine</a></li>

@@ -4,12 +4,12 @@
     <div class="jobs-wrap">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-sm-8">
+                <div class="col-sm-10 col-md-10 col-lg-8 col-xl-8">
                     <div class="title-page">Jobs</div>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-sm-10">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-10">
                     <div class="jobs-block">
 
                         <div class="jobs-list">

@@ -3,12 +3,12 @@
     <div class="about-wrap">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-sm-5">
+                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
                     <div class="title-page">Terms of use</div>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-sm-6">
+                <div class="col-sm-12 col-md-10 col-lg-7 col-xl-6">
                     <div class="content-block">
                         <div class="img-block">
                             <img src="{{asset('r/img/landing-bg.png')}}" alt="">
