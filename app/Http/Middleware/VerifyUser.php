@@ -21,9 +21,9 @@ class VerifyUser
         $this->app = $app;
     }
     //List of paths allowed to access while user not logged in
-    private $allowed_paths = ['login', 'register', 'social', 'advertising', 'callback/facebook',
+    private $allowed_paths = ['login', 'register', 'social', 'advertising', 'callback/facebook', 'password/reset',
         'admin', 'email', 'setlocale', 'setlocale/fr', 'setlocale/en', 'about-us',
-        'terms-of-use', 'privacy-statement', 'jobs', 'help-center', 'contact', 'watch', 'test'];
+        'terms-of-use', 'privacy-statement', 'jobs', 'help-center', 'contact', 'watch', 'test', '/'];
     /**
      * Handle an incoming request.
      *
