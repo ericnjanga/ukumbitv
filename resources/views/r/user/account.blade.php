@@ -27,9 +27,25 @@
                                 <label>Phone</label>
                                 <input type="tel" name="usrtel">
                             </div>
-                            <a href="" class="change-pas">Change password</a>
+                            <a href="{{url('password/reset')}}" class="change-pas">Change password</a>
+
                             <button type="submit" class="butn butn-orange butn-large">Save Changes</button>
                         </form>
+                        <div hidden>
+                            <form action="" method="">
+                                <div class="input-wrap">
+                                    <label>Enter current password</label>
+                                    <input type="password" name="old_password">
+                                </div>
+                                <div class="input-wrap">
+                                    <label>Enter new password</label>
+                                    <input type="password" name="new_password">
+                                </div>
+
+                                <button type="submit" class="butn butn-orage butn-large">Save new password</button>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
             </div>

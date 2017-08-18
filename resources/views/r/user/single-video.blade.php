@@ -141,7 +141,7 @@
                             <div class="comment">
                                 <div class="img-block">
                                     <!--<span class="icon icon-man-user"></span>-->
-                                    <img src="~@/assets/img/face.jpg" alt="">
+                                    <img src="{{asset('r/img/face.jpg')}}" alt="">
                                 </div>
                                 <div class="comment-text-block">
                                     <div class="comment-name">Alexandr Longname</div>
@@ -166,7 +166,7 @@
                             <div class="comment">
                                 <div class="img-block">
                                     <!--<span class="icon icon-man-user"></span>-->
-                                    <img src="~@/assets/img/face.jpg" alt="">
+                                    <img src="{{asset('r/img/face.jpg')}}" alt="">
                                 </div>
                                 <div class="comment-text-block">
                                     <div class="comment-name">Alexandr Longname</div>
