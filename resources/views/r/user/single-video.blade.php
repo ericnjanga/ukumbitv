@@ -99,7 +99,7 @@
                                 <div class="cast-credits-title">Actors</div>
                                 <p class="cast-credits-text">
                                     @foreach($actors as $actor)
-                                        <a href="">{{$actor}}</a>
+                                        {{$actor}}, 
                                         @endforeach
                                 </p>
                             </div>
