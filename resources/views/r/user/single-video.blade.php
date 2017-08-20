@@ -111,7 +111,7 @@
                                 <div class="cast-credits-title">Director</div>
                                 <p class="cast-credits-text">
                                     @foreach($directors as $director)
-                                      {{$director}}, 
+                                      {{$director}}
                                     @endforeach
                                 </p>
                             </div>
