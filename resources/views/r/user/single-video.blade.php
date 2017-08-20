@@ -36,6 +36,7 @@
                             </div>
                         </div>
                     </div>
+                    @if($video->video_type != 'movie')
                     <div class="video-slider-wrap">
                         <div class="title">Episodes</div>
                         <div class="series-list-block">
@@ -86,6 +87,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                     <div class="description-block">
                         <div class="title">Description</div>
                         <p class="description-text">Scarlett Johansson stars in the visually stunning Ghost in the
