@@ -59,7 +59,7 @@
                                 @foreach($videos as $video)
                                     <div class="video-item-block">
                                         <div class="video-item">
-                                            <a href="{{route('single-video',0)}}">
+                                            <a href="{{route('user.singleVideo',$video->watchid)}}">
                                                 <div class="video-img">
                                                     <img src="{{$video->videoimage->imgSmall1}}" alt="">
                                                 </div>

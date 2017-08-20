@@ -273,7 +273,7 @@ class UserController extends Controller {
 
         $categories = get_categories();
 
-        return view('user.single_newvideo')
+        return view('r.user.single-video')
             ->with('trailer_video' , $trailer_video)
             ->with('main_video' , $main_video)
             ->with('videoStreamUrl', $main_video)
