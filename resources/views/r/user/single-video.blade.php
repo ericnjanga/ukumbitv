@@ -36,7 +36,7 @@
                             </div>
                         </div>
                     </div>
-                    @if($video->video_type != 'movie')
+                    @if($video->video_type == 'episode')
                     <div class="video-slider-wrap">
                         <div class="title">Episodes</div>
                         <div class="series-list-block">
