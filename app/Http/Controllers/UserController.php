@@ -78,14 +78,16 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
+
         //#testing
-        if(!Auth::check()){
-            return view('r.landing',[
-                'payment_plans'=>PaymentPlan::all()
+        if(!Auth::check()) {
+            return view('r.landing', [
+                'payment_plans' => PaymentPlan::all()
             ]);
-        }else{
-            return view('r.user.home-video');
         }
+//        }else{
+//            return view('r.user.home-video');
+//        }
         //#end
 
         $histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
@@ -105,7 +107,8 @@ class UserController extends Controller {
             $suggestions  = Helper::suggestion_videos(WEB);
             $categories = get_categories();
 
-            $videos = AdminVideo::with('videoimage')->orderBy('id', 'desc')->get();
+            $videos = AdminVideo::with('videoimage')->with('category')->orderBy('id', 'desc')->limit(15)->get();
+            //dd($videos);
 
             $lastVideos = [];
             $allCategories = Category::all();

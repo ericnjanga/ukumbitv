@@ -39,41 +39,41 @@
                         <div class="title">New Videos</div>
                         <div class="video-slider-block-wrap">
                             <div class="video-slider-block">
-                                @for($i=0;$i<5;$i++)
-                                    <div class="video-item-block">
-                                        <div class="video-item">
-                                            <div class="video-img">
-                                                <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
-                                            </div>
-                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the
-                                                Fallen
-                                            </div>
-                                            <div class="video-info">
-                                                <div class="video-genre">Drama</div>
-                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endfor
+                                {{--@for($i=0;$i<5;$i++)--}}
+                                    {{--<div class="video-item-block">--}}
+                                        {{--<div class="video-item">--}}
+                                            {{--<div class="video-img">--}}
+                                                {{--<img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">--}}
+                                            {{--</div>--}}
+                                            {{--<div class="video-title ellipsis-gradient">Transformers: Revenge of the--}}
+                                                {{--Fallen--}}
+                                            {{--</div>--}}
+                                            {{--<div class="video-info">--}}
+                                                {{--<div class="video-genre">Drama</div>--}}
+                                                {{--<div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--@endfor--}}
 
-                                @for($i=0;$i<5;$i++)
+                                @foreach($videos as $video)
                                     <div class="video-item-block">
                                         <div class="video-item">
                                             <a href="{{route('single-video',0)}}">
                                                 <div class="video-img">
-                                                    <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
+                                                    <img src="{{$video->videoimage->imgSmall1}}" alt="">
                                                 </div>
-                                                <div class="video-title ellipsis-gradient">Transformers: Revenge of the
-                                                    Fallen
+                                                <div class="video-title ellipsis-gradient">
+                                                    {{$video->title}}
                                                 </div>
                                             </a>
                                             <div class="video-info">
-                                                <div class="video-genre">Drama</div>
+                                                <div class="video-genre">{{$video->category->name}}</div>
                                                 <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
                                             </div>
                                         </div>
                                     </div>
-                                @endfor
+                                @endforeach
                             </div>
                         </div>
                     </div>
