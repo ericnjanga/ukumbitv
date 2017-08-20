@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Actor;
 use App\AdminVideo;
+use App\Director;
 use App\PaymentPlan;
 use App\UserHistory;
 use App\UserPayment;
@@ -259,9 +261,9 @@ class UserController extends Controller {
 
         $videoId = substr($video->video, 8);
 
-        $main_video = $video->video;
-        $trailer_video = "";
-        $wishlist_status = $history_status = WISHLIST_EMPTY;
+//        $main_video = $video->video;
+//        $trailer_video = "";
+//        $wishlist_status = $history_status = WISHLIST_EMPTY;
 
         if (Auth::check()) {
             $hist = new UserHistory();
@@ -271,19 +273,38 @@ class UserController extends Controller {
             $hist->save();
         }
 
-        $categories = get_categories();
+//        $categories = get_categories();
+
+        $actorIds = $video->actors;
+        $actorIds = explode(',', $actorIds);
+        $actors = [];
+        foreach($actorIds as $actorId){
+            $act = Actor::find($actorId);
+            array_push($actors, $act->name);
+        }
+
+        $directorIds = $video->directors;
+        $directorIds = explode(',', $directorIds);
+        $directors = [];
+        foreach($directorIds as $directorId){
+            $act = Director::find($directorId);
+            array_push($directors, $act->name);
+        }
+
 
         return view('r.user.single-video')
-            ->with('trailer_video' , $trailer_video)
-            ->with('main_video' , $main_video)
-            ->with('videoStreamUrl', $main_video)
-            ->with('history_status' , $history_status)
-            ->with('videos' , $videos)
-            ->with('videoTitle' , $video)
-            ->with('images' , $images)
+//            ->with('trailer_video' , $trailer_video)
+//            ->with('main_video' , $main_video)
+//            ->with('videoStreamUrl', $main_video)
+//            ->with('history_status' , $history_status)
+//            ->with('videos' , $videos)
+//            ->with('videoTitle' , $video)
+//            ->with('images' , $images)
             ->with('video', $video)
             ->with('videoId', $videoId)
-            ->with('categories', $categories);
+            ->with('actors', $actors)
+            ->with('directors', $directors);
+//            ->with('categories', $categories);
     }
 
 
