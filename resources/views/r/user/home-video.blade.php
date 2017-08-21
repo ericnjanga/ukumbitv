@@ -3,10 +3,10 @@
     <div class="main-wrap">
         <div class="container">
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
                     @include('r.chunks._filter_video')
                 </div>
-                <div class="col-sm-10">
+                <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
                     <div class="main-top-block">
                         <img src="{{ asset('r/img/bg-video.png')}}" alt="">
                         <div class="layer"></div>

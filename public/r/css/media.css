@@ -1,7 +1,30 @@
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1199px) {
   .list-text-wrap .container:after {
     left: 10%;
-    width: 80%; } }
+    width: 80%; }
+
+  .menu-block {
+    position: absolute;
+    top: 39px;
+    left: -250px;
+    width: 250px;
+    height: auto;
+    z-index: 10;
+    max-width: 100%;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+    display: none; }
+
+  .menu-block.open {
+    opacity: 1;
+    left: 0px; }
+
+  .butn-menu {
+    display: block; }
+
+  .video-list-wrap .title {
+    position: relative;
+    padding-left: 50px; } }
 @media only screen and (max-width: 991px) {
   .jobs-list .jods-item p {
     padding: 0 5px; }

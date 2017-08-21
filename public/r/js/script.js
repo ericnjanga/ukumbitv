@@ -225,7 +225,11 @@ $("#butn-search").click(function(){
 
 $(".mypass").passField({ /*options*/ });
 
-
+$(document).on("click", ".butn-menu", function () {
+  $('.menu-block').slideToggle();
+  $(this).toggleClass("open");
+  $('.menu-block').toggleClass('open');
+})
 // $(document).on("click", "#show-pas", function () {
 //   $('.a_pf-btn-mask').click();
 // })
