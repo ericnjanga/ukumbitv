@@ -188,10 +188,14 @@
                                 <div class="input-wrap textarea-wrap">
                                     <textarea name="" id=""></textarea>
                                 </div>
-                                <div class="input-wrap">
+                                <div class="img-block">
+														      <img src="http://test.ukumbitv.com/r/img/no-img.png" alt=""> 
+														      <b>Username</b>
+														    </div>
+                                <!-- <div class="input-wrap">
                                     <label>Enter your e-mail <span>*</span></label>
                                     <input type="email" name="email" required>
-                                </div>
+                                </div> -->
                                 <button type="submit" class="butn butn-orange butn-large">Submit</button>
                             </form>
                         </div>
