@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-10">
                     <div class="price-list-block">
-                        <div class="title-text">Pick your price</div>
+                        <div class="title-text">Pick your plan</div>
                         <div class="price-block">
                             <div class="price-item">
                                 <div class="price-title">Basic</div>
