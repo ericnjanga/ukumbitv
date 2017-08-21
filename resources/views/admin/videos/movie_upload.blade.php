@@ -74,7 +74,7 @@
 
 
 						
-						<!-- select video type -->
+						<!-- select video length -->
 						<div class="col-md-12 mb35">
 							<fieldset class="blk col-md-12"> 
 								<legend>Video Length</legend>
@@ -82,19 +82,19 @@
 		            	<li class="mr20">
 		            		<label class="radio-inline">
 		            			<input type="radio" name="video-length" id="video-length-1" value="full" checked> 
-		            			Full lenght film
+		            			Full
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
 		            			<input type="radio" name="video-length" id="video-length-2" value="medium"> 
-		            			Medium length film
+		            			Medium
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
 		            			<input type="radio" name="video-length" id="video-length-3" value="short"> 
-		            			Short lenght film
+		            			Short
 		            		</label>
 		            	</li> 
 		            </ul><!-- col-md-12 --> 
