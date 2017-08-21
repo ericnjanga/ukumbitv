@@ -11,7 +11,7 @@
                         <img src="{{asset("r/img/bg-video.png")}}" alt="">
                         <div class="layer"></div>
                         <div class="video-info-block">
-                            <div class="video-title" style="border:3px solid red;">Ghost in the Shell</div>
+                            <div class="video-title" style="border:3px solid red;">{{$video->title}}</div>
                             <div class="video-info-text">
                                 <span class="age">16+</span>
                                 <span class="date">March 2017</span>
