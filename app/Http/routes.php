@@ -452,11 +452,11 @@ Route::get('category/{id}', 'UserController@category_videos')->name('user.catego
 
 Route::get('genre/{id}', 'UserController@genre_videos')->name('user.genre');
 
-Route::get('video/{id}', 'UserController@single_video')->name('user.single');
+//Route::get('video/{id}', 'UserController@single_video')->name('user.single');
 
 Route::get('newvideo/{id}', 'UserController@single_newvideo')->name('user.single'); // Added By Vishnu
 
-Route::get('watch/{id}', 'UserController@watchVideo')->name('user.singleVideo');
+Route::get('video/{id}', 'UserController@watchVideo')->name('user.singleVideo');
 //Route::get('watch', 'UserController@watchVideo')->name('user.singleVideo');
 
 
