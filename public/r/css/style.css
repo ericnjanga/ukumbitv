@@ -1676,7 +1676,8 @@ label {
   margin: 0 -5px 30px; }
   .video-list-block .video-item-block {
     padding: 0;
-    margin: 0 5px 20px; }
+    margin: 0 0 20px;
+    width: 20%; }
 
 .filter-block-wrap {
   display: -webkit-box;

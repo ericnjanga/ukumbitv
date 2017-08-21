@@ -26,6 +26,10 @@
     position: relative;
     padding-left: 45px; } }
 @media only screen and (max-width: 991px) {
+  .video-list-block .video-item-block {
+    width: 33.33333333%;
+    margin: 0 0 20px; }
+
   .jobs-list .jods-item p {
     padding: 0 5px; }
 
@@ -55,14 +59,8 @@
       height: auto;
       max-width: 100%; } }
 @media only screen and (max-width: 767px) {
-  .video-list-block {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-
   .video-list-block .video-item-block {
-    margin: 0 10px 20px; }
+    width: 50%; }
 
   .main-header .login-block.open {
     display: none; }
@@ -144,6 +142,9 @@
     .contact-form .input-block .select-wrap {
       width: 100%; } }
 @media only screen and (max-width: 575px) {
+  .video-list-block .video-item-block {
+    width: 50%; }
+
   .filter-block-wrap {
     display: block; }
 
@@ -281,5 +282,8 @@
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; } }
+@media only screen and (max-width: 480px) {
+  .video-list-block .video-item-block {
+    width: 100%; } }
 
 /*# sourceMappingURL=media.css.map */

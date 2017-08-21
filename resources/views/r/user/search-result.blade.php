@@ -9,11 +9,6 @@
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-10">
                     <div class="video-list-wrap">
                         <div class="title">
-                          <div class="butn-menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </div>
                           <span>Search:</span> Transformers
                         </div>
                         <div class="filter-block-wrap">
