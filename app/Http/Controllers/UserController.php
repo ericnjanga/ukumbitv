@@ -247,7 +247,7 @@ class UserController extends Controller {
         $checkTrial = $this->checkTrial($video->id);
         if(!$checkTrial){
             $payPlans = PaymentPlan::all();
-            return view('user.select_payment_plan')
+            return view('r.landing')
                 ->with('payPlans', $payPlans);
         }
 
