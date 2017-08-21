@@ -4,14 +4,19 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class Like extends Model
 {
     protected $fillable = [
-        'name'
+        'user_id', 'admin_video_id', 'type'
     ];
 
     public function admin_video()
     {
         return $this->belongsTo('App\AdminVideo');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 }

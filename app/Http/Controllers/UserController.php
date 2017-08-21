@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Actor;
 use App\AdminVideo;
 use App\Director;
+use App\Like;
 use App\PaymentPlan;
 use App\UserHistory;
 use App\UserPayment;
@@ -242,7 +243,8 @@ class UserController extends Controller {
       //  $histories = UserHistory::where('user_id', Auth::id())->distinct()->get();
         //$histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
         //dd($histories);
-        $video = AdminVideo::where('watchid', $id)->firstOrFail();
+        $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
+
 
         $checkTrial = $this->checkTrial($video->id);
         if(!$checkTrial){
@@ -291,6 +293,12 @@ class UserController extends Controller {
             array_push($directors, $act->name);
         }
 
+        $likes = Like::where('admin_video_id', $video->id)->where('type', 'like')->get();
+        $disLikes = Like::where('admin_video_id', $video->id)->where('type', 'dislike')->get();
+        $checkLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'like')->first();
+        $checkDisLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'dislike')->first();
+
+        $tags = explode(',', $video->tags);
 
         return view('r.user.single-video')
 //            ->with('trailer_video' , $trailer_video)
@@ -303,8 +311,23 @@ class UserController extends Controller {
             ->with('video', $video)
             ->with('videoId', $videoId)
             ->with('actors', $actors)
+            ->with('checkLike', $checkLike)
+            ->with('checkDisLike', $checkDisLike)
+            ->with('tags', $tags)
+            ->with('likes', count($likes))
+            ->with('dislikes', count($disLikes))
             ->with('directors', $directors);
 //            ->with('categories', $categories);
+    }
+
+    public function showVideo($id)
+    {
+        $video = AdminVideo::where('watchid', $id)->first();
+        $videoId = substr($video->video, 8);
+
+        return view('user.single_newvideo')
+            ->with('videoId', $videoId)
+            ->with('video', $video);
     }
 
 

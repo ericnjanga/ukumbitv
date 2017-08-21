@@ -1,5 +1,15 @@
 @extends('r.layouts.user-search')
 @section('content')
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1900426896906624";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
     <div class="video-wrap">
         <div class="container">
             <div class="row">
@@ -14,8 +24,12 @@
                             <div class="video-title">{{$video->title}}</div>
                             <div class="video-info-text">
                                 <span class="age">16+</span>
-                                <span class="date" style="border:3px solid red;">March 2017</span>
-                                <span class="genre" style="border:3px solid green;">Drama, Comedy, Triller</span>
+                                <span class="date" style="border:3px solid red;">{{$video->created_at->format('d M Y')}}</span>
+                                <span class="genre" style="border:3px solid green;">
+                                    @foreach($tags as $tag)
+                                        {{$tag}},
+                                        @endforeach
+                                </span>
                                 <div class="series-text">1 Season, 12 Series</div>
                             </div>
                             <!-- <div class="actors-block">
@@ -25,13 +39,15 @@
                             </div> -->
                             <div class="butn-block">
                                 <div class="play-block">
-                                    <a href="" class="butn butn-orange-dark butn-play upper"><span
+                                    <a href="{{route('user.show-video', $video->watchid)}}" class="butn butn-orange-dark butn-play upper"><span
                                                 class="icon icon-play-arrow"></span>Play</a>
                                     <a href="" class="butn butn-orange-dark upper">Add to list</a>
                                 </div>
                                 <div class="share-block">
-                                    <a href="" class="butn-share"><span>f</span>Share</a>
-                                    <a href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</a>
+                                    {{--<a href="" class="butn-share"><span>f</span>Share</a>--}}
+                                    <div class="fb-share-button" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/videos/{{$video->watchid}}">Share</a></div>
+                                    {{--<a href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</a>--}}
+                                    <div class="fb-like" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
                                 </div>
                             </div>
                         </div>
@@ -127,80 +143,66 @@
                         <div class="title">Reviews</div>
                         <div class="likes-block">
                             <div class="likes-item like">
-                                <span class="icon icon-thumbs-up"></span>
-                                158
+                                @if($checkLike != null)
+                                    <span id="unlike" class="icon icon-thumbs-up" onclick="unlike()"></span>
+                                        @else
+                                    <span id="like" class="icon icon-thumbs-up" onclick="like()"></span>
+                                                @endif
+                                <span id="likes-count">{{$likes}}</span>
                             </div>
                             <div class="likes-item dislike">
-                                <span class="icon icon-thumbs-down-hand"></span>
-                                12
+                                @if($checkDisLike != null)
+                                    <span id="undislike" class="icon icon-thumbs-down-hand" onclick="undislike()"></span>
+                                @else
+                                    <span id="dislike" class="icon icon-thumbs-down-hand" onclick="dislike()"></span>
+                                @endif
+                                <span id="dislikes-count">{{$dislikes}}</span>
                             </div>
                             <div class="butn-block">
                                 <a href="" class="butn butn-orange"><span class="icon icon-pencil-edit-button"></span>Write
                                     a review</a>
                             </div>
                         </div>
-                        <div class="comment-block">
+                        <div class="comment-block" id="new-comment-section">
+                        @foreach($video->comments as $comment)
                             <div class="comment">
                                 <div class="img-block">
                                     <!--<span class="icon icon-man-user"></span>-->
-                                    <img src="{{asset('r/img/face.jpg')}}" alt="">
+                                    <img src="{{$comment->user->picture}}" alt="">
                                 </div>
                                 <div class="comment-text-block">
-                                    <div class="comment-name">Alexandr Longname</div>
-                                    <p class="comment-text">Sadly, as the plot proceeds, Sanders begins to duck ...
-                                        bothersome concepts. He picks a more sentimental path, which leads Major,
-                                        following the example of Jason Bourne, on a quest to discover who she truly
-                                        is.</p>
+                                    <div class="comment-name">{{$comment->user->name}}</div>
+                                    <p class="comment-text">
+                                        {{$comment->text}}
+                                    </p>
                                 </div>
                             </div>
-                            <div class="comment">
-                                <div class="img-block">
-                                    <span class="icon icon-man-user icon-no-photo"></span>
-                                </div>
-                                <div class="comment-text-block">
-                                    <div class="comment-name">Alexandr Longname</div>
-                                    <p class="comment-text">Sadly, as the plot proceeds, Sanders begins to duck ...
-                                        bothersome concepts. He picks a more sentimental path, which leads Major,
-                                        following the example of Jason Bourne, on a quest to discover who she truly
-                                        is.</p>
-                                </div>
-                            </div>
-                            <div class="comment">
-                                <div class="img-block">
-                                    <!--<span class="icon icon-man-user"></span>-->
-                                    <img src="{{asset('r/img/face.jpg')}}" alt="">
-                                </div>
-                                <div class="comment-text-block">
-                                    <div class="comment-name">Alexandr Longname</div>
-                                    <p class="comment-text">Sadly, as the plot proceeds, Sanders begins to duck ...
-                                        bothersome concepts. He picks a more sentimental path, which leads Major,
-                                        following the example of Jason Bourne, on a quest to discover who she truly
-                                        is.</p>
-                                </div>
-                            </div>
+                            @endforeach
+
                         </div>
-                        <a href="" class="butn butn-orange-white butn-large">Load more</a>
+                        {{--<a href="" class="butn butn-orange-white butn-large">Load more</a>--}}
                     </div>
                     <div class="form-block-wrap">
                         <div class="form-block">
                             <div class="title-form">Write your review</div>
-                            <form action="" method="">
+                            <form>
                                 <div class="input-wrap textarea-wrap">
-                                    <textarea name="" id=""></textarea>
+                                    <textarea name="comment-text" id="comment-text"></textarea>
                                 </div>
                                 <div class="comment-block" style="margin:0;">
                                 	<div class="comment" style="margin:0;">
 			                                <div class="img-block">
-			                                    <img src="http://test.ukumbitv.com/r/img/face.jpg" alt="">
+			                                    <img src="{{Auth::user()->picture}}" alt="">
 			                                </div>
 			                                <div class="comment-text-block">
-			                                    <div class="comment-name">Alexandr Longname</div> 
+			                                    <div class="comment-name">{{Auth::user()->name}}</div>
 			                                </div>
-			                            </div>
+                                    </div>
                                 </div><!-- comment-block -->
                                   
-                                <button type="submit" class="butn butn-orange butn-large">Submit</button>
+
                             </form>
+                            <button class="butn butn-orange butn-large" onclick="sendComment()">Submit</button>
                         </div>
                     </div>
                     <div class="video-slider-wrap">
@@ -236,4 +238,184 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        function sendComment() {
+
+            var token = $('meta[name="csrf-token"]').attr('content');
+            var fd = new FormData;
+
+            fd.append('_token', token);
+            fd.append('video_id', '{{$video->id}}');
+            fd.append('text', $('#comment-text').val());
+
+            $.ajax({
+                type: 'POST',
+                url: '{{route('send-comment')}}',
+                contentType: false,
+                processData: false,
+                data: fd,
+                dataType: 'html',
+                success: function(data){
+                    var rep = JSON.parse(data);
+                    //alert('Comment successful send!');
+                    //console.log(rep);
+
+                    $("#new-comment-section").append('<div class="comment"><div class="img-block"><img src="{{Auth::user()->picture}}" alt=""></div><div class="comment-text-block"><div class="comment-name">{{Auth::user()->name}}</div><p class="comment-text">'+rep.text+'</p></div></div>');
+                },
+                error: function (data) {
+                    alert('error '+data);
+                }
+            });
+
+        }
+
+        function like() {
+
+            var likesCount = $('#likes-count').text();
+            var disLikesCount = $('#dislikes-count').text();
+
+            var fd = new FormData;
+
+            fd.append('_token', '{{csrf_token()}}');
+            fd.append('id', '{{$video->id}}');
+            fd.append('type', 'like');
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: '{{route('like')}}',
+                contentType: false,
+                processData: false,
+                data: fd,
+                dataType: 'html',
+                success: function(data){
+                    $('#like').attr({"onclick":"unlike()", "id":"unlike"});
+                    $('#undislike').attr({"onclick":"dislike()", "id":"dislike"});
+
+//                    $('#unlike').css("color", "#fff");
+                    $('#likes-count').text(+likesCount + 1);
+
+                    var rep = JSON.parse(data);
+
+                    if(rep.check === 1){
+                        $('#dislikes-count').text(+disLikesCount - 1);
+                    }
+                    //console.log(rep);
+//                    swal("Cool!", "You have successfully liked!", "success");
+                },
+                error: function(data){
+                    swal("Hmm", "Something went wrong, try again pls", "error");
+                }
+            });
+        }
+
+        function dislike() {
+
+            var likesCount = $('#likes-count').text();
+            var disLikesCount = $('#dislikes-count').text();
+
+            var fd = new FormData;
+
+            fd.append('_token', '{{csrf_token()}}');
+            fd.append('id', '{{$video->id}}');
+            fd.append('type', 'dislike');
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: '{{route('like')}}',
+                contentType: false,
+                processData: false,
+                data: fd,
+                dataType: 'html',
+                success: function(data){
+                    $('#dislike').attr({"onclick":"undislike()", "id":"undislike"});
+                    $('#unlike').attr({"onclick":"like()", "id":"like"});
+//                    $('#unlike').css("color", "#fff");
+                    $('#dislikes-count').text(+disLikesCount + 1);
+                    var rep = JSON.parse(data);
+                    if(rep.check === 1){
+                        $('#likes-count').text(+likesCount - 1);
+                    }
+                    //console.log(rep);
+//                    swal("Cool!", "You have successfully disliked!", "success");
+                },
+                error: function(data){
+                    swal("Hmm", "Something went wrong, try again pls", "error");
+                }
+            });
+        }
+
+        function unlike() {
+
+            var likesCount = $('#likes-count').text();
+
+
+            var fd = new FormData;
+
+            fd.append('_token', '{{csrf_token()}}');
+            fd.append('id', '{{$video->id}}');
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: '{{route('unlike')}}',
+                contentType: false,
+                processData: false,
+                data: fd,
+                dataType: 'html',
+                success: function(data){
+                    $('#unlike').attr({"onclick":"like()", "id":"like"});
+//                    $('#like').css("color", "#333");
+                    $('#likes-count').text(+likesCount - 1);
+                    var rep = JSON.parse(data);
+                    //console.log(rep);
+//                    swal("Cool!", "You have successfully unliked!", "success");
+                },
+                error: function(data){
+                    swal("Hmm", "Something went wrong, try again pls", "error");
+                }
+            });
+        }
+
+        function undislike() {
+
+            var disLikesCount = $('#dislikes-count').text();
+
+
+            var fd = new FormData;
+
+            fd.append('_token', '{{csrf_token()}}');
+            fd.append('id', '{{$video->id}}');
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: '{{route('unlike')}}',
+                contentType: false,
+                processData: false,
+                data: fd,
+                dataType: 'html',
+                success: function(data){
+                    $('#undislike').attr({"onclick":"dislike()", "id":"dislike"});
+//                    $('#like').css("color", "#333");
+                    $('#dislikes-count').text(+disLikesCount - 1);
+                    var rep = JSON.parse(data);
+                    //console.log(rep);
+//                    swal("Cool!", "You have successfully unliked!", "success");
+                },
+                error: function(data){
+                    swal("Hmm", "Something went wrong, try again pls", "error");
+                }
+            });
+        }
+
+    </script>
 @endsection
