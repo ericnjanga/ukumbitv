@@ -18,11 +18,11 @@
                                 <span class="genre" style="border:3px solid green;">Drama, Comedy, Triller</span>
                                 <div class="series-text">1 Season, 12 Series</div>
                             </div>
-                            <div class="actors-block">
+                            <!-- <div class="actors-block">
                                 <div class="actors-title">Actors</div>
                                 <p class="actors-list" style="border:3px solid yellow;">Scarlett Johansson, Beat Takeshi Kitano, Michael Carmen Pitt,
                                     Pilou Asbaek, Chin Han, Juliette Binoche</p>
-                            </div>
+                            </div> -->
                             <div class="butn-block">
                                 <div class="play-block">
                                     <a href="" class="butn butn-orange-dark butn-play upper"><span
