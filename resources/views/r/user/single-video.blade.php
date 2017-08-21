@@ -189,7 +189,7 @@
                                     <textarea name="" id=""></textarea>
                                 </div>
                                 <div class="comment-block" style="margin:0;">
-                                	<div class="comment">
+                                	<div class="comment" style="margin:0;">
 			                                <div class="img-block">
 			                                    <img src="http://test.ukumbitv.com/r/img/face.jpg" alt="">
 			                                </div>
