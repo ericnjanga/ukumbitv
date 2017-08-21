@@ -9,8 +9,8 @@
                             <div class="title-page">Contact us</div>
                             <div class="text-add"><p>Fill free to ask questions</p> We will do our best respond or contact you back within the next 24 hours</div>
                             <div class="contact-info">
-                                <div class="mail"><span class="icon icon-envelope"></span>example@gmail.com</div>
-                                <div class="phone"><span class="icon icon-phone-receiver"></span>+1 785-4558-785-57</div>
+                                <div class="mail"><span class="icon icon-envelope"></span>info@gmail.com</div>
+                                <div class="phone"><span class="icon icon-phone-receiver"></span>+1 647-704-7219</div>
                             </div>
                             <div class="soc-block">
                                 <div class="list-title">We are in social</div>
