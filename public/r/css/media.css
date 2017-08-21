@@ -24,7 +24,7 @@
 
   .video-list-wrap .title {
     position: relative;
-    padding-left: 50px; } }
+    padding-left: 45px; } }
 @media only screen and (max-width: 991px) {
   .jobs-list .jods-item p {
     padding: 0 5px; }
@@ -55,6 +55,15 @@
       height: auto;
       max-width: 100%; } }
 @media only screen and (max-width: 767px) {
+  .video-list-block {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+  .video-list-block .video-item-block {
+    margin: 0 10px 20px; }
+
   .main-header .login-block.open {
     display: none; }
   .main-header .search-block {
@@ -135,6 +144,21 @@
     .contact-form .input-block .select-wrap {
       width: 100%; } }
 @media only screen and (max-width: 575px) {
+  .filter-block-wrap {
+    display: block; }
+
+  .filter-block-wrap .filter-block {
+    padding: 7px 0;
+    text-align: left; }
+
+  .filter-block-wrap .filter-block a {
+    margin: 0px 10px 10px 0;
+    font-size: 18px; }
+
+  .filter-block-wrap .filter-block span {
+    display: block;
+    margin: 0 0 7px 0; }
+
   .contact-form .input-block .input-wrap {
     width: 100%; }
 
@@ -154,7 +178,7 @@
     width: 35px; }
 
   .main-header .search-wrap.open {
-    width: 290px; }
+    width: 90%; }
 
   .main-header .search-wrap.open input {
     padding: 0 40px 0 15px; }
