@@ -1034,9 +1034,11 @@ class UserController extends Controller {
     public function payment()
     {
         $videos = AdminVideo::all();
+        $categories = Category::all();
         return view('user.userpayment')
                     ->with('page' , 'profile')
                     ->with('subPage' , 'user-profile')
+                    ->with('categories' , $categories)
                     ->with('videos', $videos);
     }
 
