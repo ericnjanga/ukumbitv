@@ -248,7 +248,7 @@ class UserController extends Controller {
         if(!$checkTrial){
             $payPlans = PaymentPlan::all();
             return view('r.landing')
-                ->with('payPlans', $payPlans);
+                ->with('payment_plans', $payPlans);
         }
 
 
