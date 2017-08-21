@@ -3,10 +3,10 @@
     <div class="mypackage-wrap">
         <div class="container">
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-md-2 col-lg-3 col-xl-2 acc-menu">
                     @include('r.chunks._account_menu')
                 </div>
-                <div class="col-sm-10">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-10">
                     <div class="price-list-block">
                         <div class="title-text">Pick your plan</div>
                         <div class="price-block">
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-10">
+                        <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10">
                             <div class="payment-block-wrap">
                                 <div class="title-text">Payment information</div>
                                 <div class="payment-block">

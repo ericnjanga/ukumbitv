@@ -1,4 +1,31 @@
 @media only screen and (max-width: 1199px) {
+  .price-list-block .title-text {
+    width: 75%;
+    margin: 0 auto 25px;
+    text-align: center; }
+
+  .price-block .price-item .includ-list {
+    padding: 0px 35px; }
+
+  .price-block .price-item .butn {
+    width: 90%; }
+
+  .acc-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: block;
+    width: auto;
+    max-width: 100%; }
+    .acc-menu .aside-menu {
+      display: flex; }
+    .acc-menu .aside-menu > li > a .list-text {
+      display: none;
+      padding: 0 15px 0 5px; }
+    .acc-menu .aside-menu > li > a:hover .list-text {
+      display: inline-block; }
+
   .list-text-wrap .container:after {
     left: 10%;
     width: 80%; }
@@ -26,6 +53,9 @@
     position: relative;
     padding-left: 45px; } }
 @media only screen and (max-width: 991px) {
+  .payment-form-block {
+    width: 85%; }
+
   .video-list-block .video-item-block {
     width: 33.33333333%;
     margin: 0 0 20px; }
@@ -59,6 +89,12 @@
       height: auto;
       max-width: 100%; } }
 @media only screen and (max-width: 767px) {
+  .payment-form-block {
+    width: 100%; }
+
+  .price-list-block .title-text {
+    width: 60%; }
+
   .video-list-block .video-item-block {
     width: 50%; }
 
@@ -142,6 +178,29 @@
     .contact-form .input-block .select-wrap {
       width: 100%; } }
 @media only screen and (max-width: 575px) {
+  .paypal-block .butn {
+    width: 100%; }
+
+  .payment-block .butn {
+    width: 100%; }
+
+  .payment-form-block form {
+    display: block; }
+
+  .payment-form-block form > div {
+    width: 100%; }
+
+  .acc-menu {
+    top: -20px; }
+
+  .acc-menu .aside-menu > li > a .list-text {
+    display: inline-block;
+    padding: 0 7px 0 5px; }
+
+  .price-list-block .title-text {
+    width: 100%;
+    margin: 45px auto 25px; }
+
   .video-list-block .video-item-block {
     width: 50%; }
 
