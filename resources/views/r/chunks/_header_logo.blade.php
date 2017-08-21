@@ -12,7 +12,7 @@
             </a>
           </div>
           @if(\Auth::check())
-            <div class="col-sm-4 offset-sm-1">
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 offset-sm-5 offset-md-5 offset-lg-1 offset-xl-1">
               <div class="login-block">
                 <div class="login-info">
                   <div class="login-text">100 videos left</div>

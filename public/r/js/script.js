@@ -229,3 +229,25 @@ $(".mypass").passField({ /*options*/ });
 // $(document).on("click", "#show-pas", function () {
 //   $('.a_pf-btn-mask').click();
 // })
+// var position;
+// $(".aside-menu li").addClass("st")
+
+// $(document).on('click','.aside-menu li',function(){
+//
+//   if($(this).hasClass('top')){
+//     return false;
+//   }
+//   $(".aside-menu .top").removeClass('top').css(
+//
+//     'transform', "translateY("+$(this).position().top+"px)"
+//   );
+//
+//   $(this).css(
+//     'transform', "translateY("+-$(this).position().top+"px)"
+//   ).addClass('top');
+//
+//
+//   return false;
+//
+//
+// })

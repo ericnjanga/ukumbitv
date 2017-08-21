@@ -15,12 +15,12 @@
                                 <input type="email" name="email" required>
                             </div>
                             <div class="input-wrap">
-                                <label>Password<span>*</span></label>
-                                <input type="password" name="password" required>
+                                <label>Password <span>*</span></label>
+                                <input type="password" name="password" class="mypass" required>
                             </div>
-                            <div class="operations-pass">
-                                <a href="">Show password</a>
-                            </div>
+                            {{--<div class="operations-pass">--}}
+                                {{--<a href="">Show password</a>--}}
+                            {{--</div>--}}
                             <div class="terms-policy">
                                 <p>By clicking Sign Up, I agree to the</p>
                                 <div>

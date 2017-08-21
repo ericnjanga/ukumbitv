@@ -97,8 +97,24 @@
     text-align: center; }
 
   .resetpas-wrap {
-    margin: 0 0 55px 0; } }
+    margin: 0 0 55px 0; }
+
+  .contact-form form {
+    display: block; }
+
+  .contact-form .textarea-wrap {
+    width: 100%; }
+
+  .contact-form .input-block {
+    width: 100%; }
+    .contact-form .input-block .input-wrap {
+      width: 50%; }
+    .contact-form .input-block .select-wrap {
+      width: 100%; } }
 @media only screen and (max-width: 575px) {
+  .contact-form .input-block .input-wrap {
+    width: 100%; }
+
   .main-header {
     height: 130px;
     padding: 0 0 15px 0; }
@@ -211,6 +227,12 @@
   .page-header {
     height: auto; }
     .page-header .butn-free {
-      margin: 0 auto 15px; } }
+      margin: 0 auto 15px; }
+
+  .page-header .login-block {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
 
 /*# sourceMappingURL=media.css.map */
