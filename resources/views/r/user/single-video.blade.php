@@ -188,19 +188,17 @@
                                 <div class="input-wrap textarea-wrap">
                                     <textarea name="" id=""></textarea>
                                 </div>
-                                <div class="comment">
-		                                <div class="img-block">\
-		                                    <img src="http://test.ukumbitv.com/r/img/face.jpg" alt="">
-		                                </div>
-		                                <div class="comment-text-block">
-		                                    <div class="comment-name">Alexandr Longname</div> 
-		                                </div>
-		                            </div>
-                                <!-- <div class="img-block">
-														      <img src="http://test.ukumbitv.com/r/img/no-img.png" alt="" style="width:40px; border-radius:40px;"> 
-														      <b>Username</b>
-														    </div> -->
-
+                                <div class="comment-block">
+                                	<div class="comment">
+			                                <div class="img-block">
+			                                    <img src="http://test.ukumbitv.com/r/img/face.jpg" alt="">
+			                                </div>
+			                                <div class="comment-text-block">
+			                                    <div class="comment-name">Alexandr Longname</div> 
+			                                </div>
+			                            </div>
+                                </div><!-- comment-block -->
+                                  
                                 <button type="submit" class="butn butn-orange butn-large">Submit</button>
                             </form>
                         </div>
