@@ -9,6 +9,7 @@
 }
 
 @media only screen and (max-width: 1199px){
+
   .price-list-block .title-text{
     width: 75%;
     margin: 0 auto 25px;
@@ -20,7 +21,7 @@
   .price-block .price-item .butn {
     width: 90%;
   }
-  .acc-menu{
+  .mypackage-wrap .acc-menu{
     position: absolute;
     left: 0;
     top: 0;
@@ -235,12 +236,14 @@
   .payment-form-block form > div{
     width: 100%;
   }
-  .acc-menu{
-    top: -20px;
-  }
-  .acc-menu .aside-menu > li > a .list-text{
-    display: inline-block;
-    padding: 0 7px 0 5px;
+  .mypackage-wrap{
+    .acc-menu{
+      top: -20px;
+      .aside-menu > li > a .list-text{
+        display: inline-block;
+        padding: 0 7px 0 5px;
+      }
+    }
   }
   .price-list-block .title-text {
     width: 100%;
