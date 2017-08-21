@@ -55,6 +55,12 @@
 		            			Documentary
 		            		</label>
 		            	</li>
+		            	<li class="mr20">
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-type" id="video-type-episode" value="episode"> 
+		            			Anime Movie
+		            		</label>
+		            	</li>
 		            </ul><!-- col-md-12 --> 
 							</fieldset> 
 						</div>
