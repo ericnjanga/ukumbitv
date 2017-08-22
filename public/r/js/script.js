@@ -255,3 +255,5 @@ $(document).on("click", ".butn-menu", function () {
 //
 //
 // })
+// $(".video-item").colorbox({});
+// $(".popup").colorbox({inline:true, href:"#myForm"});
