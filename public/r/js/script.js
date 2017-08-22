@@ -94,11 +94,17 @@ $("#change-pas").click(function () {
 
 $("#butn-search").click(function(){
 
-  $(".search-wrap").toggleClass("open");
-  $(".login-block").toggleClass("open");
+   if(window.innerWidth<767){
+       if($(".search-wrap").hasClass('open') && $(".search-wrap").find('input').val()){
 
-  return false;
-})
+       }else {
+           $(".search-wrap").toggleClass("open");
+           $(".login-block").toggleClass("open");
+           return false;
+       }
+   }
+
+});
 
 
 $(".mypass").passField({ /*options*/ });
