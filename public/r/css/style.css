@@ -986,6 +986,7 @@ img {
     height: 45px;
     line-height: 45px;
     background-color: #fff;
+    overflow: hidden;
     transition: none; }
     .aside-menu > li > a .list-text {
       color: #373230;
@@ -1029,6 +1030,22 @@ img {
     background-color: #f83647; }
   .aside-menu > li .packages:hover {
     background-color: #f83647; }
+  .aside-menu li.active .all {
+    background-color: #757575; }
+  .aside-menu li.active .movies {
+    background-color: #eeb33d; }
+  .aside-menu li.active .shows {
+    background-color: #f83647; }
+  .aside-menu li.active .web {
+    background-color: #00d7ff; }
+  .aside-menu li.active .doc {
+    background-color: #00f076; }
+  .aside-menu li.active .my-account {
+    background-color: #757575; }
+  .aside-menu li.active .packages {
+    background-color: #f83647; }
+  .aside-menu li.active > a > .list-text {
+    color: white; }
 
 .noicon {
   height: 10px;
@@ -2410,5 +2427,29 @@ input:-webkit-autofill {
   transform: rotate(-45deg); }
 .butn-menu.open span:nth-child(3) {
   top: 30px; }
+
+.menu-container {
+  position: relative; }
+  .menu-container .sub-menu {
+    display: none;
+    margin: 0 0 0 20px; }
+  .menu-container .show-on-hover {
+    width: 20px;
+    height: 100%;
+    position: absolute; }
+  .menu-container .menu-items {
+    padding-top: 46px;
+    position: relative; }
+    .menu-container .menu-items > li:not(.active) {
+      position: relative;
+      z-index: 1;
+      width: 100%; }
+    .menu-container .menu-items .active {
+      position: absolute;
+      top: 0;
+      width: 100%; }
+
+.aside-block .menu-container {
+  width: 170px; }
 
 /*# sourceMappingURL=style.css.map */

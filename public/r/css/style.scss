@@ -1075,6 +1075,7 @@ img{
       height: 45px;
       line-height: 45px;
       background-color: #fff;
+      overflow: hidden;
       transition: none;
       .list-text{
         color: #373230;
@@ -1152,6 +1153,35 @@ img{
         background-color: #f83647;
       }
     }
+
+  }
+  li.active{
+    .all{
+        background-color: #757575;
+    }
+    .movies{
+        background-color: #eeb33d;
+    }
+    .shows{
+        background-color: #f83647;
+    }
+    .web{
+        background-color: #00d7ff;
+    }
+    .doc{
+        background-color: #00f076;
+    }
+    .my-account{
+        background-color: #757575;
+    }
+    .packages{
+        background-color: #f83647;
+    }
+
+    >a>.list-text{
+      color: white;
+    }
+
   }
 }
 .noicon {
@@ -2849,4 +2879,35 @@ input:-webkit-autofill {
   span:nth-child(3){
     top: 30px;
   }
+}
+
+.menu-container{
+  position: relative;
+  .sub-menu{
+    display: none;
+    margin: 0 0 0 20px;
+  }
+  .show-on-hover{
+    width: 20px;
+    height: 100%;
+    position: absolute;
+  }
+  .menu-items{
+    padding-top: 46px;
+    position: relative;
+    >li:not(.active){
+      position: relative;
+      z-index: 1;
+      width: 100% ;
+    }
+    .active{
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+.aside-block .menu-container{
+  width: 170px;
 }
