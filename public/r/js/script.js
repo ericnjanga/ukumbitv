@@ -206,3 +206,54 @@ $("#payinfo").click(function () {
     $(this).toggleClass("open");
     return false;
 })
+
+$("#change-pas").click(function () {
+  $('.change-pas-block').slideToggle(300)
+                        .toggleClass("open");
+  $(this).toggleClass("open");
+
+})
+
+$("#butn-search").click(function(){
+
+  $(".search-wrap").toggleClass("open");
+  $(".login-block").toggleClass("open");
+
+  return false;
+})
+
+
+$(".mypass").passField({ /*options*/ });
+
+$(document).on("click", ".butn-menu", function () {
+  $('.menu-block').slideToggle();
+  $(this).toggleClass("open");
+  $('.menu-block').toggleClass('open');
+})
+// $(document).on("click", "#show-pas", function () {
+//   $('.a_pf-btn-mask').click();
+// })
+// var position;
+// $(".aside-menu li").addClass("st")
+
+// $(document).on('click','.aside-menu li',function(){
+//
+//   if($(this).hasClass('top')){
+//     return false;
+//   }
+//   $(".aside-menu .top").removeClass('top').css(
+//
+//     'transform', "translateY("+$(this).position().top+"px)"
+//   );
+//
+//   $(this).css(
+//     'transform', "translateY("+-$(this).position().top+"px)"
+//   ).addClass('top');
+//
+//
+//   return false;
+//
+//
+// })
+// $(".video-item").colorbox({});
+// $(".popup").colorbox({inline:true, href:"#myForm"});

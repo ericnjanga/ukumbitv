@@ -1603,7 +1603,8 @@ label {
   line-height: 14px;
   margin: 0 0 5px 0; }
   label span {
-    color: #fe0000; }
+    color: #fe0000;
+    margin: 0 0 0 3px; }
   label .label-add-text {
     color: #616161;
     font-weight: 400;
@@ -1668,15 +1669,15 @@ label {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  justify-content: space-between;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 0 0 30px 0; }
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 0 -5px 30px; }
   .video-list-block .video-item-block {
     padding: 0;
-    margin: 0 0 20px 0; }
+    margin: 0 0 20px;
+    width: 20%; }
 
 .filter-block-wrap {
   display: -webkit-box;
@@ -1867,7 +1868,7 @@ label {
   margin: 5px 0 18px; }
 
 .terms-policy {
-  margin: 0 0 5px 0; }
+  margin: 30px 0 5px 0; }
   .terms-policy p {
     font-size: 12px;
     font-weight: 400;
@@ -2181,26 +2182,55 @@ option[selected="selected"] {
         font-size: 20px; }
       .myaccount-wrap .img-block .change-photo-butn:hover {
         box-shadow: none; }
-  .myaccount-wrap .account-form-block .input-wrap:first-child {
-    margin: 0 0 60px 0; }
-    .myaccount-wrap .account-form-block .input-wrap:first-child:after {
-      content: '';
-      height: 1px;
-      background-color: #e0e0e0;
-      display: block;
+  .myaccount-wrap .account-form-block {
+    margin: 0 0 75px 0;
+    position: relative; }
+    .myaccount-wrap .account-form-block > form .input-wrap:first-child {
+      margin: 0 0 60px 0; }
+      .myaccount-wrap .account-form-block > form .input-wrap:first-child:after {
+        content: '';
+        height: 1px;
+        background-color: #e0e0e0;
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -30px; }
+    .myaccount-wrap .account-form-block .input-tel {
+      width: 63%; }
+    .myaccount-wrap .account-form-block .input-wrap {
+      margin: 0 0 5px 0; }
+    .myaccount-wrap .account-form-block .butn {
       width: 100%;
-      position: absolute;
-      left: 0;
-      bottom: -30px; }
-  .myaccount-wrap .account-form-block .input-tel {
-    width: 63%; }
-  .myaccount-wrap .account-form-block .input-wrap {
-    margin: 0 0 5px 0; }
-  .myaccount-wrap .account-form-block .butn {
-    width: 100%;
-    font-weight: 400; }
-  .myaccount-wrap .account-form-block .change-pas {
-    margin: 12px 0 30px; }
+      font-weight: 400;
+      transition: margin 0.3s linear; }
+    .myaccount-wrap .account-form-block .change-pas {
+      margin: 12px 0 30px; }
+
+.like-link {
+  color: #2298d4;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  display: inline-block; }
+  .like-link:hover {
+    cursor: pointer;
+    color: rgba(34, 152, 212, 0.75); }
+
+.change-pas.open + .butn {
+  margin: 230px 0 0 0; }
+
+.change-pas-block {
+  display: none;
+  width: 75%;
+  position: absolute;
+  top: 305px;
+  left: 0;
+  background-color: #fff; }
+  .change-pas-block .operations-pass {
+    display: block;
+    text-align: right;
+    margin: 5px 0 20px; }
 
 .mypackage-wrap {
   margin: 10px 0; }
@@ -2349,5 +2379,36 @@ input:-webkit-autofill {
   display: block; }
   .butn-back:hover {
     color: rgba(238, 179, 61, 0.8); }
+
+.butn-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  display: none; }
+  .butn-menu span {
+    position: absolute;
+    height: 3px;
+    width: 28px;
+    left: 1px;
+    background-color: #000;
+    transition: all 0.7s ease-in-out; }
+  .butn-menu span:nth-child(1) {
+    top: 5px; }
+  .butn-menu span:nth-child(2) {
+    top: 12px; }
+  .butn-menu span:nth-child(3) {
+    top: 19px; }
+
+.butn-menu.open span:nth-child(1) {
+  top: 12px;
+  transform: rotate(45deg); }
+.butn-menu.open span:nth-child(2) {
+  top: 12px;
+  transform: rotate(-45deg); }
+.butn-menu.open span:nth-child(3) {
+  top: 30px; }
 
 /*# sourceMappingURL=style.css.map */
