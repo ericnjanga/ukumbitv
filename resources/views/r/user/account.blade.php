@@ -3,16 +3,16 @@
     <div class="myaccount-wrap">
         <div class="container">
             <div class="row">
-                <div class="col-sm-2 col-md-2 col-lg-3 col-xl-2 acc-menu">
+                <div class="col-sm-2 col-md-3 col-lg-3 col-xl-2 acc-menu">
                     @include('r.chunks._account_menu')
                 </div>
-                <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 offset-xl-1">
+                <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 offset-lg-2 offset-xl-1">
                     <div class="img-block">
                     <img src="{{asset('r/img/user-photo.png')}}" alt="">
                         <a href="" class="change-photo-butn"><span class="icon icon-pencil-edit-button"></span></a>
                     </div>
                 </div>
-                <div class="col-sm-3 col-md-3 col-lg-4 col-xl-3">
+                <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3">
                     <div class="account-form-block">
                         <form action="" method="">
                             <div class="input-wrap">

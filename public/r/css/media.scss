@@ -21,11 +21,10 @@
   .price-block .price-item .butn {
     width: 90%;
   }
-  .mypackage-wrap .acc-menu{
+  .acc-menu{
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 10;
     display: block;
     width: auto;
     max-width: 100%;
@@ -44,6 +43,14 @@
       }
     }
   }
+  .myaccount-wrap{
+    margin: 75px 0 0 0;
+    .acc-menu{
+      left: 160px;
+      top: -65px;
+    }
+  }
+
   .list-text-wrap .container:after {
     left: 10%;
     width: 80%;
@@ -75,6 +82,9 @@
 }
 
 @media only screen and (max-width: 991px){
+  .myaccount-wrap .acc-menu{
+    left: 0;
+  }
   .video-list-block{
     //-webkit-box-pack: center;
     //-webkit-justify-content: center;
@@ -224,6 +234,10 @@
 }
 
 @media only screen and (max-width: 575px) {
+  .myaccount-wrap .img-block {
+    margin: 0 auto;
+    display: block;
+  }
   .paypal-block .butn{
     width: 100%;
   }
@@ -236,13 +250,11 @@
   .payment-form-block form > div{
     width: 100%;
   }
-  .mypackage-wrap{
-    .acc-menu{
-      top: -20px;
-      .aside-menu > li > a .list-text{
-        display: inline-block;
-        padding: 0 7px 0 5px;
-      }
+  .acc-menu{
+    top: -20px;
+    .aside-menu > li > a .list-text{
+      display: inline-block;
+      padding: 0 7px 0 5px;
     }
   }
   .price-list-block .title-text {
