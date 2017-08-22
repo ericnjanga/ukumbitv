@@ -4,6 +4,18 @@ use Illuminate\Database\Eloquent\Model;
 use DB;
 class AdminVideo extends Model
 {
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+    public function likes()
+    {
+        return $this->hasMany('App\Like');
+    }
+    public function tags()
+    {
+        return $this->hasMany('App\Tag');
+    }
     public function movieProducer()
     {
         return $this->hasOne('App\MovieProducer');

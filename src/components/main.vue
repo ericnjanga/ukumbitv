@@ -29,7 +29,7 @@
                                                 <li>
                                                     <a href="">
                                                         <span class="list-text">Short</span>
-                                                        <span class="time">10 min</span>
+                                                        <span class="time">3 to 10 min</span>
                                                     </a>
                                                 </li>
                                                 <li>
@@ -40,7 +40,7 @@
                                                 </li>
                                                 <li>
                                                     <a href="">
-                                                        <span class="list-text">Feature</span>
+                                                        <span class="list-text">Full</span>
                                                         <span class="time">45 min up</span>
                                                     </a>
                                                 </li>

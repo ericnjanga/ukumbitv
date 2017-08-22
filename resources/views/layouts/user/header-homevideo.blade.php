@@ -29,10 +29,11 @@
                   @endif
               <li><a href="{{route('user.reset-trial')}}">RESET TRIAL</a></li>
           @endif
-
+@if(isset($categories))
           @foreach($categories as $category)
              <li><a href="/category/{{str_slug($category->name)}}">{{ $category->name }}</a></li>
           @endforeach
+          @endif
       	<!-- categories list here -->
       	<!-- categories list here -->
       </ul> 

@@ -36,9 +36,9 @@
        <div class="soc-block">
         <div class="list-title">{{l('Get Social')}}</div>
         <ul class="social-list">
-         <li><a href="" class="icon icon-facebook"></a></li>
-         <li><a href="" class="icon icon-twitter"></a></li>
-         <li><a href="" class="icon icon-instagram"></a></li>
+         <li><a href="https://www.facebook.com/ukumbitv/" target="_blank" class="icon icon-facebook"></a></li>
+         <li><a href="https://twitter.com/ukumbi_tv" target="_blank" class="icon icon-twitter"></a></li>
+         <li><a href="https://www.instagram.com/ukumbitv" target="_blank" class="icon icon-instagram"></a></li>
         </ul>
        </div>
        <div class="lang-block">

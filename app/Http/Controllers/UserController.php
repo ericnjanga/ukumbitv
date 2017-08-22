@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Actor;
 use App\AdminVideo;
+use App\Director;
+use App\Like;
 use App\PaymentPlan;
 use App\UserHistory;
 use App\UserPayment;
@@ -78,14 +81,16 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
+
         //#testing
-        if(!Auth::check()){
-            return view('r.landing',[
-                'payment_plans'=>PaymentPlan::all()
+        if(!Auth::check()) {
+            return view('r.landing', [
+                'payment_plans' => PaymentPlan::all()
             ]);
-        }else{
-            return view('r.user.home-video');
         }
+//        }else{
+//            return view('r.user.home-video');
+//        }
         //#end
 
         $histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
@@ -105,7 +110,8 @@ class UserController extends Controller {
             $suggestions  = Helper::suggestion_videos(WEB);
             $categories = get_categories();
 
-            $videos = AdminVideo::with('videoimage')->orderBy('id', 'desc')->get();
+            $videos = AdminVideo::with('videoimage')->with('category')->orderBy('id', 'desc')->limit(15)->get();
+            //dd($videos);
 
             $lastVideos = [];
             $allCategories = Category::all();
@@ -237,13 +243,14 @@ class UserController extends Controller {
       //  $histories = UserHistory::where('user_id', Auth::id())->distinct()->get();
         //$histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
         //dd($histories);
-        $video = AdminVideo::where('watchid', $id)->firstOrFail();
+        $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
+
 
         $checkTrial = $this->checkTrial($video->id);
         if(!$checkTrial){
             $payPlans = PaymentPlan::all();
-            return view('user.select_payment_plan')
-                ->with('payPlans', $payPlans);
+            return view('r.landing')
+                ->with('payment_plans', $payPlans);
         }
 
 
@@ -256,9 +263,9 @@ class UserController extends Controller {
 
         $videoId = substr($video->video, 8);
 
-        $main_video = $video->video;
-        $trailer_video = "";
-        $wishlist_status = $history_status = WISHLIST_EMPTY;
+//        $main_video = $video->video;
+//        $trailer_video = "";
+//        $wishlist_status = $history_status = WISHLIST_EMPTY;
 
         if (Auth::check()) {
             $hist = new UserHistory();
@@ -268,19 +275,59 @@ class UserController extends Controller {
             $hist->save();
         }
 
-        $categories = get_categories();
+//        $categories = get_categories();
 
-        return view('user.single_newvideo')
-            ->with('trailer_video' , $trailer_video)
-            ->with('main_video' , $main_video)
-            ->with('videoStreamUrl', $main_video)
-            ->with('history_status' , $history_status)
-            ->with('videos' , $videos)
-            ->with('videoTitle' , $video)
-            ->with('images' , $images)
+        $actorIds = $video->actors;
+        $actorIds = explode(',', $actorIds);
+        $actors = [];
+        foreach($actorIds as $actorId){
+            $act = Actor::find($actorId);
+            array_push($actors, $act->name);
+        }
+
+        $directorIds = $video->directors;
+        $directorIds = explode(',', $directorIds);
+        $directors = [];
+        foreach($directorIds as $directorId){
+            $act = Director::find($directorId);
+            array_push($directors, $act->name);
+        }
+
+        $likes = Like::where('admin_video_id', $video->id)->where('type', 'like')->get();
+        $disLikes = Like::where('admin_video_id', $video->id)->where('type', 'dislike')->get();
+        $checkLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'like')->first();
+        $checkDisLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'dislike')->first();
+
+        $tags = explode(',', $video->tags);
+
+        return view('r.user.single-video')
+//            ->with('trailer_video' , $trailer_video)
+//            ->with('main_video' , $main_video)
+//            ->with('videoStreamUrl', $main_video)
+//            ->with('history_status' , $history_status)
+//            ->with('videos' , $videos)
+//            ->with('videoTitle' , $video)
+//            ->with('images' , $images)
             ->with('video', $video)
             ->with('videoId', $videoId)
-            ->with('categories', $categories);
+            ->with('actors', $actors)
+            ->with('checkLike', $checkLike)
+            ->with('checkDisLike', $checkDisLike)
+            ->with('tags', $tags)
+            ->with('likes', count($likes))
+            ->with('dislikes', count($disLikes))
+            ->with('directors', $directors);
+//            ->with('categories', $categories);
+    }
+
+    public function showVideo($id)
+    {
+        $video = AdminVideo::where('watchid', $id)->first();
+        $videoId = substr($video->video, 8);
+
+        return view('user.single_newvideo')
+            ->with('videoId', $videoId)
+            ->with('video', $video);
     }
 
 
@@ -1010,9 +1057,11 @@ class UserController extends Controller {
     public function payment()
     {
         $videos = AdminVideo::all();
+        $categories = Category::all();
         return view('user.userpayment')
                     ->with('page' , 'profile')
                     ->with('subPage' , 'user-profile')
+                    ->with('categories' , $categories)
                     ->with('videos', $videos);
     }
 

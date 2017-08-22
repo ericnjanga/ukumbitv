@@ -45,16 +45,51 @@
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-episode" value="episode"> 
+		            			<input type="radio" name="video-type" id="video-type-webserie" value="webserie"> 
 		            			Web Serie
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-episode" value="episode"> 
+		            			<input type="radio" name="video-type" id="video-type-documentary" value="documentary"> 
 		            			Documentary
 		            		</label>
 		            	</li>
+		            	<li class="mr20">
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-type" id="video-type-anime" value="anime"> 
+		            			Anime Movie
+		            		</label>
+		            	</li>
+		            </ul><!-- col-md-12 --> 
+							</fieldset> 
+						</div>
+
+
+						
+						<!-- select video length -->
+						<div class="col-md-12 mb35">
+							<fieldset class="blk col-md-12"> 
+								<legend>Video Length</legend>
+		            <ul class="list-inline" style="padding:0;">
+		            	<li class="mr20">
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-length" id="video-length-1" value="full" checked> 
+		            			Full
+		            		</label>
+		            	</li>
+		            	<li class="mr20">
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-length" id="video-length-2" value="medium"> 
+		            			Medium
+		            		</label>
+		            	</li>
+		            	<li class="mr20">
+		            		<label class="radio-inline">
+		            			<input type="radio" name="video-length" id="video-length-3" value="short"> 
+		            			Short
+		            		</label>
+		            	</li> 
 		            </ul><!-- col-md-12 --> 
 							</fieldset> 
 						</div>
