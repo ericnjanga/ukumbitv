@@ -182,6 +182,10 @@ function GoogleMenu(selector) {
             return false;
         }
 
+        if($($container).find(':animated').length>0){
+            return false
+        }
+
         $('.sub-menu:visible').css('display','none');
         $currentActive = $($itemsContainer).find('.active');
         $current = $(this);
@@ -192,8 +196,14 @@ function GoogleMenu(selector) {
 
 
     $(document).on('mouseenter','.show-on-hover',function () {
+        if($($container).find(':animated').length>0){
+            return false
+        }
         slideUpElements();
     }).on('mouseleave','.menu-container',function () {
+        if($($container).find(':animated').length>0){
+            return false
+        }
         if($('.active').find('.sub-menu').length > 0){
             slideDownElements();
         }
