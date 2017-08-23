@@ -64,7 +64,6 @@ class UserController extends Controller {
     }
 
 
-
     public function account()
     {
         return view('r.user.account');
@@ -1245,4 +1244,5 @@ class UserController extends Controller {
 
         return 'ERROR';
     }
+
 }
