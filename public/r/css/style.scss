@@ -711,7 +711,7 @@ img{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.35);
+  background-color: rgba(0,0,0,0.45);
   z-index: -1;
 }
 .upper{
@@ -844,7 +844,6 @@ img{
         color: #ffffff;
         font-size: 12px;
         font-weight: 400;
-        line-height: 19px;
         background-color: #3b5998;
         height: 20px;
         line-height: 22px;
@@ -859,16 +858,30 @@ img{
           left: 7px;
           top: 0;
         }
+        &:hover{
+          background-color: #355098;
+        }
       }
       .butn-like{
         color: #ffffff;
         font-size: 13px;
         font-weight: 400;
         line-height: 20px;
+        position: relative;
+        padding: 0 0 0 30px;
         .icon{
           color: #49ed6f;
           font-size: 22px;
-          margin: 0 10px 0 0;
+          position: absolute;
+          left: 0;
+          top: -4px;
+          line-height: 100%;
+          transition: color 0.2s ease-in-out;
+        }
+        &:hover{
+          .icon {
+            color: #45D369;
+          }
         }
       }
     }
@@ -2892,7 +2905,7 @@ input:-webkit-autofill {
   .menu-items{
     padding-top: 45px;
     position: relative;
-
+    width: 100%;
     >li:not(.active){
       position: relative;
       z-index: 1;
@@ -2901,8 +2914,9 @@ input:-webkit-autofill {
     .active{
       position: absolute;
       top: 0;
-      width: 100%;
       left: 0;
+      width: 170px;
+      height: 100%;
     }
   }
 }
@@ -2916,5 +2930,96 @@ input:-webkit-autofill {
 .link-page {
   &:hover{
     color: rgba(66, 66, 66, 0.85);
+  }
+}
+.video-item-popup{
+  width: 445px;
+  height: 280px;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  z-index: 100;
+  box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.35);
+  .main-top-block {
+    position: relative;
+    height: 280px;
+    padding: 25px 20px 0;
+    margin: 0;
+    img{
+      height: 280px;
+    }
+  }
+  .video-info-block{
+    .video-title{
+      font-size: 20px;
+      line-height: 22px;
+      margin: 0 0 3px 0;
+    }
+    .video-info-text{
+      margin: 0 0 5px 0;
+      width: 100%;
+      min-height: 60px;
+      .age{
+        font-size: 11px;
+        height: 18px;
+        padding: 0 8px;
+      }
+      .date{
+        line-height: 18px;
+      }
+      .genre{
+
+      }
+      .series-text{
+        width: 100%;
+        font-size: 11px;
+        margin: 3px 0 0 0;
+      }
+    }
+    .actors-block{
+      margin: 0 0 5px 0;
+      min-height: 85px;
+      width: 70%;
+      .actors-title{
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0 0 3px 0;
+      }
+      .actors-list{
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    .butn-block{
+      margin: 0 0 12px 0;
+      .play-block{
+        .butn-play{
+          margin: 0 15px 0 0;
+        }
+        .butn-orange-dark{
+          width: 90px;
+        }
+      }
+      .share-block{
+        .butn-share{
+          padding: 0 10px;
+        }
+        .butn-like{
+
+        }
+      }
+    }
+    .details-butn{
+      color: #eeb33d;
+      font-size: 13px;
+      line-height: 16px;
+      margin: 0 auto;
+      width: 100px;
+      display: block;
+      text-align: center;
+      &:hover{
+        color: rgba(238,179,61,0.8);
+      }
+    }
   }
 }

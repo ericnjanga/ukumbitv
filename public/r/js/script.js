@@ -124,6 +124,10 @@ function GoogleMenu(selector) {
         $container.find('.menu-items>li').not($current).css('width',0);
     };
 
+    var showElements = function () {
+       $container.find('.menu-items>li').not($current).css('width','170px');
+    }
+
     var slideDownElements = function () {
         $container.find('.menu-items>li').not($current).stop().animate({width:0},500,function () {
 
@@ -146,7 +150,6 @@ function GoogleMenu(selector) {
     };
 
     var changeActive = function () {
-
         if($current.find('.sub-menu').length>0){
             hideElements();
             $current.css({'position':'absolute',top:$current.position().top}).animate({top:0},500,function () {
@@ -156,6 +159,7 @@ function GoogleMenu(selector) {
             });
 
         }else {
+            hideElements()
             var $activeClone = $currentActive.clone().removeClass('active');
             var offset_top = $current.position().top;
 
@@ -167,6 +171,7 @@ function GoogleMenu(selector) {
                 }else {
                     $($activeClone).insertBefore($before_elem);
                 }
+                showElements();
             });
 
             $current.css({'position':'absolute',top:$current.position().top}).animate({top:0},500,function () {

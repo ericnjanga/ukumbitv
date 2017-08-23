@@ -673,7 +673,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.45);
   z-index: -1; }
 
 .upper {
@@ -790,7 +790,6 @@ img {
       color: #ffffff;
       font-size: 12px;
       font-weight: 400;
-      line-height: 19px;
       background-color: #3b5998;
       height: 20px;
       line-height: 22px;
@@ -804,15 +803,25 @@ img {
         position: absolute;
         left: 7px;
         top: 0; }
+      .video-info-block .butn-block .share-block .butn-share:hover {
+        background-color: #355098; }
     .video-info-block .butn-block .share-block .butn-like {
       color: #ffffff;
       font-size: 13px;
       font-weight: 400;
-      line-height: 20px; }
+      line-height: 20px;
+      position: relative;
+      padding: 0 0 0 30px; }
       .video-info-block .butn-block .share-block .butn-like .icon {
         color: #49ed6f;
         font-size: 22px;
-        margin: 0 10px 0 0; }
+        position: absolute;
+        left: 0;
+        top: -4px;
+        line-height: 100%;
+        transition: color 0.2s ease-in-out; }
+      .video-info-block .butn-block .share-block .butn-like:hover .icon {
+        color: #45D369; }
 
 .title-text {
   color: #424242;
@@ -2437,7 +2446,8 @@ input:-webkit-autofill {
     position: absolute; }
   .menu-container .menu-items {
     padding-top: 45px;
-    position: relative; }
+    position: relative;
+    width: 100%; }
     .menu-container .menu-items > li:not(.active) {
       position: relative;
       z-index: 1;
@@ -2445,8 +2455,9 @@ input:-webkit-autofill {
     .menu-container .menu-items .active {
       position: absolute;
       top: 0;
-      width: 100%;
-      left: 0; }
+      left: 0;
+      width: 170px;
+      height: 100%; }
 
 .aside-block .menu-container {
   width: 170px;
@@ -2456,5 +2467,68 @@ input:-webkit-autofill {
 /*********************************************END*****MENU**************************************/
 .link-page:hover {
   color: rgba(66, 66, 66, 0.85); }
+
+.video-item-popup {
+  width: 445px;
+  height: 280px;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  z-index: 100;
+  box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.35); }
+  .video-item-popup .main-top-block {
+    position: relative;
+    height: 280px;
+    padding: 25px 20px 0;
+    margin: 0; }
+    .video-item-popup .main-top-block img {
+      height: 280px; }
+  .video-item-popup .video-info-block .video-title {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0 0 3px 0; }
+  .video-item-popup .video-info-block .video-info-text {
+    margin: 0 0 5px 0;
+    width: 100%;
+    min-height: 60px; }
+    .video-item-popup .video-info-block .video-info-text .age {
+      font-size: 11px;
+      height: 18px;
+      padding: 0 8px; }
+    .video-item-popup .video-info-block .video-info-text .date {
+      line-height: 18px; }
+    .video-item-popup .video-info-block .video-info-text .series-text {
+      width: 100%;
+      font-size: 11px;
+      margin: 3px 0 0 0; }
+  .video-item-popup .video-info-block .actors-block {
+    margin: 0 0 5px 0;
+    min-height: 85px;
+    width: 70%; }
+    .video-item-popup .video-info-block .actors-block .actors-title {
+      font-size: 12px;
+      line-height: 14px;
+      margin: 0 0 3px 0; }
+    .video-item-popup .video-info-block .actors-block .actors-list {
+      font-size: 12px;
+      line-height: 14px; }
+  .video-item-popup .video-info-block .butn-block {
+    margin: 0 0 12px 0; }
+    .video-item-popup .video-info-block .butn-block .play-block .butn-play {
+      margin: 0 15px 0 0; }
+    .video-item-popup .video-info-block .butn-block .play-block .butn-orange-dark {
+      width: 90px; }
+    .video-item-popup .video-info-block .butn-block .share-block .butn-share {
+      padding: 0 10px; }
+  .video-item-popup .video-info-block .details-butn {
+    color: #eeb33d;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0 auto;
+    width: 100px;
+    display: block;
+    text-align: center; }
+    .video-item-popup .video-info-block .details-butn:hover {
+      color: rgba(238, 179, 61, 0.8); }
 
 /*# sourceMappingURL=style.css.map */
