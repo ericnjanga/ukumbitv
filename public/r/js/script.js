@@ -1,6 +1,7 @@
 /**
  * Created by admin on 15.08.2017.
  */
+/***********slider*************/
 $('.video-slider-block').slick({
     dots: false,
     infinite: false,
@@ -31,7 +32,7 @@ $('.video-slider-block').slick({
         }
     ]
 });
-
+/*********series**slider*************/
 $('.series-list-slider').slick({
     dots: false,
     infinite: false,
@@ -62,8 +63,7 @@ $('.series-list-slider').slick({
         }
     ]
 });
-
-
+/*********video**popup*************/
 if ($(window).width() > 1199) {
     $(".cb-video").colorbox({iframe:true,width:'90%',height:'80%'});
 } else if ($(window).width() > 991) {
@@ -84,40 +84,33 @@ $("#payinfo").click(function () {
     $(this).toggleClass("open");
     return false;
 })
-
+/**************change**password**button*********/
 $("#change-pas").click(function () {
   $('.change-pas-block').slideToggle(300)
                         .toggleClass("open");
   $(this).toggleClass("open");
 
 })
-
+/**************search****button*********/
 $("#butn-search").click(function(){
-
    if(window.innerWidth<767){
        if($(".search-wrap").hasClass('open') && $(".search-wrap").find('input').val()){
-
        }else {
            $(".search-wrap").toggleClass("open");
            $(".login-block").toggleClass("open");
            return false;
        }
    }
-
 });
-
-
+/**************show**password**button*********/
 $(".mypass").passField({ /*options*/ });
-
+/**************menu**mobile**button*********/
 $(document).on("click", ".butn-menu", function () {
   $('.menu-block').slideToggle();
   $(this).toggleClass("open");
   $('.menu-block').toggleClass('open');
 })
-
-// $(".video-item").colorbox({});
-// $(".popup").colorbox({inline:true, href:"#myForm"});
-
+/************aside**menu***********/
 function GoogleMenu(selector) {
     $container = $(selector);
     $($container).css('height',$($container).height()+'px');
@@ -217,3 +210,5 @@ function GoogleMenu(selector) {
 }
 
 GoogleMenu('.menu-container');
+// $(".video-item").colorbox({});
+// $(".popup").colorbox({inline:true, href:"#myForm"});
