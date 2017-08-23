@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 offset-xl-1 list-text-block">
                         <div class="list-text-item">
-                            <div class="title-text">Best videos ever</div>
+                            <div class="title-text">{{trans('messages.home_middlesection_text1')}}</div>
                             <span class="icon icon-video"></span>
                             <p>Scarlett Johansson stars in the visually stunning Ghost in the Shell, an action-packed
                                 adventure set in a future world where people are enhanced </p>

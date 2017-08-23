@@ -687,5 +687,7 @@ return array(
   'plan_details' => 'Détails du plan',
   'change_plan' => 'Changer le plan',
 
+  'home_middlesection_text1' => '**(FR) The finest productions',
+
 
 );
