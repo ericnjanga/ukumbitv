@@ -195,14 +195,19 @@
 			                                    <img src="{{Auth::user()->picture}}" alt="">
 			                                </div>
 			                                <div class="comment-text-block">
-			                                    <div class="comment-name">{{Auth::user()->name}}</div>
+			                                    <div class="comment-name">
+                                                    @if(Auth::user()->name != '')
+                                                        {{Auth::user()->name}}
+                                                        @else
+                                                        {{Auth::user()->email}}
+                                                    @endif
+                                                </div>
 			                                </div>
                                     </div>
                                 </div><!-- comment-block -->
-                            <button class="butn butn-orange butn-large" onclick="sendComment()">Submit</button>
-                                  
-
                             </form>
+                            <button class="butn butn-orange butn-large" onclick="sendComment()">Submit</button>
+
                         </div>
                     </div>
                     <div class="video-slider-wrap">
@@ -244,6 +249,10 @@
     <script>
         function sendComment() {
 
+            if($('#comment-text').val() === '') {
+                swal("Hmm", "Need to write a review, try again pls", "error");
+            } else {
+
             var token = $('meta[name="csrf-token"]').attr('content');
             var fd = new FormData;
 
@@ -269,6 +278,8 @@
                     alert('error '+data);
                 }
             });
+
+            }
 
         }
 
