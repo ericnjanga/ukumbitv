@@ -36,25 +36,25 @@
                         </div>
                     </div>
                     <div class="video-slider-wrap">
-                        <div class="title">New Videos</div>
+                      <a href="" class="title link-page">New Videos</a>
                         <div class="video-slider-block-wrap">
                             <div class="video-slider-block">
-                                {{--@for($i=0;$i<5;$i++)--}}
-                                    {{--<div class="video-item-block">--}}
-                                        {{--<div class="video-item">--}}
-                                            {{--<div class="video-img">--}}
-                                                {{--<img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">--}}
-                                            {{--</div>--}}
-                                            {{--<div class="video-title ellipsis-gradient">Transformers: Revenge of the--}}
-                                                {{--Fallen--}}
-                                            {{--</div>--}}
-                                            {{--<div class="video-info">--}}
-                                                {{--<div class="video-genre">Drama</div>--}}
-                                                {{--<div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--@endfor--}}
+                                @for($i=0;$i<5;$i++)
+                                    <div class="video-item-block">
+                                        <div class="video-item">
+                                            <div class="video-img">
+                                                <img src="{{asset('r/img/video'.($i+1).'.png')}}" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the
+                                                Fallen
+                                            </div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endfor
 
                                 @foreach($videos as $video)
                                     <div class="video-item-block">
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <div class="video-slider-wrap">
-                        <div class="title">My List</div>
+                      <a href="" class="title link-page">My List</a>
                         <div class="video-slider-block">
                             @for($i=0;$i<5;$i++)
                                 <div class="video-item-block">
@@ -121,7 +121,7 @@
                         </div>
                     </div>
                     <div class="video-slider-wrap">
-                        <div class="title">Popular Videos</div>
+                      <a href="" class="title link-page">Popular Videos</a>
                         <div class="video-slider-block">
                             @for($i=0;$i<5;$i++)
                                 <div class="video-item-block">
@@ -164,13 +164,16 @@
                         </div>
                     </div>
                     <div class="video-slider-wrap">
-                        <div class="title">Liked Videos</div>
+                        <a href="" class="title link-page">Liked Videos</a>
                         <div class="no-video">
                             <div>No liked videos yet</div>
                             <p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="video-item-popup">
+
             </div>
         </div>
     </div>
