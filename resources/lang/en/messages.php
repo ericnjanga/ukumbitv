@@ -713,5 +713,5 @@ return array(
   'plan_details' => 'Plan Details',
   'change_plan' => 'Change Plan',
 
- 
+  'home_middlesection_text1' => '**The finest productions',
 );
