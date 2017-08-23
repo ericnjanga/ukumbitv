@@ -199,10 +199,10 @@
 			                                </div>
                                     </div>
                                 </div><!-- comment-block -->
+                            <button class="butn butn-orange butn-large" onclick="sendComment()">Submit</button>
                                   
 
                             </form>
-                            <button class="butn butn-orange butn-large" onclick="sendComment()">Submit</button>
                         </div>
                     </div>
                     <div class="video-slider-wrap">
