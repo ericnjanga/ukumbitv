@@ -448,7 +448,7 @@ Route::get('categories', 'UserController@all_categories')->name('user.categories
 Route::get('category/{id}', 'UserController@getVideosByCategory');
 
 Route::get('subcategory/{id}', 'UserController@sub_category_videos')->name('user.sub-category');
-Route::get('category/{id}', 'UserController@category_videos')->name('user.category');
+//Route::get('category/{id}', 'UserController@category_videos')->name('user.category');
 
 Route::get('genre/{id}', 'UserController@genre_videos')->name('user.genre');
 

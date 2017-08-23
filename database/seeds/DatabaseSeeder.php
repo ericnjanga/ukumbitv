@@ -20,5 +20,10 @@ class DatabaseSeeder extends Seeder
         $this->call(AddedLanguageControlKeyInSettingsTable::class);
         $this->call(AppLinkSeeder::class);
         $this->call(PaymentPlanSeeder::class);
+
+        $this->call(VideosSeeder::class);
+        $this->call(CategoriesSeeder::class);
+        $this->call(UsersSeeder::class);
+        $this->call(VideoImageSeeder::class);
     }
 }

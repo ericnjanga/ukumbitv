@@ -1,95 +1,109 @@
-
-@extends('static.masterpage-legal')
-
-
-@section('content-title')
-{{trans('messages.account')}}
-@endsection
+@extends('layouts.user')
 
 @section('content')
-	<style>
-		h1 { 
-    	margin-bottom: 0;
-		}
-		.p-acc hr { 
-    	border-top: 1px solid #999;
-    	margin-top: 30px;
-    	margin-bottom: 30px;
-		}
-		.p-acc h2 {
-			margin-top: 0;
-			margin-bottom: 15px;
-	    font-size: 18px;
-	    text-transform: uppercase;
-	    color: #999;
-		}
-		.p-acc .text-right {
-			line-height: 20px;
-		}
-		.p-acc .btn-cta {
-			max-width: 200px;
-    	padding: 10px;
-		} 
-	</style>
- 	<div class="p-acc row">
- 		<div class="col-md-12">
 
- 			<hr>
+ <!--breadcrumbs-->
 
+<section id="breadcrumb">
+    <div class="row">
+        <div class="large-12 columns">
+            <nav aria-label="You are here:" role="navigation">
+                <ul class="breadcrumbs">
+                    <li><i class="fa fa-home"></i><a href="{{route('user.dashboard')}}">{{tr('home')}}</a></li>
+                    <li><span class="show-for-sr">Current: </span>{{tr('profile')}}</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
 
- 			<div class="row">
- 				<div class="col-md-4">
-	 				<h2>{{trans('messages.Membership_billing')}}</h2>
-	 				<a href="#" class="btn btn-default btn-block btn-cta">{{trans('messages.Cancel_Membership')}}</a>
-	 			</div>
-	 			<div class="col-md-8">
-	 				<div class="row" style="margin-bottom: 15px;">
-	 					<div class="col-md-6 text-left"></div>
-	 					<div class="col-md-6 text-right">
-	 						<a href="{{route('user.update.profile')}}">{{trans('messages.Update_profile_blurb')}}</a>
-	 					</div>
-	 				</div>
-	 				<div class="row">
-	 					<div class="col-md-6 text-left"></div>
-	 					<div class="col-md-6 text-right">
-	 						<a href="{{route('paypal' , Auth::user()->id)}}">{{trans('messages.Update_billing_information')}}</a>
-	 					</div>
-	 				</div>
-	 			</div> 
- 			</div><!-- row -->
+<!--end breadcrumbs-->
 
- 			<hr>
+<div class="row">
+    <!-- left sidebar -->
 
- 			<div class="row">
- 				<div class="col-md-4">
-		 				<h2>{{trans('messages.plan_details')}}</h2>
-		 			</div>
-		 			<div class="col-md-8">
-		 				<div class="row">
-		 					<div class="col-md-6 text-left">
-		 						<b>Plan B</b>
-		 					</div>
-		 					<div class="col-md-6 text-right">
-		 						<a href="{{route('user.select-pay-plan')}}">{{trans('messages.change_plan')}}</a>
-		 					</div>
-		 				</div>
-		 			</div> 
- 			</div><!-- row -->
+    @include('layouts.user.user-sidebar')
 
+    <!-- end sidebar -->
 
+    <!-- right side content area -->
+    <div class="large-8 columns mar-top-space">
+        <!-- single post description -->
 
+        @include('notification.notify')
 
-			<!--     
-			CHANGE PASSWORD BUTTON
-			.....................  
-				<a href="{{route('user.change.password')}}" class="btn btn-danger">{{tr('change_password')}}</a> -->
+        <section class="singlePostDescription">
+            <div class="row secBg">
+                <div class="large-12 columns">
+                    <div class="heading">
+                        <i class="fa fa-user" style="font-size:20px;"></i>
+                        <h4>{{tr('description')}}</h4>
+
+                        @if(envfile('PAYPAL_ID') && envfile('PAYPAL_SECRET'))
+
+                            <a href="{{route('paypal' , Auth::user()->id)}}" class="btn btn-warning" style="float:right"><i class="fa fa-envelope" style="color:white"></i>Pay now</a>  
+                        @endif
+                    </div>
+                    <div class="description">
+
+                        <p>{{Auth::user()->description}}</p>
+
+                        @if(Auth::user()->login_by == 'maunal')
+                            <div class="email profile-margin">
+                                <button><i class="fa fa-envelope"></i>{{tr('email')}}</button>
+                                <span class="inner-btn">{{Auth::user()->email}}</span>
+                            </div>
+                        @endif
+                        
+                        <div class="email profile-margin">
+                            <button><i class="fa fa-location-arrow"></i>{{tr('address')}}</button>
+                            @if(Auth::user()->address) <span class="inner-btn">{{Auth::user()->address}}</span> @endif
+                        </div>
+
+                        <div class="phone profile-margin">
+                            <button><i class="fa fa-phone"></i>{{tr('mobile')}}</button>
+                            
+                            @if(Auth::user()->mobile) 
+                                <span class="inner-btn">
+                                    {{Auth::user()->mobile}}
+                                </span>
+                            @endif
+                            
+                        </div>
 
 
+                        <div class="email profile-margin">
+                            <button><i class="fa fa-user"></i>{{tr('user')}}</button>
+                            @if(Auth::user()->user_type) 
+                                <span class="inner-btn" style="background-color:#2f922f;color:white">
+                                    <strong>Premium</strong>
+                                </span> 
+                            @else 
+                                <span class="inner-btn" style="background-color:#e40d0d;color:white">
+                                    <strong>Normal</strong>
+                                </span> 
+                            @endif
+                        </div>
 
+                        @if(Auth::user()->user_type) 
+                            <div class="email profile-margin">
+                                <!-- <button><i class="fa fa-user"></i>{{tr('remaning_days')}}</button> -->
+                                <span class="btn btn-info">
+                                    <strong>{{tr('no_of_days_expiry')}} {{get_expiry_days(Auth::user()->id)}} days</strong>
+                                </span> 
+                            </div>
+                        @endif
 
- 			 
- 		</div><!-- col-md-12 -->  
- 	</div><!-- p-acc -->
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- End single post description -->
+    </div><!-- end left side content area -->
+
+</div>
+
+<!--end left-sidebar row-->
 
 @endsection

@@ -169,13 +169,17 @@ class UserController extends Controller {
 
     public function getVideosByCategory($id)
     {
-        $category = Category::where('name', $id)
-            ->orWhere('name', str_replace('-', ' ', $id))
-            ->firstOrFail();
+        //#testing
+        if($id == '0'){
+            $videos = AdminVideo::with('videoimage')
+                ->orderBy('id', 'desc')->get();
+        }else{
+            $category = Category::where('id',$id)->firstOrFail();
+            $videos = AdminVideo::with('videoimage')
+                ->where('category_id', $category->id)
+                ->orderBy('id', 'desc')->get();
+        }
 
-        $videos = AdminVideo::with('videoimage')
-            ->where('category_id', $category->id)
-            ->orderBy('id', 'desc')->get();
 
         $lastVideos = [];
         $allCategories = Category::all();
@@ -188,12 +192,14 @@ class UserController extends Controller {
             }
         }
 
-        return view('user.home-video')
+        return view('r.chunks._filter_results')
+            ->with('id',$id)
             ->with('page' , 'Videos by tag')
             ->with('subPage' , 'Videos by tag')
             ->with('categories' , $categories)
             ->with('videos_by_cat' , $lastVideos)
-            ->with('videos', $videos);
+            ->with('videos', $videos)
+            ->render();
     }
 
     public function vimeoVideo()

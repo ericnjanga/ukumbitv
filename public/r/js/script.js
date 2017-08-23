@@ -1,6 +1,14 @@
 /**
  * Created by admin on 15.08.2017.
  */
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+
+
 /***********slider*************/
 $('.video-slider-block').slick({
     dots: false,
@@ -119,6 +127,7 @@ function GoogleMenu(selector) {
     $items = $($container).find('.menu-items>li');
     $current = false;
     $currentActive = false;
+    $resultsContainer = $('.js-filter-results');
 
     var hideElements = function () {
         $container.find('.menu-items>li').not($current).css('width',0);
@@ -126,7 +135,7 @@ function GoogleMenu(selector) {
 
     var showElements = function () {
        $container.find('.menu-items>li').not($current).css('width','170px');
-    }
+    };
 
     var slideDownElements = function () {
         $container.find('.menu-items>li').not($current).stop().animate({width:0},500,function () {
@@ -150,6 +159,7 @@ function GoogleMenu(selector) {
     };
 
     var changeActive = function () {
+
         if($current.find('.sub-menu').length>0){
             hideElements();
             $current.css({'position':'absolute',top:$current.position().top}).animate({top:0},500,function () {
@@ -159,7 +169,7 @@ function GoogleMenu(selector) {
             });
 
         }else {
-            hideElements()
+            hideElements();
             var $activeClone = $currentActive.clone().removeClass('active');
             var offset_top = $current.position().top;
 
@@ -181,6 +191,13 @@ function GoogleMenu(selector) {
 
     };
 
+    var loadFilteredResults = function () {
+        var href = $current.find('> a').attr('href');
+        $.get(href,function (data) {
+            $resultsContainer.html(data);
+        })
+    };
+
     $(document).on('click','.menu-items>li',function () {
         if($(this).hasClass('active')){
             return false;
@@ -193,6 +210,8 @@ function GoogleMenu(selector) {
         $('.sub-menu:visible').css('display','none');
         $currentActive = $($itemsContainer).find('.active');
         $current = $(this);
+
+        loadFilteredResults();
         changeActive();
         return false;
     });
@@ -215,5 +234,6 @@ function GoogleMenu(selector) {
 }
 
 GoogleMenu('.menu-container');
-// $(".video-item").colorbox({});
-// $(".popup").colorbox({inline:true, href:"#myForm"});
+
+
+$('.menu-container')
