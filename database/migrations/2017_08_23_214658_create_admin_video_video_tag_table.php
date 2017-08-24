@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActorsTable extends Migration
+class CreateAdminVideoVideoTagTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class CreateActorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('actors', function (Blueprint $table) {
+        Schema::create('admin_video_video_tag', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('bio');
+            $table->integer('video_tag_id');
+            $table->integer('admin_video_id');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateActorsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('actors');
+        Schema::drop('admin_video_video_tag');
     }
 }

@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{asset('r/css/media.css')}}">
     <link rel="stylesheet" href="{{asset('packages/sweetalert/sweetalert.css')}}">
     {{--<link rel="stylesheet" href="{{asset('r/css/less.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('r/css/passfield.min.css')}}">
     <link>
 </head>
 <body>
@@ -29,6 +30,7 @@
     @yield('scripts')
 </body>
     <script type="text/javascript" src="{{asset('r/js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('r/js/passfield.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('r/js/slick.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('r/js/jquery.colorbox-min.js')}}"></script>
     <script type="text/javascript" src="{{asset('r/js/script.js')}}"></script>

@@ -1,6 +1,7 @@
 /**
  * Created by admin on 15.08.2017.
  */
+/***********slider*************/
 $('.video-slider-block').slick({
     dots: false,
     infinite: false,
@@ -31,7 +32,7 @@ $('.video-slider-block').slick({
         }
     ]
 });
-
+/*********series**slider*************/
 $('.series-list-slider').slick({
     dots: false,
     infinite: false,
@@ -62,130 +63,7 @@ $('.series-list-slider').slick({
         }
     ]
 });
-
-var link = $('.play-menu li a'),
-    expander = $('.show-entries-hover'),
-    container = $('.menu-container'),
-    pos1 = 0,
-    pos2 = "46px",
-    pos3 = "92px",
-    pos4 = "138px",
-    pos5 = "184px",
-    pos6 = "230px",
-    left = "-200px"
-storeColor = "#444",
-    appsColor = "#B3C833",
-    moviesColor = "#CE5043",
-    musicColor = "#FB8521",
-    booksColor = "#1AA1E1",
-    devicesColor = "#658092";
-
-// Initialization, start positions
-$('li#store').css('top', pos1);
-$('li#store .menu-entry-text').css({'background-color' : storeColor,'color' : 'white'});
-$('li#apps').css('top', pos2);
-$('li#movies').css('top', pos3);
-$('li#music').css('top', pos4);
-$('li#books').css('top', pos5);
-$('li#devices').css('top', pos6);
-
-// Click function standard
-link.each(function() {
-    $(this).on('click', function() {
-        // Remove Background-Color when i click on an unselected item
-        // Hiding is removed for debugging
-        link.not($(this)).parent().addClass('hide');
-        expander.removeClass('hidden');
-        link.not($(this)).children('.menu-entry-text').attr("style", "");
-        // Hide all menus except the right one
-        link.not($(this)).next('.sub-menu').css({'opacity' : 0}).addClass('index').removeClass('active');
-        $(this).next('.sub-menu').css({'opacity' : 1}).addClass('active');
-
-        // Changing Background-Color and Position
-        // "Store"
-        // This also resets all menu entries to their initial order
-        if ($(this).children().hasClass('store')) {
-            $(this).children('.menu-entry-text').css({'background-color' : storeColor,'color' : 'white'});
-            $(this).parent().css('top', pos1).removeClass('hide');
-            $('#apps').css('top', pos2);
-            $('#movies').css('top', pos3);
-            $('#music').css('top', pos4);
-            $('#books').css('top', pos5);
-            $('#devices').css('top', pos6);
-            $('li').removeClass('hide');
-        }
-        // "Apps"
-        else if ($(this).children().hasClass('apps')) {
-            $(this).children('.menu-entry-text').css({'background-color' : appsColor,'color' : 'white'});
-            $(this).parent().css('top', pos1).removeClass('hide');
-            $('#store').css('top', pos6);
-            $('#movies').css('top', pos2);
-            $('#music').css('top', pos3);
-            $('#books').css('top', pos4);
-            $('#devices').css('top', pos5);
-            $('.hide').css({'left': left, 'opacity' : 0, 'transition' : 'all 0s', '-webkit-transition' : 'all 0s', '-moz-transition' : 'all 0s' });
-        }
-        // "Movies"
-        else if ($(this).children().hasClass('movies')) {
-            $(this).children('.menu-entry-text').css({'background-color' : moviesColor,'color' : 'white'});
-            $(this).parent().css('top', pos1).removeClass('hide');
-            $('#store').css('top', pos6);
-            $('#apps').css('top', pos2);
-            $('#music').css('top', pos3);
-            $('#books').css('top', pos4);
-            $('#devices').css('top', pos5);
-            $('.hide').css({'left': left, 'opacity' : 0, 'transition' : 'all 0s', '-webkit-transition' : 'all 0s', '-moz-transition' : 'all 0s' });
-        }
-        // "Music"
-        else if ($(this).children().hasClass('music')) {
-            $(this).children('.menu-entry-text').css({'background-color' : musicColor,'color' : 'white'});
-            $(this).parent().css('top', pos1).removeClass('hide');
-            $('#store').css('top', pos6);
-            $('#apps').css('top', pos2);
-            $('#movies').css('top', pos3);
-            $('#books').css('top', pos4);
-            $('#devices').css('top', pos5);
-            $('.hide').css({'left': left, 'opacity' : 0, 'transition' : 'all 0s', '-webkit-transition' : 'all 0s', '-moz-transition' : 'all 0s' });
-        }
-        // "Books"
-        else if ($(this).children().hasClass('books')) {
-            $(this).children('.menu-entry-text').css({'background-color' : booksColor,'color' : 'white'});
-            $(this).parent().css('top', pos1).removeClass('hide');
-            $('#store').css('top', pos6);
-            $('#apps').css('top', pos2);
-            $('#movies').css('top', pos3);
-            $('#music').css('top', pos4);
-            $('#devices').css('top', pos5);
-            $('.hide').css({'left': left, 'opacity' : 0, 'transition' : 'all 0s', '-webkit-transition' : 'all 0s', '-moz-transition' : 'all 0s' });
-        }
-        // "Devices"
-        else if ($(this).children().hasClass('devices')) {
-            $(this).children('.menu-entry-text').css({'background-color' : devicesColor,'color' : 'white'});
-            $(this).parent().css('top', pos1).removeClass('hide');
-            $('#store').css('top', pos6);
-            $('#apps').css('top', pos2);
-            $('#movies').css('top', pos3);
-            $('#music').css('top', pos4);
-            $('#books').css('top', pos5);
-            $('.hide').css({'left': left, 'opacity' : 0, 'transition' : 'all 0s', '-webkit-transition' : 'all 0s', '-moz-transition' : 'all 0s' });
-        }
-        return false;
-    });
-});
-
-// Hide menu when you leave the menu container
-container.on('mouseleave', function() {
-    $('.hide').css({'left': left, 'opacity' : 0, 'transition' : '', '-webkit-transition' : '', '-moz-transition' : ''});
-    $('.sub-menu').removeClass('index');
-})
-
-// Show the menu when you hover the trigger
-expander.on('mouseover', function() {
-    $('.hide').css({'left': 0, 'opacity' : 1, 'transition' : '', '-webkit-transition' : '', '-moz-transition' : ''});
-    $('.sub-menu').addClass('index');
-});
-
-
+/*********video**popup*************/
 if ($(window).width() > 1199) {
     $(".cb-video").colorbox({iframe:true,width:'90%',height:'80%'});
 } else if ($(window).width() > 991) {
@@ -206,3 +84,136 @@ $("#payinfo").click(function () {
     $(this).toggleClass("open");
     return false;
 })
+/**************change**password**button*********/
+$("#change-pas").click(function () {
+  $('.change-pas-block').slideToggle(300)
+                        .toggleClass("open");
+  $(this).toggleClass("open");
+
+})
+/**************search****button*********/
+$("#butn-search").click(function(){
+   if(window.innerWidth<767){
+       if($(".search-wrap").hasClass('open') && $(".search-wrap").find('input').val()){
+       }else {
+           $(".search-wrap").toggleClass("open");
+           $(".login-block").toggleClass("open");
+           return false;
+       }
+   }
+});
+/**************show**password**button*********/
+$(".mypass").passField({ /*options*/ });
+/**************menu**mobile**button*********/
+$(document).on("click", ".butn-menu", function () {
+  $('.menu-block').slideToggle();
+  $(this).toggleClass("open");
+  $('.menu-block').toggleClass('open');
+})
+/************aside**menu***********/
+function GoogleMenu(selector) {
+    $container = $(selector);
+    $($container).css('height',$($container).height()+'px');
+    $toggler = $($container).find('.show-on-hover');
+    $itemsContainer = $($container).find('.menu-items');
+    $items = $($container).find('.menu-items>li');
+    $current = false;
+    $currentActive = false;
+
+    var hideElements = function () {
+        $container.find('.menu-items>li').not($current).css('width',0);
+    };
+
+    var showElements = function () {
+       $container.find('.menu-items>li').not($current).css('width','170px');
+    }
+
+    var slideDownElements = function () {
+        $container.find('.menu-items>li').not($current).stop().animate({width:0},500,function () {
+
+        });
+    };
+
+    var slideUpElements = function () {
+
+        $container.find('.menu-items>li').not($current).stop().animate({width:$container.width()},500,function () {
+        });
+    };
+
+    var showSubmenu = function () {
+        $subMenu = $current.find('.sub-menu');
+        if($subMenu.length < 1){
+            return false
+        }
+        $subMenu = $subMenu[0];
+        $($subMenu).slideDown();
+    };
+
+    var changeActive = function () {
+        if($current.find('.sub-menu').length>0){
+            hideElements();
+            $current.css({'position':'absolute',top:$current.position().top}).animate({top:0},500,function () {
+                $(this).addClass('active').removeAttr('style');
+                $currentActive.removeClass('active');
+                showSubmenu();
+            });
+
+        }else {
+            hideElements()
+            var $activeClone = $currentActive.clone().removeClass('active');
+            var offset_top = $current.position().top;
+
+            $currentActive.stop().animate({top:offset_top},500,function () {
+                $(this).remove();
+                var $before_elem = $current.next();
+                if(!$before_elem.length){
+                    $($activeClone).insertAfter($current.prev());
+                }else {
+                    $($activeClone).insertBefore($before_elem);
+                }
+                showElements();
+            });
+
+            $current.css({'position':'absolute',top:$current.position().top}).animate({top:0},500,function () {
+                $(this).addClass('active').removeAttr('style');
+            });
+        }
+
+    };
+
+    $(document).on('click','.menu-items>li',function () {
+        if($(this).hasClass('active')){
+            return false;
+        }
+
+        if($($container).find(':animated').length>0){
+            return false
+        }
+
+        $('.sub-menu:visible').css('display','none');
+        $currentActive = $($itemsContainer).find('.active');
+        $current = $(this);
+        changeActive();
+        return false;
+    });
+
+
+
+    $(document).on('mouseenter','.show-on-hover',function () {
+        if($($container).find(':animated').length>0){
+            return false
+        }
+        slideUpElements();
+    }).on('mouseleave','.menu-container',function () {
+        if($($container).find(':animated').length>0){
+            return false
+        }
+        if($('.active').find('.sub-menu').length > 0){
+            slideDownElements();
+        }
+    });
+}
+
+GoogleMenu('.menu-container');
+// $(".video-item").colorbox({});
+// $(".popup").colorbox({inline:true, href:"#myForm"});

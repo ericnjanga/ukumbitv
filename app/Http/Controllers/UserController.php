@@ -10,6 +10,8 @@ use App\PaymentPlan;
 use App\UserHistory;
 use App\UserPayment;
 use App\Videoimage;
+use App\VideoTag;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -62,7 +64,6 @@ class UserController extends Controller {
 //        $this->middleware('auth', ['except' => ['watchVideo', 'index','single_video','all_categories' ,'category_videos' , 'sub_category_videos' , 'contact','trending']]);
         $this->middleware('auth', ['except' => ['index','contact']]);
     }
-
 
 
     public function account()
@@ -236,6 +237,31 @@ class UserController extends Controller {
         return true;
     }
 
+    public function getRelatedVideos($video)
+    {
+//        $videos = $video->videoTags;
+        $tags = $video->videoTags;
+        $collection = new Collection;
+        foreach ($tags as $tag) {
+            $collection->push($tag->adminVideos);
+        }
+        $collection2 = new Collection;
+        foreach ($collection as $item) {
+            foreach ($item as $value) {
+                $collection2 = $value->with('comments.user', 'videoimage', 'category', 'likes')->get();
+            }
+        }
+
+        $unique = $collection2->unique('watchid');
+
+        $keyed = $unique->keyBy('watchid');
+
+        $keyed->forget($video->watchid);
+
+//        dd($keyed);
+
+        return $keyed;
+    }
 
     public function watchVideo($id)
     {
@@ -246,6 +272,8 @@ class UserController extends Controller {
         $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
 
 
+
+
         $checkTrial = $this->checkTrial($video->id);
         if(!$checkTrial){
             $payPlans = PaymentPlan::all();
@@ -253,8 +281,9 @@ class UserController extends Controller {
                 ->with('payment_plans', $payPlans);
         }
 
+        $relatedVideos = $this->getRelatedVideos($video);
 
-        $videos = AdminVideo::all();
+
         $images = Videoimage::where('admin_video_id', $video->id)->first();
         if ($images == null)
         {
@@ -277,28 +306,31 @@ class UserController extends Controller {
 
 //        $categories = get_categories();
 
-        $actorIds = $video->actors;
-        $actorIds = explode(',', $actorIds);
-        $actors = [];
-        foreach($actorIds as $actorId){
-            $act = Actor::find($actorId);
-            array_push($actors, $act->name);
-        }
-
-        $directorIds = $video->directors;
-        $directorIds = explode(',', $directorIds);
-        $directors = [];
-        foreach($directorIds as $directorId){
-            $act = Director::find($directorId);
-            array_push($directors, $act->name);
-        }
 
         $likes = Like::where('admin_video_id', $video->id)->where('type', 'like')->get();
         $disLikes = Like::where('admin_video_id', $video->id)->where('type', 'dislike')->get();
         $checkLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'like')->first();
         $checkDisLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'dislike')->first();
 
-        $tags = explode(',', $video->tags);
+
+        $tags = [];
+        foreach($video->videoTags as $tag) {
+            array_push($tags, $tag->name);
+        }
+        $tags = implode(', ', $tags);
+
+        $actors = [];
+        foreach($video->videoActors as $actor) {
+            array_push($actors, $actor->name);
+        }
+        $actors = implode(', ', $actors);
+
+        $directors = [];
+        foreach($video->videoDirectors as $director) {
+            array_push($directors, $director->name);
+        }
+        $directors = implode(', ', $directors);
+
 
         return view('r.user.single-video')
 //            ->with('trailer_video' , $trailer_video)
@@ -314,6 +346,7 @@ class UserController extends Controller {
             ->with('checkLike', $checkLike)
             ->with('checkDisLike', $checkDisLike)
             ->with('tags', $tags)
+            ->with('relatedVideos', $relatedVideos)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))
             ->with('directors', $directors);
@@ -1245,4 +1278,5 @@ class UserController extends Controller {
 
         return 'ERROR';
     }
+
 }

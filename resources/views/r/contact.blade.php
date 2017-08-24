@@ -2,9 +2,8 @@
 @section('content')
     <div class="contact-wrap">
         <div class="container">
-            <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-sm-4">
+                    <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
                         <div class="contact-block">
                             <div class="title-page">Contact us</div>
                             <div class="text-add"><p>Fill free to ask questions</p> We will do our best respond or contact you back within the next 24 hours</div>
@@ -24,7 +23,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-sm-7">
+                    <div class="col-sm-12 col-md-12 col-lg-9 col-xl-7">
                         <div class="contact-form">
                             <div class="title-form">Enter your message</div>
                             <form action="" method="">
@@ -52,7 +51,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 @endsection

@@ -12,7 +12,7 @@ class Comment extends Model
 
 //    protected $appends = ['userAvatar'];
 
-    public function admin_video()
+    public function adminVideo()
     {
         return $this->belongsTo('App\AdminVideo');
     }
