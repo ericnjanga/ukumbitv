@@ -733,8 +733,8 @@ We produce and promote movies, Tv Shows, web series, documentaries and animated 
 
   //--SEO text section ..
   'home_seotext_title' => 'Our Mission',
-  'home_seotext_blurb' => '<b>Ukumbi</b> wants to rebrand the African cinema as a dynamic, culturally rich and entertaining cinema to the world audience.
-For this, we are teaming up with young, talented and bold movie producers, screenwriters, actors and artists to create a new wave of exceptional African content.
+  'home_seotext_blurb' => '<p><b>Ukumbi</b> wants to rebrand the African cinema as a dynamic, culturally rich and entertaining cinema to the world audience.
+For this, we are teaming up with young, talented and bold movie producers, screenwriters, actors and artists to create a new wave of exceptional African content.</p>
 <p>But we believe African stories, without the perspective of other people from African descent would be incomplete, that\'s why we are actively collaborating with cinema professionals from the caribbean, the Americas and Europe to create the <b>360 degrees African cinema experience</b>.
 And to insure en exceptional delivery all this unique experience, we have created <b>UkumbiTV</b>, a platform which aims to be among the best content streaming platforms in the world.</p>
 
