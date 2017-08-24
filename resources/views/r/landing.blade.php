@@ -103,19 +103,12 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-10 col-lg-7 col-xl-6">
-                        <div class="title-text">{{l("Seo text")}}</div>
+                        <div class="title-text">{{trans('messages.home_seotext_title')}}</div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-11 col-lg-9 col-xl-8">
-                        <p>Scarlett Johansson stars in the visually stunning Ghost in the Shell, an action-packed
-                            adventure set in a future world where people are enhanced with technology. Believing she was
-                            rescued from near death, Major (Johansson) becomes the first of her kind: a human mind
-                            inside an artificial body designed to fight the war against cyber-crime. While investigating
-                            a dangerous criminal, Major makes a shocking discovery – the corporation that created her
-                            lied about her past life in order to control her. Unsure what to believe, Major will stop at
-                            nothing to unravel the mystery of her true identity and exact revenge against the
-                            corporation she was built to serve.</p>
+                        {{trans('messages.home_seotext_blurb')}}
                     </div>
                 </div>
             </div>
