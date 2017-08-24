@@ -108,7 +108,7 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-11 col-lg-9 col-xl-8">
-                        {{trans('messages.home_seotext_blurb')}}
+                        {!!trans('messages.home_seotext_blurb')!!}
                     </div>
                 </div>
             </div>

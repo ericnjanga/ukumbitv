@@ -18,8 +18,8 @@
             </div>
             <div class="row align-items-end">
                 <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xl-5 offset-xl-1">
-                    <div class="title-white">{{l("Watch great videos")}}</div>
-                    <div class="title-white-add upper">{{l("Watch anywhere. enjoy your time")}}</div>
+                    <div class="title-white">{{l("Enjoy the finest African productions")}}</div>
+                    <div class="title-white-add upper">{{l("Unlimited high-definition videos at your fingertips")}}</div>
                     <div>
                         <a href="{{route('user.register.form')}}" class="butn butn-orange butn-large">{{l("Watch 10 videos for free")}}</a>
                     </div>
