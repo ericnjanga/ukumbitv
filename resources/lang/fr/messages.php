@@ -687,6 +687,12 @@ return array(
   'plan_details' => 'Détails du plan',
   'change_plan' => 'Changer le plan',
 
+  //HOME PAGE ...
+
+  //--Call to ation ..
+  'home_cta' => 'Essayez UkumbiTV gratuitement',
+
+  //--middle section ..
   'home_midsec_title1' => 'Les meilleures productions',
   'home_midsec_blurb1' => 'Découvrez des films audacieux et passionnants de talentueux jeunes producteurs africains qui ont déplacé des centaines de milliers de Youtubers à travers des montagnes russes de larmes et de rires avec leur style de direction peu conventionnel et sans remords.
 Nous produisons et promouvons des films, des spectacles de télévision, des séries Web, des documentaires et des films d\'animation.',
@@ -695,6 +701,18 @@ Nous produisons et promouvons des films, des spectacles de télévision, des sé
 Découvrez notre contenu incroyable sur n\'importe quel appareil de votre choix (smartphone, tablette ou bureau) et profitez de la même expérience. Téléchargez votre vidéo préférée pour regarder en mode hors connexion. Participez, commentez et partagez votre expérience avec vos amis.',
   'home_midsec_title3' => 'Great video quality & experience',
   'home_midsec_blurb3' => 'Watch videos on High Definition, experience the ease to search and find your favorite content, receive movie suggestions based on your preferences, stay up to date with latest african shows and be the first to watch them.',
+
+  //--plans section ..
+  'home_plansec_title' => 'Choisissez votre expérience',
+
+  //--SEO text section ..
+  'home_seotext_title' => 'Our Mission',
+  'home_seotext_blurb' => '<b>Ukumbi</b> wants to rebrand the African cinema as a dynamic, culturally rich and entertaining cinema to the world audience.
+For this, we are teaming up with young, talented and bold movie producers, screenwriters, actors and artists to create a new wave of exceptional African content.
+<p>But we believe African stories, without the perspective of other people from African descent would be incomplete, that\'s why we are actively collaborating with cinema professionals from the caribbean, the Americas and Europe to create the <b>360 degrees African cinema experience</b>.
+And to insure en exceptional delivery all this unique experience, we have created <b>UkumbiTV</b>, a platform which aims to be among the best content streaming platforms in the world.</p>
+
+<p>This is how UkumbiTV is going to rebrand the African cinema, this is how UkumbiTV will redefine the African quality!</p>',
 
 
 );

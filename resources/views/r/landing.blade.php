@@ -28,13 +28,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
 
         <div class="price-wrap">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-sm-8">
-                        <div class="title-text">{{l("Pick your price")}}</div>
+                        <div class="title-text">{{trans('messages.home_plansec_title')}}</div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -92,7 +92,7 @@
                                 {{--<div class="price"><span>$</span> 7</div>--}}
                                 {{--</div>--}}
                             </div>
-                            <a href="{{route('user.register.form')}}" class="butn butn-orange-white butn-large">{{l("Watch 10 videos for free")}}</a>
+                            <a href="{{route('user.register.form')}}" class="butn butn-orange-white butn-large">{{trans('messages.home_cta')}}</a>
                         </div>
                     </div>
                 </div>
