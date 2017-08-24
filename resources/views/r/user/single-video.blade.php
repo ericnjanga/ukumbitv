@@ -208,25 +208,26 @@
                         <div class="title">Similar Videos</div>
                         <div class="video-slider-block-wrap">
                             <div class="video-slider-block">
-                                {{--@foreach($similarVideos as $similarVideo)--}}
-                                        {{--<div class="video-item-block">--}}
-                                            {{--<div class="video-item">--}}
-                                                {{--<a href="{{route('user.singleVideo',$similarVideo->watchid)}}">--}}
-                                                    {{--<div class="video-img">--}}
-                                                        {{--<img src="{{$similarVideo->videoimage->imgSmall1}}" alt="">--}}
-                                                    {{--</div>--}}
-                                                    {{--<div class="video-title ellipsis-gradient">--}}
-                                                        {{--{{$similarVideo->title}}--}}
-                                                    {{--</div>--}}
-                                                {{--</a>--}}
-                                                {{--<div class="video-info">--}}
-                                                    {{--<div class="video-genre">{{$similarVideo->category->name}}</div>--}}
-                                                    {{--<div class="butn-like"><span class="icon icon-thumbs-up"></span>25--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                {{--@endforeach--}}
+                                @foreach($relatedVideos as $relatedVideo)
+                                        <div class="video-item-block">
+                                            <div class="video-item">
+                                                <a href="{{route('user.singleVideo',$relatedVideo->watchid)}}">
+                                                    <div class="video-img">
+                                                        <img src="{{$relatedVideo->videoimage->imgSmall1}}" alt="">
+                                                    </div>
+                                                    <div class="video-title ellipsis-gradient">
+                                                        {{$relatedVideo->title}}
+                                                    </div>
+                                                </a>
+                                                <div class="video-info">
+                                                    <div class="video-genre">{{$relatedVideo->category->name}}</div>
+                                                    <div class="butn-like"><span class="icon icon-thumbs-up"></span>
+                                                        {{count($relatedVideo->likes)}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>

@@ -10,6 +10,8 @@ use App\PaymentPlan;
 use App\UserHistory;
 use App\UserPayment;
 use App\Videoimage;
+use App\VideoTag;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -235,6 +237,31 @@ class UserController extends Controller {
         return true;
     }
 
+    public function getRelatedVideos($video)
+    {
+//        $videos = $video->videoTags;
+        $tags = $video->videoTags;
+        $collection = new Collection;
+        foreach ($tags as $tag) {
+            $collection->push($tag->adminVideos);
+        }
+        $collection2 = new Collection;
+        foreach ($collection as $item) {
+            foreach ($item as $value) {
+                $collection2 = $value->with('comments.user', 'videoimage', 'category', 'likes')->get();
+            }
+        }
+
+        $unique = $collection2->unique('watchid');
+
+        $keyed = $unique->keyBy('watchid');
+
+        $keyed->forget($video->watchid);
+
+//        dd($keyed);
+
+        return $keyed;
+    }
 
     public function watchVideo($id)
     {
@@ -245,6 +272,8 @@ class UserController extends Controller {
         $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
 
 
+
+
         $checkTrial = $this->checkTrial($video->id);
         if(!$checkTrial){
             $payPlans = PaymentPlan::all();
@@ -252,6 +281,7 @@ class UserController extends Controller {
                 ->with('payment_plans', $payPlans);
         }
 
+        $relatedVideos = $this->getRelatedVideos($video);
 
 
         $images = Videoimage::where('admin_video_id', $video->id)->first();
@@ -316,7 +346,7 @@ class UserController extends Controller {
             ->with('checkLike', $checkLike)
             ->with('checkDisLike', $checkDisLike)
             ->with('tags', $tags)
-//            ->with('similarVideos', $similarVideos)
+            ->with('relatedVideos', $relatedVideos)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))
             ->with('directors', $directors);
