@@ -263,16 +263,18 @@ class UserController extends Controller {
 
         $keyed->forget($video->watchid);
 
-//        if ($keyed->count() < 15) {
-//            $random = $keyed->random($keyed->count());
-//        } else {
-//            $random = $keyed->random(15);
-//        }
+        if ($keyed->count() < 15) {
+            $random = $keyed->random($keyed->count());
+        } elseif ($keyed->count() == 0) {
+            $random = [];
+        } else {
+            $random = $keyed->random(15);
+        }
 
 
 //        dd($keyed);
 
-        return $keyed;
+        return $random;
     }
 
     public function watchVideo($id)
