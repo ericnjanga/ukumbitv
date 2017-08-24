@@ -90,7 +90,8 @@
                                                 </div>
                                                 <div class="video-info">
                                                     <div class="video-genre">Drama</div>
-                                                    <div class="butn-like"><span class="icon icon-thumbs-up"></span>125
+                                                    <div class="butn-like"><span class="icon icon-thumbs-up"></span>
+                                                        125
                                                     </div>
                                                     <div class="butn-dis"><span
                                                                 class="icon icon-thumbs-down-hand"></span>19

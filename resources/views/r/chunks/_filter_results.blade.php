@@ -12,7 +12,8 @@
                 </a>
                 <div class="video-info">
                     <div class="video-genre">Drama</div>
-                    <div class="butn-like"><span class="icon icon-thumbs-up"></span>25
+                    <div class="butn-like"><span class="icon icon-thumbs-up"></span>
+                        <span class="likes-count">25</span>
                     </div>
                 </div>
             </div>

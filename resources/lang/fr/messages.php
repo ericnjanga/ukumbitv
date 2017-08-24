@@ -271,6 +271,7 @@ return array(
 	'trending_videos' => 'Trending Videos',
 	'all_videos' => 'All Videos',
 	'suggestions' => 'Suggestions',
+    'empty_my_list'=>'No video added to list1',
 
 	// Search
 

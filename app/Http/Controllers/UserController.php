@@ -111,7 +111,6 @@ class UserController extends Controller {
             $categories = get_categories();
 
             $videos = AdminVideo::with('videoimage')->with('category')->orderBy('id', 'desc')->limit(15)->get();
-            //dd($videos);
 
             $lastVideos = [];
             $allCategories = Category::all();
@@ -122,7 +121,6 @@ class UserController extends Controller {
                     array_push($lastVideos, $v);
                     }
             }
-
 
             return view('r.user.home-video')
                         ->with('page' , 'home')
