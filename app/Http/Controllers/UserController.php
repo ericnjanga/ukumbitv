@@ -226,7 +226,7 @@ class UserController extends Controller {
                 }
             }
 
-            if(count($histories) < 3){
+            if(count($histories) < 10){
                 return true;
             }
 
@@ -243,14 +243,19 @@ class UserController extends Controller {
         $tags = $video->videoTags;
         $collection = new Collection;
         foreach ($tags as $tag) {
-            $collection->push($tag->adminVideos);
+            $collection->push($tag->adminVideos()->with('videoimage', 'category', 'likes')->get());
         }
+
+//       dd($collection);
+
         $collection2 = new Collection;
+
         foreach ($collection as $item) {
             foreach ($item as $value) {
-                $collection2 = $value->with('comments.user', 'videoimage', 'category', 'likes')->get();
+                $collection2->push($value);
             }
         }
+
 
         $unique = $collection2->unique('watchid');
 
@@ -258,9 +263,16 @@ class UserController extends Controller {
 
         $keyed->forget($video->watchid);
 
+        if ($keyed->count() < 15) {
+            $random = $keyed->random($keyed->count());
+        } else {
+            $random = $keyed->random(15);
+        }
+
+
 //        dd($keyed);
 
-        return $keyed;
+        return $random;
     }
 
     public function watchVideo($id)
