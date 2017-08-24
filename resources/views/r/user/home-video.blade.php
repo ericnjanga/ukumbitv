@@ -52,7 +52,7 @@
                                             </a>
                                             <div class="video-info">
                                                 <div class="video-genre">{{$video->category->name}}</div>
-                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>25</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>{{count($video->likes)}}</div>
                                             </div>
                                         </div>
                                     </div>
