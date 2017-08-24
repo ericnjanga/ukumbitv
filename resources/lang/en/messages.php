@@ -713,5 +713,10 @@ return array(
   'plan_details' => 'Plan Details',
   'change_plan' => 'Change Plan',
 
-  'home_middlesection_text1' => '**The finest productions',
+  'home_midsec_title1' => '**The finest productions',
+  'home_midsec_blurb1' => '**The finest productions',
+  'home_midsec_title2' => '**The finest productions',
+  'home_midsec_blurb2' => '**The finest productions',
+  'home_midsec_title3' => '**The finest productions',
+  'home_midsec_blurb3' => '**The finest productions',
 );
