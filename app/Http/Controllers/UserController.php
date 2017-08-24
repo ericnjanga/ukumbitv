@@ -111,7 +111,7 @@ class UserController extends Controller {
             $suggestions  = Helper::suggestion_videos(WEB);
             $categories = get_categories();
 
-            $videos = AdminVideo::with('videoimage')->with('category')->orderBy('id', 'desc')->limit(15)->get();
+            $videos = AdminVideo::with('videoimage', 'likes')->with('category')->orderBy('id', 'desc')->limit(15)->get();
             //dd($videos);
 
             $lastVideos = [];
