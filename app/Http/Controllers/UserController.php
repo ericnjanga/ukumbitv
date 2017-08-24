@@ -265,8 +265,11 @@ class UserController extends Controller {
 
         if ($keyed->count() == 0) {
             $random = [];
-        } elseif ($keyed->count() < 15) {
-
+        }
+        elseif ($keyed->count() == 1) {
+            $random = $keyed;
+        }
+        elseif ($keyed->count() < 15) {
             $random = $keyed->random($keyed->count());
         } else {
             $random = $keyed->random(15);
