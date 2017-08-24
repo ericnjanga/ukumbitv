@@ -713,10 +713,12 @@ return array(
   'plan_details' => 'Plan Details',
   'change_plan' => 'Change Plan',
 
-  'home_midsec_title1' => '**The finest productions',
-  'home_midsec_blurb1' => '**The finest productions',
-  'home_midsec_title2' => '**The finest productions',
-  'home_midsec_blurb2' => '**The finest productions',
-  'home_midsec_title3' => '**The finest productions',
-  'home_midsec_blurb3' => '**The finest productions',
+  'home_midsec_title1' => 'The finest productions',
+  'home_midsec_blurb1' => 'Discover bold and exciting movies from talented young african producers who moved hundreds of thousands of Youtubers through roller coasters of tears and laughter with their unconventional, unapologetic directing style.
+We produce and promote movies, Tv Shows, web series, documentaries and animated movies.
+',
+  'home_midsec_title2' => 'The comfort & convenience',
+  'home_midsec_blurb2' => 'Experience our amazing content on any device of your choice (smartphone, tablet or desktop) and enjoy the same great experience. Download your favorite video to watch offline. Get involved, comment and share your experience with your friends.',
+  'home_midsec_title3' => 'Great video quality & experience',
+  'home_midsec_blurb3' => 'Watch videos on High Definition, experience the ease to search and find your favorite content, receive movie suggestions based on your preferences, stay up to date with latest african shows and be the first to watch them.',
 );
