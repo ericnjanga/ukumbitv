@@ -10,6 +10,8 @@ use App\PaymentPlan;
 use App\UserHistory;
 use App\UserPayment;
 use App\Videoimage;
+use App\VideoTag;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -64,7 +66,6 @@ class UserController extends Controller {
     }
 
 
-
     public function account()
     {
         return view('r.user.account');
@@ -110,7 +111,8 @@ class UserController extends Controller {
             $suggestions  = Helper::suggestion_videos(WEB);
             $categories = get_categories();
 
-            $videos = AdminVideo::with('videoimage')->with('category')->orderBy('id', 'desc')->limit(15)->get();
+            $videos = AdminVideo::with('videoimage', 'likes')->with('category')->orderBy('id', 'desc')->limit(15)->get();
+            //dd($videos);
 
             $lastVideos = [];
             $allCategories = Category::all();
@@ -229,7 +231,7 @@ class UserController extends Controller {
                 }
             }
 
-            if(count($histories) < 3){
+            if(count($histories) < 10){
                 return true;
             }
 
@@ -240,6 +242,49 @@ class UserController extends Controller {
         return true;
     }
 
+    public function getRelatedVideos($video)
+    {
+//        $videos = $video->videoTags;
+        $tags = $video->videoTags;
+        $collection = new Collection;
+        foreach ($tags as $tag) {
+            $collection->push($tag->adminVideos()->with('videoimage', 'category', 'likes')->get());
+        }
+
+//       dd($collection);
+
+        $collection2 = new Collection;
+
+        foreach ($collection as $item) {
+            foreach ($item as $value) {
+                $collection2->push($value);
+            }
+        }
+
+
+        $unique = $collection2->unique('watchid');
+
+        $keyed = $unique->keyBy('watchid');
+
+        $keyed->forget($video->watchid);
+
+        if ($keyed->count() == 0) {
+            $random = [];
+        }
+        elseif ($keyed->count() == 1) {
+            $random = $keyed;
+        }
+        elseif ($keyed->count() < 15) {
+            $random = $keyed->random($keyed->count());
+        } else {
+            $random = $keyed->random(15);
+        }
+
+
+//        dd($keyed);
+
+        return $random;
+    }
 
     public function watchVideo($id)
     {
@@ -250,6 +295,8 @@ class UserController extends Controller {
         $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
 
 
+
+
         $checkTrial = $this->checkTrial($video->id);
         if(!$checkTrial){
             $payPlans = PaymentPlan::all();
@@ -257,8 +304,9 @@ class UserController extends Controller {
                 ->with('payment_plans', $payPlans);
         }
 
+        $relatedVideos = $this->getRelatedVideos($video);
 
-        $videos = AdminVideo::all();
+
         $images = Videoimage::where('admin_video_id', $video->id)->first();
         if ($images == null)
         {
@@ -281,28 +329,31 @@ class UserController extends Controller {
 
 //        $categories = get_categories();
 
-        $actorIds = $video->actors;
-        $actorIds = explode(',', $actorIds);
-        $actors = [];
-        foreach($actorIds as $actorId){
-            $act = Actor::find($actorId);
-            array_push($actors, $act->name);
-        }
-
-        $directorIds = $video->directors;
-        $directorIds = explode(',', $directorIds);
-        $directors = [];
-        foreach($directorIds as $directorId){
-            $act = Director::find($directorId);
-            array_push($directors, $act->name);
-        }
 
         $likes = Like::where('admin_video_id', $video->id)->where('type', 'like')->get();
         $disLikes = Like::where('admin_video_id', $video->id)->where('type', 'dislike')->get();
         $checkLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'like')->first();
         $checkDisLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'dislike')->first();
 
-        $tags = explode(',', $video->tags);
+
+        $tags = [];
+        foreach($video->videoTags as $tag) {
+            array_push($tags, $tag->name);
+        }
+        $tags = implode(', ', $tags);
+
+        $actors = [];
+        foreach($video->videoActors as $actor) {
+            array_push($actors, $actor->name);
+        }
+        $actors = implode(', ', $actors);
+
+        $directors = [];
+        foreach($video->videoDirectors as $director) {
+            array_push($directors, $director->name);
+        }
+        $directors = implode(', ', $directors);
+
 
         return view('r.user.single-video')
 //            ->with('trailer_video' , $trailer_video)
@@ -318,6 +369,7 @@ class UserController extends Controller {
             ->with('checkLike', $checkLike)
             ->with('checkDisLike', $checkDisLike)
             ->with('tags', $tags)
+            ->with('relatedVideos', $relatedVideos)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))
             ->with('directors', $directors);
@@ -1249,4 +1301,5 @@ class UserController extends Controller {
 
         return 'ERROR';
     }
+
 }

@@ -497,7 +497,12 @@ Route::group([], function(){
     // Registration Routes...
     Route::get('register', 'Auth\AuthController@showRegistrationForm')->name('user.register.form');
 
+
     Route::post('register', 'Auth\AuthController@register')->name('user.register.post');
+
+    Route::get('confirm-email', 'Auth\AuthController@confirmEmailMsg')->name('user.confirm-email');
+    Route::get('resend-email/{id}', 'Auth\AuthController@resendVerifyEmail')->name('user.resend-confirm-email');
+
     
     Route::get('payment', 'UserController@payment')->name('user.userpayment');
 

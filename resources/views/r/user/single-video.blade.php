@@ -26,9 +26,7 @@
                                 <span class="age">16+</span>
                                 <span class="date" style="border:3px solid red;">{{$video->created_at->format('d M Y')}}</span>
                                 <span class="genre" style="border:3px solid green;">
-                                    @foreach($tags as $tag)
-                                        {{$tag}},
-                                        @endforeach
+                                    {{$tags}}
                                 </span>
                                 <div class="series-text">1 Season, 12 Series</div>
                             </div>
@@ -115,9 +113,7 @@
                             <div class="cast-credits-item">
                                 <div class="cast-credits-title">Actors</div>
                                 <p class="cast-credits-text">
-                                    @foreach($actors as $actor)
-                                        {{$actor}}, 
-                                        @endforeach
+                                    {{$actors}}
                                 </p>
                             </div>
                             {{--<div class="cast-credits-item">--}}
@@ -127,9 +123,7 @@
                             <div class="cast-credits-item">
                                 <div class="cast-credits-title">Director</div>
                                 <p class="cast-credits-text">
-                                    @foreach($directors as $director)
-                                      {{$director}}
-                                    @endforeach
+                                    {{$directors}}
                                 </p>
                             </div>
                             {{--<div class="cast-credits-item">--}}
@@ -196,42 +190,45 @@
 			                                    <img src="{{Auth::user()->picture}}" alt="">
 			                                </div>
 			                                <div class="comment-text-block">
-			                                    <div class="comment-name">{{Auth::user()->name}}</div>
+			                                    <div class="comment-name">
+                                                    @if(Auth::user()->name != '')
+                                                        {{Auth::user()->name}}
+                                                        @else
+                                                        {{Auth::user()->email}}
+                                                    @endif
+                                                </div>
 			                                </div>
                                     </div>
                                 </div><!-- comment-block -->
-                            <button class="butn butn-orange butn-large" onclick="sendComment()">Submit</button>
-                                  
-
                             </form>
+                            <button class="butn butn-orange butn-large" onclick="sendComment()">Submit</button>
+
                         </div>
                     </div>
                     <div class="video-slider-wrap">
                         <div class="title">Similar Videos</div>
                         <div class="video-slider-block-wrap">
                             <div class="video-slider-block">
-                                @for($g=1;$g<3;$g++)
-                                    @for($i=1;$i<6;$i++)
+                                @foreach($relatedVideos as $relatedVideo)
                                         <div class="video-item-block">
                                             <div class="video-item">
-                                                <a href="{{route('single-video',0)}}">
+                                                <a href="{{route('user.singleVideo',$relatedVideo->watchid)}}">
                                                     <div class="video-img">
-                                                        <img src="{{asset("r/img/video".$i.".png")}}" alt="">
+                                                        <img src="{{$relatedVideo->videoimage->imgSmall1}}" alt="">
                                                     </div>
-                                                    <div class="video-title ellipsis-gradient">Transformers: Revenge of
-                                                        the
-                                                        Fallen
+                                                    <div class="video-title ellipsis-gradient">
+                                                        {{$relatedVideo->title}}
                                                     </div>
                                                 </a>
                                                 <div class="video-info">
-                                                    <div class="video-genre">Drama</div>
-                                                    <div class="butn-like"><span class="icon icon-thumbs-up"></span>25
+                                                    <div class="video-genre">{{$relatedVideo->category->name}}</div>
+                                                    <div class="butn-like"><span class="icon icon-thumbs-up"></span>
+                                                        {{count($relatedVideo->likes)}}
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    @endfor
-                                @endfor
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -244,6 +241,10 @@
 @section('scripts')
     <script>
         function sendComment() {
+
+            if($('#comment-text').val() === '') {
+                swal("Hmm", "Need to write a review, try again pls", "error");
+            } else {
 
             var token = $('meta[name="csrf-token"]').attr('content');
             var fd = new FormData;
@@ -270,6 +271,8 @@
                     alert('error '+data);
                 }
             });
+
+            }
 
         }
 

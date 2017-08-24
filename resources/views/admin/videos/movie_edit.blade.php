@@ -33,31 +33,31 @@
 		            <ul class="list-inline" style="padding:0;">
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-movie" value="movie" checked> 
+		            			<input type="radio" name="video-type" id="video-type-movie" value="movie" @if($video->video_type == 'movie') checked @endif>
 		            			Movie
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshow"> 
+		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshow" @if($video->video_type == 'tvshow') checked @endif>
 		            			TvShow
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-webserie" value="webserie"> 
+		            			<input type="radio" name="video-type" id="video-type-webserie" value="webserie" @if($video->video_type == 'webserie') checked @endif>
 		            			Web Serie
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-documentary" value="documentary"> 
+		            			<input type="radio" name="video-type" id="video-type-documentary" value="documentary" @if($video->video_type == 'documentary') checked @endif>
 		            			Documentary
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-anime" value="anime"> 
+		            			<input type="radio" name="video-type" id="video-type-anime" value="anime" @if($video->video_type == 'anime') checked @endif>
 		            			Anime Movie
 		            		</label>
 		            	</li>
@@ -74,19 +74,19 @@
 		            <ul class="list-inline" style="padding:0;">
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-length" id="video-length-1" value="full" checked> 
+		            			<input type="radio" name="video-length" id="video-length-1" value="full" @if($video->length == 'full') checked @endif>
 		            			Full
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-length" id="video-length-2" value="medium"> 
+		            			<input type="radio" name="video-length" id="video-length-2" value="medium" @if($video->length == 'medium') checked @endif>
 		            			Medium
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-length" id="video-length-3" value="short"> 
+		            			<input type="radio" name="video-length" id="video-length-3" value="short" @if($video->length == 'short') checked @endif>
 		            			Short
 		            		</label>
 		            	</li> 
@@ -177,7 +177,7 @@
                         <!-- add tagging system here -->
                         <!-- add tagging system here -->
                         {{--<div style="min-height:100px; background-color: #E8F0FA;">--}}
-                        <input type="text" value="{{$video->tags}}" data-role="tagsinput" id="tags_id" class="form-control">
+                        <input type="text" value="{{$movieTags}}" data-role="tagsinput" id="tags_id" class="form-control">
                     {{--</div>--}}
                     <!-- add tagging system here -->
                         <!-- add tagging system here -->
@@ -207,7 +207,7 @@
 	                <label for="director" class="">Select The Director *</label> 
                   <select multiple required id="director" name="director_id" class="form-control" style="height:140px;">
                       @foreach($directors as $director)
-                          <option value="{{$director->id}}" @foreach($dirarr as $dira) @if($dira == $director->id) selected @endif @endforeach>{{$director->name}}</option>
+                          <option value="{{$director->id}}" @foreach($video->videoDirectors as $dir) @if($dir->id == $director->id) selected @endif @endforeach>{{$director->name}}</option>
                       @endforeach
                   </select>
 	              </div>
@@ -216,7 +216,7 @@
 	                <label for="actor" class="">Select actors *</label>
                   <select multiple required id="actor" name="actor_id" class="form-control" style="height:240px;">
                       @foreach($actors as $actor)
-                          <option value="{{$actor->id}}" @foreach($actArr as $act) @if($act == $actor->id) selected @endif @endforeach>{{$actor->name}}</option>
+                          <option value="{{$actor->id}}" @foreach($video->videoActors as $act) @if($act->id == $actor->id) selected @endif @endforeach>{{$actor->name}}</option>
                       @endforeach
                   </select>
 	              </div> 
@@ -424,6 +424,7 @@
             fd.append('id', $('#video_id').val());
             fd.append('video_country', $('#video-country').val());
             fd.append('video_type', $("input[name=video-type]:checked").val());
+            fd.append('video_length', $("input[name=video-length]:checked").val());
             fd.append('tags', tags);
             fd.append('vimeoid', $('#vimeoid').val());
             fd.append('producer', $('#producer').val());

@@ -172,7 +172,7 @@
                     <div class="row">
                         <div class="col-sm-5 offset-sm-1">
                             <div class="title-white">Watch great videos</div>
-                            <div class="title-white-add upper">Watch anywhere. enjoy your time</div>
+                            <div class="title-white-add upper">Unlimited high-definition videos at your fingertips</div>
                             <div>
                                 <a href="" class="butn butn-orange butn-large">Watch 10 videos for free</a>
                             </div>

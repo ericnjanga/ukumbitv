@@ -475,6 +475,7 @@
             fd.append('vimeoid', $('#vimeoid').val());
             fd.append('tags', tags);
             fd.append('video_type', $("input[name=video-type]:checked").val());
+            fd.append('video_length', $("input[name=video-length]:checked").val());
 
             //fd.append('images', dropImages.join(';'));
             var progressBar = $('#progressbar');
