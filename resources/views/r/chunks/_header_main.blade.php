@@ -21,7 +21,7 @@
                     <div class="title-white">{{l("Enjoy the finest African productions")}}</div>
                     <div class="title-white-add upper">{{l("Unlimited high-definition videos at your fingertips")}}</div>
                     <div>
-                        <a href="{{route('user.register.form')}}" class="butn butn-orange butn-large">{{l("Watch 10 videos for free")}}</a>
+                        <a href="{{route('user.register.form')}}" class="butn butn-orange butn-large">{{trans('messages.home_cta')}}</a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-md-2 col-lg-2 col-xl-1 offset-md-2 offset-lg-3">
