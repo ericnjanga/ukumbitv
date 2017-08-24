@@ -3,13 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Actor;
+use App\AdminVideoVideoActor;
+use App\AdminVideoVideoDirector;
+use App\AdminVideoVideoTag;
 use App\Director;
 use App\Lang;
 use App\MovieProducer;
 use App\PaymentPlan;
 use App\ProducerAgent;
 use App\Tag;
+use App\VideoActor;
+use App\VideoDirector;
 use App\Videoimage;
+use App\VideoTag;
 use Illuminate\Http\Request;
 
 use App\Requests;
@@ -1238,12 +1244,13 @@ class AdminController extends Controller
 
         $categories = Category::all();
 
-        $actors = Actor::all();
-        $directors = Director::all();
+        $actors = VideoActor::all();
+        $directors = VideoDirector::all();
         $langs = Lang::all();
         $producers = MovieProducer::all();
+
         $tags = [];
-        foreach (Tag::all() as $tag){
+        foreach (VideoTag::all() as $tag){
             array_push($tags, $tag->name);
         }
         $tags = implode(',', $tags);
@@ -1266,6 +1273,10 @@ class AdminController extends Controller
     public function deleteMovie(Request $request)
     {
         $movie = AdminVideo::find($request->id);
+        $movie->videoTags()->detach();
+        $movie->videoActors()->detach();
+        $movie->videoDirectors()->detach();
+
         Storage::disk('public')->deleteDirectory('images/'.$movie->watchid);
         Storage::disk('public')->deleteDirectory('movies/'.$movie->watchid);
         $movie->delete();
@@ -1281,19 +1292,25 @@ class AdminController extends Controller
         $categories = Category::all();
 
         $movie = AdminVideo::find($id);
-        $actors = Actor::all();
-        $directors = Director::all();
+        $movieTags = [];
+            foreach ($movie->videoTags as $tag) {
+                array_push($movieTags, $tag->name);
+            }
+        $movieTags = implode(',', $movieTags);
+
+
+        $actors = VideoActor::all();
+        $directors = VideoDirector::all();
         $langs = Lang::all();
         $images = Videoimage::where('admin_video_id', $id)->first();
         $producers = MovieProducer::all();
 
-        $dirarr = explode(',', $movie->directors);
-        $actArr = explode(',', $movie->actors);
+
 
         $videoId = substr($movie->video, 8);
 
         $tags = [];
-        foreach (Tag::all() as $tag){
+        foreach (VideoTag::all() as $tag){
             array_push($tags, $tag->name);
         }
         $tags = implode(',', $tags);
@@ -1304,12 +1321,11 @@ class AdminController extends Controller
             ->with('actors', $actors)
             ->with('directors', $directors)
             ->with('images', $images)
-            ->with('actArr', $actArr)
-            ->with('dirarr', $dirarr)
             ->with('producers', $producers)
             ->with('page', 'videos')
             ->with('langs', $langs)
             ->with('videoId', $videoId)
+            ->with('movieTags', $movieTags)
             ->with('tags', $tags);
 
     }
@@ -1320,22 +1336,13 @@ class AdminController extends Controller
 
 
         $video = AdminVideo::find($request->id);
+        $video->videoTags()->detach();
+        $video->videoActors()->detach();
+        $video->videoDirectors()->detach();
+
         $specialId = $video->watchid;
         $imgUrl = url('/images/'.$specialId.'/');
         $videoUrl = url('/movies/'.$specialId.'/');
-
-        $tagsNew = mb_strtolower($request->tags);
-        $tagsArr = explode(',', $tagsNew);
-
-
-        foreach ($tagsArr as $tagvar) {
-            $tag = Tag::where('name', $tagvar)->first();
-            if($tag == null) {
-                $newTag = new Tag();
-                $newTag->name = $tagvar;
-                $newTag->save();
-            }
-        }
 
 
         $video->title = $request->title;
@@ -1344,12 +1351,11 @@ class AdminController extends Controller
         $video->category_id = $request->category;
         $video->year = $request->year;
         $video->movie_producer_id = $request->producer;
-        $video->directors = $request->director;
-        $video->actors = $request->actor;
         $video->lang_id = $request->lang;
         $video->country = $request->video_country;
         $video->video_type = $request->video_type;
-        $video->tags = $tagsNew;
+        $video->length = $request->video_length;
+
 
 
         if(!empty($request->file('video'))){
@@ -1402,10 +1408,36 @@ class AdminController extends Controller
 
         $images->save();
 
+        $this->createVideoTags($request->tags, $video->id);
+        $this->createVideoActors($request->actor, $video->id);
+        $this->createVideoDirectors($request->director, $video->id);
+
 
         return response()->json(['success'=>'movie updated']);
 
 
+    }
+
+    public function createVideoDirectors($directors, $videoId)
+    {
+        $videoDirectors = explode(',', $directors);
+        foreach ($videoDirectors as $videoDirector){
+            AdminVideoVideoDirector::create([
+                'video_director_id' => $videoDirector,
+                'admin_video_id' => $videoId
+            ]);
+        }
+    }
+
+    public function createVideoActors($actors, $videoId)
+    {
+        $videoActors = explode(',', $actors);
+        foreach ($videoActors as $videoActor){
+            AdminVideoVideoActor::create([
+                'video_actor_id' => $videoActor,
+                'admin_video_id' => $videoId
+            ]);
+        }
     }
 
     public function postUpload(Request $request)
@@ -1446,7 +1478,7 @@ class AdminController extends Controller
         $video = $request->file('video');
         $uri = $lib->upload($video);
         } else {
-            $uri = '/videos/'.$request->videomid;
+            $uri = '/videos/'.$request->vimeoid;
         }
 
 //        return response()->json($uri);
@@ -1484,20 +1516,6 @@ class AdminController extends Controller
         $preview_image_name = '/preview_image'.time().$preview_image->getClientOriginalName();
         $preview_image->move(public_path('images/'.$specialId),$preview_image_name);
 
-        $tagsNew = mb_strtolower($request->tags);
-        $tagsArr = explode(',', $tagsNew);
-
-
-        foreach ($tagsArr as $tagvar) {
-            $tag = Tag::where('name', $tagvar)->first();
-            if($tag == null) {
-                $newTag = new Tag();
-                $newTag->name = $tagvar;
-                $newTag->save();
-            }
-        }
-
-
 
         $adminVideo = new AdminVideo();
         $adminVideo->title = $request->title;
@@ -1523,14 +1541,12 @@ class AdminController extends Controller
         $adminVideo->watch_count = 1;
         $adminVideo->video_type = $request->video_type;
         $adminVideo->video_upload_type = 2;
-        $adminVideo->actors = $request->actor;
-        $adminVideo->directors = $request->director;
         $adminVideo->watchid = $specialId;
         $adminVideo->lang_id = $request->lang;
         $adminVideo->year = $request->year;
         $adminVideo->movie_producer_id = $request->producer;
         $adminVideo->country = $request->video_country;
-        $adminVideo->tags = $tagsNew;
+        $adminVideo->length = $request->video_length;
 
         $adminVideo->save();
 
@@ -1543,11 +1559,37 @@ class AdminController extends Controller
         $images->imgPreview = $imgUrl.$preview_image_name;
         $images->save();
 
-
-
+        $this->createVideoTags($request->tags, $adminVideo->id);
+        $this->createVideoActors($request->actor, $adminVideo->id);
+        $this->createVideoDirectors($request->director, $adminVideo->id);
 
 
         return response()->json($adminVideo);
+    }
+
+    public function createVideoTags($tags, $videoId)
+    {
+        $tagsNew = mb_strtolower($tags);
+        $tagsArr = explode(',', $tagsNew);
+
+
+        foreach ($tagsArr as $tagvar) {
+            $tag = VideoTag::where('name', $tagvar)->first();
+            $videoTag = new AdminVideoVideoTag();
+            $videoTag->admin_video_id = $videoId;
+
+            if($tag == null) {
+                $newTag = new VideoTag();
+                $newTag->name = $tagvar;
+                $newTag->save();
+
+                $videoTag->video_tag_id = $newTag->id;
+            } else {
+
+                $videoTag->video_tag_id = $tag->id;
+            }
+            $videoTag->save();
+        }
     }
 
     //langs
@@ -1871,7 +1913,7 @@ class AdminController extends Controller
     //Actors
     public function actors(Request $request) {
 
-        $actors = Actor::all();
+        $actors = VideoActor::all();
 
         return view('admin.actors.actors')->with('actors' , $actors)
             ->withPage('actors')
@@ -1888,7 +1930,7 @@ class AdminController extends Controller
 
     public function createActor(Request $request)
     {
-        $actor = new Actor();
+        $actor = new VideoActor();
         $actor->name = $request->title;
         $actor->bio = $request->description;
         $actor->save();
@@ -1898,7 +1940,8 @@ class AdminController extends Controller
 
     public function deleteActor(Request $request)
     {
-        $actor = Actor::find($request->id);
+        $actor = VideoActor::find($request->id);
+        $actor->adminVideos()->detach();
         $actor->delete();
 
 
@@ -1907,7 +1950,7 @@ class AdminController extends Controller
 
     public function editActor($id)
     {
-        $actor = Actor::find($id);
+        $actor = VideoActor::find($id);
 
 
         return view('admin.actors.edit-actor')
@@ -1917,7 +1960,7 @@ class AdminController extends Controller
 
     public function updateActor(Request $request)
     {
-        $actor = Actor::find($request->id);
+        $actor = VideoActor::find($request->id);
         $actor->name = $request->name;
         $actor->bio = $request->bio;
 
@@ -1932,7 +1975,7 @@ class AdminController extends Controller
     //Directors
     public function directors(Request $request) {
 
-        $directors = Director::all();
+        $directors = VideoDirector::all();
 
         return view('admin.directors.directors')->with('directors' , $directors)
             ->withPage('directors')
@@ -1949,7 +1992,7 @@ class AdminController extends Controller
 
     public function createDirector(Request $request)
     {
-        $director = new Director();
+        $director = new VideoDirector();
         $director->name = $request->title;
         $director->bio = $request->description;
         $director->save();
@@ -1959,7 +2002,8 @@ class AdminController extends Controller
 
     public function deleteDirector(Request $request)
     {
-        $director = Director::find($request->id);
+        $director = VideoDirector::find($request->id);
+        $director->adminVideos()->detach();
         $director->delete();
 
 
@@ -1968,7 +2012,7 @@ class AdminController extends Controller
 
     public function editDirector($id)
     {
-        $director = Director::find($id);
+        $director = VideoDirector::find($id);
 
 
         return view('admin.directors.edit-director')
@@ -1978,7 +2022,7 @@ class AdminController extends Controller
 
     public function updateDirector(Request $request)
     {
-        $director = Director::find($request->id);
+        $director = VideoDirector::find($request->id);
         $director->name = $request->name;
         $director->bio = $request->bio;
 

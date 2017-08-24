@@ -26,9 +26,7 @@
                                 <span class="age">16+</span>
                                 <span class="date" style="border:3px solid red;">{{$video->created_at->format('d M Y')}}</span>
                                 <span class="genre" style="border:3px solid green;">
-                                    @foreach($tags as $tag)
-                                        {{$tag}},
-                                        @endforeach
+                                    {{$tags}}
                                 </span>
                                 <div class="series-text">1 Season, 12 Series</div>
                             </div>
@@ -114,9 +112,7 @@
                             <div class="cast-credits-item">
                                 <div class="cast-credits-title">Actors</div>
                                 <p class="cast-credits-text">
-                                    @foreach($actors as $actor)
-                                        {{$actor}}, 
-                                        @endforeach
+                                    {{$actors}}
                                 </p>
                             </div>
                             {{--<div class="cast-credits-item">--}}
@@ -126,9 +122,7 @@
                             <div class="cast-credits-item">
                                 <div class="cast-credits-title">Director</div>
                                 <p class="cast-credits-text">
-                                    @foreach($directors as $director)
-                                      {{$director}}
-                                    @endforeach
+                                    {{$directors}}
                                 </p>
                             </div>
                             {{--<div class="cast-credits-item">--}}
@@ -214,28 +208,25 @@
                         <div class="title">Similar Videos</div>
                         <div class="video-slider-block-wrap">
                             <div class="video-slider-block">
-                                @for($g=1;$g<3;$g++)
-                                    @for($i=1;$i<6;$i++)
+                                @foreach($similarVideos as $similarVideo)
                                         <div class="video-item-block">
                                             <div class="video-item">
-                                                <a href="{{route('single-video',0)}}">
+                                                <a href="{{route('user.singleVideo',$similarVideo->watchid)}}">
                                                     <div class="video-img">
-                                                        <img src="{{asset("r/img/video".$i.".png")}}" alt="">
+                                                        <img src="{{$similarVideo->videoimage->imgSmall1}}" alt="">
                                                     </div>
-                                                    <div class="video-title ellipsis-gradient">Transformers: Revenge of
-                                                        the
-                                                        Fallen
+                                                    <div class="video-title ellipsis-gradient">
+                                                        {{$similarVideo->title}}
                                                     </div>
                                                 </a>
                                                 <div class="video-info">
-                                                    <div class="video-genre">Drama</div>
+                                                    <div class="video-genre">{{$similarVideo->category->name}}</div>
                                                     <div class="butn-like"><span class="icon icon-thumbs-up"></span>25
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    @endfor
-                                @endfor
+                                @endforeach
                             </div>
                         </div>
                     </div>

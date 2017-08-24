@@ -253,7 +253,7 @@ class UserController extends Controller {
         }
 
 
-        $videos = AdminVideo::all();
+
         $images = Videoimage::where('admin_video_id', $video->id)->first();
         if ($images == null)
         {
@@ -276,28 +276,31 @@ class UserController extends Controller {
 
 //        $categories = get_categories();
 
-        $actorIds = $video->actors;
-        $actorIds = explode(',', $actorIds);
-        $actors = [];
-        foreach($actorIds as $actorId){
-            $act = Actor::find($actorId);
-            array_push($actors, $act->name);
-        }
-
-        $directorIds = $video->directors;
-        $directorIds = explode(',', $directorIds);
-        $directors = [];
-        foreach($directorIds as $directorId){
-            $act = Director::find($directorId);
-            array_push($directors, $act->name);
-        }
 
         $likes = Like::where('admin_video_id', $video->id)->where('type', 'like')->get();
         $disLikes = Like::where('admin_video_id', $video->id)->where('type', 'dislike')->get();
         $checkLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'like')->first();
         $checkDisLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'dislike')->first();
 
-        $tags = explode(',', $video->tags);
+
+        $tags = [];
+        foreach($video->videoTags as $tag) {
+            array_push($tags, $tag->name);
+        }
+        $tags = implode(', ', $tags);
+
+        $actors = [];
+        foreach($video->videoActors as $actor) {
+            array_push($actors, $actor->name);
+        }
+        $actors = implode(', ', $actors);
+
+        $directors = [];
+        foreach($video->videoDirectors as $director) {
+            array_push($directors, $director->name);
+        }
+        $directors = implode(', ', $directors);
+
 
         return view('r.user.single-video')
 //            ->with('trailer_video' , $trailer_video)
@@ -313,6 +316,7 @@ class UserController extends Controller {
             ->with('checkLike', $checkLike)
             ->with('checkDisLike', $checkDisLike)
             ->with('tags', $tags)
+//            ->with('similarVideos', $similarVideos)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))
             ->with('directors', $directors);
