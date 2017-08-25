@@ -160,7 +160,7 @@
           		</fieldset><!-- fieldset --> 
 
 
-          		<fieldset class="blk col-md-12">
+          		<fieldset class="blk col-md-12 mb35">
 								<legend>Taxonomy</legend>
 
 	              <div id="category" class="form-group"> 
