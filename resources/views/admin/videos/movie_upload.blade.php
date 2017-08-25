@@ -198,19 +198,19 @@
 							<!-- needs to be wired -->
           		<fieldset class="blk col-md-12">
 								<legend>Poster grand display</legend>
-								<p>By checking "yes", this movie will be showcased as a big poster on major sections of the site.</p>
+								<p>By checking "Grand Display", this movie will be showcased as a big poster on major sections of the site.</p>
  
 		            <ul class="list-inline" style="padding:0;">
 		            	<li class="mr20">
 		            		<label class="radio-inline">
 		            			<input type="radio" name="grand-display" id="grand-display-1" value="yes">
-		            			Full
+		            			Grand Display
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
 		            			<input type="radio" name="grand-display" id="grand-display-2" value="no" checked>
-		            			Medium
+		            			Normal Display
 		            		</label>
 		            	</li> 
 		            </ul><!-- col-md-12 -->  
