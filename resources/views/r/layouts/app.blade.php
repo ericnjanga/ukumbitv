@@ -28,7 +28,7 @@
 </head>
 <body>
     @yield('layout')
-    @yield('scripts')
+
 </body>
     <script type="text/javascript" src="{{asset('r/js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('r/js/passfield.min.js')}}"></script>
@@ -36,4 +36,5 @@
     <script type="text/javascript" src="{{asset('r/js/jquery.colorbox-min.js')}}"></script>
     <script type="text/javascript" src="{{asset('r/js/script.js')}}"></script>
     <script type="text/javascript" src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script>
+@yield('scripts')
 </html>

@@ -44,8 +44,19 @@
                                 <div class="share-block">
                                     {{--<a href="" class="butn-share"><span>f</span>Share</a>--}}
                                     <div class="fb-share-button" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/videos/{{$video->watchid}}">Share</a></div>
-                                    <a href="" class="butn-like"><span class="icon icon-thumbs-up"></span>{{count($video->likes)}}</a>
-                                    {{--<div class="fb-like" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>--}}
+
+
+                                    @if($checkLike != null)
+                                        <a href="#" id="like-btn-top" class="butn-like" onclick="unlike()">
+                                            <span class="icon icon-thumbs-up"></span><span id="likes-count-top">{{$likes}}</span>
+                                        </a>
+                                    @else
+                                        <a href="#" id="like-btn-top" class="butn-like" onclick="like()">
+                                            <span class="icon icon-thumbs-up"></span><span id="likes-count-top">{{$likes}}</span>
+                                        </a>
+                                    @endif
+
+
                                 </div>
                             </div>
                         </div>
@@ -244,6 +255,9 @@
 
 @section('scripts')
     <script>
+        {{--$( document ).ready(function() {--}}
+            {{--$('#like-btn-top').html('<span class="icon icon-thumbs-up"></span>{{$likes}}');--}}
+        {{--});--}}
         function sendComment() {
 
             if($('#comment-text').val() === '') {
@@ -302,10 +316,12 @@
                 dataType: 'html',
                 success: function(data){
                     $('#like').attr({"onclick":"unlike()", "id":"unlike"});
+                    $('#like-btn-top').attr({"onclick":"unlike()"});
+
                     $('#undislike').attr({"onclick":"dislike()", "id":"dislike"});
 
 //                    $('#unlike').css("color", "#fff");
-                    $('#likes-count').text(+likesCount + 1);
+                    $('#likes-count, #likes-count-top').text(+likesCount + 1);
 
                     var rep = JSON.parse(data);
 
@@ -344,11 +360,12 @@
                 success: function(data){
                     $('#dislike').attr({"onclick":"undislike()", "id":"undislike"});
                     $('#unlike').attr({"onclick":"like()", "id":"like"});
+                    $('#like-btn-top').attr({"onclick":"like()"});
 //                    $('#unlike').css("color", "#fff");
                     $('#dislikes-count').text(+disLikesCount + 1);
                     var rep = JSON.parse(data);
                     if(rep.check === 1){
-                        $('#likes-count').text(+likesCount - 1);
+                        $('#likes-count, #likes-count-top').text(+likesCount - 1);
                     }
                     //console.log(rep);
 //                    swal("Cool!", "You have successfully disliked!", "success");
@@ -380,8 +397,9 @@
                 dataType: 'html',
                 success: function(data){
                     $('#unlike').attr({"onclick":"like()", "id":"like"});
+                    $('#like-btn-top').attr({"onclick":"like()"});
 //                    $('#like').css("color", "#333");
-                    $('#likes-count').text(+likesCount - 1);
+                    $('#likes-count, #likes-count-top').text(+likesCount - 1);
                     var rep = JSON.parse(data);
                     //console.log(rep);
 //                    swal("Cool!", "You have successfully unliked!", "success");
