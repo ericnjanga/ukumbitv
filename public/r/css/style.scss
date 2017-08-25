@@ -1421,7 +1421,7 @@ img{
     width: 80%;
   }
 }
-.cast-credits-wrap{
+.cast-credits-wrap{ border:30px solid lime!important;
   margin: 25px 0 85px;
   padding: 60px 0;
   position: relative;
@@ -1490,8 +1490,7 @@ img{
   }
 }
 
-.reviews-block{
-	border: 10px solid red;
+.reviews-block{ 
   margin: 85px 0 0 0;
   width: 70%;
   .title{
