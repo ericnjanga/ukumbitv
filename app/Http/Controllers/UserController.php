@@ -103,11 +103,14 @@ class UserController extends Controller {
 
             if(\Auth::check()){
                 $wishlists  = Helper::wishlist(\Auth::user()->id,WEB);  
-                $watch_lists = Helper::watch_list(\Auth::user()->id,WEB);  
+//                $watch_lists = Helper::watch_list(\Auth::user()->id,WEB);
+                $watch_lists = Helper::watch_list(\Auth::user()->id,WEB);
             }
             
             $recent_videos = Helper::recently_added(WEB);
+
             $trendings = Helper::trending(WEB);
+
             $suggestions  = Helper::suggestion_videos(WEB);
             $categories = get_categories();
 
@@ -293,6 +296,8 @@ class UserController extends Controller {
         //$histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
         //dd($histories);
         $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
+        $video->watch_count++;
+        $video->save();
 
 
 

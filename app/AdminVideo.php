@@ -34,7 +34,7 @@ class AdminVideo extends Model
     }
     public function videoimage()
     {
-        return $this->hasOne('App\Videoimage','video_id');
+        return $this->hasOne('App\Videoimage');
     }
     public function videosImage()
     {
