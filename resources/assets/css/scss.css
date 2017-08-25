@@ -1336,7 +1336,8 @@ img {
 .cast-credits-wrap {
   margin: 25px 0 85px;
   padding: 60px 0;
-  position: relative; }
+  position: relative;
+  border: 30px solid lime !important; }
   .cast-credits-wrap .title {
     margin: 0 0 20px 0; }
   .cast-credits-wrap .cast-credits-block {
