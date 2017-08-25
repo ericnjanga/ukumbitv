@@ -24,7 +24,7 @@
                             <div class="video-title">{{$video->title}}</div>
                             <div class="video-info-text">
                                 <span class="age">16+</span>
-                                <span class="date" style="border:3px solid red;">{{$video->created_at->format('d M Y')}}</span>
+                                <span class="date" style="border:3px solid red;">{{$video->created_at->format('Y')}}</span>
                                 <span class="genre" style="border:3px solid green;">
                                     {{$tags}}
                                 </span>
@@ -44,8 +44,8 @@
                                 <div class="share-block">
                                     {{--<a href="" class="butn-share"><span>f</span>Share</a>--}}
                                     <div class="fb-share-button" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/videos/{{$video->watchid}}">Share</a></div>
-                                    {{--<a href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</a>--}}
-                                    <div class="fb-like" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
+                                    <a href="" class="butn-like"><span class="icon icon-thumbs-up"></span>{{count($video->likes)}}</a>
+                                    {{--<div class="fb-like" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>--}}
                                 </div>
                             </div>
                         </div>
@@ -209,6 +209,9 @@
                         <div class="title">Similar Videos</div>
                         <div class="video-slider-block-wrap">
                             <div class="video-slider-block">
+                                @if(count($relatedVideos) == 0)
+                                    <h1>There is no videos</h1>
+                                @else
                                 @foreach($relatedVideos as $relatedVideo)
                                         <div class="video-item-block">
                                             <div class="video-item">
@@ -229,6 +232,7 @@
                                             </div>
                                         </div>
                                 @endforeach
+                                    @endif
                             </div>
                         </div>
                     </div>
@@ -246,31 +250,31 @@
                 swal("Hmm", "Need to write a review, try again pls", "error");
             } else {
 
-            var token = $('meta[name="csrf-token"]').attr('content');
-            var fd = new FormData;
+                var token = $('meta[name="csrf-token"]').attr('content');
+                var fd = new FormData;
 
-            fd.append('_token', token);
-            fd.append('video_id', '{{$video->id}}');
-            fd.append('text', $('#comment-text').val());
+                fd.append('_token', token);
+                fd.append('video_id', '{{$video->id}}');
+                fd.append('text', $('#comment-text').val());
 
-            $.ajax({
-                type: 'POST',
-                url: '{{route('send-comment')}}',
-                contentType: false,
-                processData: false,
-                data: fd,
-                dataType: 'html',
-                success: function(data){
-                    var rep = JSON.parse(data);
-                    //alert('Comment successful send!');
-                    //console.log(rep);
-
-                    $("#new-comment-section").append('<div class="comment"><div class="img-block"><img src="{{Auth::user()->picture}}" alt=""></div><div class="comment-text-block"><div class="comment-name">{{Auth::user()->name}}</div><p class="comment-text">'+rep.text+'</p></div></div>');
-                },
-                error: function (data) {
-                    alert('error '+data);
-                }
-            });
+                $.ajax({
+                    type: 'POST',
+                    url: '{{route('send-comment')}}',
+                    contentType: false,
+                    processData: false,
+                    data: fd,
+                    dataType: 'html',
+                    success: function(data){
+                        var rep = JSON.parse(data);
+                        //alert('Comment successful send!');
+                        //console.log(rep);
+                        $('#comment-text').val('');
+                        $("#new-comment-section").append('<div class="comment"><div class="img-block"><img src="{{Auth::user()->picture}}" alt=""></div><div class="comment-text-block"><div class="comment-name">{{Auth::user()->name}}</div><p class="comment-text">'+rep.text+'</p></div></div>');
+                    },
+                    error: function (data) {
+                        alert('error '+data);
+                    }
+                });
 
             }
 
@@ -420,6 +424,5 @@
                 }
             });
         }
-
     </script>
 @endsection

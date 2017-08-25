@@ -291,6 +291,7 @@ class UserController extends Controller {
 
     public function watchVideo($id)
     {
+
         //$histories = Helper::watch_list(\Auth::user()->id,WEB);
       //  $histories = UserHistory::where('user_id', Auth::id())->distinct()->get();
         //$histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
@@ -386,7 +387,7 @@ class UserController extends Controller {
         $video = AdminVideo::where('watchid', $id)->first();
         $videoId = substr($video->video, 8);
 
-        return view('user.single_newvideo')
+        return view('r.user.watch-video')
             ->with('videoId', $videoId)
             ->with('video', $video);
     }
