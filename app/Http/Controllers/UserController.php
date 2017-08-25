@@ -103,11 +103,14 @@ class UserController extends Controller {
 
             if(\Auth::check()){
                 $wishlists  = Helper::wishlist(\Auth::user()->id,WEB);  
-                $watch_lists = Helper::watch_list(\Auth::user()->id,WEB);  
+//                $watch_lists = Helper::watch_list(\Auth::user()->id,WEB);
+                $watch_lists = Helper::watch_list(\Auth::user()->id,WEB);
             }
             
             $recent_videos = Helper::recently_added(WEB);
+
             $trendings = Helper::trending(WEB);
+
             $suggestions  = Helper::suggestion_videos(WEB);
             $categories = get_categories();
 
@@ -123,7 +126,6 @@ class UserController extends Controller {
                     array_push($lastVideos, $v);
                     }
             }
-
 
             return view('r.user.home-video')
                         ->with('page' , 'home')
@@ -170,13 +172,17 @@ class UserController extends Controller {
 
     public function getVideosByCategory($id)
     {
-        $category = Category::where('name', $id)
-            ->orWhere('name', str_replace('-', ' ', $id))
-            ->firstOrFail();
+        //#testing
+        if($id == '0'){
+            $videos = AdminVideo::with('videoimage')
+                ->orderBy('id', 'desc')->get();
+        }else{
+            $category = Category::where('id',$id)->firstOrFail();
+            $videos = AdminVideo::with('videoimage')
+                ->where('category_id', $category->id)
+                ->orderBy('id', 'desc')->get();
+        }
 
-        $videos = AdminVideo::with('videoimage')
-            ->where('category_id', $category->id)
-            ->orderBy('id', 'desc')->get();
 
         $lastVideos = [];
         $allCategories = Category::all();
@@ -189,12 +195,14 @@ class UserController extends Controller {
             }
         }
 
-        return view('user.home-video')
+        return view('r.chunks._filter_results')
+            ->with('id',$id)
             ->with('page' , 'Videos by tag')
             ->with('subPage' , 'Videos by tag')
             ->with('categories' , $categories)
             ->with('videos_by_cat' , $lastVideos)
-            ->with('videos', $videos);
+            ->with('videos', $videos)
+            ->render();
     }
 
     public function vimeoVideo()
@@ -283,11 +291,14 @@ class UserController extends Controller {
 
     public function watchVideo($id)
     {
+
         //$histories = Helper::watch_list(\Auth::user()->id,WEB);
       //  $histories = UserHistory::where('user_id', Auth::id())->distinct()->get();
         //$histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
         //dd($histories);
         $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
+        $video->watch_count++;
+        $video->save();
 
 
 
@@ -376,7 +387,7 @@ class UserController extends Controller {
         $video = AdminVideo::where('watchid', $id)->first();
         $videoId = substr($video->video, 8);
 
-        return view('user.single_newvideo')
+        return view('r.user.watch-video')
             ->with('videoId', $videoId)
             ->with('video', $video);
     }

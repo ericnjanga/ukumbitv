@@ -448,7 +448,7 @@ Route::get('categories', 'UserController@all_categories')->name('user.categories
 Route::get('category/{id}', 'UserController@getVideosByCategory');
 
 Route::get('subcategory/{id}', 'UserController@sub_category_videos')->name('user.sub-category');
-Route::get('category/{id}', 'UserController@category_videos')->name('user.category');
+//Route::get('category/{id}', 'UserController@category_videos')->name('user.category');
 
 Route::get('genre/{id}', 'UserController@genre_videos')->name('user.genre');
 
@@ -456,7 +456,8 @@ Route::get('genre/{id}', 'UserController@genre_videos')->name('user.genre');
 
 Route::get('newvideo/{id}', 'UserController@single_newvideo')->name('user.single'); // Added By Vishnu
 
-Route::get('videos/{id}', 'UserController@watchVideo')->name('user.singleVideo');
+//Route::get('videos/{id}', 'UserController@watchVideo')->name('user.singleVideo');
+Route::get('video/{id}', 'UserController@watchVideo')->name('user.singleVideo');
 Route::get('watch/{id}', 'UserController@ShowVideo')->name('user.show-video');
 //Route::get('watch', 'UserController@watchVideo')->name('user.singleVideo');
 

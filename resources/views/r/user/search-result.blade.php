@@ -9,6 +9,11 @@
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-10">
                     <div class="video-list-wrap">
                         <div class="title">
+                            <div class="butn-menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
                           <span>Search:</span> Transformers
                         </div>
                         <div class="filter-block-wrap">
@@ -20,33 +25,14 @@
                             </div>
                         </div>
                         <div class="video-list-block-wrap">
-                            <div class="video-list-block">
-                                @for($row=1;$row<4;$row++)
-                                    @for($i=1;$i<6;$i++)
-                                        <div class="video-item-block">
-                                            <div class="video-item">
-                                                <a href="{{route('single-video',0)}}">
-                                                    <div class="video-img">
-                                                        <img src="{{asset('r/img/video'.$i.'.png')}}" alt="">
-                                                    </div>
-                                                    <div class="video-title ellipsis-gradient">Transformers: Revenge of the
-                                                        Fallen
-                                                    </div>
-                                                </a>
-                                                <div class="video-info">
-                                                    <div class="video-genre">Drama</div>
-                                                    <div class="butn-like"><span class="icon icon-thumbs-up"></span>25
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endfor
-                                @endfor
-
-                        </div>
+                            <div class="js-filter-results">
+                                @include('r.chunks._filter_results')
+                            </div>
                             <a href="" class="butn butn-orange-white butn-large">Load more</a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

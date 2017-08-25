@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{csrf_token()}}">
     <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,500i,700,900" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset('r/img/favicon/apple-touch-icon.png')}}">
@@ -27,7 +28,7 @@
 </head>
 <body>
     @yield('layout')
-    @yield('scripts')
+
 </body>
     <script type="text/javascript" src="{{asset('r/js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('r/js/passfield.min.js')}}"></script>
@@ -35,4 +36,5 @@
     <script type="text/javascript" src="{{asset('r/js/jquery.colorbox-min.js')}}"></script>
     <script type="text/javascript" src="{{asset('r/js/script.js')}}"></script>
     <script type="text/javascript" src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script>
+@yield('scripts')
 </html>

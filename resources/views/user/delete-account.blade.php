@@ -2,63 +2,54 @@
 
 @section('content')
 
-<div class="form-background forgot-password-reset">
+@include('notification.notify')
 
-    <div class="common-form login-common">
+<section class="registration">
+    <div class="row secBg">
+        <div class="large-12 columns forgot-password-min">
+            <div class="login-register-content">
 
-        <div class="row">
-            <div class="col-md-12">
-                @include('notification.notify')
+                <div class="row collapse borderBottom">
+                    <div class="medium-6 large-centered medium-centered">
+                        <div class="page-heading text-center" style="margin-top:20px;padding:0px !important">
+                            <h3>{{tr('delete_account')}}</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" data-equalizer="fldb3f-equalizer" data-equalize-on="medium" id="test-eq" data-resize="mmu5g8-eq" data-events="resize">
+
+                    <div class="large-4 medium-6 large-centered medium-centered columns">
+
+                    <br><br><br>
+
+                        <div class="register-form">
+
+                        <h5 class="text-center">{{tr('delete_account_heading')}}</h5>
+
+                        <p>
+                            <strong style="color: brown">Note:</strong> {{tr('delete_account_content')}}
+                        </p>
+
+                            <form method="post" data-abide="bhwxrp-abide" novalidate="" action="{{ route('user.delete.account.process') }}">                                
+
+                                <div class="input-group">
+                                    <span class="input-group-label"><i class="fa fa-user"></i></span>
+                                    <input type="password" name="password" placeholder="Enter your Password" required="">
+                                </div>
+
+                                <button class="button expanded" type="submit" name="submit">{{tr('delete')}}</button>
+
+                                
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="social-form">
-            <div class="signup-head">
-                <h3>{{tr('delete_account_heading')}}</h3>
-
-                 <p>
-                    <strong style="color: brown">Note:</strong> {{tr('delete_account_content')}}</p>
-            </div><!--end  of signup-head-->         
-        </div><!--end of socila-form-->
-
-        <div class="sign-up login-page">
-
-            @if($errors->has('password'))
-                <div data-abide-error="" class="alert callout">
-                    <p>
-                        <i class="fa fa-exclamation-triangle"></i> 
-                        <strong> 
-                            @if($errors->has('password')) 
-                                $errors->first('password')
-                            @endif
-                        </strong>
-                    </p>
-                </div>
-            
-            @endif
-
-            <form class="signup-form login-form" role="form" method="POST" action="{{ route('user.delete.account.process') }}">
-
-                <div class="form-group">
-                    <label for="password">{{tr('password')}}</label>
-                    <input type="password" required name="password" class="form-control" id="password" placeholder="{{tr('password')}}">
-
-                    <span class="form-error">
-                        @if ($errors->has('password'))
-                            <strong>{{ $errors->first('password') }}</strong>
-                        @endif
-                    </span>
-
-                </div>
-
-                <div class="change-pwd">
-                    <button type="submit" class="btn btn-primary signup-submit">{{tr('delete')}}</button>
-                </div>  
-    
-            </form>
-        </div><!--end of sign-up-->
-
-    </div><!--end of common-form-->     
-</div><!--end of form-background-->
+</section>
 
 @endsection
