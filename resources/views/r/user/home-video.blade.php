@@ -7,7 +7,7 @@
                 <!-- <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
                     
                 </div> -->
-                <div class="col-md-9 col-md-offset-3">
+                <div class="global-main-content col-md-9 col-md-offset-3">
                     <div class="main-top-block">
                         <img src="{{ asset('r/img/bg-video.png')}}" alt="">
                         <div class="layer"></div>
