@@ -34,8 +34,11 @@
     <script type="text/javascript" src="{{asset('r/js/passfield.min.js')}}"></script>
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
     <script type="text/javascript" src="{{asset('r/js/slick.min.js')}}"></script>
+    <!-- lightbox librairy
     <script type="text/javascript" src="{{asset('r/js/jquery.colorbox-min.js')}}"></script>
+  -->
     <script type="text/javascript" src="{{asset('r/js/script.js')}}"></script>
+    <script type="text/javascript" src="{{asset('r/js/Google-play-menu.js')}}"></script>
     <script type="text/javascript" src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script>
 
 	  <script>
