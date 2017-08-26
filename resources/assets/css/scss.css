@@ -2226,6 +2226,9 @@ input:-webkit-autofill {
   .butn-back:hover {
     color: rgba(238, 179, 61, 0.8); }
 
+.global-main-content {
+  border: 10px solid lime; }
+
 @media only screen and (max-width: 991px) {
   .lang-block span {
     display: block;
