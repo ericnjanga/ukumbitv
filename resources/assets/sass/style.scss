@@ -2806,6 +2806,9 @@ input:-webkit-autofill {
  * Styling main content of the entire app
  * --------------------------------------
 */
+#GP-menu-sticky-wrapper{
+	float: left;
+}
 .global-main-content{
 	float: right;
   width: 75%; 
