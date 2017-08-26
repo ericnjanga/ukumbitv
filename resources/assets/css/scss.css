@@ -2226,8 +2226,13 @@ input:-webkit-autofill {
   .butn-back:hover {
     color: rgba(238, 179, 61, 0.8); }
 
+/**
+ * Styling main content of the entire app
+ * --------------------------------------
+*/
 .global-main-content {
-  border: 10px solid lime; }
+  float: right;
+  width: 75%; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {

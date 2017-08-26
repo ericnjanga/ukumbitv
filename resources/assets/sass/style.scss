@@ -2792,7 +2792,11 @@ input:-webkit-autofill {
 
 
 
-
+/**
+ * Styling main content of the entire app
+ * --------------------------------------
+*/
 .global-main-content{
-	border: 10px solid lime;
+	float: right;
+  width: 75%; 
 }

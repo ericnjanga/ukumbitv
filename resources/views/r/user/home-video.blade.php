@@ -4,10 +4,8 @@
         <div class="container">
             <div class="row" style="border:10px solid;">
             		@include('r.chunks._filter_video')
-                <!-- <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                    
-                </div> -->
-                <div class="global-main-content col-md-9 col-md-offset-3">
+                 
+                <div class="global-main-content">
                     <div class="main-top-block">
                         <img src="{{ asset('r/img/bg-video.png')}}" alt="">
                         <div class="layer"></div>
