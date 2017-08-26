@@ -2,7 +2,7 @@
 @section('content')
     <div class="main-wrap">
         <div class="container">
-            <div class="row">
+            <div class="row" style="border:10px solid;">
                 <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
                     @include('r.chunks._filter_video')
                 </div>
