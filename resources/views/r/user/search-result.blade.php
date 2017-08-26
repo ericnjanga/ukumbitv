@@ -2,11 +2,10 @@
 @section('content')
     <div class="search-main-wrap">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 menu-block">
+            <div class="clearfix">
                     @include('r.chunks._filter_video')
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-10">
+                
+                <div class="global-main-content">
                     <div class="video-list-wrap">
                         <div class="title">
                             <div class="butn-menu">

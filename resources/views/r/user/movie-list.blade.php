@@ -2,11 +2,10 @@
 @section('content')
     <div class="list-wrap">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    @include('r.chunks._filter_video')
-                </div>
-                <div class="col-sm-10">
+            <div class="clearfix">
+            		@include('r.chunks._filter_video')
+            		
+                <div class="global-main-content">
                     <div class="video-list-wrap">
                         <div class="title">My List</div>
                         <div class="filter-block-wrap">

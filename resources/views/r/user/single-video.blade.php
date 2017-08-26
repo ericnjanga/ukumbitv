@@ -12,11 +12,10 @@
 
     <div class="video-wrap">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    @include('r.chunks._filter_video')
-                </div>
-                <div class="col-sm-10">
+            <div class="clearfix">
+            		@include('r.chunks._filter_video')
+            		
+                <div class="global-main-content">
                     <div class="main-top-block">
                         <img src="{{asset("r/img/bg-video.png")}}" alt="">
                         <div class="layer"></div>
