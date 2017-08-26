@@ -1,4 +1,4 @@
-<div class="menu-container">
+<div id="GP-menu" class="menu-container">
 			<div class="show-entries-hover hidden">
 				<span class="hover-arrow"></span>
 			</div>
