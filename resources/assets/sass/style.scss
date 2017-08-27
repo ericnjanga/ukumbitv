@@ -1,5 +1,23 @@
 
 
+
+
+
+/**
+ * Global variables
+ * --------------------------------------
+*/
+$color-h: #424242;
+$width-GP-menu: 200px;
+$gap15: 15px;
+$gap30: 30px;
+$gap50: 50px;
+
+
+
+
+
+
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot?mmzk1o');
@@ -437,18 +455,7 @@ textarea:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s 
 textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
 textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
-
-
-
-
-/**
- * Global variables
- * --------------------------------------
-*/
-$color-h: #424242;
-$width-GP-menu: 200px;
-$gap1: 30px; 
+textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;} 
 
 
 
@@ -2718,7 +2725,7 @@ input:-webkit-autofill {
 .global-main-content{
 	float: left;
   width: 75%; 
-  margin-left: $gap1; 
+  margin-left: $gap30; 
   &.utv-card {
   	background-color: #fff;
     -webkit-box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.2);
@@ -2726,7 +2733,7 @@ input:-webkit-autofill {
 	} 
 }
 #GP-menu-sticky-wrapper.is-sticky + .global-main-content{
-	margin-left: $width-GP-menu + $gap1;  
+	margin-left: $width-GP-menu + $gap30;  
 }
 .layout-3-columns {
 	$width-aside: 300px;
@@ -2742,7 +2749,7 @@ input:-webkit-autofill {
 		}
 	}
 	#GP-menu-sticky-wrapper.is-sticky + .global-main-content{
-		margin-left: $width-GP-menu + $gap1;  
+		margin-left: $width-GP-menu + $gap30;  
 	}
 }
 
@@ -2752,7 +2759,7 @@ input:-webkit-autofill {
 	}
 	.hero,
 	.hero-sub {
-		margin-bottom: 30px;
+		margin-bottom: $gap30;
 	}
 	.hero{
   	position: relative;  
@@ -2760,7 +2767,7 @@ input:-webkit-autofill {
 			position: absolute;
 	    bottom: 0;
 	    width: 100%;
-	    padding: 30px;
+	    padding: $gap30;
 	// 	  .video-title{
 	// 	    color: #ffffff;
 	// 	    font-size: 30px;
@@ -2904,6 +2911,15 @@ input:-webkit-autofill {
 	// 	  }
 		}//info-block
 	}//hero
+	.hero-sub {
+		margin-top: $gap50;
+		margin-left: $gap50;
+		margin-right: $gap50;
+	}
+	hr {
+		margin-left: $gap15;
+    margin-right: $gap15;
+	}
 
 
 }//.global-main-content.utv-card 
