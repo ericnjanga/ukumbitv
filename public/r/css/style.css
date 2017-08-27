@@ -164,6 +164,7 @@ body {
   font-size: 14px;
   width: 100%;
   height: 100%;
+  color: #666;
   background: #EEEEEE;
   line-height: 1.15;
   display: -ms-flexbox;
@@ -2376,13 +2377,12 @@ input:-webkit-autofill {
     padding: 30px; }
 
 .global-main-content.utv-card .hero-sub {
-  margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px; }
 
 .global-main-content.utv-card hr {
-  margin-left: 15px;
-  margin-right: 15px; }
+  margin-left: 20px;
+  margin-right: 20px; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {
