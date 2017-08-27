@@ -793,7 +793,8 @@ img {
   margin: 0 0 4px 0; }
 
 .block-wrap {
-  margin: 0 0 75px 0; }
+  margin: 0 0 75px 0;
+  overflow-x: hidden; }
 
 .list-horizontal-wrapper {
   width: 3000px;
