@@ -2867,10 +2867,11 @@ input:-webkit-autofill {
  * --------------------------------------
 */ 
 .global-main-content{
-	float: right;
+	float: left;
   width: 75%; 
+  margin-left: $gap1;  
 }
-.sticky-wrapper + .global-main-content{
+#GP-menu-sticky-wrapper.is-sticky + .global-main-content{
 	float: left;
 	margin-left: $width-GP-menu + $gap1;  
 }

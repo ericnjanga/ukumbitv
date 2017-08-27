@@ -2459,10 +2459,11 @@ input:-webkit-autofill {
  * --------------------------------------
 */
 .global-main-content {
-  float: right;
-  width: 75%; }
+  float: left;
+  width: 75%;
+  margin-left: 30px; }
 
-.sticky-wrapper + .global-main-content {
+#GP-menu-sticky-wrapper.is-sticky + .global-main-content {
   float: left;
   margin-left: 230px; }
 
