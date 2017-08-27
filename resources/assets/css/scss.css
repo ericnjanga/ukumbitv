@@ -2471,6 +2471,8 @@ input:-webkit-autofill {
   margin-left: 30px;
   float: right;
   width: 300px; }
+  .layout-3-columns .block-aside .list-horizontal-wrapper {
+    width: 100%; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {
