@@ -294,6 +294,12 @@ var VideoFilter = (function () {
 $(document).ready(function(){
 // console.log('>>>>', $('#GP-menu').length);
   $('#GP-menu').sticky({topSpacing:0});
+
+
+ 	$('body').on('click', '#btn-comment-rate-modal', function(){
+ 		$('#comment-rate-modal').modal();
+ 	});
+  
 });
 
 

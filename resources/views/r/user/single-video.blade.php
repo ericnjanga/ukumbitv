@@ -164,7 +164,7 @@
                             <span id="dislikes-count">{{$dislikes}}</span>
                         </div>
                         <div class="butn-block----">
-                        	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#comment-rate-modal"> <span class="icon icon-pencil-edit-button"></span>Write
+                        	<button type="button" id="btn-comment-rate-modal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#comment-rate-modal"> <span class="icon icon-pencil-edit-button"></span>Write
                                 a review</a></button>
 
                         </div>
