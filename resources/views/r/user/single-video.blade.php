@@ -15,7 +15,7 @@
         <div class="layout-3-columns">
         		@include('r.chunks._filter_video')
         		
-            <div class="global-main-content">
+            <div class="global-main-content card">
                 <div class="main-top-block">
                     <img src="{{asset("r/img/bg-video.png")}}" alt="">
                     <div class="layer"></div>
@@ -214,7 +214,7 @@
                     </div>
                 </div>
             </div><!-- global-main-content -->
- 
+
             <aside class="block-aside">
                 <div class="title">Similar Videos</div>
                  
