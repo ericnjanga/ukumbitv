@@ -188,7 +188,7 @@
                     </div>
                     {{--<a href="" class="butn butn-orange-white butn-large">Load more</a>--}}
                 </div>
-                <div class="form-block-wrap">
+                <!-- <div class="form-block-wrap">
                     <div class="form-block">
                         <div class="title-form">Write your review</div>
                         <form>
@@ -210,11 +210,11 @@
                                             </div>
 	                                </div>
                                 </div>
-                            </div><!-- comment-block -->
+                            </div> 
                         </form>
                         <button class="butn butn-orange butn-large" onclick="sendComment()">Submit</button> 
                     </div>
-                </div>
+                </div> -->
 
 
 
@@ -227,11 +227,33 @@
 								        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
 								      </div>
 								      <div class="modal-body">
-								        ...
+								        	<!-- -->
+													<form>
+                            <div class="input-wrap textarea-wrap">
+                                <textarea name="comment-text" id="comment-text"></textarea>
+                            </div>
+                            <div class="comment-block" style="margin:0;">
+                            	<div class="comment" style="margin:0;">
+	                                <div class="img-block">
+	                                    <img src="{{Auth::user()->picture}}" alt="">
+	                                </div>
+	                                <div class="comment-text-block">
+	                                    <div class="comment-name">
+                                                @if(Auth::user()->name != '')
+                                                    {{Auth::user()->name}}
+                                                    @else
+                                                    {{Auth::user()->email}}
+                                                @endif
+                                            </div>
+	                                </div>
+                                </div>
+                            </div><!-- comment-block -->
+                        </form> 
+								        	<!-- -->
 								      </div>
 								      <div class="modal-footer">
 								        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								        <button type="button" class="btn btn-primary">Save changes</button>
+								        <button type="button" class="btn btn-primary" onclick="sendComment()">Submit</button>
 								      </div>
 								    </div>
 								  </div>
