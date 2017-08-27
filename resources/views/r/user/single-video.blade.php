@@ -201,9 +201,7 @@
 								        
 												<div class="media">
 												  <div class="media-left">
-												    <a href="#">
-												      <img class="media-object" src="{{Auth::user()->picture}}" alt="...">
-												    </a>
+												    <img class="media-object" src="{{Auth::user()->picture}}" alt="..." width="48" height="48"> 
 												  </div>
 												  <div class="media-body">
 												    @if(Auth::user()->name != '')
