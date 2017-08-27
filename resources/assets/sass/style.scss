@@ -9,9 +9,9 @@
 */
 $color-h: #424242;
 $width-GP-menu: 200px;
-$gap20: 20px;
-$gap30: 30px;
-$gap50: 50px;
+$gap1: 20px;
+$gap2: 30px;
+$gap3: 40px;
 
 
 
@@ -1503,75 +1503,6 @@ img{
     width: 80%;
   }
 }
-.cast-credits-wrap{
-  margin: 25px 0 85px;
-  padding: 60px 0;
-  position: relative;
-  border: 30px solid lime!important;
-  //border-top: 1px solid #e0e0e0;
-  //border-bottom: 1px solid #e0e0e0;
-  .title{
-    margin: 0 0 20px 0;
-  }
-  .cast-credits-block{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 94%;
-    .cast-credits-item{
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 0 390px;
-      -ms-flex: 0 0 390px;
-      flex: 0 0 390px;
-      max-width: 390px;
-    }
-    .cast-credits-item:first-child{
-      margin: 0 0 40px 0;
-    }
-    .cast-credits-title{
-      color: #757575;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 20px;
-      margin: 0 0 20px 0;
-    }
-    .cast-credits-text{
-      color: #2298d4;
-      font-size: 18px;
-      font-weight: 300;
-      line-height: 30px;
-    }
-  }
-  &:after{
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    height: 1px;
-    width: 90%;
-    display: block;
-    background-color: #e0e0e0;
-  }
-  &:before{
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0;
-    height: 1px;
-    width: 90%;
-    display: block;
-    background-color: #e0e0e0;
-  }
-}
 
 .reviews-block{ border:3px solid red;
   margin: 85px 0 0 0;
@@ -2726,7 +2657,7 @@ input:-webkit-autofill {
 .global-main-content{
 	float: left;
   width: 75%; 
-  margin-left: $gap30; 
+  margin-left: $gap2; 
   &.utv-card {
   	background-color: #fff;
     -webkit-box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.2);
@@ -2734,7 +2665,7 @@ input:-webkit-autofill {
 	} 
 }
 #GP-menu-sticky-wrapper.is-sticky + .global-main-content{
-	margin-left: $width-GP-menu + $gap30;  
+	margin-left: $width-GP-menu + $gap2;  
 }
 .layout-3-columns {
 	$width-aside: 300px;
@@ -2750,7 +2681,7 @@ input:-webkit-autofill {
 		}
 	}
 	#GP-menu-sticky-wrapper.is-sticky + .global-main-content{
-		margin-left: $width-GP-menu + $gap30;  
+		margin-left: $width-GP-menu + $gap2;  
 	}
 }
 
@@ -2760,7 +2691,7 @@ input:-webkit-autofill {
 	}
 	.hero,
 	.hero-sub {
-		margin-bottom: $gap30;
+		margin-bottom: $gap2;
 	}
 	.hero{
   	position: relative;  
@@ -2768,7 +2699,7 @@ input:-webkit-autofill {
 			position: absolute;
 	    bottom: 0;
 	    width: 100%;
-	    padding: $gap30;
+	    padding: $gap2;
 	// 	  .video-title{
 	// 	    color: #ffffff;
 	// 	    font-size: 30px;
@@ -2913,12 +2844,84 @@ input:-webkit-autofill {
 		}//info-block
 	}//hero
 	.hero-sub { 
-		margin-left: $gap50;
-		margin-right: $gap50;
+		margin-left: $gap3;
+		margin-right: $gap3;
 	}
+
+
+
+	
+	// .cast-credits-wrap{ 
+	//   position: relative;
+	//   //border-top: 1px solid #e0e0e0;
+	//   //border-bottom: 1px solid #e0e0e0;
+	//   .title{
+	//     margin: 0 0 20px 0;
+	//   }
+	//   .cast-credits-block{
+	//     display: -webkit-box;
+	//     display: -webkit-flex;
+	//     display: -ms-flexbox;
+	//     display: flex;
+	//     -webkit-flex-wrap: wrap;
+	//     -ms-flex-wrap: wrap;
+	//     flex-wrap: wrap;
+	//     justify-content: space-between;
+	//     -webkit-box-pack: justify;
+	//     -webkit-justify-content: space-between;
+	//     -ms-flex-pack: justify;
+	//     justify-content: space-between;
+	//     width: 94%;
+	//     .cast-credits-item{
+	//       -webkit-box-flex: 0;
+	//       -webkit-flex: 0 0 390px;
+	//       -ms-flex: 0 0 390px;
+	//       flex: 0 0 390px;
+	//       max-width: 390px;
+	//     }
+	//     .cast-credits-item:first-child{
+	//       margin: 0 0 40px 0;
+	//     }
+	//     .cast-credits-title{
+	//       color: #757575;
+	//       font-size: 18px;
+	//       font-weight: 400;
+	//       line-height: 20px;
+	//       margin: 0 0 20px 0;
+	//     }
+	//     .cast-credits-text{
+	//       color: #2298d4;
+	//       font-size: 18px;
+	//       font-weight: 300;
+	//       line-height: 30px;
+	//     }
+	//   }
+	//   &:after{
+	//     content: '';
+	//     position: absolute;
+	//     bottom: 0px;
+	//     left: 0;
+	//     height: 1px;
+	//     width: 90%;
+	//     display: block;
+	//     background-color: #e0e0e0;
+	//   }
+	//   &:before{
+	//     content: '';
+	//     position: absolute;
+	//     top: 0px;
+	//     left: 0;
+	//     height: 1px;
+	//     width: 90%;
+	//     display: block;
+	//     background-color: #e0e0e0;
+	//   }
+	// }
+
+
 	hr {
-		margin-left: $gap20;
-    margin-right: $gap20;
+		margin-left: $gap1;
+    margin-right: $gap1;
 	}
 
 

@@ -1218,58 +1218,6 @@ img {
   line-height: 24px;
   width: 80%; }
 
-.cast-credits-wrap {
-  margin: 25px 0 85px;
-  padding: 60px 0;
-  position: relative;
-  border: 30px solid lime !important; }
-  .cast-credits-wrap .title {
-    margin: 0 0 20px 0; }
-  .cast-credits-wrap .cast-credits-block {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 94%; }
-    .cast-credits-wrap .cast-credits-block .cast-credits-item {
-      -ms-flex: 0 0 390px;
-      flex: 0 0 390px;
-      max-width: 390px; }
-    .cast-credits-wrap .cast-credits-block .cast-credits-item:first-child {
-      margin: 0 0 40px 0; }
-    .cast-credits-wrap .cast-credits-block .cast-credits-title {
-      color: #757575;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 20px;
-      margin: 0 0 20px 0; }
-    .cast-credits-wrap .cast-credits-block .cast-credits-text {
-      color: #2298d4;
-      font-size: 18px;
-      font-weight: 300;
-      line-height: 30px; }
-  .cast-credits-wrap:after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    height: 1px;
-    width: 90%;
-    display: block;
-    background-color: #e0e0e0; }
-  .cast-credits-wrap:before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0;
-    height: 1px;
-    width: 90%;
-    display: block;
-    background-color: #e0e0e0; }
-
 .reviews-block {
   border: 3px solid red;
   margin: 85px 0 0 0;
@@ -2377,8 +2325,8 @@ input:-webkit-autofill {
     padding: 30px; }
 
 .global-main-content.utv-card .hero-sub {
-  margin-left: 50px;
-  margin-right: 50px; }
+  margin-left: 40px;
+  margin-right: 40px; }
 
 .global-main-content.utv-card hr {
   margin-left: 20px;
