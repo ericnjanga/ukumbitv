@@ -2880,8 +2880,7 @@ input:-webkit-autofill {
 }
 .layout-3-columns {
 	$width-aside: 300px;
-	.global-main-content {
-		float: right;
+	.global-main-content { 
 	  width: calc(75% - #{$width-aside}); 
 	}
 	.block-aside {

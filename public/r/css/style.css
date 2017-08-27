@@ -2470,7 +2470,6 @@ input:-webkit-autofill {
   margin-left: 230px; }
 
 .layout-3-columns .global-main-content {
-  float: right;
   width: calc(75% - 300px); }
 
 .layout-3-columns .block-aside {
