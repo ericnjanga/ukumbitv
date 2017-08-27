@@ -2315,6 +2315,9 @@ input:-webkit-autofill {
 .global-main-content.utv-card .hero,
 .global-main-content.utv-card .hero-sub {
   margin-bottom: 30px; }
+  .global-main-content.utv-card .hero hr,
+  .global-main-content.utv-card .hero-sub hr {
+    margin-bottom: 30px; }
 
 .global-main-content.utv-card .hero {
   position: relative; }

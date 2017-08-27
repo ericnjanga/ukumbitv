@@ -2692,6 +2692,10 @@ input:-webkit-autofill {
 	.hero,
 	.hero-sub {
 		margin-bottom: $gap2;
+
+		& hr {
+			margin-bottom: $gap2;
+		}
 	}
 	.hero{
   	position: relative;  

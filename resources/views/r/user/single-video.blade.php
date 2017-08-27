@@ -116,8 +116,8 @@
                 </div>
 
                 <hr>
-                
-                <div class="hero">
+
+                <div class="hero-sub">
                     <div class="title">Cast and credits</div>
                     <div class="cast-credits-block">
                         <div class="cast-credits-item">

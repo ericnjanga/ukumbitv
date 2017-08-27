@@ -1,5 +1,5 @@
 <div class="video-item-popup" style="display: none">
-    <div class="main-top-block">
+    <div class="hero">
         <img src="{{ asset('r/img/bg-video.png')}}" alt="">
         <div class="layer"></div>
         <div class="video-info-block">
