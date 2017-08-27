@@ -199,7 +199,7 @@
 								      <div class="modal-header">
 								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 								        
-												<div class="media">
+												<div class="media media-user-thmbsection">
 												  <div class="media-left">
 												    <img class="media-object" src="{{Auth::user()->picture}}" alt="..." width="48" height="48"> 
 												  </div>

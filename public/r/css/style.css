@@ -453,6 +453,13 @@ h1 {
 h2 {
   font-size: 28px; }
 
+/**
+ * All buttons:
+ * --------------------------------------
+*/
+.btn, button {
+  border-radius: 2px; }
+
 img {
   display: inline-block;
   vertical-align: middle;
@@ -2287,7 +2294,22 @@ input:-webkit-autofill {
  * --------------------------------------
 */
 .modal-header {
-  background-color: #B3C833; }
+  background-color: #B3C833;
+  font-size: 20px;
+  color: #fff; }
+
+.modal-footer {
+  border-radius: 0; }
+  .modal-footer button {
+    text-transform: uppercase; }
+  .modal-footer .btn-default {
+    border-width: 0; }
+
+.media-user-thmbsection {
+  margin: 0; }
+  .media-user-thmbsection .media-body {
+    width: initial;
+    vertical-align: middle; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {

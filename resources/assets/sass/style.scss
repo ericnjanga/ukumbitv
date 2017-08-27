@@ -487,24 +487,14 @@ h2 {
 
 
 
-
-
-// .title{
-//   color: #424242;
-//   font-size: 24px;
-//   font-weight: 400;
-//   line-height: 26px;
-//   margin: 0 0 4px 0;
-// }
-// .title-page{
-//   color: #424242;
-//   font-size: 24px;
-//   font-weight: 700;
-//   text-align: center;
-//   line-height: 26px;
-//   margin: 40px 0 25px 0;
-// }
-
+/**
+ * All buttons:
+ * --------------------------------------
+*/
+.btn, button {
+	border-radius: 2px;
+}
+     
 
 
 
@@ -2948,6 +2938,26 @@ input:-webkit-autofill {
 
 .modal-header {
 	background-color:  #B3C833;
+	font-size: 20px;
+  color: #fff;
+}
+.modal-footer{
+	border-radius: 0;
+	button {
+		text-transform: uppercase;
+	}
+	.btn-default {
+		    border-width: 0;
+	}
 }
 
+
+
+.media-user-thmbsection {
+	margin: 0;
+	.media-body {
+		width: initial;
+		vertical-align: middle;
+	}
+}
 
