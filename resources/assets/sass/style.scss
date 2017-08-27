@@ -2843,8 +2843,27 @@ input:-webkit-autofill {
 */
 #GP-menu-sticky-wrapper{
 	float: left;
-}
+} 
+
+
+
+
+/**
+ * Global layout styling
+ * --------------------------------------
+*/ 
 .global-main-content{
 	float: right;
   width: 75%; 
+}
+.layout-3-columns {
+	$width-aside: 300px;
+	.global-main-content {
+		float: right;
+	  width: calc(75% - $width-aside); 
+	}
+	.block-aside {
+		float: right;
+		width: $width-aside;
+	}
 }

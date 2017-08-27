@@ -2455,9 +2455,21 @@ input:-webkit-autofill {
 #GP-menu-sticky-wrapper {
   float: left; }
 
+/**
+ * Global layout styling
+ * --------------------------------------
+*/
 .global-main-content {
   float: right;
   width: 75%; }
+
+.layout-3-columns .global-main-content {
+  float: right;
+  width: calc(75% - $width-aside); }
+
+.layout-3-columns .block-aside {
+  float: right;
+  width: 300px; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {
