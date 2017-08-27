@@ -1,7 +1,7 @@
 @extends('r.layouts.user-search')
 @section('content')
-    <div class="main-wrap">
-        <div class="container">
+    
+        <div class="container-fluid">
             <div class="clearfix">
             		@include('r.chunks._filter_video')
                  
@@ -89,5 +89,5 @@
             </div>
         </div>
         @include('r.chunks._video_item_popup')
-    </div>
+     
 @endsection
