@@ -792,6 +792,10 @@ img{
   margin-bottom: 85px; 
 
 	.video-info-block{
+		position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
 	  .video-title{
 	    color: #ffffff;
 	    font-size: 30px;
