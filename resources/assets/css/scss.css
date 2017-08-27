@@ -2466,7 +2466,6 @@ input:-webkit-autofill {
   margin-left: 30px; }
 
 #GP-menu-sticky-wrapper.is-sticky + .global-main-content {
-  float: left;
   margin-left: 230px; }
 
 .layout-3-columns .global-main-content {
@@ -2478,6 +2477,9 @@ input:-webkit-autofill {
   width: 300px; }
   .layout-3-columns .block-aside .list-horizontal-wrapper {
     width: 100%; }
+
+.layout-3-columns #GP-menu-sticky-wrapper.is-sticky + .global-main-content {
+  margin-left: 230px; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {

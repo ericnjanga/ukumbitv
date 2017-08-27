@@ -2875,7 +2875,6 @@ input:-webkit-autofill {
   margin-left: $gap1;  
 }
 #GP-menu-sticky-wrapper.is-sticky + .global-main-content{
-	float: left;
 	margin-left: $width-GP-menu + $gap1;  
 }
 .layout-3-columns {
@@ -2890,6 +2889,9 @@ input:-webkit-autofill {
 		.list-horizontal-wrapper {
 			width: 100%;
 		}
+	}
+	#GP-menu-sticky-wrapper.is-sticky + .global-main-content{
+		margin-left: $width-GP-menu + $gap1;  
 	}
 }
 
