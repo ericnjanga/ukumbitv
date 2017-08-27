@@ -2282,6 +2282,13 @@ input:-webkit-autofill {
   text-transform: uppercase;
   font-size: 16px; }
 
+/**
+ * Modals
+ * --------------------------------------
+*/
+.modal-header {
+  background-color: #B3C833; }
+
 @media only screen and (max-width: 991px) {
   .lang-block span {
     display: block;
