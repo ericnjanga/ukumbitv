@@ -469,7 +469,9 @@ h4, h5, h6 {
   	font-weight: inherit;
 	}
 }
-
+h1 { 
+	font-size: 30px;
+}
 h2 {
 	font-size: 28px;
 }
@@ -2745,8 +2747,12 @@ input:-webkit-autofill {
 }
 
 .global-main-content.utv-card {
-	.video-title{
+	.title{
 		font-size: 30px;
+	}
+	.hero,
+	.hero-sub {
+		margin-bottom: 30px;
 	}
 	.hero{
   	position: relative;  

@@ -20,7 +20,7 @@
                     <img src="{{asset("r/img/bg-video.png")}}" class="img-responsive" alt="">
                     <div class="layer"></div>
                     <div class="info-block">
-                        <h1 class="video-title">{{$video->title}}</h1>
+                        <h1 class="title">{{$video->title}}</h1>
                         <div class="video-info-text">
                             <span class="age">16+</span>
                             <span class="date" style="border:3px solid red;">{{$video->created_at->format('Y')}}</span>
@@ -111,10 +111,12 @@
                     </div>
                 </div>
                 @endif
-                <div class="description-block">
-                    <div class="title">Description</div>
-                    <p class="description-text">{{$video->description}}</p>
+                <div class="hero-sub"> 
+                    <p>{{$video->description}}</p>
                 </div>
+
+                <hr>
+                
                 <div class="cast-credits-wrap">
                     <div class="title">Cast and credits</div>
                     <div class="cast-credits-block">

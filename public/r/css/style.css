@@ -447,6 +447,9 @@ h4, h5, h6 {
     font-size: inherit;
     font-weight: inherit; }
 
+h1 {
+  font-size: 30px; }
+
 h2 {
   font-size: 28px; }
 
@@ -2357,8 +2360,12 @@ input:-webkit-autofill {
 .layout-3-columns #GP-menu-sticky-wrapper.is-sticky + .global-main-content {
   margin-left: 230px; }
 
-.global-main-content.utv-card .video-title {
+.global-main-content.utv-card .title {
   font-size: 30px; }
+
+.global-main-content.utv-card .hero,
+.global-main-content.utv-card .hero-sub {
+  margin-bottom: 30px; }
 
 .global-main-content.utv-card .hero {
   position: relative; }
