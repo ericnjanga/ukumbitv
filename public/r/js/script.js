@@ -71,20 +71,20 @@ $.ajaxSetup({
 //     ]
 // });
 /*********video**popup*************/
-if ($(window).width() > 1199) {
-    $(".cb-video").colorbox({iframe: true, width: '90%', height: '80%'});
-} else if ($(window).width() > 991) {
-    $(".cb-video").colorbox({iframe: true, width: '90%', height: '70%'});
+// if ($(window).width() > 1199) {
+//     $(".cb-video").colorbox({iframe: true, width: '90%', height: '80%'});
+// } else if ($(window).width() > 991) {
+//     $(".cb-video").colorbox({iframe: true, width: '90%', height: '70%'});
 
-} else if ($(window).width() > 767) {
-    $(".cb-video").colorbox({iframe: true, width: '90%', height: '55%'});
+// } else if ($(window).width() > 767) {
+//     $(".cb-video").colorbox({iframe: true, width: '90%', height: '55%'});
 
 
-} else if ($(window).width() > 575) {
-    $(".cb-video").colorbox({iframe: true, width: '90%', height: '45%'});
-} else {
-    $(".cb-video").colorbox({iframe: true, width: '100%', height: '40%'});
-}
+// } else if ($(window).width() > 575) {
+//     $(".cb-video").colorbox({iframe: true, width: '90%', height: '45%'});
+// } else {
+//     $(".cb-video").colorbox({iframe: true, width: '100%', height: '40%'});
+// }
 
 $("#payinfo").click(function () {
     $('.payment-content-block').slideToggle(500);
@@ -288,11 +288,11 @@ var VideoInfoPopup = (function () {
 
 
 
-console.log('>>>>', $('#GP-menu').length);
+// console.log('>>>>', $('#GP-menu').length);
 
 //Stick "GP-menu"
 $(document).ready(function(){
-console.log('>>>>', $('#GP-menu').length);
+// console.log('>>>>', $('#GP-menu').length);
   $('#GP-menu').sticky({topSpacing:0});
 });
 
