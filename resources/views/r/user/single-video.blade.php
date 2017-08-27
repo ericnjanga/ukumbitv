@@ -118,7 +118,7 @@
                 <hr>
 
                 <div class="hero-sub">
-                    <div class="title">Cast and credits</div>
+                    <h2>Cast and credits</h2>
                     <div class="cast-credits-block">
                         <div class="cast-credits-item">
                             <div class="cast-credits-title">Actors</div>
@@ -145,7 +145,7 @@
                     </div>
                 </div>
                 <div class="hero-sub">
-                    <div class="title">Reviews</div>
+                    <h2>Reviews</h2>
                     <div class="likes-block">
                         <div class="likes-item like">
                             @if($checkLike != null)

@@ -247,7 +247,7 @@
                         <p>Scarlett Johansson stars in the visually stunning Ghost in the Shell, an action-packed adventure set in a future world where people are enhanced with technology. Believing she was rescued from near death, Major (Johansson) becomes the first of her kind: a human mind inside an artificial body designed to fight the war against cyber-crime. While investigating a dangerous criminal, Major makes a shocking discovery – the corporation that created her lied about her past life in order to control her. Unsure what to believe, Major will stop at nothing to unravel the mystery of her true identity and exact revenge against the corporation she was built to serve.</p>
                     </div>
                     <div class="hero-sub">
-                        <div class="title">Cast and credits</div>
+                    		<h2>Cast and credits</h2>
                         <div class="cast-credits-block">
                             <div class="cast-credits-item">
                                 <div class="cast-credits-title">Actors</div>
@@ -270,7 +270,7 @@
                         </div>
                     </div>
                     <div class="hero-sub">
-                        <div class="title">Reviews</div>
+                        <h2>Reviews</h2>
                         <div class="likes-block">
                             <div class="likes-item like">
                                 <span class="icon icon-thumbs-up"></span>
