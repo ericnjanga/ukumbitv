@@ -2445,6 +2445,7 @@ input:-webkit-autofill {
  * --------------------------------------
 */
 #GP-menu-sticky-wrapper {
+  margin-left: -15px;
   float: left; }
 
 /**
