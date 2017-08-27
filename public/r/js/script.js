@@ -297,6 +297,7 @@ $(document).ready(function(){
 
 
  	$('body').on('click', '#btn-comment-rate-modal', function(){
+ 		console.log('heyeyey');
  		$('#comment-rate-modal').modal();
  	});
   
