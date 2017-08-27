@@ -283,15 +283,20 @@ var VideoInfoPopup = (function () {
     });
 
 
+})();//VideoInfoPopup
 
 
 
-    //Stick "GP-menu"
-	  $(document).ready(function(){
-	    $('#GP-menu').sticky({topSpacing:0});
-	  });
 
 
-})();
+
+//Stick "GP-menu"
+$(document).ready(function(){
+  $('#GP-menu').sticky({topSpacing:0});
+});
+
+
+
+
 
 
