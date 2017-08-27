@@ -2447,8 +2447,10 @@ input:-webkit-autofill {
  * Styling main content of the entire app
  * --------------------------------------
 */
+.container-fluid {
+  padding-left: 0; }
+
 #GP-menu-sticky-wrapper {
-  margin-left: -15px;
   float: left; }
 
 .GP-menu {
