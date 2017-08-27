@@ -198,24 +198,24 @@
 								    <div class="modal-content">
 								      <div class="modal-header">
 								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								        <!-- <h4 class="modal-title" id="myModalLabel">Modal title</h4> -->
+								        
+												<div class="media">
+												  <div class="media-left">
+												    <a href="#">
+												      <img class="media-object" src="{{Auth::user()->picture}}" alt="...">
+												    </a>
+												  </div>
+												  <div class="media-body">
+												    @if(Auth::user()->name != '')
+                                {{Auth::user()->name}}
+                                @else
+                                {{Auth::user()->email}}
+                            @endif
+												  </div>
+												</div>
 
-								        <div class="comment-block" style="margin:0;">
-                        	<!-- <div class="comment" style="margin:0;"> -->
-                              <div class="img-block">
-                                  <img src="{{Auth::user()->picture}}" alt="">
-                              </div>
-                              <div class="comment-text-block">
-                                  <div class="comment-name">
-                                      @if(Auth::user()->name != '')
-                                          {{Auth::user()->name}}
-                                          @else
-                                          {{Auth::user()->email}}
-                                      @endif
-                                  </div>
-                              </div>
-                            <!-- </div> -->
-                        </div><!-- comment-block -->
+
+								         
 								      </div>
 								      <div class="modal-body">
 								        	<!-- -->
