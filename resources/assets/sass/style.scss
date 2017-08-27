@@ -2860,7 +2860,7 @@ input:-webkit-autofill {
 	$width-aside: 300px;
 	.global-main-content {
 		float: right;
-	  width: calc(75% - $width-aside); 
+	  width: calc(75% - #{$width-aside}); 
 	}
 	.block-aside {
 		float: right;
