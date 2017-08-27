@@ -39,12 +39,6 @@
   -->
     <script type="text/javascript" src="{{asset('r/js/script.js')}}"></script>
     <script type="text/javascript" src="{{asset('r/js/Google-play-menu.js')}}"></script>
-    <script type="text/javascript" src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script>
-
-	  <script>
-		  $(document).ready(function(){
-		    $('#GP-menu').sticky({topSpacing:0});
-		  });
-	  </script>
+    <script type="text/javascript" src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script> 
 @yield('scripts')
 </html>
