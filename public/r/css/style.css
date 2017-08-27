@@ -1218,62 +1218,6 @@ img {
   line-height: 24px;
   width: 80%; }
 
-.reviews-block {
-  border: 3px solid red;
-  margin: 85px 0 0 0;
-  width: 70%; }
-  .reviews-block .title {
-    margin: 0 0 25px 0; }
-  .reviews-block .likes-block {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 35px;
-    line-height: 34px; }
-    .reviews-block .likes-block .likes-item {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 20px;
-      -ms-flex: 0 0 100px;
-      flex: 0 0 100px;
-      max-width: 100px;
-      position: relative;
-      padding-left: 45px; }
-      .reviews-block .likes-block .likes-item .icon {
-        font-size: 34px;
-        position: absolute;
-        left: 5px; }
-    .reviews-block .likes-block .like {
-      color: #00ef76; }
-      .reviews-block .likes-block .like .icon {
-        top: -10px; }
-    .reviews-block .likes-block .dislike {
-      color: #eeb33d; }
-      .reviews-block .likes-block .dislike .icon {
-        top: 0px; }
-    .reviews-block .likes-block .butn-block {
-      -ms-flex: 0 0 70%;
-      flex: 0 0 70%;
-      max-width: 70%;
-      text-align: right; }
-      .reviews-block .likes-block .butn-block .butn {
-        width: 160px;
-        position: relative;
-        font-size: 14px;
-        font-weight: 400; }
-        .reviews-block .likes-block .butn-block .butn .icon {
-          position: absolute;
-          top: 8px;
-          left: 7px;
-          font-size: 15px; }
-  .reviews-block > .butn {
-    margin: 0 auto;
-    display: block;
-    width: 160px; }
-
 .comment-block {
   margin: 57px 0 70px; }
   .comment-block .comment {
@@ -2332,8 +2276,8 @@ input:-webkit-autofill {
   margin-right: 40px; }
 
 .global-main-content.utv-card hr {
-  margin-left: 20px;
-  margin-right: 20px; }
+  margin-left: 25px;
+  margin-right: 25px; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {

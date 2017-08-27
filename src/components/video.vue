@@ -269,7 +269,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="reviews-block">
+                    <div class="hero-sub">
                         <div class="title">Reviews</div>
                         <div class="likes-block">
                             <div class="likes-item like">
