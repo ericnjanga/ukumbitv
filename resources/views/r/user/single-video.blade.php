@@ -217,11 +217,21 @@
 								      </div>
 								      <div class="modal-body">
 								        	<!-- -->
-													<form>
-                            <div class="input-wrap textarea-wrap">
-                                <textarea name="comment-text" id="comment-text"></textarea>
-                            </div> 
-                        </form>  
+								        <div class="media">
+												  <div class="media-left">
+												  	<img class="media-object" src="{{$video->videoimage->imgSmall1}}" alt=""> 
+												  </div>
+												  <div class="media-body">
+												    <form>
+	                            <div class="input-wrap textarea-wrap">
+	                                <textarea name="comment-text" id="comment-text"></textarea>
+	                            </div> 
+		                        </form> 
+												  </div>
+								        </div><!-- media -->
+
+                          
+													 
 								      </div>
 								      <div class="modal-footer">
 								        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

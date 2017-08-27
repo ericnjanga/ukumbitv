@@ -2955,6 +2955,13 @@ input:-webkit-autofill {
 
 .media-user-thmbsection {
 	margin: 0;
+	$img-size : 48px;
+	img {
+		width: $img-size;
+		height: $img-size;
+		border: 2px solid #333;
+		border-radius: $img-size;
+	}
 	.media-body {
 		width: initial;
 		vertical-align: middle;
