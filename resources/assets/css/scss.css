@@ -198,7 +198,6 @@ a {
   text-decoration: none;
   transition: background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   color: #2298d4;
-  font-size: 13px;
   font-weight: 400; }
   a:hover {
     cursor: pointer;
@@ -438,6 +437,13 @@ h1, h2, h3,
 h4, h5, h6 {
   color: #424242;
   font-weight: 100; }
+  h1 a, h2 a, h3 a,
+  h4 a, h5 a, h6 a {
+    color: #424242;
+    font-size: inherit; }
+
+h2 {
+  font-size: 28px; }
 
 img {
   display: inline-block;
@@ -802,7 +808,8 @@ img {
 
 .list-horizontal-wrapper {
   width: 3000px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin-left: -5px; }
 
 .video-item {
   margin: 5px;
