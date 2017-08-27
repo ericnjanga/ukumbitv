@@ -443,12 +443,22 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 
 
 /**
+ * Global variables
+ * --------------------------------------
+*/
+$color-h: #424242;
+$width-GP-menu: 200px;
+$gap1: 30px; 
+
+
+
+
+/**
  * Import:
  * - Google play menu
  * - utilities/cleafix
  * --------------------------------------
 */
-$color-h: #424242;
 h1, h2, h3,
 h4, h5, h6 {
   color: $color-h;
@@ -2845,6 +2855,9 @@ input:-webkit-autofill {
 	margin-left: -15px;
 	float: left;
 } 
+.GP-menu {
+  max-width: $width-GP-menu;  
+}
 
 
 
@@ -2856,6 +2869,10 @@ input:-webkit-autofill {
 .global-main-content{
 	float: right;
   width: 75%; 
+}
+.sticky-wrapper .global-main-content{
+	float: left;
+	margin-left: $width-GP-menu + $gap1;  
 }
 .layout-3-columns {
 	$width-aside: 300px;

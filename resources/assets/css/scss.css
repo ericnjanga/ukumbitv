@@ -428,6 +428,10 @@ textarea:focus:-ms-input-placeholder {
   transition: opacity 0.3s ease; }
 
 /**
+ * Global variables
+ * --------------------------------------
+*/
+/**
  * Import:
  * - Google play menu
  * - utilities/cleafix
@@ -2243,7 +2247,6 @@ input:-webkit-autofill {
   position: relative;
   overflow: hidden;
   height: 276px;
-  max-width: 200px;
   background-color: #ebebeb; }
 
 .GP-menu * {
@@ -2448,6 +2451,9 @@ input:-webkit-autofill {
   margin-left: -15px;
   float: left; }
 
+.GP-menu {
+  max-width: 200px; }
+
 /**
  * Global layout styling
  * --------------------------------------
@@ -2455,6 +2461,10 @@ input:-webkit-autofill {
 .global-main-content {
   float: right;
   width: 75%; }
+
+.sticky-wrapper .global-main-content {
+  float: left;
+  margin-left: 230px; }
 
 .layout-3-columns .global-main-content {
   float: right;
