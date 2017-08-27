@@ -164,7 +164,7 @@
                             <span id="dislikes-count">{{$dislikes}}</span>
                         </div>
                         <div class="butn-block">
-                            <a href="" class="butn butn-orange"><span class="icon icon-pencil-edit-button"></span>Write
+                            <a href="" class="butn butn-orange"  data-toggle="modal" data-target="#comment-rate-modal"><span class="icon icon-pencil-edit-button"></span>Write
                                 a review</a>
                         </div>
                     </div>
@@ -211,10 +211,31 @@
                                 </div>
                             </div><!-- comment-block -->
                         </form>
-                        <button class="butn butn-orange butn-large" onclick="sendComment()">Submit</button>
-
+                        <button class="butn butn-orange butn-large" onclick="sendComment()">Submit</button> 
                     </div>
                 </div>
+
+
+
+                <!-- comment and rating modal -->
+                <div class="modal fade" id="comment-rate-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+								      </div>
+								      <div class="modal-body">
+								        ...
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								        <button type="button" class="btn btn-primary">Save changes</button>
+								      </div>
+								    </div>
+								  </div>
+								</div>
+                <!-- comment and rating modal -->
             </div><!-- global-main-content -->
 
             <aside class="block-aside">
