@@ -36,17 +36,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="video-slider-wrap">
-                        <a href="" class="title link-page">New Videos</a>
-                        <div class="video-slider-block-wrap">
-                            <div class="video-slider-block">
-                                @foreach($recent_videos as $video)
-                                    @include('r.chunks._video_item')
-                                @endforeach 
-                            </div>
-                        </div>
+                    <div class="block-wrap">
+                        <a href="" class="title link-page">New Videos</a> 
+                          <div class="list-horizontal-wrapper">
+                              @foreach($recent_videos as $video)
+                                  @include('r.chunks._video_item')
+                              @endforeach 
+                          </div> 
                     </div>
-                    <div class="video-slider-wrap">
+                    <div class="block-wrap">
                         <a href="" class="title link-page">My List</a>
 
 
@@ -57,22 +55,22 @@
                             </div>
                         @else
 
-                            <div class="video-slider-block">
+                            <div class="list-horizontal-wrapper">
                                 @foreach($watch_lists as $video)
                                     @include('r.chunks._video_item')
                                 @endforeach
                             </div>
                         @endif
                     </div>
-                    <div class="video-slider-wrap">
+                    <div class="block-wrap">
                         <a href="" class="title link-page">Popular Videos</a>
-                        <div class="video-slider-block">
+                        <div class="list-horizontal-wrapper">
                             @foreach($trendings as $video)
                                 @include('r.chunks._video_item')
                             @endforeach
                         </div>
                     </div>
-                    <div class="video-slider-wrap">
+                    <div class="block-wrap">
                         <a href="" class="title link-page">Liked Videos</a>
                         <div class="no-video">
                             <div>No liked videos yet</div>

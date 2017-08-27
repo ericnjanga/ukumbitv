@@ -792,22 +792,12 @@ img {
   line-height: 26px;
   margin: 0 0 4px 0; }
 
-.video-slider-wrap {
+.block-wrap {
   margin: 0 0 75px 0; }
 
-.video-slider-block-wrap {
-  margin: 0 -10px;
-  padding: 0 5px; }
-
-.video-slider-block .slick-arrow {
-  display: none !important;
-  height: 330px; }
-
-.video-slider-block:hover .slick-arrow {
-  display: block !important; }
-
-.video-slider-block .slick-arrow.slick-disabled {
-  display: none !important; }
+.list-horizontal-wrapper {
+  width: 3000px;
+  overflow-x: hidden; }
 
 .video-item {
   margin: 5px;
@@ -1320,7 +1310,7 @@ img {
   .series-list-block .slick-arrow.slick-disabled {
     display: none !important; }
 
-.video-wrap .video-slider-wrap {
+.video-wrap .block-wrap {
   margin: 0 0 65px 0; }
 
 .description-block {
@@ -1475,10 +1465,10 @@ img {
 .form-block-wrap {
   padding: 0 0 85px 0; }
 
-.form-block-wrap + .video-slider-wrap {
+.form-block-wrap + .block-wrap {
   margin: 0 0 85px 0;
   position: relative; }
-  .form-block-wrap + .video-slider-wrap:before {
+  .form-block-wrap + .block-wrap:before {
     content: "";
     position: absolute;
     top: -85px;
@@ -2228,7 +2218,9 @@ input:-webkit-autofill {
     color: rgba(238, 179, 61, 0.8); }
 
 /**
- * Import Google play menu
+ * Import:
+ * - Google play menu
+ * - utilities/cleafix
  * --------------------------------------
 */
 /**
@@ -2433,6 +2425,23 @@ input:-webkit-autofill {
 
 .GP-menu .hide a .menu-entry-text {
   background: white; }
+
+.clearfix:before,
+.clearfix:after,
+.list-horizontal-wrapper:before,
+.list-horizontal-wrapper:after,
+.block-wrap:before,
+.block-wrap:after {
+  display: table;
+  content: " "; }
+
+.clearfix:before,
+.clearfix:after,
+.list-horizontal-wrapper:before,
+.list-horizontal-wrapper:after,
+.block-wrap:before,
+.block-wrap:after {
+  clear: both; }
 
 /**
  * Styling main content of the entire app

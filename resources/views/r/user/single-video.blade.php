@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     @if($video->video_type == 'episode')
-                    <div class="video-slider-wrap">
+                    <div class="block-wrap">
                         <div class="title">Episodes</div>
                         <div class="series-list-block">
                             <ul class="series-list-slider">
@@ -82,8 +82,8 @@
                                 <li><a href="">Series 15</a></li>
                             </ul>
                         </div>
-                        <div class="video-slider-block-wrap">
-                            <div class="video-slider-block">
+                        <div class="list-horizontal-wrapper-wrap">
+                            <div class="list-horizontal-wrapper">
 
                                 @for ($group=1;$group<3;$group++)
                                     @for($i=1; $i<5; $i++) 
@@ -213,10 +213,10 @@
 
                         </div>
                     </div>
-                    <div class="video-slider-wrap">
+                    <div class="block-wrap">
                         <div class="title">Similar Videos</div>
-                        <div class="video-slider-block-wrap">
-                            <div class="video-slider-block">
+                         
+                            <div class="list-horizontal-wrapper">
                                 @if(count($relatedVideos) == 0)
                                     <h1>There is no videos</h1>
                                 @else
@@ -242,7 +242,7 @@
                                 @endforeach
                                     @endif
                             </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

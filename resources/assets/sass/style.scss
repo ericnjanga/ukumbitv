@@ -892,31 +892,15 @@ img{
   line-height: 26px;
   margin: 0 0 4px 0;
 }
-.video-slider-wrap{
+.block-wrap{
   margin: 0 0 75px 0;
 }
-.video-slider-block-wrap{
-  margin: 0 -10px;
-  padding: 0 5px;
+ 
+.list-horizontal-wrapper{
+  width: 3000px;
+  overflow-x: hidden;
 }
-.video-slider-block{
-  .slick-arrow{
-    display: none !important;
-    height: 330px;
-  }
-  &:hover{
-    .slick-arrow{
-      display: block !important;
-    }
-  }
-  .slick-arrow.slick-disabled{
-    display: none !important;
-  }
-}
-.video-item-block{
-  // padding: 7px 0;
-  
-}
+ 
 .video-item{
 	margin: 5px;
 	float: left;
@@ -1585,7 +1569,7 @@ img{
   }
 }
 .video-wrap{
-  .video-slider-wrap{
+  .block-wrap{
     margin: 0 0 65px 0;
   }
 }
@@ -1795,7 +1779,7 @@ img{
   //margin: 0 0 85px 0;
   padding: 0 0 85px 0;
 }
-.form-block-wrap + .video-slider-wrap{
+.form-block-wrap + .block-wrap{
   margin: 0 0 85px 0;
   position: relative;
   &:before{
@@ -2796,10 +2780,13 @@ input:-webkit-autofill {
 
 
 /**
- * Import Google play menu
+ * Import:
+ * - Google play menu
+ * - utilities/cleafix
  * --------------------------------------
 */
 @import 'Google-play-menu';
+@import 'utilities/clearfix';
 
 
 

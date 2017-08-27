@@ -1,0 +1,19 @@
+
+//Clearfix class from bootstrap
+.clearfix:before,
+.clearfix:after,
+.list-horizontal-wrapper:before,
+.list-horizontal-wrapper:after,
+.block-wrap:before,
+.block-wrap:after {
+  display: table;
+  content: " ";
+}
+.clearfix:before,
+.clearfix:after,
+.list-horizontal-wrapper:before,
+.list-horizontal-wrapper:after,
+.block-wrap:before,
+.block-wrap:after {
+  clear: both;
+}

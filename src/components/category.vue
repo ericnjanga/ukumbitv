@@ -70,10 +70,10 @@
                         </aside>
                     </div>
                     <div class="col-sm-10">
-                        <div class="video-slider-wrap">
+                        <div class="block-wrap">
                             <div class="title">New Videos</div>
-                            <div class="video-slider-block-wrap">
-                                <div class="video-slider-block"> 
+                            <div class="list-horizontal-wrapper-wrap">
+                                <div class="list-horizontal-wrapper"> 
 	                                    <div class="video-item">
 	                                        <div class="video-img">
 	                                            <img src="~@/assets/img/video1.png" alt="">
@@ -386,36 +386,7 @@
   export default {
 
     mounted: function () {
-      $('.video-slider-block').slick({
-        dots: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
+      
 
     },
   }

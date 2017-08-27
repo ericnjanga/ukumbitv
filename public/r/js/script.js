@@ -9,7 +9,7 @@ $.ajaxSetup({
 
 
 /***********slider*************/
-// $('.video-slider-block').slick({
+// $('.list-horizontal-wrapper').slick({
 //     dots: false,
 //     infinite: false,
 //     speed: 300,
@@ -231,59 +231,59 @@ var VideoFilter = (function () {
     });
 })();
 
-var VideoInfoPopup = (function () {
-    var container = '.video-slider-block';
-    var element = '.video-item';
+// var VideoInfoPopup = (function () {
+//     var container = '.list-horizontal-wrapper';
+//     var element = '.video-item';
 
-    var popup = '.video-item-popup';
-    var $popup = $('.video-item-popup');
-    var $currentElement = false;
+//     var popup = '.video-item-popup';
+//     var $popup = $('.video-item-popup');
+//     var $currentElement = false;
 
-    var setPopupContent = function ($elem) {
-        $popup.find('.video-title').text($elem.find('.video-title').text());
-        $popup.find('.likes-count').text($elem.find('.likes-count').text());
-    };
+//     var setPopupContent = function ($elem) {
+//         $popup.find('.video-title').text($elem.find('.video-title').text());
+//         $popup.find('.likes-count').text($elem.find('.likes-count').text());
+//     };
 
-    var show = function () {
-        $popup.css('display', 'block');
-    };
+//     var show = function () {
+//         $popup.css('display', 'block');
+//     };
 
-    var hide = function () {
-        $popup.css('display', 'none');
-    };
+//     var hide = function () {
+//         $popup.css('display', 'none');
+//     };
 
-    var setPosition = function () {
-        var $container = $currentElement.closest(container);
-        var elementWidth = $currentElement.width();
-        var containerOffset = $container.offset();
-        var currentElementOffset = $currentElement.offset();
-        var containerRightEnd = containerOffset.left + $container.width();
+//     var setPosition = function () {
+//         var $container = $currentElement.closest(container);
+//         var elementWidth = $currentElement.width();
+//         var containerOffset = $container.offset();
+//         var currentElementOffset = $currentElement.offset();
+//         var containerRightEnd = containerOffset.left + $container.width();
 
-        var left = (currentElementOffset.left + elementWidth/2)-$popup.width()/2;
-        var top = currentElementOffset.top-50;
-        if(containerOffset.left > left){
-            left = containerOffset.left;
-        }
-        if(containerRightEnd<left+$popup.width()){
-            left = containerRightEnd-$popup.width();
-        }
-        $popup.css({'left':left,'top':top});
-    };
-
-
-    $(document).on('mouseenter', container + ' ' + element, function () {
-        setPopupContent($(this));
-        $currentElement = $(this);
-        setPosition();
-        show();
-    }).on('mouseleave', container + ' ' + element + ', ' + popup, function () {
-        if (!$popup.is(':hover') && !$currentElement.is(':hover')) {
-            hide();
-        }
-    });
+//         var left = (currentElementOffset.left + elementWidth/2)-$popup.width()/2;
+//         var top = currentElementOffset.top-50;
+//         if(containerOffset.left > left){
+//             left = containerOffset.left;
+//         }
+//         if(containerRightEnd<left+$popup.width()){
+//             left = containerRightEnd-$popup.width();
+//         }
+//         $popup.css({'left':left,'top':top});
+//     };
 
 
-})();//VideoInfoPopup
+//     $(document).on('mouseenter', container + ' ' + element, function () {
+//         setPopupContent($(this));
+//         $currentElement = $(this);
+//         setPosition();
+//         show();
+//     }).on('mouseleave', container + ' ' + element + ', ' + popup, function () {
+//         if (!$popup.is(':hover') && !$currentElement.is(':hover')) {
+//             hide();
+//         }
+//     });
+
+
+// })();//VideoInfoPopup
 
 
 
