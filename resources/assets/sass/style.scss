@@ -914,63 +914,65 @@ img{
   }
 }
 .video-item-block{
-  padding: 7px 0;
-  .video-item{
-    width: 175px;
-    margin: 0 auto;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: #fff;
-    padding: 0 0 14px 0;
-    transition: all 1s ease-in-out;
-    .video-img{
-      margin: 0 0 5px 0;
+  // padding: 7px 0;
+  
+}
+.video-item{
+	margin: 5px;
+	float: left;
+  width: 175px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #fff;
+  padding: 0 0 14px 0;
+  transition: all 1s ease-in-out;
+  .video-img{
+    margin: 0 0 5px 0;
+    height: 250px;
+    line-height: 170px;
+    text-align: center;
+    img{
+      width: 100%;
       height: 250px;
-      line-height: 170px;
-      text-align: center;
-      img{
-        width: 100%;
-        height: 250px;
-      }
     }
-    .video-title{
-      margin: 0 auto 17px;
-      font-size: 16px;
-      font-weight: 300;
-      color: #424242;
-      width: 155px;
+  }
+  .video-title{
+    margin: 0 auto 17px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #424242;
+    width: 155px;
+    line-height: 20px;
+  }
+  .video-info{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 10px;
+    line-height: 24px;
+    .video-genre{
+      color: #9e9e9e;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    .butn-like{
       line-height: 20px;
-    }
-    .video-info{
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      justify-content: space-between;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      padding: 0 10px;
-      line-height: 24px;
-      .video-genre{
-        color: #9e9e9e;
-        font-size: 13px;
-        font-weight: 400;
-      }
-      .butn-like{
-        line-height: 20px;
-        color: #424242;
-        font-size: 12px;
-        font-weight: 400;
-        .icon{
-          color: #49ed6f;
-          font-size: 16px;
-          margin: 0 9px 0 0;
-        }
+      color: #424242;
+      font-size: 12px;
+      font-weight: 400;
+      .icon{
+        color: #49ed6f;
+        font-size: 16px;
+        margin: 0 9px 0 0;
       }
     }
   }

@@ -86,27 +86,25 @@
                             <div class="video-slider-block">
 
                                 @for ($group=1;$group<3;$group++)
-                                    @for($i=1; $i<5; $i++)
-                                        <div class="video-item-block">
-                                            <div class="video-item video-item-dis">
+                                    @for($i=1; $i<5; $i++) 
+                                        <div class="video-item video-item-dis">
 
-                                                <div class="video-img">
-                                                    <img src="{{asset('r/img/video'.$i.'.png')}}" alt="">
+                                            <div class="video-img">
+                                                <img src="{{asset('r/img/video'.$i.'.png')}}" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the
+                                                Fallen
+                                            </div>
+                                            <div class="video-info">
+                                                <div class="video-genre">Drama</div>
+                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>
+                                                    125
                                                 </div>
-                                                <div class="video-title ellipsis-gradient">Transformers: Revenge of the
-                                                    Fallen
-                                                </div>
-                                                <div class="video-info">
-                                                    <div class="video-genre">Drama</div>
-                                                    <div class="butn-like"><span class="icon icon-thumbs-up"></span>
-                                                        125
-                                                    </div>
-                                                    <div class="butn-dis"><span
-                                                                class="icon icon-thumbs-down-hand"></span>19
-                                                    </div>
+                                                <div class="butn-dis"><span
+                                                            class="icon icon-thumbs-down-hand"></span>19
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> 
                                     @endfor
                                 @endfor
                             </div>
@@ -223,24 +221,24 @@
                                     <h1>There is no videos</h1>
                                 @else
                                 @foreach($relatedVideos as $relatedVideo)
-                                        <div class="video-item-block">
-                                            <div class="video-item">
-                                                <a href="{{route('user.singleVideo',$relatedVideo->watchid)}}">
-                                                    <div class="video-img">
-                                                        <img src="{{$relatedVideo->videoimage->imgSmall1}}" alt="">
-                                                    </div>
-                                                    <div class="video-title ellipsis-gradient">
-                                                        {{$relatedVideo->title}}
-                                                    </div>
-                                                </a>
-                                                <div class="video-info">
-                                                    <div class="video-genre">{{$relatedVideo->category->name}}</div>
-                                                    <div class="butn-like"><span class="icon icon-thumbs-up"></span>
-                                                        {{count($relatedVideo->likes)}}
-                                                    </div>
-                                                </div>
+                                        
+                                    <div class="video-item">
+                                        <a href="{{route('user.singleVideo',$relatedVideo->watchid)}}">
+                                            <div class="video-img">
+                                                <img src="{{$relatedVideo->videoimage->imgSmall1}}" alt="">
+                                            </div>
+                                            <div class="video-title ellipsis-gradient">
+                                                {{$relatedVideo->title}}
+                                            </div>
+                                        </a>
+                                        <div class="video-info">
+                                            <div class="video-genre">{{$relatedVideo->category->name}}</div>
+                                            <div class="butn-like"><span class="icon icon-thumbs-up"></span>
+                                                {{count($relatedVideo->likes)}}
                                             </div>
                                         </div>
+                                    </div>
+                                        
                                 @endforeach
                                     @endif
                             </div>
