@@ -305,6 +305,52 @@ $(document).ready(function(){
 
 
 
+/**
+ * Sunmitting comments
+ * -------------------
+*/
+
+$('body').on('click', '#btn-submitcomment', function(){
+	console.log('***heyeyey');
+	// $('#comment-rate-modal').modal();
+
+  if($('#comment-text').val() === '') {
+    swal("Hmm", "Need to write a review, try again pls", "error");
+	} else {
+
+    var token = $('meta[name="csrf-token"]').attr('content');
+    var fd = new FormData;
+
+    fd.append('_token', token);
+    fd.append('video_id', '{{$video->id}}');
+    fd.append('text', $('#comment-text').val());
+
+    $.ajax({
+        type: 'POST',
+        url: '{{route('send-comment')}}',
+        contentType: false,
+        processData: false,
+        data: fd,
+        dataType: 'html',
+        success: function(data){
+            var rep = JSON.parse(data);
+            //alert('Comment successful send!');
+            //console.log(rep);
+            $('#comment-text').val('');
+            $("#new-comment-section").append('<div class="comment"><div class="img-block"><img src="{{Auth::user()->picture}}" alt=""></div><div class="comment-text-block"><div class="comment-name">{{Auth::user()->name}}</div><p class="comment-text">'+rep.text+'</p></div></div>');
+        },
+        error: function (data) {
+            alert('error '+data);
+        }
+    });
+
+	}
+});
+
+
+
+
+
 
 
 

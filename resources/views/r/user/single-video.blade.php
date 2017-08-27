@@ -188,33 +188,7 @@
                     </div>
                     {{--<a href="" class="butn butn-orange-white butn-large">Load more</a>--}}
                 </div>
-                <!-- <div class="form-block-wrap">
-                    <div class="form-block">
-                        <div class="title-form">Write your review</div>
-                        <form>
-                            <div class="input-wrap textarea-wrap">
-                                <textarea name="comment-text" id="comment-text"></textarea>
-                            </div>
-                            <div class="comment-block" style="margin:0;">
-                            	<div class="comment" style="margin:0;">
-	                                <div class="img-block">
-	                                    <img src="{{Auth::user()->picture}}" alt="">
-	                                </div>
-	                                <div class="comment-text-block">
-	                                    <div class="comment-name">
-                                                @if(Auth::user()->name != '')
-                                                    {{Auth::user()->name}}
-                                                    @else
-                                                    {{Auth::user()->email}}
-                                                @endif
-                                            </div>
-	                                </div>
-                                </div>
-                            </div> 
-                        </form>
-                        <button class="butn butn-orange butn-large" onclick="sendComment()">Submit</button> 
-                    </div>
-                </div> -->
+                
 
 
 
@@ -224,36 +198,36 @@
 								    <div class="modal-content">
 								      <div class="modal-header">
 								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+								        <!-- <h4 class="modal-title" id="myModalLabel">Modal title</h4> -->
+
+								        <div class="comment-block" style="margin:0;">
+                        	<!-- <div class="comment" style="margin:0;"> -->
+                              <div class="img-block">
+                                  <img src="{{Auth::user()->picture}}" alt="">
+                              </div>
+                              <div class="comment-text-block">
+                                  <div class="comment-name">
+                                      @if(Auth::user()->name != '')
+                                          {{Auth::user()->name}}
+                                          @else
+                                          {{Auth::user()->email}}
+                                      @endif
+                                  </div>
+                              </div>
+                            <!-- </div> -->
+                        </div><!-- comment-block -->
 								      </div>
 								      <div class="modal-body">
 								        	<!-- -->
 													<form>
                             <div class="input-wrap textarea-wrap">
                                 <textarea name="comment-text" id="comment-text"></textarea>
-                            </div>
-                            <div class="comment-block" style="margin:0;">
-                            	<div class="comment" style="margin:0;">
-	                                <div class="img-block">
-	                                    <img src="{{Auth::user()->picture}}" alt="">
-	                                </div>
-	                                <div class="comment-text-block">
-	                                    <div class="comment-name">
-                                                @if(Auth::user()->name != '')
-                                                    {{Auth::user()->name}}
-                                                    @else
-                                                    {{Auth::user()->email}}
-                                                @endif
-                                            </div>
-	                                </div>
-                                </div>
-                            </div><!-- comment-block -->
-                        </form> 
-								        	<!-- -->
+                            </div> 
+                        </form>  
 								      </div>
 								      <div class="modal-footer">
 								        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								        <button type="button" class="btn btn-primary" onclick="sendComment()">Submit</button>
+								        <button id="btn-submitcomment" type="button" class="btn btn-primary">Submit</button>
 								      </div>
 								    </div>
 								  </div>
@@ -301,41 +275,7 @@
         {{--$( document ).ready(function() {--}}
             {{--$('#like-btn-top').html('<span class="icon icon-thumbs-up"></span>{{$likes}}');--}}
         {{--});--}}
-        function sendComment() {
-
-            if($('#comment-text').val() === '') {
-                swal("Hmm", "Need to write a review, try again pls", "error");
-            } else {
-
-                var token = $('meta[name="csrf-token"]').attr('content');
-                var fd = new FormData;
-
-                fd.append('_token', token);
-                fd.append('video_id', '{{$video->id}}');
-                fd.append('text', $('#comment-text').val());
-
-                $.ajax({
-                    type: 'POST',
-                    url: '{{route('send-comment')}}',
-                    contentType: false,
-                    processData: false,
-                    data: fd,
-                    dataType: 'html',
-                    success: function(data){
-                        var rep = JSON.parse(data);
-                        //alert('Comment successful send!');
-                        //console.log(rep);
-                        $('#comment-text').val('');
-                        $("#new-comment-section").append('<div class="comment"><div class="img-block"><img src="{{Auth::user()->picture}}" alt=""></div><div class="comment-text-block"><div class="comment-name">{{Auth::user()->name}}</div><p class="comment-text">'+rep.text+'</p></div></div>');
-                    },
-                    error: function (data) {
-                        alert('error '+data);
-                    }
-                });
-
-            }
-
-        }
+        
 
         function like() {
 
