@@ -288,10 +288,11 @@ var VideoInfoPopup = (function () {
 
 
 
-
+console.log('>>>>', $('#GP-menu').length);
 
 //Stick "GP-menu"
 $(document).ready(function(){
+console.log('>>>>', $('#GP-menu').length);
   $('#GP-menu').sticky({topSpacing:0});
 });
 
