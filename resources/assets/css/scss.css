@@ -2357,6 +2357,17 @@ input:-webkit-autofill {
 .layout-3-columns #GP-menu-sticky-wrapper.is-sticky + .global-main-content {
   margin-left: 230px; }
 
+.global-main-content.utv-card .video-title {
+  font-size: 30px; }
+
+.global-main-content.utv-card .hero {
+  position: relative; }
+  .global-main-content.utv-card .hero .info-block {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px; }
+
 @media only screen and (max-width: 991px) {
   .lang-block span {
     display: block;

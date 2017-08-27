@@ -16,11 +16,11 @@
         		@include('r.chunks._filter_video')
         		
             <div class="global-main-content utv-card">
-                <div class="main-top-block">
-                    <img src="{{asset("r/img/bg-video.png")}}" alt="">
+                <div class="hero">
+                    <img src="{{asset("r/img/bg-video.png")}}" class="img-responsive" alt="">
                     <div class="layer"></div>
                     <div class="video-info-block">
-                        <div class="video-title">{{$video->title}}</div>
+                        <h1 class="video-title">{{$video->title}}</h1>
                         <div class="video-info-text">
                             <span class="age">16+</span>
                             <span class="date" style="border:3px solid red;">{{$video->created_at->format('Y')}}</span>
