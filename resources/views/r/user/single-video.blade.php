@@ -15,7 +15,7 @@
         <div class="layout-3-columns">
         		@include('r.chunks._filter_video')
         		
-            <div class="global-main-content card">
+            <div class="global-main-content utv-card">
                 <div class="main-top-block">
                     <img src="{{asset("r/img/bg-video.png")}}" alt="">
                     <div class="layer"></div>
