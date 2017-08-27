@@ -12,7 +12,7 @@
 
     
     <div class="container-fluid">
-        <div class="clearfix layout-3-columns">
+        <div class="layout-3-columns">
         		@include('r.chunks._filter_video')
 
             <aside class="block-aside">

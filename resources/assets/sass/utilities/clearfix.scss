@@ -1,19 +1,11 @@
 
-//Clearfix class from bootstrap
-.clearfix:before,
-.clearfix:after,
-.list-horizontal-wrapper:before,
-.list-horizontal-wrapper:after,
-.block-wrap:before,
-.block-wrap:after {
-  display: table;
-  content: " ";
-}
-.clearfix:before,
-.clearfix:after,
-.list-horizontal-wrapper:before,
-.list-horizontal-wrapper:after,
-.block-wrap:before,
-.block-wrap:after {
-  clear: both;
+//Apply "clearfix" class from bootstrap
+.container-fluid,
+.list-horizontal-wrapper,
+.block-wrap {
+	&:before, &:after {
+	  display: table;
+	  content: " ";
+	  clear: both;
+	}
 }
