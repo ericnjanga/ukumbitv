@@ -37,7 +37,9 @@
                         </div>
                     </div>
                     <div class="block-wrap">
-                        <a href="" class="title link-page">New Videos</a> 
+                        <h2 class="single-title-link">
+                        	<a href="" class="title-link">New Videos</a>
+                        </h2> 
                           <div class="list-horizontal-wrapper">
                               @foreach($recent_videos as $video)
                                   @include('r.chunks._video_item')
@@ -45,9 +47,9 @@
                           </div> 
                     </div>
                     <div class="block-wrap">
-                        <a href="" class="title link-page">My List</a>
-
-
+                        <h2 class="single-title-link">
+                        	<a href="" class="title-link">My List</a>
+                        </h2>  
                         @if($watch_lists->isEmpty())
                             <div class="no-video">
                                 <div>{{trans('messages.empty_my_list')}}</div>
@@ -63,7 +65,10 @@
                         @endif
                     </div>
                     <div class="block-wrap">
-                        <a href="" class="title link-page">Popular Videos</a>
+                        <h2 class="single-title-link">
+                        	<a href="" class="title-link">Popular Videos</a>
+                        </h2>  
+                        
                         <div class="list-horizontal-wrapper">
                             @foreach($trendings as $video)
                                 @include('r.chunks._video_item')
@@ -71,7 +76,10 @@
                         </div>
                     </div>
                     <div class="block-wrap">
-                        <a href="" class="title link-page">Liked Videos</a>
+                        <h2 class="single-title-link">
+                        	<a href="" class="title-link">Liked Videos</a>
+                        </h2>  
+                        
                         <div class="no-video">
                             <div>No liked videos yet</div>
                             <p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>
