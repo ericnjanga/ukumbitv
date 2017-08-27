@@ -2462,7 +2462,7 @@ input:-webkit-autofill {
   float: right;
   width: 75%; }
 
-.sticky-wrapper .global-main-content {
+.sticky-wrapper + .global-main-content {
   float: left;
   margin-left: 230px; }
 
