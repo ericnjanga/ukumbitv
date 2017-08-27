@@ -15,7 +15,7 @@
     <link rel="mask-icon" href="{{asset('r/img/favicon/safari-pinned-tab.svg')}}" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="{{asset('r/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('r/css/colorbox.css')}}">
     <link rel="stylesheet" href="{{asset('r/css/normalize.css')}}">
     <link rel="stylesheet" href="{{asset('r/css/slick.css')}}">
