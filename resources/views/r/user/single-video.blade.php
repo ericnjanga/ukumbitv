@@ -19,7 +19,7 @@
                 <div class="hero">
                     <img src="{{asset("r/img/bg-video.png")}}" class="img-responsive" alt="">
                     <div class="layer"></div>
-                    <div class="video-info-block">
+                    <div class="info-block">
                         <h1 class="video-title">{{$video->title}}</h1>
                         <div class="video-info-text">
                             <span class="age">16+</span>

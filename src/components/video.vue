@@ -69,10 +69,10 @@
                     </aside>
                 </div>
                 <div class="col-sm-10">
-                    <div class="main-top-block">
+                    <div class="hero">
                         <img src="~@/assets/img/bg-video.png" alt="">
                         <div class="layer"></div>
-                        <div class="video-info-block">
+                        <div class="info-block">
                             <div class="video-title">Ghost in the Shell</div>
                             <div class="video-info-text">
                                 <span class="age">16+</span>

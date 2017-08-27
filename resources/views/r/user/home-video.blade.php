@@ -5,7 +5,7 @@
     		@include('r.chunks._filter_video')
          
         <div class="global-main-content">
-            <div class="main-top-block">
+            <div class="hero">
                 <img src="{{ asset('r/img/bg-video.png')}}" alt="">
                 <div class="layer"></div>
                 <div class="video-info-block">
