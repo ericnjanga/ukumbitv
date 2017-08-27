@@ -673,124 +673,6 @@ img {
 .upper {
   text-transform: uppercase; }
 
-.main-top-block {
-  position: relative;
-  margin-bottom: 85px; }
-  .main-top-block .video-info-block {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 30px; }
-    .main-top-block .video-info-block .video-title {
-      color: #ffffff;
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 32px;
-      margin: 0 0 10px 0; }
-    .main-top-block .video-info-block .video-info-text {
-      margin: 0 0 10px 0;
-      width: 40%;
-      min-height: 65px; }
-      .main-top-block .video-info-block .video-info-text .age {
-        color: #424242;
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 20px;
-        display: inline-block;
-        background-color: #f58e4b;
-        padding: 0 10px;
-        margin: 0 3px 0 0; }
-      .main-top-block .video-info-block .video-info-text .date {
-        color: #ffffff;
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 20px;
-        display: inline-block;
-        margin: 0 3px 0 0; }
-      .main-top-block .video-info-block .video-info-text .genre {
-        color: #ffffff;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 20px;
-        display: inline-block; }
-      .main-top-block .video-info-block .video-info-text .series-text {
-        width: 40%;
-        color: #ffffff;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14px;
-        margin: 5px 0 0 0; }
-    .main-top-block .video-info-block .actors-block {
-      margin: 0 0 10px 0;
-      min-height: 120px;
-      width: 40%; }
-      .main-top-block .video-info-block .actors-block .actors-title {
-        color: #ffffff;
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 14px;
-        margin: 0 0 8px 0; }
-      .main-top-block .video-info-block .actors-block .actors-list {
-        color: #ffffff;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 19px; }
-    .main-top-block .video-info-block .butn-block {
-      display: -ms-flexbox;
-      display: flex;
-      justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -ms-flex-align: center;
-      align-items: center; }
-      .main-top-block .video-info-block .butn-block .play-block .butn-orange-dark {
-        width: 160px; }
-      .main-top-block .video-info-block .butn-block .play-block .butn-play {
-        width: 95px;
-        margin: 0 27px 0 0; }
-        .main-top-block .video-info-block .butn-block .play-block .butn-play .icon {
-          font-size: 18px;
-          display: inline-block;
-          margin: 0 1px 0 0;
-          position: relative;
-          top: 2px; }
-      .main-top-block .video-info-block .butn-block .share-block {
-        width: 24%;
-        display: -ms-flexbox;
-        display: flex;
-        justify-content: space-between;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -ms-flex-align: center;
-        align-items: center; }
-        .main-top-block .video-info-block .butn-block .share-block .butn-share {
-          color: #ffffff;
-          font-size: 12px;
-          font-weight: 400;
-          line-height: 19px;
-          background-color: #3b5998;
-          height: 20px;
-          line-height: 22px;
-          padding: 0 15px 0 27px;
-          text-align: right;
-          position: relative; }
-          .main-top-block .video-info-block .butn-block .share-block .butn-share span {
-            color: #ffffff;
-            font-size: 20px;
-            font-weight: 400;
-            position: absolute;
-            left: 7px;
-            top: 0; }
-        .main-top-block .video-info-block .butn-block .share-block .butn-like {
-          color: #ffffff;
-          font-size: 13px;
-          font-weight: 400;
-          line-height: 20px; }
-          .main-top-block .video-info-block .butn-block .share-block .butn-like .icon {
-            color: #49ed6f;
-            font-size: 22px;
-            margin: 0 10px 0 0; }
-
 .title-text {
   color: #424242;
   font-size: 28px;
@@ -1322,16 +1204,15 @@ img {
 .video-wrap .block-wrap {
   margin: 0 0 65px 0; }
 
-.description-block {
-  margin: 65px 0 25px 0; }
-  .description-block .title {
-    margin: 0 0 15px 0; }
-  .description-block p {
-    color: #757575;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-    width: 80%; }
+.description-block .title {
+  margin: 0 0 15px 0; }
+
+.description-block p {
+  color: #757575;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  width: 80%; }
 
 .cast-credits-wrap {
   margin: 25px 0 85px;
