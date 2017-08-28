@@ -377,6 +377,9 @@ function movie_like($btn) {
   fd.append('id', '{{$video->id}}');
   fd.append('type', 'like');
 
+
+  console.log('>>>>>"', $btn.data('route-like'));
+
   $.ajax({
     type: 'POST',
     url: $btn.data('route-like'),
