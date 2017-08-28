@@ -2710,6 +2710,10 @@ input:-webkit-autofill {
 			cursor: pointer;
 		}
 	}
+	.icon-thumbs-up.btn-on, 
+	.icon-thumbs-down-hand.btn-on{
+		color: #CE5043;
+	} 
 	.hero{
   	position: relative;  
 		.info-block{

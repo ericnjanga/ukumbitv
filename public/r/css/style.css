@@ -2285,6 +2285,13 @@ input:-webkit-autofill {
 .global-main-content.utv-card .rating-stats .col-mid {
   margin-top: 20px; }
 
+.global-main-content.utv-card .rating-stats .icon {
+  cursor: pointer; }
+
+.global-main-content.utv-card .icon-thumbs-up.btn-on,
+.global-main-content.utv-card .icon-thumbs-down-hand.btn-on {
+  color: #CE5043; }
+
 .global-main-content.utv-card .hero {
   position: relative; }
   .global-main-content.utv-card .hero .info-block {
