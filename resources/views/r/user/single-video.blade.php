@@ -146,7 +146,20 @@
           <div class="hero-sub">  
           	<div class="clearfix">
           		<h2 class="pull-left">{{trans('messages.reviews')}}</h2>
-          		<button type="button" id="btn-comment-rate-modal" class="btn btn-default pull-right" data-toggle="modal" data-target="#comment-rate-modal"> <span class="icon icon-pencil-edit-button"></span>{{trans('messages.Write_a_review')}}</a></button>
+          		<button type="button" id="btn-comment-rate-modal" class="btn btn-default pull-right" data-toggle="modal" data-target="#comment-rate-modal"> 
+          			<span class="icon icon-pencil-edit-button"></span> {{trans('messages.Write_a_review')}}</a></button>
+          	</div>
+          	<div class="row">
+          		<div class="col-sm-4">
+          			<span class="txt-xxl">789 <span class="icon icon-thumbs-up"></span></span>
+          		</div>
+          		<div class="col-sm-4">
+          			<span class="icon icon-thumbs-down-hand"></span> 1020 total
+          		</div>
+          		<div class="col-sm-4">
+          			<span class="txt-xxl">102 <span class="icon icon-thumbs-down-hand"></span>
+          			
+          		</div> 
           	</div>
 
 
