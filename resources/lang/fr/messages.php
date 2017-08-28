@@ -516,7 +516,7 @@ return array(
 	'publish' => 'Publish',
 	
 	'ratings' => 'Ratings',
-	'reviews' => 'Reviews',
+	'reviews' => 'Les Avis',
 
 	'default_image' => 'Default image',
 	'other_image1' => 'Other Image 1',

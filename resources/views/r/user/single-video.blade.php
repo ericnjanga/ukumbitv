@@ -144,7 +144,17 @@
                         {{--</div>--}}
                     </div>
                 </div>
+
+                <hr>
+
                 <div class="hero-sub"> 
+
+                	<div class="clearfix">
+                		<h2 class="pull-left">{{trans('messages.reviews')}}</h2>
+                		<button type="button" id="btn-comment-rate-modal" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#comment-rate-modal"> <span class="icon icon-pencil-edit-button"></span>{{trans('messages.Write_a_review')}}</a></button>
+                	</div>
+
+
                     <div class="comment-block" id="new-comment-section">
                     	@foreach($video->comments as $comment)
                       <div class="comment">
@@ -223,11 +233,7 @@
 			                                <span id="dislike" class="icon icon-thumbs-down-hand" onclick="dislike()"></span>
 			                            @endif
 			                            <span id="dislikes-count">{{$dislikes}}</span>
-			                        </div>
-			                        <div class="butn-block----">
-			                        	<button type="button" id="btn-comment-rate-modal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#comment-rate-modal"> <span class="icon icon-pencil-edit-button"></span>{{trans('messages.Write_a_review')}}</a></button>
-
-			                        </div>
+			                        </div> 
 			                    </div>
 		                        <!-- -->
 												  </div>
