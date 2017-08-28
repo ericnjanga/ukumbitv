@@ -204,6 +204,7 @@
 												    <img class="media-object" src="{{Auth::user()->picture}}" alt="..." width="48" height="48"> 
 												  </div>
 												  <div class="media-body">
+												  	Review by 
 												    @if(Auth::user()->name != '')
                                 {{Auth::user()->name}}
                                 @else
