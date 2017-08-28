@@ -385,9 +385,9 @@
             data: fd,
             dataType: 'html',
             success: function(data){
-                $('#dislike').attr({"onclick":"undislike()", "id":"undislike"});
-                $('#unlike').attr({"onclick":"like()", "id":"like"});
-                $('#like-btn-top').attr({"onclick":"like()"});
+                // $('#dislike').attr({"onclick":"undislike()", "id":"undislike"});
+                // $('#unlike').attr({"onclick":"like()", "id":"like"});
+                // $('#like-btn-top').attr({"onclick":"like()"});
 //                    $('#unlike').css("color", "#fff");
                 $('#dislikes-count').text(+disLikesCount + 1);
                 var rep = JSON.parse(data);
@@ -423,8 +423,8 @@
                 data: fd,
                 dataType: 'html',
                 success: function(data){
-                    $('#unlike').attr({"onclick":"like()", "id":"like"});
-                    $('#like-btn-top').attr({"onclick":"like()"});
+                    // $('#unlike').attr({"onclick":"like()", "id":"like"});
+                    // $('#like-btn-top').attr({"onclick":"like()"});
 //                    $('#like').css("color", "#333");
                     $('#likes-count, #likes-count-top').text(+likesCount - 1);
                     var rep = JSON.parse(data);
@@ -457,7 +457,7 @@
                 data: fd,
                 dataType: 'html',
                 success: function(data){
-                    $('#undislike').attr({"onclick":"dislike()", "id":"dislike"});
+                    // $('#undislike').attr({"onclick":"dislike()", "id":"dislike"});
 //                    $('#like').css("color", "#333");
                     $('#dislikes-count').text(+disLikesCount - 1);
                     var rep = JSON.parse(data);
