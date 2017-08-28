@@ -152,7 +152,8 @@
 
           	<div class="row rating-stats">
           		<div class="col-sm-4">
-          			<span class="txt-xxl" id="likes-count">{{$likes}} 
+          			<span class="txt-xxl">
+									<span id="likes-count">{{$likes}} </span> 
 	          			@if($checkLike != null)
 	                  <span id="unlike" class="btn-like icon icon-thumbs-up btn-on"></span>
 	                  <!-- <span id="unlike" class="icon icon-thumbs-up btn-on" onclick="unlike()"></span> -->
@@ -166,7 +167,8 @@
           			<span class="icon icon-thumbs-down-hand"></span> 1020 total
           		</div>
           		<div class="col-sm-4">
-          			<span class="txt-xxl pull-right" id="dislikes-count">{{$dislikes}} 
+          			<span class="txt-xxl pull-right">
+          				<span id="dislikes-count">{{$dislikes}} </span> 
           				@if($checkDisLike != null)
                     <span id="undislike" class="icon icon-thumbs-down-hand btn-on" onclick="undislike()"></span>
                   @else
@@ -366,6 +368,47 @@
       });
     }
 
+
+
+
+        function unlike() {
+
+            var likesCount = $('#likes-count').text();
+
+
+            var fd = new FormData;
+
+            fd.append('_token', '{{csrf_token()}}');
+            fd.append('id', '{{$video->id}}');
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: '{{route('unlike')}}',
+                contentType: false,
+                processData: false,
+                data: fd,
+                dataType: 'html',
+                success: function(data){
+                    // $('#unlike').attr({"onclick":"like()", "id":"like"});
+                    // $('#like-btn-top').attr({"onclick":"like()"});
+//                    $('#like').css("color", "#333");
+                    $('#likes-count, #likes-count-top').text(+likesCount - 1);
+                    var rep = JSON.parse(data);
+                    //console.log(rep);
+//                    swal("Cool!", "You have successfully unliked!", "success");
+                },
+                error: function(data){
+                    swal("Hmm", "Something went wrong, try again pls", "error");
+                }
+            });
+        }
+
+
+
+
+
     function dislike() {
 
         var likesCount = $('#likes-count').text();
@@ -403,39 +446,6 @@
         });
     }
 
-        function unlike() {
-
-            var likesCount = $('#likes-count').text();
-
-
-            var fd = new FormData;
-
-            fd.append('_token', '{{csrf_token()}}');
-            fd.append('id', '{{$video->id}}');
-
-
-
-            $.ajax({
-                type: 'POST',
-                url: '{{route('unlike')}}',
-                contentType: false,
-                processData: false,
-                data: fd,
-                dataType: 'html',
-                success: function(data){
-                    // $('#unlike').attr({"onclick":"like()", "id":"like"});
-                    // $('#like-btn-top').attr({"onclick":"like()"});
-//                    $('#like').css("color", "#333");
-                    $('#likes-count, #likes-count-top').text(+likesCount - 1);
-                    var rep = JSON.parse(data);
-                    //console.log(rep);
-//                    swal("Cool!", "You have successfully unliked!", "success");
-                },
-                error: function(data){
-                    swal("Hmm", "Something went wrong, try again pls", "error");
-                }
-            });
-        }
 
         function undislike() {
 
