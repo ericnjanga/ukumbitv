@@ -149,30 +149,58 @@
           		<button type="button" id="btn-comment-rate-modal" class="btn btn-default pull-right" data-toggle="modal" data-target="#comment-rate-modal"> 
           			<span class="icon icon-pencil-edit-button"></span> {{trans('messages.Write_a_review')}}</a></button>
           	</div>
+
           	<div class="row rating-stats">
           		<div class="col-sm-4">
           			<span class="txt-xxl" id="likes-count">{{$likes}} 
-          				@if($checkLike != null)
-                    <span id="unlike" class="icon icon-thumbs-up" onclick="unlike()"></span>
-                  @else
-                    <span id="like" class="icon icon-thumbs-up" onclick="like()"></span>
-                  @endif
+	          			@if($checkLike != null)
+	                  <span id="unlike" class="icon icon-thumbs-up" onclick="unlike()"></span>
+	                @else
+	                  <span id="like" class="icon icon-thumbs-up" onclick="like()"></span>
+	                @endif
+	              </span>
           		</div>
           		<div class="col-sm-4 text-center col-mid">
           			<span class="icon icon-thumbs-down-hand"></span> 1020 total
           		</div>
           		<div class="col-sm-4">
           			<span class="txt-xxl" id="dislikes-count">{{$dislikes}} 
-									@if($checkDisLike != null)
+          				@if($checkDisLike != null)
                     <span id="undislike" class="icon icon-thumbs-down-hand" onclick="undislike()"></span>
                   @else
                     <span id="dislike" class="icon icon-thumbs-down-hand" onclick="dislike()"></span>
-                  @endifpan class="icon icon-thumbs-down-hand"></span>
-          			
+                  @endif
+          			</span>
           		</div> 
           	</div>
 
- 
+
+
+          	<!-- -->
+                      <ul class="rating-frame list-inline"> 
+                      	<li>
+                          @if($checkLike != null)
+                            <span id="unlike" class="icon icon-thumbs-up" onclick="unlike()"></span>
+                          @else
+                            <span id="like" class="icon icon-thumbs-up" onclick="like()"></span>
+                          @endif
+                          <!-- <span id="likes-count">{{$likes}}</span>  -->
+                      	</li> 
+                      	<li>
+                          @if($checkDisLike != null)
+                            <span id="undislike" class="icon icon-thumbs-down-hand" onclick="undislike()"></span>
+                          @else
+                            <span id="dislike" class="icon icon-thumbs-down-hand" onclick="dislike()"></span>
+                          @endif
+                          <span id="dislikes-count">{{$dislikes}}</span> 
+                      	</li> 
+                    	</ul>
+                      <!-- -->
+
+
+
+
+
 
               <div class="comment-block" id="new-comment-section">
               	@foreach($video->comments as $comment)
