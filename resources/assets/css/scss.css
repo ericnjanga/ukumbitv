@@ -454,7 +454,10 @@ h2 {
   font-size: 28px; }
 
 .txt-xxl {
-  font-size: 60px; }
+  font-size: 50px;
+  font-weight: 100; }
+  .txt-xxl .icon {
+    font-size: 40px; }
 
 /**
  * All buttons:
@@ -2266,11 +2269,21 @@ input:-webkit-autofill {
   font-size: 30px; }
 
 .global-main-content.utv-card .hero,
-.global-main-content.utv-card .hero-sub {
+.global-main-content.utv-card .hero-sub,
+.global-main-content.utv-card .hero-sub_heading,
+.global-main-content.utv-card .rating-stats {
   margin-bottom: 30px; }
   .global-main-content.utv-card .hero hr,
-  .global-main-content.utv-card .hero-sub hr {
+  .global-main-content.utv-card .hero-sub hr,
+  .global-main-content.utv-card .hero-sub_heading hr,
+  .global-main-content.utv-card .rating-stats hr {
     margin-bottom: 30px; }
+
+.global-main-content.utv-card .hero-sub_heading h2 {
+  margin-top: 8px; }
+
+.global-main-content.utv-card .rating-stats .col-mid {
+  margin-top: 20px; }
 
 .global-main-content.utv-card .hero {
   position: relative; }

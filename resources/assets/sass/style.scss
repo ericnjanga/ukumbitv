@@ -484,7 +484,11 @@ h2 {
 	font-size: 28px;
 }
 .txt-xxl {
-	font-size: 60px;
+	font-size: 50px;
+	font-weight: 100;
+	.icon {
+		    font-size: 40px;
+	}
 }
 
 
@@ -2683,11 +2687,24 @@ input:-webkit-autofill {
 		font-size: 30px;
 	}
 	.hero,
-	.hero-sub {
+	.hero-sub,
+	.hero-sub_heading,
+	.rating-stats {
 		margin-bottom: $gap2;
 
 		& hr {
 			margin-bottom: $gap2;
+		}
+	}
+
+	.hero-sub_heading {
+		h2 {
+			margin-top: 8px;
+		}
+	}
+	.rating-stats {
+		.col-mid {
+			margin-top: 20px;
 		}
 	}
 	.hero{
