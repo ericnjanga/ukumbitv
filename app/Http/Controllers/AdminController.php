@@ -1344,6 +1344,14 @@ class AdminController extends Controller
         $imgUrl = url('/images/'.$specialId.'/');
         $videoUrl = url('/movies/'.$specialId.'/');
 
+        if($request->grand_display == 1) {
+            $videosa = AdminVideo::where('is_banner', 1)->get();
+            foreach ($videosa as $videoa) {
+                $videoa->is_banner = 0;
+                $videoa->save();
+            }
+        }
+
 
         $video->title = $request->title;
         $video->duration = $request->duration;
@@ -1355,6 +1363,7 @@ class AdminController extends Controller
         $video->country = $request->video_country;
         $video->video_type = $request->video_type;
         $video->length = $request->video_length;
+        $video->is_banner = $request->grand_display;
 
 
 
@@ -1484,6 +1493,14 @@ class AdminController extends Controller
 //        return response()->json($uri);
         //$video = $request->file('video');
 
+        if($request->grand_display == 1) {
+            $videos = AdminVideo::where('is_banner', 1)->get();
+            foreach ($videos as $video) {
+                $video->is_banner = 0;
+                $video->save();
+            }
+        }
+
 
 
         $specialId = date('YmdHis');
@@ -1532,7 +1549,7 @@ class AdminController extends Controller
         $adminVideo->status = 1;
         $adminVideo->is_approved = 1;
         $adminVideo->is_home_slider = 0;
-        $adminVideo->is_banner = 0;
+        $adminVideo->is_banner = $request->grand_display;
         $adminVideo->uploaded_by = 'admin';
         $adminVideo->publish_time = '2017-06-05 10:45:00';
         $adminVideo->duration = $request->duration;

@@ -203,13 +203,13 @@
 		            <ul class="list-inline" style="padding:0;">
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="grand-display" id="grand-display-1" value="yes">
+		            			<input type="radio" name="grand-display" id="grand-display-1" value="1">
 		            			Grand Display
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="grand-display" id="grand-display-2" value="no" checked>
+		            			<input type="radio" name="grand-display" id="grand-display-2" value="0" checked>
 		            			Normal Display
 		            		</label>
 		            	</li> 
@@ -265,35 +265,35 @@
 	                  <label for="billboard_image" class="">Billboard  image *</label>
 	                  <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
 	                  <div id="previewArea1"></div>
-	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1200x650)</p>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 650x510)</p>
 	              </div>
 	             
 	              <div class="form-group">
 	                  <label for="small_image1" class="">Small image 1 *</label>
-	                  <input required type="file" id="small_image1" name="small_image1" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image1', 'previewArea2', 'small');">
+	                  <input required type="file" id="small_image1" name="small_image1" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image1', 'previewArea2', 'small1');">
 	                  <div id="previewArea2"></div>
-	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 450x450)</p>
 	              </div>
 	          
 	              <div class="form-group">
 	                  <label for="small_image2" class="">Small image 2</label>
-	                  <input type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small');">
+	                  <input type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small2');">
 	                  <div id="previewArea3"></div>
-	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1600x510)</p>
 	              </div>
 	           
 	              <div class="form-group">
 	                  <label for="small_image3" class="">Small image 3</label>
-	                  <input type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small');">
+	                  <input type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small3');">
 	                  <div id="previewArea4"></div>
-	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 500x340)</p>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1100x510)</p>
 	              </div>
 	           
 	              <div class="form-group">
-	                  <label for="preview_image" class="">Preview image *</label>
+	                  <label for="preview_image" class="">Preview image</label>
 	                  <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
 	                  <div id="previewArea5"></div>
-	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1000x600)</p>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 800x510)</p>
 	              </div>
               </fieldset>
 							{{--images end--}} 
@@ -470,6 +470,10 @@
 
 
         function createMovie() {
+            if($('#billboard_image').prop('files')[0] === undefined || $('#small_image1').prop('files')[0] === undefined) {
+                swal("Hmmm...", "Billboard and Small image1 is required", "error");
+            } else {
+
             var tagsArr = $('.alltags').map(function(){
                 return $.trim($(this).text());
             }).get();
@@ -480,6 +484,7 @@
             $( '.overlay' ).css( 'display', 'block' );
             var video = $('#video');
             var fd = new FormData;
+
 
             fd.append('billboard_image', $('#billboard_image').prop('files')[0]);
             fd.append('small_image1', $('#small_image1').prop('files')[0]);
@@ -502,6 +507,7 @@
             fd.append('tags', tags);
             fd.append('video_type', $("input[name=video-type]:checked").val());
             fd.append('video_length', $("input[name=video-length]:checked").val());
+            fd.append('grand_display', $("input[name=grand-display]:checked").val());
 
             //fd.append('images', dropImages.join(';'));
             var progressBar = $('#progressbar');
@@ -530,13 +536,16 @@
                     var rep = JSON.parse(data);
                     console.log(rep);
                     $( '.overlay' ).css( 'display', 'none' );
-                    alert('Movie successful created!');
+                    swal("Great!", "Movie successful created!", "success");
+                    //alert('Movie successful created!');
                 },
                 error: function (data) {
                     $( '.overlay' ).css( 'display', 'none' );
-                    alert('error '+data);
+                    swal("Hmmm...", "Something went wrong, try later", "error");
+                    //alert('error '+data);
                 }
             });
+            }
         }
 
         function previewUploadedPhoto(controlID, previewID, imgType) {
@@ -545,19 +554,29 @@
             var imgSize = '';
             switch (imgType) {
                 case 'billboard':
-                    imgWidth = 1200;
-                    imgHeight = 650;
-                    imgSize = '1200x650';
+                    imgWidth = 650;
+                    imgHeight = 510;
+                    imgSize = '650x510';
                     break;
-                case 'small':
-                    imgWidth = 500;
-                    imgHeight = 340;
-                    imgSize = '500x340';
+                case 'small1':
+                    imgWidth = 450;
+                    imgHeight = 450;
+                    imgSize = '450x450';
+                    break;
+                case 'small2':
+                    imgWidth = 1600;
+                    imgHeight = 510;
+                    imgSize = '1600x510';
+                    break;
+                case 'small3':
+                    imgWidth = 1100;
+                    imgHeight = 510;
+                    imgSize = '1100x510';
                     break;
                 case 'preview':
-                    imgWidth = 1000;
-                    imgHeight = 600;
-                    imgSize = '1000x600';
+                    imgWidth = 800;
+                    imgHeight = 510;
+                    imgSize = '800x510';
                     break;
                 default:
                     imgWidth = 100;
@@ -574,7 +593,7 @@
                                 img.src = e.target.result;
 
                                 img.onload = function () {
-                                    if (img.width < imgWidth || img.height < imgHeight) {
+                                    if (img.width !== imgWidth || img.height !== imgHeight) {
                                         $("#" + previewID).html("<b class='alert-danger'>The image size should be "+imgSize+"</b>");
                                         file.value = null;
                                     }
