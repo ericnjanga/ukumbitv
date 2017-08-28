@@ -237,7 +237,7 @@
                     
 										 
 					      </div>
-					      <div class="modal-footer">
+					      <div class="modal-footer modal-cr__footer">
 					        <button type="button" class="btn btn-default" data-dismiss="modal">{{trans('messages.close')}}</button>
 					        <button id="btn-submitcomment" type="button" class="btn btn-submit" data-comment-route="{{route('send-comment')}}">{{trans('messages.submit')}}</button>
 					      </div>
