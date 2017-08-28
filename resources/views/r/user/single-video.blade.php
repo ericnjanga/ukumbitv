@@ -146,7 +146,7 @@
           <div class="hero-sub">  
           	<div class="clearfix">
           		<h2 class="pull-left">{{trans('messages.reviews')}}</h2>
-          		<button type="button" id="btn-comment-rate-modal" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#comment-rate-modal"> <span class="icon icon-pencil-edit-button"></span>{{trans('messages.Write_a_review')}}</a></button>
+          		<button type="button" id="btn-comment-rate-modal" class="btn btn-default pull-right" data-toggle="modal" data-target="#comment-rate-modal"> <span class="icon icon-pencil-edit-button"></span>{{trans('messages.Write_a_review')}}</a></button>
           	</div>
 
 
@@ -205,29 +205,35 @@
 									    <form>
                         <div class="input-wrap textarea-wrap">
                         	<textarea name="comment-text" id="comment-text" placeholder="Tell others what you think about the movie. Would you recommend it, and why?"></textarea>
+                        	<p class="rate-info">Most helpful reviews have 100 words or more</p>
                         </div> 
                       </form> 
 
 
                       <!-- -->
-                      <div class="likes-block">
-                        <div class="likes-item like">
+                      <ul class="likes-block list-inline">
+                        <!-- <div class="likes-item like"> -->
+                        	<li>
                             @if($checkLike != null)
                                 <span id="unlike" class="icon icon-thumbs-up" onclick="unlike()"></span>
                                     @else
                                 <span id="like" class="icon icon-thumbs-up" onclick="like()"></span>
                                             @endif
-                            <span id="likes-count">{{$likes}}</span>
-                        </div>
-                        <div class="likes-item dislike">
+                            <span id="likes-count">{{$likes}}</span> 
+                        	</li>
+                        <!-- </div>
+                        <div class="likes-item dislike"> -->
+                        	<li>
                             @if($checkDisLike != null)
                                 <span id="undislike" class="icon icon-thumbs-down-hand" onclick="undislike()"></span>
                             @else
                                 <span id="dislike" class="icon icon-thumbs-down-hand" onclick="dislike()"></span>
                             @endif
                             <span id="dislikes-count">{{$dislikes}}</span>
-                        </div> 
-                    </div>
+                        		
+                        	</li>
+                        <!-- </div>  -->
+                    	</ul>
                       <!-- -->
 									  </div>
 					        </div><!-- media -->
@@ -260,7 +266,7 @@
                                     <img src="{{$relatedVideo->videoimage->imgSmall1}}" alt="">
                                 </div>
                                 <div class="video-title ellipsis-gradient">
-                                    {{$relatedVideo->title}}
+                                  {{$relatedVideo->title}} ({{$video->created_at->format('Y')}})
                                 </div>
                             </a>
                             <div class="video-info">

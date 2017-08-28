@@ -2969,7 +2969,12 @@ input:-webkit-autofill {
 }
 .modal-cr__body {
 	.media-left {
-		// width: 170px;
+		img {
+			margin-bottom: 5px;
+		}
+		p {
+			font-size: 14px;
+		}
 	}
 	.media-body {
 		width: 70%;
@@ -2977,6 +2982,13 @@ input:-webkit-autofill {
 			height: 200px;
 			border-width: 0;
 			background-color: #eee;
+		}
+		.rate-info {
+			font-size: 13px;
+			font-style: italic;
+		}
+		.rating-frame {
+			    margin: 10px 0;
 		}
 	}
 }

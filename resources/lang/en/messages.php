@@ -744,9 +744,9 @@ And to insure en exceptional delivery all this unique experience, we have create
 //videos ......
   'Similar_Videos' => 'Similar Videos',
   'There_is_no_videos' => 'There is no videos',
-  'Write_a_review' => 'Écrire une critique',
+  'Write_a_review' => 'Write a review',
   'Play' => 'Jouer',
-  'Add_to_list' => 'Ajouter à la liste',
+  'Add_to_list' => 'Add to list',
   'share' => 'Share',
   'Episodes' => 'Episodes',
   'Cast_and_credits' => 'Cast and credits',

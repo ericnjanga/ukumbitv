@@ -2316,12 +2316,23 @@ input:-webkit-autofill {
     width: initial;
     vertical-align: middle; }
 
+.modal-cr__body .media-left img {
+  margin-bottom: 5px; }
+
+.modal-cr__body .media-left p {
+  font-size: 14px; }
+
 .modal-cr__body .media-body {
   width: 70%; }
   .modal-cr__body .media-body textarea {
     height: 200px;
     border-width: 0;
     background-color: #eee; }
+  .modal-cr__body .media-body .rate-info {
+    font-size: 13px;
+    font-style: italic; }
+  .modal-cr__body .media-body .rating-frame {
+    margin: 10px 0; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {
