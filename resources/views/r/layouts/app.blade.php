@@ -40,6 +40,60 @@
   -->
     <script type="text/javascript" src="{{asset('r/js/script.js')}}"></script>
     <script type="text/javascript" src="{{asset('r/js/Google-play-menu.js')}}"></script>
-    <script type="text/javascript" src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script> 
+    <script type="text/javascript" src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script>
+    <script>
+        var searchData;
+        var searchList = '';
+
+        function getSearchData() {
+            $.ajax({
+                type: 'POST',
+                url: '{{route('search-data')}}',
+                contentType: false,
+                processData: false,
+                data: {},
+                dataType: 'html',
+                success: function(data){
+                    var rep = JSON.parse(data);
+                    searchData = rep;
+
+                    rep.forEach(function(item, i, rep) {
+                        searchList = searchList+'<li><a href="">'+item.word+'</a></li>';
+                    });
+
+                    $(".search-list").html(searchList);
+
+//                    console.log(rep);
+                },
+                error: function(data){
+                    console.log('error ' + data);
+                }
+            });
+        }
+
+        $(function(){
+            $("#search-input").keyup(function(){
+                var search = $("#search-input").val();
+
+
+                var positiveArr = searchData.filter(function(word) {
+                    if(word.word.toLowerCase().indexOf(search.toLowerCase()) === -1){
+                        return false
+                    } else {
+                        return true;
+                    }
+
+                });
+                var newSearchList = '';
+                positiveArr.forEach(function(item, i, positiveArr) {
+                    newSearchList = newSearchList+'<li><a href="">'+item.word+'</a></li>';
+                });
+              //  $(".search-list").empty();
+                $(".search-list").html(newSearchList);
+                return false;
+            });
+        });
+
+    </script>
 @yield('scripts')
 </html>

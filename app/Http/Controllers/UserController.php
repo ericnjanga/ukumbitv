@@ -1308,4 +1308,26 @@ class UserController extends Controller {
         return 'ERROR';
     }
 
+    public function searchData()
+    {
+        $videos = AdminVideo::with('videoDirectors', 'videoActors', 'videoTags')->get();
+        $result = [];
+        foreach ($videos as $video) {
+            array_push($result, ['word' => $video->title, 'type' => 'video title']);
+            foreach ($video->videoDirectors as $director) {
+                array_push($result, ['word' => $director->name, 'type' => 'directors']);
+            }
+            foreach ($video->videoActors as $actor) {
+                array_push($result, ['word' => $actor->name, 'type' => 'actors']);
+            }
+            foreach ($video->videoTags as $tag) {
+                array_push($result, ['word' => $tag->name, 'type' => 'tags']);
+            }
+        }
+
+
+        return response()->json($result);
+
+    }
+
 }

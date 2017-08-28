@@ -11,15 +11,9 @@
                 <div class="col-sm-6 col-md-6 col-lg-7 col-xl-6 search-block">
                     <form action="{{route('search-all')}}">
                         <div class="input-wrap search-wrap">
-                            <input type="search" name="key" placeholder="Titles, people, tags">
+                            <input type="search" name="key" id="search-input" placeholder="Titles, people, tags" onclick="getSearchData()">
                             <div class="search-list-block">
                                 <ul class="search-list">
-                                    <li><a href="">Titles, people, tags</a></li>
-                                    <li><a href="">Titles, people, tags</a></li>
-                                    <li><a href="">Titles, people, tags</a></li>
-                                    <li><a href="">Titles, people, tags</a></li>
-                                    <li><a href="">Titles, people, tags</a></li>
-                                    <li><a href="">Titles, people, tags</a></li>
                                 </ul>
                             </div>
                             <button id="butn-search" type="submit" class="butn-search">
