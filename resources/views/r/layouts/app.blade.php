@@ -45,6 +45,23 @@
         var searchData;
         var searchList = '';
 
+        $( '.search-list' ).click(function(event) {
+            $( '#search-input' ).val(event.target.text);
+            $('.search-list-block').css('display', 'none');
+
+            console.log(event.target.text);
+        });
+        $( '#search-input' ).focus(function() {
+            $('.search-list-block').css('display', 'block');
+        });
+        $('#search-input').focusout(function(){
+            setTimeout(function(){ $('.search-list-block').css('display', 'none'); }, 300);
+        });
+
+
+
+
+
         function getSearchData() {
             $.ajax({
                 type: 'POST',
@@ -55,15 +72,16 @@
                 dataType: 'html',
                 success: function(data){
                     var rep = JSON.parse(data);
+
                     searchData = rep;
 
                     rep.forEach(function(item, i, rep) {
-                        searchList = searchList+'<li><a href="">'+item.word+'</a></li>';
+                        searchList = searchList+'<li><a href="#">'+item.word+'</a></li>';
                     });
 
                     $(".search-list").html(searchList);
 
-//                    console.log(rep);
+
                 },
                 error: function(data){
                     console.log('error ' + data);
@@ -86,13 +104,14 @@
                 });
                 var newSearchList = '';
                 positiveArr.forEach(function(item, i, positiveArr) {
-                    newSearchList = newSearchList+'<li><a href="">'+item.word+'</a></li>';
+                    newSearchList = newSearchList+'<li><a href="#">'+item.word+'</a></li>';
                 });
-              //  $(".search-list").empty();
+
                 $(".search-list").html(newSearchList);
                 return false;
             });
         });
+
 
     </script>
 @yield('scripts')

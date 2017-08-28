@@ -449,7 +449,7 @@ Route::get('/single/{id}', 'UserController@single_video')->name('single-video');
 
 Route::get('/user/searchall' , 'ApplicationController@search_video')->name('search');
 
-Route::any('search' , 'UserController@searchAll')->name('search-all');
+Route::post('search' , 'UserController@searchAll')->name('search-all');
 Route::post('search-data' , 'UserController@searchData')->name('search-data');
 
 // Route::any('/user/search' , 'ApplicationController@search_all')->name('search-all');

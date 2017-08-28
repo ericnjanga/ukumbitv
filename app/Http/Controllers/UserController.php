@@ -1308,26 +1308,58 @@ class UserController extends Controller {
         return 'ERROR';
     }
 
+   public function unique_multidim_array($array, $key) {
+        $temp_array = [];
+        $i = 0;
+        $key_array = [];
+
+        foreach($array as $val) {
+            if (!in_array($val[$key], $key_array)) {
+                $key_array[$i] = $val[$key];
+                $temp_array[$i] = $val;
+            }
+            $i++;
+        }
+        return $temp_array;
+    }
+
     public function searchData()
     {
         $videos = AdminVideo::with('videoDirectors', 'videoActors', 'videoTags')->get();
+
         $result = [];
         foreach ($videos as $video) {
-            array_push($result, ['word' => $video->title, 'type' => 'video title']);
+            if(array_search($video->title, array_column($result, 'word')) === FALSE) {
+              array_push($result, ['word' => $video->title, 'type' => 'video title']);
+            }
             foreach ($video->videoDirectors as $director) {
-                array_push($result, ['word' => $director->name, 'type' => 'directors']);
+                if(array_search($director->name, array_column($result, 'word')) === FALSE) {
+                    array_push($result, ['word' => $director->name, 'type' => 'directors']);
+                }
             }
             foreach ($video->videoActors as $actor) {
-                array_push($result, ['word' => $actor->name, 'type' => 'actors']);
+                if(array_search($actor->name, array_column($result, 'word')) === FALSE) {
+                    array_push($result, ['word' => $actor->name, 'type' => 'actors']);
+                }
             }
             foreach ($video->videoTags as $tag) {
-                array_push($result, ['word' => $tag->name, 'type' => 'tags']);
+                if(array_search($tag->name, array_column($result, 'word')) === FALSE) {
+                    array_push($result, ['word' => $tag->name, 'type' => 'tags']);
+                }
             }
         }
 
-
+//       $result = $this->unique_multidim_array($result,'word');
+//        $found_key = array_search('test', array_column($result, 'word'));
+//dd($found_key);
         return response()->json($result);
 
+    }
+
+    public function searchAll(Request $request)
+    {
+        $videos = AdminVideo::with('videoimage', 'likes')->where('title', $request->key)->get();
+        return view('r.user.search-result')->with('videos', $videos);
     }
 
 }
