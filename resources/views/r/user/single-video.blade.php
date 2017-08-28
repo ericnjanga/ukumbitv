@@ -331,7 +331,7 @@
       var disLikesCount = $('#dislikes-count').text(); 
       var fd = new FormData;
 
-      console.log('>>>', msg);
+      // console.log('>>>', msg);
 
       fd.append('_token', '{{csrf_token()}}');
       fd.append('id', '{{$video->id}}');
@@ -345,10 +345,9 @@
 	        data: fd,
 	        dataType: 'html',
 	        success: function(data){
-	            $('#like').attr({"onclick":"unlike()", "id":"unlike"});
-	            $('#like-btn-top').attr({"onclick":"unlike()"});
-
-	            $('#undislike').attr({"onclick":"dislike()", "id":"dislike"});
+	            // $('#like').attr({"onclick":"unlike()", "id":"unlike"});
+	            // $('#like-btn-top').attr({"onclick":"unlike()"}); 
+	            // $('#undislike').attr({"onclick":"dislike()", "id":"dislike"});
 
 	//                    $('#unlike').css("color", "#fff");
 	          $('#likes-count, #likes-count-top').text(+likesCount + 1);
