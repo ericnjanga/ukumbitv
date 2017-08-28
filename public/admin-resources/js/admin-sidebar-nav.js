@@ -40,6 +40,9 @@ $(function () {
   else if (page_url.indexOf('payment-plan') > -1 || page_url.indexOf('payment-plans') > -1){
     var $menu_item = $('#sidebar-menu > #payment_plans');
   }
+  else if (page_url.indexOf('episode') > -1 || page_url.indexOf('episodes') > -1){
+    var $menu_item = $('#sidebar-menu > #episodes');
+  }
 
   //Assig link values
   if($menu_item!==undefined && $menu_item.length > 0){ 

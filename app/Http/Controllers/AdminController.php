@@ -1609,6 +1609,44 @@ class AdminController extends Controller
         }
     }
 
+    //episodes
+    public function episodes(Request $request) {
+
+        $videos = [];
+        //dd($videos);
+        return view('admin.episodes.episodes')->with('videos' , $videos)
+            ->withPage('episodes')
+            ->with('sub_page','view-episodes');
+
+    }
+
+    public function addEpisode()
+    {
+
+
+        $categories = Category::all();
+
+        $actors = VideoActor::all();
+        $directors = VideoDirector::all();
+        $langs = Lang::all();
+        $producers = MovieProducer::all();
+
+        $tags = [];
+        foreach (VideoTag::all() as $tag){
+            array_push($tags, $tag->name);
+        }
+        $tags = implode(',', $tags);
+
+        return view('admin.episodes.episode_upload')
+            ->with('categories', $categories)
+            ->with('actors', $actors)
+            ->with('directors', $directors)
+            ->with('langs', $langs)
+            ->with('producers', $producers)
+            ->with('page', 'videos')
+            ->with('tags', $tags);
+    }
+
     //langs
     public function langs(Request $request) {
 

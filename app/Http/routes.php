@@ -314,6 +314,18 @@ Route::group(['prefix' => 'admin'], function(){
     Route::post('delete-movie', ['as' => 'delete-movie', 'uses' =>'AdminController@deleteMovie']);
     Route::get('edit-movie/{id}', ['as' => 'edit-movie', 'uses' =>'AdminController@editMovie']);
 
+    //episodes
+    Route::get('/episodes', 'AdminController@episodes')->name('admin.episodes');
+    Route::get('/add/episode', 'AdminController@addEpisode')->name('admin.add.episode');
+    Route::post('/add/episode', 'AdminController@addEpisodeProcess')->name('admin.save.episode');
+    Route::post('edit-episode/update-episode', 'AdminController@updateEpisode')->name('admin.update.episode');
+
+    Route::post('episode-upload-image', ['as' => 'episode-upload-images', 'uses' =>'AdminController@postEpisodeUpload']);
+    Route::post('add/episode-upload-image/delete', ['as' => 'episode-upload-remove', 'uses' =>'AdminController@deleteEpisodeUpload']);
+    Route::post('add/create-episode', ['as' => 'create-episode', 'uses' =>'AdminController@createEpisode']);
+    Route::post('delete-episode', ['as' => 'delete-episode', 'uses' =>'AdminController@deleteEpisode']);
+    Route::get('edit-episode/{id}', ['as' => 'edit-episode', 'uses' =>'AdminController@editEpisode']);
+
     //category
     Route::post('add/create-category', ['as' => 'create-category', 'uses' =>'AdminController@createCategory']);
     Route::post('delete-category', ['as' => 'delete-category', 'uses' =>'AdminController@deleteCategory']);
