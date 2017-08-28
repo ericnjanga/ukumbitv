@@ -154,9 +154,11 @@
           		<div class="col-sm-4">
           			<span class="txt-xxl" id="likes-count">{{$likes}} 
 	          			@if($checkLike != null)
-	                  <span id="unlike" class="icon icon-thumbs-up btn-on" onclick="unlike(on)"></span>
+	                  <span id="unlike" class="btn-like icon icon-thumbs-up btn-on"></span>
+	                  <!-- <span id="unlike" class="icon icon-thumbs-up btn-on" onclick="unlike()"></span> -->
 	                @else
-	                  <span id="like" class="icon icon-thumbs-up btn-off" onclick="like(off)"></span>
+	                  <span id="like" class="btn-like icon icon-thumbs-up btn-off"></span>
+	                  <!-- <span id="like" class="icon icon-thumbs-up btn-off" onclick="like()"></span> -->
 	                @endif
 	              </span>
           		</div>
@@ -311,6 +313,14 @@
 
 @section('scripts')
   <script>
+  	$('body').on('click','.btn-like', function(){
+  		if(!$(this).hasClass('btn-on')){
+  			like();
+  		}else{
+  			unlike();
+  		}
+  	});
+
     {{--$( document ).ready(function() {--}}
         {{--$('#like-btn-top').html('<span class="icon icon-thumbs-up"></span>{{$likes}}');--}}
     {{--});--}}
