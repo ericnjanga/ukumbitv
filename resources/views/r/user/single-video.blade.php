@@ -144,47 +144,22 @@
                         {{--</div>--}}
                     </div>
                 </div>
-                <div class="hero-sub">
-                    <h2>Reviews</h2>
-                    <div class="likes-block">
-                        <div class="likes-item like">
-                            @if($checkLike != null)
-                                <span id="unlike" class="icon icon-thumbs-up" onclick="unlike()"></span>
-                                    @else
-                                <span id="like" class="icon icon-thumbs-up" onclick="like()"></span>
-                                            @endif
-                            <span id="likes-count">{{$likes}}</span>
-                        </div>
-                        <div class="likes-item dislike">
-                            @if($checkDisLike != null)
-                                <span id="undislike" class="icon icon-thumbs-down-hand" onclick="undislike()"></span>
-                            @else
-                                <span id="dislike" class="icon icon-thumbs-down-hand" onclick="dislike()"></span>
-                            @endif
-                            <span id="dislikes-count">{{$dislikes}}</span>
-                        </div>
-                        <div class="butn-block----">
-                        	<button type="button" id="btn-comment-rate-modal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#comment-rate-modal"> <span class="icon icon-pencil-edit-button"></span>Write
-                                a review</a></button>
-
-                        </div>
-                    </div>
+                <div class="hero-sub"> 
                     <div class="comment-block" id="new-comment-section">
-                    @foreach($video->comments as $comment)
-                        <div class="comment">
-                            <div class="img-block">
-                                <!--<span class="icon icon-man-user"></span>-->
-                                <img src="{{$comment->user->picture}}" alt="">
-                            </div>
-                            <div class="comment-text-block">
-                                <div class="comment-name">{{$comment->user->name}}</div>
-                                <p class="comment-text">
-                                    {{$comment->text}}
-                                </p>
-                            </div>
+                    	@foreach($video->comments as $comment)
+                      <div class="comment">
+                        <div class="img-block">
+                            <!--<span class="icon icon-man-user"></span>-->
+                            <img src="{{$comment->user->picture}}" alt="">
                         </div>
-                        @endforeach
-
+                        <div class="comment-text-block">
+                            <div class="comment-name">{{$comment->user->name}}</div>
+                            <p class="comment-text">
+                                {{$comment->text}}
+                            </p>
+                        </div>
+                      </div>
+                      @endforeach 
                     </div>
                     {{--<a href="" class="butn butn-orange-white butn-large">Load more</a>--}}
                 </div>
@@ -221,6 +196,7 @@
 								        <div class="media">
 												  <div class="media-left">
 												  	<img class="media-object" src="{{$video->videoimage->imgSmall1}}" alt=""> 
+												  	<p>{{$video->title}}</p>
 												  </div>
 												  <div class="media-body">
 												    <form>
@@ -228,6 +204,32 @@
 	                            	<textarea name="comment-text" id="comment-text" placeholder="Tell others what you think about the movie. Would you recommend it, and why?"></textarea>
 	                            </div> 
 		                        </form> 
+
+
+		                        <!-- -->
+		                        <div class="likes-block">
+			                        <div class="likes-item like">
+			                            @if($checkLike != null)
+			                                <span id="unlike" class="icon icon-thumbs-up" onclick="unlike()"></span>
+			                                    @else
+			                                <span id="like" class="icon icon-thumbs-up" onclick="like()"></span>
+			                                            @endif
+			                            <span id="likes-count">{{$likes}}</span>
+			                        </div>
+			                        <div class="likes-item dislike">
+			                            @if($checkDisLike != null)
+			                                <span id="undislike" class="icon icon-thumbs-down-hand" onclick="undislike()"></span>
+			                            @else
+			                                <span id="dislike" class="icon icon-thumbs-down-hand" onclick="dislike()"></span>
+			                            @endif
+			                            <span id="dislikes-count">{{$dislikes}}</span>
+			                        </div>
+			                        <div class="butn-block----">
+			                        	<button type="button" id="btn-comment-rate-modal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#comment-rate-modal"> <span class="icon icon-pencil-edit-button"></span>{{trans('messages.Write_a_review')}}</a></button>
+
+			                        </div>
+			                    </div>
+		                        <!-- -->
 												  </div>
 								        </div><!-- media -->
 
@@ -236,7 +238,7 @@
 								      </div>
 								      <div class="modal-footer">
 								        <button type="button" class="btn btn-default" data-dismiss="modal">{{trans('messages.close')}}</button>
-								        <button id="btn-submitcomment" type="button" class="btn btn-primary" data-comment-route="{{route('send-comment')}}">{{trans('messages.Submit')}}</button>
+								        <button id="btn-submitcomment" type="button" class="btn btn-primary" data-comment-route="{{route('send-comment')}}">{{trans('messages.submit')}}</button>
 								      </div>
 								    </div>
 								  </div>
@@ -249,7 +251,7 @@
                  
                     <div class="list-horizontal-wrapper">
                         @if(count($relatedVideos) == 0)
-                            <h1>There is no videos</h1>
+                            <h1>{{trans('messages.There_is_no_videos')}}</h1>
                         @else
                         @foreach($relatedVideos as $relatedVideo)
                                 

@@ -743,7 +743,9 @@ And to insure en exceptional delivery all this unique experience, we have create
 
 //videos ......
   'Similar_Videos' => 'Similar Videos',
+  'There_is_no_videos' => 'There is no videos',
+  'Write_a_review' => 'Écrire une critique',
 
 
-  
+
 );
