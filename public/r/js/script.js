@@ -291,8 +291,7 @@ var VideoFilter = (function () {
 // console.log('>>>>', $('#GP-menu').length);
 
 //Stick "GP-menu"
-$(document).ready(function(){
-// console.log('>>>>', $('#GP-menu').length);
+$(document).ready(function(){ 
   $('#GP-menu').sticky({topSpacing:0});
 
 
@@ -305,21 +304,38 @@ $(document).ready(function(){
 
 
 
-/**
- * Submitting comments
- * -------------------
-*/
 
+//Submit comment on click
+//------------------------
 $('body').on('click', '#btn-submitcomment', function(){
 	console.log('***heyeyey');
-	submit_comment($(this).data('comment-route'));
+	comment_submit($(this).data('comment-route'));
+});
+
+
+//Add/remove like on click
+//------------------------
+$('body').on('click','.btn-like', function(){
+	if(!$(this).hasClass('btn-on')){
+		movie_like($(this));
+	}else{
+		movie_unlike($(this));
+	}
+});
+
+//Add/remove like on click
+//------------------------
+$('body').on('click','.btn-dislike', function(){
+	if(!$(this).hasClass('btn-on')){
+		movie_dislike($(this));
+	}else{
+		movie_undislike($(this));
+	}
 });
 
 
 
-
-
-function submit_comment(urlCommentRoute){
+function comment_submit(urlCommentRoute){
 	if($('#comment-text').val() === '') {
     swal("Hmm", "Need to write a review, try again pls", "error");
 	} else {
@@ -352,7 +368,124 @@ function submit_comment(urlCommentRoute){
 	}//end else
 }
 
+function movie_like($btn) { 
+  var likesCount = $('#likes-count').text();
+  var disLikesCount = $('#dislikes-count').text(); 
+  var fd = new FormData;
+		//...
+  fd.append('_token', '{{csrf_token()}}');
+  fd.append('id', '{{$video->id}}');
+  fd.append('type', 'like');
 
+  $.ajax({
+    type: 'POST',
+    url: $btn.data('route-like'),
+    contentType: false,
+    processData: false,
+    data: fd,
+    dataType: 'html',
+    success: function(data){ 
+      $('#likes-count, #likes-count-top').text(+likesCount + 1);
+      //...
+      $('.btn-like').removeClass('btn-off').addClass('btn-on');
+      // $('.btn-dislike').removeClass('.btn-on').addClass('btn-off');
+
+      var rep = JSON.parse(data);
+
+      if(rep.check === 1){
+          $('#dislikes-count').text(+disLikesCount - 1);
+      } 
+    },
+    error: function(data){
+        swal("Hmm", "Something went wrong, try again pls", "error");
+  	}
+  });
+}//like
+
+function movie_unlike($btn) { 
+  var likesCount = $('#likes-count').text(); 
+  var fd = new FormData;
+
+  fd.append('_token', '{{csrf_token()}}');
+  fd.append('id', '{{$video->id}}');
+
+  $.ajax({
+    type: 'POST',
+    url: $btn.data('route-unlike'),
+    contentType: false,
+    processData: false,
+    data: fd,
+    dataType: 'html',
+    success: function(data){ 
+      $('#likes-count, #likes-count-top').text(+likesCount - 1);
+      //...
+      $('.btn-like').removeClass('btn-on').addClass('btn-off');
+      // $('.btn-dislike').removeClass('.btn-off').addClass('btn-on');
+
+      var rep = JSON.parse(data); 
+    },
+    error: function(data){
+      swal("Hmm", "Something went wrong, try again pls", "error");
+    }
+  });
+}//unlike
+
+function movie_dislike($btn) { 
+  var likesCount = $('#likes-count').text();
+  var disLikesCount = $('#dislikes-count').text(); 
+  var fd = new FormData;
+
+  fd.append('_token', '{{csrf_token()}}');
+  fd.append('id', '{{$video->id}}');
+  fd.append('type', 'dislike');
+
+  $.ajax({
+    type: 'POST',
+    url: $btn.data('route-like'),
+    contentType: false,
+    processData: false,
+    data: fd,
+    dataType: 'html',
+    success: function(data){ 
+      $('#dislikes-count').text(+disLikesCount + 1);
+      //...
+      // $('.btn-like').removeClass('btn-on').addClass('btn-off');
+      $('.btn-dislike').removeClass('btn-off').addClass('btn-on');
+      var rep = JSON.parse(data);
+      if(rep.check === 1){
+          $('#likes-count, #likes-count-top').text(+likesCount - 1);
+      } 
+    },
+    error: function(data){
+        swal("Hmm", "Something went wrong, try again pls", "error");
+    }
+  });
+}//dislike
+
+function movie_undislike($btn) { 
+  var disLikesCount = $('#dislikes-count').text(); 
+  var fd = new FormData;
+
+  fd.append('_token', '{{csrf_token()}}');
+  fd.append('id', '{{$video->id}}'); 
+
+  $.ajax({
+    type: 'POST',
+    url: $btn.data('route-unlike'),
+    contentType: false,
+    processData: false,
+    data: fd,
+    dataType: 'html',
+    success: function(data){ 
+      $('#dislikes-count').text(+disLikesCount - 1);
+      $('.btn-dislike').removeClass('btn-on').addClass('btn-off');
+      var rep = JSON.parse(data); 
+    },
+    error: function(data){
+      swal("Hmm", "Something went wrong, try again pls", "error");
+    }
+  });
+}//undislike
 
 
 
