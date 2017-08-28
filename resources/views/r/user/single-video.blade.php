@@ -154,9 +154,9 @@
           		<div class="col-sm-4">
           			<span class="txt-xxl" id="likes-count">{{$likes}} 
 	          			@if($checkLike != null)
-	                  <span id="unlike" class="icon icon-thumbs-up btn-on" onclick="unlike()"></span>
+	                  <span id="unlike" class="icon icon-thumbs-up btn-on" onclick="unlike(on)"></span>
 	                @else
-	                  <span id="like" class="icon icon-thumbs-up btn-off" onclick="like()"></span>
+	                  <span id="like" class="icon icon-thumbs-up btn-off" onclick="like(off)"></span>
 	                @endif
 	              </span>
           		</div>
@@ -316,10 +316,12 @@
     {{--});--}}
     
 
-    function like() { 
+    function like(msg) { 
       var likesCount = $('#likes-count').text();
       var disLikesCount = $('#dislikes-count').text(); 
       var fd = new FormData;
+
+      console.log('>>>', msg);
 
       fd.append('_token', '{{csrf_token()}}');
       fd.append('id', '{{$video->id}}');
