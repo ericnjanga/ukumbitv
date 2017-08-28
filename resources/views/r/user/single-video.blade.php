@@ -164,7 +164,7 @@
           			<span class="icon icon-thumbs-down-hand"></span> 1020 total
           		</div>
           		<div class="col-sm-4">
-          			<span class="txt-xxl" id="dislikes-count">{{$dislikes}} 
+          			<span class="txt-xxl pull-right" id="dislikes-count">{{$dislikes}} 
           				@if($checkDisLike != null)
                     <span id="undislike" class="icon icon-thumbs-down-hand" onclick="undislike()"></span>
                   @else
@@ -176,15 +176,14 @@
 
 
 
-          	<!-- -->
-                      <ul class="rating-frame list-inline"> 
+          
+                 <!--      <ul class="rating-frame list-inline"> 
                       	<li>
                           @if($checkLike != null)
                             <span id="unlike" class="icon icon-thumbs-up" onclick="unlike()"></span>
                           @else
                             <span id="like" class="icon icon-thumbs-up" onclick="like()"></span>
-                          @endif
-                          <!-- <span id="likes-count">{{$likes}}</span>  -->
+                          @endif 
                       	</li> 
                       	<li>
                           @if($checkDisLike != null)
@@ -194,8 +193,8 @@
                           @endif
                           <span id="dislikes-count">{{$dislikes}}</span> 
                       	</li> 
-                    	</ul>
-                      <!-- -->
+                    	</ul> -->
+                       
 
 
 
