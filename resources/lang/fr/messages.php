@@ -724,6 +724,10 @@ And to insure en exceptional delivery all this unique experience, we have create
   'share' => 'Partager',
   'Episodes' => 'Épisodes',
   'Cast_and_credits' => 'L\'équipe de le casting',
+  'Review_by' => 'Revue par',
+
+
+
 
 
   

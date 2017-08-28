@@ -182,7 +182,7 @@
 									    <img class="media-object" src="{{Auth::user()->picture}}" alt="..." width="48" height="48"> 
 									  </div>
 									  <div class="media-body">
-									  	Review by 
+									  	{{trans('messages.Review_by')}} 
 									    @if(Auth::user()->name != '')
                           {{Auth::user()->name}}
                           @else
@@ -211,28 +211,23 @@
 
 
                       <!-- -->
-                      <ul class="likes-block list-inline">
-                        <!-- <div class="likes-item like"> -->
-                        	<li>
-                            @if($checkLike != null)
-                                <span id="unlike" class="icon icon-thumbs-up" onclick="unlike()"></span>
-                                    @else
-                                <span id="like" class="icon icon-thumbs-up" onclick="like()"></span>
-                                            @endif
-                            <span id="likes-count">{{$likes}}</span> 
-                        	</li>
-                        <!-- </div>
-                        <div class="likes-item dislike"> -->
-                        	<li>
-                            @if($checkDisLike != null)
-                                <span id="undislike" class="icon icon-thumbs-down-hand" onclick="undislike()"></span>
-                            @else
-                                <span id="dislike" class="icon icon-thumbs-down-hand" onclick="dislike()"></span>
-                            @endif
-                            <span id="dislikes-count">{{$dislikes}}</span>
-                        		
-                        	</li>
-                        <!-- </div>  -->
+                      <ul class="rating-frame list-inline"> 
+                      	<li>
+                          @if($checkLike != null)
+                            <span id="unlike" class="icon icon-thumbs-up" onclick="unlike()"></span>
+                                  @else
+                            <span id="like" class="icon icon-thumbs-up" onclick="like()"></span>
+                                          @endif
+                          <span id="likes-count">{{$likes}}</span> 
+                      	</li> 
+                      	<li>
+                          @if($checkDisLike != null)
+                            <span id="undislike" class="icon icon-thumbs-down-hand" onclick="undislike()"></span>
+                          @else
+                            <span id="dislike" class="icon icon-thumbs-down-hand" onclick="dislike()"></span>
+                          @endif
+                          <span id="dislikes-count">{{$dislikes}}</span> 
+                      	</li> 
                     	</ul>
                       <!-- -->
 									  </div>
@@ -243,7 +238,7 @@
 					      </div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-default" data-dismiss="modal">{{trans('messages.close')}}</button>
-					        <button id="btn-submitcomment" type="button" class="btn btn-primary" data-comment-route="{{route('send-comment')}}">{{trans('messages.submit')}}</button>
+					        <button id="btn-submitcomment" type="button" class="btn btn-submit" data-comment-route="{{route('send-comment')}}">{{trans('messages.submit')}}</button>
 					      </div>
 					    </div>
 					  </div>

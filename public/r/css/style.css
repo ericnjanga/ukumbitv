@@ -2299,6 +2299,7 @@ input:-webkit-autofill {
   color: #fff; }
 
 .modal-footer {
+  border-top: 0px solid;
   border-radius: 0; }
   .modal-footer button {
     text-transform: uppercase; }
@@ -2330,9 +2331,18 @@ input:-webkit-autofill {
     background-color: #eee; }
   .modal-cr__body .media-body .rate-info {
     font-size: 13px;
-    font-style: italic; }
+    font-style: italic;
+    font-weight: 100; }
   .modal-cr__body .media-body .rating-frame {
-    margin: 10px 0; }
+    margin: 30px 0 0 -5px; }
+    .modal-cr__body .media-body .rating-frame .icon {
+      font-style: 30px;
+      cursor: pointer; }
+    .modal-cr__body .media-body .rating-frame > li:first-child {
+      padding-left: 15px; }
+
+.modal-cr__footer .btn-submit {
+  background-color: #B3C833; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {
