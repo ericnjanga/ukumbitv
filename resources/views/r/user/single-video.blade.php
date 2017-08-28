@@ -155,10 +155,10 @@
           			<span class="txt-xxl">
 									<span id="likes-count">{{$likes}} </span> 
 	          			@if($checkLike != null)
-	                  <span id="unlike" class="btn-like icon icon-thumbs-up btn-on"></span>
+	                  <span class="btn-like icon icon-thumbs-up btn-on"></span>
 	                  <!-- <span id="unlike" class="icon icon-thumbs-up btn-on" onclick="unlike()"></span> -->
 	                @else
-	                  <span id="like" class="btn-like icon icon-thumbs-up btn-off"></span>
+	                  <span class="btn-like icon icon-thumbs-up btn-off"></span>
 	                  <!-- <span id="like" class="icon icon-thumbs-up btn-off" onclick="like()"></span> -->
 	                @endif
 	              </span>
@@ -353,6 +353,8 @@
 
 	//                    $('#unlike').css("color", "#fff");
 	          $('#likes-count, #likes-count-top').text(+likesCount + 1);
+	          //...
+	          $('.btn-like').removeClass('.btn-off').addClass('btn-on');
 
 	          var rep = JSON.parse(data);
 
@@ -395,6 +397,9 @@
                     // $('#like-btn-top').attr({"onclick":"like()"});
 //                    $('#like').css("color", "#333");
                     $('#likes-count, #likes-count-top').text(+likesCount - 1);
+					          //...
+					          $('.btn-like').removeClass('btn-on').addClass('btn-off');
+
                     var rep = JSON.parse(data);
                     //console.log(rep);
 //                    swal("Cool!", "You have successfully unliked!", "success");
