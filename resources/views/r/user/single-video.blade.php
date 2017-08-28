@@ -235,8 +235,8 @@
 													 
 								      </div>
 								      <div class="modal-footer">
-								        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								        <button id="btn-submitcomment" type="button" class="btn btn-primary">Submit</button>
+								        <button type="button" class="btn btn-default" data-dismiss="modal">{{trans('messages.close')}}</button>
+								        <button id="btn-submitcomment" type="button" class="btn btn-primary" data-comment-route="{{route('send-comment')}}">{{trans('messages.Submit')}}</button>
 								      </div>
 								    </div>
 								  </div>
@@ -245,7 +245,7 @@
             </div><!-- global-main-content -->
 
             <aside class="block-aside">
-                <div class="title">Similar Videos</div>
+                <div class="title">{{trans('messages.Similar_Videos')}}</div>
                  
                     <div class="list-horizontal-wrapper">
                         @if(count($relatedVideos) == 0)
@@ -339,9 +339,7 @@
             fd.append('_token', '{{csrf_token()}}');
             fd.append('id', '{{$video->id}}');
             fd.append('type', 'dislike');
-
-
-
+ 
             $.ajax({
                 type: 'POST',
                 url: '{{route('like')}}',

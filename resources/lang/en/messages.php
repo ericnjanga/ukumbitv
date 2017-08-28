@@ -740,4 +740,10 @@ For this, we are teaming up with young, talented and bold movie producers, scree
 And to insure en exceptional delivery all this unique experience, we have created <b>UkumbiTV</b>, a platform which aims to be among the best content streaming platforms in the world.</p>
 
 <p>This is how UkumbiTV is going to rebrand the African cinema, this is how UkumbiTV will redefine the African quality!</p>',
+
+//videos ......
+  'Similar_Videos' => 'Similar Videos',
+
+
+  
 );

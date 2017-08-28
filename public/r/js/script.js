@@ -306,15 +306,21 @@ $(document).ready(function(){
 
 
 /**
- * Sunmitting comments
+ * Submitting comments
  * -------------------
 */
 
 $('body').on('click', '#btn-submitcomment', function(){
 	console.log('***heyeyey');
-	// $('#comment-rate-modal').modal();
+	submit_comment($(this).data('comment-route'));
+});
 
-  if($('#comment-text').val() === '') {
+
+
+
+
+function submit_comment(urlCommentRoute){
+	if($('#comment-text').val() === '') {
     swal("Hmm", "Need to write a review, try again pls", "error");
 	} else {
 
@@ -327,7 +333,7 @@ $('body').on('click', '#btn-submitcomment', function(){
 
     $.ajax({
         type: 'POST',
-        url: '{{route('send-comment')}}',
+        url: urlCommentRoute,
         contentType: false,
         processData: false,
         data: fd,
@@ -342,11 +348,9 @@ $('body').on('click', '#btn-submitcomment', function(){
         error: function (data) {
             alert('error '+data);
         }
-    });
-
-	}
-});
-
+    }); 
+	}//end else
+}
 
 
 
