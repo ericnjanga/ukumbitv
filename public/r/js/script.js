@@ -388,7 +388,7 @@ function movie_like($btn) {
       $('#likes-count, #likes-count-top').text(+likesCount + 1);
       //...
       $('.btn-like').removeClass('btn-off').addClass('btn-on');
-      // $('.btn-dislike').removeClass('.btn-on').addClass('btn-off');
+      $('.btn-dislike').removeClass('.btn-on').addClass('btn-off');
 
       var rep = JSON.parse(data);
 
@@ -449,8 +449,8 @@ function movie_dislike($btn) {
     success: function(data){ 
       $('#dislikes-count').text(+disLikesCount + 1);
       //...
-      // $('.btn-like').removeClass('btn-on').addClass('btn-off');
       $('.btn-dislike').removeClass('btn-off').addClass('btn-on');
+      $('.btn-like').removeClass('btn-on').addClass('btn-off');
       var rep = JSON.parse(data);
       if(rep.check === 1){
           $('#likes-count, #likes-count-top').text(+likesCount - 1);
