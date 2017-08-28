@@ -163,7 +163,7 @@
           		<div class="col-sm-4">
           			<span class="txt-xxl pull-right">
           				<span id="dislikes-count">{{$dislikes}} </span> 
-          				<span class="btn-dislike icon icon-thumbs-down-hand {{($checkLike != null)?'btn-on':'btn-off'}}" data-route-like="{{route('like')}}" data-route-unlike="{{route('unlike')}}"></span> 
+          				<span class="btn-dislike icon icon-thumbs-down-hand {{($checkUnlike != null)?'btn-on':'btn-off'}}" data-route-like="{{route('like')}}" data-route-unlike="{{route('unlike')}}"></span> 
           			</span>
           		</div> 
           	</div>
