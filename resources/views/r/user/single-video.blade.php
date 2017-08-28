@@ -154,11 +154,7 @@
           		<div class="col-sm-4">
           			<span class="txt-xxl">
 									<span id="likes-count">{{$likes}} </span> 
-	          			@if($checkLike != null)
-	                  <span class="btn-like icon icon-thumbs-up {{($checkLike != null)?'xxx':'ccc'}} btn-on"></span>
-	                @else
-	                  <span class="btn-like icon icon-thumbs-up btn-off"></span>
-	                @endif
+	          			<span class="btn-like icon icon-thumbs-up {{($checkLike != null)?'btn-on':'btn-off'}}" data-route-like="{{route('like')}}" data-route-unlike="{{route('unlike')}}"></span>
 	              </span>
           		</div>
           		<div class="col-sm-4 text-center col-mid">
@@ -167,13 +163,7 @@
           		<div class="col-sm-4">
           			<span class="txt-xxl pull-right">
           				<span id="dislikes-count">{{$dislikes}} </span> 
-          				@if($checkDisLike != null)
-                    <span class="btn-dislike icon icon-thumbs-down-hand btn-on" onclick="undislike()"></span>
-                    <!-- <span id="undislike" class="icon icon-thumbs-down-hand btn-on" onclick="undislike()"></span> -->
-                  @else
-                    <span class="btn-dislike icon icon-thumbs-down-hand btn-off" onclick="dislike()"></span>
-                    <!-- <span id="dislike" class="icon icon-thumbs-down-hand btn-off" onclick="dislike()"></span> -->
-                  @endif
+          				<span class="btn-dislike icon icon-thumbs-down-hand {{($checkLike != null)?'btn-on':'btn-off'}}" data-route-like="{{route('like')}}" data-route-unlike="{{route('unlike')}}"></span> 
           			</span>
           		</div> 
           	</div>
@@ -296,17 +286,17 @@
   	//Add/remove like on click
   	$('body').on('click','.btn-like', function(){
   		if(!$(this).hasClass('btn-on')){
-  			like();
+  			like($(this));
   		}else{
-  			unlike();
+  			unlike($(this));
   		}
   	});
   	//Add/remove like on click
   	$('body').on('click','.btn-dislike', function(){
   		if(!$(this).hasClass('btn-on')){
-  			dislike();
+  			dislike($(this));
   		}else{
-  			undislike();
+  			undislike($(this));
   		}
   	});
 
@@ -315,7 +305,7 @@
     {{--});--}}
     
 
-    function like() { 
+    function like($btn) { 
       var likesCount = $('#likes-count').text();
       var disLikesCount = $('#dislikes-count').text(); 
       var fd = new FormData;
@@ -326,7 +316,7 @@
 
       $.ajax({
         type: 'POST',
-        url: '{{route('like')}}',
+        url: $btn.data('route-like'),
         contentType: false,
         processData: false,
         data: fd,
@@ -348,7 +338,7 @@
       });
     }//like
  
-    function unlike() { 
+    function unlike($btn) { 
       var likesCount = $('#likes-count').text(); 
       var fd = new FormData;
 
@@ -357,7 +347,7 @@
 
       $.ajax({
         type: 'POST',
-        url: '{{route('unlike')}}',
+        url: $btn.data('route-unlike'),
         contentType: false,
         processData: false,
         data: fd,
@@ -379,7 +369,7 @@
 
 
 
-    function dislike() { 
+    function dislike($btn) { 
       var likesCount = $('#likes-count').text();
       var disLikesCount = $('#dislikes-count').text(); 
       var fd = new FormData;
@@ -390,7 +380,7 @@
 
       $.ajax({
         type: 'POST',
-        url: '{{route('like')}}',
+        url: $btn.data('route-like'),
         contentType: false,
         processData: false,
         data: fd,
@@ -408,7 +398,7 @@
       });
     }//dislike
  
-    function undislike() { 
+    function undislike($btn) { 
       var disLikesCount = $('#dislikes-count').text(); 
       var fd = new FormData;
 
@@ -417,7 +407,7 @@
 
       $.ajax({
         type: 'POST',
-        url: '{{route('unlike')}}',
+        url: $btn.data('route-unlike'),
         contentType: false,
         processData: false,
         data: fd,
