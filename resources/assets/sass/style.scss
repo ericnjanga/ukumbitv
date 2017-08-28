@@ -2953,7 +2953,7 @@ input:-webkit-autofill {
 
 
 
-.media-user-thmbsection {
+.modal-cr__media {
 	margin: 0;
 	$img-size : 48px;
 	img {
@@ -2965,6 +2965,19 @@ input:-webkit-autofill {
 	.media-body {
 		width: initial;
 		vertical-align: middle;
+	}
+}
+.modal-cr__body {
+	.media-left {
+		// width: 170px;
+	}
+	.media-body {
+		width: 70%;
+		textarea {
+			height: 200px;
+			border-width: 0;
+			background-color: #eee;
+		}
 	}
 }
 

@@ -2305,16 +2305,23 @@ input:-webkit-autofill {
   .modal-footer .btn-default {
     border-width: 0; }
 
-.media-user-thmbsection {
+.modal-cr__media {
   margin: 0; }
-  .media-user-thmbsection img {
+  .modal-cr__media img {
     width: 48px;
     height: 48px;
-    border: 2px solid #333;
+    border: 2px solid #999;
     border-radius: 48px; }
-  .media-user-thmbsection .media-body {
+  .modal-cr__media .media-body {
     width: initial;
     vertical-align: middle; }
+
+.modal-cr__body .media-body {
+  width: 70%; }
+  .modal-cr__body .media-body textarea {
+    height: 200px;
+    border-width: 0;
+    background-color: #eee; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {
