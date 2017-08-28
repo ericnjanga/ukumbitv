@@ -719,6 +719,11 @@ And to insure en exceptional delivery all this unique experience, we have create
   'Similar_Videos' => 'Vidéos similaires',
   'There_is_no_videos' => 'Il n\'y a pas de vidéos',
   'Write_a_review' => 'Write a review',
+  'Play' => 'Jouer',
+  'Add_to_list' => 'Add to list',
+  'share' => 'Partager',
+  'Episodes' => 'Épisodes',
+  'Cast_and_credits' => 'L\'équipe de le casting',
 
 
   
