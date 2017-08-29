@@ -1,4 +1,4 @@
-<div class="video-item-popup" style="display: none">
+<!-- <div class="video-item-popup" style="display: none">
     <div class="hero">
         <img src="{{ asset('r/img/bg-video.png')}}" alt="">
         <div class="layer"></div>
@@ -28,4 +28,4 @@
             <a href="" class="details-butn">View Details</a>
         </div>
     </div>
-</div>
+</div> -->

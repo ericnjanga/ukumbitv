@@ -547,7 +547,13 @@ $('#frame-search .typeahead').typeahead({
 
 
 /*
+1)THERE IS A PROBLEM WHEN TRYING TO IMPLEMENT THE REMOTE VERSION:
+2)IT LOOKS LIKE THE END POINT YOU CREATED DOESN'T MATCH THEIR SYSTEM
+--- please check it out ---
 //http://twitter.github.io/typeahead.js/examples/#remote
+
+
+
 var db_keywords = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
