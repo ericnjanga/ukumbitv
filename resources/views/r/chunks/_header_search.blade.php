@@ -21,7 +21,7 @@
             </div> -->
 
           <div class="input-group">
-			      <input type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false" onclick="getSearchData()">
+			      <input type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false">
 			      <span class="input-group-btn">
 			        <button class="btn btn-default" type="button">Go!</button>
 			      </span>
