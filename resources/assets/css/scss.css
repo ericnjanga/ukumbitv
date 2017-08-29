@@ -2011,6 +2011,7 @@ input:-webkit-autofill {
  * Import:
  * - Google play menu
  * - utilities/cleafix
+ * - libs/typehead
  * --------------------------------------
 */
 /**
@@ -2224,177 +2225,6 @@ input:-webkit-autofill {
   content: " ";
   clear: both; }
 
-/**
- * Styling main content of the entire app
- * --------------------------------------
-*/
-.container-fluid {
-  padding-left: 0; }
-
-#GP-menu-sticky-wrapper {
-  float: left; }
-
-.GP-menu {
-  max-width: 200px; }
-
-/**
- * Global layout styling
- * --------------------------------------
-*/
-.global-main-content {
-  float: left;
-  width: 75%;
-  margin-left: 30px; }
-  .global-main-content.utv-card {
-    background-color: #fff;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2); }
-
-#GP-menu-sticky-wrapper.is-sticky + .global-main-content {
-  margin-left: 230px; }
-
-.layout-3-columns .global-main-content {
-  width: calc(75% - 300px); }
-
-.layout-3-columns .block-aside {
-  margin-left: 30px;
-  float: right;
-  width: 300px; }
-  .layout-3-columns .block-aside .list-horizontal-wrapper {
-    width: 100%; }
-
-.layout-3-columns #GP-menu-sticky-wrapper.is-sticky + .global-main-content {
-  margin-left: 230px; }
-
-.global-main-content.utv-card .title {
-  font-size: 30px; }
-
-.global-main-content.utv-card .hero,
-.global-main-content.utv-card .hero-sub,
-.global-main-content.utv-card .hero-sub_heading,
-.global-main-content.utv-card .rating-stats {
-  margin-bottom: 30px; }
-  .global-main-content.utv-card .hero hr,
-  .global-main-content.utv-card .hero-sub hr,
-  .global-main-content.utv-card .hero-sub_heading hr,
-  .global-main-content.utv-card .rating-stats hr {
-    margin-bottom: 30px; }
-
-.global-main-content.utv-card .hero-sub_heading h2 {
-  margin-top: 8px; }
-
-.global-main-content.utv-card .rating-stats .col-mid {
-  margin-top: 20px; }
-
-.global-main-content.utv-card .rating-stats .icon {
-  cursor: pointer; }
-
-.global-main-content.utv-card .icon-thumbs-up.btn-on,
-.global-main-content.utv-card .icon-thumbs-down-hand.btn-on {
-  color: #CE5043; }
-
-.global-main-content.utv-card .hero {
-  position: relative; }
-  .global-main-content.utv-card .hero .info-block {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 30px; }
-
-.global-main-content.utv-card .hero-sub {
-  margin-left: 40px;
-  margin-right: 40px; }
-
-.global-main-content.utv-card hr {
-  margin-left: 25px;
-  margin-right: 25px; }
-
-.global-main-content.utv-card h2 {
-  text-transform: uppercase;
-  font-size: 16px; }
-
-/**
- * Modals
- * --------------------------------------
-*/
-.modal-header {
-  background-color: #B3C833;
-  font-size: 20px;
-  color: #fff; }
-
-.modal-footer {
-  border-top: 0px solid;
-  border-radius: 0; }
-  .modal-footer button {
-    text-transform: uppercase; }
-  .modal-footer .btn-default {
-    border-width: 0; }
-
-.modal-cr__media {
-  margin: 0; }
-  .modal-cr__media img {
-    width: 48px;
-    height: 48px;
-    border: 2px solid #999;
-    border-radius: 48px; }
-  .modal-cr__media .media-body {
-    width: initial;
-    vertical-align: middle; }
-
-.modal-cr__body .media-left img {
-  margin-bottom: 5px; }
-
-.modal-cr__body .media-left p {
-  font-size: 14px; }
-
-.modal-cr__body .media-body {
-  width: 70%; }
-  .modal-cr__body .media-body textarea {
-    height: 200px;
-    border-width: 0;
-    background-color: #eee; }
-  .modal-cr__body .media-body .rate-info {
-    font-size: 13px;
-    font-style: italic;
-    font-weight: 100; }
-  .modal-cr__body .media-body .rating-frame {
-    margin: 30px 0 0 -5px; }
-    .modal-cr__body .media-body .rating-frame .icon {
-      font-style: 30px;
-      cursor: pointer; }
-    .modal-cr__body .media-body .rating-frame > li:first-child {
-      padding-left: 15px; }
-
-.modal-cr__footer .btn-submit {
-  background-color: #B3C833;
-  color: #fff; }
-
-/**
- * Placeholders
- * --------------------------------------
-*/
-.search-input {
-  font-family: 'Roboto', sans-serif; }
-  .search-input::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: #666; }
-  .search-input::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #666; }
-  .search-input:-ms-input-placeholder {
-    /* IE 10+ */
-    color: #666; }
-  .search-input:-moz-placeholder {
-    /* Firefox 18- */
-    color: #666; }
-
-/**
- * Form controls
- * --------------------------------------
-*/
-.form-control {
-  border: 1px solid #bbb;
-  border-radius: 2px; }
-
 /*
  * typehead.js-bootstrap3.less
  * @version 0.2.3
@@ -2587,6 +2417,177 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .tt-dropdown-menu .tt-suggestion p,
 .tt-menu .tt-suggestion p {
   margin: 0; }
+
+/**
+ * Styling main content of the entire app
+ * --------------------------------------
+*/
+.container-fluid {
+  padding-left: 0; }
+
+#GP-menu-sticky-wrapper {
+  float: left; }
+
+.GP-menu {
+  max-width: 200px; }
+
+/**
+ * Global layout styling
+ * --------------------------------------
+*/
+.global-main-content {
+  float: left;
+  width: 75%;
+  margin-left: 30px; }
+  .global-main-content.utv-card {
+    background-color: #fff;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2); }
+
+#GP-menu-sticky-wrapper.is-sticky + .global-main-content {
+  margin-left: 230px; }
+
+.layout-3-columns .global-main-content {
+  width: calc(75% - 300px); }
+
+.layout-3-columns .block-aside {
+  margin-left: 30px;
+  float: right;
+  width: 300px; }
+  .layout-3-columns .block-aside .list-horizontal-wrapper {
+    width: 100%; }
+
+.layout-3-columns #GP-menu-sticky-wrapper.is-sticky + .global-main-content {
+  margin-left: 230px; }
+
+.global-main-content.utv-card .title {
+  font-size: 30px; }
+
+.global-main-content.utv-card .hero,
+.global-main-content.utv-card .hero-sub,
+.global-main-content.utv-card .hero-sub_heading,
+.global-main-content.utv-card .rating-stats {
+  margin-bottom: 30px; }
+  .global-main-content.utv-card .hero hr,
+  .global-main-content.utv-card .hero-sub hr,
+  .global-main-content.utv-card .hero-sub_heading hr,
+  .global-main-content.utv-card .rating-stats hr {
+    margin-bottom: 30px; }
+
+.global-main-content.utv-card .hero-sub_heading h2 {
+  margin-top: 8px; }
+
+.global-main-content.utv-card .rating-stats .col-mid {
+  margin-top: 20px; }
+
+.global-main-content.utv-card .rating-stats .icon {
+  cursor: pointer; }
+
+.global-main-content.utv-card .icon-thumbs-up.btn-on,
+.global-main-content.utv-card .icon-thumbs-down-hand.btn-on {
+  color: #CE5043; }
+
+.global-main-content.utv-card .hero {
+  position: relative; }
+  .global-main-content.utv-card .hero .info-block {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px; }
+
+.global-main-content.utv-card .hero-sub {
+  margin-left: 40px;
+  margin-right: 40px; }
+
+.global-main-content.utv-card hr {
+  margin-left: 25px;
+  margin-right: 25px; }
+
+.global-main-content.utv-card h2 {
+  text-transform: uppercase;
+  font-size: 16px; }
+
+/**
+ * Modals
+ * --------------------------------------
+*/
+.modal-header {
+  background-color: #B3C833;
+  font-size: 20px;
+  color: #fff; }
+
+.modal-footer {
+  border-top: 0px solid;
+  border-radius: 0; }
+  .modal-footer button {
+    text-transform: uppercase; }
+  .modal-footer .btn-default {
+    border-width: 0; }
+
+.modal-cr__media {
+  margin: 0; }
+  .modal-cr__media img {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #999;
+    border-radius: 48px; }
+  .modal-cr__media .media-body {
+    width: initial;
+    vertical-align: middle; }
+
+.modal-cr__body .media-left img {
+  margin-bottom: 5px; }
+
+.modal-cr__body .media-left p {
+  font-size: 14px; }
+
+.modal-cr__body .media-body {
+  width: 70%; }
+  .modal-cr__body .media-body textarea {
+    height: 200px;
+    border-width: 0;
+    background-color: #eee; }
+  .modal-cr__body .media-body .rate-info {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 100; }
+  .modal-cr__body .media-body .rating-frame {
+    margin: 30px 0 0 -5px; }
+    .modal-cr__body .media-body .rating-frame .icon {
+      font-style: 30px;
+      cursor: pointer; }
+    .modal-cr__body .media-body .rating-frame > li:first-child {
+      padding-left: 15px; }
+
+.modal-cr__footer .btn-submit {
+  background-color: #B3C833;
+  color: #fff; }
+
+/**
+ * Placeholders
+ * --------------------------------------
+*/
+.search-input {
+  font-family: 'Roboto', sans-serif; }
+  .search-input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #666; }
+  .search-input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #666; }
+  .search-input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #666; }
+  .search-input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #666; }
+
+/**
+ * Form controls
+ * --------------------------------------
+*/
+.form-control {
+  border: 1px solid #bbb;
+  border-radius: 2px; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {
