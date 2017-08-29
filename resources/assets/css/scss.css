@@ -290,6 +290,8 @@ ul li {
   height: 60px;
   background-color: #eeeeee;
   margin: 0 0 30px 0; }
+  .main-header .frame-search {
+    padding-top: 12px; }
 
 input {
   height: 45px;
