@@ -17,8 +17,7 @@
     		
         <div class="global-main-content utv-card">
           <div class="hero">
-            <img src="{{asset("r/img/bg-video.png")}}" class="img-responsive" alt="">
-            <div class="layer"></div>
+            <img src="{{asset("r/img/bg-video.png")}}" class="img-responsive" alt=""> 
             <div class="info-block">
               <h1 class="title">{{$video->title}}</h1>
               <div class="video-info-text">
