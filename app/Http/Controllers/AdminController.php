@@ -1394,25 +1394,25 @@ class AdminController extends Controller
             $small_image1 = $request->file('small_image1');
             $small_image1_name = '/small_image1'.time().$small_image1->getClientOriginalName();
             $small_image1->move(public_path('images/'.$specialId),$small_image1_name);
-            $images->imgSmall1 = $imgUrl.$small_image1_name;
+            $images->imgHero = $imgUrl.$small_image1_name;
         }
         if(!empty($request->file('small_image2'))){
             $small_image2 = $request->file('small_image2');
             $small_image2_name = '/small_image2'.time().$small_image2->getClientOriginalName();
             $small_image2->move(public_path('images/'.$specialId),$small_image2_name);
-            $images->imgSmall2 = $imgUrl.$small_image2_name;
+            $images->imgPreview1 = $imgUrl.$small_image2_name;
         }
         if(!empty($request->file('small_image3'))){
             $small_image3 = $request->file('small_image3');
             $small_image3_name = '/small_image3'.time().$small_image3->getClientOriginalName();
             $small_image3->move(public_path('images/'.$specialId),$small_image3_name);
-            $images->imgSmall3 = $imgUrl.$small_image3_name;
+            $images->imgPreview2 = $imgUrl.$small_image3_name;
         }
         if(!empty($request->file('preview_image'))){
             $preview_image = $request->file('preview_image');
             $preview_image_name = '/preview_image'.time().$preview_image->getClientOriginalName();
             $preview_image->move(public_path('images/'.$specialId),$preview_image_name);
-            $images->imgPreview = $imgUrl.$preview_image_name;
+            $images->imgPreview3 = $imgUrl.$preview_image_name;
         }
 
         $images->save();
@@ -1507,13 +1507,19 @@ class AdminController extends Controller
         $imgUrl = url('/images/'.$specialId.'/');
         $videoUrl = url('/movies/'.$specialId.'/');
 
-        $billboard_image = $request->file('billboard_image');
-        $billboard_image_name = '/billboard'.time().$billboard_image->getClientOriginalName();
-        $billboard_image->move(public_path('images/'.$specialId),$billboard_image_name);
+        if($request->hasFile('billboard_image')) {
+            $billboard_image = $request->file('billboard_image');
+            $billboard_image_name = '/billboard'.time().$billboard_image->getClientOriginalName();
+            $billboard_image->move(public_path('images/'.$specialId),$billboard_image_name);
+            $billboard = $imgUrl.$billboard_image_name;
+        } else { $billboard = null; }
 
-        $small_image1 = $request->file('small_image1');
-        $small_image1_name = '/small_image1'.time().$small_image1->getClientOriginalName();
-        $small_image1->move(public_path('images/'.$specialId),$small_image1_name);
+        if($request->hasFile('small_image1')) {
+            $small_image1 = $request->file('small_image1');
+            $small_image1_name = '/small_image1' . time() . $small_image1->getClientOriginalName();
+            $small_image1->move(public_path('images/' . $specialId), $small_image1_name);
+            $small1 = $imgUrl.$small_image1_name;
+        } else { $small1 = null; }
 
         if($request->hasFile('small_image2')){
             $small_image2 = $request->file('small_image2');
@@ -1529,9 +1535,12 @@ class AdminController extends Controller
             $small3 = $imgUrl.$small_image3_name;
         } else { $small3 = null; }
 
-        $preview_image = $request->file('preview_image');
-        $preview_image_name = '/preview_image'.time().$preview_image->getClientOriginalName();
-        $preview_image->move(public_path('images/'.$specialId),$preview_image_name);
+        if($request->hasFile('preview_image')) {
+            $preview_image = $request->file('preview_image');
+            $preview_image_name = '/preview_image'.time().$preview_image->getClientOriginalName();
+            $preview_image->move(public_path('images/'.$specialId),$preview_image_name);
+            $preview = $imgUrl.$preview_image_name;
+        } else { $preview = null; }
 
 
         $adminVideo = new AdminVideo();
@@ -1542,7 +1551,7 @@ class AdminController extends Controller
         $adminVideo->genre_id = 0;
         $adminVideo->video = $uri;
         $adminVideo->trailer_video = 'trailer url';
-        $adminVideo->default_image = $imgUrl.$billboard_image_name;
+        $adminVideo->default_image = $small3;
         $adminVideo->banner_image = '';
         $adminVideo->ratings = 5;
         $adminVideo->reviews = 'review';
@@ -1569,11 +1578,11 @@ class AdminController extends Controller
 
         $images = new Videoimage();
         $images->admin_video_id = $adminVideo->id;
-        $images->imgBillboard = $imgUrl.$billboard_image_name;
-        $images->imgSmall1 = $imgUrl.$small_image1_name;
-        $images->imgSmall2 = $small2;
-        $images->imgSmall3 = $small3;
-        $images->imgPreview = $imgUrl.$preview_image_name;
+        $images->imgBillboard = $billboard;
+        $images->imgHero = $small1;
+        $images->imgPreview1 = $small2;
+        $images->imgPreview2 = $small3;
+        $images->imgPreview3 = $preview;
         $images->save();
 
         $this->createVideoTags($request->tags, $adminVideo->id);

@@ -262,38 +262,38 @@
               <fieldset class="blk col-md-12 mb35"> 
 								<legend>Video Posters</legend>
 	              <div class="form-group">
-	                  <label for="billboard_image" class="">Billboard  image *</label>
+	                  <label for="billboard_image" class="">Billboard  image</label>
 	                  <input required type="file" id="billboard_image" name="billboard_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('billboard_image', 'previewArea1', 'billboard');">
 	                  <div id="previewArea1"></div>
-	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 650x510)</p>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1600x510)</p>
 	              </div>
 	             
 	              <div class="form-group">
-	                  <label for="small_image1" class="">Small image 1 *</label>
+	                  <label for="small_image1" class="">Hero image</label>
 	                  <input required type="file" id="small_image1" name="small_image1" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image1', 'previewArea2', 'small1');">
 	                  <div id="previewArea2"></div>
-	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 450x450)</p>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1100x510)</p>
 	              </div>
 	          
 	              <div class="form-group">
-	                  <label for="small_image2" class="">Small image 2</label>
+	                  <label for="small_image2" class="">Preview image 1</label>
 	                  <input type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small2');">
 	                  <div id="previewArea3"></div>
-	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1600x510)</p>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 510x800)</p>
 	              </div>
 	           
 	              <div class="form-group">
-	                  <label for="small_image3" class="">Small image 3</label>
+	                  <label for="small_image3" class="">Preview image 2 *</label>
 	                  <input type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small3');">
 	                  <div id="previewArea4"></div>
-	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 1100x510)</p>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 510x650)</p>
 	              </div>
 	           
 	              <div class="form-group">
-	                  <label for="preview_image" class="">Preview image</label>
+	                  <label for="preview_image" class="">Preview image 3 *</label>
 	                  <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
 	                  <div id="previewArea5"></div>
-	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 800x510)</p>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 450x450)</p>
 	              </div>
               </fieldset>
 							{{--images end--}} 
@@ -470,8 +470,8 @@
 
 
         function createMovie() {
-            if($('#billboard_image').prop('files')[0] === undefined || $('#small_image1').prop('files')[0] === undefined) {
-                swal("Hmmm...", "Billboard and Small image1 is required", "error");
+            if($('#small_image3').prop('files')[0] === undefined || $('#preview_image').prop('files')[0] === undefined) {
+                swal("Hmmm...", "Preview 2 and Preview 3 images is required", "error");
             } else {
 
             var tagsArr = $('.alltags').map(function(){
@@ -554,29 +554,29 @@
             var imgSize = '';
             switch (imgType) {
                 case 'billboard':
-                    imgWidth = 650;
-                    imgHeight = 510;
-                    imgSize = '650x510';
-                    break;
-                case 'small1':
-                    imgWidth = 450;
-                    imgHeight = 450;
-                    imgSize = '450x450';
-                    break;
-                case 'small2':
                     imgWidth = 1600;
                     imgHeight = 510;
                     imgSize = '1600x510';
                     break;
-                case 'small3':
+                case 'small1':
                     imgWidth = 1100;
                     imgHeight = 510;
                     imgSize = '1100x510';
                     break;
+                case 'small2':
+                    imgWidth = 510;
+                    imgHeight = 800;
+                    imgSize = '510x800';
+                    break;
+                case 'small3':
+                    imgWidth = 510;
+                    imgHeight = 650;
+                    imgSize = '510x650';
+                    break;
                 case 'preview':
-                    imgWidth = 800;
-                    imgHeight = 510;
-                    imgSize = '800x510';
+                    imgWidth = 450;
+                    imgHeight = 450;
+                    imgSize = '450x450';
                     break;
                 default:
                     imgWidth = 100;
