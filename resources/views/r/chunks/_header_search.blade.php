@@ -24,7 +24,7 @@
 
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-4">
-                    <h1><a href="{{route('user.reset-trial')}}">RESET TRIAL</a></h1>
+                  <a style="position:absolute;" href="{{route('user.reset-trial')}}">RESET TRIAL</a>
                     @include('r.chunks._login_block')
                 </div>
             </div>
