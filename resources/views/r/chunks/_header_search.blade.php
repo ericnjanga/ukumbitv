@@ -2,7 +2,7 @@
 <header class="main-header">
   <div class="container-fluid">
     <div class="row">
-      <div class="frame-logo col-sm-4 col-md-3 col-lg-2 col-xl-2">
+      <div class="frame-logo">
         <a href="/" class="logo-block">
             <img src="{{asset('r/img/logo.png')}}" alt="">
         </a>
