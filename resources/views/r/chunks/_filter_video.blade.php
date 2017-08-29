@@ -1,4 +1,4 @@
-<div id="GP-menu" class="GP-menu" style="    width: 200px; float:left;">
+<div id="GP-menu" class="GP-menu">
 	<div class="show-entries-hover hidden">
 		<span class="hover-arrow"></span>
 	</div>

@@ -374,7 +374,6 @@ ul {
   .frame-logo { 
     width: 200px;
     padding-left: 20px;
-    border: 1px solid;
     margin-left: 15px;
   }
   .frame-search {
@@ -2655,6 +2654,7 @@ input:-webkit-autofill {
 	float: left;
 } 
 .GP-menu {
+	float:left;
   max-width: $width-GP-menu;  
 }
 

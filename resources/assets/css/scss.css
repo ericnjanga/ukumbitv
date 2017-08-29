@@ -296,7 +296,6 @@ ul li {
   .main-header .frame-logo {
     width: 200px;
     padding-left: 20px;
-    border: 1px solid;
     margin-left: 15px; }
   .main-header .frame-search {
     padding-top: 12px;
@@ -2428,6 +2427,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   float: left; }
 
 .GP-menu {
+  float: left;
   max-width: 200px; }
 
 /**
