@@ -726,6 +726,10 @@ And to insure en exceptional delivery all this unique experience, we have create
   'Cast_and_credits' => 'L\'équipe de le casting',
   'Review_by' => 'Revue par',
 
+	//...... ......
+  'Search_placeholder' => 'Rechercher: Titres, personnes, tags',
+  'review_help' => 'Les commentaires les plus utiles ont 100 mots ou plus',
+
 
 
 

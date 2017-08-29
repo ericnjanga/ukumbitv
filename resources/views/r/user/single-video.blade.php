@@ -228,7 +228,7 @@
 									    <form>
                         <div class="input-wrap textarea-wrap">
                         	<textarea name="comment-text" id="comment-text" placeholder="Tell others what you think about the movie. Would you recommend it, and why?"></textarea>
-                        	<p class="rate-info">Most helpful reviews have 100 words or more</p>
+                        	<p class="rate-info">{{trans('messages.review_help')}}</p>
                         </div> 
                       </form>  
 									  </div>

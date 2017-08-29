@@ -365,8 +365,14 @@ ul {
   height: 60px;
   background-color: #eeeeee;
   margin: 0 0 30px 0;
+  .frame-logo {
+  	padding-left: 35px;
+  }
   .frame-search {
   	padding-top: 12px;
+  }
+  .frame-useraccount {
+  	padding-top: 10px;
   }
 }
 
