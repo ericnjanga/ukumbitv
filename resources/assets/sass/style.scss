@@ -198,6 +198,9 @@ body {
   color: #666;
   background: #EEEEEE;
   line-height: 1.15;
+  //Font Smoothing
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
   // display: -webkit-box;
   // display: -webkit-flex;
   // display: -ms-flexbox;

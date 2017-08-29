@@ -167,6 +167,8 @@ body {
   color: #666;
   background: #EEEEEE;
   line-height: 1.15;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility; }
 
 #app {
