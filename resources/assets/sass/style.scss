@@ -237,12 +237,12 @@ footer {
   flex-shrink: 0;
 }
 
-main {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
+// main {
+//   -webkit-box-flex: 1;
+//   -webkit-flex: 1 0 auto;
+//   -ms-flex: 1 0 auto;
+//   flex: 1 0 auto;
+// }
 
 input, textarea, keygen, select, button {
   font-family: 'Roboto', sans-serif;
