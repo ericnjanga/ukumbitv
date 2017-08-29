@@ -366,8 +366,12 @@ ul {
   height: 60px;
   background-color: #eeeeee;
   margin: 0 0 30px 0;
-  .frame-logo {
+  .frame-logo,
+  .frame-search,
+  .frame-useraccount {
     float: left;
+  }
+  .frame-logo { 
     width: 200px;
     padding-left: 20px;
     border: 1px solid;
@@ -375,8 +379,7 @@ ul {
   }
   .frame-search {
   	padding-top: 12px;
-    margin-left: 30px;
-    float: left;
+    margin-left: 30px; 
     width: calc(75% - 230px);
   }
   .frame-useraccount {

@@ -289,8 +289,11 @@ ul li {
   height: 60px;
   background-color: #eeeeee;
   margin: 0 0 30px 0; }
+  .main-header .frame-logo,
+  .main-header .frame-search,
+  .main-header .frame-useraccount {
+    float: left; }
   .main-header .frame-logo {
-    float: left;
     width: 200px;
     padding-left: 20px;
     border: 1px solid;
@@ -298,7 +301,6 @@ ul li {
   .main-header .frame-search {
     padding-top: 12px;
     margin-left: 30px;
-    float: left;
     width: calc(75% - 230px); }
   .main-header .frame-useraccount {
     padding-top: 10px;
