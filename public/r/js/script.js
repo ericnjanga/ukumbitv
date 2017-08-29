@@ -502,7 +502,7 @@ function movie_undislike($btn) {
  * --------------------
 */
 /*
----- testing the autocomplete locally ---
+---- testing the autocomplete locally ---*/
 var substringMatcher = function(strs) {
   return function findMatches(q, cb) {
     var matches, substringRegex;
@@ -545,27 +545,27 @@ $('#frame-search .typeahead').typeahead({
   name: 'states',
   source: substringMatcher(states)
 });
-*/
 
-var db_keywords = new Bloodhound({
-  datumTokenizer: Bloodhound.tokenizers.whitespace,
-  queryTokenizer: Bloodhound.tokenizers.whitespace,
-  // url points to a json file that contains an array of country names, see
-  // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
-  prefetch: '',
-  remote: {
-    url: $('body').data('search-route'),
-    // wildcard: '%QUERY'
-  }
-});
 
-// passing in `null` for the `options` arguments will result in the default
-// options being used
-$('#frame-search .typeahead').typeahead(null, {
-  name: 'best-pictures',
-  display: 'value',
-  source: db_keywords
-});
+// var db_keywords = new Bloodhound({
+//   datumTokenizer: Bloodhound.tokenizers.whitespace,
+//   queryTokenizer: Bloodhound.tokenizers.whitespace,
+//   // url points to a json file that contains an array of country names, see
+//   // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
+//   prefetch: '',
+//   remote: {
+//     url: $('body').data('search-route'),
+//     // wildcard: '%QUERY'
+//   }
+// });
+
+// // passing in `null` for the `options` arguments will result in the default
+// // options being used
+// $('#frame-search .typeahead').typeahead(null, {
+//   name: 'search-keywords',
+//   display: 'value',
+//   source: db_keywords
+// });
 
 
 
