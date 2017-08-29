@@ -10,7 +10,7 @@
       <div class="frame-search col-sm-6 col-md-6 col-lg-7 col-xl-6 search-block">
         <form action="{{route('search-all')}}" method="post">
             <div class="input-wrap search-wrap">
-                <input type="search" name="key" id="search-input" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false" onclick="getSearchData()">
+                <input type="search" name="key" id="search-input" class="search-input" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false" onclick="getSearchData()">
                 <div class="search-list-block">
                   <ul class="search-list">
                   </ul>

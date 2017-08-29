@@ -2366,6 +2366,25 @@ input:-webkit-autofill {
   background-color: #B3C833;
   color: #fff; }
 
+/**
+ * Placeholders
+ * --------------------------------------
+*/
+.search-input {
+  font-family: 'Roboto', sans-serif; }
+  .search-input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #666; }
+  .search-input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #666; }
+  .search-input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #666; }
+  .search-input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #666; }
+
 @media only screen and (max-width: 991px) {
   .lang-block span {
     display: block;

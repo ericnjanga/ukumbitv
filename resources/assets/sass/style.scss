@@ -2970,8 +2970,6 @@ input:-webkit-autofill {
  * Modals
  * --------------------------------------
 */ 
- 
-
 .modal-header {
 	background-color: #B3C833;
 	font-size: 20px;
@@ -3041,6 +3039,30 @@ input:-webkit-autofill {
 	.btn-submit {
 		background-color: #B3C833;
 		color: #fff;
+	}
+}
+
+
+
+
+
+/**
+ * Placeholders
+ * --------------------------------------
+*/ 
+.search-input {
+	font-family: 'Roboto', sans-serif;
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: #666;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+	  color: #666;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+	  color: #666;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+	  color: #666;
 	}
 }
 
