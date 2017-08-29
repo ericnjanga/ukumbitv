@@ -1,5 +1,5 @@
 <div id="GP-menu" class="GP-menu">
-	<!-- <div class="show-entries-hover hidden">
+	<div class="show-entries-hover hidden">
 		<span class="hover-arrow"></span>
 	</div>
 	<ul class="play-menu">
@@ -63,7 +63,7 @@
 				<li class="main-link highlight">Shop</li>
 			</ul>
 		</li>
-	</ul> -->
+	</ul>
 
 
 
@@ -153,7 +153,7 @@
 
 
 
-
+<!-- 
 
 	<div class="nav-test">
 		
@@ -235,4 +235,4 @@
 
 	</div>
 
-
+ -->
