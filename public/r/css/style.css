@@ -292,11 +292,17 @@ ul li {
   .main-header .frame-logo {
     float: left;
     width: 200px;
-    padding-left: 35px; }
+    padding-left: 20px;
+    border: 1px solid;
+    margin-left: 15px; }
   .main-header .frame-search {
-    padding-top: 12px; }
+    padding-top: 12px;
+    margin-left: 30px;
+    float: left;
+    width: calc(75% - 230px); }
   .main-header .frame-useraccount {
-    padding-top: 10px; }
+    padding-top: 10px;
+    width: calc(25% - 30px); }
 
 input {
   height: 45px;

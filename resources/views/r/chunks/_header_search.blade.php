@@ -4,10 +4,10 @@
     <div class="row">
       <div class="frame-logo">
         <a href="/" class="logo-block">
-            <img src="{{asset('r/img/logo.png')}}" alt="">
+         	<img src="{{asset('r/img/logo.png')}}" alt="">
         </a>
       </div>
-      <div id="frame-search" class="frame-search col-sm-6 col-md-6 col-lg-7 col-xl-6 search-block">
+      <div id="frame-search" class="frame-search">
         <form action="{{route('search-all')}}" method="post">
           <!-- <div class="input-wrap search-wrap">
               <input type="search" name="key" id="search-input" class="search-input" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false" onclick="getSearchData()">
@@ -28,7 +28,7 @@
 			    </div><!-- /input-group -->
         </form> 
       </div>
-      <div class="frame-useraccount col-sm-6 col-md-3 col-lg-3 col-xl-4">
+      <div class="frame-useraccount">
         <!-- <a style="position:absolute;" href="{{route('user.reset-trial')}}">RESET TRIAL</a> -->
           @include('r.chunks._login_block')
       </div>

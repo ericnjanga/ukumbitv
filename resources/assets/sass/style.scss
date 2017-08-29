@@ -367,15 +367,21 @@ ul {
   background-color: #eeeeee;
   margin: 0 0 30px 0;
   .frame-logo {
-  	float: left;
-  	width: 200px;
-  	padding-left: 35px;
+    float: left;
+    width: 200px;
+    padding-left: 20px;
+    border: 1px solid;
+    margin-left: 15px;
   }
   .frame-search {
   	padding-top: 12px;
+    margin-left: 30px;
+    float: left;
+    width: calc(75% - 230px);
   }
   .frame-useraccount {
   	padding-top: 10px;
+  	width: calc(25% - 30px);
   }
 }
 
