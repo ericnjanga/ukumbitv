@@ -96,7 +96,11 @@ var countries = new Bloodhound({
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   // url points to a json file that contains an array of country names, see
   // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
-  prefetch: '{{route('search-data')}}'//'../data/countries.json'
+  prefetch: '',
+  remote: {
+    url: '{{route('search-data')}}',
+    // wildcard: '%QUERY'
+  }
 });
 
 // passing in `null` for the `options` arguments will result in the default
