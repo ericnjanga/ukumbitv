@@ -501,8 +501,7 @@ function movie_undislike($btn) {
  * SEARCH AUTOCOMPLETE
  * --------------------
 */
-/*
----- testing the autocomplete locally ---*/
+
 var substringMatcher = function(strs) {
   return function findMatches(q, cb) {
     var matches, substringRegex;
@@ -547,26 +546,99 @@ $('#frame-search .typeahead').typeahead({
 });
 
 
-// var db_keywords = new Bloodhound({
-//   datumTokenizer: Bloodhound.tokenizers.whitespace,
-//   queryTokenizer: Bloodhound.tokenizers.whitespace,
-//   // url points to a json file that contains an array of country names, see
-//   // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
-//   prefetch: '',
-//   remote: {
-//     url: $('body').data('search-route'),
-//     // wildcard: '%QUERY'
-//   }
-// });
+/*
+//http://twitter.github.io/typeahead.js/examples/#remote
+var db_keywords = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.whitespace,
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  // url points to a json file that contains an array of country names, see
+  // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
+  prefetch: '',//<-- this needs to point to a local json file of values
+  remote: {
+    url: $('body').data('search-route'),//<!-- route is on the body tag
+    // wildcard: '%QUERY'
+  }
+});
 
-// // passing in `null` for the `options` arguments will result in the default
-// // options being used
-// $('#frame-search .typeahead').typeahead(null, {
-//   name: 'search-keywords',
-//   display: 'value',
-//   source: db_keywords
-// });
+// passing in `null` for the `options` arguments will result in the default
+// options being used
+$('#frame-search .typeahead').typeahead(null, {
+  name: 'search-keywords',
+  display: 'value',
+  source: db_keywords
+});
+*/
 
+/**
+//PREVIOUS SEARCH SCRIPT THAT ALEX HAS DONE!
+// var searchData;
+        // var searchList = '';
+
+        // $( '.search-list' ).click(function(event) {
+        //     $( '#search-input' ).val(event.target.text);
+        //     $('.search-list-block').css('display', 'none');
+
+        //     console.log(event.target.text);
+        // });
+        // $( '#search-input' ).focus(function() {
+        //     $('.search-list-block').css('display', 'block');
+        // });
+        // $('#search-input').focusout(function(){
+        //     setTimeout(function(){ $('.search-list-block').css('display', 'none'); }, 300);
+        // });
+
+ 
+
+        // function getSearchData() {
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: '{{route('search-data')}}',
+        //         contentType: false,
+        //         processData: false,
+        //         data: {},
+        //         dataType: 'html',
+        //         success: function(data){
+        //             var rep = JSON.parse(data);
+
+        //             searchData = rep;
+
+        //             rep.forEach(function(item, i, rep) {
+        //                 searchList = searchList+'<li><a href="#">'+item.word+'</a></li>';
+        //             });
+
+        //             $(".search-list").html(searchList);
+
+
+        //         },
+        //         error: function(data){
+        //             console.log('error ' + data);
+        //         }
+        //     });
+        // }
+
+        // $(function(){
+        //     $("#search-input").keyup(function(){
+        //         var search = $("#search-input").val();
+
+
+        //         var positiveArr = searchData.filter(function(word) {
+        //             if(word.word.toLowerCase().indexOf(search.toLowerCase()) === -1){
+        //                 return false
+        //             } else {
+        //                 return true;
+        //             }
+
+        //         });
+        //         var newSearchList = '';
+        //         positiveArr.forEach(function(item, i, positiveArr) {
+        //             newSearchList = newSearchList+'<li><a href="#">'+item.word+'</a></li>';
+        //         });
+
+        //         $(".search-list").html(newSearchList);
+        //         return false;
+        //     });
+        // });
+*/
 
 
 
