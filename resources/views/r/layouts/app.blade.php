@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{asset('r/css/passfield.min.css')}}">
     <link>
 </head>
-<body>
+<body data-search-route="{{route('search-data')}}">
     @yield('layout')
 
 </body>

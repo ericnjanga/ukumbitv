@@ -554,7 +554,7 @@ var db_keywords = new Bloodhound({
   // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
   prefetch: '',
   remote: {
-    url: '{{route('search-data')}}',
+    url: $('body').data('search-route'),
     // wildcard: '%QUERY'
   }
 });
