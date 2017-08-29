@@ -2017,7 +2017,8 @@ input:-webkit-autofill {
   position: relative;
   overflow: hidden;
   height: 276px;
-  background-color: #ebebeb; }
+  background-color: #f5f5f5;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); }
 
 .GP-menu * {
   box-sizing: border-box;
@@ -2077,7 +2078,7 @@ input:-webkit-autofill {
   font-weight: 300;
   font-family: "Roboto", sans-serif;
   color: #555;
-  background-color: #ebebeb; }
+  background-color: #f5f5f5; }
 
 .GP-menu .play-menu li:hover * + .menu-entry-text {
   color: white; }
