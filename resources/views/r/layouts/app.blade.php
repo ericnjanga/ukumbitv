@@ -105,7 +105,7 @@ var db_keywords = new Bloodhound({
 
 // passing in `null` for the `options` arguments will result in the default
 // options being used
-$('#frame-search .typeahead').typeahead(null, {{
+$('#frame-search .typeahead').typeahead(null, {
   name: 'best-pictures',
   display: 'value',
   source: db_keywords
