@@ -91,7 +91,7 @@
 //   name: 'states',
 //   source: substringMatcher(states)
 // });
-var countries = new Bloodhound({
+var db_keywords = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace,
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   // url points to a json file that contains an array of country names, see
@@ -108,7 +108,7 @@ var countries = new Bloodhound({
 $('#frame-search .typeahead').typeahead(null, {{
   name: 'best-pictures',
   display: 'value',
-  source: bestPictures
+  source: db_keywords
 });
 
 
