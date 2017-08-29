@@ -7,7 +7,7 @@
             <img src="{{asset('r/img/logo.png')}}" alt="">
         </a>
       </div>
-      <div class="frame-search col-sm-6 col-md-6 col-lg-7 col-xl-6 search-block">
+      <div id="frame-search" class="frame-search col-sm-6 col-md-6 col-lg-7 col-xl-6 search-block">
         <form action="{{route('search-all')}}" method="post">
           <!-- <div class="input-wrap search-wrap">
               <input type="search" name="key" id="search-input" class="search-input" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false" onclick="getSearchData()">
@@ -19,8 +19,9 @@
                   <span class="icon icon-magnifying-glass"></span>
               </button>
             </div> -->
+
           <div class="input-group">
-			      <input type="text" class="form-control" placeholder="Search for...">
+			      <input type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false" onclick="getSearchData()">
 			      <span class="input-group-btn">
 			        <button class="btn btn-default" type="button">Go!</button>
 			      </span>
