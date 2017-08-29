@@ -37,11 +37,11 @@
 		<li id="music">
 			<a href="#">
 				<span class="menu-entry-icon music"></span>
-				<span class="menu-entry-text">Music</span>
+				<span class="menu-entry-text">Web Series</span>
 			</a>
 			<ul class="sub-menu">
 				<li class="main-link">My music</li>
-				<li class="main-link highlight">Shop</li>
+				<li class="main-link highlight">TV Shows</li>
 			</ul>
 		</li>
 		<li id="books">
@@ -51,13 +51,13 @@
 			</a>
 			<ul class="sub-menu">
 				<li class="main-link">My books</li>
-				<li class="main-link highlight">Shop</li>
+				<li class="main-link highlight">Animations</li>
 			</ul>
 		</li>
 		<li id="devices">
 			<a href="#">
 				<span class="menu-entry-icon devices"></span>
-				<span class="menu-entry-text">Devices</span>
+				<span class="menu-entry-text">Documentaries</span>
 			</a>
 			<ul class="sub-menu">
 				<li class="main-link highlight">Shop</li>
