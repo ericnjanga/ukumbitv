@@ -167,10 +167,6 @@ body {
   color: #666;
   background: #EEEEEE;
   line-height: 1.15;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
   text-rendering: optimizeLegibility; }
 
 #app {
@@ -2365,7 +2361,8 @@ input:-webkit-autofill {
       padding-left: 15px; }
 
 .modal-cr__footer .btn-submit {
-  background-color: #B3C833; }
+  background-color: #B3C833;
+  color: #fff; }
 
 @media only screen and (max-width: 991px) {
   .lang-block span {
