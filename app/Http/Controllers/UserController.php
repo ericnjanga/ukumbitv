@@ -1374,7 +1374,11 @@ class UserController extends Controller {
 
     public function searchAll(Request $request)
     {
-        $videos = AdminVideo::with('videoimage', 'likes')->where('title', $request->key)->get();
+//        $videos = AdminVideo::with('videoimage', 'likes')->where('title', $request->key)->get();
+        $videos = AdminVideo::with(['videoTags' => function ($query) {
+            $query->where('name', 'like', '%anger%');
+
+        }])->get();
         return view('r.user.search-result')->with('videos', $videos);
     }
 

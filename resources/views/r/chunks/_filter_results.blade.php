@@ -3,7 +3,7 @@
     @foreach($videos as $video)
          
         <div class="video-item">
-            <a href="{{route('single-video',$video->id)}}">
+            <a href="{{route('user.singleVideo',$video->watchid)}}">
                 <div class="video-img">
                     <img src="{{asset('r/img/video1.png')}}" alt="">
                 </div>
