@@ -1328,31 +1328,47 @@ class UserController extends Controller {
         $videos = AdminVideo::with('videoDirectors', 'videoActors', 'videoTags')->get();
 
         $result = [];
-        foreach ($videos as $video) {
-            if(array_search($video->title, array_column($result, 'word')) === FALSE) {
-              array_push($result, ['word' => $video->title, 'type' => 'video title']);
-            }
+//        foreach ($videos as $video) {
+//            if(array_search($video->title, array_column($result, 'word')) === FALSE) {
+//              array_push($result, ['word' => $video->title, 'type' => 'video title']);
+//            }
+//            foreach ($video->videoDirectors as $director) {
+//                if(array_search($director->name, array_column($result, 'word')) === FALSE) {
+//                    array_push($result, ['word' => $director->name, 'type' => 'directors']);
+//                }
+//            }
+//            foreach ($video->videoActors as $actor) {
+//                if(array_search($actor->name, array_column($result, 'word')) === FALSE) {
+//                    array_push($result, ['word' => $actor->name, 'type' => 'actors']);
+//                }
+//            }
+//            foreach ($video->videoTags as $tag) {
+//                if(array_search($tag->name, array_column($result, 'word')) === FALSE) {
+//                    array_push($result, ['word' => $tag->name, 'type' => 'tags']);
+//                }
+//            }
+//        }
+
+        foreach($videos as $video) {
+            array_push($result, $video->title);
             foreach ($video->videoDirectors as $director) {
-                if(array_search($director->name, array_column($result, 'word')) === FALSE) {
-                    array_push($result, ['word' => $director->name, 'type' => 'directors']);
-                }
+                array_push($result, $director->name);
             }
             foreach ($video->videoActors as $actor) {
-                if(array_search($actor->name, array_column($result, 'word')) === FALSE) {
-                    array_push($result, ['word' => $actor->name, 'type' => 'actors']);
-                }
+                array_push($result, $actor->name);
             }
             foreach ($video->videoTags as $tag) {
-                if(array_search($tag->name, array_column($result, 'word')) === FALSE) {
-                    array_push($result, ['word' => $tag->name, 'type' => 'tags']);
-                }
+                array_push($result, $tag->name);
             }
         }
+//        $result = implode(',', $result);
+
 
 //       $result = $this->unique_multidim_array($result,'word');
 //        $found_key = array_search('test', array_column($result, 'word'));
 //dd($found_key);
         return response()->json($result);
+//        return $result;
 
     }
 
