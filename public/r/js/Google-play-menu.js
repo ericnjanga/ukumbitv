@@ -24,11 +24,11 @@ $(document).ready(function () {
 	// Initialization, start positions
 	$('li#store').css('top', pos1);
 	$('li#store .menu-entry-text').css({'background-color' : storeColor,'color' : 'white'});
-	$('li#apps').css('top', pos2);
-	$('li#movies').css('top', pos3);
-	$('li#music').css('top', pos4);
-	$('li#books').css('top', pos5);
-	$('li#devices').css('top', pos6);
+	// $('li#apps').css('top', pos2);
+	$('li#movies').css('top', pos2);
+	$('li#music').css('top', pos3);
+	$('li#books').css('top', pos4);
+	$('li#devices').css('top', pos5);
 	
 	// Click function standard
 	link.each(function() {
@@ -48,11 +48,11 @@ $(document).ready(function () {
 			if ($(this).children().hasClass('store')) {
 				$(this).children('.menu-entry-text').css({'background-color' : storeColor,'color' : 'white'});
 				$(this).parent().css('top', pos1).removeClass('GP-hide');
-				$('#apps').css('top', pos2);
-				$('#movies').css('top', pos3);
-				$('#music').css('top', pos4);
-				$('#books').css('top', pos5);
-				$('#devices').css('top', pos6);
+				// $('#apps').css('top', pos2);
+				$('#movies').css('top', pos1);
+				$('#music').css('top', pos2);
+				$('#books').css('top', pos3);
+				$('#devices').css('top', pos4);
 				$('li').removeClass('GP-hide');
 			}
 			// "Apps"
@@ -71,7 +71,7 @@ $(document).ready(function () {
 				$(this).children('.menu-entry-text').css({'background-color' : moviesColor,'color' : 'white'});
 				$(this).parent().css('top', pos1).removeClass('GP-hide');
 				$('#store').css('top', pos6);
-				$('#apps').css('top', pos2);
+				// $('#apps').css('top', pos2);
 				$('#music').css('top', pos3);
 				$('#books').css('top', pos4);
 				$('#devices').css('top', pos5);
@@ -82,10 +82,10 @@ $(document).ready(function () {
 				$(this).children('.menu-entry-text').css({'background-color' : musicColor,'color' : 'white'});
 				$(this).parent().css('top', pos1).removeClass('GP-hide');
 				$('#store').css('top', pos6);
-				$('#apps').css('top', pos2);
-				$('#movies').css('top', pos3);
-				$('#books').css('top', pos4);
-				$('#devices').css('top', pos5);
+				// $('#apps').css('top', pos2);
+				$('#movies').css('top', pos2);
+				$('#books').css('top', pos3);
+				$('#devices').css('top', pos4);
 				$('.GP-hide').css({'left': left, 'opacity' : 0, 'transition' : 'all 0s', '-webkit-transition' : 'all 0s', '-moz-transition' : 'all 0s' });
 			}
 			// "Books"
@@ -93,10 +93,10 @@ $(document).ready(function () {
 				$(this).children('.menu-entry-text').css({'background-color' : booksColor,'color' : 'white'});
 				$(this).parent().css('top', pos1).removeClass('GP-hide');
 				$('#store').css('top', pos6);
-				$('#apps').css('top', pos2);
-				$('#movies').css('top', pos3);
-				$('#music').css('top', pos4);
-				$('#devices').css('top', pos5);
+				// $('#apps').css('top', pos2);
+				$('#movies').css('top', pos2);
+				$('#music').css('top', pos3);
+				$('#devices').css('top', pos4);
 				$('.GP-hide').css({'left': left, 'opacity' : 0, 'transition' : 'all 0s', '-webkit-transition' : 'all 0s', '-moz-transition' : 'all 0s' });
 			}
 			// "Devices"
@@ -104,10 +104,10 @@ $(document).ready(function () {
 				$(this).children('.menu-entry-text').css({'background-color' : devicesColor,'color' : 'white'});
 				$(this).parent().css('top', pos1).removeClass('GP-hide');
 				$('#store').css('top', pos6);
-				$('#apps').css('top', pos2);
-				$('#movies').css('top', pos3);
-				$('#music').css('top', pos4);
-				$('#books').css('top', pos5);
+				// $('#apps').css('top', pos2);
+				$('#movies').css('top', pos2);
+				$('#music').css('top', pos3);
+				$('#books').css('top', pos4);
 				$('.GP-hide').css({'left': left, 'opacity' : 0, 'transition' : 'all 0s', '-webkit-transition' : 'all 0s', '-moz-transition' : 'all 0s' });
 			}
         return false;

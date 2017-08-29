@@ -47,11 +47,11 @@
 		<li id="books">
 			<a href="#">
 				<span class="menu-entry-icon books"></span>
-				<span class="menu-entry-text">Books</span>
+				<span class="menu-entry-text">Animations</span>
 			</a>
 			<ul class="sub-menu">
 				<li class="main-link">My books</li>
-				<li class="main-link highlight">Animations</li>
+				<li class="main-link highlight">..</li>
 			</ul>
 		</li>
 		<li id="devices">
