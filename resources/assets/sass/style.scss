@@ -1185,13 +1185,18 @@ img{
 -moz-align-items: center;
 -ms-align-items: center;
 -o-align-items: center;
-align-items: center;
-
+align-items: center; 
   width: 100px;
+
+
+  .btn-dark {
+  	.icon {
+  		color: #333;
+  	}
+  }
   .icon{
     width: 40px;
-    height: 40px; 
-    margin-bottom: 10px;
+    height: 40px;  
     text-align: center;
     line-height: 40px;
     font-size: 20px;

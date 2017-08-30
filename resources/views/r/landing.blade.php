@@ -48,9 +48,8 @@
 
 
 
-			<a class="btn-down" href="">
+			<a class="btn-down btn-dark" href="">
 		   	<span class="icon icon-scroll-arrow-to-down"></span>
-		    <span>{{l("Scroll down")}}</span>
 		  </a>
     </div><!-- section -->   
       
@@ -118,12 +117,11 @@
         </div>
       </div>
 
-      
+
 
 
 			<a class="btn-down" href="">
 		   	<span class="icon icon-scroll-arrow-to-down"></span>
-		    <span>{{l("Scroll down")}}</span>
 		  </a>
   	</div><!-- section -->
       

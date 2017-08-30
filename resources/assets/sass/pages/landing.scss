@@ -2,7 +2,7 @@
 	// border: 10px solid red;
 
 	.section {
-		$size: 80px;
+		$size: 90px;
 		padding-top: $size;
 		padding-bottom: $size;
 	}
@@ -69,7 +69,7 @@
 .landing-header {
 	.btn-down {
 		position: absolute;
-	  bottom: 50px;
+	  bottom: 20px;
 	  left: 50%;
 	  margin-left: -50px;
 	  z-index: 10;
@@ -124,6 +124,9 @@
 		.frame-useraccount {
 			margin-left: auto;
 			width: initial;
+			a {
+				color: #fff;
+			}
 		}
 	}
 }//.landing-header

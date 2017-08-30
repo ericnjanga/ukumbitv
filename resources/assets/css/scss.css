@@ -975,10 +975,11 @@ img {
   -ms-flex-align: center;
   align-items: center;
   width: 100px; }
+  .btn-down .btn-dark .icon {
+    color: #333; }
   .btn-down .icon {
     width: 40px;
     height: 40px;
-    margin-bottom: 10px;
     text-align: center;
     line-height: 40px;
     font-size: 20px;
@@ -2314,8 +2315,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   background: white; }
 
 .page-landing .section {
-  padding-top: 80px;
-  padding-bottom: 80px; }
+  padding-top: 90px;
+  padding-bottom: 90px; }
 
 .page-landing .txt-presentation3 {
   display: -moz-flex;
@@ -2360,7 +2361,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-landing .btn-down,
 .landing-header .btn-down {
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   left: 50%;
   margin-left: -50px;
   z-index: 10; }
@@ -2398,6 +2399,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     .landing-header .main-header .frame-useraccount {
       margin-left: auto;
       width: initial; }
+      .landing-header .main-header .frame-useraccount a {
+        color: #fff; }
 
 .landing-header__content,
 .main-header {
