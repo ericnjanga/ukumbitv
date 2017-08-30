@@ -2351,32 +2351,39 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .GP-menu .GP-hide a .menu-entry-text {
   background: white; }
 
-.page-landing {
-  border: 10px solid red; }
-  .page-landing .section {
-    padding-top: 50px;
-    padding-bottom: 50px; }
-  .page-landing .txt-presentation3 {
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-    .page-landing .txt-presentation3 > li {
-      max-width: 350px;
-      margin-left: 30px;
-      margin-right: 30px; }
-    .page-landing .txt-presentation3 .icon {
-      font-size: 70px;
-      color: #eb2f3b;
-      line-height: 90px; }
-  .page-landing p {
-    line-height: 24px; }
+.page-landing .section {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.page-landing .txt-presentation3 {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .page-landing .txt-presentation3 > li {
+    max-width: 350px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  .page-landing .txt-presentation3 .icon {
+    color: #eb2f3b;
+    line-height: 90px; }
+
+.page-landing p {
+  line-height: 24px; }
+
+.page-landing .title {
+  margin-bottom: 30px; }
+
+.page-landing .bg1 {
+  background: #333; }
+  .page-landing .bg1 .title {
+    color: #ccc; }
 
 /**
  * Styling main content of the entire app

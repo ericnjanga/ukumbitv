@@ -1,9 +1,10 @@
 .page-landing {
-	border: 10px solid red;
+	// border: 10px solid red;
 
 	.section {
-		padding-top: 50px;
-		padding-bottom: 50px;
+		$size: 60px;
+		padding-top: $size;
+		padding-bottom: $size;
 	}
 
 	.txt-presentation3 {
@@ -23,7 +24,7 @@
     	margin-right: 30px;
 	  }
 	  .icon{
-	    font-size: 70px;
+	    // font-size: 70px;
 	    color: #eb2f3b;
 	    line-height: 90px;
 	  }
@@ -31,5 +32,16 @@
 
 	p {
 		line-height: 24px;
+	}
+
+	.title {
+		margin-bottom: 30px;
+	}
+
+	.bg1 {
+		background: #333;
+		.title {
+			color: #ccc;
+		}
 	}
 }

@@ -6,18 +6,24 @@
     	<div class="container">
       	<ul class="list-inline txt-presentation3">
       		<li>
-      			<h2>{{trans('messages.home_midsec_title1')}}</h2>
-            <span class="icon icon-video"></span>
+      			<h2>
+      				{{transtitle ('messages.home_midsec_title1')}}
+      				<span class="icon icon-video"></span>
+      			</h2> 
             <p>{{trans('messages.home_midsec_blurb1')}}</p>
       		</li>
       		<li> 
-            <h2>{{trans('messages.home_midsec_title2')}}</h2>
-            <span class="icon icon-monitor-tablet-and-smartohone"></span>
+            <h2>
+            	{{transtitle ('messages.home_midsec_title2')}}
+            	<span class="icon icon-monitor-tablet-and-smartohone"></span>
+            </h2> 
             <p>{{trans('messages.home_midsec_blurb2')}}</p>
       		</li>
       		<li> 
-            <h2>{{trans('messages.home_midsec_title3')}}</h2>
-            <span class="icon icon-computer-screen"></span>
+            <h2>
+            	{{transtitle ('messages.home_midsec_title3')}}
+            	<span class="icon icon-computer-screen"></span>
+            </h2>
             <p>{{trans('messages.home_midsec_blurb3')}}</p>
       		</li>
       	</ul>
@@ -41,11 +47,11 @@
       
        
 
-  	<div class="section text-center">
+  	<div class="bg1 section text-center">
   		<div class="container"> 
         <div class="row">
           <div class="col-sm-12"> 
-          	<h2 class="text-center">{{trans('messages.home_plansec_title')}}</h2>
+          	<h2 class="title text-center">{{trans('messages.home_plansec_title')}}</h2>
             <div class="price-block">
                 @foreach($payment_plans as $payment_plan)
                     <div class="price-item">
@@ -110,7 +116,7 @@
       <div class="container"> 
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
-          	<h2 class="text-center">{{trans('messages.home_seotext_title')}}</h2>
+          	<h2 class="title text-center">{{trans('messages.home_seotext_title')}}</h2>
               {!!trans('messages.home_seotext_blurb')!!}
           </div>
         </div>
