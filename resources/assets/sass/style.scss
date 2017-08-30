@@ -806,14 +806,7 @@ img{
   text-transform: uppercase;
 }
 
-.title-text{
-  color: #424242;
-  font-size: 28px;
-  line-height: 30px;
-  font-weight: 300;
-  margin: 0 0 25px 0;
-  text-align: center;
-}
+ 
 
 .block-wrap{
   margin: 0 0 75px 0;
@@ -1241,23 +1234,9 @@ img{
     text-align: center;
   }
 }
-.list-text-wrap{
-  margin: 115px 0 75px;
-  position: relative;
-  padding: 0 0 75px 0;
-  .container{
-    &:after{
-      content: '';
-      position: absolute;
-      bottom: -75px;
-      left: 108px;
-      height: 1px;
-      width: 81%;
-      display: block;
-      background-color: #e0e0e0;
-    }
-  }
-}
+
+
+
 // .list-text-item{
 //   text-align: center;
 //   width: 240px;

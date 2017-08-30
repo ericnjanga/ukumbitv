@@ -2,33 +2,33 @@
 @section('content')
     <div class="landing-wrap">
 
-        <div class="list-text-wrap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 offset-xl-1 list-text-block">
-                        <div class="list-text-item">
-                            <div class="title-text">{{trans('messages.home_midsec_title1')}}</div>
-                            <span class="icon icon-video"></span>
-                            <p>{{trans('messages.home_midsec_blurb1')}}</p>
-                        </div>
+         
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 offset-xl-1 list-text-block">
+                    <div class="list-text-item">
+                        <h2>{{trans('messages.home_midsec_title1')}}</h2>
+                        <span class="icon icon-video"></span>
+                        <p>{{trans('messages.home_midsec_blurb1')}}</p>
                     </div>
-                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 list-text-block">
-                        <div class="list-text-item">
-                            <div class="title-text">{{trans('messages.home_midsec_title2')}}</div>
-                            <span class="icon icon-monitor-tablet-and-smartohone"></span>
-                            <p>{{trans('messages.home_midsec_blurb2')}}</p>
-                        </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 list-text-block">
+                    <div class="list-text-item">
+                        <h2>{{trans('messages.home_midsec_title2')}}</h2>
+                        <span class="icon icon-monitor-tablet-and-smartohone"></span>
+                        <p>{{trans('messages.home_midsec_blurb2')}}</p>
                     </div>
-                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 list-text-block">
-                        <div class="list-text-item">
-                            <div class="title-text">{{trans('messages.home_midsec_title3')}}</div>
-                            <span class="icon icon-computer-screen"></span>
-                            <p>{{trans('messages.home_midsec_blurb3')}}</p>
-                        </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 list-text-block">
+                    <div class="list-text-item">
+                        <h2>{{trans('messages.home_midsec_title3')}}</h2>
+                        <span class="icon icon-computer-screen"></span>
+                        <p>{{trans('messages.home_midsec_blurb3')}}</p>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
+         
 
     
         <div class="container"> 
