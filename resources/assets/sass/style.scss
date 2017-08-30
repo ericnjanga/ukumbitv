@@ -383,6 +383,12 @@ align-items: center;
     width: 200px;
     padding-left: 20px;
     margin-left: 15px;
+	  height: 60px;
+	  line-height: 56px;  
+	  img{
+	    width: 150px;
+	    height: auto; 
+		}
   }
   .frame-search {
   	// padding-top: 12px;
@@ -548,15 +554,7 @@ img{
   max-width: 100%;
   height: auto;
 }
-.logo-block{
-  height: 60px;
-  line-height: 56px;
-  display: block;
-  img{
-    width: 150px;
-    height: auto;
-  }
-}
+
 .search-wrap{
   display: -webkit-box;
   display: -webkit-flex;
@@ -1786,18 +1784,7 @@ label{
 margin: 0 0 12px 0;
   }
 }
-.page-header{
-  .logo-block{
-    text-align: center;
-  }
-  .butn-signin{
-    color: #303333;
-    &:hover {
-      color: #eeb33d;
-    }
-  }
  
-}
 
 .content-block{
   margin: 0 0 90px;
