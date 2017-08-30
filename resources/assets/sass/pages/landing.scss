@@ -1,3 +1,16 @@
 .page-landing {
 	border: 10px solid red;
+
+	.section {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.txt-presentation3 {
+	  display: -webkit-flex;
+	  display: -moz-flex;
+	  display: -ms-flex;
+	  display: -o-flex;
+	  display: flex;
+	}
 }

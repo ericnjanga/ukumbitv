@@ -3,30 +3,39 @@
   <div class="page-landing">
 
        
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 offset-xl-1 list-text-block">
-                  <div class="list-text-item">
-                      <h2>{{trans('messages.home_midsec_title1')}}</h2>
-                      <span class="icon icon-video"></span>
-                      <p>{{trans('messages.home_midsec_blurb1')}}</p>
-                  </div>
-              </div>
-              <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 list-text-block">
-                  <div class="list-text-item">
-                      <h2>{{trans('messages.home_midsec_title2')}}</h2>
-                      <span class="icon icon-monitor-tablet-and-smartohone"></span>
-                      <p>{{trans('messages.home_midsec_blurb2')}}</p>
-                  </div>
-              </div>
-              <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 list-text-block">
-                  <div class="list-text-item">
-                      <h2>{{trans('messages.home_midsec_title3')}}</h2>
-                      <span class="icon icon-computer-screen"></span>
-                      <p>{{trans('messages.home_midsec_blurb3')}}</p>
-                  </div>
-              </div>
-          </div>
+      <div class="container section text-center">
+      	<ul class="list-inline txt-presentation3">
+      		<li>
+      			<h2>{{trans('messages.home_midsec_title1')}}</h2>
+            <span class="icon icon-video"></span>
+            <p>{{trans('messages.home_midsec_blurb1')}}</p>
+      		</li>
+      		<li> 
+            <h2>{{trans('messages.home_midsec_title2')}}</h2>
+            <span class="icon icon-monitor-tablet-and-smartohone"></span>
+            <p>{{trans('messages.home_midsec_blurb2')}}</p>
+      		</li>
+      		<li> 
+            <h2>{{trans('messages.home_midsec_title3')}}</h2>
+            <span class="icon icon-computer-screen"></span>
+            <p>{{trans('messages.home_midsec_blurb3')}}</p>
+      		</li>
+      	</ul>
+          <!-- <div class="row"> -->
+              <!-- <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 offset-xl-1 list-text-block"> -->
+                  <!-- <div class="list-text-item">
+                      
+                  </div> -->
+              <!-- </div>
+              <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 list-text-block"> -->
+                  <!-- <div class="list-text-item">
+                  </div> -->
+              <!-- </div>
+              <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 list-text-block"> -->
+                  <!-- <div class="list-text-item">
+                  </div> -->
+              <!-- </div> -->
+          <!-- </div> -->
       </div>
        
 
