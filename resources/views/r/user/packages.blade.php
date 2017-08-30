@@ -68,7 +68,7 @@
                                 <div class="title-text">Payment information</div>
                                 <div class="payment-block">
                                     <div class="payment-info"><span class="icon icon-paypal-big-logo"></span>example@redentu.com</div>
-                                    <a id="payinfo" href="" class="butn btn-cta1b butn-large">Update payment information <span class="icon icon-scroll-arrow-to-down"></span></a>
+                                    <a id="payinfo" href="" class="butn btn-cta1b btn-lg">Update payment information <span class="icon icon-scroll-arrow-to-down"></span></a>
                                 </div>
                                 <div class="payment-content-block">
                                     <div class="payment-content">
@@ -110,7 +110,7 @@
                                                             <input type="text" name="month">
                                                         </div>
                                                     </div>
-                                                    <button type="submit" class="butn btn-cta1b butn-large">Update payment method</button>
+                                                    <button type="submit" class="butn btn-cta1b btn-lg">Update payment method</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -121,7 +121,7 @@
                                             <img src="{{asset('r/img/paypal.png')}}" alt="">
                                         </div>
                                         <p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
-                                        <a href="" class="butn btn-cta1b butn-large">Continue to Pay Pal</a>
+                                        <a href="" class="butn btn-cta1b btn-lg">Continue to Pay Pal</a>
                                     </div>
                                 </div>
                             </div>

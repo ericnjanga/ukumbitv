@@ -85,7 +85,7 @@
                                         <div class="price"><span>$</span> 7</div>
                                     </div>
                                 </div>
-                                <a href="" class="butn btn-cta1 butn-large">Watch 10 videos for free</a>
+                                <a href="" class="butn btn-cta1 btn-lg">Watch 10 videos for free</a>
                             </div>
                         </div>
                     </div>

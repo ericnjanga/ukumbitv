@@ -17,7 +17,7 @@
                             <div class="content-block-bottom">
                                 <div class="title-page-add">Questions ?</div>
                                 <div class="text-add">Fill free to contact us</div>
-                                <a href="" class="butn btn-cta1b butn-large">Contact us</a>
+                                <a href="" class="butn btn-cta1b btn-lg">Contact us</a>
                             </div>
                         </div>
                     </div>

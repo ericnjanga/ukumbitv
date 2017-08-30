@@ -7,7 +7,7 @@
                         <div class="sign-block">
                             <div class="title-page">Sign Up</div>
                             <div class="text-add">The easiest way for you to sign up is with Facebook</div>
-                            <a href="" class="butn butn-large butn-dblue butn-face"><span class="icon icon-facebook"></span>Sign up with Facebook</a>
+                            <a href="" class="butn btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>Sign up with Facebook</a>
                             <div class="or-line upper">or</div>
                             <form action="" method="">
                                 <div class="input-wrap">
@@ -29,7 +29,7 @@
                                         <a href="">Privacy policy</a>
                                     </div>
                                 </div>
-                                <button type="submit" class="butn btn-cta1b butn-large">Sign Up</button>
+                                <button type="submit" class="butn btn-cta1b btn-lg">Sign Up</button>
                             </form>
                             <div class="have-block">
                                 <span>Already have an account?</span>

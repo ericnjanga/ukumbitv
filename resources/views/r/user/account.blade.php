@@ -29,7 +29,7 @@
                             </div>
                             <div id="change-pas" class="change-pas like-link">Change password</div>
 
-                            <button type="submit" class="butn btn-cta1b butn-large">Save Changes</button>
+                            <button type="submit" class="butn btn-cta1b btn-lg">Save Changes</button>
                         </form>
                         <div class="change-pas-block">
                             <form action="" method="">
@@ -44,7 +44,7 @@
                                 {{--<div class="operations-pass">--}}
                                     {{--<span id="show-pas" class="like-link">Show password</span>--}}
                                 {{--</div>--}}
-                                <button type="submit" class="butn btn-cta1 butn-large">Save new password</button>
+                                <button type="submit" class="butn btn-cta1 btn-lg">Save new password</button>
                             </form>
                         </div>
 

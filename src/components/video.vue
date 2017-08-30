@@ -315,7 +315,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="" class="butn btn-cta1 butn-large">Load more</a>
+                        <a href="" class="butn btn-cta1 btn-lg">Load more</a>
                     </div>
                     <div class="form-block-wrap">
                         <div class="form-block">
@@ -328,7 +328,7 @@
                                     <label>Enter your e-mail <span>*</span></label>
                                     <input type="email" name="email" required>
                                 </div>
-                                <button type="submit" class="butn btn-cta1b butn-large">Submit</button>
+                                <button type="submit" class="butn btn-cta1b btn-lg">Submit</button>
                             </form>
                         </div>
                     </div>
