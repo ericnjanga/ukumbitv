@@ -1063,20 +1063,11 @@ img {
   .list-text-block:nth-child(3) .list-text-item .icon {
     font-size: 80px; }
 
-.price-wrap {
-  margin: 75px 0 90px; }
-
-.price-list-block > .butn {
-  width: 350px;
-  margin: 0 auto;
-  display: block;
-  font-weight: 400;
-  font-size: 16px; }
-
 .price-block {
   display: -ms-flexbox;
   display: flex;
-  margin: 0 0 40px 0; }
+  -ms-flex-pack: center;
+  justify-content: center; }
   .price-block .price-item {
     width: 25%;
     padding: 0 0 15px 0;
