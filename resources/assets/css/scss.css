@@ -280,9 +280,8 @@ ul li {
   font-size: 16px;
   font-weight: 300; }
   .btn-cta1b:hover, .btn-cta1b:active {
-    background-color: #fff;
-    color: #eeb33d;
-    border: 2px solid #eeb33d; }
+    background-color: #333;
+    color: #eeb33d; }
 
 .main-header {
   height: 60px;
@@ -980,7 +979,11 @@ img {
   align-items: center;
   width: 100px; }
   .btn-down:hover, .btn-down:focus, .btn-down:active {
-    text-decoration: none; }
+    text-decoration: none;
+    background: #eeb33d; }
+    .btn-down:hover .icon, .btn-down:focus .icon, .btn-down:active .icon {
+      border: 2px solid #333;
+      color: #333; }
   .btn-down.btn-dark .icon {
     color: #333;
     border: 2px solid #333; }

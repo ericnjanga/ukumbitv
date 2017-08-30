@@ -357,9 +357,9 @@ ul {
   font-size: 16px;
   font-weight: 300;
   &:hover, &:active{
-    background-color: #fff;
+  	background-color: #333;
     color: #eeb33d;
-    border: 2px solid #eeb33d;
+    // border: 2px solid #eeb33d;
   }
 }
 
@@ -1194,6 +1194,11 @@ align-items: center;
   width: 100px;
   &:hover, &:focus, &:active{
   	text-decoration: none;
+  	background: #eeb33d;
+  	.icon{
+			border: 2px solid #333;
+    	color: #333;
+  	}
   }
 
 
@@ -2672,148 +2677,7 @@ input:-webkit-autofill {
 			position: absolute;
 	    bottom: 0;
 	    width: 100%;
-	    padding: $gap2;
-	// 	  .video-title{
-	// 	    color: #ffffff;
-	// 	    font-size: 30px;
-	// 	    font-weight: 700;
-	// 	    line-height: 32px;
-	// 	    margin: 0 0 10px 0;
-	// 	  }
-	// 	  .video-info-text{
-	// 	    margin: 0 0 10px 0;
-	// 	    width: 40%;
-	// 	    min-height: 65px;
-	// 	    .age{
-	// 	      color: #424242;
-	// 	      font-size: 12px;
-	// 	      font-weight: 700;
-	// 	      line-height: 20px;
-	// 	      display: inline-block;
-	// 	      background-color: #f58e4b;
-	// 	      padding: 0 10px;
-	// 	      margin: 0 3px 0 0;
-	// 	    }
-	// 	    .date{
-	// 	      color: #ffffff;
-	// 	      font-size: 13px;
-	// 	      font-weight: 700;
-	// 	      line-height: 20px;
-	// 	      display: inline-block;
-	// 	      margin: 0 3px 0 0;
-	// 	    }
-	// 	    .genre{
-	// 	      color: #ffffff;
-	// 	      font-size: 12px;
-	// 	      font-weight: 400;
-	// 	      line-height: 20px;
-	// 	      display: inline-block;
-	// 	    }
-	// 	    .series-text{
-	// 	      width: 40%;
-	// 	      color: #ffffff;
-	// 	      font-size: 12px;
-	// 	      font-weight: 400;
-	// 	      line-height: 14px;
-	// 	      margin: 5px 0 0 0;
-	// 	    }
-	// 	  }
-	// 	  .actors-block{
-	// 	    margin: 0 0 10px 0;
-	// 	    min-height: 120px;
-	// 	    width: 40%;
-	// 	    .actors-title{
-	// 	      color: #ffffff;
-	// 	      font-size: 13px;
-	// 	      font-weight: 700;
-	// 	      line-height: 14px;
-	// 	      margin: 0 0 8px 0;
-	// 	    }
-	// 	    .actors-list{
-	// 	      color: #ffffff;
-	// 	      font-size: 12px;
-	// 	      font-weight: 400;
-	// 	      line-height: 19px;
-	// 	    }
-	// 	  }
-	// 	  .butn-block{
-	// 	    display: -webkit-box;
-	// 	    display: -webkit-flex;
-	// 	    display: -ms-flexbox;
-	// 	    display: flex;
-	// 	    justify-content: space-between;
-	// 	    -webkit-box-pack: justify;
-	// 	    -webkit-justify-content: space-between;
-	// 	    -ms-flex-pack: justify;
-	// 	    justify-content: space-between;
-	// 	    -webkit-box-align: center;
-	// 	    -webkit-align-items: center;
-	// 	    -ms-flex-align: center;
-	// 	    align-items: center;
-	// 	    .play-block{
-	// 	      .btn-cta1b-dark{
-	// 	        width: 160px;
-	// 	      }
-	// 	      .butn-play{
-	// 	        width: 95px;
-	// 	        margin: 0 27px 0 0;
-	// 	        .icon{
-	// 	          font-size: 18px;
-	// 	          display: inline-block;
-	// 	          margin: 0 1px 0 0;
-	// 	          position: relative;
-	// 	          top: 2px;
-	// 	        }
-	// 	      }
-	// 	    }
-	// 	    .share-block{
-	// 	      width: 24%;
-	// 	      display: -webkit-box;
-	// 	      display: -webkit-flex;
-	// 	      display: -ms-flexbox;
-	// 	      display: flex;
-	// 	      justify-content: space-between;
-	// 	      -webkit-box-pack: justify;
-	// 	      -webkit-justify-content: space-between;
-	// 	      -ms-flex-pack: justify;
-	// 	      justify-content: space-between;
-	// 	      -webkit-box-align: center;
-	// 	      -webkit-align-items: center;
-	// 	      -ms-flex-align: center;
-	// 	      align-items: center;
-	// 	      .butn-share{
-	// 	        color: #ffffff;
-	// 	        font-size: 12px;
-	// 	        font-weight: 400;
-	// 	        line-height: 19px;
-	// 	        background-color: #3b5998;
-	// 	        height: 20px;
-	// 	        line-height: 22px;
-	// 	        padding: 0 15px 0 27px;
-	// 	        text-align: right;
-	// 	        position: relative;
-	// 	        span{
-	// 	          color: #ffffff;
-	// 	          font-size: 20px;
-	// 	          font-weight: 400;
-	// 	          position: absolute;
-	// 	          left: 7px;
-	// 	          top: 0;
-	// 	        }
-	// 	      }
-	// 	      .butn-like{
-	// 	        color: #ffffff;
-	// 	        font-size: 13px;
-	// 	        font-weight: 400;
-	// 	        line-height: 20px;
-	// 	        .icon{
-	// 	          color: #49ed6f;
-	// 	          font-size: 22px;
-	// 	          margin: 0 10px 0 0;
-	// 	        }
-	// 	      }
-	// 	    }
-	// 	  }
+	    padding: $gap2; 
 		}//info-block
 	}//hero
 	.hero-sub { 
@@ -2821,76 +2685,7 @@ input:-webkit-autofill {
 		margin-right: $gap3;
 	}
 
-
-
-	
-	// .cast-credits-wrap{ 
-	//   position: relative;
-	//   //border-top: 1px solid #e0e0e0;
-	//   //border-bottom: 1px solid #e0e0e0;
-	//   .title{
-	//     margin: 0 0 20px 0;
-	//   }
-	//   .cast-credits-block{
-	//     display: -webkit-box;
-	//     display: -webkit-flex;
-	//     display: -ms-flexbox;
-	//     display: flex;
-	//     -webkit-flex-wrap: wrap;
-	//     -ms-flex-wrap: wrap;
-	//     flex-wrap: wrap;
-	//     justify-content: space-between;
-	//     -webkit-box-pack: justify;
-	//     -webkit-justify-content: space-between;
-	//     -ms-flex-pack: justify;
-	//     justify-content: space-between;
-	//     width: 94%;
-	//     .cast-credits-item{
-	//       -webkit-box-flex: 0;
-	//       -webkit-flex: 0 0 390px;
-	//       -ms-flex: 0 0 390px;
-	//       flex: 0 0 390px;
-	//       max-width: 390px;
-	//     }
-	//     .cast-credits-item:first-child{
-	//       margin: 0 0 40px 0;
-	//     }
-	//     .cast-credits-title{
-	//       color: #757575;
-	//       font-size: 18px;
-	//       font-weight: 400;
-	//       line-height: 20px;
-	//       margin: 0 0 20px 0;
-	//     }
-	//     .cast-credits-text{
-	//       color: #2298d4;
-	//       font-size: 18px;
-	//       font-weight: 300;
-	//       line-height: 30px;
-	//     }
-	//   }
-	//   &:after{
-	//     content: '';
-	//     position: absolute;
-	//     bottom: 0px;
-	//     left: 0;
-	//     height: 1px;
-	//     width: 90%;
-	//     display: block;
-	//     background-color: #e0e0e0;
-	//   }
-	//   &:before{
-	//     content: '';
-	//     position: absolute;
-	//     top: 0px;
-	//     left: 0;
-	//     height: 1px;
-	//     width: 90%;
-	//     display: block;
-	//     background-color: #e0e0e0;
-	//   }
-	// }
-
+ 
 
 	hr {
 		margin-left: $gap1-2;
