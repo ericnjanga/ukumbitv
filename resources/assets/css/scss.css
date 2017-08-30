@@ -2383,9 +2383,16 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   position: relative;
   height: 510px;
   overflow: hidden; }
+  .landing-header:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); }
   .landing-header .btn-cta1b {
     font-size: 24px; }
-  .landing-header #video {
+  .landing-header #intro-video {
     position: absolute;
     top: 0;
     background: transparent; }

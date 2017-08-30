@@ -7,84 +7,7 @@ $.ajaxSetup({
     }
 });
 
-
-/***********slider*************/
-// $('.list-horizontal-wrapper').slick({
-//     dots: false,
-//     infinite: false,
-//     speed: 300,
-//     slidesToShow: 5,
-//     slidesToScroll: 1,
-//     responsive: [
-//         {
-//             breakpoint: 992,
-//             settings: {
-//                 slidesToShow: 2,
-//                 slidesToScroll: 1
-//             }
-//         },
-//         {
-//             breakpoint: 768,
-//             settings: {
-//                 slidesToShow: 2,
-//                 slidesToScroll: 1
-//             }
-//         },
-//         {
-//             breakpoint: 480,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1
-//             }
-//         }
-//     ]
-// });
-/*********series**slider*************/
-// $('.series-list-slider').slick({
-//     dots: false,
-//     infinite: false,
-//     speed: 300,
-//     slidesToShow: 12,
-//     slidesToScroll: 12,
-//     responsive: [
-//         {
-//             breakpoint: 992,
-//             settings: {
-//                 slidesToShow: 2,
-//                 slidesToScroll: 1
-//             }
-//         },
-//         {
-//             breakpoint: 768,
-//             settings: {
-//                 slidesToShow: 2,
-//                 slidesToScroll: 1
-//             }
-//         },
-//         {
-//             breakpoint: 480,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1
-//             }
-//         }
-//     ]
-// });
-/*********video**popup*************/
-// if ($(window).width() > 1199) {
-//     $(".cb-video").colorbox({iframe: true, width: '90%', height: '80%'});
-// } else if ($(window).width() > 991) {
-//     $(".cb-video").colorbox({iframe: true, width: '90%', height: '70%'});
-
-// } else if ($(window).width() > 767) {
-//     $(".cb-video").colorbox({iframe: true, width: '90%', height: '55%'});
-
-
-// } else if ($(window).width() > 575) {
-//     $(".cb-video").colorbox({iframe: true, width: '90%', height: '45%'});
-// } else {
-//     $(".cb-video").colorbox({iframe: true, width: '100%', height: '40%'});
-// }
+ 
 
 $("#payinfo").click(function () {
     $('.payment-content-block').slideToggle(500);
@@ -231,64 +154,11 @@ var VideoFilter = (function () {
     });
 })();
 
-// var VideoInfoPopup = (function () {
-//     var container = '.list-horizontal-wrapper';
-//     var element = '.video-item';
-
-//     var popup = '.video-item-popup';
-//     var $popup = $('.video-item-popup');
-//     var $currentElement = false;
-
-//     var setPopupContent = function ($elem) {
-//         $popup.find('.video-title').text($elem.find('.video-title').text());
-//         $popup.find('.likes-count').text($elem.find('.likes-count').text());
-//     };
-
-//     var show = function () {
-//         $popup.css('display', 'block');
-//     };
-
-//     var hide = function () {
-//         $popup.css('display', 'none');
-//     };
-
-//     var setPosition = function () {
-//         var $container = $currentElement.closest(container);
-//         var elementWidth = $currentElement.width();
-//         var containerOffset = $container.offset();
-//         var currentElementOffset = $currentElement.offset();
-//         var containerRightEnd = containerOffset.left + $container.width();
-
-//         var left = (currentElementOffset.left + elementWidth/2)-$popup.width()/2;
-//         var top = currentElementOffset.top-50;
-//         if(containerOffset.left > left){
-//             left = containerOffset.left;
-//         }
-//         if(containerRightEnd<left+$popup.width()){
-//             left = containerRightEnd-$popup.width();
-//         }
-//         $popup.css({'left':left,'top':top});
-//     };
-
-
-//     $(document).on('mouseenter', container + ' ' + element, function () {
-//         setPopupContent($(this));
-//         $currentElement = $(this);
-//         setPosition();
-//         show();
-//     }).on('mouseleave', container + ' ' + element + ', ' + popup, function () {
-//         if (!$popup.is(':hover') && !$currentElement.is(':hover')) {
-//             hide();
-//         }
-//     });
-
-
-// })();//VideoInfoPopup
 
 
 
 
-// console.log('>>>>', $('#GP-menu').length);
+
 
 //Stick "GP-menu"
 $(document).ready(function(){ 
@@ -657,6 +527,35 @@ $('#frame-search .typeahead').typeahead(null, {
         //     });
         // });
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * INITIALIZE INTRO BACKGROUND VIDEO
+ * ---------------------------------
+*/
+$('#intro-video').YTPlayer({
+  fitToBackground: true,
+  videoId: 'I96vjKBFjo4'//youtube video ID
+});
+
+
+
+
+
+
+
 
 
 

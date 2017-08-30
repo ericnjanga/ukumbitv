@@ -32,9 +32,9 @@
 
 
 
-<div id="video"></div>
+	<div id="intro-video"></div>
 
 
 
-  
+
 </header>
