@@ -48,6 +48,8 @@
 
   <script type="text/javascript" src="{{asset('r/js/libs/Google-play-menu.js')}}"></script>
   <script type="text/javascript" src="{{asset('r/js/libs/jQuery.YoutubeBackground.js')}}"></script>
+
+  <script type="text/javascript" src="{{asset('r/js/libs/anchor-smooth-scroll.js')}}"></script>
 		
 		<!-- main script -->
   <script type="text/javascript" src="{{asset('r/js/main.js')}}"></script>
