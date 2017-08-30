@@ -2371,7 +2371,16 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     display: -ms-flex;
     display: -o-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .page-landing .txt-presentation3 > li {
+      max-width: 350px;
+      margin-left: 30px;
+      margin-right: 30px; }
 
 /**
  * Styling main content of the entire app

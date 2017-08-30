@@ -12,5 +12,15 @@
 	  display: -ms-flex;
 	  display: -o-flex;
 	  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+	  > li {
+	  	max-width: 350px;
+	  	margin-left: 30px;
+    	margin-right: 30px;
+	  }
 	}
 }
