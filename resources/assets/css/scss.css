@@ -2401,7 +2401,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .landing-header .main-header {
     background-color: transparent !important; }
 
-.landing-header__content {
+.landing-header__content,
+.main-header {
   position: relative;
   z-index: 10; }
 
