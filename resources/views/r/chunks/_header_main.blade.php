@@ -24,7 +24,7 @@
               </div>
           </div>
           <div class="col-sm-2 col-md-2 col-lg-1 col-xl-1 offset-sm-2 offset-md-4 offset-lg-7">
-              <a href="{{route('user.login.form')}}" class="butn butn-signin">{{l("Sign in")}}</a>
+              <a href="{{route('user.login.form')}}" class="btn btn-link btn-lg">{{l("Sign in")}}</a>
           </div>
           
       </div>
