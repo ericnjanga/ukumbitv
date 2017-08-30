@@ -265,12 +265,12 @@ ul li {
     top: 9px;
     font-size: 25px; }
 
-.butn-orange-white {
+.btn-cta1 {
   font-weight: 400;
   color: #eeb33d;
   background-color: #fff;
   border: 2px solid #eeb33d; }
-  .butn-orange-white:hover, .butn-orange-white:active {
+  .btn-cta1:hover, .btn-cta1:active {
     background-color: #eeb33d;
     color: #ffffff; }
 

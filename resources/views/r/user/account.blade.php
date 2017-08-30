@@ -44,7 +44,7 @@
                                 {{--<div class="operations-pass">--}}
                                     {{--<span id="show-pas" class="like-link">Show password</span>--}}
                                 {{--</div>--}}
-                                <button type="submit" class="butn butn-orange-white butn-large">Save new password</button>
+                                <button type="submit" class="butn btn-cta1 butn-large">Save new password</button>
                             </form>
                         </div>
 

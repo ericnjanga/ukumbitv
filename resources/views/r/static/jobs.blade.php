@@ -16,17 +16,17 @@
                             <div class="jods-item">
                                 <div class="jods-title">Director Business Development - MEA</div>
                                 <p class="jods-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-                                <a href="{{route('user.jobs',0)}}" class="butn butn-orange-white">More Details</a>
+                                <a href="{{route('user.jobs',0)}}" class="butn btn-cta1">More Details</a>
                             </div>
                             <div class="jods-item">
                                 <div class="jods-title">Director Business Development - MEA</div>
                                 <p class="jods-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-                                <a href="{{route('user.jobs',0)}}" class="butn butn-orange-white">More Details</a>
+                                <a href="{{route('user.jobs',0)}}" class="butn btn-cta1">More Details</a>
                             </div>
                             <div class="jods-item">
                                 <div class="jods-title">Director Business Development - MEA</div>
                                 <p class="jods-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-                                <a href="{{route('user.jobs',0)}}" class="butn butn-orange-white">More Details</a>
+                                <a href="{{route('user.jobs',0)}}" class="butn btn-cta1">More Details</a>
                             </div>
                         </div>
                         <div class="content-block-bottom">

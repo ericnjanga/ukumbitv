@@ -372,7 +372,7 @@
                                             </div>
                                         </div> 
                                 </div>
-                                <a href="" class="butn butn-orange-white butn-large">Load more</a>
+                                <a href="" class="butn btn-cta1 butn-large">Load more</a>
                             </div>
                         </div>
                     </div>
