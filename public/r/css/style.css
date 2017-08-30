@@ -2379,6 +2379,13 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .page-landing .title {
   margin-bottom: 30px; }
+  .page-landing .title span {
+    display: block; }
+  .page-landing .title .txt {
+    line-height: 35px;
+    margin-bottom: 10px; }
+  .page-landing .title .icon {
+    font-size: 50px; }
 
 .page-landing .bg1 {
   background: #333; }

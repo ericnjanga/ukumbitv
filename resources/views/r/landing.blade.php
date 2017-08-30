@@ -7,21 +7,21 @@
       	<ul class="list-inline txt-presentation3">
       		<li>
       			<h2 class="title">
-      				{{trans('messages.home_midsec_title1')}}
+      				<span class="txt">{{trans('messages.home_midsec_title1')}}</span>
       				<span class="icon icon-video"></span>
       			</h2> 
             <p>{{trans('messages.home_midsec_blurb1')}}</p>
       		</li>
       		<li> 
             <h2 class="title">
-            	{{trans('messages.home_midsec_title2')}}
+            	<span class="txt">{{trans('messages.home_midsec_title2')}}</span>
             	<span class="icon icon-monitor-tablet-and-smartohone"></span>
             </h2> 
             <p>{{trans('messages.home_midsec_blurb2')}}</p>
       		</li>
       		<li> 
             <h2 class="title">
-            	{{trans('messages.home_midsec_title3')}}
+            	<span class="txt">{{trans('messages.home_midsec_title3')}}</span>
             	<span class="icon icon-computer-screen"></span>
             </h2>
             <p>{{trans('messages.home_midsec_blurb3')}}</p>
