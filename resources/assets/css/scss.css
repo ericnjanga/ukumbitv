@@ -995,7 +995,8 @@ img {
     font-size: 20px;
     color: #eeb33d;
     border: 2px solid #eeb33d;
-    border-radius: 50%; }
+    border-radius: 50%;
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
   .btn-down div {
     color: #eeb33d;
     font-size: 12px;
@@ -2389,7 +2390,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.7); }
+    background-color: rgba(0, 0, 0, 0.8); }
   .landing-header .btn-cta1b {
     font-size: 24px; }
   .landing-header #intro-video {

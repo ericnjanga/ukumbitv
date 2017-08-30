@@ -13,6 +13,7 @@ $gap1: 20px;
 $gap1-2: 25px;
 $gap2: 30px;
 $gap3: 40px;
+$color-primary: #eeb33d;
 
 
 
@@ -302,14 +303,14 @@ ul {
 }
  
 .btn-cta1b-dark{
-  background-color: #eeb33d;
+  background-color: $color-primary;
   color: #343436;
   font-size: 16px;
   font-weight: 700;
   &:hover, &:active{
-    border: 2px solid #eeb33d;
+    border: 2px solid $color-primary;
     background-color: transparent;
-    color:  #eeb33d;
+    color:  $color-primary;
   }
 
 }
@@ -343,23 +344,23 @@ ul {
 }
 .btn-cta1{ 
   font-weight: 400;
-  color: #eeb33d;
+  color: $color-primary;
   background-color: #fff;
-  border: 2px solid #eeb33d;
+  border: 2px solid $color-primary;
   &:hover, &:active{
-    background-color: #eeb33d;
+    background-color: $color-primary;
     color: #ffffff;
   }
 }
 .btn-cta1b{
-  background-color: #eeb33d;
+  background-color: $color-primary;
   color: #ffffff;
   font-size: 16px;
   font-weight: 300;
   &:hover, &:active{
   	background-color: #333;
-    color: #eeb33d;
-    // border: 2px solid #eeb33d;
+    color: $color-primary;
+    // border: 2px solid $color-primary;
   }
 }
 
@@ -748,7 +749,7 @@ img{
       font-weight: 400;
       line-height: 14px;
       &:hover{
-        color: #eeb33d;
+        color: $color-primary;
       }
     }
   }
@@ -1023,10 +1024,10 @@ img{
     }
     .movies{
       .icon{
-        background-color: #eeb33d;
+        background-color: $color-primary;
       }
       &:hover{
-        background-color: #eeb33d;
+        background-color: $color-primary;
       }
     }
     .shows{
@@ -1197,7 +1198,7 @@ align-items: center;
   	.icon{
 			border: 2px solid #333;
     	color: #333;
-  		background: #eeb33d;
+  		background: $color-primary;
   	}
   }
 
@@ -1214,12 +1215,13 @@ align-items: center;
     text-align: center;
     line-height: 40px;
     font-size: 20px;
-    color: #eeb33d;
-    border: 2px solid #eeb33d;
+    color: $color-primary;
+    border: 2px solid $color-primary;
     border-radius: 50%;
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   }
   div{
-    color: #eeb33d;
+    color: $color-primary;
     font-size: 12px;
     font-weight: 100;
     text-align: center;
@@ -1366,14 +1368,14 @@ align-items: center;
     }
   }
   .price-item:nth-child(3){
-    background-color: #eeb33d;
+    background-color: $color-primary;
     .butn{
       &:hover{
-        color: #eeb33d;
+        color: $color-primary;
       }
     }
     .butn.active{
-      color: #eeb33d;
+      color: $color-primary;
     }
   }
   .price-item:nth-child(4){
@@ -1515,7 +1517,7 @@ align-items: center;
 //       }
 //     }
 //     .dislike{
-//       color: #eeb33d;
+//       color: $color-primary;
 //       .icon{
 //         top: 0px;
 //       }
@@ -2253,11 +2255,11 @@ option[selected="selected"] {
   li:nth-child(2){
     a{
       span{
-        background-color: #eeb33d;
+        background-color: $color-primary;
       }
       &:hover{
         color: #fff;
-        background-color: #eeb33d;
+        background-color: $color-primary;
       }
     }
   }
@@ -2436,7 +2438,7 @@ input:-webkit-autofill {
     position: relative;
     padding: 0 25px 0 0;
     &:focus{
-      background-color: #eeb33d;
+      background-color: $color-primary;
       color: #ffffff;
     }
     .icon{
@@ -2448,7 +2450,7 @@ input:-webkit-autofill {
     }
   }
   .butn.open{
-    background-color: #eeb33d;
+    background-color: $color-primary;
     color: #ffffff;
     .icon{
       transform: rotateX(180deg);
@@ -2555,7 +2557,7 @@ input:-webkit-autofill {
   position: absolute;
   left: 7px;
   top: 16px;
-  color: #eeb33d;
+  color: $color-primary;
   font-size: 20px;
   width: 30px;
   height: 30px;
