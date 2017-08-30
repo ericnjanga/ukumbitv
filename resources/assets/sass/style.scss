@@ -1171,7 +1171,7 @@ img{
   font-weight: 400;
   margin:0 0 65px 0;
 }
-.down-block{
+.btn-down{
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1180,17 +1180,18 @@ img{
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  height: 100%;
+  flex-direction: column;  
+  -webkit-align-items: center;
+-moz-align-items: center;
+-ms-align-items: center;
+-o-align-items: center;
+align-items: center;
+
+  width: 100px;
   .icon{
     width: 40px;
-    height: 40px;
-    display: block;
-    margin: 0 auto;
+    height: 40px; 
+    margin-bottom: 10px;
     text-align: center;
     line-height: 40px;
     font-size: 20px;

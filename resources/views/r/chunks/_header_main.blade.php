@@ -33,7 +33,7 @@
 	<div id="intro-video"></div>
 
 
-	<a class="down-block">
+	<a class="btn-down">
    	<span class="icon icon-scroll-arrow-to-down"></span>
     <span>{{l("Scroll down")}}</span>
   </a>

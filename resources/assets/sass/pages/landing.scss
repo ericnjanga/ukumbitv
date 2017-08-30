@@ -58,6 +58,22 @@
 	.price-block {
 		margin-bottom: 30px;
 	}
+
+
+
+}//page-landing
+
+
+
+.page-landing,
+.landing-header {
+	.btn-down {
+		position: absolute;
+	  bottom: 50px;
+	  left: 50%;
+	  margin-left: -50px;
+	  z-index: 10;
+	}
 }
 
 

@@ -964,26 +964,28 @@ img {
   font-weight: 400;
   margin: 0 0 65px 0; }
 
-.down-block {
+.btn-down {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  height: 100%; }
-  .down-block .icon {
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100px; }
+  .btn-down .icon {
     width: 40px;
     height: 40px;
-    display: block;
-    margin: 0 auto;
+    margin-bottom: 10px;
     text-align: center;
     line-height: 40px;
     font-size: 20px;
     color: #eeb33d;
     border: 2px solid #eeb33d;
     border-radius: 50%; }
-  .down-block div {
+  .btn-down div {
     color: #eeb33d;
     font-size: 12px;
     font-weight: 100;
@@ -2354,6 +2356,14 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .page-landing .price-block {
   margin-bottom: 30px; }
+
+.page-landing .btn-down,
+.landing-header .btn-down {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -50px;
+  z-index: 10; }
 
 .landing-header {
   position: relative;
