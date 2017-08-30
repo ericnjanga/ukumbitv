@@ -3,6 +3,7 @@
 
 	.section {
 		$size: 90px;
+		position: relative;
 		padding-top: $size;
 		padding-bottom: $size;
 	}

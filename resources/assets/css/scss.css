@@ -975,7 +975,7 @@ img {
   -ms-flex-align: center;
   align-items: center;
   width: 100px; }
-  .btn-down .btn-dark .icon {
+  .btn-down.btn-dark .icon {
     color: #333; }
   .btn-down .icon {
     width: 40px;
@@ -2315,6 +2315,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   background: white; }
 
 .page-landing .section {
+  position: relative;
   padding-top: 90px;
   padding-bottom: 90px; }
 
