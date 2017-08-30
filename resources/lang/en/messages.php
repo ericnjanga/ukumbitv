@@ -720,10 +720,10 @@ return array(
   'home_cta' => 'Try UkumbiTV for free',
 
   //--middle section ..
-  'home_midsec_title1' => 'The finest productions',
-  'home_midsec_blurb1' => 'You will never undergrade African productions once you watch what we promote here on Ukumbi TV. We give you the best and high standard productions from great producers and talented actors. Catch your favorite movies, TV shows, web series, documentaires here on your number 1 mobile TV. We make viewing for you a pleasure. You can also use our platforms to promote your movies or any other type of production.',
+  'home_midsec_title1' => 'The finest African productions',
+  'home_midsec_blurb1' => 'You will never undergrade African productions once you watch what we promote here on Ukumbi TV. We give you the best and high standard productions from great producers and talented actors. Catch your favorite movies, TV shows, web series, documentaires here on your number 1 mobile TV. We make viewing for you a pleasure.',
   'home_midsec_title2' => 'The comfort & convenience',
-  'home_midsec_blurb2' => 'Catch the best of funs watching our captivating programs wherever you find yourself, being it on your smartphone, tablet or desktop the experience remains thesame. You can equally download and watch off line your favorite programs, movies, TV shows, documentaries or any other production of your choice. We give you not only all types of productions, but the best in each domain. Share the amazing experience you get here on Ukumbi TV with your friends and famillies.',
+  'home_midsec_blurb2' => 'Catch the best of funs watching our captivating programs wherever you find yourself, being it on your smartphone, tablet or desktop the experience remains thesame. You can equally download and watch off line your favorite programs, movies, TV shows, documentaries or any other production of your choice. We give you not only all types of productions, but the best in each domain.',
   'home_midsec_title3' => 'Great video quality & experience',
   'home_midsec_blurb3' => 'Ukumbi TV gives you videos of high definition just as you will get in a theatre. Feel the moment, the action, the sound, the emotion and the passion on any device of your choice. Easily search your favorite movies here in no time, share with us your suggestions and be updated with the latest African movies and other TV programs, be the first to watch them as a King/queen.',
 
