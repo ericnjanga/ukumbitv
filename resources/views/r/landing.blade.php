@@ -3,7 +3,7 @@
   <div class="page-landing">
 
     <div class="section text-center">
-    	<a name="section1"></a> 
+    	<a class="link-inner-redirect" name="section1"></a> 
     	<div class="container">
       	<ul class="list-inline txt-presentation3">
       		<li>
@@ -53,7 +53,7 @@
        
 
   	<div class="bg1 section text-center">
-    	<a name="section2"></a> 
+    	<a class="link-inner-redirect" name="section2"></a> 
   		<div class="container"> 
         <div class="row">
           <div class="col-sm-12"> 
@@ -123,7 +123,7 @@
       
 
     <div class="section text-center">
-    	<a name="section3"></a> 
+    	<a class="link-inner-redirect" name="section3"></a> 
       <div class="container"> 
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
