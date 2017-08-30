@@ -97,7 +97,7 @@
           <div class="container"> 
             <div class="row">
               <div class="col-md-6 col-md-offset-3">
-              	<h2>{{trans('messages.home_seotext_title')}}</h2>
+              	<h2 class="text-center">{{trans('messages.home_seotext_title')}}</h2>
                   {!!trans('messages.home_seotext_blurb')!!}
               </div>
             </div>
