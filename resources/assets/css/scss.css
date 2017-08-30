@@ -2381,11 +2381,13 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .landing-header {
   position: relative;
-  height: 510px; }
+  height: 510px;
+  overflow: hidden; }
   .landing-header .btn-cta1b {
     font-size: 24px; }
   .landing-header #video {
-    position: relative;
+    position: absolute;
+    top: 0;
     background: transparent; }
   .landing-header .ytplayer-container {
     position: absolute;
