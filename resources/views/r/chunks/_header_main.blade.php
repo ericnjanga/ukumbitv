@@ -1,5 +1,5 @@
 <header class="landing-header">  
-  <div class="container">
+  <div class="container landing-header__content">    
       <div class="row align-items-center">
           <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2">
               <div class="logo-block">
