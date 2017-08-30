@@ -185,6 +185,10 @@ footer {
   -ms-flex-negative: 0;
   flex-shrink: 0; }
 
+.link-inner-redirect {
+  position: absolute;
+  top: 0; }
+
 input, textarea, keygen, select, button {
   font-family: 'Roboto', sans-serif; }
 
