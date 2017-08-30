@@ -1,5 +1,4 @@
-<header class="landing-header"> 
-  <div class="layer"></div>
+<header class="landing-header">  
   <div class="container">
       <div class="row align-items-center">
           <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2">
@@ -30,4 +29,16 @@
           </div>
       </div>
   </div> 
+
+
+
+<div class="video-background">
+    <div class="video-foreground">
+      <iframe id="intro-video" src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div><!-- I96vjKBFjo4 -->
+
+
+
+  
 </header>

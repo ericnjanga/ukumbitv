@@ -2381,14 +2381,25 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .landing-header {
   position: relative;
-  height: 510px;
-  background: #eeeeee url("../img/landing-bg.png") 100% 100% no-repeat;
-  background-size: 100% 100%; }
-  .landing-header .layer {
-    z-index: 0; }
+  height: 510px; }
   .landing-header .btn-cta1b {
-    width: 350px;
     font-size: 24px; }
+  .landing-header .video-background {
+    background: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -99; }
+  .landing-header .video-foreground,
+  .landing-header .video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; }
 
 /**
  * Styling main content of the entire app
