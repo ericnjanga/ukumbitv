@@ -2386,7 +2386,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
       padding-top: 20px;
       padding-bottom: 20px; }
     .landing-header .main-header .frame-useraccount {
-      margin-left: auto; }
+      margin-left: auto;
+      width: initial; }
 
 .landing-header__content,
 .main-header {
