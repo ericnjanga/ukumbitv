@@ -30,7 +30,7 @@
     @yield('layout')
 
 </body>
-  <script type="text/javascript" src="{{asset('r/js/jquery.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('r/js/libs/jquery.min.js')}}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="{{asset('r/js/libs/passfield.min.js')}}"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
