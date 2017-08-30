@@ -1187,11 +1187,15 @@ img{
 -o-align-items: center;
 align-items: center; 
   width: 100px;
+  &:hover, &:focus, &:active{
+  	text-decoration: none;
+  }
 
 
   &.btn-dark {
   	.icon {
   		color: #333;
+  		border: 2px solid #333;
   	}
   }
   .icon{
