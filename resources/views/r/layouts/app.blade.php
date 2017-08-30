@@ -385,7 +385,7 @@ if (typeof Object.create !== "function") {
 <script>
 	$('#video').YTPlayer({
     fitToBackground: true,
-    videoId: 'LSmgKRx5pBo'
+    videoId: 'I96vjKBFjo4'
 });
 </script>
 
