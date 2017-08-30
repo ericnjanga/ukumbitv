@@ -7,7 +7,7 @@
         @endif
         <div class="row align-items-center">
           <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 offset-lg-5 offset-xl-5">
-            <a href="{{route('user.dashboard')}}" class="logo-block">
+            <a href="{{route('user.dashboard')}}">
               <img src="{{asset('r/img/logo.png')}}" alt="">
             </a>
           </div>

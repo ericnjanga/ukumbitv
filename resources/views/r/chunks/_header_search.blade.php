@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="frame-logo">
-        <a href="/" class="logo-block">
+        <a href="/">
          	<img src="{{asset('r/img/logo.png')}}" alt="">
         </a>
       </div>

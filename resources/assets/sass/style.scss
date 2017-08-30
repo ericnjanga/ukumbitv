@@ -382,21 +382,20 @@ align-items: center;
   .frame-logo { 
     width: 200px;
     padding-left: 20px;
-    margin-left: 15px;
-	  height: 60px;
-	  line-height: 56px;  
+    margin-left: 15px; 
+	  line-height: 0;  
+    padding-top: 10px;
+    padding-bottom: 10px;  
 	  img{
 	    width: 150px;
 	    height: auto; 
 		}
   }
-  .frame-search {
-  	// padding-top: 12px;
+  .frame-search { 
     margin-left: 30px; 
     width: calc(75% - 230px);
   }
-  .frame-useraccount {
-  	padding-top: 10px;
+  .frame-useraccount { 
   	width: calc(25% - 30px);
   }
 }
