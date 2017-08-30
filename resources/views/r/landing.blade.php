@@ -2,8 +2,8 @@
 @section('content')
   <div class="page-landing">
 
-       
-      <div class="container section text-center">
+    <div class="section text-center">
+    	<div class="container">
       	<ul class="list-inline txt-presentation3">
       		<li>
       			<h2>{{trans('messages.home_midsec_title1')}}</h2>
@@ -37,10 +37,12 @@
               <!-- </div> -->
           <!-- </div> -->
       </div>
+    </div><!-- section -->   
+      
        
 
-  
-      <div class="container"> 
+  	<div class="section text-center">
+  		<div class="container"> 
         <div class="row">
           <div class="col-sm-12"> 
           	<h2 class="text-center">{{trans('messages.home_plansec_title')}}</h2>
@@ -100,17 +102,19 @@
           </div>
         </div>
       </div>
+  	</div><!-- section -->
+      
       
 
-      <div class="">
-        <div class="container"> 
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-            	<h2 class="text-center">{{trans('messages.home_seotext_title')}}</h2>
-                {!!trans('messages.home_seotext_blurb')!!}
-            </div>
+    <div class="section text-center">
+      <div class="container"> 
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+          	<h2 class="text-center">{{trans('messages.home_seotext_title')}}</h2>
+              {!!trans('messages.home_seotext_blurb')!!}
           </div>
         </div>
       </div>
-  </div>
+    </div><!-- section -->
+  </div><!-- page-landing -->
 @stop
