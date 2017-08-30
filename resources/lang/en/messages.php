@@ -732,12 +732,7 @@ return array(
 
   //--SEO text section ..
   'home_seotext_title' => 'Our Mission',
-  'home_seotext_blurb' => '<p><b>Ukumbi</b> wants to rebrand the African cinema as a dynamic, culturally rich and entertaining cinema to the world audience.
-For this, we are teaming up with young, talented and bold movie producers, screenwriters, actors and artists to create a new wave of exceptional African content.</p>
-<p>But we believe African stories, without the perspective of other people from African descent would be incomplete, that\'s why we are actively collaborating with cinema professionals from the caribbean, the Americas and Europe to create the <b>360 degrees African cinema experience</b>.
-And to insure en exceptional delivery all this unique experience, we have created <b>UkumbiTV</b>, a platform which aims to be among the best content streaming platforms in the world.</p>
-
-<p>This is how UkumbiTV is going to rebrand the African cinema, this is how UkumbiTV will redefine the African quality!</p>',
+  'home_seotext_blurb' => '<p>We believe in Africa and it\'s strength. Africa just like any other continent is in a perpetual search of innovation and originallity. That is why we created the Ukumbi TV which is to renovate, rebrand and redifine the African film industries. We want to show not only to Africans the originallity of thier movies but to let the entire world know of them. We bring together young and talented movie producers, scriptwriters, actors, artists and TV hosts to create exceptional and amazing African brands in terms of entertainement. </p><p>The dynamic and rich cultural originallity of the African cinema has gone miles far away so as to trigger professional movie producers. That\'s why we have enlarge our sphere so as to work with film producers from the carribean, America and Europe to create an exceptional 360 degree African cinema experience because we want the entire world to feel Africa from it\'s roots. We equally want to move and touch people world wide so as to make them have a different beautiful view about the African cinema.</p>',
 
 //videos ......
   'Similar_Videos' => 'Similar Videos',
