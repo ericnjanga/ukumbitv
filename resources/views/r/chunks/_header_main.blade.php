@@ -1,6 +1,23 @@
 <header class="landing-header">  
+
+
+	<div class="main-header">
+	  <div class="container">
+	    <div class="row">
+	      <div class="frame-logo"> 
+	        <img src="http://test.ukumbitv.com/r/img/logo.png" alt=""> 
+	      </div>
+	      
+	      <div class="frame-useraccount">
+	        <a href="{{route('user.login.form')}}" class="butn butn-signin">{{l("Sign in")}}</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
   <div class="container landing-header__content">    
-      <div class="row align-items-center">
+      <div class="row">
           <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2">
               <div class="logo-block">
                   <img src="{{asset('r/img/logo.png')}}" alt="">
@@ -9,9 +26,7 @@
           <div class="col-sm-2 col-md-2 col-lg-1 col-xl-1 offset-sm-2 offset-md-4 offset-lg-7">
               <a href="{{route('user.login.form')}}" class="butn butn-signin">{{l("Sign in")}}</a>
           </div>
-          <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2">
-              <a href="{{route('user.register.form')}}" class="butn butn-free">{{l("Try free trial")}}</a>
-          </div>
+          
       </div>
       <div class="row align-items-end">
           <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xl-5 offset-xl-1">
