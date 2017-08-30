@@ -266,7 +266,6 @@ ul li {
     font-size: 25px; }
 
 .butn-orange-white {
-  font-size: 13px;
   font-weight: 400;
   color: #eeb33d;
   background-color: #fff;
@@ -2391,6 +2390,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   background: #333; }
   .page-landing .bg1 .title {
     color: #ccc; }
+
+.page-landing .price-block {
+  margin-bottom: 30px; }
 
 /**
  * Styling main content of the entire app

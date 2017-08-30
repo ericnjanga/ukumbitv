@@ -104,7 +104,7 @@
                 {{--<div class="price"><span>$</span> 7</div>--}}
                 {{--</div>--}}
             </div>
-            <a href="{{route('user.register.form')}}" class="butn butn-orange-white butn-large">{{trans('messages.home_cta')}}</a> 
+            <a href="{{route('user.register.form')}}" class="butn butn-orange-white btn-lg">{{trans('messages.home_cta')}}</a> 
           </div>
         </div>
       </div>
