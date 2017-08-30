@@ -16,7 +16,7 @@
                                 <label>E-mail <span>*</span></label>
                                 <input type="email" name="email" required>
                             </div>
-                            <button type="submit" class="butn butn-orange butn-large">Reset password</button>
+                            <button type="submit" class="butn btn-cta1b butn-large">Reset password</button>
                         </form>
                     </div>
                 </div>

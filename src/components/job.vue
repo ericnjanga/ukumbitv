@@ -14,7 +14,7 @@
                             <div class="content-block-bottom">
                                 <div class="title-page-add">Interesting positions ?</div>
                                 <div class="text-add">Fill free to contact us</div>
-                                <a href="" class="butn butn-orange butn-large">Contact us</a>
+                                <a href="" class="butn btn-cta1b butn-large">Contact us</a>
                             </div>
                         </div>
                     </div>

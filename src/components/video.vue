@@ -86,8 +86,8 @@
                             </div>
                             <div class="butn-block">
                                 <div class="play-block">
-                                    <a href="" class="butn butn-orange-dark butn-play upper"><span class="icon icon-play-arrow"></span>Play</a>
-                                    <a href="" class="butn butn-orange-dark upper">Add to list</a>
+                                    <a href="" class="butn btn-cta1b-dark butn-play upper"><span class="icon icon-play-arrow"></span>Play</a>
+                                    <a href="" class="butn btn-cta1b-dark upper">Add to list</a>
                                 </div>
                                 <div class="share-block">
                                     <a href="" class="butn-share"><span>f</span>Share</a>
@@ -281,7 +281,7 @@
                                 12
                             </div>
                             <div class="butn-block">
-                                <a href="" class="butn butn-orange"><span class="icon icon-pencil-edit-button"></span>Write a review</a>
+                                <a href="" class="butn btn-cta1b"><span class="icon icon-pencil-edit-button"></span>Write a review</a>
                             </div>
                         </div>
                         <div class="comment-block">
@@ -328,7 +328,7 @@
                                     <label>Enter your e-mail <span>*</span></label>
                                     <input type="email" name="email" required>
                                 </div>
-                                <button type="submit" class="butn butn-orange butn-large">Submit</button>
+                                <button type="submit" class="butn btn-cta1b butn-large">Submit</button>
                             </form>
                         </div>
                     </div>

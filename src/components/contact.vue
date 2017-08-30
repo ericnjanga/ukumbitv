@@ -46,7 +46,7 @@
                                             <label>Enter your e-mail <span>*</span></label>
                                             <input type="email" name="email" required>
                                         </div>
-                                        <button type="submit" class="butn butn-orange butn-large">Submit</button>
+                                        <button type="submit" class="butn btn-cta1b butn-large">Submit</button>
                                     </div>
                                 </form>
                             </div>

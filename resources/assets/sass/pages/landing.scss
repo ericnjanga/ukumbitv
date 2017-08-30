@@ -59,3 +59,22 @@
 		margin-bottom: 30px;
 	}
 }
+
+
+
+
+
+
+.landing-header {
+  position: relative;
+    height: 510px;
+    background: #eeeeee url('../img/landing-bg.png') 100% 100% no-repeat;
+    background-size: 100% 100%;
+  .layer{
+    z-index: 0;
+  }
+  .btn-cta1b{
+    width: 350px;
+    font-size: 24px;
+  }
+}

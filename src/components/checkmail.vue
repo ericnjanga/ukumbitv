@@ -14,7 +14,7 @@
                                 <p>Please check your inbox <span class="bold">v.varyvoda@redentu.com</span> for a
                                     new password</p>
                             </div>
-                            <a href="" class="butn butn-orange butn-large">Sing In</a>
+                            <a href="" class="butn btn-cta1b butn-large">Sing In</a>
                         </div>
                     </div>
                 </div>

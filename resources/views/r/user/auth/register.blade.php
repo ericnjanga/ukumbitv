@@ -29,7 +29,7 @@
                                     <a href="{{route('user.privacy_policy')}}">Privacy policy</a>
                                 </div>
                             </div>
-                            <button type="submit" class="butn butn-orange butn-large">Sign Up</button>
+                            <button type="submit" class="butn btn-cta1b butn-large">Sign Up</button>
                         </form>
                         <div class="have-block">
                             <span>Already have an account?</span>

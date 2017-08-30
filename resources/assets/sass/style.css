@@ -247,12 +247,12 @@ ul li {
   height: 45px;
   line-height: 44px; }
 
-.butn-orange-dark {
+.btn-cta1b-dark {
   background-color: #eeb33d;
   color: #343436;
   font-size: 16px;
   font-weight: 700; }
-  .butn-orange-dark:hover, .butn-orange-dark:active {
+  .btn-cta1b-dark:hover, .btn-cta1b-dark:active {
     border: 2px solid #eeb33d;
     background-color: transparent;
     color: #eeb33d; }
@@ -292,12 +292,12 @@ ul li {
     background-color: #eeb33d;
     color: #ffffff; }
 
-.butn-orange {
+.btn-cta1b {
   background-color: #eeb33d;
   color: #ffffff;
   font-size: 16px;
   font-weight: 300; }
-  .butn-orange:hover, .butn-orange:active {
+  .btn-cta1b:hover, .btn-cta1b:active {
     background-color: #fff;
     color: #eeb33d;
     border: 2px solid #eeb33d; }
@@ -760,7 +760,7 @@ img {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
-  .video-info-block .butn-block .play-block .butn-orange-dark {
+  .video-info-block .butn-block .play-block .btn-cta1b-dark {
     width: 160px; }
   .video-info-block .butn-block .play-block .butn-play {
     width: 95px;
@@ -1117,7 +1117,7 @@ img {
   background-size: 100% 100%; }
   .landing-header .layer {
     z-index: 0; }
-  .landing-header .butn-orange {
+  .landing-header .btn-cta1b {
     width: 350px;
     font-size: 24px; }
 
@@ -1844,7 +1844,7 @@ label {
     margin: 0 0 18px 0; }
   .sign-block .butn {
     width: 100%; }
-  .sign-block .butn-orange {
+  .sign-block .btn-cta1b {
     font-weight: 400; }
   .sign-block .input-wrap {
     margin: 0 0 5px 0; }

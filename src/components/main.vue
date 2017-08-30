@@ -86,8 +86,8 @@
                             </div>
                             <div class="butn-block">
                                 <div class="play-block">
-                                    <a href="https://www.youtube.com/embed/Rg6awBglzGU?autoplay=1" class="butn butn-orange-dark butn-play upper cb-video"><span class="icon icon-play-arrow"></span>Play</a>
-                                    <a href="" class="butn butn-orange-dark upper">Add to list</a>
+                                    <a href="https://www.youtube.com/embed/Rg6awBglzGU?autoplay=1" class="butn btn-cta1b-dark butn-play upper cb-video"><span class="icon icon-play-arrow"></span>Play</a>
+                                    <a href="" class="butn btn-cta1b-dark upper">Add to list</a>
                                 </div>
                                 <div class="share-block">
                                     <a href="" class="butn-share"><span>f</span>Share</a>

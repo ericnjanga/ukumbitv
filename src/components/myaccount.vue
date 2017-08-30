@@ -46,7 +46,7 @@
                                     <input type="tel" name="usrtel">
                                 </div>
                                 <a href="" class="change-pas">Change password</a>
-                                <button type="submit" class="butn butn-orange butn-large">Save Changes</button>
+                                <button type="submit" class="butn btn-cta1b butn-large">Save Changes</button>
                             </form>
                         </div>
                     </div>

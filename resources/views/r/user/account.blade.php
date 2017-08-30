@@ -29,7 +29,7 @@
                             </div>
                             <div id="change-pas" class="change-pas like-link">Change password</div>
 
-                            <button type="submit" class="butn butn-orange butn-large">Save Changes</button>
+                            <button type="submit" class="butn btn-cta1b butn-large">Save Changes</button>
                         </form>
                         <div class="change-pas-block">
                             <form action="" method="">

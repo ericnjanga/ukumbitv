@@ -174,7 +174,7 @@
                             <div class="title-white">Watch great videos</div>
                             <div class="title-white-add upper">Unlimited high-definition videos at your fingertips</div>
                             <div>
-                                <a href="" class="butn butn-orange butn-large">Watch 10 videos for free</a>
+                                <a href="" class="butn btn-cta1b butn-large">Watch 10 videos for free</a>
                             </div>
                         </div>
                         <div class="col-sm-1 offset-sm-3">

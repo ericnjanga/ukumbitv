@@ -18,7 +18,7 @@
                                 <div class="operations-pass">
                                     <a href="">Show password</a>
                                 </div>
-                                <button type="submit" class="butn butn-orange butn-large">Set new password</button>
+                                <button type="submit" class="butn btn-cta1b butn-large">Set new password</button>
                             </form>
                         </div>
                     </div>

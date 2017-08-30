@@ -27,7 +27,7 @@
                             </div>
                             <a href="{{url('/password/reset')}}">Forgot password</a>
                         </div>
-                        <button type="submit" class="butn butn-orange butn-large">Sign In</button>
+                        <button type="submit" class="butn btn-cta1b butn-large">Sign In</button>
                     </form>
                     <div class="have-block">
                         <span>Don’t have an account?</span>

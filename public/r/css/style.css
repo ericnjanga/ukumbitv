@@ -230,12 +230,12 @@ ul li {
   height: 45px;
   line-height: 44px; }
 
-.butn-orange-dark {
+.btn-cta1b-dark {
   background-color: #eeb33d;
   color: #343436;
   font-size: 16px;
   font-weight: 700; }
-  .butn-orange-dark:hover, .butn-orange-dark:active {
+  .btn-cta1b-dark:hover, .btn-cta1b-dark:active {
     border: 2px solid #eeb33d;
     background-color: transparent;
     color: #eeb33d; }
@@ -274,12 +274,12 @@ ul li {
     background-color: #eeb33d;
     color: #ffffff; }
 
-.butn-orange {
+.btn-cta1b {
   background-color: #eeb33d;
   color: #ffffff;
   font-size: 16px;
   font-weight: 300; }
-  .butn-orange:hover, .butn-orange:active {
+  .btn-cta1b:hover, .btn-cta1b:active {
     background-color: #fff;
     color: #eeb33d;
     border: 2px solid #eeb33d; }
@@ -946,17 +946,6 @@ img {
     font-size: 20px; }
 
 /*********************************************END*****MENU**************************************/
-.landing-header {
-  position: relative;
-  height: 510px;
-  background: #eeeeee url("../img/landing-bg.png") 100% 100% no-repeat;
-  background-size: 100% 100%; }
-  .landing-header .layer {
-    z-index: 0; }
-  .landing-header .butn-orange {
-    width: 350px;
-    font-size: 24px; }
-
 .butn-signin {
   color: #ffffff;
   font-size: 14px;
@@ -1448,7 +1437,7 @@ label {
     margin: 0 0 18px 0; }
   .sign-block .butn {
     width: 100%; }
-  .sign-block .butn-orange {
+  .sign-block .btn-cta1b {
     font-weight: 400; }
   .sign-block .input-wrap {
     margin: 0 0 5px 0; }
@@ -2393,6 +2382,17 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .page-landing .price-block {
   margin-bottom: 30px; }
+
+.landing-header {
+  position: relative;
+  height: 510px;
+  background: #eeeeee url("../img/landing-bg.png") 100% 100% no-repeat;
+  background-size: 100% 100%; }
+  .landing-header .layer {
+    z-index: 0; }
+  .landing-header .btn-cta1b {
+    width: 350px;
+    font-size: 24px; }
 
 /**
  * Styling main content of the entire app
