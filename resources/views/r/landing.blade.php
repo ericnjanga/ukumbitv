@@ -3,6 +3,7 @@
   <div class="page-landing">
 
     <div class="section text-center">
+    	<a name="section1"></a> 
     	<div class="container">
       	<ul class="list-inline txt-presentation3">
       		<li>
@@ -43,12 +44,8 @@
               <!-- </div> -->
           <!-- </div> -->
       </div>
-
-
-
-
-
-			<a class="btn-down btn-dark" href="">
+ 
+			<a class="btn-down btn-dark" href="#section2">
 		   	<span class="icon icon-scroll-arrow-to-down"></span>
 		  </a>
     </div><!-- section -->   
@@ -56,6 +53,7 @@
        
 
   	<div class="bg1 section text-center">
+    	<a name="section2"></a> 
   		<div class="container"> 
         <div class="row">
           <div class="col-sm-12"> 
@@ -116,11 +114,8 @@
           </div>
         </div>
       </div>
-
-
-
-
-			<a class="btn-down" href="">
+ 
+			<a class="btn-down" href="#section3">
 		   	<span class="icon icon-scroll-arrow-to-down"></span>
 		  </a>
   	</div><!-- section -->
@@ -128,6 +123,7 @@
       
 
     <div class="section text-center">
+    	<a name="section3"></a> 
       <div class="container"> 
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
