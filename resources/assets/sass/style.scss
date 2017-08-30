@@ -1194,10 +1194,10 @@ align-items: center;
   width: 100px;
   &:hover, &:focus, &:active{
   	text-decoration: none;
-  	background: #eeb33d;
   	.icon{
 			border: 2px solid #333;
     	color: #333;
+  		background: #eeb33d;
   	}
   }
 
