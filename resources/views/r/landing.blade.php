@@ -43,6 +43,15 @@
               <!-- </div> -->
           <!-- </div> -->
       </div>
+
+
+
+
+
+			<a class="btn-down" href="">
+		   	<span class="icon icon-scroll-arrow-to-down"></span>
+		    <span>{{l("Scroll down")}}</span>
+		  </a>
     </div><!-- section -->   
       
        
@@ -108,6 +117,14 @@
           </div>
         </div>
       </div>
+
+      
+
+
+			<a class="btn-down" href="">
+		   	<span class="icon icon-scroll-arrow-to-down"></span>
+		    <span>{{l("Scroll down")}}</span>
+		  </a>
   	</div><!-- section -->
       
       
