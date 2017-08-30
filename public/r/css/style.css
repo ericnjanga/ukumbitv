@@ -2361,6 +2361,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .GP-menu .GP-hide a .menu-entry-text {
   background: white; }
 
+.page-landing {
+  border: 10px solid red; }
+
 /**
  * Styling main content of the entire app
  * --------------------------------------
