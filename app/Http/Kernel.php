@@ -34,7 +34,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\Locale::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
            // \App\Http\Middleware\CheckForMaintenanceMode::class,
-         //   \App\Http\Middleware\VerifyUser::class, //off
+            \App\Http\Middleware\VerifyUser::class, //off
             // \App\Http\Middleware\VerifyCsrfToken::class,
         ],
 
