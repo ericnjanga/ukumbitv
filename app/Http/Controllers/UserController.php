@@ -9,6 +9,8 @@ use App\Like;
 use App\PaymentPlan;
 use App\UserHistory;
 use App\UserPayment;
+use App\VideoActor;
+use App\VideoDirector;
 use App\Videoimage;
 use App\VideoTag;
 use Illuminate\Database\Eloquent\Collection;
@@ -1374,12 +1376,35 @@ class UserController extends Controller {
 
     public function searchAll(Request $request)
     {
-        $videos = AdminVideo::with('videoimage', 'likes')->where('title', 'like', '%'.$request->key.'%')->get();
-//        $videos = AdminVideo::with(['videoTags' => function ($query) {
-//            $query->where('name', 'like', '%anger%');
-//
-//        }])->get();
-        return view('r.user.search-result')->with('videos', $videos);
+        $result = new Collection;
+        $videos = AdminVideo::with('videoimage', 'likes', 'category')->where('title', 'like', '%'.$request->key.'%')->get();
+        $videosByTag = VideoTag::with('adminVideos.videoimage', 'adminVideos.likes', 'adminVideos.category')->where('name', $request->key)->get();
+        $videosByActor = VideoActor::with('adminVideos.videoimage', 'adminVideos.likes', 'adminVideos.category')->where('name', $request->key)->get();
+        $videosByDirector = VideoDirector::with('adminVideos.videoimage', 'adminVideos.likes', 'adminVideos.category')->where('name', $request->key)->get();
+
+        foreach ($videos as $adminVideo) {
+            $result->push($adminVideo);
+        }
+        foreach ($videosByTag as $videoByTag) {
+            foreach ($videoByTag->adminVideos as $video) {
+                $result->push($video);
+            }
+        }
+        foreach ($videosByActor as $videoByActor) {
+            foreach ($videoByActor->adminVideos as $video) {
+                $result->push($video);
+            }
+        }
+        foreach ($videosByDirector as $videoByDirector) {
+            foreach ($videoByDirector->adminVideos as $video) {
+                $result->push($video);
+            }
+        }
+
+        $unique = $result->unique();
+//        dd($unique);
+
+        return view('r.user.search-result')->with('videos', $unique);
     }
 
 }
