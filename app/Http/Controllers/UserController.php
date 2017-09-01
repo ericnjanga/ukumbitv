@@ -236,7 +236,7 @@ class UserController extends Controller {
                 }
             }
 
-            if(count($histories) < 10){
+            if(count($histories) < 3){
                 return true;
             }
 
@@ -299,18 +299,14 @@ class UserController extends Controller {
         //$histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
         //dd($histories);
         $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
-        $video->watch_count++;
-        $video->save();
+
 
 
 
 
         $checkTrial = $this->checkTrial($video->id);
-        if(!$checkTrial){
-            $payPlans = PaymentPlan::all();
-            return view('r.landing')
-                ->with('payment_plans', $payPlans);
-        }
+
+
 
         $relatedVideos = $this->getRelatedVideos($video);
 
@@ -372,6 +368,7 @@ class UserController extends Controller {
 //            ->with('videoTitle' , $video)
 //            ->with('images' , $images)
             ->with('video', $video)
+            ->with('checkTrial', $checkTrial)
             ->with('videoId', $videoId)
             ->with('actors', $actors)
             ->with('checkLike', $checkLike)
@@ -386,11 +383,16 @@ class UserController extends Controller {
 
     public function showVideo($id)
     {
+        $checkTrial = $this->checkTrial($id);
+
         $video = AdminVideo::where('watchid', $id)->first();
+        $video->watch_count++;
+        $video->save();
         $videoId = substr($video->video, 8);
 
         return view('r.user.watch-video')
             ->with('videoId', $videoId)
+            ->with('checkTrial', $checkTrial)
             ->with('video', $video);
     }
 

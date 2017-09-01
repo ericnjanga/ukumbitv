@@ -146,7 +146,7 @@
           	<div class="hero-sub_heading clearfix">
           		<h2 class="pull-left">{{trans('messages.reviews')}}</h2>
           		<button type="button" id="btn-comment-rate-modal" class="btn btn-default pull-right" data-toggle="modal" data-target="#comment-rate-modal"> 
-          			<span class="icon icon-pencil-edit-button"></span> {{trans('messages.Write_a_review')}}</a></button>
+          			@if($checkTrial)<span class="icon icon-pencil-edit-button"></span><a>{{trans('messages.Write_a_review')}}</a></button>@endif
           	</div>
 
           	<div class="row rating-stats">
@@ -167,11 +167,11 @@
           		</div> 
           	</div>
 
- 
 
 
 
 
+              @if($checkTrial)
               <div class="comment-block" id="new-comment-section">
               	@foreach($video->comments as $comment)
                 <div class="comment">
@@ -188,6 +188,7 @@
                 </div>
                 @endforeach 
               </div>
+              @endif
               {{--<a href="" class="butn btn-cta1 btn-lg">Load more</a>--}}
           </div>
              
