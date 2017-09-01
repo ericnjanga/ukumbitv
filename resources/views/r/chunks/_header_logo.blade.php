@@ -16,7 +16,7 @@
               @include('r.chunks._login_block')
             </div>
           @else
-            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-1 offset-sm-4 offset-md-4 offset-lg-1 offset-xl-2">
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-1 offset-sm-4 offset-md-4 offset-lg-1 offset-xl-2" style="border:10px solid;">
               <a href="{{route('user.login.form')}}" class="butn butn-signin">Sign in</a>
             </div>
             <div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
