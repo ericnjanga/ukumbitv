@@ -1,13 +1,13 @@
 <header class="main-header"> 
   <div class="container-fluid">
   	<div class="row">
-  		<div class="frame-logo">
+  		<div class="frame-logo" style="margin: 0 auto; padding-left: 0;">
   			<a href="/">
          	<img src="{{asset('r/img/logo.png')}}" alt="">
   			</a>
   		</div>
   	</div>
-  	
+
     <!-- @if(isset($back_url))
       <a href="{{$back_url}}" class="butn-back"><span class="icon icon-angle-pointing-to-left"></span></a>
     @endif
