@@ -1,11 +1,19 @@
 @extends('r.layouts.simple')
 @section('content')
-    <div class="contact-wrap">
-        <div class="container">
+  <div class="page-tersm-and-privacy">
+    <div class="container">
+
+		  <aside id="fixed-info" class="col-md-3 fixed-info">
+		  	<ul class="list-unstyled">
+		  		<li class="active">{{trans('messages.tos_title')}}</li>
+		  		<li><a href="{{route('user.privacy_policy')}}">{{trans('messages.PP_title')}}</a></li>
+		  		<li><a href="{{route('user.contact')}}">Contact us</a></li>
+		  	</ul> 
+		  </aside>
                 <div class="row justify-content-center">
                     <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
                         <div class="contact-block">
-                            <div class="title-page">Contact us</div>
+                            <h1>Contact us</h1>
                             <div class="text-add"><p>Fill free to ask questions</p> We will do our best respond or contact you back within the next 24 hours</div>
                             <div class="contact-info">
                                 <div class="mail"><span class="icon icon-envelope"></span>info@gmail.com</div>
