@@ -763,6 +763,7 @@ return array(
 	'auth_enter_email'	=>	'Enter your e-mail', 
 	'auth_signup'	=>	'Sign Up',  
 	'auth_signin'	=>	'Sign In', 
+	'auth_policy_check1'	=>	'By clicking Sign Up, I agree to the', 
 	// [fr] 'forgot_password' 	=> 'Mot de passe oublié',
   //SING-IN/REGISTER PAGE ...
   //----------------------------------- 
@@ -787,6 +788,43 @@ return array(
 	//...... ......
   'Search_placeholder' => 'Search for: Titles, people, tags',
   'review_help' => 'Most helpful reviews have 100 words or more',
+
+
+
+
+
+  //TERMS OF SERVICE PAGE ...
+  //----------------------------------- 
+  'tos_title' => 'Terms of Service',
+
+  //TERMS OF SERVICE PAGE ...
+  //----------------------------------- 
+
+
+
+
+
+  //PRIVACY POLICY PAGE ...
+  //----------------------------------- 
+  'PP_title' => 'Privacy policy',
+
+  //PRIVACY POLICY PAGE ...
+  //----------------------------------- 
+
+
+
+
+
+  //GENERAL WORDS ...
+  //----------------------------------- 
+  'and' => 'and',
+
+  //GENERAL WORDS ...
+  //----------------------------------- 
+
+
+
+
 
 
 

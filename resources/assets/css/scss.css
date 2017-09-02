@@ -1370,23 +1370,6 @@ label {
   .checkbox-wrap label:hover {
     cursor: pointer; }
 
-.terms-policy {
-  margin: 0 0 5px 0; }
-  .terms-policy p {
-    font-size: 12px;
-    font-weight: 400;
-    color: #616161;
-    line-height: 14px; }
-  .terms-policy span {
-    font-size: 12px;
-    font-weight: 400;
-    color: #616161;
-    line-height: 14px; }
-  .terms-policy a {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14px; }
-
 .notice-block {
   margin: 10px 0; }
   .notice-block .title-page {
@@ -2349,6 +2332,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     position: absolute;
     top: 0;
     right: 0; }
+  .page-auth .fine-print {
+    font-size: 13px; }
   .page-auth .checkbox {
     margin-bottom: 40px; }
 

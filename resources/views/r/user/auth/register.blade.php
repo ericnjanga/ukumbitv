@@ -12,28 +12,21 @@
 
 
     <form  action="{{ url('/register') }}" method="POST">
-        <div class="form-group">
-          <label>Enter your e-mail <span>*</span></label>
-          <input type="email" name="email" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <label>Password <span>*</span></label>
-          <input type="password" name="password" class="form-control" required>
-        </div> 
-        <div class="terms-policy">
-            <p>By clicking Sign Up, I agree to the</p>
-            <div>
-                <a href="{{route('user.terms-condition')}}">Terms of Service</a>
-                <span>and</span>
-                <a href="{{route('user.privacy_policy')}}">Privacy policy</a>
-            </div>
-        </div>
-        <button type="submit" class="butn btn-cta1b btn-lg">Sign Up</button>
+      <div class="form-group">
+        <label>Enter your e-mail <span>*</span></label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label>Password <span>*</span></label>
+        <input type="password" name="password" class="form-control" required>
+      </div> 
+      <p class="fine-print">{{trans('messages.auth_policy_check1')}} <a href="{{route('user.terms-condition')}}">{{trans('messages.tos_title')}}</a> <span>{{trans('messages.and')}}</span> <a href="{{route('user.privacy_policy')}}">Privacy policy</a></p> 
+      <button type="submit" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</button>
     </form>
     
     <div>
-        <span>{{trans('messages.auth_have_account')}}</span>
-        <a href="{{route('user.login.form')}}" class="sign-butn">{{trans('messages.auth_signin')}}</a>
+      <span>{{trans('messages.auth_have_account')}}</span>
+      <a href="{{route('user.login.form')}}" class="sign-butn">{{trans('messages.auth_signin')}}</a>
     </div>
  
   </div>

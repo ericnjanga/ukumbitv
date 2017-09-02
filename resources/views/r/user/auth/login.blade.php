@@ -26,7 +26,7 @@
         	<label for="remember">
         		<input id="remember" type="checkbox"> {{trans('messages.auth_remember')}}
         	</label>
-          <div class="block-forgot-pass">
+          <div class="block-forgot-pass fine-print">
           	<a href="{{url('/password/reset')}}">{{trans('messages.auth_forgot_password')}}</a>
           </div> 
         </div>
