@@ -14,8 +14,9 @@
 
 
   <aside class="fixed-info">
-    <div class="title-page-add">Questions ?</div>
-    <div class="text-add">Fill free to contact us</div>
-    <a href="{{route('user.contact')}}" class="butn btn-cta1b btn-lg">Contact us</a>
+  	<ul class="list-unstyled">
+  		<li><a href="{{route('user.privacy_policy')}}">Privacy policy</a></li>
+  		<li><a href="{{route('user.contact')}}" class="butn btn-cta1b btn-lg">Contact us</a></li>
+  	</ul> 
   </aside>
 @endsection
