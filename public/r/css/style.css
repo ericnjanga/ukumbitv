@@ -2221,6 +2221,12 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff; }
 
+.page-auth,
+.page-tersm-and-privacy {
+  margin: 100px auto;
+  max-width: 500px;
+  padding: 40px 20px; }
+
 .page-landing .section {
   position: relative;
   padding-top: 90px;
@@ -2315,27 +2321,29 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   position: relative;
   z-index: 10; }
 
-.page-auth {
-  margin: 100px auto;
-  max-width: 500px;
-  padding: 40px 20px; }
-  .page-auth h1, .page-auth p {
-    margin-bottom: 30px; }
-  .page-auth input[type="password"],
-  .page-auth input[type="email"] {
-    height: 45px; }
-  .page-auth button[type="submit"] {
-    margin-bottom: 30px; }
-  .page-auth #remember {
-    top: 0; }
-  .page-auth .block-forgot-pass {
-    position: absolute;
-    top: 0;
-    right: 0; }
-  .page-auth .fine-print {
-    font-size: 13px; }
-  .page-auth .checkbox {
-    margin-bottom: 40px; }
+.page-auth h1, .page-auth p {
+  margin-bottom: 30px; }
+
+.page-auth input[type="password"],
+.page-auth input[type="email"] {
+  height: 45px; }
+
+.page-auth button[type="submit"] {
+  margin-bottom: 30px; }
+
+.page-auth #remember {
+  top: 0; }
+
+.page-auth .block-forgot-pass {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.page-auth .fine-print {
+  font-size: 13px; }
+
+.page-auth .checkbox {
+  margin-bottom: 40px; }
 
 /**
  * Styling main content of the entire app
