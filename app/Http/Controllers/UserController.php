@@ -7,6 +7,7 @@ use App\AdminVideo;
 use App\Director;
 use App\Like;
 use App\PaymentPlan;
+use App\TrialPeriod;
 use App\UserHistory;
 use App\UserPayment;
 use App\VideoActor;
@@ -225,26 +226,23 @@ class UserController extends Controller {
 
     public function checkTrial($id)
     {
+        $trials = TrialPeriod::where('user_id', Auth::id())->get();
 
-        $histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
-
-        if(count($histories) != 0){
-
-            foreach ($histories as $history) {
-                if($history->admin_video_id == $id) {
+        if(count($trials) > 0) {
+            foreach ($trials as $trial) {
+                if ($trial->admin_video_id == $id) {
                     return true;
                 }
             }
-
-            if(count($histories) < 3){
+            if(count($trials ) < 3) {
                 return true;
-            }
-
+            } else {
             return false;
-
+            }
         }
 
         return true;
+
     }
 
     public function getRelatedVideos($video)
@@ -294,18 +292,10 @@ class UserController extends Controller {
     public function watchVideo($id)
     {
 
-        //$histories = Helper::watch_list(\Auth::user()->id,WEB);
-      //  $histories = UserHistory::where('user_id', Auth::id())->distinct()->get();
-        //$histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
-        //dd($histories);
         $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
 
 
-
-
-
         $checkTrial = $this->checkTrial($video->id);
-
 
 
         $relatedVideos = $this->getRelatedVideos($video);
@@ -319,19 +309,6 @@ class UserController extends Controller {
 
         $videoId = substr($video->video, 8);
 
-//        $main_video = $video->video;
-//        $trailer_video = "";
-//        $wishlist_status = $history_status = WISHLIST_EMPTY;
-
-        if (Auth::check()) {
-            $hist = new UserHistory();
-            $hist->user_id = Auth::id();
-            $hist->admin_video_id = $video->id;
-            $hist->status = 0;
-            $hist->save();
-        }
-
-//        $categories = get_categories();
 
 
         $likes = Like::where('admin_video_id', $video->id)->where('type', 'like')->get();
@@ -383,12 +360,39 @@ class UserController extends Controller {
 
     public function showVideo($id)
     {
-        $checkTrial = $this->checkTrial($id);
 
         $video = AdminVideo::where('watchid', $id)->first();
+
+        $checkTrial = $this->checkTrial($video->id);
+
+        $checkTrialRecord = false;
+        $trials = TrialPeriod::where('user_id', Auth::id())->get();
+        if(count($trials) < 3) {
+                foreach ($trials as $trial) {
+                    if ($trial->admin_video_id == $video->id) {
+                        $checkTrialRecord = true;
+                    }
+                }
+
+            if(!$checkTrialRecord) {
+                $trialRecord = new TrialPeriod();
+                $trialRecord->user_id = Auth::id();
+                $trialRecord->admin_video_id = $video->id;
+                $trialRecord->save();
+            }
+        }
+
         $video->watch_count++;
         $video->save();
         $videoId = substr($video->video, 8);
+
+        if (Auth::check()) {
+            $hist = new UserHistory();
+            $hist->user_id = Auth::id();
+            $hist->admin_video_id = $video->id;
+            $hist->status = 0;
+            $hist->save();
+        }
 
         return view('r.user.watch-video')
             ->with('videoId', $videoId)
