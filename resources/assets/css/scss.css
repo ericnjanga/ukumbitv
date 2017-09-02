@@ -2233,6 +2233,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .GP-menu .GP-hide a .menu-entry-text {
   background: white; }
 
+.page-auth,
+.video-item {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff; }
+
 .page-landing .section {
   position: relative;
   padding-top: 90px;
@@ -2330,9 +2335,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-auth {
   margin: 100px auto;
   max-width: 500px;
-  padding: 40px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff; }
+  padding: 40px 20px; }
   .page-auth h1, .page-auth p {
     margin-bottom: 30px; }
   .page-auth input[type="password"],

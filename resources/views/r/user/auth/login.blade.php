@@ -15,12 +15,12 @@
 
     <form action="{{route('user.login.post')}}" method="POST">
         <div class="form-group">
-            <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
-            <input class="form-control" type="email" name="email" required>
+          <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
+          <input class="form-control" type="email" name="email" required>
         </div>
         <div class="form-group">
-            <label for="password">{{trans('messages.auth_password')}} <span>*</span></label>
-            <input class="form-control" type="password" name="password" required>
+          <label for="password">{{trans('messages.auth_password')}} <span>*</span></label>
+          <input class="form-control" type="password" name="password" required>
         </div>
         <div class="checkbox">
         	<label for="remember">
