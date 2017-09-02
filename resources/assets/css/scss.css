@@ -2423,6 +2423,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   margin: 100px auto;
   max-width: 500px;
   padding: 0 20px; }
+  .page-auth h1, .page-auth p {
+    margin-bottom: 15px; }
 
 /**
  * Styling main content of the entire app

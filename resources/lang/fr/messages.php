@@ -110,9 +110,7 @@ return array(
 	'settings'	=>	'Settings',
 	'delete_account' => 'Delete Account',
 
-	'forgot_password' 	=> 'Mot de passe oublié',
-	'forgot'	=>	'Forgot Your Password',
-	'remember'	=>	'Remember Me',
+	'forgot'	=>	'Forgot Your Password', 
 
 	'reset_password' => 'Reset Password',
 	'change_password'	=> 	'Change Password',
@@ -211,7 +209,7 @@ return array(
 	// Web Register 
 	'registration_form'	=>	'Registration Form',
 	'already_register'	=>	'Already Registered? Login',
-	'already_account' 		=> 'Vous avez déjà un compte?',
+	 
 	
 	'login_form'	=>	'Login Form',
 	'password_ph'	=>	'Atleast 6 letters',

@@ -110,9 +110,7 @@ return array(
 	'settings'	=>	'Settings',
 	'delete_account' => 'Delete Account',
 
-	'forgot_password'	=>	'Forgot Password',
 	'forgot'	=>	'Forgot Your Password',
-	'remember'	=>	'Remember Me',
 
 	'reset_password' => 'Reset Password',
 	'change_password'	=> 	'Change Password',
@@ -211,7 +209,7 @@ return array(
 	// Web Register 
 	'registration_form'	=>	'Registration Form',
 	'already_register'	=>	'Already Registered? Login',
-	'already_account' => 'Already Have an Account?', 
+	 
 	
 	'login_form'	=>	'Login Form',
 	'password_ph'	=>	'Atleast 6 letters',
@@ -756,6 +754,13 @@ return array(
   'auth_signin_blurb' => 'The easiest way for you to sign in is with Facebook',
   'auth_signin_fb' => 'Sign in with Facebook',
   'auth_or' => 'or',
+  'auth_no_account' => 'Don’t have an account?',
+
+	'auth_forgot_password'	=>	'Forgot Password',
+	'auth_remember'	=>	'Remember Me',
+	'auth_password'	=>	'Password',
+	'auth_enter_email'	=>	'Enter your e-mail',
+	// [fr] 'forgot_password' 	=> 'Mot de passe oublié',
   //SING-IN/REGISTER PAGE ...
   //----------------------------------- 
 
