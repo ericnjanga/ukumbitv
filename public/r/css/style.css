@@ -2333,9 +2333,17 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   padding: 0 20px; }
   .page-auth h1, .page-auth p {
     margin-bottom: 15px; }
-  .page-auth input[type="text"],
+  .page-auth input[type="password"],
   .page-auth input[type="email"] {
     height: 45px; }
+  .page-auth #remember {
+    top: 0; }
+  .page-auth .block-forgot-pass {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .page-auth .checkbox {
+    margin-bottom: 40px; }
 
 /**
  * Styling main content of the entire app
