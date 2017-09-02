@@ -755,11 +755,14 @@ return array(
   'auth_signin_fb' => 'Sign in with Facebook',
   'auth_or' => 'or',
   'auth_no_account' => 'Don’t have an account?',
+  'auth_have_account' => 'Already have an account?',
 
 	'auth_forgot_password'	=>	'Forgot Password?',
 	'auth_remember'	=>	'Remember Me',
 	'auth_password'	=>	'Password',
-	'auth_enter_email'	=>	'Enter your e-mail',
+	'auth_enter_email'	=>	'Enter your e-mail', 
+	'auth_signup'	=>	'Sign Up',  
+	'auth_signin'	=>	'Sign In', 
 	// [fr] 'forgot_password' 	=> 'Mot de passe oublié',
   //SING-IN/REGISTER PAGE ...
   //----------------------------------- 
