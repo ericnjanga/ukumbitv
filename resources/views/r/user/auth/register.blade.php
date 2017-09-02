@@ -14,11 +14,11 @@
     <form  action="{{ url('/register') }}" method="POST">
         <div class="form-group">
           <label>Enter your e-mail <span>*</span></label>
-          <input type="email" name="email" class="from-control" required>
+          <input type="email" name="email" class="form-control" required>
         </div>
         <div class="form-group">
           <label>Password <span>*</span></label>
-          <input type="password" name="password" class="from-control" required>
+          <input type="password" name="password" class="form-control" required>
         </div> 
         <div class="terms-policy">
             <p>By clicking Sign Up, I agree to the</p>
