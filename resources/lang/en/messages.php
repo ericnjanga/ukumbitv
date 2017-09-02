@@ -714,8 +714,15 @@ return array(
   'plan_details' => 'Plan Details',
   'change_plan' => 'Change Plan',
 
-  //HOME PAGE ...
 
+
+
+
+
+
+
+  //HOME PAGE ...
+  //----------------------------------- 
   //--Call to ation ..
   'home_cta' => 'Try UkumbiTV for free',
 
@@ -733,6 +740,14 @@ return array(
   //--SEO text section ..
   'home_seotext_title' => 'Our Mission',
   'home_seotext_blurb' => '<p>We believe in Africa and it\'s strength. Africa just like any other continent is in a perpetual search of innovation and originallity. That is why we created the Ukumbi TV which is to renovate, rebrand and redifine the African film industries. We want to show not only to Africans the originallity of thier movies but to let the entire world know of them. We bring together young and talented movie producers, scriptwriters, actors, artists and TV hosts to create exceptional and amazing African brands in terms of entertainement. </p>',
+  //HOME PAGE ...
+  //----------------------------------- 
+
+
+
+
+
+
 
 //videos ......
   'Similar_Videos' => 'Similar Videos',

@@ -688,8 +688,15 @@ return array(
   'plan_details' => 'Détails du plan',
   'change_plan' => 'Changer le plan',
 
-  //HOME PAGE ...
 
+
+
+
+
+
+
+  //HOME PAGE ...
+  //-----------------------------------
   //--Call to ation ..
   'home_cta' => 'Essayez UkumbiTV gratuitement',
 
@@ -714,6 +721,14 @@ For this, we are teaming up with young, talented and bold movie producers, scree
 And to insure en exceptional delivery all this unique experience, we have created <b>UkumbiTV</b>, a platform which aims to be among the best content streaming platforms in the world.</p>
 
 <p>This is how UkumbiTV is going to rebrand the African cinema, this is how UkumbiTV will redefine the African quality!</p>',
+  //HOME PAGE ...
+  //----------------------------------- 
+
+
+
+
+
+
 
 //videos ......
   'Similar_Videos' => 'Vidéos similaires',

@@ -3,10 +3,12 @@
 
  
   <div class="page-auth">
-      <div class="title-page">Sign In</div>
-      <div class="text-add">The easiest way for you to sign in is with Facebook</div>
-      <a href="" class="butn btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>Sign in with Facebook</a>
-      <div class="or-line upper">or</div>
+      <div class="text-center">
+      	<h1>{{trans('messages.auth_signin')}}</h1>
+	      <div class="text-add">{{trans('messages.auth_signin_blurb')}}</div>
+	      <a href="" class="butn btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</a>
+      </div>
+      <div class="or-line upper">{{trans('messages.or')}}</div>
       <form action="{{route('user.login.post')}}" method="POST">
           <div class="input-wrap">
               <label>Enter your e-mail <span>*</span></label>
