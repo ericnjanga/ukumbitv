@@ -13,17 +13,12 @@
 
 		  <div class="col-md-7">
     		<h1>{{trans('messages.tos_title')}}</h1>
-		  	<p class="content-text">Scarlett Johansson stars in the visually stunning Ghost in the Shell, an action-packed adventure set in a future world where people are enhanced with technology. Believing she was rescued from near death, Major (Johansson) becomes the first of her kind: a human mind inside an artificial body designed to fight the war against cyber-crime. While investigating a dangerous criminal, Major makes a shocking discovery – the corporation that created her lied about her past life in order to control her. Unsure what to believe, Major will stop at nothing to unravel the mystery of her true identity and exact revenge against the corporation she was built to serve.</p> 
+		  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, excepturi numquam magnam quas sunt debitis doloremque quam, facere, incidunt mollitia voluptas. Esse commodi nihil rem facilis quia a, atque, ipsam.</p>
+		  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex officiis nesciunt consequatur voluptates! Nisi eum voluptas iusto reiciendis, est delectus. Consequuntur ut cupiditate incidunt cum laboriosam, hic voluptas tempore rem.</p>
+		  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia perspiciatis ipsa maiores veritatis, consequatur beatae molestiae illo impedit est magnam dolor ex laboriosam a fuga fugit, quos earum quis, quae.</p>
+		  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti fugit iste, magnam sit, sint fuga blanditiis possimus esse rerum odio, doloribus veritatis voluptatibus quo atque, adipisci error ratione maiores consequuntur.</p>
 		  </div>  
     </div><!-- container -->
-      
-      <!-- <div class="row justify-content-center"> -->
-      <!-- <div class="col-sm-12 col-md-10 col-lg-7 col-xl-6"> -->
-      <!-- <div class="content-block"> -->
-          <!-- <div class="img-block">
-              <img src="{{asset('r/img/landing-bg.png')}}" alt="">
-          </div> -->
-    
   </div>
 
 
