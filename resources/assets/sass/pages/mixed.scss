@@ -10,6 +10,9 @@
 .page-auth,
 .page-tersm-and-privacy {
 	margin-top: 50px;
+  h1, p {
+  	margin-bottom: 30px;
+  }
 }
 .page-auth {
 	margin-left: auto;
@@ -18,6 +21,7 @@
   padding: 40px 20px; 
 }
 
+ 
 
 .fixed-info {
 	$color-active: #4285f4;

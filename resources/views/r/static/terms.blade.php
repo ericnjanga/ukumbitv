@@ -6,7 +6,7 @@
 		  <aside id="fixed-info" class="col-md-3 fixed-info">
 		  	<ul class="list-unstyled">
 		  		<li class="active">{{trans('messages.tos_title')}}</li>
-		  		<li><a href="{{route('user.privacy_policy')}}">Privacy policy</a></li>
+		  		<li><a href="{{route('user.privacy_policy')}}">{{trans('messages.PP_title')}}</a></li>
 		  		<li><a href="{{route('user.contact')}}">Contact us</a></li>
 		  	</ul> 
 		  </aside>

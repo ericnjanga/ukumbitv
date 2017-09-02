@@ -2224,6 +2224,10 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-auth,
 .page-tersm-and-privacy {
   margin-top: 50px; }
+  .page-auth h1, .page-auth p,
+  .page-tersm-and-privacy h1,
+  .page-tersm-and-privacy p {
+    margin-bottom: 30px; }
 
 .page-auth {
   margin-left: auto;
@@ -2340,9 +2344,6 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .main-header {
   position: relative;
   z-index: 10; }
-
-.page-auth h1, .page-auth p {
-  margin-bottom: 30px; }
 
 .page-auth input[type="password"],
 .page-auth input[type="email"] {
