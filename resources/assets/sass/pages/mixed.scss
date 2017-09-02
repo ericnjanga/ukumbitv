@@ -20,18 +20,27 @@
 
 
 .fixed-info {
+	$color-active: #4285f4;
+	a {
+		color: #666;
+		&:hover{
+			color: $color-active;
+		}
+	}
 	li {
 		position: relative;
 		margin-bottom: 20px;
+		padding-left: 20px;
+		color: $color-active;
 		&.active {
 			&:after {
 				content: '';
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 3px;
+				width: 5px;
 				height: 100%;
-				background: blue;
+				background: $color-active;
 			}
 		}
 	}
