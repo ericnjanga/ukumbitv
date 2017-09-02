@@ -749,6 +749,22 @@ return array(
 
 
 
+
+  //SING-IN/REGISTER PAGE (AUTH) ...
+  //----------------------------------- 
+  'auth_signin' => 'Sign In',
+  'auth_signin_blurb' => 'The easiest way for you to sign in is with Facebook',
+  'auth_signin_fb' => 'Sign in with Facebook',
+  'auth_or' => 'or',
+  //SING-IN/REGISTER PAGE ...
+  //----------------------------------- 
+
+
+
+
+
+
+
 //videos ......
   'Similar_Videos' => 'Similar Videos',
   'There_is_no_videos' => 'There is no videos',
