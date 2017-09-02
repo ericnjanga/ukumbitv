@@ -2222,12 +2222,14 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   background-color: #fff; }
 
 .page-auth,
-.page-tersm-and-privacy {
+.page-tersm-and-privacy,
+.footer-wrap {
   margin-top: 50px; }
-  .page-auth h1, .page-auth p,
-  .page-tersm-and-privacy h1,
-  .page-tersm-and-privacy p {
-    margin-bottom: 30px; }
+
+.page-auth h1, .page-auth p,
+.page-tersm-and-privacy h1,
+.page-tersm-and-privacy p {
+  margin-bottom: 30px; }
 
 .page-auth {
   margin-left: auto;

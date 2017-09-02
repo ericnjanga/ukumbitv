@@ -12,7 +12,7 @@
 		  </aside>
 
 		  <div class="col-md-7">
-    		<h1>{{trans('messages.tos_title')}}</h1>
+    		<h1>{{trans('messages.PP_title')}}</h1>
 		  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, excepturi numquam magnam quas sunt debitis doloremque quam, facere, incidunt mollitia voluptas. Esse commodi nihil rem facilis quia a, atque, ipsam.</p>
 		  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex officiis nesciunt consequatur voluptates! Nisi eum voluptas iusto reiciendis, est delectus. Consequuntur ut cupiditate incidunt cum laboriosam, hic voluptas tempore rem.</p>
 		  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia perspiciatis ipsa maiores veritatis, consequatur beatae molestiae illo impedit est magnam dolor ex laboriosam a fuga fugit, quos earum quis, quae.</p>
