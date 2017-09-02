@@ -8,4 +8,9 @@
   h1, p {
   	margin-bottom: 15px;
   }
+
+  input[type="text"],
+  input[type="email"] {
+  	height: 45px;
+  }
 }//page-auth

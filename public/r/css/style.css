@@ -318,15 +318,6 @@ ul li {
   .main-header .frame-useraccount {
     width: calc(25% - 30px); }
 
-input {
-  height: 45px;
-  line-height: 44px;
-  border: 1px solid #e0e0e0;
-  background-color: #ffffff;
-  padding: 0 10px;
-  width: 100%;
-  color: #616161; }
-
 select {
   height: 45px;
   line-height: 44px;
@@ -2342,6 +2333,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   padding: 0 20px; }
   .page-auth h1, .page-auth p {
     margin-bottom: 15px; }
+  .page-auth input[type="text"],
+  .page-auth input[type="email"] {
+    height: 45px; }
 
 /**
  * Styling main content of the entire app
