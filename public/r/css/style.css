@@ -2334,11 +2334,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff; }
   .page-auth h1, .page-auth p {
-    margin-bottom: 15px; }
+    margin-bottom: 30px; }
   .page-auth input[type="password"],
   .page-auth input[type="email"] {
     height: 45px; }
-  .page-auth input[type="submit"] {
+  .page-auth button[type="submit"] {
     margin-bottom: 30px; }
   .page-auth #remember {
     top: 0; }
