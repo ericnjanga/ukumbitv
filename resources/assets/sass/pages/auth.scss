@@ -9,8 +9,16 @@
   	margin-bottom: 15px;
   }
 
-  input[type="text"],
+  input[type="password"],
   input[type="email"] {
   	height: 45px;
+  }
+  #remember {
+  	top: 0;
+  }
+  .block-forgot-pass {
+  	position: absolute;
+    top: 0;
+    right: 0;
   }
 }//page-auth

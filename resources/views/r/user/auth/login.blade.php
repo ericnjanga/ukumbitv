@@ -22,10 +22,10 @@
           	<label for="remember">
           		<input id="remember" type="checkbox"> {{trans('messages.auth_remember')}}
           	</label>
+	          <div class="block-forgot-pass">
+	          	<a href="{{url('/password/reset')}}">{{trans('messages.auth_forgot_password')}}</a>
+	          </div> 
           </div>
-          <div>
-          	<a href="{{url('/password/reset')}}">{{trans('messages.auth_forgot_password')}}</a>
-          </div> 
           <button type="submit" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signin')}}</button>
       </form>
       <div class="have-block">
