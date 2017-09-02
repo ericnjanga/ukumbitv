@@ -5,12 +5,13 @@
 
 		  <aside id="fixed-info" class="col-md-3 fixed-info">
 		  	<ul class="list-unstyled">
+		  		<li class="active">{{trans('messages.tos_title')}}</li>
 		  		<li><a href="{{route('user.privacy_policy')}}">Privacy policy</a></li>
 		  		<li><a href="{{route('user.contact')}}">Contact us</a></li>
 		  	</ul> 
 		  </aside>
 
-		  <div class="col-md-4 col-md-offset3">
+		  <div class="col-md-7">
     		<h1>{{trans('messages.tos_title')}}</h1>
 		  	<p class="content-text">Scarlett Johansson stars in the visually stunning Ghost in the Shell, an action-packed adventure set in a future world where people are enhanced with technology. Believing she was rescued from near death, Major (Johansson) becomes the first of her kind: a human mind inside an artificial body designed to fight the war against cyber-crime. While investigating a dangerous criminal, Major makes a shocking discovery – the corporation that created her lied about her past life in order to control her. Unsure what to believe, Major will stop at nothing to unravel the mystery of her true identity and exact revenge against the corporation she was built to serve.</p> 
 		  </div>  
