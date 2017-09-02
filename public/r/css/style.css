@@ -2221,6 +2221,10 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff; }
 
+.page-auth,
+.page-tersm-and-privacy {
+  margin-top: 50px; }
+
 .page-auth {
   margin-left: auto;
   margin-right: auto;
