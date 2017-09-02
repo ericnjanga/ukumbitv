@@ -2,8 +2,11 @@
 
 .page-auth {
 	margin: 100px auto;
-  max-width: 500px;
-  padding: 0 20px;
+  max-width: 500px; 
+  padding: 40px 20px;
+  //...
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 
   h1, p {
   	margin-bottom: 15px;
@@ -12,6 +15,9 @@
   input[type="password"],
   input[type="email"] {
   	height: 45px;
+  }
+  input[type="submit"] {
+  	margin-bottom: 30px;
   }
   #remember {
   	top: 0;

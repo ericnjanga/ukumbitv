@@ -8,7 +8,7 @@
 	      <p>{{trans('messages.auth_signin_blurb')}}</p>
 	      <a href="" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</a>
       </div>
-      <div class="or-line upper">{{trans('messages.or')}}</div>
+      <div class="or-line upper">{{trans('messages.auth_or')}}</div>
       <form action="{{route('user.login.post')}}" method="POST">
           <div class="form-group">
               <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
