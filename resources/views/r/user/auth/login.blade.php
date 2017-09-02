@@ -32,10 +32,10 @@
         </div>
         <button type="submit" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signin')}}</button>
     </form>
-    
+
     <div>
         <span>{{trans('messages.auth_no_account')}}</span>
-        <a href="{{route('user.register.form')}}" class="sign-butn">{trans('messages.auth_signup')}}</a>
+        <a href="{{route('user.register.form')}}" class="sign-butn">{{trans('messages.auth_signup')}}</a>
     </div>
   </div>
  
