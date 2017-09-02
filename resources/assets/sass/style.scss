@@ -460,9 +460,7 @@ input:focus, textarea:focus, select:focus {
     line-height: 34px;
   }
 }
-.input-wrap{
-  position: relative;
-}
+ 
 ::-webkit-input-placeholder {
   color: #373230;
   font-size: 14px;
@@ -1609,53 +1607,51 @@ align-items: center;
     background-color: rgb(224, 224, 224);
   }
 }
-.form-block{
-  width: 70%;
-  margin: 50px 0;
-  form{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-  }
-  .title-form{
-    color: #616161;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 20px;
-    margin: 0 0 10px 0;
-  }
-  .textarea-wrap{
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-    width: 100%;
-    margin: 0 0 5px 0;
-    textarea{
-      height: 200px;
-    }
-  }
-  .input-wrap{
-    width: 350px;
-  }
-  button{
-    width: 160px;
-  }
-}
+// .form-block{
+//   width: 70%;
+//   margin: 50px 0;
+//   form{
+//     display: -webkit-box;
+//     display: -webkit-flex;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -webkit-flex-wrap: wrap;
+//     -ms-flex-wrap: wrap;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     -webkit-box-pack: justify;
+//     -webkit-justify-content: space-between;
+//     -ms-flex-pack: justify;
+//     justify-content: space-between;
+//     -webkit-box-align: end;
+//     -webkit-align-items: flex-end;
+//     -ms-flex-align: end;
+//     align-items: flex-end;
+//   }
+//   .title-form{
+//     color: #616161;
+//     font-size: 18px;
+//     font-weight: 400;
+//     line-height: 20px;
+//     margin: 0 0 10px 0;
+//   }
+//   .textarea-wrap{
+//     -webkit-box-flex: 0;
+//     -webkit-flex: 0 0 100%;
+//     -ms-flex: 0 0 100%;
+//     flex: 0 0 100%;
+//     max-width: 100%;
+//     width: 100%;
+//     margin: 0 0 5px 0;
+//     textarea{
+//       height: 200px;
+//     }
+//   }
+ 
+//   button{
+//     width: 160px;
+//   }
+// }
 label{
   font-size: 13px;
   font-weight: 400;
@@ -1909,10 +1905,7 @@ margin: 0 0 12px 0;
 //   }
 //   .btn-cta1b{
 //     font-weight: 400;
-//   }
-//   .input-wrap{
-//     margin: 0 0 5px 0;
-//   }
+//   } 
 //   input[type='checkbox'] {
 //     width: auto;
 //     height: auto;
@@ -1986,13 +1979,13 @@ margin: 0 0 12px 0;
   }
 }
 .newpas-wrap{
-  .operations-pass{
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    margin: 5px 0 0 0;
-  }
+  // .operations-pass{
+  //   -webkit-box-pack: end;
+  //   -webkit-justify-content: flex-end;
+  //   -ms-flex-pack: end;
+  //   justify-content: flex-end;
+  //   margin: 5px 0 0 0;
+  // }
   .notice-block{
     .butn{
       margin: 30px 0 0 0;
@@ -2142,9 +2135,9 @@ margin: 0 0 12px 0;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  .input-wrap{
-    margin: 0 0 22px 0;
-  }
+  // .input-wrap{
+  //   margin: 0 0 22px 0;
+  // }
   .butn{
     width: 100%;
   }

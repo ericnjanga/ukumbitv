@@ -367,9 +367,6 @@ input:focus, textarea:focus, select:focus {
   height: 35px;
   line-height: 34px; }
 
-.input-wrap {
-  position: relative; }
-
 ::-webkit-input-placeholder {
   color: #373230;
   font-size: 14px; }
@@ -1194,38 +1191,6 @@ img {
     display: block;
     background-color: #e0e0e0; }
 
-.form-block {
-  width: 70%;
-  margin: 50px 0; }
-  .form-block form {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-align: end;
-    align-items: flex-end; }
-  .form-block .title-form {
-    color: #616161;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 20px;
-    margin: 0 0 10px 0; }
-  .form-block .textarea-wrap {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-    width: 100%;
-    margin: 0 0 5px 0; }
-    .form-block .textarea-wrap textarea {
-      height: 200px; }
-  .form-block .input-wrap {
-    width: 350px; }
-  .form-block button {
-    width: 160px; }
-
 label {
   font-size: 13px;
   font-weight: 400;
@@ -1414,47 +1379,6 @@ label {
   .checkbox-wrap label:hover {
     cursor: pointer; }
 
-.sign-block {
-  margin: 40px 0; }
-  .sign-block .text-add {
-    text-align: center;
-    margin: 0 0 20px 0; }
-  .sign-block .title-page {
-    margin: 0 0 18px 0; }
-  .sign-block .butn {
-    width: 100%; }
-  .sign-block .btn-cta1b {
-    font-weight: 400; }
-  .sign-block .input-wrap {
-    margin: 0 0 5px 0; }
-  .sign-block input[type='checkbox'] {
-    width: auto;
-    height: auto;
-    vertical-align: middle;
-    box-shadow: none;
-    position: relative;
-    top: -1px;
-    border-radius: 0; }
-    .sign-block input[type='checkbox']:hover {
-      cursor: pointer; }
-  .sign-block .sign-butn {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18px; }
-  .sign-block .have-block {
-    margin: 18px 0 0 0; }
-    .sign-block .have-block span {
-      color: #616161;
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 18px;
-      margin: 0 27px 0 0; }
-
-.signup-wrap .operations-pass {
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin: 5px 0 18px; }
-
 .terms-policy {
   margin: 0 0 5px 0; }
   .terms-policy p {
@@ -1483,11 +1407,6 @@ label {
     width: 100%;
     font-weight: 400;
     margin: 40px 0 0 0; }
-
-.newpas-wrap .operations-pass {
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin: 5px 0 0 0; }
 
 .newpas-wrap .notice-block .butn {
   margin: 30px 0 0 0; }
@@ -1597,8 +1516,6 @@ label {
     justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
-  .contact-form .input-wrap {
-    margin: 0 0 22px 0; }
   .contact-form .butn {
     width: 100%; }
 
