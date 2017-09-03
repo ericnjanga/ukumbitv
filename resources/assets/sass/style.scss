@@ -751,7 +751,8 @@ img{
       font-weight: 400;
       line-height: 14px;
       &:hover{
-        color: $color-primary;
+        color: $color-yellow-green;
+        text-decoration: underline;
       }
     }
   }
@@ -767,8 +768,11 @@ img{
     a{
       width: 30px;
       height: 30px;
-      color: #6c6c6c;
+      color: $color-yellow-green;
       font-size: 30px;
+      &:hover{
+      	color: $color-h;
+      }
     }
   }
 }

@@ -631,7 +631,8 @@ img {
     font-weight: 400;
     line-height: 14px; }
     .footer-list li a:hover {
-      color: #eeb33d; }
+      color: #798801;
+      text-decoration: underline; }
 
 .social-list {
   display: -ms-flexbox;
@@ -642,8 +643,10 @@ img {
     .social-list li a {
       width: 30px;
       height: 30px;
-      color: #6c6c6c;
+      color: #798801;
       font-size: 30px; }
+      .social-list li a:hover {
+        color: #424242; }
 
 .last-block {
   display: -ms-flexbox;
