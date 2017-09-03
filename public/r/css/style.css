@@ -2213,8 +2213,21 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-auth .checkbox {
   margin-bottom: 40px; }
 
+.page-video-single .hero {
+  padding-top: 30px; }
+
+.page-video-single .title {
+  margin-bottom: 20px; }
+
 .page-video-single .iframe-video {
   height: 380px; }
+
+.page-video-single .video-info-main {
+  display: -ms-flexbox;
+  display: flex;
+  position: relative; }
+  .page-video-single .video-info-main .info-right {
+    text-align: right; }
 
 .page-tersm-and-privacy {
   margin-top: 100px; }

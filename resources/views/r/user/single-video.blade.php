@@ -17,41 +17,53 @@
   		
       <div class="global-main-content utv-card">
         <div class="hero">
+<i class="fa fa-bookmark" aria-hidden="true"></i>
 
-        	
-          <div class="info-block">
+          <div class="info-block hero-sub">
             <h1 class="title">{{$video->title}}</h1>
-            <div class="video-info-text">
-              <span class="age">16+</span>
-              <span class="date" style="border:3px solid red;">{{$video->created_at->format('Y')}}</span>
-              <span class="genre" style="border:3px solid green;">
-                  {{$tags}}
-              </span>
-              <div class="series-text">1 Season, 12 Series</div>
-            </div>
+            <div class="video-info-main">
+              <div class="info-left">
+              	<!-- <span class="age">16+</span> -->
+	              <ul class="list-inline">
+	              	<li>{{$video->created_at->format('Y')}}</li>
+	              	<li>1h22min</li>
+	              </ul>
+	              <div class="cat">
+	              	category
+	              </div> 
+	              <div class="tags">
+	                  {{$tags}}
+	              </div>
+	            </div><!-- info-left -->
+              <div class="info-right">
+              	<div class="info-likes">
+	              	@if($checkLike != null)
+	                  <a href="#" id="like-btn-top" class="butn-like" onclick="unlike()">
+	                    <span class="icon icon-thumbs-up"></span><span id="likes-count-top">{{$likes}}</span>
+	                  </a>
+	                @else
+	                  <a href="#" id="like-btn-top" class="butn-like" onclick="like()">
+	                    <span class="icon icon-thumbs-up"></span><span id="likes-count-top">{{$likes}}</span>
+	                  </a>
+	                @endif
+	              </div><!-- info-right -->
+              </div>
+              <!-- <div class="series-text">1 Season, 12 Series</div> -->
+            </div><!-- video-info-main -->
             <!-- <div class="actors-block">
                 <div class="actors-title">Actors</div>
                 <p class="actors-list" style="border:3px solid yellow;">Scarlett Johansson, Beat Takeshi Kitano, Michael Carmen Pitt,
                     Pilou Asbaek, Chin Han, Juliette Binoche</p>
             </div> -->
             <div class="butn-block">
-              <div class="play-block">
-                <a href="{{route('user.show-video', $video->watchid)}}" class="butn btn-cta1b-dark butn-play upper"><span class="icon icon-play-arrow"></span>{{trans('messages.Play')}}</a>
+              <div class="play-block"> 
                 <a href="#" class="butn btn-cta1b-dark upper" onclick="addToList()">{{trans('messages.Add_to_list')}}</a>
               </div>
               <div class="share-block">
                 {{--<a href="" class="butn-share"><span>f</span>Share</a>--}}
                 <div class="fb-share-button" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/videos/{{$video->watchid}}">{{trans('messages.share')}}</a></div>
 
-                @if($checkLike != null)
-                  <a href="#" id="like-btn-top" class="butn-like" onclick="unlike()">
-                    <span class="icon icon-thumbs-up"></span><span id="likes-count-top">{{$likes}}</span>
-                  </a>
-                @else
-                  <a href="#" id="like-btn-top" class="butn-like" onclick="like()">
-                    <span class="icon icon-thumbs-up"></span><span id="likes-count-top">{{$likes}}</span>
-                  </a>
-                @endif 
+                 
               </div>
             </div>
           </div>

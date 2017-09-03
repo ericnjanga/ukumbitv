@@ -1,5 +1,19 @@
 .page-video-single {
+	.hero {
+		padding-top: 30px;
+	}
+	.title {
+		margin-bottom: 20px;
+	}
 	.iframe-video {
 		height: 380px;
+	}
+
+	.video-info-main {
+		display: flex;
+		position: relative;
+		.info-right {
+			text-align: right;
+		}
 	}
 }
