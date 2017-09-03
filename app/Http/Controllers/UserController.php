@@ -312,8 +312,13 @@ class UserController extends Controller {
 
         $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
 
+        $flag = Auth::user()->paymentPlans[0]->flag;
 
-        $checkTrial = $this->checkTrial($video->id);
+        $checkTrial = true;
+
+        if($flag == 1) {
+            $checkTrial = $this->checkTrial($video->id);
+        }
 
 
         $relatedVideos = $this->getRelatedVideos($video);
@@ -370,11 +375,93 @@ class UserController extends Controller {
             ->with('checkDisLike', $checkDisLike)
             ->with('tags', $tags)
             ->with('relatedVideos', $relatedVideos)
-            ->with('payPlan', Auth::user()->paymentPlans[0]->flag)
+            ->with('payPlan', $flag)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))
             ->with('directors', $directors);
 //            ->with('categories', $categories);
+    }
+
+    public function addToPlaylist(Request $request)
+    {
+        switch (Auth::user()->paymentPlans[0]->flag) {
+            case 1:
+
+                $result = [
+                    'title' => 'Oops...',
+                    'text' => 'To add video you need to <a href="#">upgrade</a> the payment plan',
+                    'type' => 'warning'
+                ];
+
+                return response()->json($result);
+                break;
+            case 2:
+
+                $playlist = UserPlaylist::where('user_id', Auth::id())->get();
+                if(count($playlist) < 5) {
+                    foreach ($playlist as $item) {
+                        if($item->admin_video_id == $request->id) {
+                            $result = [
+                                'title' => 'Hey!',
+                                'text' => 'Video already added',
+                                'type' => 'info'
+                            ];
+                            return response()->json($result);
+                        }
+                    }
+                    $newPlaylist = new UserPlaylist();
+                    $newPlaylist->user_id = Auth::id();
+                    $newPlaylist->admin_video_id = $request->id;
+                    $newPlaylist->save();
+
+                    $result = [
+                        'title' => 'Good job!',
+                        'text' => 'Video was added',
+                        'type' => 'success'
+                    ];
+                    return response()->json($result);
+                } else {
+                    $result = [
+                        'title' => 'Oops...',
+                        'text' => 'You have already 5 vieos in your list! To add video you need to <a href="#">upgrade</a> the payment plan',
+                        'type' => 'error'
+                    ];
+                    return response()->json($result);
+                }
+                break;
+            case 3:
+                $playlist = UserPlaylist::where('user_id', Auth::id())->get();
+                    foreach ($playlist as $item) {
+                        if($item->admin_video_id == $request->id) {
+                            $result = [
+                                'title' => 'Hey!',
+                                'text' => 'Video already added',
+                                'type' => 'info'
+                            ];
+                            return response()->json($result);
+                        }
+                    }
+                $newPlaylist = new UserPlaylist();
+                $newPlaylist->user_id = Auth::id();
+                $newPlaylist->admin_video_id = $request->id;
+                $newPlaylist->save();
+
+                $result = [
+                    'title' => 'Good job!',
+                    'text' => 'Video was added',
+                    'type' => 'success'
+                ];
+                return response()->json($result);
+                break;
+            default:
+                $result = [
+                    'title' => 'Oops..',
+                    'text' => 'Something went wrong, try later',
+                    'type' => 'success'
+                ];
+                return response()->json($result);
+        }
+
     }
 
     public function showVideo($id)
