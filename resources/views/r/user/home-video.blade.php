@@ -7,9 +7,9 @@
     <div class="global-main-content">
       <div class="hero">
       	<a href="#">
-      		<img src="{{ grandVideo->videoimage->imgBillboard }}" alt="">
+      		<img src="{{ $grandVideo->videoimage->imgBillboard }}" alt="">
       	</a>
-      	<p>{{ grandVideo }}</p>
+      	<p>{{ $grandVideo }}</p>
       	<!-- <ol>
       		<li>
       			1- Look for all video with "GRAND DISPLAY" option on
