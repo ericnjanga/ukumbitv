@@ -7,7 +7,7 @@
 		  	<ul class="list-unstyled">
 		  		<li><a href="{{route('user.terms-condition')}}">{{trans('messages.tos_title')}}</a></li>
 		  		<li class="active">{{trans('messages.PP_title')}}</a></li>
-		  		<li><a href="{{route('user.contact')}}">Contact us</a></li>
+		  		<li><a href="{{route('user.contact')}}">{{trans('messages.contact')}}</a></li>
 		  	</ul> 
 		  </aside>
 

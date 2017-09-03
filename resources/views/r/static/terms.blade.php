@@ -7,7 +7,7 @@
 		  	<ul class="list-unstyled">
 		  		<li class="active">{{trans('messages.tos_title')}}</li>
 		  		<li><a href="{{route('user.privacy_policy')}}">{{trans('messages.PP_title')}}</a></li>
-		  		<li><a href="{{route('user.contact')}}">Contact us</a></li>
+		  		<li><a href="{{route('user.contact')}}">{{trans('messages.contact')}}</a></li>
 		  	</ul> 
 		  </aside>
 
@@ -23,6 +23,7 @@
 		  	{!!trans('messages.tos_section8')!!}
 		  	{!!trans('messages.tos_section9')!!}
 		  	{!!trans('messages.tos_section10')!!}
+		  	<p>... Complete text coming soon ...</p>
 		  </div>  
     </div><!-- container -->
   </div>
