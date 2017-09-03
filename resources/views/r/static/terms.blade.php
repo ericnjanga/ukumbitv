@@ -16,6 +16,13 @@
 		  	{!!trans('messages.tos_section1')!!}
 		  	{!!trans('messages.tos_section2')!!}
 		  	{!!trans('messages.tos_section3')!!}
+		  	{!!trans('messages.tos_section4')!!}
+		  	{!!trans('messages.tos_section5')!!}
+		  	{!!trans('messages.tos_section6')!!}
+		  	{!!trans('messages.tos_section7')!!}
+		  	{!!trans('messages.tos_section8')!!}
+		  	{!!trans('messages.tos_section9')!!}
+		  	{!!trans('messages.tos_section10')!!}
 		  </div>  
     </div><!-- container -->
   </div>
