@@ -2213,6 +2213,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-auth .checkbox {
   margin-bottom: 40px; }
 
+.page-video-single .iframe-video {
+  height: 380px; }
+
 .page-tersm-and-privacy {
   margin-top: 100px; }
   .page-tersm-and-privacy h1, .page-tersm-and-privacy h2, .page-tersm-and-privacy h3, .page-tersm-and-privacy h4, .page-tersm-and-privacy h5, .page-tersm-and-privacy h6 {
