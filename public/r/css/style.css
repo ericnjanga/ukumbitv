@@ -2370,9 +2370,10 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .page-tersm-and-privacy {
   margin-top: 100px; }
+  .page-tersm-and-privacy h1, .page-tersm-and-privacy h2 {
+    font-weight: 400; }
   .page-tersm-and-privacy h2 {
-    font-size: 22px;
-    font-weight: 300; }
+    font-size: 22px; }
 
 /**
  * Styling main content of the entire app
