@@ -6,14 +6,18 @@
      
     <div class="global-main-content">
       <div class="hero">
-      	<ol>
+      	<a href="#">
+      		<img src="{{ grandVideo->videoimage->imgBillboard }}" alt="">
+      	</a>
+      	<p>{{ grandVideo }}</p>
+      	<!-- <ol>
       		<li>
       			1- Look for all video with "GRAND DISPLAY" option on
       		</li>
       		<li>
       			2- Display the "billboard image" of the most recent of them
       		</li> 
-      	</ol>
+      	</ol> -->
           <!-- <img src="{{ asset('r/img/bg-video.png')}}" alt="">
           <div class="layer"></div>
           <div class="video-info-block">
