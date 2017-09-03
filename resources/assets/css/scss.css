@@ -2105,6 +2105,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   color: #798801;
   text-decoration: underline; }
 
+.link-red-on a {
+  color: #990033; }
+  .link-red-on a:hover {
+    text-decoration: underline; }
+
 .page-landing {
   margin-top: 100px; }
   .page-landing .section {

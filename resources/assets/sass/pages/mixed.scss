@@ -87,3 +87,15 @@
     }
   } 
 }
+
+
+
+
+.link-red-on { 
+  a{ 
+  	color: $color-darkred;
+    &:hover{
+      text-decoration: underline;
+    }
+  } 
+}

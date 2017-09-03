@@ -35,17 +35,11 @@
 	                  {{$tags}}
 	              </div>
 	            </div><!-- info-left -->
-              <div class="info-right">
+              <div class="info-right link-red-on">
               	<div class="info-likes">
-	              	@if($checkLike != null)
-	                  <a href="#" id="like-btn-top" class="butn-like" onclick="unlike()">
-	                    <span class="icon icon-thumbs-up"></span><span id="likes-count-top">{{$likes}}</span>
-	                  </a>
-	                @else
-	                  <a href="#" id="like-btn-top" class="butn-like" onclick="like()">
-	                    <span class="icon icon-thumbs-up"></span><span id="likes-count-top">{{$likes}}</span>
-	                  </a>
-	                @endif
+              		<span class="icon icon-thumbs-up"></span>&nbsp;
+              		{{$likes}} 
+	                <span>&nbsp; Likes</span>
 	              </div><!-- info-likes -->
 								
 								<button class="btn-link" onclick="addToList()">
@@ -60,15 +54,7 @@
                 <div class="actors-title">Actors</div>
                 <p class="actors-list" style="border:3px solid yellow;">Scarlett Johansson, Beat Takeshi Kitano, Michael Carmen Pitt,
                     Pilou Asbaek, Chin Han, Juliette Binoche</p>
-            </div> -->
-            <div class="butn-block"> 
-              <div class="share-block">
-                {{--<a href="" class="butn-share"><span>f</span>Share</a>--}}
-                <div class="fb-share-button" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/videos/{{$video->watchid}}">{{trans('messages.share')}}</a></div>
-
-                 
-              </div>
-            </div>
+            </div> --> 
           </div>
 
 
@@ -76,13 +62,15 @@
           <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                   @else
               <h1>SELECT PAYMENT PLAN PLS</h1>
-                  @endif
-
-
-
-
-          <img src="{{asset("r/img/bg-video.png")}}" class="img-responsive" alt=""> 
+                  @endif  
         </div>
+
+
+
+
+
+
+
         @if($video->video_type == 'episode')
         <div class="block-wrap">
           <div class="title">{{trans('messages.Episodes')}}</div>
@@ -134,6 +122,12 @@
           </div>
         </div>
         @endif
+
+
+
+
+
+
         <div class="hero-sub"> 
           <p>{{$video->description}}</p>
         </div>
@@ -173,8 +167,12 @@
         <div class="hero-sub">  
         	<div class="hero-sub_heading clearfix">
         		<h2 class="pull-left">{{trans('messages.reviews')}}</h2>
+        		  
         		<button type="button" id="btn-comment-rate-modal" class="btn btn-default pull-right" data-toggle="modal" data-target="#comment-rate-modal"> 
-        			@if($checkTrial)<span class="icon icon-pencil-edit-button"></span><a>{{trans('messages.Write_a_review')}}</a></button>@endif
+        			@if($checkTrial)<span class="icon icon-pencil-edit-button"></span><a>{{trans('messages.Write_a_review')}}</a>@endif
+      			</button>
+
+      			<div class="fb-share-button pull-right" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/videos/{{$video->watchid}}">{{trans('messages.share')}}</a></div>
         	</div>
 
         	<div class="row rating-stats">
