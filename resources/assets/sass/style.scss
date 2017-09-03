@@ -735,12 +735,6 @@ img{
 }
 
  
-
-.block-wrap{
-  margin: 0 0 75px 0;
-  overflow-x: hidden;
-}
- 
 .list-horizontal-wrapper{
   width: 3000px;
   overflow-x: hidden;
@@ -2282,7 +2276,8 @@ input:-webkit-autofill {
 @import 'libs/Google-play-menu';
 @import 'pages/mixed';
 @import 'pages/landing';
-@import 'pages/auth';
+@import 'pages/auth'; 
+@import 'pages/video-landing';
 @import 'pages/video-single';
 @import 'pages/terms-and-privacy';
 @import 'global-components/main-header';

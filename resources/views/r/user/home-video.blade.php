@@ -1,17 +1,17 @@
 @extends('r.layouts.user-search')
 @section('content')
     
-  <div class="container-fluid"> 
+  <div class="container-fluid page-video-landing"> 
 		@include('r.chunks._filter_video')
      
     <div class="global-main-content">
-      <div class="hero" style="background:lime; height: 310px; padding: 30px;">
+      <div class="hero">
       	<ol>
       		<li>
-      			Look for all video with "GRAND DISPLAY" option on
+      			1- Look for all video with "GRAND DISPLAY" option on
       		</li>
       		<li>
-      			Display the "billboard image" of the most recent of them
+      			2- Display the "billboard image" of the most recent of them
       		</li> 
       	</ol>
           <!-- <img src="{{ asset('r/img/bg-video.png')}}" alt="">
