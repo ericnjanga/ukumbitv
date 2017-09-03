@@ -50,7 +50,7 @@
                 	<a href="" class="title-link">My List</a>
                 </h2>  
                 @if($watch_lists->isEmpty())
-                    <div class="no-video">
+                    <div class="block-msg">
                         <div>{{trans('messages.empty_my_list')}}</div>
                         {{--<p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>--}}
                     </div>
@@ -76,10 +76,10 @@
             </div>
             <div class="block-wrap">
                 <h2 class="single-title-link">
-                	<a href="" class="title-link">Liked Videos</a>
+                	Liked Videos
                 </h2>  
                 
-                <div class="no-video">
+                <div class="block-msg">
                     <div>No liked videos yet</div>
                     <p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>
                 </div>

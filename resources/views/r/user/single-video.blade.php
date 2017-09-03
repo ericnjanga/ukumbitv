@@ -165,7 +165,11 @@
         			@endif
       			</button>
 
-      			<div class="fb-share-button pull-right" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/videos/{{$video->watchid}}">{{trans('messages.share')}}</a></div>
+      			<a href="#" class="btn btn-block btn-primary pull-right">
+      				<i class="fa fa-facebook-official" aria-hidden="true"></i> 
+      				{{trans('messages.share')}}</a>
+
+      			<!-- <div class="fb-share-button pull-right" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/videos/{{$video->watchid}}">{{trans('messages.share')}}</a></div> -->
         	</div>
 
         	<div class="row rating-stats">
