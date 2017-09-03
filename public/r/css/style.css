@@ -2354,11 +2354,6 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .global-main-content.utv-card .hero {
   position: relative; }
-  .global-main-content.utv-card .hero .info-block {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 30px; }
 
 .global-main-content.utv-card .hero-sub {
   margin-left: 40px;

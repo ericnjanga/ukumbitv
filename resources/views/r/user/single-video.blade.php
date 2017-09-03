@@ -18,17 +18,7 @@
       <div class="global-main-content utv-card">
         <div class="hero">
 
-
-        	@if($checkTrial)
-          <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                  @else
-              <h1>SELECT PAYMENT PLAN PLS</h1>
-                  @endif
-
-
-
-
-          <img src="{{asset("r/img/bg-video.png")}}" class="img-responsive" alt=""> 
+        	
           <div class="info-block">
             <h1 class="title">{{$video->title}}</h1>
             <div class="video-info-text">
@@ -65,6 +55,18 @@
               </div>
             </div>
           </div>
+
+
+        	@if($checkTrial)
+          <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  @else
+              <h1>SELECT PAYMENT PLAN PLS</h1>
+                  @endif
+
+
+
+
+          <img src="{{asset("r/img/bg-video.png")}}" class="img-responsive" alt=""> 
         </div>
         @if($video->video_type == 'episode')
         <div class="block-wrap">
