@@ -36,7 +36,7 @@
               <div class="butn-block">
                 <div class="play-block">
                   <a href="{{route('user.show-video', $video->watchid)}}" class="butn btn-cta1b-dark butn-play upper"><span class="icon icon-play-arrow"></span>{{trans('messages.Play')}}</a>
-                  <a href="" class="butn btn-cta1b-dark upper">{{trans('messages.Add_to_list')}}</a>
+                  <a href="#" class="butn btn-cta1b-dark upper" onclick="addToList()">{{trans('messages.Add_to_list')}}</a>
                 </div>
                 <div class="share-block">
                   {{--<a href="" class="butn-share"><span>f</span>Share</a>--}}
@@ -282,4 +282,36 @@
 @endsection
 
 @section('scripts')
+    <script>
+        function addToList() {
+
+            var fd = new FormData;
+
+            fd.append('_token', '{{csrf_token()}}');
+            fd.append('id', '{{$video->id}}');
+
+
+            $.ajax({
+                type: 'POST',
+                url: '{{route('user.add-to-playlist')}}',
+                contentType: false,
+                processData: false,
+                data: fd,
+                dataType: 'html',
+                success: function(data){
+
+                    var rep = JSON.parse(data);
+                    swal({
+                        title: rep.title,
+                        text: rep.text,
+                        type: rep.type,
+                        html: true
+                    });
+                },
+                error: function(data){
+                    swal("Hmm", "Something went wrong, try again pls", "error");
+                }
+            });
+        }
+    </script>
 @endsection
