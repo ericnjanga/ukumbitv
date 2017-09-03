@@ -89,9 +89,7 @@ class UserController extends Controller {
 
         //#testing
         if(!Auth::check()) {
-            return view('r.landing', [
-                'payment_plans' => PaymentPlan::all()
-            ]);
+            return view('r.landing')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
         }
 //        }else{
 //            return view('r.user.home-video');
