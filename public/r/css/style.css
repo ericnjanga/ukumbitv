@@ -2105,9 +2105,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   color: #798801;
   text-decoration: underline; }
 
-.link-red-on a {
+.link-red-on a, .link-red-on button, .link-red-on .btn {
   color: #990033; }
-  .link-red-on a:hover {
+  .link-red-on a:hover, .link-red-on button:hover, .link-red-on .btn:hover {
     text-decoration: underline; }
 
 .page-landing {
@@ -2236,6 +2236,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     flex: 1; }
   .page-video-single .video-info-main .info-right {
     text-align: right; }
+
+.page-video-single .fb-share-button {
+  margin-right: 10px; }
+  .page-video-single .fb-share-button input[type="submit"] {
+    height: 34px; }
 
 .page-tersm-and-privacy {
   margin-top: 100px; }
