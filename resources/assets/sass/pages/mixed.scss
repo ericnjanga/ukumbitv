@@ -42,18 +42,17 @@
  
 
 .fixed-info {
-	$color-active: #4285f4;
 	a {
 		color: #666;
 		&:hover{
-			color: $color-active;
+			color: $color-darkred;
 		}
 	}
 	li {
 		position: relative;
 		margin-bottom: 20px;
 		padding-left: 20px;
-		color: $color-active;
+		color: $color-darkred;
 		&.active {
 			&:after {
 				content: '';
@@ -62,7 +61,7 @@
 				left: 0;
 				width: 5px;
 				height: 100%;
-				background: $color-active;
+				background: $color-darkred;
 			}
 		}
 	}

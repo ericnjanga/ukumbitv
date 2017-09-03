@@ -1059,13 +1059,13 @@ img {
     .price-block .price-item:nth-child(1) .butn.active {
       color: #00f076; }
   .price-block .price-item:nth-child(2) {
-    background-color: #990033; }
+    background-color: #eeb33d; }
     .price-block .price-item:nth-child(2) .butn:hover {
       color: #00d7ff; }
     .price-block .price-item:nth-child(2) .butn.active {
       color: #00d7ff; }
   .price-block .price-item:nth-child(3) {
-    background-color: #eeb33d; }
+    background-color: #990033; }
     .price-block .price-item:nth-child(3) .butn:hover {
       color: #eeb33d; }
     .price-block .price-item:nth-child(3) .butn.active {
@@ -2150,13 +2150,13 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .fixed-info a {
   color: #666; }
   .fixed-info a:hover {
-    color: #4285f4; }
+    color: #990033; }
 
 .fixed-info li {
   position: relative;
   margin-bottom: 20px;
   padding-left: 20px;
-  color: #4285f4; }
+  color: #990033; }
   .fixed-info li.active:after {
     content: '';
     position: absolute;
@@ -2164,7 +2164,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     left: 0;
     width: 5px;
     height: 100%;
-    background: #4285f4; }
+    background: #990033; }
 
 .page-landing {
   margin-top: 100px; }
