@@ -796,8 +796,12 @@ return array(
   //TERMS OF SERVICE PAGE ...
   //----------------------------------- 
   'tos_title' => 'Terms of Service',
+
   'tos_section1' => '<p>UkumbiTV provides a subscription service that allows our members to access movies and TV shows streamed over the Internet to certain Internet-connected computers and other devices.</p>',
+
   'tos_section2' => '<p>The UkumbiTV service is provided to you by Mungo Digital Inc., a Canadian limited liability company. These Terms of Use govern your use of our service. As used in these Terms of Use, "UkumbiTV service", "our service" or "the service" means the service provided by UkumbiTV for discovering and watching UkumbiTV content, including all features and functionalities, recommendations and reviews, the website, and user interfaces, as well as all content and software associated with our service.</p>',
+
+  'tos_section3' => '<h2>Membership:</h2><p>Your UkumbiTV membership will continue month-to-month until terminated. To use the UkumbiTV service you must have Internet access and a modern web browser, and provide a current, valid, accepted method of payment, which you may update from time to time ("Payment Method"). Unless you cancel your membership before your monthly billing date, you authorize us to charge your next month&#146;/s membership fee to your Payment Method (see "Cancellation" below). You can find specific details regarding your UkumbiTV membership by visiting our website and clicking on the "Your Account" link available at the top of the pages of the UkumbiTV website under your profile name.</p>',
 
 
   //TERMS OF SERVICE PAGE ...

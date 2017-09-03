@@ -13,7 +13,9 @@
 
 		  <div class="col-md-7">
     		<h1>{{trans('messages.tos_title')}}</h1>
-		  	{{{trans('messages.tos_section1')}}}
+		  	{!!trans('messages.tos_section1')!!}
+		  	{!!trans('messages.tos_section2')!!}
+		  	{!!trans('messages.tos_section3')!!}
 		  </div>  
     </div><!-- container -->
   </div>
