@@ -165,11 +165,12 @@
         			@endif
       			</button>
 
-      			<a href="#" class="btn btn-primary pull-right fb-share-button ">
+      			<a class="btn btn-primary pull-right fb-share-button ui facebook button">
       				<i class="fa fa-facebook-official" aria-hidden="true"></i> 
       				{{trans('messages.share')}}</a>
 
-      			<!-- <div class="fb-share-button pull-right" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/videos/{{$video->watchid}}">{{trans('messages.share')}}</a></div> -->
+
+      			<!-- <div class="fb-share-button pull-right" data-href="{{URL::to('/')}}/video/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/video/{{$video->watchid}}">{{trans('messages.share')}}</a></div> -->
         	</div>
 
         	<div class="row rating-stats">
@@ -336,5 +337,13 @@
                 }
             });
         }
+    </script>
+    <script>
+        $(".ui.facebook.button").click(function() {
+            FB.ui({
+                method: 'share',
+                href: "{{URL::to('/')}}/video/{{$video->watchid}}"
+            }, function(response){});
+        })
     </script>
 @endsection
