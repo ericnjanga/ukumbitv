@@ -50,7 +50,7 @@
     </div>
    </div>
   </div> 
-  <div class="copyright">
+  <div class="copyright text-center">
    @2017 Ukumbi TV
   </div>  
 </footer> 
