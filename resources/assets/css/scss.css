@@ -2226,6 +2226,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   display: -ms-flexbox;
   display: flex;
   position: relative; }
+  .page-video-single .video-info-main .info-left, .page-video-single .video-info-main .info-right {
+    -ms-flex: 1;
+    flex: 1; }
   .page-video-single .video-info-main .info-right {
     text-align: right; }
 

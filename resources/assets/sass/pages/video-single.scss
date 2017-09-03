@@ -12,6 +12,9 @@
 	.video-info-main {
 		display: flex;
 		position: relative;
+		.info-left, .info-right {
+			flex: 1;
+		}
 		.info-right {
 			text-align: right;
 		}

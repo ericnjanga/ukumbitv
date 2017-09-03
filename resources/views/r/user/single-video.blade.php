@@ -17,7 +17,7 @@
   		
       <div class="global-main-content utv-card">
         <div class="hero">
-<i class="fa fa-bookmark" aria-hidden="true"></i>
+
 
           <div class="info-block hero-sub">
             <h1 class="title">{{$video->title}}</h1>
@@ -46,8 +46,14 @@
 	                    <span class="icon icon-thumbs-up"></span><span id="likes-count-top">{{$likes}}</span>
 	                  </a>
 	                @endif
-	              </div><!-- info-right -->
-              </div>
+	              </div><!-- info-likes -->
+								
+								<button class="btn-link" onclick="addToList()">
+									<i class="fa fa-bookmark" aria-hidden="true"></i> 
+									{{trans('messages.Add_to_list')}}
+								</button>
+	               
+              </div><!-- info-right -->
               <!-- <div class="series-text">1 Season, 12 Series</div> -->
             </div><!-- video-info-main -->
             <!-- <div class="actors-block">
@@ -55,10 +61,7 @@
                 <p class="actors-list" style="border:3px solid yellow;">Scarlett Johansson, Beat Takeshi Kitano, Michael Carmen Pitt,
                     Pilou Asbaek, Chin Han, Juliette Binoche</p>
             </div> -->
-            <div class="butn-block">
-              <div class="play-block"> 
-                <a href="#" class="butn btn-cta1b-dark upper" onclick="addToList()">{{trans('messages.Add_to_list')}}</a>
-              </div>
+            <div class="butn-block"> 
               <div class="share-block">
                 {{--<a href="" class="butn-share"><span>f</span>Share</a>--}}
                 <div class="fb-share-button" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/videos/{{$video->watchid}}">{{trans('messages.share')}}</a></div>
