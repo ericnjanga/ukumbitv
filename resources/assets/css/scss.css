@@ -137,6 +137,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+hr {
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #fff; }
+
 ol, ul {
   list-style: none; }
 
@@ -2368,9 +2372,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .global-main-content.utv-card hr {
   margin-left: 25px;
-  margin-right: 25px;
-  border-top: 1px solid #bbb;
-  border-bottom: 1px solid #fff; }
+  margin-right: 25px; }
 
 .global-main-content.utv-card h2 {
   text-transform: uppercase;
