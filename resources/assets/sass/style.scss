@@ -466,7 +466,8 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 h1, h2, h3,
 h4, h5, h6 {
   color: $color-h;
-  font-weight: 100;
+  // font-weight: 100;
+	font-weight: 400;
 	a {
   	color: $color-h;
   	font-size: inherit;

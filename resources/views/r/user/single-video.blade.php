@@ -169,7 +169,9 @@
         		<h2 class="pull-left">{{trans('messages.reviews')}}</h2>
         		  
         		<button type="button" id="btn-comment-rate-modal" class="btn btn-default pull-right" data-toggle="modal" data-target="#comment-rate-modal"> 
-        			@if($checkTrial)<span class="icon icon-pencil-edit-button"></span><a>{{trans('messages.Write_a_review')}}</a>@endif
+        			@if($checkTrial)<span class="icon icon-pencil-edit-button"></span> &nbsp; 
+        			{{trans('messages.Write_a_review')}}
+        			@endif
       			</button>
 
       			<div class="fb-share-button pull-right" data-href="{{URL::to('/')}}/videos/{{$video->watchid}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="{{URL::to('/')}}/videos/{{$video->watchid}}">{{trans('messages.share')}}</a></div>
@@ -183,7 +185,7 @@
               </span>
         		</div>
         		<div class="col-sm-4 text-center col-mid">
-        			<span class="icon icon-thumbs-down-hand"></span> 1020 total
+        			<i class="fa fa-user" aria-hidden="true"></i> 1020 total
         		</div>
         		<div class="col-sm-4">
         			<span class="txt-xxl pull-right">
