@@ -165,7 +165,7 @@
         			@endif
       			</button>
 
-      			<a href="#" class="btn btn-block btn-primary pull-right">
+      			<a href="#" class="btn btn-block btn-primary pull-rightfb-share-button ">
       				<i class="fa fa-facebook-official" aria-hidden="true"></i> 
       				{{trans('messages.share')}}</a>
 
