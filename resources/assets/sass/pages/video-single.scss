@@ -20,6 +20,14 @@
 		}
 	}
 
+	.txt-xxl{
+		.icon {
+			&:hover {
+				color: $color-darkred;
+			}
+		}
+	}
+
 	.fb-share-button {
 		margin-right: 10px;
 		button[type="submit"]{
@@ -30,6 +38,7 @@
 	#btn-comment-rate-modal {
 		background-color: $color-yellow-green;
 		color: #fff;
+		border: 1px solid $color-yellow-green;
 		&:hover {
 			color: $color-yellow-green;
 			background-color: #fff;

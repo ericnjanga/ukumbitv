@@ -6,11 +6,7 @@
     <div class="text-center">
     	<h1>{{trans('messages.auth_signin')}}</h1>
       <p>{{trans('messages.auth_signin_blurb')}}</p>
-
-      <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
-
-      
-      <!-- <a href="" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</a> -->
+      <a href="" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</a>
     </div>
 
 

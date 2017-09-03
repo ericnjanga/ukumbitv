@@ -2237,6 +2237,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .page-video-single .video-info-main .info-right {
     text-align: right; }
 
+.page-video-single .txt-xxl .icon:hover {
+  color: #990033; }
+
 .page-video-single .fb-share-button {
   margin-right: 10px; }
   .page-video-single .fb-share-button button[type="submit"] {
@@ -2244,7 +2247,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .page-video-single #btn-comment-rate-modal {
   background-color: #798801;
-  color: #fff; }
+  color: #fff;
+  border: 1px solid #798801; }
   .page-video-single #btn-comment-rate-modal:hover {
     color: #798801;
     background-color: #fff; }
@@ -2381,7 +2385,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .global-main-content.utv-card .icon-thumbs-up.btn-on,
 .global-main-content.utv-card .icon-thumbs-down-hand.btn-on {
-  color: #CE5043; }
+  color: #990033; }
 
 .global-main-content.utv-card .hero {
   position: relative; }
