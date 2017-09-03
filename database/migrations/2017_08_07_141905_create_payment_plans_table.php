@@ -21,6 +21,7 @@ class CreatePaymentPlansTable extends Migration
             $table->string('product2')->nullable();
             $table->string('product3')->nullable();
             $table->string('product4')->nullable();
+            $table->integer('flag')->nullable();
             $table->timestamps();
         });
     }
