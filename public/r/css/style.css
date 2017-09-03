@@ -2373,7 +2373,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .page-tersm-and-privacy h1, .page-tersm-and-privacy h2 {
     font-weight: 400; }
   .page-tersm-and-privacy h2 {
-    font-size: 22px; }
+    font-size: 22px;
+    margin-bottom: 10px; }
 
 /**
  * Styling main content of the entire app
