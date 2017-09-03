@@ -10,6 +10,7 @@ use App\PaymentPlan;
 use App\TrialPeriod;
 use App\UserHistory;
 use App\UserPayment;
+use App\UserPlaylist;
 use App\VideoActor;
 use App\VideoDirector;
 use App\Videoimage;
@@ -130,6 +131,8 @@ class UserController extends Controller {
                     }
             }
 
+
+
             return view('r.user.home-video')
                         ->with('page' , 'home')
                         ->with('subPage' , 'home')
@@ -141,6 +144,7 @@ class UserController extends Controller {
                         ->with('categories' , $categories)
                         ->with('videos_by_cat' , $lastVideos)
                         ->with('videos', $videos)
+                        ->with('payPlan', Auth::user()->paymentPlans[0]->flag)
                         ->with('trialCount', 3-count($histories));
         } else {
             return redirect()->route('installTheme');
@@ -289,6 +293,20 @@ class UserController extends Controller {
         return $random;
     }
 
+    public function myPlaylist()
+    {
+        $videosId = UserPlaylist::where('user_id', Auth::id())->get();
+        $ids = [];
+        foreach($videosId as $item) {
+            array_push($ids, $item->admin_video_id);
+        }
+        $videos = AdminVideo::with('videoimage', 'likes', 'category')->find($ids);
+
+
+        return view('r.user.movie-list')
+            ->with('videos', $videos);
+    }
+
     public function watchVideo($id)
     {
 
@@ -352,6 +370,7 @@ class UserController extends Controller {
             ->with('checkDisLike', $checkDisLike)
             ->with('tags', $tags)
             ->with('relatedVideos', $relatedVideos)
+            ->with('payPlan', Auth::user()->paymentPlans[0]->flag)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))
             ->with('directors', $directors);

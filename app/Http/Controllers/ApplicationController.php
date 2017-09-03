@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\PaymentPlan;
+use App\UserPaymentPlan;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Requests;
@@ -344,6 +346,13 @@ class ApplicationController extends Controller {
 
                         $user->is_verified = true;
                         $user->save();
+
+                        $payPlan = PaymentPlan::where('flag', 1)->first();
+                        $userPayPlan = new UserPaymentPlan();
+                        $userPayPlan->user_id = $user->id;
+                        $userPayPlan->payment_plan_id = $payPlan->id;
+                        $userPayPlan->expiry_date = Carbon::now()->addMonth(1);
+                        $userPayPlan->save();
 
                         \Auth::loginUsingId($request->id);
 
