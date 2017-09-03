@@ -389,7 +389,7 @@ class UserController extends Controller {
 
                 $result = [
                     'title' => 'Oops...',
-                    'text' => 'To add video you need to <a href="#">upgrade</a> the payment plan',
+                    'text' => 'To add video int your <a href="/my-playlist">playlist</a> you need to <a href="#">upgrade</a> the payment plan',
                     'type' => 'warning'
                 ];
 
@@ -403,7 +403,7 @@ class UserController extends Controller {
                         if($item->admin_video_id == $request->id) {
                             $result = [
                                 'title' => 'Hey!',
-                                'text' => 'Video already added',
+                                'text' => 'Video already added in your <a href="/my-playlist">playlist</a>',
                                 'type' => 'info'
                             ];
                             return response()->json($result);
@@ -416,14 +416,14 @@ class UserController extends Controller {
 
                     $result = [
                         'title' => 'Good job!',
-                        'text' => 'Video was added',
+                        'text' => 'Video was added in your <a href="/my-playlist">playlist</a>',
                         'type' => 'success'
                     ];
                     return response()->json($result);
                 } else {
                     $result = [
                         'title' => 'Oops...',
-                        'text' => 'You have already 5 vieos in your list! To add video you need to <a href="#">upgrade</a> the payment plan',
+                        'text' => 'You have already 5 videos in your <a href="/my-playlist">playlist</a>! To add video you need to <a href="#">upgrade</a> the payment plan',
                         'type' => 'error'
                     ];
                     return response()->json($result);
@@ -435,7 +435,7 @@ class UserController extends Controller {
                         if($item->admin_video_id == $request->id) {
                             $result = [
                                 'title' => 'Hey!',
-                                'text' => 'Video already added',
+                                'text' => 'Video already added in your <a href="/my-playlist">playlist</a>',
                                 'type' => 'info'
                             ];
                             return response()->json($result);
@@ -448,7 +448,7 @@ class UserController extends Controller {
 
                 $result = [
                     'title' => 'Good job!',
-                    'text' => 'Video was added',
+                    'text' => 'Video was added in your <a href="/my-playlist">playlist</a>',
                     'type' => 'success'
                 ];
                 return response()->json($result);
