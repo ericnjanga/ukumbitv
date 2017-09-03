@@ -2098,6 +2098,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .contact-text {
   color: #666; }
+  .contact-text a {
+    color: #666; }
 
 .link-yellow-green-hover a:hover {
   color: #798801;
