@@ -796,6 +796,9 @@ return array(
   //TERMS OF SERVICE PAGE ...
   //----------------------------------- 
   'tos_title' => 'Terms of Service',
+  'tos_section1' => '<p>UkumbiTV provides a subscription service that allows our members to access movies and TV shows streamed over the Internet to certain Internet-connected computers and other devices.</p>',
+  'tos_section2' => '<p>The UkumbiTV service is provided to you by Mungo Digital Inc., a Canadian limited liability company. These Terms of Use govern your use of our service. As used in these Terms of Use, "UkumbiTV service", "our service" or "the service" means the service provided by UkumbiTV for discovering and watching UkumbiTV content, including all features and functionalities, recommendations and reviews, the website, and user interfaces, as well as all content and software associated with our service.</p>',
+
 
   //TERMS OF SERVICE PAGE ...
   //----------------------------------- 
@@ -822,6 +825,9 @@ return array(
   //GENERAL WORDS ...
   //----------------------------------- 
 
+
+
+ 
 
 
 
