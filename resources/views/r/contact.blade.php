@@ -14,7 +14,7 @@
 			  <div class="col-md-9">
 	        <h1>{{trans('messages.contact')}}</h1>
 	        <div class="row">
-	        	<div class="col-md-5">
+	        	<div class="col-md-5 contact-text">
 	        		<p>Fill free to ask questions</p>
 	        		<p>We will do our best respond or contact you back within the next 24 hours:</p>
 

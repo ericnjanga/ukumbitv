@@ -2096,6 +2096,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     height: 100%;
     background: #990033; }
 
+.contact-text {
+  color: #666; }
+
 .link-yellow-green-hover a:hover {
   color: #798801;
   text-decoration: underline; }
