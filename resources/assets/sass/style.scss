@@ -2531,6 +2531,8 @@ input:-webkit-autofill {
 	hr {
 		margin-left: $gap1-2;
     margin-right: $gap1-2;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #fff;
 	}
 
 	h2 {

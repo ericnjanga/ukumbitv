@@ -16,7 +16,10 @@
         <div class="row">
         	<div class="col-md-6">
         		<p>Fill free to ask questions</p>
-        		<p>We will do our best respond or contact you back within the next 24 hours</p>
+        		<p>We will do our best respond or contact you back within the next 24 hours:</p>
+
+      			<hr>
+      			
         		<ul class="list-unstyled">
         			<li>
         				<span class="icon icon-envelope"></span>
@@ -30,7 +33,7 @@
 
       			<hr>
 
-      			<p>We are in social</p>
+      			<div>We are in social</div>
       			<ul class="social-list">
               <li><a href="https://www.facebook.com/ukumbitv/" target="_blank" class="icon icon-facebook"></a></li>
               <li><a href="https://twitter.com/ukumbi_tv" target="_blank" class="icon icon-twitter"></a></li>
