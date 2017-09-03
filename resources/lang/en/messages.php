@@ -793,9 +793,9 @@ return array(
 
 
 
-  //TERMS OF SERVICE PAGE ...
+  //TERMS OF USE PAGE ...
   //----------------------------------- 
-  'tos_title' => 'Terms of Service',
+  'tos_title' => 'Terms of Use',
 
   'tos_section1' => '<p>UkumbiTV provides a subscription service that allows our members to access movies and TV shows streamed over the Internet to certain Internet-connected computers and other devices.</p>',
 
@@ -818,7 +818,7 @@ return array(
   'tos_section10' => '',
 
 
-  //TERMS OF SERVICE PAGE ...
+  //TERMS OF USE PAGE ...
   //----------------------------------- 
 
 
