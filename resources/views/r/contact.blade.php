@@ -11,15 +11,15 @@
 		  	</ul> 
 		  </aside>
 
-		  <div class="col-md-7">
+		  <div class="col-md-9">
         <h1>{{trans('messages.contact')}}</h1>
         <div class="row">
-        	<div class="col-md-6">
+        	<div class="col-md-5">
         		<p>Fill free to ask questions</p>
         		<p>We will do our best respond or contact you back within the next 24 hours:</p>
 
       			<hr>
-      			
+
         		<ul class="list-unstyled">
         			<li>
         				<span class="icon icon-envelope"></span>
@@ -42,12 +42,8 @@
 
         	</div><!-- col1 -->
 
-        	<div class="col-md-6">
-        		<h2>Enter your message</h2>
+        	<div class="col-md-5 col-md-offset-1"> 
         		<form action="" method="">
-              <div class="form-group">
-                <textarea class="form-control" name="" id=""></textarea>
-              </div>
               <div class="form-group select-wrap">
                 <select class="form-control" name="">
                   <option selected>Select the appeal category</option>
@@ -62,6 +58,9 @@
 				        <label>Enter your e-mail <span>*</span></label>
 				        <input type="email" name="email" class="form-control" required>
 				      </div>
+              <div class="form-group">
+                <textarea class="form-control" name="" id="" placeholder="Enter your message"></textarea>
+              </div>
 				      <button type="submit" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</button>
  
             </form>

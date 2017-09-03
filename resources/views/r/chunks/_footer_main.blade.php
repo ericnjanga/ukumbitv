@@ -1,10 +1,9 @@
-<div class="footer-wrap">
- <footer>
-  <div class="footer-top">
+<footer class="main-footer">
+  <div class="footer-main">
    <div class="container">
     <div class="row">
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 offset-xl-1 footer-top-item">
-      <div class="list-title">{{l("About us")}}</div>
+      <h4>{{l("About us")}}</h4>
       <ul class="footer-list">
        <li><a href="{{route("user.about")}}">{{l("About Us")}}</a></li>
        <li><a href="{{route("user.jobs")}}">{{l("Jobs")}}</a></li>
@@ -12,7 +11,7 @@
       </ul>
      </div>
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 footer-top-item">
-      <div class="list-title">{{l("About The Project")}}</div>
+      <h4>{{l("About The Project")}}</h4>
       <ul class="footer-list">
        <li><a href="{{route("user.privacy_policy")}}">{{l("Privacy Policy")}}</a></li>
        <li><a href="{{route("user.terms-condition")}}">{{l("Terms of Use")}}</a></li>
@@ -21,7 +20,7 @@
       </ul>
      </div>
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 footer-top-item">
-      <div class="list-title">{{l("Devices")}}</div>
+      <h4>{{l("Devices")}}</h4>
       <ul class="footer-list">
        <li><a href="#">{{l("Mobile")}}</a></li>
        <li><a href="#">{{l("TV")}}</a></li>
@@ -34,7 +33,7 @@
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 offset-xl-1 footer-top-item">
       <div class="last-block">
        <div class="soc-block">
-        <div class="list-title">{{l('Get Social')}}</div>
+        <h4>{{l('Get Social')}}</h4>
         <ul class="social-list">
          <li><a href="https://www.facebook.com/ukumbitv/" target="_blank" class="icon icon-facebook"></a></li>
          <li><a href="https://twitter.com/ukumbi_tv" target="_blank" class="icon icon-twitter"></a></li>
@@ -50,17 +49,8 @@
      </div>
     </div>
    </div>
-  </div>
-  <div class="footer-bottom">
-   <div class="container">
-    <div class="row">
-     <div class="col">
-      <div class="footer-bottom-text">
-       @2017 Ukumbi TV
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
- </footer>
-</div>
+  </div> 
+  <div class="copyright">
+   @2017 Ukumbi TV
+  </div>  
+</footer> 

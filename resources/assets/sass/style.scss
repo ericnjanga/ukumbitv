@@ -373,58 +373,7 @@ ul {
     // border: 2px solid $color-primary;
   }
 }
-
-.main-header{
-  height: 60px;
-  background-color: #eeeeee;
-  margin: 0 0 30px 0;
-  .row {
-  	display: -webkit-flex;
-display: -moz-flex;
-display: -ms-flex;
-display: -o-flex;
-display: flex;
--webkit-align-items: center;
--moz-align-items: center;
--ms-align-items: center;
--o-align-items: center;
-align-items: center;
-  }
-  .frame-logo,
-  .frame-search,
-  .frame-useraccount {
-    float: left;
-  }
-  .frame-logo { 
-    width: 200px;
-    padding-left: 20px;
-    margin-left: 15px; 
-	  line-height: 0;  
-    padding-top: 10px;
-    padding-bottom: 10px;  
-	  img{
-	    width: 150px;
-	    height: auto; 
-		}
-  }
-  .frame-search { 
-    margin-left: 30px; 
-    width: calc(75% - 230px);
-  }
-  .frame-useraccount { 
-  	width: calc(25% - 30px);
-  }
-}
-
-// input{
-//   height: 45px;
-//   line-height: 44px;
-//   border: 1px solid #e0e0e0;
-//   background-color: #ffffff;
-//   padding: 0 10px;
-//   width: 100%;
-//   color: #616161;
-// }
+ 
 select{
   height: 45px;
   line-height: 44px;
@@ -724,45 +673,8 @@ img{
     //content: url("~@/assets/img/arrow.png");
   }
 }
+ 
 
-.footer-bottom{
-  background-color: #e0e0e0;
-
-}
-.footer-bottom-text{
-  text-align: center;
-  color: #616161;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 35px;
-  height: 35px;
-}
-.footer-top{
-  background-color: #eeeeee;
-  padding: 34px 0 47px;
-}
-.list-title{
-  color: #424242;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 18px;
-  margin: 0 0 15px 0;
-}
-.footer-list{
-  li{
-    margin: 0 0 4px 0;
-    a{
-      color: #757575;
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 14px;
-      &:hover{
-        color: $color-yellow-green;
-        text-decoration: underline;
-      }
-    }
-  }
-}
 .social-list{
   display: -webkit-box;
   display: -webkit-flex;
@@ -2428,6 +2340,8 @@ input:-webkit-autofill {
 @import 'pages/landing';
 @import 'pages/auth';
 @import 'pages/terms-and-privacy';
+@import 'global-components/main-header';
+@import 'global-components/main-footer';
 
 
 
