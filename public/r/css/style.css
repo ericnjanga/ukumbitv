@@ -570,19 +570,13 @@ img {
     top: 3px;
     right: 12px; }
 
-.social-list {
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 10px 0; }
-  .social-list li {
-    margin: 0 15px 10px 0; }
-    .social-list li a {
-      width: 30px;
-      height: 30px;
-      color: #798801;
-      font-size: 30px; }
-      .social-list li a:hover {
-        color: #424242; }
+.social-list li a {
+  width: 30px;
+  height: 30px;
+  color: #798801;
+  font-size: 30px; }
+  .social-list li a:hover {
+    color: #424242; }
 
 .last-block {
   display: -ms-flexbox;
@@ -2267,15 +2261,13 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     font-weight: 500;
     line-height: 18px;
     margin: 0 0 15px 0; }
-  .main-footer ul li {
-    margin: 0 0 4px 0; }
-    .main-footer ul li a {
-      color: #757575;
-      font-weight: 400;
-      line-height: 14px; }
-      .main-footer ul li a:hover {
-        color: #798801;
-        text-decoration: underline; }
+  .main-footer a {
+    color: #757575;
+    font-weight: 400;
+    line-height: 14px; }
+    .main-footer a:hover {
+      color: #798801;
+      text-decoration: underline; }
   .main-footer .footer-main {
     padding-top: 34px;
     padding-bottom: 34px;

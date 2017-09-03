@@ -34,7 +34,7 @@
 	      			<hr>
 
 	      			<div>We are in social</div>
-	      			<ul class="social-list">
+	      			<ul class="social-list list-inline">
 	              <li><a href="https://www.facebook.com/ukumbitv/" target="_blank" class="icon icon-facebook"></a></li>
 	              <li><a href="https://twitter.com/ukumbi_tv" target="_blank" class="icon icon-twitter"></a></li>
 	              <li><a href="https://www.instagram.com/ukumbitv" target="_blank" class="icon icon-instagram"></a></li>
@@ -59,7 +59,8 @@
 					        <input type="email" name="email" class="form-control" required>
 					      </div>
 	              <div class="form-group">
-	                <textarea class="form-control" name="" id="" placeholder="Enter your message"></textarea>
+					        <label>Enter your message <span>*</span></label>
+	                <textarea class="form-control" name="" id="" placeholder="Type your message here"></textarea>
 	              </div>
 					      <button type="submit" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</button>
 	 

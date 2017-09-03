@@ -31,15 +31,13 @@
       </ul>
      </div>
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 offset-xl-1 footer-top-item">
-      <div class="last-block">
-       <div class="soc-block">
+      <div class="last-block"> 
         <h4>{{l('Get Social')}}</h4>
-        <ul class="social-list">
+        <ul class="social-list list-inline">
          <li><a href="https://www.facebook.com/ukumbitv/" target="_blank" class="icon icon-facebook"></a></li>
          <li><a href="https://twitter.com/ukumbi_tv" target="_blank" class="icon icon-twitter"></a></li>
          <li><a href="https://www.instagram.com/ukumbitv" target="_blank" class="icon icon-instagram"></a></li>
-        </ul>
-       </div>
+        </ul> 
        <div class="lang-block">
         <span>{{l('Language')}}:</span>
         <a href="{{url('setlocale/fr')}}" @if(App::isLocale('fr'))class="active"@endif>{{l('French')}}</a>
