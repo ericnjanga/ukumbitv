@@ -129,7 +129,7 @@ class UserController extends Controller {
                     }
             }
 
-
+            $grandVideo = AdminVideo::with('videoimage', 'category', 'likes')->where('is_banner', 1)->first();
 
             return view('r.user.home-video')
                         ->with('page' , 'home')
@@ -141,6 +141,7 @@ class UserController extends Controller {
                         ->with('suggestions' , $suggestions)
                         ->with('categories' , $categories)
                         ->with('videos_by_cat' , $lastVideos)
+                        ->with('grandVideo' , $grandVideo)
                         ->with('videos', $videos)
                         ->with('payPlan', Auth::user()->paymentPlans[0]->flag)
                         ->with('trialCount', 3-count($histories));
