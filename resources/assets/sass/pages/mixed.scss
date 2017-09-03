@@ -93,7 +93,7 @@
 
 .link-red-on { 
   a, button, .btn{ 
-  	color: $color-darkred;
+  	color: $color-darkred!important;
     &:hover{
       text-decoration: underline;
     }

@@ -2106,7 +2106,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   text-decoration: underline; }
 
 .link-red-on a, .link-red-on button, .link-red-on .btn {
-  color: #990033; }
+  color: #990033 !important; }
   .link-red-on a:hover, .link-red-on button:hover, .link-red-on .btn:hover {
     text-decoration: underline; }
 
