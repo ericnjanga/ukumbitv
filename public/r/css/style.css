@@ -1049,7 +1049,7 @@ img {
       .price-block .price-item .butn.active:hover {
         cursor: default; }
   .price-block .price-item:nth-child(1) {
-    background-color: #00f076; }
+    background-color: #798801; }
     .price-block .price-item:nth-child(1) .price {
       color: #ffffff;
       font-size: 30px;
@@ -1059,7 +1059,7 @@ img {
     .price-block .price-item:nth-child(1) .butn.active {
       color: #00f076; }
   .price-block .price-item:nth-child(2) {
-    background-color: #00d7ff; }
+    background-color: #990033; }
     .price-block .price-item:nth-child(2) .butn:hover {
       color: #00d7ff; }
     .price-block .price-item:nth-child(2) .butn.active {
@@ -2125,6 +2125,12 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff; }
 
+.page-auth input[type="password"],
+.page-auth input[type="email"],
+.page-tersm-and-privacy input[type="password"],
+.page-tersm-and-privacy input[type="email"] {
+  height: 45px; }
+
 .page-auth,
 .page-tersm-and-privacy,
 .footer-wrap {
@@ -2182,7 +2188,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
       margin-left: 30px;
       margin-right: 30px; }
     .page-landing .txt-presentation3 .icon {
-      color: #eb2f3b;
+      color: #990033;
       line-height: 90px; }
   .page-landing p {
     line-height: 24px; }
@@ -2250,10 +2256,6 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .main-header {
   position: relative;
   z-index: 10; }
-
-.page-auth input[type="password"],
-.page-auth input[type="email"] {
-  height: 45px; }
 
 .page-auth button[type="submit"] {
   margin-bottom: 30px; }

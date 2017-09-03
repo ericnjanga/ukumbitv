@@ -204,6 +204,11 @@ main {
 input, textarea, keygen, select, button {
   font-family: 'Roboto', sans-serif; }
 
+hr {
+	border-top: 1px solid #bbb;
+  border-bottom: 1px solid #fff;
+}
+
 a {
   display: inline-block;
   text-decoration: none;

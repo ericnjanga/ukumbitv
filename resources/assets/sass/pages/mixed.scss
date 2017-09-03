@@ -6,6 +6,15 @@
 }
 
 
+.page-auth,
+.page-tersm-and-privacy {  
+  input[type="password"],
+  input[type="email"] {
+  	height: 45px;
+  }
+}
+
+
 
 .page-auth,
 .page-tersm-and-privacy,

@@ -14,6 +14,10 @@ $gap1-2: 25px;
 $gap2: 30px;
 $gap3: 40px;
 $color-primary: #eeb33d;
+$color-darkred: #990033;
+$color-yellow-green : #798801;
+
+
 
 
 
@@ -1339,7 +1343,7 @@ align-items: center;
     }
   }
   .price-item:nth-child(1){
-    background-color: #00f076;
+    background-color: $color-yellow-green; 
     .price{
       color: #ffffff;
       font-size: 30px;
@@ -1355,7 +1359,7 @@ align-items: center;
     }
   }
   .price-item:nth-child(2){
-    background-color: #00d7ff;
+    background-color: $color-darkred;
     .butn{
       &:hover{
         color: #00d7ff;
