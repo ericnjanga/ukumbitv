@@ -1,4 +1,4 @@
-<footer class="main-footer">
+<footer class="main-footer link-yellow-green-hover">
   <div class="footer-main">
    <div class="container">
     <div class="row">

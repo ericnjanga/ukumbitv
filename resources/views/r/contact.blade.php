@@ -20,7 +20,7 @@
 
 	      			<hr>
 
-	        		<ul class="list-unstyled">
+	        		<ul class="list-unstyled link-yellow-green-hover">
 	        			<li>
 	        				<span class="icon icon-envelope"></span>
 	        				<a href="mailto:info@gmail.com">info@gmail.com</a>

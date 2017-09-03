@@ -68,3 +68,15 @@
  //  top: 140px;
  //  left: 20px;
 }
+
+
+
+
+.link-yellow-green-hover { 
+  a{ 
+    &:hover{
+      color: $color-yellow-green;
+      text-decoration: underline;
+    }
+  } 
+}

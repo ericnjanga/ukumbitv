@@ -571,8 +571,6 @@ img {
     right: 12px; }
 
 .social-list li a {
-  width: 30px;
-  height: 30px;
   color: #798801;
   font-size: 30px; }
   .social-list li a:hover {
@@ -2098,6 +2096,10 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     height: 100%;
     background: #990033; }
 
+.link-yellow-green-hover a:hover {
+  color: #798801;
+  text-decoration: underline; }
+
 .page-landing {
   margin-top: 100px; }
   .page-landing .section {
@@ -2263,11 +2265,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     margin: 0 0 15px 0; }
   .main-footer a {
     color: #757575;
-    font-weight: 400;
-    line-height: 14px; }
-    .main-footer a:hover {
-      color: #798801;
-      text-decoration: underline; }
+    font-weight: 400; }
   .main-footer .footer-main {
     padding-top: 34px;
     padding-bottom: 34px;
