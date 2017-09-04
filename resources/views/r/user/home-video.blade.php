@@ -6,7 +6,7 @@
      
     <div class="global-main-content">
       <div class="hero">
-      	<img src="{{ $grandVideo->videoimage->imgHero }}" alt="{{ $grandVideo->title }}">
+      	<!-- <img src="{{ $grandVideo->videoimage->imgHero }}" alt="{{ $grandVideo->title }}"> -->
       	<p>{{ $grandVideo }}</p>
       	<ul class="fast-links list-inline">
       		<li>
