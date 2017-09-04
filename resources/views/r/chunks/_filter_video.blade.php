@@ -18,7 +18,8 @@
 		</li>
 		<li id="animations">
 			<a href="#">
-				<span class="menu-entry-icon books"></span>
+				<i class="fa fa-star menu-entry-icon books" aria-hidden="true"></i>
+				<!-- <span class="menu-entry-icon books"></span> -->
 				<span class="menu-entry-text">Animations</span>
 			</a>
 			<!-- <ul class="sub-menu">
