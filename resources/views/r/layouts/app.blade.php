@@ -42,7 +42,7 @@
 
 
 
-      
+
     @yield('layout')
 
 </body>
@@ -62,7 +62,10 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
 
+  <!--
+  ... Will reactivate plugin another time ...
   <script type="text/javascript" src="{{asset('r/js/libs/Google-play-menu.js')}}"></script>
+-->
   <script type="text/javascript" src="{{asset('r/js/libs/jQuery.YoutubeBackground.js')}}"></script>
 
   <script type="text/javascript" src="{{asset('r/js/libs/anchor-smooth-scroll.js')}}"></script>
