@@ -22,8 +22,10 @@ class Locale
      */
     public function handle($request, Closure $next)
     {
-        $videoCount = $this->videoCount();
-        View::share('videoCount', $videoCount);
+        if(Auth::check()) {
+            $videoCount = $this->videoCount();
+            View::share('videoCount', $videoCount);
+        }
         $raw_locale = Cookie::get('locale');     # if user was on website
         //dd($raw_locale);
         if (in_array($raw_locale, Config::get('app.locales'))) {  # check locales
