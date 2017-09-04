@@ -797,7 +797,7 @@ img{
       font-size: 12px;
       font-weight: 400;
       .icon{
-        color: #49ed6f;
+        color: $color-yellow-green;
         font-size: 16px;
         margin: 0 9px 0 0;
       }
@@ -2380,13 +2380,7 @@ input:-webkit-autofill {
 		color: $color-darkred;
 	} 
 	.hero{
-  	position: relative; 
-		// .info-block{
-		// 	position: absolute;
-	 //    bottom: 0;
-	 //    width: 100%;
-	 //    padding: $gap2; 
-		// }//info-block
+  	position: relative;  
 	}//hero
 	.hero-sub { 
 		margin-left: $gap3;

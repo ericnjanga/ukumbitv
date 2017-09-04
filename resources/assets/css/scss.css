@@ -660,7 +660,7 @@ img {
       font-size: 12px;
       font-weight: 400; }
       .video-item .video-info .butn-like .icon {
-        color: #49ed6f;
+        color: #798801;
         font-size: 16px;
         margin: 0 9px 0 0; }
 
@@ -2170,6 +2170,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .page-video-landing .hero, .page-video-landing .block-wrap {
   margin-bottom: 75px; }
+
+.page-video-landing h2 {
+  margin-bottom: 10px; }
 
 .page-video-landing .hero {
   position: relative;

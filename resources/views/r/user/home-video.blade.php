@@ -25,20 +25,16 @@
       </div><!-- hero -->
 
       <div class="block-wrap">
-          <h2 class="single-title-link">
-          	<a href="" class="title-link">New Videos</a>
-          </h2> 
-            <div class="list-horizontal-wrapper">
-                @foreach($recent_videos as $video)
-                    @include('r.chunks._video_item')
-                @endforeach 
-            </div> 
+        <h2>New Videos</h2> 
+        <div class="list-horizontal-wrapper">
+            @foreach($recent_videos as $video)
+                @include('r.chunks._video_item')
+            @endforeach 
+        </div> 
       </div>
 
       <div class="block-wrap">
-          <h2 class="single-title-link">
-          	<a href="" class="title-link">My List</a>
-          </h2>  
+          <h2>My List</h2>  
           @if($watch_lists->isEmpty())
               <div class="block-msg">
                   <div>{{trans('messages.empty_my_list')}}</div>
@@ -55,9 +51,7 @@
       </div>
 
       <div class="block-wrap">
-          <h2 class="single-title-link">
-          	<a href="" class="title-link">Popular Videos</a>
-          </h2>  
+          <h2>Popular Videos</h2>  
           
           <div class="list-horizontal-wrapper">
               @foreach($trendings as $video)
@@ -67,9 +61,7 @@
       </div>
 
       <div class="block-wrap">
-          <h2 class="single-title-link">
-          	Liked Videos
-          </h2>  
+          <h2>Liked Videos</h2>  
           
           <div class="block-msg">
               <div>No liked videos yet</div>
