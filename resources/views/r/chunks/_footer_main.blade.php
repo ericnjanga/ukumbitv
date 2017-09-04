@@ -15,19 +15,18 @@
       <ul class="footer-list">
        <li><a href="{{route("user.privacy_policy")}}">{{l("Privacy Policy")}}</a></li>
        <li><a href="{{route("user.terms-condition")}}">{{l("Terms of Use")}}</a></li>
-       <li><a href="{{route("user.advertising")}}">{{l("Advertising")}}</a></li>
+       <!-- <li><a href="{{route("user.advertising")}}">{{l("Advertising")}}</a></li> -->
        <li><a href="{{route("user.help-center")}}">{{l("Help center")}}</a></li>
       </ul>
      </div>
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 footer-top-item">
       <h4>{{l("Devices")}}</h4>
       <ul class="footer-list">
-       <li><a href="#">{{l("Mobile")}}</a></li>
-       <li><a href="#">{{l("TV")}}</a></li>
-       <li><a href="#">{{l("Media players")}}</a></li>
-       <li><a href="#">{{l("PC")}}</a></li>
+       <!-- <li><a href="#">{{l("Mobile")}}</a></li> -->
        <li><a href="#">{{l("Android")}}</a></li>
        <li><a href="#">{{l("Apple")}}</a></li>
+       <li><a href="#">{{l("TV")}}</a></li> 
+       <li><a href="#">{{l("PC")}}</a></li>
       </ul>
      </div>
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 offset-xl-1 footer-top-item">
