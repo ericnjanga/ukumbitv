@@ -73,50 +73,17 @@
                       <!-- <div class="price upper">{{$payment_plan->price == '0'?'Free':'$ '.$payment_plan->price}}</div> -->
                       
 											@if($payment_plan->price == '0') 
-												<div class="price upper">{{trans('messages.free')}}</div>
+												<!-- <div class="price upper">{{trans('messages.free')}}</div> -->
+												<a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a> 
 											@else 
-												<div class="price upper">{{$payment_plan->price}}/<small>{{trans('messages.month')}}</small></div>
+												<div class="price upper">{{$payment_plan->price}}<small>/{{trans('messages.month')}}</small></div>
 											@endif 
                     </div>
                 @endforeach
 
-
-                {{--<div class="price-item">--}}
-                {{--<div class="price-title">Silver</div>--}}
-                {{--<div class="count-text">30 videos</div>--}}
-                {{--<ul class="includ-list">--}}
-                {{--<li>advantage 1</li>--}}
-                {{--<li>another</li>--}}
-                {{--<li>advantage 1</li>--}}
-                {{--</ul>--}}
-                {{--<div class="price"><span>$</span> 3</div>--}}
-                {{--</div>--}}
-                {{--<div class="price-item">--}}
-                {{--<div class="price-title">Gold</div>--}}
-                {{--<div class="count-text">100 videos</div>--}}
-                {{--<ul class="includ-list">--}}
-                {{--<li>advantage 1</li>--}}
-                {{--<li>another</li>--}}
-                {{--<li>advantage 1</li>--}}
-                {{--<li>another</li>--}}
-                {{--<li>advantage 1</li>--}}
-                {{--</ul>--}}
-                {{--<div class="price"><span>$</span> 5</div>--}}
-                {{--</div>--}}
-                {{--<div class="price-item">--}}
-                {{--<div class="price-title">Platinum</div>--}}
-                {{--<div class="count-text">150 videos</div>--}}
-                {{--<ul class="includ-list">--}}
-                {{--<li>advantage 1</li>--}}
-                {{--<li>another</li>--}}
-                {{--<li>advantage 1</li>--}}
-                {{--<li>another</li>--}}
-                {{--<li>advantage 1</li>--}}
-                {{--</ul>--}}
-                {{--<div class="price"><span>$</span> 7</div>--}}
-                {{--</div>--}}
+ 
             </div>
-            <a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a> 
+            
           </div>
         </div>
       </div>
