@@ -75,7 +75,7 @@
 											@if($payment_plan->price == '0') 
 												<div class="price upper">{{trans('messages.free')}}</div>
 											@else 
-												<div class="price upper">{{$payment_plan->price}}/{{trans('messages.month')}}</div>
+												<div class="price upper">{{$payment_plan->price}}/<small>{{trans('messages.month')}}</small></div>
 											@endif 
                     </div>
                 @endforeach

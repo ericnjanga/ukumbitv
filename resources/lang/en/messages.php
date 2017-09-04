@@ -157,6 +157,7 @@ return array(
 	'from'	=>	'From',
 	'to'	=>	'To',
 	'date' => 'Date',
+	'free' => 'free',
 
 	'message' => 'Message',
 	'upload_image' => 'Upload Image',

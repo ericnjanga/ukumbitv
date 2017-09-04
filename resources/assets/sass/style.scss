@@ -1188,6 +1188,9 @@ align-items: center;
       text-align: center;
       height: 40px;
       line-height: 40px;
+      small {
+      	text-transform: none;
+      }
       span{
         font-size: 24px;
         font-weight: 300;
