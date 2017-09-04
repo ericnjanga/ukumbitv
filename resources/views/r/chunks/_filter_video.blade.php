@@ -5,7 +5,8 @@
 	<ul class="play-menu">
 		<li id="movies">
 			<a href="#">
-				<span class="menu-entry-icon movies"></span>
+				<i class="fa fa-film menu-entry-icon movies" aria-hidden="true"></i>
+				<!-- <span class="menu-entry-icon movies"></span> -->
 				<span class="menu-entry-text">Movies</span>
 			</a>
 			<!-- <ul class="sub-menu">
