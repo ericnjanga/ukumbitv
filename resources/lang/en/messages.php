@@ -137,10 +137,7 @@ return array(
 	'remove'	=> 	'Remove',
 	'change'	=> 	'Change',
 	'upgrade' => 'Upgrade',
-	'submit'	=>	'Submit',
-	'join_for_free_week'	=>	'Join / first week is free',
-	'you_get_per_month'	=>	'For $3 a month, you get',
-	'first_week_free'	=>	'The first week is free',
+	'submit'	=>	'Submit', 
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',
@@ -541,6 +538,7 @@ return array(
 	
 	'ratings' => 'Ratings',
 	'reviews' => 'Reviews',
+	'month' => 'month',
 
 	'default_image' => 'Default image',
 	'other_image1' => 'Other Image 1',

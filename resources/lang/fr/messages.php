@@ -137,10 +137,7 @@ return array(
 	'remove'	=> 	'Remove',
 	'change'	=> 	'Change',
 	'upgrade' => 'Upgrade',
-	'submit' 						=> 'Soumettre',
-	'join_for_free_week'	=>	'Abonnement / première semaine gratuite',
-	'you_get_per_month'		=>	'Pour 3$ par mois, vous obtenez',
-	'first_week_free'		=>	'Le première semaine est gratuite',
+	'submit' 						=> 'Soumettre', 
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',

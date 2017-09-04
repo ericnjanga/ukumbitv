@@ -61,16 +61,22 @@
             <div class="price-block">
                 @foreach($payment_plans as $payment_plan)
                     <div class="price-item">
-                        <div class="price-title">{{$payment_plan->name}}</div>
-                        <div class="count-text">{{$payment_plan->description}}</div>
-                        <ul class="includ-list">
-                            @php($i=1)
-                            @while(isset($payment_plan->{'product'.$i}))
-                                <li>{!! $payment_plan->{'product'.$i} !!}</li>
-                                @php($i++)
-                            @endwhile
-                        </ul>
-                        <div class="price upper">{{$payment_plan->price == '0'?'Free':'$ '.$payment_plan->price}}</div>
+                      <div class="price-title">{{$payment_plan->name}}</div>
+                      <div class="count-text">{{$payment_plan->description}}</div>
+                      <ul class="includ-list">
+                          @php($i=1)
+                          @while(isset($payment_plan->{'product'.$i}))
+                              <li>{!! $payment_plan->{'product'.$i} !!}</li>
+                              @php($i++)
+                          @endwhile
+                      </ul>
+                      <div class="price upper">{{$payment_plan->price == '0'?'Free':'$ '.$payment_plan->price}}</div>
+                      
+											@if($payment_plan->price == '0'){
+												<div class="price upper">{{trans('messages.free')}}</div>
+											}else{
+												<div class="price upper">{{$payment_plan->price}}/{{trans('messages.month')}}</div>
+											} 
                     </div>
                 @endforeach
 
