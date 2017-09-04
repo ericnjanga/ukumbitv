@@ -6,46 +6,22 @@
      
     <div class="global-main-content">
       <div class="hero">
-      	<a href="#">
-      		<img src="{{ $grandVideo->videoimage->imgBillboard }}" alt="">
-      	</a>
+      	<img src="{{ $grandVideo->videoimage->imgBillboard }}" alt="{{ $grandVideo->title }}">
       	<p>{{ $grandVideo }}</p>
-      	<!-- <ol>
+      	<ul class="fast-links list-inline">
       		<li>
-      			1- Look for all video with "GRAND DISPLAY" option on
+      			<a href="{{ $grandVideo->video }}" class="btn btn-block btn-cta1b">
+      				<i class="fa fa-play" aria-hidden="true"></i> 
+      				{{trans('messages.watch_video')}}
+      			</a>
       		</li>
       		<li>
-      			2- Display the "billboard image" of the most recent of them
-      		</li> 
-      	</ol> -->
-          <!-- <img src="{{ asset('r/img/bg-video.png')}}" alt="">
-          <div class="layer"></div>
-          <div class="video-info-block">
-              <div class="video-title">Ghost in the Shell</div>
-              <div class="video-info-text">
-                  <span class="age">16+</span>
-                  <span class="date">March 2017</span>
-                  <span class="genre">Drama, Comedy, Triller</span>
-                  <div class="series-text">1 Season, 12 Series</div>
-              </div>
-              <div class="actors-block">
-                  <div class="actors-title">Actors</div>
-                  <p class="actors-list">Scarlett Johansson, Beat Takeshi Kitano, Michael Carmen Pitt,
-                      Pilou Asbaek, Chin Han, Juliette Binoche</p>
-              </div>
-              <div class="butn-block">
-                  <div class="play-block">
-                      <a href="https://www.youtube.com/embed/Rg6awBglzGU?autoplay=1"
-                         class="butn btn-cta1b-dark butn-play upper cb-video"><span
-                                  class="icon icon-play-arrow"></span>Play</a>
-                      <a href="" class="butn btn-cta1b-dark upper">Add to list</a>
-                  </div>
-                  <div class="share-block">
-                      <a href="" class="butn-share"><span>f</span>Share</a>
-                      <a href="" class="butn-like"><span class="icon icon-thumbs-up"></span>158</a>
-                  </div>
-              </div>
-          </div> -->
+      			<a href="#" class="btn btn-block btn-cta1b">
+      				<i class="fa fa-plus" aria-hidden="true"></i> 
+      				{{trans('messages.Add_to_list')}}
+      			</a>
+      		</li>
+      	</ul>
       </div><!-- hero -->
 
       <div class="block-wrap">

@@ -2132,7 +2132,13 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   margin-bottom: 75px; }
 
 .page-video-landing .hero {
+  position: relative;
   min-height: 310px; }
+  .page-video-landing .hero .fast-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px; }
 
 .page-video-landing .block-wrap {
   overflow-x: hidden; }
