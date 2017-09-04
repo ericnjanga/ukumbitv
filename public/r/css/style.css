@@ -1924,9 +1924,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAA0UlEQVRIx+XWUQ2DMBCA4UpAAhIqAQmTgIRJqIRKqAQkIAEJSKiDfy+3rFm6wpWyJeySvnC0H1euBAOYbwzzE6gUQAcEIPKKCbCFOToIsAkQAAd4uRaBWytokQVtpspnrj8EAaNUMn7I95L3R6EJWDfeX/YeLTQD0wbkyCxQam9P+3A5yF0OuhcmRGBtBQ2FCXPS7lEBDVVQclDdTrAeejusoQbqNFAClh7QZg+ssqI9W2gOQdIUe7qwDpJtWhRdp4aifPe0oYZq4x+g6/1unTkek/bCyLhDiUMAAAAASUVORK5CYII=");
   background-color: #444; }
 
-.GP-menu .play-menu li .menu-entry-icon.movies {
+.GP-menu .play-menu li .menu-entry-icon {
   font-size: 23px;
-  color: #fff;
+  color: #fff; }
+
+.GP-menu .play-menu li .menu-entry-icon.movies {
   background-color: #990033; }
 
 .GP-menu .play-menu li .menu-entry-icon.music {
