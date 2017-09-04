@@ -457,6 +457,7 @@ Route::get('search-data' , 'UserController@searchData')->name('search-data');
 // Categories and single video 
 
 Route::get('categories', 'UserController@all_categories')->name('user.categories');
+Route::get('videos/{id}', 'UserController@videosByType')->name('user.videotype');
 
 Route::get('category/{id}', 'UserController@getVideosByCategory');
 

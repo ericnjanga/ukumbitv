@@ -4,7 +4,7 @@
 	</div>
 	<ul class="play-menu">
 		<li id="movies">
-			<a href="#">
+			<a href="{{route('user.videotype', 'movie')}}">
 				<i class="fa fa-film menu-entry-icon movies" aria-hidden="true"></i>
 				<!-- <span class="menu-entry-icon movies"></span> -->
 				<span class="menu-entry-text">Movies</span>
