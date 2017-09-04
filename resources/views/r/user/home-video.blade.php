@@ -7,10 +7,10 @@
     <div class="global-main-content">
       <div class="hero">
       	<img src="{{ $grandVideo->videoimage->imgBillboard }}" alt="{{ $grandVideo->title }}">
-      	<p>{{ $grandVideo }}</p>
+      	<!-- <p>{{ $grandVideo }}</p> -->
       	<ul class="fast-links list-inline">
       		<li>
-      			<a href="{{ $grandVideo->video }}" class="btn btn-block btn-cta1b">
+      			<a href="{{route('user.singleVideo', $grandVideo->watchid)}}" class="btn btn-block btn-cta1b">
       				<i class="fa fa-play" aria-hidden="true"></i> 
       				{{trans('messages.watch_video')}}
       			</a>
