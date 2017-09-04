@@ -2132,9 +2132,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   margin-bottom: 75px; }
 
 .page-video-landing .hero {
-  min-height: 310px;
-  padding: 30px;
-  background: lime; }
+  min-height: 310px; }
 
 .page-video-landing .block-wrap {
   overflow-x: hidden; }
