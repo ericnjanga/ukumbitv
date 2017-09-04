@@ -919,7 +919,8 @@ img {
       height: 40px;
       line-height: 40px; }
       .price-block .price-item .price small {
-        text-transform: none; }
+        text-transform: none;
+        font-size: 20px; }
       .price-block .price-item .price span {
         font-size: 24px;
         font-weight: 300; }
@@ -2061,6 +2062,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   color: #990033 !important; }
   .link-red-on a:hover, .link-red-on button:hover, .link-red-on .btn:hover {
     text-decoration: underline; }
+
+.btn-search {
+  background-color: #990033; }
+  .btn-search:hover {
+    background-color: #950032; }
 
 .page-landing {
   margin-top: 100px; }

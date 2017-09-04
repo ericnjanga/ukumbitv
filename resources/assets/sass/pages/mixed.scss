@@ -99,3 +99,11 @@
     }
   } 
 }
+
+
+.btn-search {
+	background-color: $color-darkred;
+	&:hover{
+		background-color: darken($color-darkred, 0.7);
+	}
+}

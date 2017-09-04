@@ -8,22 +8,11 @@
         </a>
       </div>
       <div id="frame-search" class="frame-search">
-        <form action="{{route('search-all')}}" method="post">
-          <!-- <div class="input-wrap search-wrap">
-              <input type="search" name="key" id="search-input" class="search-input" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false" onclick="getSearchData()">
-              <div class="search-list-block">
-                <ul class="search-list">
-                </ul>
-              </div>
-              <button id="butn-search" type="submit" class="butn-search">
-                  <span class="icon icon-magnifying-glass"></span>
-              </button>
-            </div> -->
-
+        <form action="{{route('search-all')}}" method="post">  
           <div class="input-group">
 			      <input name="key" type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false">
 			      <span class="input-group-btn">
-			        <button class="btn btn-default" type="submit">Go!</button>
+			        <button class="btn btn-search btn-default" type="submit">{{trans('messages.search')}}!</button>
 			      </span>
 			    </div><!-- /input-group -->
         </form> 
