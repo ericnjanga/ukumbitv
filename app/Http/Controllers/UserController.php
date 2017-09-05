@@ -66,7 +66,7 @@ class UserController extends Controller {
         $this->UserAPI = $API;
         
 //        $this->middleware('auth', ['except' => ['watchVideo', 'index','single_video','all_categories' ,'category_videos' , 'sub_category_videos' , 'contact','trending']]);
-        $this->middleware('auth', ['except' => ['index','contact']]);
+        $this->middleware('auth', ['except' => ['index','contact', 'showVideo']]);
     }
 
 
@@ -318,13 +318,19 @@ class UserController extends Controller {
 
         $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
 
-        $flag = Auth::user()->paymentPlans[0]->flag;
-
         $checkTrial = true;
-
-        if($flag == 1) {
-            $checkTrial = $this->checkTrial($video->id);
+        $flag = 0;
+        if(Auth::check()) {
+            $flag = Auth::user()->paymentPlans[0]->flag;
+            if($flag == 1) {
+                $checkTrial = $this->checkTrial($video->id);
+            }
+        } else {
+            return view('r.landing')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
         }
+
+
+
 
 
         $relatedVideos = $this->getRelatedVideos($video);
