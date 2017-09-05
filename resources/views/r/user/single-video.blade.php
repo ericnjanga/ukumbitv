@@ -342,10 +342,7 @@
         $(".ui.facebook.button").click(function() {
             FB.ui({
                 method: 'share',
-                href: "{{URL::to('/')}}/video/{{$video->watchid}}",
-                picture: '{{$video->videoimage->imgPreview3}}',
-                caption: 'UkumbiTV',
-                description: '{{$video->title}}'
+                href: "{{URL::to('/')}}/video/{{$video->watchid}}"
             }, function(response){});
         })
     </script>
