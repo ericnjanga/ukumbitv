@@ -80,6 +80,28 @@ class UserController extends Controller {
         return view('r.user.packages');
     }
 
+    public function checkVideoPlays(Request $request)
+    {
+        $video = AdminVideo::where('watchid', $request->id)->first();
+        if(!$video) {
+            return response()->json(['status' => 'error no video'], 500);
+        }
+
+        $video->watch_count++;
+        $video->save();
+
+        if (Auth::check()) {
+            $hist = new UserHistory();
+            $hist->user_id = Auth::id();
+            $hist->admin_video_id = $video->id;
+            $hist->status = 0;
+            $hist->save();
+
+            return response()->json(['status' => 'ok'], 200);
+        } else {
+            return response()->json(['status' => 'error'], 500);
+        }
+    }
     /**
      * Show the user dashboard.
      *
