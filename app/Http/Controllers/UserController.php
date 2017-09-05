@@ -316,7 +316,7 @@ class UserController extends Controller {
     public function watchVideo($id)
     {
 
-        $video = AdminVideo::with('comments.user')->where('watchid', $id)->firstOrFail();
+        $video = AdminVideo::with('comments.user', 'videoimage')->where('watchid', $id)->firstOrFail();
 
         $checkTrial = true;
         $flag = 0;
@@ -326,7 +326,8 @@ class UserController extends Controller {
                 $checkTrial = $this->checkTrial($video->id);
             }
         } else {
-            return view('r.landing')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
+            return view('r.landing')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get())
+                ->with('video', $video);
         }
 
 
