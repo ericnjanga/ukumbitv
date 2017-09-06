@@ -309,6 +309,7 @@
 
 @section('scripts')
     <script>
+        console.log('{{$checkTrial}}');
         function addToList() {
 
             var fd = new FormData;
@@ -353,7 +354,7 @@
       var vimeo_iframe = $('iframe');
       var player = new Vimeo.Player(vimeo_iframe);
       var vimeo_flag = false;
-      debugger;
+//      debugger;
       player.on('play', function() {
 
         console.log('played the video');
