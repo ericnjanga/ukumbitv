@@ -90,6 +90,23 @@ class UserController extends Controller {
         $video->watch_count++;
         $video->save();
 
+        $checkTrialRecord = false;
+        $trials = TrialPeriod::where('user_id', Auth::id())->get();
+        if(count($trials) < 3) {
+            foreach ($trials as $trial) {
+                if ($trial->admin_video_id == $video->id) {
+                    $checkTrialRecord = true;
+                }
+            }
+
+            if(!$checkTrialRecord) {
+                $trialRecord = new TrialPeriod();
+                $trialRecord->user_id = Auth::id();
+                $trialRecord->admin_video_id = $video->id;
+                $trialRecord->save();
+            }
+        }
+
         if (Auth::check()) {
             $hist = new UserHistory();
             $hist->user_id = Auth::id();
