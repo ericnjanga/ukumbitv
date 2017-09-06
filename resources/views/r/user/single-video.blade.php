@@ -50,11 +50,11 @@
 
 
         	@if($checkTrial)
-          <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
           <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/232604649?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-          <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+          <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                   @else
-              <h1>SELECT PAYMENT PLAN PLS</h1>
+              <iframe class="iframe-video" src="https://player.vimeo.com/video/" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                   @endif
         </div>
 
@@ -354,9 +354,15 @@
       var vimeo_iframe = $('iframe');
       var player = new Vimeo.Player(vimeo_iframe);
       var vimeo_flag = false;
-//      debugger;
-      player.on('play', function() {
+//      debugger;\$checkTrial
+      if ( {{$checkTrial}} == 0 ) {
+        player.unload();
 
+      }
+      player.on('play', function() {
+        if ( {{$checkTrial}} == 0) {
+          window.location.href='/package';
+        }
         console.log('played the video');
         if (vimeo_flag == true) return;
         player.pause().then(function() {
