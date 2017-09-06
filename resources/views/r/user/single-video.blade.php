@@ -362,6 +362,7 @@
       player.on('play', function() {
         if ( {{$checkTrial}} == 0) {
           window.location.href='/package';
+          return;
         }
         console.log('played the video');
         if (vimeo_flag == true) return;
