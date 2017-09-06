@@ -344,7 +344,7 @@ class UserController extends Controller {
         $flag = 0;
         if(Auth::check()) {
             $flag = Auth::user()->paymentPlans[0]->flag;
-            if($flag == 1) {
+            if($flag == 2) {
                 $checkTrial = $this->checkTrial($video->id);
             }
         } else {
