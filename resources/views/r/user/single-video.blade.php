@@ -355,15 +355,7 @@
       var player = new Vimeo.Player(vimeo_iframe);
       var vimeo_flag = false;
 //      debugger;\$checkTrial
-      if ( {{$checkTrial}} == 0 ) {
-        player.unload();
-
-      }
       player.on('play', function() {
-        if ( {{$checkTrial}} == 0) {
-          window.location.href='/package';
-          return;
-        }
         console.log('played the video');
         if (vimeo_flag == true) return;
         player.pause().then(function() {
