@@ -43,10 +43,10 @@ class Locale
         $playlist = UserPlaylist::where('user_id', Auth::id())->get();
         switch (Auth::user()->paymentPlans[0]->flag) {
             case 1:
-                return $result = 0;
+                return $result = 5 - count($playlist);
                 break;
             case 2:
-                return $result = 5 - count($playlist);
+                return $result = 0;
                 break;
             case 3:
                 return $result = 'unlimited';
