@@ -4,7 +4,7 @@
 	</div>
 	<ul class="play-menu">
 		<li id="movies">
-			<a href="{{route('user.videotype', 'movie')}}">
+			<a href="{{route('user.videotype', 'movies')}}">
 				<i class="fa fa-film menu-entry-icon movies" aria-hidden="true"></i>
 				<!-- <span class="menu-entry-icon movies"></span> -->
 				<span class="menu-entry-text">Movies</span>
@@ -17,7 +17,7 @@
 			</ul> -->
 		</li>
 		<li id="animations">
-			<a href="#">
+			<a href="{{route('user.videotype', 'animations')}}">
 				<i class="fa fa-star menu-entry-icon books" aria-hidden="true"></i>
 				<!-- <span class="menu-entry-icon books"></span> -->
 				<span class="menu-entry-text">Animations</span>
