@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\TrialPeriod;
 use App\UserPlaylist;
 use Closure;
 use Illuminate\Support\Facades\Auth;
@@ -23,8 +24,10 @@ class Locale
     public function handle($request, Closure $next)
     {
         if(Auth::check()) {
-            $videoCount = $this->videoCount();
-            View::share('videoCount', $videoCount);
+            if(Auth::user()->paymentPlans[0]->flag == 1){
+                $videoCount = $this->videoCount();
+                View::share('videoCount', $videoCount);
+            }
         }
         $raw_locale = Cookie::get('locale');     # if user was on website
         //dd($raw_locale);
@@ -40,19 +43,23 @@ class Locale
 
     public function videoCount()
     {
-        $playlist = UserPlaylist::where('user_id', Auth::id())->get();
-        switch (Auth::user()->paymentPlans[0]->flag) {
-            case 1:
-                return $result = 0;
-                break;
-            case 2:
-                return $result = 5 - count($playlist);
-                break;
-            case 3:
-                return $result = 'unlimited';
-                break;
-            default:
-                return $result = null;
-        }
+//        $playlist = UserPlaylist::where('user_id', Auth::id())->get();
+//        switch (Auth::user()->paymentPlans[0]->flag) {
+//            case 1:
+//                return $result = 0;
+//                break;
+//            case 2:
+//                return $result = 5 - count($playlist);
+//                break;
+//            case 3:
+//                return $result = 'unlimited';
+//                break;
+//            default:
+//                return $result = null;
+//        }
+        $trials = TrialPeriod::where('user_id', Auth::id())->get();
+
+
+        return count($trials) - 3;
     }
 }
