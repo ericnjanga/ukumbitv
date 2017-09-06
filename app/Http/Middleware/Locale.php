@@ -60,6 +60,6 @@ class Locale
         $trials = TrialPeriod::where('user_id', Auth::id())->get();
 
 
-        return count($trials) - 3;
+        return 3 - count($trials);
     }
 }
