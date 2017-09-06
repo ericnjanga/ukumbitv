@@ -217,7 +217,8 @@ class UserController extends Controller {
 
     public function videosByType($id)
     {
-        $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('video_type', $id)->get();
+
+        $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('video_type', substr($id, 0, -1))->get();
 
         return view('r.user.category-videos')->with('videos', $videos);
     }
