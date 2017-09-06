@@ -6,7 +6,7 @@
                 @include('r.chunks._filter_video')
                 
                 <div class="global-main-content">
-                    <div class="block-wrap">
+                    <div class="block-wrap" style="display: none;">
                         <div class="title">New Videos</div> 
                         <div class="list-horizontal-wrapper">
                             @for ($group=1;$group<3;$group++)
