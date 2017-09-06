@@ -1,11 +1,11 @@
 @extends('r.layouts.user-search')
 @section('content')
 
-  
+
   <div class="container-fluid page-video-single">
     <div class="layout-3-columns">
   		@include('r.chunks._filter_video')
-  		
+
       <div class="global-main-content utv-card">
         <div class="hero">
 
@@ -21,7 +21,7 @@
 	              </ul>
 	              <div class="cat">
 	              	category
-	              </div> 
+	              </div>
 	              <div class="tags">
 	                  {{$tags}}
 	              </div>
@@ -29,15 +29,15 @@
               <div class="info-right link-red-on">
               	<div class="info-likes">
               		<span class="icon icon-thumbs-up"></span>&nbsp;
-              		{{$likes}} 
+              		{{$likes}}
 	                <span>&nbsp; Likes</span>
 	              </div><!-- info-likes -->
-								
+
 								<button class="btn-link" onclick="addToList()">
-									<i class="fa fa-bookmark" aria-hidden="true"></i> 
+									<i class="fa fa-bookmark" aria-hidden="true"></i>
 									{{trans('messages.Add_to_list')}}
 								</button>
-	               
+
               </div><!-- info-right -->
               <!-- <div class="series-text">1 Season, 12 Series</div> -->
             </div><!-- video-info-main -->
@@ -45,15 +45,17 @@
                 <div class="actors-title">Actors</div>
                 <p class="actors-list" style="border:3px solid yellow;">Scarlett Johansson, Beat Takeshi Kitano, Michael Carmen Pitt,
                     Pilou Asbaek, Chin Han, Juliette Binoche</p>
-            </div> --> 
+            </div> -->
           </div>
 
 
         	@if($checkTrial)
           <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/232604649?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+          <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
                   @else
               <h1>SELECT PAYMENT PLAN PLS</h1>
-                  @endif  
+                  @endif
         </div>
 
 
@@ -88,7 +90,7 @@
               <div class="list-horizontal-wrapper">
 
                   @for ($group=1;$group<3;$group++)
-                      @for($i=1; $i<5; $i++) 
+                      @for($i=1; $i<5; $i++)
                           <div class="video-item video-item-dis">
 
                               <div class="video-img">
@@ -106,7 +108,7 @@
                                               class="icon icon-thumbs-down-hand"></span>19
                                   </div>
                               </div>
-                          </div> 
+                          </div>
                       @endfor
                   @endfor
               </div>
@@ -119,7 +121,7 @@
 
 
 
-        <div class="hero-sub"> 
+        <div class="hero-sub">
           <p>{{$video->description}}</p>
         </div>
 
@@ -155,18 +157,18 @@
 
         <hr>
 
-        <div class="hero-sub">  
+        <div class="hero-sub">
         	<div class="hero-sub_heading clearfix">
         		<h2 class="pull-left">{{trans('messages.reviews')}}</h2>
-        		  
-        		<button type="button" id="btn-comment-rate-modal" class="btn btn-default pull-right" data-toggle="modal" data-target="#comment-rate-modal"> 
-        			@if($checkTrial)<span class="icon icon-pencil-edit-button"></span> &nbsp; 
+
+        		<button type="button" id="btn-comment-rate-modal" class="btn btn-default pull-right" data-toggle="modal" data-target="#comment-rate-modal">
+        			@if($checkTrial)<span class="icon icon-pencil-edit-button"></span> &nbsp;
         			{{trans('messages.Write_a_review')}}
         			@endif
       			</button>
 
       			<a class="btn btn-primary pull-right fb-share-button ui facebook button">
-      				<i class="fa fa-facebook-official" aria-hidden="true"></i> 
+      				<i class="fa fa-facebook-official" aria-hidden="true"></i>
       				{{trans('messages.share')}}</a>
 
 
@@ -176,7 +178,7 @@
         	<div class="row rating-stats">
         		<div class="col-sm-4">
         			<span class="txt-xxl">
-								<span id="likes-count">{{$likes}} </span> 
+								<span id="likes-count">{{$likes}} </span>
           			<span class="btn-like icon icon-thumbs-up {{($checkLike != null)?'btn-on':'btn-off'}}" data-route-like="{{route('like')}}" data-route-unlike="{{route('unlike')}}"></span>
               </span>
         		</div>
@@ -185,10 +187,10 @@
         		</div>
         		<div class="col-sm-4">
         			<span class="txt-xxl pull-right">
-        				<span id="dislikes-count">{{$dislikes}} </span> 
-        				<span class="btn-dislike icon icon-thumbs-down-hand {{($checkDisLike != null)?'btn-on':'btn-off'}}" data-route-like="{{route('like')}}" data-route-unlike="{{route('unlike')}}"></span> 
+        				<span id="dislikes-count">{{$dislikes}} </span>
+        				<span class="btn-dislike icon icon-thumbs-down-hand {{($checkDisLike != null)?'btn-on':'btn-off'}}" data-route-like="{{route('like')}}" data-route-unlike="{{route('unlike')}}"></span>
         			</span>
-        		</div> 
+        		</div>
         	</div>
 
 
@@ -210,12 +212,12 @@
                   </p>
                 </div>
               </div>
-              @endforeach 
+              @endforeach
             </div>
             @endif
             {{--<a href="" class="butn btn-cta1 btn-lg">Load more</a>--}}
         </div>
-           
+
 
         <!-- comment and rating modal -->
         <div class="modal fade" id="comment-rate-modal" class="modal-cr" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -223,13 +225,13 @@
 				    <div class="modal-content">
 				      <div class="modal-header">
 				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				        
+
 								<div class="media modal-cr__media">
 								  <div class="media-left">
-								    <img class="media-object" src="{{Auth::user()->picture}}" alt="..." width="48" height="48"> 
+								    <img class="media-object" src="{{Auth::user()->picture}}" alt="..." width="48" height="48">
 								  </div>
 								  <div class="media-body">
-								  	{{trans('messages.Review_by')}} 
+								  	{{trans('messages.Review_by')}}
 								    @if(Auth::user()->name != '')
                         {{Auth::user()->name}}
                         @else
@@ -239,13 +241,13 @@
 								</div>
 
 
-				         
+
 				      </div>
 				      <div class="modal-body modal-cr__body">
 				        	<!-- -->
 				        <div class="media">
 								  <div class="media-left">
-								  	<img class="media-object" src="{{$video->videoimage->imgSmall1}}" alt=""> 
+								  	<img class="media-object" src="{{$video->videoimage->imgSmall1}}" alt="">
 								  	<p>{{$video->title}}</p>
 								  </div>
 								  <div class="media-body">
@@ -253,13 +255,13 @@
                       <div class="input-wrap textarea-wrap">
                       	<textarea name="comment-text" id="comment-text" placeholder="Tell others what you think about the movie. Would you recommend it, and why?"></textarea>
                       	<p class="rate-info">{{trans('messages.review_help')}}</p>
-                      </div> 
-                    </form>  
+                      </div>
+                    </form>
 								  </div>
 				        </div><!-- media -->
 
-                  
-									 
+
+
 				      </div>
 				      <div class="modal-footer modal-cr__footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">{{trans('messages.close')}}</button>
@@ -273,13 +275,13 @@
 
       <aside class="block-aside">
           <div class="title">{{trans('messages.Similar_Videos')}}</div>
-           
+
               <div class="list-horizontal-wrapper">
                   @if(count($relatedVideos) == 0)
                       <h1>{{trans('messages.There_is_no_videos')}}</h1>
                   @else
                   @foreach($relatedVideos as $relatedVideo)
-                          
+
                       <div class="video-item">
                           <a href="{{route('user.singleVideo',$relatedVideo->watchid)}}">
                               <div class="video-img">
@@ -296,11 +298,11 @@
                               </div>
                           </div>
                       </div>
-                          
+
                   @endforeach
                       @endif
-              </div>  
-      </aside><!-- block-aside --> 
+              </div>
+      </aside><!-- block-aside -->
     </div><!-- block-3-columns -->
   </div><!-- page-single-video -->
 @endsection
@@ -338,6 +340,7 @@
             });
         }
     </script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <script>
         $(".ui.facebook.button").click(function() {
             FB.ui({
@@ -345,5 +348,33 @@
                 href: "{{URL::to('/')}}/video/{{$video->watchid}}"
             }, function(response){});
         })
+    </script>
+    <script>
+      var vimeo_iframe = $('iframe');
+      var player = new Vimeo.Player(vimeo_iframe);
+      var vimeo_flag = false;
+      debugger;
+      player.on('play', function() {
+
+        console.log('played the video');
+        if (vimeo_flag == true) return;
+        player.pause().then(function() {
+          $.ajax({
+            type: 'POST',
+            url: '/vimeo-video-play',
+            data: {
+              id: {{$video->watchid}},
+              _token: '{{csrf_token()}}'
+            },
+            success: function(data){
+              vimeo_flag = true;
+              player.play();
+            },
+            error: function(data) {
+              console.log('error');
+            }
+          })
+        });
+      })
     </script>
 @endsection
