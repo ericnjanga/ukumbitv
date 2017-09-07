@@ -16,7 +16,7 @@
                       <li>another</li>
                   </ul>
                   <div class="price upper">Free</div>
-                  <a href="" class="btn butn-white-trans active">Your plan</a>
+                  <a href="" class="btn btn-block butn-white-trans active">Your plan</a>
               </div>
               <div class="price-item">
                   <div class="price-title">Silver</div>
@@ -27,7 +27,7 @@
                       <li>advantage 1</li>
                   </ul>
                   <div class="price"><span>$</span> 3</div>
-                  <a href="" class="btn butn-white-trans">Restart plan</a>
+                  <a href="" class="btn btn-block butn-white-trans">Restart plan</a>
               </div>
               <div class="price-item">
                   <div class="price-title">Gold</div>
@@ -40,7 +40,7 @@
                       <li>advantage 1</li>
                   </ul>
                   <div class="price"><span>$</span> 5</div>
-                  <a href="" class="btn butn-white-trans">Select this</a>
+                  <a href="" class="btn btn-block butn-white-trans">Select this</a>
               </div>
               <div class="price-item">
                   <div class="price-title">Platinum</div>
