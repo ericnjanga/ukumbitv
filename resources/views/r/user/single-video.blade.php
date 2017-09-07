@@ -49,16 +49,19 @@
           </div>
 					
 
-					<div style="background:lime;">
+					<!-- <div style="background:lime;">
 						{{$videoId}}
-					</div>
+					</div> -->
 
         	@if($checkTrial)
           <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/232604649?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
           <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
                   @else
-              <iframe class="iframe-video" src="https://player.vimeo.com/video/" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <div class="video-placeholder">
+          	<img src="{{$video->videoimage->imgPreview1}}" alt="{{$video->title}}">
+          </div>
+              <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
                   @endif
         </div>
 
