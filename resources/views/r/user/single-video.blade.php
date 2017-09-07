@@ -54,16 +54,19 @@
 					</div> -->
 
         	@if($checkTrial)
-          <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/232604649?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-          <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-                  @else
-          <div class="video-placeholder">
-          	{{$video}}
-          	<img src="{{$video->videoimage->imgPreview1}}" alt="{{$video->title}}">
-          </div>
-              <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-                  @endif
+	          <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	          <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/232604649?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+	          <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+          @else
+	          <div class="video-placeholder">
+	          	{{$video}}
+	          	@if($video->videoimage->imgPreview1!==null) 
+								<img src="{{$video->videoimage->imgPreview1}}" alt="{{$video->title}}">
+		          @else
+								<img src="http://via.placeholder.com/350x150" alt="{{$video->title}}">
+		          @endif 
+          	</div> 
+          @endif
         </div>
 
 
