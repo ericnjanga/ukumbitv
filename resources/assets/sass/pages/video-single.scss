@@ -21,12 +21,27 @@
 
 		min-height: 350px;
 		display: flex;
-		    align-items: center;
+		align-items: center;
     justify-content: center;
+
     .video-img, .video-item{
     	margin: 0;
     	padding: 0;
     }//video-img 
+
+    .video-placeholder--title{
+    	position: absolute;
+    	text-align: center;
+    	line-height: 50px;
+    	font-size: 23px;
+    	span{
+    		display: block;
+    	}
+    	a{
+    		font-weight: bold;
+    		font-size: 23px;
+    	}
+    }
 	}//video-placeholder 
 
 

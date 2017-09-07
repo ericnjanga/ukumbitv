@@ -61,7 +61,7 @@
 	          <div class="video-placeholder">
 	          	<h2 class="video-placeholder--title">
 	          		<span>{{trans('messages.msg_trial_ended')}}</span>
-	          		<a href="#">{{trans('messages.msg_upgrade')}}</a>
+	          		<a href="#" class="btn btn-block btn-cta1b">{{trans('messages.msg_upgrade')}}</a>
 	          	</h2>
 	          	<div class="video-item">
 	          		<div class="video-img">

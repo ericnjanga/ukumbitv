@@ -838,6 +838,8 @@ return array(
   //GENERAL WORDS ...
   //----------------------------------- 
   'and' => 'and',
+  'msg_trial_ended' => 'Your trial has ended',
+  'msg_upgrade' => 'Please ugrade your membership',
 
   //GENERAL WORDS ...
   //----------------------------------- 
