@@ -2335,6 +2335,7 @@ input:-webkit-autofill {
 	margin-left: $width-GP-menu + $gap2;  
 }
 .layout-3-columns {
+	min-width: 750px;
 	$width-aside: 300px;
 	.global-main-content { 
 	  width: calc(75% - #{$width-aside}); 
@@ -2351,19 +2352,19 @@ input:-webkit-autofill {
 		margin-left: $width-GP-menu + $gap2;  
 	}
 
-	@media (max-width: 1200px) { 
-		.global-main-content,
-		.block-aside {
-			margin-left: 0;
-		  width: calc(100% - 300px);
-    	float: right;
-		}
-		.block-aside{
-			margin-top: 30px;
-		}
-	}
+	// @media (max-width: 1200px) { 
+	// 	.global-main-content,
+	// 	.block-aside {
+	// 		margin-left: 0;
+	// 	  width: calc(100% - 300px);
+ //    	float: right;
+	// 	}
+	// 	.block-aside{
+	// 		margin-top: 30px;
+	// 	}
+	// }
 
-	@media (max-width: 100px) { 
+	@media (max-width: 1000px) { 
 		.global-main-content,
 		.block-aside {
 			margin-left: 0;
