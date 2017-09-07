@@ -2343,7 +2343,7 @@ input:-webkit-autofill {
 	.block-aside {
 		margin-left: 30px;
 		float: right;
-		width: $width-aside - (30px + 2px);
+		width: $width-aside - (30px + 10px);
 		.list-horizontal-wrapper {
 			width: 100%;
 		}
