@@ -2338,12 +2338,12 @@ input:-webkit-autofill {
 	min-width: 750px;
 	$width-aside: 300px;
 	.global-main-content { 
-	  width: calc(75% - #{$width-aside}); 
+	  width: calc(82% - #{$width-aside}); 
 	}
 	.block-aside {
 		margin-left: 30px;
 		float: right;
-		width: $width-aside;
+		width: $width-aside - (30px + 2px);
 		.list-horizontal-wrapper {
 			width: 100%;
 		}
@@ -2357,7 +2357,7 @@ input:-webkit-autofill {
 		.global-main-content,
 		.block-aside {
 			margin-left: 0;
-		  width: calc(100% - 250px);
+		  width: calc(100% - 230px);
     	float: right;
     	min-width: 500px;
 		}

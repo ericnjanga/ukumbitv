@@ -2358,11 +2358,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .layout-3-columns {
   min-width: 750px; }
   .layout-3-columns .global-main-content {
-    width: calc(75% - 300px); }
+    width: calc(82% - 300px); }
   .layout-3-columns .block-aside {
     margin-left: 30px;
     float: right;
-    width: 300px; }
+    width: 268px; }
     .layout-3-columns .block-aside .list-horizontal-wrapper {
       width: 100%; }
   .layout-3-columns #GP-menu-sticky-wrapper.is-sticky + .global-main-content {
@@ -2371,7 +2371,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     .layout-3-columns .global-main-content,
     .layout-3-columns .block-aside {
       margin-left: 0;
-      width: calc(100% - 250px);
+      width: calc(100% - 230px);
       float: right;
       min-width: 500px; }
     .layout-3-columns .block-aside {
