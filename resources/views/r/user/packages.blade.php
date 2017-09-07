@@ -1,11 +1,11 @@
 @extends('r.layouts.user-search')
 @section('content')
-  <div class="container-fluid page-package"> 
+  <div class="container-fluid page-packages"> 
     @include('r.chunks._account_menu')
                
     <div class="global-main-content">
         <div class="price-list-block">
-          <h2 class="title text-center">{{trans('messages.home_plansec_title')}}</h2>
+          <h1>{{trans('messages.home_plansec_title')}}</h1>
  
           <div class="price-block">
               <div class="price-item">
