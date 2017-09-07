@@ -1444,11 +1444,6 @@ label {
   .myaccount-wrap .account-form-block .change-pas {
     margin: 12px 0 30px; }
 
-.mypackage-wrap {
-  margin: 10px 0; }
-  .mypackage-wrap .title-text {
-    text-align: left; }
-
 input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0 50px #fff !important;
   -webkit-text-fill-color: #616161 !important;
@@ -2240,6 +2235,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .page-video-single .video-info-main .info-right {
     text-align: right; }
 
+.page-video-single .title-reviews {
+  margin-top: 0; }
+
 .page-video-single .txt-xxl .icon:hover {
   color: #990033; }
 
@@ -2367,7 +2365,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
       width: 100%; }
   .layout-3-columns #GP-menu-sticky-wrapper.is-sticky + .global-main-content {
     margin-left: 230px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1240px) {
     .layout-3-columns .global-main-content,
     .layout-3-columns .block-aside {
       margin-left: 0;
