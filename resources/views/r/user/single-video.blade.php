@@ -65,7 +65,7 @@
 			          	@if($video->videoimage->imgPreview1!==null) 
 										<img src="{{$video->videoimage->imgPreview1}}" alt="{{$video->title}}">
 				          @else
-										<img src="http://via.placeholder.com/350x150" alt="{{$video->title}}">
+										<img src="http://via.placeholder.com/510x800" alt="{{$video->title}}">
 				          @endif 
 	          		</div>
 	          	</div> 

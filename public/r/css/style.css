@@ -2209,7 +2209,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   /* IE6-9 */
   min-height: 350px;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .page-video-single .video-info-main {
   display: -ms-flexbox;
