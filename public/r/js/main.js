@@ -10,7 +10,7 @@ $.ajaxSetup({
  
 
 $("#payinfo").click(function () {
-    $('.payment-content-block').slideToggle(500);
+    $('.payment-info--edit').slideToggle(500);
     $(this).toggleClass("open");
     return false;
 })
