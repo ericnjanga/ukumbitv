@@ -80,31 +80,31 @@
                             <div class="payment-form-block">
                                 <form action="" method="">
                                     <div class="payment-form-left">
-                                        <div class="input-wrap">
+                                        <div class="input-group">
                                             <label>First Name <span class="label-add-text">Must match card</span></label>
                                             <input type="text" name="firstname" class="form-control">
                                         </div>
-                                        <div class="input-wrap input-lock">
+                                        <div class="input-group input-lock">
                                             <label>Card Number</label>
                                             <input type="text" name="cardnumber" class="form-control">
                                         </div>
-                                        <div class="input-wrap input-lock">
+                                        <div class="input-group input-lock">
                                             <label>CVC</label>
                                             <input type="text" name="cvc" class="form-control">
                                         </div>
                                     </div>
                                     <div class="payment-form-right">
-                                        <div class="input-wrap">
+                                        <div class="input-group">
                                             <label>Last Name <span class="label-add-text">Must match card</span></label>
                                             <input type="text" name="lastname" class="form-control">
                                         </div>
                                         <div class="date-block">
                                             <div class="sublabel">Expiration Date</div>
-                                            <div class="input-wrap">
+                                            <div class="input-group">
                                                 <input type="text" name="year" class="form-control">
                                             </div>
                                             <span>/</span>
-                                            <div class="input-wrap">
+                                            <div class="input-group">
                                                 <input type="text" name="month" class="form-control">
                                             </div>
                                         </div>
