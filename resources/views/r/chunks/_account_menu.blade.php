@@ -1,5 +1,5 @@
 <aside id="GP-menu" class="GP-menu">
-    <ul class="aside-menu">
+    <ul class="aside-menu play-menu">
         <li>
             <a href="{{route('user.account')}}" class="my-account">
                 <span class="icon icon-man-user"></span>
