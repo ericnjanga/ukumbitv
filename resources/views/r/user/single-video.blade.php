@@ -59,6 +59,7 @@
           <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
                   @else
           <div class="video-placeholder">
+          	{{$video}}
           	<img src="{{$video->videoimage->imgPreview1}}" alt="{{$video->title}}">
           </div>
               <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
