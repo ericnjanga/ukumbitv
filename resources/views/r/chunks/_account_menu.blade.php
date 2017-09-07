@@ -1,4 +1,4 @@
-<aside>
+<aside id="GP-menu" class="GP-menu">
     <ul class="aside-menu">
         <li>
             <a href="{{route('user.account')}}" class="my-account">
