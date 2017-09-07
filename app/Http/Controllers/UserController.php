@@ -1120,7 +1120,7 @@ class UserController extends Controller {
         $email = 'info@ukumbitv.com';
         Helper::send_email($page,$subject,$email,$email_data);
 
-        return redirect()->back()->with('flash_success', 'Email was successful send');
+        return response()->json(['message' => 'ok'], 200);
     }
 
     public function trending()

@@ -50,9 +50,9 @@
 							{{$flash_success}} aaaa
 						</div>
 					@endif
-	        		<form action="{{route('user.send-contact-form')}}" method="POST">
+	        		{{--<form action="{{route('user.send-contact-form')}}" method="POST">--}}
 	              <div class="form-group select-wrap">
-	                <select class="form-control" name="category">
+	                <select id="q-category" class="form-control" name="category">
 	                  <option selected>Select the appeal category</option>
 	                  <option>appeal 1</option>
 	                  <option>appeal 2</option>
@@ -63,15 +63,15 @@
 	              </div>
 								<div class="form-group">
 					        <label>Enter your e-mail <span>*</span></label>
-					        <input type="email" name="email" class="form-control" required>
+					        <input id="user-email" type="email" name="email" class="form-control" required>
 					      </div>
 	              <div class="form-group">
 					        <label>Enter your message <span>*</span></label>
-	                <textarea class="form-control" name="message" id="" placeholder="Type your message here"></textarea>
+	                <textarea class="form-control" name="message" id="message-text" placeholder="Type your message here"></textarea>
 	              </div>
-					      <button type="submit" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</button>
+					      <button id="btn-submit-contact" data-contact-route="{{route('user.send-contact-form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</button>
 	 
-	            </form>
+	            {{--</form>--}}
 	        	</div><!-- col2 -->
 	        </div><!-- row -->	
 			  </div>

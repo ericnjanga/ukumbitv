@@ -279,7 +279,7 @@
 				      </div>
 				      <div class="modal-footer modal-cr__footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">{{trans('messages.close')}}</button>
-				        <button id="btn-submitcomment" type="button" class="btn btn-submit" data-comment-route="{{route('send-comment')}}" data-video-id="{{$video->id}}">{{trans('messages.submit')}}</button>
+				        <button id="btn-submit-comment" type="button" class="btn btn-submit" data-comment-route="{{route('send-comment')}}" data-video-id="{{$video->id}}">{{trans('messages.submit')}}</button>
 				      </div>
 				    </div>
 				  </div>

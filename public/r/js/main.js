@@ -182,6 +182,12 @@ $('body').on('click', '#btn-submitcomment', function(){
 	comment_submit($(this).data('comment-route'), $(this).data('video-id'));
 });
 
+//submit contact
+$('body').on('click', '#btn-submit-contact', function(){
+    //console.log('***heyeyey');
+    sendContactForm($(this).data('contact-route'));
+});
+
 
 //Add/remove like on click
 //------------------------
@@ -369,7 +375,37 @@ function movie_undislike($btn) {
 }//undislike
 
 
+//contact form
+function sendContactForm(url) {
 
+    var fd = new FormData;
+
+    fd.append('_token', '{{csrf_token()}}');
+    fd.append('category', $('#q-category').val());
+    fd.append('email', $('#user-email').val());
+    fd.append('message', $('#message-text').val());
+    $('#btn-submit-contact').prop('disabled', true);
+
+
+    $.ajax({
+        type: 'POST',
+        url: url,
+        contentType: false,
+        processData: false,
+        data: fd,
+        dataType: 'html',
+        success: function(data){
+
+       // var rep = JSON.parse(data);
+        swal("Cool!", "Email sent successfully", "success");
+            $('#btn-submit-contact').prop('disabled', false);
+    },
+    error: function(data){
+        swal("Hmm", "Something went wrong, try again pls", "error");
+        $('#btn-submit-contact').prop('disabled', false);
+    }
+});
+}
 
 
 
