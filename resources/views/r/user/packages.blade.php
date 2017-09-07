@@ -53,7 +53,7 @@
                       <li>advantage 1</li>
                   </ul>
                   <div class="price"><span>$</span> 7</div>
-                  <a href="" class="btn butn-white-trans">Select this</a>
+                  <a href="" class="btn btn-block butn-white-trans">Select this</a>
                   <div class="best-text">
                       <div>Best Choise</div>
                   </div>

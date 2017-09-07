@@ -2268,6 +2268,12 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-packages h1 {
   margin-bottom: 30px; }
 
+.page-packages .price-item .btn-block {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: calc(100% - 40px); }
+
 .main-header {
   height: 60px;
   background-color: #eeeeee;
