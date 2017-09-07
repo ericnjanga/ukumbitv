@@ -59,12 +59,16 @@
 	          <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
           @else
 	          <div class="video-placeholder">
-	          	{{$video->videoimage->imgPreview1}}
-	          	@if($video->videoimage->imgPreview1!==null) 
-								<img src="{{$video->videoimage->imgPreview1}}" alt="{{$video->title}}">
-		          @else
-								<img src="http://via.placeholder.com/350x150" alt="{{$video->title}}">
-		          @endif 
+	          	<div class="video-item">
+	          		<div class="video-img">
+	          			<!-- {{$video->videoimage->imgPreview1}} -->
+			          	@if($video->videoimage->imgPreview1!==null) 
+										<img src="{{$video->videoimage->imgPreview1}}" alt="{{$video->title}}">
+				          @else
+										<img src="http://via.placeholder.com/350x150" alt="{{$video->title}}">
+				          @endif 
+	          		</div>
+	          	</div> 
           	</div> 
           @endif
         </div>
