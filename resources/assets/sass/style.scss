@@ -2350,6 +2350,31 @@ input:-webkit-autofill {
 	#GP-menu-sticky-wrapper.is-sticky + .global-main-content{
 		margin-left: $width-GP-menu + $gap2;  
 	}
+
+	@media (max-width: 1200px) { 
+		.global-main-content,
+		.block-aside {
+			margin-left: 0;
+		  width: calc(100% - 300px);
+    	float: right;
+		}
+		.block-aside{
+			margin-top: 30px;
+		}
+	}
+
+	@media (max-width: 100px) { 
+		.global-main-content,
+		.block-aside {
+			margin-left: 0;
+		  width: calc(100% - 250px);
+    	float: right;
+    	min-width: 500px;
+		}
+		.block-aside{
+			margin-top: 30px;
+		}
+	}
 }
 
 .global-main-content.utv-card {

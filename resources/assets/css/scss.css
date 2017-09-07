@@ -1603,7 +1603,9 @@ input:-webkit-autofill {
 .list-horizontal-wrapper:before,
 .list-horizontal-wrapper:after,
 .block-wrap:before,
-.block-wrap:after {
+.block-wrap:after,
+.layout-3-columns:before,
+.layout-3-columns:after {
   display: table;
   content: " ";
   clear: both; }
@@ -2365,6 +2367,25 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .layout-3-columns #GP-menu-sticky-wrapper.is-sticky + .global-main-content {
   margin-left: 230px; }
+
+@media (max-width: 1200px) {
+  .layout-3-columns .global-main-content,
+  .layout-3-columns .block-aside {
+    margin-left: 0;
+    width: calc(100% - 300px);
+    float: right; }
+  .layout-3-columns .block-aside {
+    margin-top: 30px; } }
+
+@media (max-width: 100px) {
+  .layout-3-columns .global-main-content,
+  .layout-3-columns .block-aside {
+    margin-left: 0;
+    width: calc(100% - 250px);
+    float: right;
+    min-width: 500px; }
+  .layout-3-columns .block-aside {
+    margin-top: 30px; } }
 
 .global-main-content.utv-card .title {
   font-size: 30px; }

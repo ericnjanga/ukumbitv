@@ -2,7 +2,8 @@
 //Apply "clearfix" class from bootstrap
 .container-fluid,
 .list-horizontal-wrapper,
-.block-wrap {
+.block-wrap,
+.layout-3-columns {
 	&:before, &:after {
 	  display: table;
 	  content: " ";
