@@ -1500,10 +1500,7 @@ input:-webkit-autofill {
     margin: 0 0 0 15px; }
 
 .payment-form-block {
-  border-bottom: 1px solid #e0e0e0;
-  width: 71%;
-  padding: 0 0 43px 0;
-  margin: 0 0 50px 0; }
+  width: 71%; }
   .payment-form-block form {
     display: -ms-flexbox;
     display: flex;
@@ -1557,9 +1554,6 @@ input:-webkit-autofill {
   top: 30px;
   font-size: 26px;
   color: #000; }
-
-.payment-content-block {
-  display: none; }
 
 .butn-back {
   position: absolute;
@@ -2257,6 +2251,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-packages h1 {
   margin-bottom: 30px; }
 
+.page-packages h2 {
+  font-size: 24px; }
+
 .page-packages hr {
   margin-top: 70px;
   margin-bottom: 70px; }
@@ -2268,7 +2265,14 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   width: calc(100% - 40px); }
 
 .page-packages .payment-info--current {
-  margin-bottom: 30px; }
+  margin-bottom: 50px; }
+
+.page-packages .payment-info--edit {
+  display: none; }
+  .page-packages .payment-info--edit hr {
+    width: 71%;
+    border-top: 1px dashed #333;
+    border-bottom: 1px dashed #fff; }
 
 .main-header {
   height: 60px;

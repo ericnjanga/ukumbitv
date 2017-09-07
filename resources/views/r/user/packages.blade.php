@@ -75,59 +75,62 @@
             <div class="payment-info"><span class="icon icon-paypal-big-logo"></span>example@redentu.com</div>
             <a id="payinfo" href="" class="btn btn-cta1b btn-lg">Update payment information <span class="icon icon-scroll-arrow-to-down"></span></a>
         </div>
-        <div class="payment-content-block">
-            <div class="payment-content">
-                <h2>Update Payment Information</h2>
-                <p class="payment-text">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
-                <div class="card-text">
-                    <span class="bold">Credit or Debit Card</span>
-                    <img src="{{asset('r/img/visa.png')}}" alt="">
-                    <img src="{{asset('r/img/mastercard.png')}}" alt="">
-                </div>
-                <div class="payment-form-block">
-                    <form action="" method="">
-                        <div class="payment-form-left">
-                            <div class="input-group">
-                                <label>First Name <span class="label-add-text">Must match card</span></label>
-                                <input type="text" name="firstname" class="form-control">
-                            </div>
-                            <div class="input-group input-lock">
-                                <label>Card Number</label>
-                                <input type="text" name="cardnumber" class="form-control">
-                            </div>
-                            <div class="input-group input-lock">
-                                <label>CVC</label>
-                                <input type="text" name="cvc" class="form-control">
-                            </div>
-                        </div>
-                        <div class="payment-form-right">
-                            <div class="input-group">
-                                <label>Last Name <span class="label-add-text">Must match card</span></label>
-                                <input type="text" name="lastname" class="form-control">
-                            </div>
-                            <div class="date-block">
-                                <div class="sublabel">Expiration Date</div>
-                                <div class="input-group">
-                                    <input type="text" name="year" class="form-control">
-                                </div>
-                                <span>/</span>
-                                <div class="input-group">
-                                    <input type="text" name="month" class="form-control">
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-cta1b btn-lg">Update payment method</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="paypal-block">
-                <div class="card-text">
-                    <span class="bold">Pay Pal</span>
-                    <img src="{{asset('r/img/paypal.png')}}" alt="">
-                </div>
-                <p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
-                <a href="" class="btn btn-cta1b btn-lg">Continue to Pay Pal</a>
-            </div>
+        <div class="payment-info--edit">
+          <div class="payment-content">
+              <h2>Update Payment Information</h2>
+              <p class="payment-text">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
+              <div class="card-text">
+                  <span class="bold">Credit or Debit Card</span>
+                  <img src="{{asset('r/img/visa.png')}}" alt="">
+                  <img src="{{asset('r/img/mastercard.png')}}" alt="">
+              </div>
+              <div class="payment-form-block">
+                  <form action="" method="">
+                      <div class="payment-form-left">
+                          <div class="input-group">
+                              <label>First Name <span class="label-add-text">Must match card</span></label>
+                              <input type="text" name="firstname" class="form-control">
+                          </div>
+                          <div class="input-group input-lock">
+                              <label>Card Number</label>
+                              <input type="text" name="cardnumber" class="form-control">
+                          </div>
+                          <div class="input-group input-lock">
+                              <label>CVC</label>
+                              <input type="text" name="cvc" class="form-control">
+                          </div>
+                      </div>
+                      <div class="payment-form-right">
+                          <div class="input-group">
+                              <label>Last Name <span class="label-add-text">Must match card</span></label>
+                              <input type="text" name="lastname" class="form-control">
+                          </div>
+                          <div class="date-block">
+                              <div class="sublabel">Expiration Date</div>
+                              <div class="input-group">
+                                  <input type="text" name="year" class="form-control">
+                              </div>
+                              <span>/</span>
+                              <div class="input-group">
+                                  <input type="text" name="month" class="form-control">
+                              </div>
+                          </div>
+                          <button type="submit" class="btn btn-cta1b btn-lg">Update payment method</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+
+          <hr>
+
+          <div class="paypal-block">
+              <div class="card-text">
+                  <span class="bold">Pay Pal</span>
+                  <img src="{{asset('r/img/paypal.png')}}" alt="">
+              </div>
+              <p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
+              <a href="" class="btn btn-cta1b btn-lg">Continue to Pay Pal</a>
+          </div>
         </div>
       </section> 
     	<!-- payment info section -->

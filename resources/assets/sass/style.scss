@@ -2156,11 +2156,8 @@ input:-webkit-autofill {
     margin: 0 0 0 15px;
   }
 }
-.payment-form-block{
-  border-bottom: 1px solid #e0e0e0;
-  width: 71%;
-  padding: 0 0 43px 0;
-  margin: 0 0 50px 0;
+.payment-form-block{ 
+  width: 71%; 
   form{
     display: flex;
     justify-content: space-between;
@@ -2229,10 +2226,7 @@ input:-webkit-autofill {
     font-size: 26px;
     color: #000;
   }
-}
-.payment-content-block{
-  display: none;
-}
+} 
 .butn-back{
   position: absolute;
   left: 7px;
