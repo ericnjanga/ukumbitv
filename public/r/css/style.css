@@ -2367,7 +2367,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
       width: 100%; }
   .layout-3-columns #GP-menu-sticky-wrapper.is-sticky + .global-main-content {
     margin-left: 230px; }
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     .layout-3-columns .global-main-content,
     .layout-3-columns .block-aside {
       margin-left: 0;

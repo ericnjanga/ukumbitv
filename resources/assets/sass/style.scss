@@ -2352,19 +2352,8 @@ input:-webkit-autofill {
 		margin-left: $width-GP-menu + $gap2;  
 	}
 
-	// @media (max-width: 1200px) { 
-	// 	.global-main-content,
-	// 	.block-aside {
-	// 		margin-left: 0;
-	// 	  width: calc(100% - 300px);
- //    	float: right;
-	// 	}
-	// 	.block-aside{
-	// 		margin-top: 30px;
-	// 	}
-	// }
 
-	@media (max-width: 1000px) { 
+	@media (max-width: 1200px) { 
 		.global-main-content,
 		.block-aside {
 			margin-left: 0;
