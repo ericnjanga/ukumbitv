@@ -179,12 +179,13 @@
         <div class="hero-sub">
         	<div class="hero-sub_heading clearfix">
         		<h2 class="pull-left">{{trans('messages.reviews')}}</h2>
-
+						
+						@if($checkTrial)
         		<button type="button" id="btn-comment-rate-modal" class="btn btn-default pull-right" data-toggle="modal" data-target="#comment-rate-modal">
-        			@if($checkTrial)<span class="icon icon-pencil-edit-button"></span> &nbsp;
+        			<span class="icon icon-pencil-edit-button"></span> &nbsp;
         			{{trans('messages.Write_a_review')}}
-        			@endif
       			</button>
+        		@endif
 
       			<a class="btn btn-primary pull-right fb-share-button ui facebook button">
       				<i class="fa fa-facebook-official" aria-hidden="true"></i>
