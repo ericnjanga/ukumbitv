@@ -2260,6 +2260,10 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-packages h1 {
   margin-bottom: 30px; }
 
+.page-packages hr {
+  margin-top: 70px;
+  margin-bottom: 70px; }
+
 .page-packages .price-item .btn-block {
   margin-top: 10px;
   margin-left: 20px;
