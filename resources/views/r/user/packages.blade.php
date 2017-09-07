@@ -6,84 +6,59 @@
     <div class="global-main-content">
         <div class="price-list-block">
           <h2 class="title text-center">{{trans('messages.home_plansec_title')}}</h2>
-
-
-
-            <div class="price-block">
-              @foreach($payment_plans as $payment_plan)
-                  <div class="price-item">
-                    <div class="price-title">{{$payment_plan->name}}</div>
-                    <div class="count-text">{{$payment_plan->description}}</div>
-                    <ul class="includ-list">
-                      @php($i=1)
-                      @while(isset($payment_plan->{'product'.$i}))
-                          <li>{!! $payment_plan->{'product'.$i} !!}</li>
-                          @php($i++)
-                      @endwhile
-                    </ul>
-                    <!-- <div class="price upper">{{$payment_plan->price == '0'?'Free':'$ '.$payment_plan->price}}</div> -->
-                    
-										@if($payment_plan->price == '0') 
-											<!-- <div class="price upper">{{trans('messages.free')}}</div> -->
-											<a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a> 
-										@else 
-											<div class="price upper">{{$payment_plan->price}}<small>/{{trans('messages.month')}}</small></div>
-										@endif 
+ 
+          <div class="price-block">
+              <div class="price-item">
+                  <div class="price-title">Basic</div>
+                  <div class="count-text">10 videos</div>
+                  <ul class="includ-list">
+                      <li>advantage 1</li>
+                      <li>another</li>
+                  </ul>
+                  <div class="price upper">Free</div>
+                  <a href="" class="butn butn-white-trans active">Your plan</a>
+              </div>
+              <div class="price-item">
+                  <div class="price-title">Silver</div>
+                  <div class="count-text">30 videos</div>
+                  <ul class="includ-list">
+                      <li>advantage 1</li>
+                      <li>another</li>
+                      <li>advantage 1</li>
+                  </ul>
+                  <div class="price"><span>$</span> 3</div>
+                  <a href="" class="butn butn-white-trans">Restart plan</a>
+              </div>
+              <div class="price-item">
+                  <div class="price-title">Gold</div>
+                  <div class="count-text">100 videos</div>
+                  <ul class="includ-list">
+                      <li>advantage 1</li>
+                      <li>another</li>
+                      <li>advantage 1</li>
+                      <li>another</li>
+                      <li>advantage 1</li>
+                  </ul>
+                  <div class="price"><span>$</span> 5</div>
+                  <a href="" class="butn butn-white-trans">Select this</a>
+              </div>
+              <div class="price-item">
+                  <div class="price-title">Platinum</div>
+                  <div class="count-text">150 videos</div>
+                  <ul class="includ-list">
+                      <li>advantage 1</li>
+                      <li>another</li>
+                      <li>advantage 1</li>
+                      <li>another</li>
+                      <li>advantage 1</li>
+                  </ul>
+                  <div class="price"><span>$</span> 7</div>
+                  <a href="" class="butn butn-white-trans">Select this</a>
+                  <div class="best-text">
+                      <div>Best Choise</div>
                   </div>
-              @endforeach 
-            </div> 
-            <!-- <div class="price-block">
-                <div class="price-item">
-                    <div class="price-title">Basic</div>
-                    <div class="count-text">10 videos</div>
-                    <ul class="includ-list">
-                        <li>advantage 1</li>
-                        <li>another</li>
-                    </ul>
-                    <div class="price upper">Free</div>
-                    <a href="" class="butn butn-white-trans active">Your plan</a>
-                </div>
-                <div class="price-item">
-                    <div class="price-title">Silver</div>
-                    <div class="count-text">30 videos</div>
-                    <ul class="includ-list">
-                        <li>advantage 1</li>
-                        <li>another</li>
-                        <li>advantage 1</li>
-                    </ul>
-                    <div class="price"><span>$</span> 3</div>
-                    <a href="" class="butn butn-white-trans">Restart plan</a>
-                </div>
-                <div class="price-item">
-                    <div class="price-title">Gold</div>
-                    <div class="count-text">100 videos</div>
-                    <ul class="includ-list">
-                        <li>advantage 1</li>
-                        <li>another</li>
-                        <li>advantage 1</li>
-                        <li>another</li>
-                        <li>advantage 1</li>
-                    </ul>
-                    <div class="price"><span>$</span> 5</div>
-                    <a href="" class="butn butn-white-trans">Select this</a>
-                </div>
-                <div class="price-item">
-                    <div class="price-title">Platinum</div>
-                    <div class="count-text">150 videos</div>
-                    <ul class="includ-list">
-                        <li>advantage 1</li>
-                        <li>another</li>
-                        <li>advantage 1</li>
-                        <li>another</li>
-                        <li>advantage 1</li>
-                    </ul>
-                    <div class="price"><span>$</span> 7</div>
-                    <a href="" class="butn butn-white-trans">Select this</a>
-                    <div class="best-text">
-                        <div>Best Choise</div>
-                    </div>
-                </div>
-            </div> -->
+              </div>
+          </div>
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10">
