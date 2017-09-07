@@ -59,7 +59,7 @@
 	          <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
           @else
 	          <div class="video-placeholder">
-	          	{{$video}}
+	          	{{$video->videoimage->imgPreview1}}
 	          	@if($video->videoimage->imgPreview1!==null) 
 								<img src="{{$video->videoimage->imgPreview1}}" alt="{{$video->title}}">
 		          @else
