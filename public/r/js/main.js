@@ -179,7 +179,7 @@ $(document).ready(function(){
 //------------------------
 $('body').on('click', '#btn-submitcomment', function(){
 	console.log('***heyeyey');
-	comment_submit($(this).data('comment-route'));
+	comment_submit($(this).data('comment-route'), $(this).data('video-id'));
 });
 
 
@@ -205,7 +205,8 @@ $('body').on('click','.btn-dislike', function(){
 
 
 
-function comment_submit(urlCommentRoute){
+function comment_submit(urlCommentRoute, videoId){
+
 	if($('#comment-text').val() === '') {
     swal("Hmm", "Need to write a review, try again pls", "error");
 	} else {
@@ -214,7 +215,7 @@ function comment_submit(urlCommentRoute){
     var fd = new FormData;
 
     fd.append('_token', token);
-    fd.append('video_id', '{{$video->id}}');
+    fd.append('video_id', videoId);
     fd.append('text', $('#comment-text').val());
 
     $.ajax({
@@ -227,9 +228,15 @@ function comment_submit(urlCommentRoute){
         success: function(data){
             var rep = JSON.parse(data);
             //alert('Comment successful send!');
-            //console.log(rep);
+            console.log(rep);
+            if(rep.user.name === ''){
+                userName = rep.user.email;
+            } else {
+                userName = rep.user.name
+            }
+
             $('#comment-text').val('');
-            $("#new-comment-section").append('<div class="comment"><div class="img-block"><img src="{{Auth::user()->picture}}" alt=""></div><div class="comment-text-block"><div class="comment-name">{{Auth::user()->name}}</div><p class="comment-text">'+rep.text+'</p></div></div>');
+            $("#new-comment-section").append('<div class="comment"><div class="img-block"><img src="'+rep.user.picture+'" alt=""></div><div class="comment-text-block"><div class="comment-name">'+userName+'</div><p class="comment-text">'+rep.text+'</p></div></div>');
         },
         error: function (data) {
             alert('error '+data);

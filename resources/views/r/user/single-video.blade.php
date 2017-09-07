@@ -223,7 +223,7 @@
                   <img src="{{$comment->user->picture}}" alt="">
                 </div>
                 <div class="comment-text-block">
-                  <div class="comment-name">{{$comment->user->name}}</div>
+                  <div class="comment-name">@if($comment->user->name == '') {{$comment->user->email}} @else {{$comment->user->name}} @endif</div>
                   <p class="comment-text">
                       {{$comment->text}}
                   </p>
@@ -279,7 +279,7 @@
 				      </div>
 				      <div class="modal-footer modal-cr__footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">{{trans('messages.close')}}</button>
-				        <button id="btn-submitcomment" type="button" class="btn btn-submit" data-comment-route="{{route('send-comment')}}">{{trans('messages.submit')}}</button>
+				        <button id="btn-submitcomment" type="button" class="btn btn-submit" data-comment-route="{{route('send-comment')}}" data-video-id="{{$video->id}}">{{trans('messages.submit')}}</button>
 				      </div>
 				    </div>
 				  </div>
