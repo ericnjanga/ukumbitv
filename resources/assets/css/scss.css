@@ -1487,9 +1487,7 @@ input:-webkit-autofill {
     transform: rotateX(180deg); }
 
 .payment-content .payment-text {
-  border-top: 1px solid #e0e0e0;
-  padding: 20px 0;
-  margin: 40px 0 7px 0; }
+  padding: 20px 0; }
 
 .card-text {
   margin: 0 0 25px 0; }
@@ -2268,6 +2266,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   margin-left: 20px;
   margin-right: 20px;
   width: calc(100% - 40px); }
+
+.page-packages .payment-info--current {
+  margin-bottom: 30px; }
 
 .main-header {
   height: 60px;

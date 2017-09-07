@@ -71,7 +71,7 @@
     	<!-- payment info section --> 
       <section class="payment-block-wrap">
         <h1>Payment information</h1>
-        <div class="payment-block">
+        <div class="payment-info--current">
             <div class="payment-info"><span class="icon icon-paypal-big-logo"></span>example@redentu.com</div>
             <a id="payinfo" href="" class="btn btn-cta1b btn-lg">Update payment information <span class="icon icon-scroll-arrow-to-down"></span></a>
         </div>
