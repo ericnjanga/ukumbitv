@@ -484,7 +484,7 @@ Route::get('my-playlist', 'UserController@myPlaylist')->name('user.playlist');
 
 Route::post('like', 'LikeController@like')->name('like');
 Route::post('unlike', 'LikeController@unLike')->name('unlike');
-Route::post('send-comment', 'CommentController@sendComment')->name('send-comment');
+Route::post('send-commentsend-comment', 'CommentController@sendComment')->name('send-comment');
 
 
 Route::get('vimeo', 'UserController@vimeoVideo');

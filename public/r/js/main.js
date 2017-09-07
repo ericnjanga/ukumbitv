@@ -166,7 +166,7 @@ $(document).ready(function(){
 
 
  	$('body').on('click', '#btn-comment-rate-modal', function(){
- 		console.log('heyeyey');
+ 		//console.log('heyeyey');
  		// $('#comment-rate-modal').modal();
  	});
   
@@ -178,7 +178,7 @@ $(document).ready(function(){
 //Submit comment on click
 //------------------------
 $('body').on('click', '#btn-submitcomment', function(){
-	console.log('***heyeyey');
+	//console.log('***heyeyey');
 	comment_submit($(this).data('comment-route'), $(this).data('video-id'));
 });
 
@@ -228,7 +228,7 @@ function comment_submit(urlCommentRoute, videoId){
         success: function(data){
             var rep = JSON.parse(data);
             //alert('Comment successful send!');
-            console.log(rep);
+           // console.log(rep);
             if(rep.user.name === ''){
                 userName = rep.user.email;
             } else {
@@ -251,11 +251,11 @@ function movie_like($btn) {
   var fd = new FormData;
 		//...
   fd.append('_token', '{{csrf_token()}}');
-  fd.append('id', '{{$video->id}}');
+  fd.append('id', $btn.data('video-id'));
   fd.append('type', 'like');
 
 
-  console.log('>>>>>"', $btn.data('route-like'));
+  //console.log('>>>>>"', $btn.data('route-like'));
 
   $.ajax({
     type: 'POST',
@@ -271,6 +271,7 @@ function movie_like($btn) {
       $('.btn-dislike').removeClass('.btn-on').addClass('btn-off');
 
       var rep = JSON.parse(data);
+      //console.log(rep);
 
       if(rep.check === 1){
           $('#dislikes-count').text(+disLikesCount - 1);
@@ -287,7 +288,7 @@ function movie_unlike($btn) {
   var fd = new FormData;
 
   fd.append('_token', '{{csrf_token()}}');
-  fd.append('id', '{{$video->id}}');
+  fd.append('id', $btn.data('video-id'));
 
   $.ajax({
     type: 'POST',
@@ -316,7 +317,7 @@ function movie_dislike($btn) {
   var fd = new FormData;
 
   fd.append('_token', '{{csrf_token()}}');
-  fd.append('id', '{{$video->id}}');
+  fd.append('id', $btn.data('video-id'));
   fd.append('type', 'dislike');
 
   $.ajax({
@@ -347,7 +348,7 @@ function movie_undislike($btn) {
   var fd = new FormData;
 
   fd.append('_token', '{{csrf_token()}}');
-  fd.append('id', '{{$video->id}}'); 
+  fd.append('id', $btn.data('video-id'));
 
   $.ajax({
     type: 'POST',
