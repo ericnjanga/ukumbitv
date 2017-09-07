@@ -47,7 +47,11 @@
                     Pilou Asbaek, Chin Han, Juliette Binoche</p>
             </div> -->
           </div>
+					
 
+					<div style="background:lime;">
+						{{$videoId}}
+					</div>
 
         	@if($checkTrial)
           <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
