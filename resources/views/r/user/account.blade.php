@@ -14,17 +14,17 @@
 		    <div class="col-sm-10">
 		        <div class="account-form-block">
 		            <form action="" method="">
-		                <div class="input-wrap">
+		                <div class="input-group">
 		                    <label>Full name</label>
-		                    <input type="text" name="name">
+		                    <input class="form-control" type="text" name="name">
 		                </div>
-		                <div class="input-wrap">
+		                <div class="input-group">
 		                    <label>E-mail</label>
-		                    <input type="email" name="email">
+		                    <input class="form-control" type="email" name="email">
 		                </div>
-		                <div class="input-wrap input-tel">
+		                <div class="input-group input-tel">
 		                    <label>Phone</label>
-		                    <input type="tel" name="usrtel">
+		                    <input class="form-control" type="tel" name="usrtel">
 		                </div>
 		                <div id="change-pas" class="change-pas like-link">Change password</div>
 
@@ -32,13 +32,13 @@
 		            </form>
 		            <div class="change-pas-block">
 		                <form action="" method="">
-		                    <div class="input-wrap">
+		                    <div class="input-group">
 		                        <label>Enter current password</label>
-		                        <input type="password" name="old_password" class="mypass">
+		                        <input class="form-control" type="password" name="old_password" class="mypass">
 		                    </div>
-		                    <div class="input-wrap">
+		                    <div class="input-group">
 		                        <label>Enter new password</label>
-		                        <input  type="password" name="new_password" class="mypass">
+		                        <input class="form-control"  type="password" name="new_password" class="mypass">
 		                    </div>
 		                    {{--<div class="operations-pass">--}}
 		                        {{--<span id="show-pas" class="like-link">Show password</span>--}}
