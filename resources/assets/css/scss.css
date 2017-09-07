@@ -2214,6 +2214,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  .page-video-single .video-placeholder .video-img {
+    margin: 0;
+    padding: 0; }
 
 .page-video-single .video-info-main {
   display: -ms-flexbox;
