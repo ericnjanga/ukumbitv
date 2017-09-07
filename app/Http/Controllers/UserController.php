@@ -66,7 +66,7 @@ class UserController extends Controller {
         $this->UserAPI = $API;
         
 //        $this->middleware('auth', ['except' => ['watchVideo', 'index','single_video','all_categories' ,'category_videos' , 'sub_category_videos' , 'contact','trending']]);
-        $this->middleware('auth', ['except' => ['index','contact', 'showVideo']]);
+        $this->middleware('auth', ['except' => ['index','contact', 'showVideo', 'sendContactForm']]);
     }
 
 
@@ -1104,14 +1104,23 @@ class UserController extends Controller {
                     ->with('suggestions' , $suggestions);
     }
 
-    public function contact(Request $request) {
+    public function contact() {
 
-        $contact = Page::where('type', 'contact')->first();
 
-        return view('r.contact')->with('contact' , $contact)
-                        ->with('page' , 'contact')
-                        ->with('subPage' , '');
 
+        return view('r.contact');
+
+    }
+
+    public function sendContactForm(Request $requset)
+    {
+        $subject = trans('messages.user_welcome_title');
+        $email_data = $requset;
+        $page = "emails.contact";
+        $email = 'info@ukumbitv.com';
+        Helper::send_email($page,$subject,$email,$email_data);
+
+        return redirect()->back()->with('flash_success', 'Email was successful send');
     }
 
     public function trending()

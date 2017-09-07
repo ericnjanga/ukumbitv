@@ -132,6 +132,7 @@ Route::get('/privacy', 'UserApiController@privacy')->name('user.privacy');
 Route::get('/terms', 'UserApiController@terms')->name('user.terms');
 
 Route::get('/contact', 'UserController@contact')->name('user.contact');
+Route::post('/contact', 'UserController@sendContactForm')->name('user.send-contact-form');
 
 Route::get('/privacy-statement', 'ApplicationController@privacy')->name('user.privacy_policy');
 

@@ -2,6 +2,7 @@
 @section('content')
   <div class="page-tersm-and-privacy">
     <div class="container">
+
 			<div class="row">
 			  <aside id="fixed-info" class="col-md-3 fixed-info">
 			  	<ul class="list-unstyled">
@@ -42,10 +43,16 @@
 
 	        	</div><!-- col1 -->
 
-	        	<div class="col-md-5 col-md-offset-1"> 
-	        		<form action="" method="">
+	        	<div class="col-md-5 col-md-offset-1">
+					@if(isset($flash_success))
+						<div class="alert alert-success"  >
+							{{--<button type="button" class="close" data-dismiss="alert">×</button>--}}
+							{{$flash_success}} aaaa
+						</div>
+					@endif
+	        		<form action="{{route('user.send-contact-form')}}" method="POST">
 	              <div class="form-group select-wrap">
-	                <select class="form-control" name="">
+	                <select class="form-control" name="category">
 	                  <option selected>Select the appeal category</option>
 	                  <option>appeal 1</option>
 	                  <option>appeal 2</option>
@@ -60,7 +67,7 @@
 					      </div>
 	              <div class="form-group">
 					        <label>Enter your message <span>*</span></label>
-	                <textarea class="form-control" name="" id="" placeholder="Type your message here"></textarea>
+	                <textarea class="form-control" name="message" id="" placeholder="Type your message here"></textarea>
 	              </div>
 					      <button type="submit" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</button>
 	 

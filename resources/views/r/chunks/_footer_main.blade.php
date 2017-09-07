@@ -10,7 +10,7 @@
        <li><a href="{{route("user.contact")}}">{{l("Contact Us")}}</a></li> -->
        <li>{{l("About Us")}}</li>
        <li>{{l("Jobs")}}</li>
-       <li>{{l("Contact Us")}}</li>
+        <li><a href="{{route("user.contact")}}">{{l("Contact Us")}}</a></li>
       </ul>
      </div>
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 footer-top-item">
