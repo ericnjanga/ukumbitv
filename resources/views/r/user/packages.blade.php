@@ -82,30 +82,30 @@
                                     <div class="payment-form-left">
                                         <div class="input-wrap">
                                             <label>First Name <span class="label-add-text">Must match card</span></label>
-                                            <input type="text" name="firstname">
+                                            <input type="text" name="firstname" class="form-control">
                                         </div>
                                         <div class="input-wrap input-lock">
                                             <label>Card Number</label>
-                                            <input type="text" name="cardnumber">
+                                            <input type="text" name="cardnumber" class="form-control">
                                         </div>
                                         <div class="input-wrap input-lock">
                                             <label>CVC</label>
-                                            <input type="text" name="cvc">
+                                            <input type="text" name="cvc" class="form-control">
                                         </div>
                                     </div>
                                     <div class="payment-form-right">
                                         <div class="input-wrap">
                                             <label>Last Name <span class="label-add-text">Must match card</span></label>
-                                            <input type="text" name="lastname">
+                                            <input type="text" name="lastname" class="form-control">
                                         </div>
                                         <div class="date-block">
                                             <div class="sublabel">Expiration Date</div>
                                             <div class="input-wrap">
-                                                <input type="text" name="year">
+                                                <input type="text" name="year" class="form-control">
                                             </div>
                                             <span>/</span>
                                             <div class="input-wrap">
-                                                <input type="text" name="month">
+                                                <input type="text" name="month" class="form-control">
                                             </div>
                                         </div>
                                         <button type="submit" class="butn btn-cta1b btn-lg">Update payment method</button>
