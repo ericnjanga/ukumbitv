@@ -93,12 +93,12 @@
 		                  <input type="text" name="cardnumber" class="form-control">
 		                  <div class="card-samples">
 		                  	<div id="card-image-container-Visa" role="widget" aria-live="polite" name="card-image-creditCardType" class="card-image-Visa-disabled card-image " aria-selected="false" aria-hidden="true" aria-disabled="true">
-						              <span id="card-image-text-Visa" class="card-image-text-Visa">
+						              <span id="card-image-text-Visa" class="card-image-text-Visa sr-only">
 						                Visa 
 						              </span>
 						           </div><!-- Visa -->
 						           <div id="card-image-container-MasterCard" role="widget" aria-live="polite" name="card-image-creditCardType" class="card-image-MasterCard-disabled card-image " aria-selected="false" aria-hidden="true" aria-disabled="true">
-						              <span id="card-image-text-MasterCard" class="card-image-text-MasterCard">
+						              <span id="card-image-text-MasterCard" class="card-image-text-MasterCard sr-only">
 						                MasterCard 
 						              </span>
 						           </div><!-- MasterCard -->
@@ -178,7 +178,7 @@
               		</div><!-- col -->
               	</div><!-- row -->
  
-                <div class="row">
+                <div class="row section-submit">
                 	<div class="col-md-12">
                 		<button type="submit" class="btn btn-primary btn-lg">Update payment method</button>
                 	</div><!-- col -->  

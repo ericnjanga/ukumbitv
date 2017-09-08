@@ -2224,6 +2224,10 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-packages .section-payment {
   max-width: 600px; }
 
+.page-packages .section-submit {
+  margin-top: 50px;
+  margin-bottom: 0; }
+
 .page-packages .GP-menu .play-menu > li:last-child a {
   background-color: #f83647; }
   .page-packages .GP-menu .play-menu > li:last-child a span {
@@ -2231,9 +2235,10 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .section-payment .card-samples {
   position: absolute;
-  top: 40px;
-  right: 0;
-  border: 2px solid red; }
+  top: 28px;
+  right: 4px;
+  z-index: 10;
+  width: 170px; }
   .section-payment .card-samples .card-image {
     float: right;
     position: relative;
