@@ -2156,53 +2156,53 @@ input:-webkit-autofill {
     margin: 0 0 0 15px;
   }
 }
-.payment-form-block{ 
-  width: 71%; 
-  form{
-    display: flex;
-    justify-content: space-between;
-    //width: 542px;
-    > div{
-      width: 47%;
-    }
-  }
-  .input-wrap {
-    margin-bottom: 17px;
-  }
-  .date-block{
-    .sublabel{
-      font-size: 13px;
-      font-weight: 400;
-      color: #616161;
-      line-height: 14px;
-      margin: 0 0 5px 0;
-    }
-    .input-wrap {
-      width: 65px;
-      display: inline-block;
-    }
-    span{
-      color: #424242;
-      font-size: 30px;
-      font-weight: 400;
-      position: relative;
-      top: 7px;
-      height: 45px;
-      margin: 0 5px;
-    }
-  }
-  .butn{
-    width: 100%;
-    margin: 20px 0 0 0;
-    font-size: 14px;
-    font-weight: 400;
-  }
-  .payment-form-left{
-    .input-wrap:last-child {
-      width: 64%;
-    }
-  }
-}
+// .payment-form-block{ 
+//   width: 71%; 
+//   form{
+//     display: flex;
+//     justify-content: space-between;
+//     //width: 542px;
+//     > div{
+//       width: 47%;
+//     }
+//   }
+//   .input-wrap {
+//     margin-bottom: 17px;
+//   }
+//   .date-block{
+//     .sublabel{
+//       font-size: 13px;
+//       font-weight: 400;
+//       color: #616161;
+//       line-height: 14px;
+//       margin: 0 0 5px 0;
+//     }
+//     .input-wrap {
+//       width: 65px;
+//       display: inline-block;
+//     }
+//     span{
+//       color: #424242;
+//       font-size: 30px;
+//       font-weight: 400;
+//       position: relative;
+//       top: 7px;
+//       height: 45px;
+//       margin: 0 5px;
+//     }
+//   }
+//   .butn{
+//     width: 100%;
+//     margin: 20px 0 0 0;
+//     font-size: 14px;
+//     font-weight: 400;
+//   }
+//   .payment-form-left{
+//     .input-wrap:last-child {
+//       width: 64%;
+//     }
+//   }
+// }
 .paypal-block{
   .card-text{
     margin: 0 0 20px 0;

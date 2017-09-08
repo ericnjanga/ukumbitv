@@ -1485,42 +1485,6 @@ input:-webkit-autofill {
   .card-text img {
     margin: 0 0 0 15px; }
 
-.payment-form-block {
-  width: 71%; }
-  .payment-form-block form {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
-    .payment-form-block form > div {
-      width: 47%; }
-  .payment-form-block .input-wrap {
-    margin-bottom: 17px; }
-  .payment-form-block .date-block .sublabel {
-    font-size: 13px;
-    font-weight: 400;
-    color: #616161;
-    line-height: 14px;
-    margin: 0 0 5px 0; }
-  .payment-form-block .date-block .input-wrap {
-    width: 65px;
-    display: inline-block; }
-  .payment-form-block .date-block span {
-    color: #424242;
-    font-size: 30px;
-    font-weight: 400;
-    position: relative;
-    top: 7px;
-    height: 45px;
-    margin: 0 5px; }
-  .payment-form-block .butn {
-    width: 100%;
-    margin: 20px 0 0 0;
-    font-size: 14px;
-    font-weight: 400; }
-  .payment-form-block .payment-form-left .input-wrap:last-child {
-    width: 64%; }
-
 .paypal-block .card-text {
   margin: 0 0 20px 0; }
 
