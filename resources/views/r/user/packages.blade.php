@@ -200,10 +200,10 @@
 				                </div>
 		              		</div><!-- col -->
 		              	</div><!-- row -->
-		 
+		     
 		                <div class="row section-submit">
 		                	<div class="col-md-12">
-		                		<button type="submit" class="btn btn-primary btn-block btn-lg">Update payment method</button>
+		                		<button type="submit" class="btn btn-primary btn-block btn-lg btn-submit">Update payment method</button>
 		                	</div><!-- col -->  
 		                </div><!-- row -->
 		              </form>
@@ -223,7 +223,7 @@
 				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo"> 
 			        <div class="panel-body paypal-block"> 
 	              <p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
-	              <a href="" class="btn btn-primary btn-lg">Continue to Pay Pal</a>
+	              <a href="" class="btn btn-primary btn-block btn-lg btn-submit">Continue to Pay Pal</a>
 		          </div><!-- panel-body paypal-block -->  
 				    </div><!-- collapseTwo -->
 				  </div><!-- panel-paypal -->
