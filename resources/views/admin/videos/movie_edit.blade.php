@@ -57,7 +57,7 @@
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-anime" value="anime" @if($video->video_type == 'anime') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-anime" value="animation" @if($video->video_type == 'animation') checked @endif>
 		            			Anime Movie
 		            		</label>
 		            	</li>

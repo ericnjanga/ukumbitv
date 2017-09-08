@@ -64,7 +64,7 @@
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-anime" value="anime"> 
+		            			<input type="radio" name="video-type" id="video-type-anime" value="animation">
 		            			Anime Movie
 		            		</label>
 		            	</li>
