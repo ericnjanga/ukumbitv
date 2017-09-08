@@ -11,7 +11,7 @@
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="UkumbiTV" />
   <meta property="og:description"   content="{{$video->title}}" />
-  <meta property="og:image"         content="{{$video->videoimage->imgPreview3}}" />
+  <meta property="og:image"         content="{{$video->videoimage->imgPreview1}}" />
   @endif
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,500i,700,900" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset('r/img/favicon/apple-touch-icon.png')}}">
