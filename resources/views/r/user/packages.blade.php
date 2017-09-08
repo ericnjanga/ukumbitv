@@ -95,7 +95,7 @@
 				  <div class="panel panel-default panel-payinfo">
 				    <div class="panel-heading" role="tab" id="headingOne">
 				      <h4 class="panel-title">
-				        <a role="button" class="btn btn-cta1b btn-lg open" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				        <a role="button" class="btn btn-block btn-cta1b btn-lg open" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 				          Update Payment Information
 				        </a>
 				      </h4>
@@ -215,8 +215,8 @@
 				  <div class="panel panel-default panel-paypal">
 				    <div class="panel-heading" role="tab" id="headingTwo">
 				      <h4 class="panel-title">
-				        <a class="collapsed" class="btn btn-cta1b btn-lg open" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				          Paypal
+				        <a class="collapsed btn btn-block btn-cta1b btn-lg" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				          Use Paypal
 				        </a>
 				      </h4>
 				    </div>
@@ -231,21 +231,7 @@
 		          </div><!-- panel-body paypal-block -->  
 				    </div><!-- collapseTwo -->
 				  </div><!-- panel-paypal -->
-				</div><!-- panel-group -->
-
-
-
-        <!-- <div class="payment-info--current">
-            <div class="payment-info"><span class="icon icon-paypal-big-logo"></span>example@redentu.com</div>
-            <a id="payinfo" href="" class="btn btn-cta1b btn-lg">Update payment information <span class="icon icon-scroll-arrow-to-down"></span></a>
-        </div> -->
-        <!-- <div class="payment-info--edit">
-          
-
-          <hr>
-
-          
-        </div> -->
+				</div><!-- panel-group --> 
       </section> <!-- section-payment --> 
     </div><!-- "global-main-content -->
   </div>

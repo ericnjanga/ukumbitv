@@ -2211,6 +2211,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   margin-right: 20px;
   width: calc(100% - 40px); }
 
+.page-packages .panel-heading {
+  padding: 0; }
+  .page-packages .panel-heading a {
+    padding: 20px; }
+
 .page-packages .section-payment {
   max-width: 600px; }
 

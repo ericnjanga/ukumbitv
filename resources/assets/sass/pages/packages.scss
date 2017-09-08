@@ -20,18 +20,12 @@
 		}
 	}
 
-	// .payment-info--current {
-	// 	margin-bottom: 50px;
-	// }
-
-	// .payment-info--edit { 
- //  	display: none;
- //  	hr {
- //  		width: 71%;
- //  		border-top: 1px dashed #333;
- //    	border-bottom: 1px dashed #fff;
- //  	}
-	// }
+	.panel-heading{
+		padding: 0;
+		a{
+			padding: 20px;
+		}
+	}
 
 	.section-payment {
 		max-width: 600px; 
