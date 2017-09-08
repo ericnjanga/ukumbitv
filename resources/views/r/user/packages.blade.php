@@ -5,7 +5,7 @@
                
     <div class="global-main-content">
     	<!-- packages selection section -->
-      <section class="price-list-block">
+      <section class="section-packages">
         <h1>{{trans('messages.home_plansec_title')}}</h1> 
         <div class="price-block">
             <div class="price-item">
@@ -69,7 +69,7 @@
 
 
     	<!-- payment info section --> 
-      <section class="payment-block-wrap">
+      <section class="section-payment">
         <h1>Payment information</h1>
         <div class="payment-info--current">
             <div class="payment-info"><span class="icon icon-paypal-big-logo"></span>example@redentu.com</div>
@@ -79,11 +79,11 @@
           <div class="payment-content">
             <h2>Update Payment Information</h2>
             <p class="payment-text">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
-            <div class="card-text">
+            <!-- <div class="card-text">
                 <span class="bold">Credit or Debit Card</span>
                 <img src="{{asset('r/img/visa.png')}}" alt="">
                 <img src="{{asset('r/img/mastercard.png')}}" alt="">
-            </div>
+            </div> -->
             <div class="payment-form-block">
               <form action="" method="" class="xl-inputs"> 
               	<div class="row">
@@ -107,7 +107,7 @@
 		                </div><!-- month -->
               		</div><!-- col -->
 
-              		<div class="col-md-4"> 
+              		<div class="col-md-3"> 
 		                <div class="input-group">
 		                  <label>Expiration Date (YYYY)</label>
 		                  <select name="expiry-year" id="expiry-year" class="form-control">
@@ -118,7 +118,7 @@
 		                </div><!-- year -->
               		</div><!-- col -->
 
-              		<div class="col-md-4"> 
+              		<div class="col-md-6"> 
 		                <div class="input-group">
 		                  <label>CVV</label>
                       <input type="text" name="cvv" id="cvv" class="form-control"> 

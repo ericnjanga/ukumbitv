@@ -2219,6 +2219,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     border-top: 1px dashed #333;
     border-bottom: 1px dashed #fff; }
 
+.page-packages .section-payment {
+  max-width: 600px; }
+
 .page-packages .GP-menu .play-menu > li:last-child a {
   background-color: #f83647; }
   .page-packages .GP-menu .play-menu > li:last-child a span {
@@ -2292,6 +2295,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 form label {
   font-weight: bold;
   font-weight: bold; }
+
+form .row {
+  margin-bottom: 15px; }
 
 form.xl-inputs input, form.xl-inputs select {
   height: 45px; }
