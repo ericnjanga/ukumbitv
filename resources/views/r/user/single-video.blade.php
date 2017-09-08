@@ -322,73 +322,75 @@
 @endsection
 
 @section('scripts')
-    <script>
-        console.log('{{$checkTrial}}');
-        function addToList() {
+	<!-- ADD TO LIST -->
+	<!-- (same script on "home-video.blade.php") -->
+  <script>
+      // console.log('{{$checkTrial}}');
+      function addToList() {
 
-            var fd = new FormData;
+          var fd = new FormData;
 
-            fd.append('_token', '{{csrf_token()}}');
-            fd.append('id', '{{$video->id}}');
+          fd.append('_token', '{{csrf_token()}}');
+          fd.append('id', '{{$video->id}}');
 
 
-            $.ajax({
-                type: 'POST',
-                url: '{{route('user.add-to-playlist')}}',
-                contentType: false,
-                processData: false,
-                data: fd,
-                dataType: 'html',
-                success: function(data){
-
-                    var rep = JSON.parse(data);
-                    swal({
-                        title: rep.title,
-                        text: rep.text,
-                        type: rep.type,
-                        html: true
-                    });
-                },
-                error: function(data){
-                    swal("Hmm", "Something went wrong, try again pls", "error");
-                }
-            });
-        }
-    </script>
-    <script src="https://player.vimeo.com/api/player.js"></script>
-    <script>
-        $(".ui.facebook.button").click(function() {
-            FB.ui({
-                method: 'share',
-                href: "{{URL::to('/')}}/video/{{$video->watchid}}"
-            }, function(response){});
-        })
-    </script>
-    <script>
-      var vimeo_iframe = $('iframe');
-      var player = new Vimeo.Player(vimeo_iframe);
-      var vimeo_flag = false;
-//      debugger;\$checkTrial
-      player.on('play', function() {
-        console.log('played the video');
-        if (vimeo_flag == true) return;
-        player.pause().then(function() {
           $.ajax({
-            type: 'POST',
-            url: '/vimeo-video-play',
-            data: {
-              id: {{$video->watchid}},
-              _token: '{{csrf_token()}}'
-            },
-            success: function(data){
-              vimeo_flag = true;
-              player.play();
-            },
-            error: function(data) {
-              console.log('error');
-            }
-          })
-        });
+              type: 'POST',
+              url: '{{route('user.add-to-playlist')}}',
+              contentType: false,
+              processData: false,
+              data: fd,
+              dataType: 'html',
+              success: function(data){
+
+                  var rep = JSON.parse(data);
+                  swal({
+                      title: rep.title,
+                      text: rep.text,
+                      type: rep.type,
+                      html: true
+                  });
+              },
+              error: function(data){
+                  swal("Hmm", "Something went wrong, try again pls", "error");
+              }
+          });
+      }
+  </script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+      $(".ui.facebook.button").click(function() {
+          FB.ui({
+              method: 'share',
+              href: "{{URL::to('/')}}/video/{{$video->watchid}}"
+          }, function(response){});
       })
-    </script>
+  </script>
+  <script>
+    var vimeo_iframe = $('iframe');
+    var player = new Vimeo.Player(vimeo_iframe);
+    var vimeo_flag = false;
+//      debugger;\$checkTrial
+    player.on('play', function() {
+      console.log('played the video');
+      if (vimeo_flag == true) return;
+      player.pause().then(function() {
+        $.ajax({
+          type: 'POST',
+          url: '/vimeo-video-play',
+          data: {
+            id: {{$video->watchid}},
+            _token: '{{csrf_token()}}'
+          },
+          success: function(data){
+            vimeo_flag = true;
+            player.play();
+          },
+          error: function(data) {
+            console.log('error');
+          }
+        })
+      });
+    })
+  </script>
 @endsection

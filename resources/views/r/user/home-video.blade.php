@@ -16,10 +16,10 @@
       			</a>
       		</li>
       		<li>
-      			<a href="#" class="btn btn-block btn-cta1b">
-      				<i class="fa fa-plus" aria-hidden="true"></i> 
-      				{{trans('messages.Add_to_list')}}
-      			</a>
+						<button class="btn btn-block btn-cta1b" onclick="addToList()">
+							<i class="fa fa-bookmark" aria-hidden="true"></i>
+							{{trans('messages.Add_to_list')}}
+						</button> 
       		</li>
       	</ul>
       </div><!-- hero -->
@@ -72,4 +72,44 @@
   </div>
   @include('r.chunks._video_item_popup')
      
+@endsection
+
+
+@section('scripts')
+     
+	<!-- ADD TO LIST -->
+	<!-- (same script on "single-video.blade.php") -->
+  <script>
+      // console.log('{{$checkTrial}}');
+      function addToList() {
+
+          var fd = new FormData;
+
+          fd.append('_token', '{{csrf_token()}}');
+          fd.append('id', '{{$video->id}}');
+
+
+          $.ajax({
+              type: 'POST',
+              url: '{{route('user.add-to-playlist')}}',
+              contentType: false,
+              processData: false,
+              data: fd,
+              dataType: 'html',
+              success: function(data){
+
+                  var rep = JSON.parse(data);
+                  swal({
+                      title: rep.title,
+                      text: rep.text,
+                      type: rep.type,
+                      html: true
+                  });
+              },
+              error: function(data){
+                  swal("Hmm", "Something went wrong, try again pls", "error");
+              }
+          });
+      }
+  </script>
 @endsection
