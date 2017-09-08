@@ -100,8 +100,7 @@
 				        </a>
 				      </h4>
 				    </div>
-				    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne"> 		        <div class="panel-body payment-content">
-		            <h2>Update Payment Information</h2>
+				    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne"> 		        <div class="panel-body payment-content"> 
 		            <p class="payment-text">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
 		            <!-- <div class="card-text">
 		                <span class="bold">Credit or Debit Card</span>
@@ -216,16 +215,13 @@
 				    <div class="panel-heading" role="tab" id="headingTwo">
 				      <h4 class="panel-title">
 				        <a class="collapsed btn btn-block btn-cta1b btn-lg" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				          Use Paypal
+				          Use Paypal 
+				          <img src="{{asset('r/img/paypal.png')}}" alt="">
 				        </a>
 				      </h4>
 				    </div>
 				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo"> 
-			        <div class="panel-body paypal-block">
-	              <div class="card-text">
-	                  <span class="bold">Pay Pal</span>
-	                  <img src="{{asset('r/img/paypal.png')}}" alt="">
-	              </div>
+			        <div class="panel-body paypal-block"> 
 	              <p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
 	              <a href="" class="btn btn-primary btn-lg">Continue to Pay Pal</a>
 		          </div><!-- panel-body paypal-block -->  
