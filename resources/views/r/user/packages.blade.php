@@ -77,48 +77,85 @@
         </div>
         <div class="payment-info--edit">
           <div class="payment-content">
-              <h2>Update Payment Information</h2>
-              <p class="payment-text">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
-              <div class="card-text">
-                  <span class="bold">Credit or Debit Card</span>
-                  <img src="{{asset('r/img/visa.png')}}" alt="">
-                  <img src="{{asset('r/img/mastercard.png')}}" alt="">
-              </div>
-              <div class="payment-form-block">
-                  <form action="" method="">
-                      <div class="payment-form-left">
-                          <div class="input-group">
-                              <label>First Name <span class="label-add-text">Must match card</span></label>
-                              <input type="text" name="firstname" class="form-control">
-                          </div>
-                          <div class="input-group input-lock">
-                              <label>Card Number</label>
-                              <input type="text" name="cardnumber" class="form-control">
-                          </div>
-                          <div class="input-group input-lock">
-                              <label>CVC</label>
-                              <input type="text" name="cvc" class="form-control">
-                          </div>
-                      </div>
-                      <div class="payment-form-right">
-                          <div class="input-group">
-                              <label>Last Name <span class="label-add-text">Must match card</span></label>
-                              <input type="text" name="lastname" class="form-control">
-                          </div>
-                          <div class="date-block">
-                              <div class="sublabel">Expiration Date</div>
-                              <div class="input-group">
-                                  <input type="text" name="year" class="form-control">
-                              </div>
-                              <span>/</span>
-                              <div class="input-group">
-                                  <input type="text" name="month" class="form-control">
-                              </div>
-                          </div>
-                          <button type="submit" class="btn btn-cta1b btn-lg">Update payment method</button>
-                      </div>
-                  </form>
-              </div>
+            <h2>Update Payment Information</h2>
+            <p class="payment-text">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
+            <div class="card-text">
+                <span class="bold">Credit or Debit Card</span>
+                <img src="{{asset('r/img/visa.png')}}" alt="">
+                <img src="{{asset('r/img/mastercard.png')}}" alt="">
+            </div>
+            <div class="payment-form-block">
+              <form action="" method="" class="xl-inputs"> 
+              	<div class="row">
+              		<div class="col-md-12"> 
+		                <div class="input-group">
+		                  <label>Card Number</label>
+		                  <input type="text" name="cardnumber" class="form-control">
+		                </div>
+              		</div><!-- col -->
+              	</div><!-- row -->
+
+              	<div class="row">
+              		<div class="col-md-3"> 
+		                <div class="input-group">
+		                  <label>Expiration Date (MM)</label>
+		                  <select name="expiry-month" id="expiry-month" class="form-control">
+		                  	<option value="">Month</option>
+		                  	<!-- option list -->
+		                  	<!-- All 12 months -->
+		                  </select> 
+		                </div><!-- month -->
+              		</div><!-- col -->
+
+              		<div class="col-md-4"> 
+		                <div class="input-group">
+		                  <label>Expiration Date (YYYY)</label>
+		                  <select name="expiry-year" id="expiry-year" class="form-control">
+		                  	<option value="">Year</option> 
+		                  	<!-- option list -->
+		                  	<!-- from current year up to 30 years -->
+		                  </select> 
+		                </div><!-- year -->
+              		</div><!-- col -->
+
+              		<div class="col-md-4"> 
+		                <div class="input-group">
+		                  <label>CVV</label>
+                      <input type="text" name="cvv" id="cvv" class="form-control"> 
+		                </div><!-- year -->
+              		</div><!-- col -->
+              	</div><!-- row -->
+
+
+                <div class="payment-form-left">
+                    <div class="input-group">
+                        <label>First Name <span class="label-add-text">Must match card</span></label>
+                        <input type="text" name="firstname" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <label>CVC</label>
+                        <input type="text" name="cvc" class="form-control">
+                    </div>
+                </div>
+                <div class="payment-form-right">
+                    <div class="input-group">
+                        <label>Last Name <span class="label-add-text">Must match card</span></label>
+                        <input type="text" name="lastname" class="form-control">
+                    </div>
+                    <div class="date-block">
+                        <div class="sublabel">Expiration Date</div>
+                        <div class="input-group">
+                            <input type="text" name="year" class="form-control">
+                        </div>
+                        <span>/</span>
+                        <div class="input-group">
+                            <input type="text" name="month" class="form-control">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-cta1b btn-lg">Update payment method</button>
+                </div>
+              </form>
+            </div>
           </div>
 
           <hr>
