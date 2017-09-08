@@ -79,8 +79,7 @@
      
 	<!-- ADD TO LIST -->
 	<!-- (same script on "single-video.blade.php") -->
-  <script>
-      // console.log('{{$checkTrial}}');
+  <script> 
       function addToList() {
 
           var fd = new FormData;
