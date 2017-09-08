@@ -138,7 +138,7 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 hr {
-  border-top: 1px solid #bbb;
+  border-top: 1px solid #999;
   border-bottom: 1px solid #fff; }
 
 ol, ul {
@@ -2273,6 +2273,14 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     width: 71%;
     border-top: 1px dashed #333;
     border-bottom: 1px dashed #fff; }
+
+.page-packages .GP-menu .play-menu > li:last-child a {
+  background-color: #f83647;
+  color: #fff; }
+
+.page-myaccount .GP-menu .play-menu > li:first-child a {
+  background-color: #757575;
+  color: #fff; }
 
 .main-header {
   height: 60px;

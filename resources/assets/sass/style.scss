@@ -170,7 +170,7 @@ footer, header, hgroup, menu, nav, section {
 
 
 hr {
-  border-top: 1px solid #bbb;
+  border-top: 1px solid #999;
   border-bottom: 1px solid #fff;
 }
 
@@ -2264,6 +2264,7 @@ input:-webkit-autofill {
 @import 'pages/terms-and-privacy';
 @import 'pages/categories';
 @import 'pages/packages';
+@import 'pages/account';
 @import 'global-components/main-header';
 @import 'global-components/main-footer';
 @import 'global-components/form';
