@@ -98,7 +98,7 @@
               	<div class="row">
               		<div class="col-md-3"> 
 		                <div class="input-group">
-		                  <label>Expiration Date (MM)</label>
+		                  <label>Expiration (MM)</label>
 		                  <select name="expiry-month" id="expiry-month" class="form-control">
 		                  	<option value="">Month</option>
 		                  	<!-- option list -->
@@ -109,7 +109,7 @@
 
               		<div class="col-md-3"> 
 		                <div class="input-group">
-		                  <label>Expiration Date (YYYY)</label>
+		                  <label>Expiration (YYYY)</label>
 		                  <select name="expiry-year" id="expiry-year" class="form-control">
 		                  	<option value="">Year</option> 
 		                  	<!-- option list -->
@@ -125,35 +125,52 @@
 		                </div><!-- year -->
               		</div><!-- col -->
               	</div><!-- row -->
-
-
-                <div class="payment-form-left">
-                    <div class="input-group">
-                        <label>First Name <span class="label-add-text">Must match card</span></label>
-                        <input type="text" name="firstname" class="form-control">
-                    </div>
-                    <div class="input-group">
-                        <label>CVC</label>
-                        <input type="text" name="cvc" class="form-control">
-                    </div>
-                </div>
-                <div class="payment-form-right">
-                    <div class="input-group">
-                        <label>Last Name <span class="label-add-text">Must match card</span></label>
-                        <input type="text" name="lastname" class="form-control">
-                    </div>
-                    <div class="date-block">
-                        <div class="sublabel">Expiration Date</div>
-                        <div class="input-group">
-                            <input type="text" name="year" class="form-control">
-                        </div>
-                        <span>/</span>
-                        <div class="input-group">
-                            <input type="text" name="month" class="form-control">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-cta1b btn-lg">Update payment method</button>
-                </div>
+              	
+              	<div class="row">
+              		<div class="col-md-12"> 
+		                <div class="input-group">
+                      <label>Cardholder Name</label>
+                      <input type="text" name="cardhlder-name" class="form-control">
+		                </div>
+              		</div><!-- col -->
+              	</div><!-- row -->
+              	
+              	<div class="row">
+              		<div class="col-md-12"> 
+		                <div class="input-group">
+		                  <label>Country</label>
+		                  <select name="expiry-year" id="expiry-year" class="form-control">
+		                  	<option value="">Select a country</option> 
+		                  	<!-- option list -->
+		                  	<!-- from current year up to 30 years -->
+		                  </select> 
+		                </div>
+              		</div><!-- col -->
+              	</div><!-- row -->
+              	
+              	<div class="row">
+              		<div class="col-md-12"> 
+		                <div class="input-group">
+                      <label>State/Province/Region</label>
+                      <input type="text" name="cardhlder-state" class="form-control">
+		                </div>
+              		</div><!-- col -->
+              	</div><!-- row -->
+              	
+              	<div class="row">
+              		<div class="col-md-12"> 
+		                <div class="input-group">
+                      <label>Zip/Postal Code</label>
+                      <input type="text" name="cardhlder-zip" class="form-control">
+		                </div>
+              		</div><!-- col -->
+              	</div><!-- row -->
+ 
+                <div class="row">
+                	<div class="col-md-12">
+                		<button type="submit" class="btn btn-primary btn-lg">Update payment method</button>
+                	</div><!-- col -->  
+                </div><!-- row -->
               </form>
             </div>
           </div>
@@ -166,7 +183,7 @@
                   <img src="{{asset('r/img/paypal.png')}}" alt="">
               </div>
               <p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
-              <a href="" class="btn btn-cta1b btn-lg">Continue to Pay Pal</a>
+              <a href="" class="btn btn-primary btn-lg">Continue to Pay Pal</a>
           </div>
         </div>
       </section> 
