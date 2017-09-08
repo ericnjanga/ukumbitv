@@ -3,7 +3,8 @@
 .container-fluid,
 .list-horizontal-wrapper,
 .block-wrap,
-.layout-3-columns {
+.layout-3-columns,
+.card-samples {
 	&:before, &:after {
 	  display: table;
 	  content: " ";

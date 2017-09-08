@@ -91,12 +91,24 @@
 		                <div class="input-group">
 		                  <label>Card Number</label>
 		                  <input type="text" name="cardnumber" class="form-control">
+		                  <div class="card-samples">
+		                  	<div id="card-image-container-Visa" role="widget" aria-live="polite" name="card-image-creditCardType" class="card-image-Visa-disabled card-image " aria-selected="false" aria-hidden="true" aria-disabled="true">
+						              <span id="card-image-text-Visa" class="card-image-text-Visa">
+						                Visa 
+						              </span>
+						           </div><!-- Visa -->
+						           <div id="card-image-container-MasterCard" role="widget" aria-live="polite" name="card-image-creditCardType" class="card-image-MasterCard-disabled card-image " aria-selected="false" aria-hidden="true" aria-disabled="true">
+						              <span id="card-image-text-MasterCard" class="card-image-text-MasterCard">
+						                MasterCard 
+						              </span>
+						           </div><!-- MasterCard -->
+		                  </div><!-- card samples -->
 		                </div>
               		</div><!-- col -->
               	</div><!-- row -->
 
               	<div class="row">
-              		<div class="col-md-3"> 
+              		<div class="col-md-4"> 
 		                <div class="input-group">
 		                  <label>Expiration (MM)</label>
 		                  <select name="expiry-month" id="expiry-month" class="form-control">
@@ -107,7 +119,7 @@
 		                </div><!-- month -->
               		</div><!-- col -->
 
-              		<div class="col-md-3"> 
+              		<div class="col-md-4"> 
 		                <div class="input-group">
 		                  <label>Expiration (YYYY)</label>
 		                  <select name="expiry-year" id="expiry-year" class="form-control">
@@ -118,7 +130,7 @@
 		                </div><!-- year -->
               		</div><!-- col -->
 
-              		<div class="col-md-6"> 
+              		<div class="col-md-4"> 
 		                <div class="input-group">
 		                  <label>CVV</label>
                       <input type="text" name="cvv" id="cvv" class="form-control"> 

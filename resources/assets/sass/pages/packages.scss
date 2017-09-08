@@ -34,7 +34,7 @@
 	}
 
 	.section-payment {
-		max-width: 600px;
+		max-width: 600px; 
 	}
 }
 
@@ -51,3 +51,41 @@
 		}
 	}
 }
+
+
+
+
+.section-payment { 
+	.card-samples {
+		position: absolute;
+		top: 40px;
+		right: 0;
+		border: 2px solid red;
+		.card-image {
+	    float: right;
+	    position: relative;
+	    top: 1px;
+	  }
+	  .card-image-Visa-disabled {
+	    background-image: url(https://static.zuora.com/Resources/842254/Images/card-logos-3.png);
+	    background-position: 0 -902px;
+	    width: 60px;
+	    height: 32px;
+	    margin: 2px;
+		}
+		.card-image-MasterCard-disabled {
+	    background-image: url(https://static.zuora.com/Resources/842254/Images/card-logos-3.png);
+	    background-position: 0 -738px;
+	    width: 52px;
+	    height: 32px;
+	    margin: 2px;
+		}
+	}//card-samples
+}
+
+
+
+
+
+
+
