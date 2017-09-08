@@ -7,7 +7,7 @@
     	<div class="row">
     		<div class="col-sm-2">
 	        <div class="img-block">
-	        	<img src="{{asset('r/img/user-photo.png')}}" alt="">
+	        	<img src="{{Auth::user()->picture}}" alt="">
             <a href="" class="change-photo-butn"><span class="icon icon-pencil-edit-button"></span></a>
         	</div>
 	    	</div>
