@@ -94,12 +94,19 @@ align-items: center;
 
 
   @media (max-width: 767px) {
+  	.navbar-collapse {
+  		border-top: 0;
+  	}
 		.nav-user-access{
+			display: block;
 			margin-left: 30px;
+			.nav-package-info {
+				float: left;
+			}
 		}
 		.frame-search{
 			form {
-				margin-left: 30px;
+				padding-left: 30px;
 			}
 		}
   }

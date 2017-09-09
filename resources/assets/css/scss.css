@@ -2341,10 +2341,15 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     text-decoration: none; }
 
 @media (max-width: 767px) {
+  .ukb-main-header .navbar-collapse {
+    border-top: 0; }
   .ukb-main-header .nav-user-access {
+    display: block;
     margin-left: 30px; }
+    .ukb-main-header .nav-user-access .nav-package-info {
+      float: left; }
   .ukb-main-header .frame-search form {
-    margin-left: 30px; } }
+    padding-left: 30px; } }
 
 .main-footer {
   margin-top: 150px;
