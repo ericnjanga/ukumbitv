@@ -35,7 +35,7 @@
 
       <div class="block-wrap">
           <h2>My List</h2>  
-          @if($watch_lists->isEmpty())
+          @if($my_lists->isEmpty())
               <div class="block-msg">
                   <div>{{trans('messages.empty_my_list')}}</div>
                   {{--<p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>--}}
@@ -43,7 +43,7 @@
           @else
 
               <div class="list-horizontal-wrapper">
-                  @foreach($watch_lists as $video)
+                  @foreach($my_lists as $video)
                       @include('r.chunks._video_item')
                   @endforeach
               </div>

@@ -200,7 +200,7 @@
               </span>
         		</div>
         		<div class="col-sm-4 text-center col-mid">
-        			<i class="fa fa-user" aria-hidden="true"></i> 1020 total
+        			<i class="fa fa-user" aria-hidden="true"></i> {{$likes + $dislikes}} total
         		</div>
         		<div class="col-sm-4">
         			<span class="txt-xxl pull-right">

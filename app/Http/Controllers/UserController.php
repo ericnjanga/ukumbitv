@@ -170,6 +170,8 @@ class UserController extends Controller {
 
             $grandVideo = AdminVideo::with('videoimage', 'category', 'likes')->where('is_banner', 1)->first();
 
+            $my_lists =$this->myPlaylist();
+
             return view('r.user.home-video')
                         ->with('page' , 'home')
                         ->with('subPage' , 'home')
@@ -177,6 +179,7 @@ class UserController extends Controller {
                         ->with('recent_videos' , $recent_videos)
                         ->with('trendings' , $trendings)
                         ->with('watch_lists' , $watch_lists)
+                        ->with('my_lists' , $my_lists)
                         ->with('suggestions' , $suggestions)
                         ->with('categories' , $categories)
                         ->with('videos_by_cat' , $lastVideos)
@@ -218,9 +221,9 @@ class UserController extends Controller {
     public function videosByType($id)
     {
 
-        $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('video_type', substr($id, 0, -1))->get();
+        $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('video_type', $id)->get();
 
-        return view('r.user.category-videos')->with('videos', $videos);
+        return view('r.user.category-videos')->with('videos', $videos)->with('videoType', $id);
     }
 
     public function getVideosByCategory($id)
@@ -278,20 +281,25 @@ class UserController extends Controller {
     {
         $trials = TrialPeriod::where('user_id', Auth::id())->get();
 
-        if(count($trials) > 0) {
-            foreach ($trials as $trial) {
-                if ($trial->admin_video_id == $id) {
-                    return true;
-                }
-            }
-            if(count($trials ) < 3) {
-                return true;
-            } else {
-            return false;
-            }
+        if(count($trials) < 3) {
+            return true;
         }
+        return false;
 
-        return true;
+//        if(count($trials) > 0) {
+//            foreach ($trials as $trial) {
+//                if ($trial->admin_video_id == $id) {
+//                    return true;
+//                }
+//            }
+//            if(count($trials ) < 3) {
+//                return true;
+//            } else {
+//            return false;
+//            }
+//        }
+//
+//        return true;
 
     }
 
@@ -348,9 +356,9 @@ class UserController extends Controller {
         }
         $videos = AdminVideo::with('videoimage', 'likes', 'category')->find($ids);
 
-
-        return view('r.user.movie-list')
-            ->with('videos', $videos);
+        return $videos;
+//        return view('r.user.movie-list')
+//            ->with('videos', $videos);
     }
 
     public function watchVideo($id)

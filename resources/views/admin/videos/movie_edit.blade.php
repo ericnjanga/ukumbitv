@@ -33,31 +33,31 @@
 		            <ul class="list-inline" style="padding:0;">
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-movie" value="movie" @if($video->video_type == 'movie') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-movie" value="movies" @if($video->video_type == 'movies') checked @endif>
 		            			Movie
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshow" @if($video->video_type == 'tvshow') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshows" @if($video->video_type == 'tvshows') checked @endif>
 		            			TvShow
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-webserie" value="webserie" @if($video->video_type == 'webserie') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-webserie" value="webseries" @if($video->video_type == 'webseries') checked @endif>
 		            			Web Serie
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-documentary" value="documentary" @if($video->video_type == 'documentary') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-documentary" value="documentaries" @if($video->video_type == 'documentaries') checked @endif>
 		            			Documentary
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-anime" value="anime" @if($video->video_type == 'anime') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-anime" value="animations" @if($video->video_type == 'animations') checked @endif>
 		            			Anime Movie
 		            		</label>
 		            	</li>

@@ -40,31 +40,31 @@
 		            <ul class="list-inline" style="padding:0;">
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-movie" value="movie" checked> 
+		            			<input type="radio" name="video-type" id="video-type-movie" value="movies" checked>
 		            			Movie
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshow"> 
+		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshows">
 		            			TvShow
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-webserie" value="webserie"> 
+		            			<input type="radio" name="video-type" id="video-type-webserie" value="webseries">
 		            			Web Serie
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-documentary" value="documentary"> 
+		            			<input type="radio" name="video-type" id="video-type-documentary" value="documentaries">
 		            			Documentary
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-anime" value="anime"> 
+		            			<input type="radio" name="video-type" id="video-type-anime" value="animations">
 		            			Anime Movie
 		            		</label>
 		            	</li>
