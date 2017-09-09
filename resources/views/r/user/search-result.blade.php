@@ -21,12 +21,12 @@
                   @include('r.chunks._filter_tags')
               </div>
           </div>
-          <div class="video-list-block-wrap">
+          <!-- <div class="video-list-block-wrap">
               <div class="js-filter-results">
                   @include('r.chunks._filter_results')
               </div>
               <a href="" class="butn btn-cta1 btn-lg">Load more</a>
-          </div>
+          </div> -->
       </div><!-- video-list-wrap --> 
     </div><!-- global-main-content -->
   </div>
