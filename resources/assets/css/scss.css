@@ -2349,6 +2349,10 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .GP-menu {
     display: none; } }
 
+@media (min-width: 768px) {
+  .GP-menu {
+    display: block; } }
+
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: #ccc; }
 
