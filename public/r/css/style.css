@@ -2325,6 +2325,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .ukb-main-header .nav-user-access span {
     display: block;
     border: 1px solid green; }
+  .ukb-main-header .nav-user-access .caret {
+    display: inline-block !important;
+    color: #000; }
 
 .ukb-main-header .nav-user-tmb {
   margin-left: 10px; }
@@ -2338,6 +2341,12 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   text-decoration: underline; }
   .ukb-main-header #link-update-package:hover {
     text-decoration: none; }
+
+@media (max-width: 767px) {
+  .ukb-main-header .nav-user-access {
+    margin-left: 30px; }
+  .ukb-main-header .frame-search form {
+    margin-left: 30px; } }
 
 .main-footer {
   margin-top: 150px;

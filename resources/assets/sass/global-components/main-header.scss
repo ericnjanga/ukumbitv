@@ -70,8 +70,12 @@ align-items: center;
   		display: block;
   		border: 1px solid green;
   	}
+  	.caret {
+  		display: inline-block!important;
+  		color: #000;
+  	}
   }
-  
+
 	.nav-user-tmb {
 		margin-left: 10px;
 		img {
@@ -86,6 +90,18 @@ align-items: center;
   	&:hover{
   		text-decoration: none; 
   	}
+  }
+
+
+  @media (max-width: 767px) {
+		.nav-user-access{
+			margin-left: 30px;
+		}
+		.frame-search{
+			form {
+				margin-left: 30px;
+			}
+		}
   }
 }//.ukb-main-header
 
