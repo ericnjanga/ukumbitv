@@ -2195,6 +2195,12 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-categories .video-item {
   margin-bottom: 30px; }
 
+.page-movies .GP-menu .play-menu li:nth-child(1) + .menu-entry-text {
+  background: #990033; }
+
+.page-animations .GP-menu .play-menu li:nth-child(2) + .menu-entry-text {
+  background: #798801; }
+
 .page-packages h1 {
   margin-bottom: 30px; }
 

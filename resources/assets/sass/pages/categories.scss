@@ -4,3 +4,22 @@
 		margin-bottom: 30px;
 	}
 }
+
+
+
+//Activate main menu items on specific pages
+//------------------------------------------
+.page-movies {
+	.GP-menu { 
+		.play-menu li:nth-child(1) + .menu-entry-text {
+		  background: $color-darkred;
+		}
+	}
+}
+.page-animations {
+	.GP-menu { 
+		.play-menu li:nth-child(2) + .menu-entry-text {
+		  background: $color-yellow-green;
+		}
+	}
+}
