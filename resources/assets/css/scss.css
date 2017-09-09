@@ -2345,6 +2345,10 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .ukb-main-header .navbar-brand {
     margin-left: 0 !important; } }
 
+@media (max-width: 767px) {
+  .GP-menu {
+    display: none; } }
+
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: #ccc; }
 
