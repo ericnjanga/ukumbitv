@@ -2068,7 +2068,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
         padding-left: 20px; } }
 
 .landing-header__content,
-.main-header {
+.landing-header .navbar {
   position: relative;
   z-index: 10; }
 
@@ -2348,8 +2348,6 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     height: auto; }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  position: relative;
-  z-index: 100;
   border-color: #ccc; }
 
 .main-footer {
