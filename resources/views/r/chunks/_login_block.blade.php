@@ -13,11 +13,15 @@
 		<span class="caret"></span>
 	</a>
 	<ul class="dropdown-menu">
-	  <li><a href="#">Action</a></li>
+		<li><a href="{{route('user.account')}}">My account</a></li>
+    <li><a href="{{route('user.package')}}">Plan</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="{{route('user.logout')}}">Sign Out</a></li>
+	  <!-- <li><a href="#">Action</a></li>
 	  <li><a href="#">Another action</a></li>
 	  <li><a href="#">Something else here</a></li>
 	  <li role="separator" class="divider"></li>
-	  <li><a href="#">Separated link</a></li>
+	  <li><a href="#">Separated link</a></li> -->
 	</ul>
 </div>
 
