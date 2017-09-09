@@ -1,6 +1,4 @@
-<header class="landing-header">
-
-
+<header class="landing-header"> 
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle -->
@@ -15,59 +13,16 @@
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
-	    	<!-- <ul class="ukb-nav-videos nav navbar-nav">
-	        <li id="movies">
-						<a href="{{route('user.videotype', 'movies')}}"> 
-							Movies
-						</a> 
-					</li>
-					<li id="animations">
-						<a href="{{route('user.videotype', 'animations')}}"> 
-							Animation
-						</a> 
-					</li>  
-	      </ul> -->
-
-	      <!-- <div id="frame-search" class="frame-search">
-	        <form action="{{route('search-all')}}" class="navbar-form navbar-left" method="post">  
-	          <div class="input-group">
-				      <input name="key" type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false">
-				      <span class="input-group-btn">
-				        <button class="btn btn-search btn-primary" type="submit"> 
-				      		<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-				      		<span class="sr-only">{{trans('messages.search')}}!</span>
-				      	</button>
-				      </span>
-				    </div> 
-	        </form> 
-	      </div> -->
-
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">  
 	      <ul class="nav navbar-nav navbar-right"> 
 	      	<li>
 	      		<a href="{{route('user.login.form')}}" class="btn btn-link btn-lg">{{l("Sign in")}}</a>
-	      	</li>
-	        <!-- <li class="dropdown"> 
-	          @include('r.chunks._login_block') 
-	        </li> -->
+	      	</li> 
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>  
 
-<!-- 	<div class="main-header">
-	  <div class="container">
-	    <div class="row">
-	      <div class="frame-logo"> 
-	        <img src="http://test.ukumbitv.com/r/img/logo.png" alt=""> 
-	      </div>
-	      
-	      <div class="frame-useraccount">
-	        <a href="{{route('user.login.form')}}" class="btn btn-link btn-lg">{{l("Sign in")}}</a>
-	      </div>
-	    </div>
-	  </div>
-	</div> -->
 
 
   <div class="container landing-header__content">    
