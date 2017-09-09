@@ -2010,7 +2010,15 @@ fieldset[disabled] .twitter-typeahead .tt-input {
       -ms-flex-direction: column;
       flex-direction: column;
       -ms-flex-align: center;
-      align-items: center; } }
+      align-items: center; }
+      .page-landing .txt-presentation3 li {
+        margin-bottom: 50px; }
+      .page-landing .txt-presentation3 .title {
+        margin-bottom: 0; }
+        .page-landing .txt-presentation3 .title .icon {
+          line-height: 70px; }
+      .page-landing .txt-presentation3 .txt {
+        margin: 0; } }
   .page-landing .txt-presentation3 > li {
     max-width: 350px; }
     @media (min-width: 995px) {

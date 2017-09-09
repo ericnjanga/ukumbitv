@@ -27,6 +27,18 @@
   	@media (max-width: 994px){ 
 	  	flex-direction: column;
 	  	align-items: center;
+	  	li {
+	  		margin-bottom: 50px;
+	  	}
+	  	.title {
+	  		margin-bottom: 0;
+	  		.icon {
+	  			line-height: 70px;
+	  		}
+	  	}
+	  	.txt {
+	  		margin: 0;
+	  	}
   	}
 
 	  > li {
