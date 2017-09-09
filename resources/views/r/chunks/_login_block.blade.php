@@ -1,17 +1,19 @@
-<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+<div class="nav-user-access">
+	<span class="nav-package-info">
+    <span class="login-text">@if(isset($videoCount)){{$videoCount}} videos left @else Unlimited videos @endif</span>
+    <span id="link-update-package" data-route="{{route('user.package')}}">
+    	upgrade package
+    </span>
+    <!-- <a href="{{route('user.package')}}" class="login-upgrade">upgrade package</a> -->
+	</span>  
+	 
 
-  <span class="nav-user-access">
-  	<span class="login-info">
-      <span class="login-text">@if(isset($videoCount)){{$videoCount}} videos left @else Unlimited videos @endif</span>
-      <span id="link-update-package" data-route="{{route('user.package')}}">
-      	upgrade package
-      </span>
-      <!-- <a href="{{route('user.package')}}" class="login-upgrade">upgrade package</a> -->
-  	</span> 
+	<a href="#" class="dropdown-toggle nav-user-tmb" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 		<img class="user-tmb" src="{{asset('r/img/no-img.png')}}" alt="">
-  </span>
-	<span class="caret"></span>
-</a>
+	  
+		<span class="caret"></span>
+	</a>
+</div>
 <ul class="dropdown-menu">
   <li><a href="#">Action</a></li>
   <li><a href="#">Another action</a></li>

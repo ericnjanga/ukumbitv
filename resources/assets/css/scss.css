@@ -2318,15 +2318,17 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   display: -ms-flexbox;
   display: flex;
   border: 2px solid red;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 17px;
   -ms-flex-align: center;
   align-items: center; }
   .ukb-main-header .nav-user-access span {
     display: block;
     border: 1px solid green; }
-  .ukb-main-header .nav-user-access .user-tmb {
-    margin-left: 10px;
+
+.ukb-main-header .nav-user-tmb {
+  margin-left: 10px; }
+  .ukb-main-header .nav-user-tmb img {
     height: 40px;
     width: 40px;
     border-radius: 50%; }

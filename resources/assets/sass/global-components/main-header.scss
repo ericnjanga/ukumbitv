@@ -63,20 +63,23 @@ align-items: center;
   .nav-user-access {
   	display: flex;
   	border: 2px solid red; 
-  	font-size: 14px;
+  	font-size: 12px;
     line-height: 17px;
     align-items: center;
   	span {
   		display: block;
   		border: 1px solid green;
   	}
-  	.user-tmb {
-  		margin-left: 10px;
-  		height: 40px;
+  }
+  
+	.nav-user-tmb {
+		margin-left: 10px;
+		img {
+			height: 40px;
 	    width: 40px;
 	    border-radius: 50%;
-  	}
-  }
+		}
+	}
   #link-update-package {
   	cursor: pointer;
   	text-decoration: underline;
@@ -85,4 +88,5 @@ align-items: center;
   	}
   }
 }//.ukb-main-header
+
 
