@@ -2321,6 +2321,12 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     display: block;
     border: 1px solid green; }
 
+.ukb-main-header #link-update-package {
+  cursor: pointer;
+  text-decoration: underline; }
+  .ukb-main-header #link-update-package:hover {
+    text-decoration: none; }
+
 .main-footer {
   margin-top: 150px;
   font-size: 13px;

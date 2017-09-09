@@ -682,4 +682,30 @@ $('#intro-video').YTPlayer({
 
 
 
+/**
+ *
+ * INITIALIZE INTRO BACKGROUND VIDEO
+ * ---------------------------------
+*/
+$('body').on('click', '#link-update-package', function(){
+	document.location.href = $(this).data('route');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

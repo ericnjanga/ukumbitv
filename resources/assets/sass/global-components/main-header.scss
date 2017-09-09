@@ -68,5 +68,12 @@ align-items: center;
   		border: 1px solid green;
   	}
   }
+  #link-update-package {
+  	cursor: pointer;
+  	text-decoration: underline;
+  	&:hover{
+  		text-decoration: none; 
+  	}
+  }
 }//.ukb-main-header
 

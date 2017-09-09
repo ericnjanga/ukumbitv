@@ -3,7 +3,10 @@
   <span class="nav-user-access">
   	<span class="login-info">
       <span class="login-text">@if(isset($videoCount)){{$videoCount}} videos left @else Unlimited videos @endif</span>
-      <a href="{{route('user.package')}}" class="login-upgrade">upgrade package</a>
+      <span id="link-update-package" data-route="{{route('user.package')}}">
+      	upgrade package
+      </span>
+      <!-- <a href="{{route('user.package')}}" class="login-upgrade">upgrade package</a> -->
   	</span> 
 		<img src="{{asset('r/img/no-img.png')}}" alt="">
   </span>
