@@ -17,7 +17,9 @@
 	}
 }
 .page-animations {
+	border: 5px solid red!important;
 	.GP-menu { 
+		border: 5px solid blue!important;
 		.play-menu li.animations .menu-entry-text {
 		  background: $color-yellow-green;
 		}
