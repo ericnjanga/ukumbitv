@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="{{asset('packages/sweetalert/sweetalert.css')}}">
     {{--<link rel="stylesheet" href="{{asset('r/css/less.css')}}">--}}
     <link rel="stylesheet" href="{{asset('r/css/passfield.min.css')}}">
-    я
+
 </head>
 <body data-search-route="{{route('search-data')}}">
  
