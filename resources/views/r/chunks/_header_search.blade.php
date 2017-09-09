@@ -33,7 +33,10 @@
           <div class="input-group">
 			      <input name="key" type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false">
 			      <span class="input-group-btn">
-			        <button class="btn btn-search btn-primary" type="submit">{{trans('messages.search')}}!</button>
+			        <button class="btn btn-search btn-primary" type="submit"> 
+			      		<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+			      		<span class="sr-only">{{trans('messages.search')}}!</span>
+			      	</button>
 			      </span>
 			    </div><!-- /input-group -->
         </form> 
