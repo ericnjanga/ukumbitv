@@ -1,6 +1,6 @@
 <nav class="ukb-main-header navbar navbar-default">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- Brand and toggle -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -12,10 +12,8 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
     	<ul class="ukb-nav-videos nav navbar-nav">
-        <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>  -->
         <li id="movies">
 					<a href="{{route('user.videotype', 'movies')}}"> 
 						Movies
@@ -50,35 +48,3 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-
-
-
-
-<!-- 
-
-
-<header class="main-header">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="frame-logo">
-        <a href="/">
-         	<img src="{{asset('r/img/logo.png')}}" alt="">
-        </a>
-      </div>
-      <div id="frame-search" class="frame-search">
-        <form action="{{route('search-all')}}" method="post">  
-          <div class="input-group">
-			      <input name="key" type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false">
-			      <span class="input-group-btn">
-			        <button class="btn btn-search btn-primary" type="submit">{{trans('messages.search')}}!</button>
-			      </span>
-			    </div> 
-        </form> 
-      </div>
-      <div class="frame-useraccount"> 
-          @include('r.chunks._login_block')
-      </div>
-    </div>
-  </div>
-</header> -->
