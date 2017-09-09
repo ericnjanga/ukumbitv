@@ -2018,7 +2018,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
         .page-landing .txt-presentation3 .title .icon {
           line-height: 70px; }
       .page-landing .txt-presentation3 .txt {
-        margin: 0; } }
+        margin: 0 !important; } }
   .page-landing .txt-presentation3 > li {
     max-width: 350px; }
     @media (min-width: 995px) {
