@@ -117,19 +117,13 @@
 
 	.navbar{
 		background-color: transparent!important;
-		// .navbar-brand {
-		// 	margin-left: 0; 
-	 //    padding-left: 15px;  
-	 //    padding-top: 20px;
-	 //    padding-bottom: 20px;  
-		// }
-		// .frame-useraccount {
-		// 	margin-left: auto;
-		// 	width: initial;
-		// 	a {
-		// 		color: #fff;
-		// 	}
-		// }
+		border-width: 0!important;
+		
+		.navbar-header { 
+		  @media (min-width: 768px) { 
+				padding-left: 20px;
+		  } 
+		}
 	}
 }//.landing-header
 

@@ -2061,7 +2061,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     top: 0;
     z-index: -1; }
   .landing-header .navbar {
-    background-color: transparent !important; }
+    background-color: transparent !important;
+    border-width: 0 !important; }
+    @media (min-width: 768px) {
+      .landing-header .navbar .navbar-header {
+        padding-left: 20px; } }
 
 .landing-header__content,
 .main-header {
@@ -2344,6 +2348,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     height: auto; }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  position: relative;
+  z-index: 100;
   border-color: #ccc; }
 
 .main-footer {
