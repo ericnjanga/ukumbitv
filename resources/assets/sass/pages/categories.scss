@@ -11,7 +11,7 @@
 //------------------------------------------
 .page-movies {
 	.GP-menu { 
-		.play-menu li.movies .menu-entry-text {
+		.play-menu li#movies .menu-entry-text {
 		  background: $color-darkred;
 		}
 	}
@@ -20,7 +20,7 @@
 	border: 5px solid red!important;
 	.GP-menu { 
 		border: 5px solid blue!important;
-		.play-menu li.animations {
+		.play-menu li#animations {
 			border: 5px solid green!important;
 			.menu-entry-text {
 				background: $color-yellow-green;
