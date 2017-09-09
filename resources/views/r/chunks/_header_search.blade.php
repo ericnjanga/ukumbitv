@@ -14,6 +14,20 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
+    	<ul class="nav navbar-nav">
+        <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>  -->
+        <li id="movies">
+					<a href="{{route('user.videotype', 'movies')}}"> 
+						Movies
+					</a> 
+				</li>
+				<li id="animations">
+					<a href="{{route('user.videotype', 'animations')}}"> 
+						Animation
+					</a> 
+				</li>  
+      </ul>
+
       <div id="frame-search" class="frame-search">
         <form action="{{route('search-all')}}" class="navbar-form navbar-left" method="post">  
           <div class="input-group">
