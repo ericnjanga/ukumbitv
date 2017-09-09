@@ -8,7 +8,7 @@
       </span>
       <!-- <a href="{{route('user.package')}}" class="login-upgrade">upgrade package</a> -->
   	</span> 
-		<img src="{{asset('r/img/no-img.png')}}" alt="">
+		<img class="user-tmb" src="{{asset('r/img/no-img.png')}}" alt="">
   </span>
 	<span class="caret"></span>
 </a>
