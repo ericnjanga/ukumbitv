@@ -62,10 +62,10 @@ align-items: center;
 
   .nav-user-access {
   	display: flex;
-  	border: 2px solid red;
-  	display: block;
+  	border: 2px solid red; 
   	font-size: 14px;
-    line-height: 22px;
+    line-height: 17px;
+    align-items: center;
   	span {
   		display: block;
   		border: 1px solid green;
