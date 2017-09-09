@@ -78,7 +78,7 @@ class UserController extends Controller {
 
     public function packages()
     {
-        return view('r.user.packages');
+        return view('r.user.packages')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
     }
 
     public function checkVideoPlays(Request $request)
