@@ -29,12 +29,27 @@
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-left">
+
+
+      <div id="frame-search" class="frame-search">
+        <form action="{{route('search-all')}}" navbar-form navbar-left method="post">  
+          <div class="input-group">
+			      <input name="key" type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false">
+			      <span class="input-group-btn">
+			        <button class="btn btn-search btn-primary" type="submit">{{trans('messages.search')}}!</button>
+			      </span>
+			    </div><!-- /input-group -->
+        </form> 
+      </div>
+
+
+
+      <!-- <form class="navbar-form navbar-left">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      </form> -->
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
         <li class="dropdown">
@@ -51,6 +66,10 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+
+
 
 
 
