@@ -91,11 +91,18 @@ align-items: center;
   		text-decoration: none; 
   	}
   }
+  .ukb-nav-videos {
+  	display: none;
+  }
 
 
   @media (max-width: 767px) {
-  	.navbar-collapse {
-  		border-top: 0;
+  	.navbar-collapse { 
+  		margin-top: 10px;
+  	}
+  	.ukb-nav-videos {
+  		display: block;
+  		padding-left: 20px;
   	}
 		.nav-user-access{
 			display: block;
@@ -116,3 +123,9 @@ align-items: center;
 }//.ukb-main-header
 
 
+
+
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form { 
+    border-color: #ccc;
+}

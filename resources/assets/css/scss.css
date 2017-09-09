@@ -2340,9 +2340,15 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .ukb-main-header #link-update-package:hover {
     text-decoration: none; }
 
+.ukb-main-header .ukb-nav-videos {
+  display: none; }
+
 @media (max-width: 767px) {
   .ukb-main-header .navbar-collapse {
-    border-top: 0; }
+    margin-top: 10px; }
+  .ukb-main-header .ukb-nav-videos {
+    display: block;
+    padding-left: 20px; }
   .ukb-main-header .nav-user-access {
     display: block;
     margin-left: 30px; }
@@ -2352,6 +2358,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
       padding-left: 0; }
   .ukb-main-header .frame-search form {
     padding-left: 30px; } }
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: #ccc; }
 
 .main-footer {
   margin-top: 150px;
