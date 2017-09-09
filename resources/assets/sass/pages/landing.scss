@@ -24,9 +24,11 @@
 	  -o-justify-content: center;
 	  justify-content: center;
 	  > li {
-	  	max-width: 350px;
-	  	margin-left: 30px;
-    	margin-right: 30px;
+	  	@media (min-width: 995px){ 
+		  	max-width: 350px;
+		  	margin-left: 30px;
+	    	margin-right: 30px;
+	  	}
 	  }
 	  .icon{
 	    // font-size: 70px;

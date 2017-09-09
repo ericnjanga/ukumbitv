@@ -2005,10 +2005,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   -o-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  .page-landing .txt-presentation3 > li {
-    max-width: 350px;
-    margin-left: 30px;
-    margin-right: 30px; }
+  @media (min-width: 995px) {
+    .page-landing .txt-presentation3 > li {
+      max-width: 350px;
+      margin-left: 30px;
+      margin-right: 30px; } }
   .page-landing .txt-presentation3 .icon {
     color: #990033;
     line-height: 90px; }
