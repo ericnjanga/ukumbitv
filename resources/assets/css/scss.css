@@ -1987,47 +1987,52 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .link-red-on a:hover, .link-red-on button:hover, .link-red-on .btn:hover {
     text-decoration: underline; }
 
-.page-landing {
-  margin-top: 100px; }
-  .page-landing .section {
-    position: relative;
-    padding-top: 90px;
-    padding-bottom: 90px; }
-  .page-landing .txt-presentation3 {
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-    .page-landing .txt-presentation3 > li {
-      max-width: 350px;
-      margin-left: 30px;
-      margin-right: 30px; }
-    .page-landing .txt-presentation3 .icon {
-      color: #990033;
-      line-height: 90px; }
-  .page-landing p {
-    line-height: 24px; }
-  .page-landing .title {
-    margin-bottom: 30px; }
-    .page-landing .title span {
-      display: block; }
-    .page-landing .title .txt {
-      line-height: 35px;
-      margin-bottom: 10px; }
-    .page-landing .title .icon {
-      font-size: 50px; }
-  .page-landing .bg1 {
-    background: #333; }
-    .page-landing .bg1 .title {
-      color: #ccc; }
-  .page-landing .price-block {
-    margin-bottom: 30px; }
+.page-landing .section {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 90px; }
+  .page-landing .section:last-of-type {
+    padding-bottom: 0; }
+
+.page-landing .txt-presentation3 {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .page-landing .txt-presentation3 > li {
+    max-width: 350px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  .page-landing .txt-presentation3 .icon {
+    color: #990033;
+    line-height: 90px; }
+
+.page-landing p {
+  line-height: 24px; }
+
+.page-landing .title {
+  margin-bottom: 30px; }
+  .page-landing .title span {
+    display: block; }
+  .page-landing .title .txt {
+    line-height: 35px;
+    margin-bottom: 10px; }
+  .page-landing .title .icon {
+    font-size: 50px; }
+
+.page-landing .bg1 {
+  background: #333; }
+  .page-landing .bg1 .title {
+    color: #ccc; }
+
+.page-landing .price-block {
+  margin-bottom: 30px; }
 
 .page-landing .btn-down,
 .landing-header .btn-down {
