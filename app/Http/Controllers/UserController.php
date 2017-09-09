@@ -1623,7 +1623,7 @@ class UserController extends Controller {
         // If validator Fails, redirect same with error values
         if ($validator->fails()) {
             //throw new Exception("error", tr('admin_published_video_failure'));
-            return response()->json(['title' => 'Hmm...', 'message' => 'You need to fill in all the fields', 'type' => 'error']);
+            return response()->json(['title' => 'Hmm...', 'message' => 'You need to fill in all the fields', 'type' => 'error', 'errors' => $validator->messages()]);
         }
 
         if (Hash::check($request->oldpassword, Auth::user()->password)) {

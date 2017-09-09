@@ -472,6 +472,7 @@ function updatePassword(url) {
         success: function(data){
 
             var rep = JSON.parse(data);
+            console.log(rep.errors);
             swal(rep.title, rep.message, rep.type);
             $('#btn-update-password').prop('disabled', false);
         },

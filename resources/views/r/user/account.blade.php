@@ -24,7 +24,7 @@
 		                </div>
 		                <div class="input-group input-tel">
 		                    <label>Phone</label>
-		                    <input id="user-phone" class="form-control" type="tel" name="usrtel" value="{{Auth::user()->mobile}}">
+		                    <input id="user-phone" class="form-control" type="number" name="usrtel" value="{{Auth::user()->mobile}}">
 		                </div>
 		                <div id="change-pas" class="change-pas like-link">Change password</div>
 
