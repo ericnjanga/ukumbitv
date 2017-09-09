@@ -16,34 +16,34 @@
 
 		                <div class="input-group">
 		                    <label>Full name</label>
-		                    <input class="form-control" type="text" name="name" value="{{Auth::user()->name}}">
+		                    <input id="user-name" class="form-control" type="text" name="name" value="{{Auth::user()->name}}">
 		                </div>
 		                <div class="input-group">
 		                    <label>E-mail</label>
-		                    <input class="form-control" type="email" name="email" value="{{Auth::user()->email}}">
+		                    <input id="user-email" class="form-control" type="email" name="email" value="{{Auth::user()->email}}">
 		                </div>
 		                <div class="input-group input-tel">
 		                    <label>Phone</label>
-		                    <input class="form-control" type="tel" name="usrtel" value="{{Auth::user()->mobile}}">
+		                    <input id="user-phone" class="form-control" type="tel" name="usrtel" value="{{Auth::user()->mobile}}">
 		                </div>
 		                <div id="change-pas" class="change-pas like-link">Change password</div>
 
-		                <button  class="btn btn-cta1b btn-lg">Save Changes</button>
+		                <button id="btn-update-profile" data-update-profile="{{route('user.update-profile')}}"  class="btn btn-cta1b btn-lg">Save Changes</button>
 
 		            <div class="change-pas-block">
 
 		                    <div class="input-group">
 		                        <label>Enter current password</label>
-		                        <input class="form-control" type="password" name="old_password" class="mypass">
+		                        <input id="old-password" class="form-control" type="password" name="old_password" class="mypass">
 		                    </div>
 		                    <div class="input-group">
 		                        <label>Enter new password</label>
-		                        <input class="form-control"  type="password" name="new_password" class="mypass">
+		                        <input id="new-password" class="form-control"  type="password" name="new_password" class="mypass">
 		                    </div>
 		                    {{--<div class="operations-pass">--}}
 		                        {{--<span id="show-pas" class="like-link">Show password</span>--}}
 		                    {{--</div>--}}
-		                    <button  class="btn btn-cta1 btn-lg">Save new password</button>
+		                    <button id="btn-update-password" data-update-password="{{route('user.update-password')}}" class="btn btn-cta1 btn-lg">Save new password</button>
 
 		            </div>
 

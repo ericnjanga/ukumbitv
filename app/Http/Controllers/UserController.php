@@ -36,6 +36,7 @@ use App\Flag;
 
 use Auth;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\URL;
 use Omnipay\Omnipay;
 use phpDocumentor\Reflection\Types\Object_;
@@ -1587,6 +1588,51 @@ class UserController extends Controller {
 //        dd($unique);
 
         return view('r.user.search-result')->with('videos', $unique);
+    }
+
+    public function updateProfile(Request $request)
+    {
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'email' => 'required|email',
+            'phone' => 'max:255',
+        ]);
+        // If validator Fails, redirect same with error values
+        if ($validator->fails()) {
+            //throw new Exception("error", tr('admin_published_video_failure'));
+            return response()->json(['title' => 'Hmm...', 'message' => 'You need to fill in all the fields', 'type' => 'error']);
+        }
+
+        $user = Auth::user();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->mobile = $request->phone;
+
+        $user->save();
+
+        return response()->json($user);
+    }
+
+    public function updatePassword(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'oldpassword' => 'required|max:255',
+            'newpassword' => 'required|max:255',
+        ]);
+        // If validator Fails, redirect same with error values
+        if ($validator->fails()) {
+            //throw new Exception("error", tr('admin_published_video_failure'));
+            return response()->json(['title' => 'Hmm...', 'message' => 'You need to fill in all the fields', 'type' => 'error']);
+        }
+
+        if (Hash::check($request->oldpassword, Auth::user()->password)) {
+            $user = Auth::user();
+            $user->password = bcrypt($request->newpassword);
+            $user->save();
+            return response()->json(['title' => 'Cool', 'message' => 'Password was updated', 'type' => 'success']);
+        }
+        return response()->json(['title' => 'Hmm...', 'message' => 'Wrong current password', 'type' => 'error']);
     }
 
 }
