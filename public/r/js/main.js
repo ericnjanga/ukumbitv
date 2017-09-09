@@ -7,7 +7,7 @@ $.ajaxSetup({
     }
 });
 
- 
+
 
 $("#payinfo").click(function () {
     $('.payment-info--edit').slideToggle(500);
@@ -187,6 +187,19 @@ $('body').on('click', '#btn-submit-contact', function(){
     //console.log('***heyeyey');
     sendContactForm($(this).data('contact-route'));
 });
+
+//update profile
+$('body').on('click', '#btn-update-profile', function(){
+    //console.log('***heyeyey');
+    updateProfile($(this).data('update-profile'));
+});
+
+$('body').on('click', '#btn-update-password', function(){
+    //console.log('***heyeyey');
+    updatePassword($(this).data('update-password'));
+});
+
+
 
 
 //Add/remove like on click
@@ -405,6 +418,69 @@ function sendContactForm(url) {
         $('#btn-submit-contact').prop('disabled', false);
     }
 });
+}
+
+//user profile
+function updateProfile(url) {
+
+    var fd = new FormData;
+
+    fd.append('_token', '{{csrf_token()}}');
+    fd.append('name', $('#user-name').val());
+    fd.append('email', $('#user-email').val());
+    fd.append('phone', $('#user-phone').val());
+    $('#btn-update-profile').prop('disabled', true);
+
+
+    $.ajax({
+        type: 'POST',
+        url: url,
+        contentType: false,
+        processData: false,
+        data: fd,
+        dataType: 'html',
+        success: function(data){
+
+            // var rep = JSON.parse(data);
+            swal("Cool!", "Profile was successfully updated", "success");
+            $('#btn-update-profile').prop('disabled', false);
+        },
+        error: function(data){
+            swal("Hmm", "Something went wrong, try again pls", "error");
+            $('#btn-update-profile').prop('disabled', false);
+        }
+    });
+}
+
+function updatePassword(url) {
+
+    var fd = new FormData;
+
+    fd.append('_token', '{{csrf_token()}}');
+    fd.append('oldpassword', $('#old-password').val());
+    fd.append('newpassword', $('#new-password').val());
+    $('#btn-update-password').prop('disabled', true);
+
+
+    $.ajax({
+        type: 'POST',
+        url: url,
+        contentType: false,
+        processData: false,
+        data: fd,
+        dataType: 'html',
+        success: function(data){
+
+            var rep = JSON.parse(data);
+            console.log(rep.errors);
+            swal(rep.title, rep.message, rep.type);
+            $('#btn-update-password').prop('disabled', false);
+        },
+        error: function(data){
+            swal("Hmm", "Something went wrong, try again pls", "error");
+            $('#btn-update-password').prop('disabled', false);
+        }
+    });
 }
 
 

@@ -529,18 +529,22 @@ Route::group([], function(){
     
     Route::get('payment', 'UserController@payment')->name('user.userpayment');
 
+
+
     // Password Reset Routes...
     Route::get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
 
     Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
 
     Route::post('password/reset', 'Auth\PasswordController@reset');
+    Route::post('profile-update', 'UserController@updateProfile')->name('user.update-profile');
+    Route::post('password-update-new', 'UserController@updatePassword')->name('user.update-password');
 
-    Route::get('profile', 'UserController@profile')->name('user.profile');
-
-    Route::get('update/profile', 'UserController@update_profile')->name('user.update.profile');
-
-    Route::post('update/profile', 'UserController@profile_save')->name('user.profile.save');
+//    Route::get('profile', 'UserController@profile')->name('user.profile');
+//
+//    Route::get('update/profile', 'UserController@update_profile')->name('user.update.profile');
+//
+//    Route::post('update/profile', 'UserController@profile_save')->name('user.profile.save');
 
     Route::get('/profile/password', 'UserController@profile_change_password')->name('user.change.password');
 

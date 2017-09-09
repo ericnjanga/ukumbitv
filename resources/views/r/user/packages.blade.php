@@ -8,56 +8,64 @@
       <section class="section-packages">
         <h1>{{trans('messages.home_plansec_title')}}</h1> 
         <div class="price-block">
+            {{--<div class="price-item">--}}
+                {{--<div class="price-title">Basic</div>--}}
+                {{--<div class="count-text">10 videos</div>--}}
+                {{--<ul class="includ-list">--}}
+                    {{--<li>advantage 1</li>--}}
+                    {{--<li>another</li>--}}
+                {{--</ul>--}}
+                {{--<div class="price upper">Free</div>--}}
+                {{--<a href="" class="btn btn-block butn-white-trans active">Your plan</a>--}}
+            {{--</div>--}}
+            {{--<div class="price-item">--}}
+                {{--<div class="price-title">Silver</div>--}}
+                {{--<div class="count-text">30 videos</div>--}}
+                {{--<ul class="includ-list">--}}
+                    {{--<li>advantage 1</li>--}}
+                    {{--<li>another</li>--}}
+                    {{--<li>advantage 1</li>--}}
+                {{--</ul>--}}
+                {{--<div class="price"><span>$</span> 3</div>--}}
+                {{--<a href="" class="btn btn-block butn-white-trans">Restart plan</a>--}}
+            {{--</div>--}}
+            {{--<div class="price-item">--}}
+                {{--<div class="price-title">Gold</div>--}}
+                {{--<div class="count-text">100 videos</div>--}}
+                {{--<ul class="includ-list">--}}
+                    {{--<li>advantage 1</li>--}}
+                    {{--<li>another</li>--}}
+                    {{--<li>advantage 1</li>--}}
+                    {{--<li>another</li>--}}
+                    {{--<li>advantage 1</li>--}}
+                {{--</ul>--}}
+                {{--<div class="price"><span>$</span> 5</div>--}}
+                {{--<a href="" class="btn btn-block butn-white-trans">Select this</a>--}}
+            {{--</div>--}}
+			@foreach($payment_plans as $indexKey => $payment_plan)
             <div class="price-item">
-                <div class="price-title">Basic</div>
-                <div class="count-text">10 videos</div>
+                <div class="price-title">{{$payment_plan->name}}</div>
+                <div class="count-text">{{$payment_plan->description}}</div>
                 <ul class="includ-list">
-                    <li>advantage 1</li>
-                    <li>another</li>
+					@php($i=1)
+						@while(isset($payment_plan->{'product'.$i}))
+							<li>{!! $payment_plan->{'product'.$i} !!}</li>
+							@php($i++)
+								@endwhile
                 </ul>
-                <div class="price upper">Free</div>
-                <a href="" class="btn btn-block butn-white-trans active">Your plan</a>
-            </div>
-            <div class="price-item">
-                <div class="price-title">Silver</div>
-                <div class="count-text">30 videos</div>
-                <ul class="includ-list">
-                    <li>advantage 1</li>
-                    <li>another</li>
-                    <li>advantage 1</li>
-                </ul>
-                <div class="price"><span>$</span> 3</div>
-                <a href="" class="btn btn-block butn-white-trans">Restart plan</a>
-            </div>
-            <div class="price-item">
-                <div class="price-title">Gold</div>
-                <div class="count-text">100 videos</div>
-                <ul class="includ-list">
-                    <li>advantage 1</li>
-                    <li>another</li>
-                    <li>advantage 1</li>
-                    <li>another</li>
-                    <li>advantage 1</li>
-                </ul>
-                <div class="price"><span>$</span> 5</div>
-                <a href="" class="btn btn-block butn-white-trans">Select this</a>
-            </div>
-            <div class="price-item">
-                <div class="price-title">Platinum</div>
-                <div class="count-text">150 videos</div>
-                <ul class="includ-list">
-                    <li>advantage 1</li>
-                    <li>another</li>
-                    <li>advantage 1</li>
-                    <li>another</li>
-                    <li>advantage 1</li>
-                </ul>
-                <div class="price"><span>$</span> 7</div>
-                <a href="" class="btn btn-block butn-white-trans">Select this</a>
+				@if($payment_plan->price == 0)
+					<div class="price">FREE</div>
+				@else
+				<div class="price"><span>$</span> {{$payment_plan->price}}</div>
+				@endif
+                <button  class="btn btn-block butn-white-trans">Select this</button>
+				@if($indexKey == 2)
                 <div class="best-text">
-                    <div>Best Choise</div>
+                    <div>Best Choice</div>
                 </div>
+					@endif
             </div>
+				@endforeach
         </div>
       </section>
     	<!-- packages selection section -->
