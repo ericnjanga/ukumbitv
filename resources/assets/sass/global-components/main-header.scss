@@ -47,18 +47,6 @@
 
 
 .ukb-main-header { 
-  .navbar-brand { 
-    width: 200px;
-    padding-left: 20px;
-    margin-left: 15px; 
-	  line-height: 0;  
-    padding-top: 10px;
-    padding-bottom: 10px;  
-	  img{
-	    width: 150px;
-	    height: auto; 
-		}
-  }
 
   .nav-user-access {
   	display: flex;
@@ -155,6 +143,21 @@
   @media (min-width: 768px) { 
 		display: block;
   }
+}
+
+
+
+.ukb-navbar-brand { 
+  width: 200px;
+  padding-left: 20px;
+  margin-left: 15px; 
+  line-height: 0;  
+  padding-top: 10px;
+  padding-bottom: 10px;  
+  img{
+    width: 150px;
+    height: auto; 
+	}
 }
 
 

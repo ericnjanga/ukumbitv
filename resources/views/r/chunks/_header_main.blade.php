@@ -11,12 +11,12 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="/"><img src="{{asset('r/img/logo.png')}}" alt=""></a>
+	      <a class="ukb-navbar-brand navbar-brand" href="/"><img src="{{asset('r/img/logo.png')}}" alt=""></a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
-	    	<ul class="ukb-nav-videos nav navbar-nav">
+	    	<!-- <ul class="ukb-nav-videos nav navbar-nav">
 	        <li id="movies">
 						<a href="{{route('user.videotype', 'movies')}}"> 
 							Movies
@@ -27,9 +27,9 @@
 							Animation
 						</a> 
 					</li>  
-	      </ul>
+	      </ul> -->
 
-	      <div id="frame-search" class="frame-search">
+	      <!-- <div id="frame-search" class="frame-search">
 	        <form action="{{route('search-all')}}" class="navbar-form navbar-left" method="post">  
 	          <div class="input-group">
 				      <input name="key" type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false">
@@ -39,14 +39,17 @@
 				      		<span class="sr-only">{{trans('messages.search')}}!</span>
 				      	</button>
 				      </span>
-				    </div><!-- /input-group -->
+				    </div> 
 	        </form> 
-	      </div>
+	      </div> -->
 
 	      <ul class="nav navbar-nav navbar-right"> 
-	        <li class="dropdown"> 
+	      	<li>
+	      		<a href="{{route('user.login.form')}}" class="btn btn-link btn-lg">{{l("Sign in")}}</a>
+	      	</li>
+	        <!-- <li class="dropdown"> 
 	          @include('r.chunks._login_block') 
-	        </li>
+	        </li> -->
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
