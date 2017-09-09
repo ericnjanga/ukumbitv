@@ -2314,6 +2314,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     width: 150px;
     height: auto; }
 
+.ukb-main-header .navbar-brand {
+  margin-left: 0; }
+
 .ukb-main-header .nav-user-access {
   display: -ms-flexbox;
   display: flex;
@@ -2344,6 +2347,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   display: none; }
 
 @media (max-width: 767px) {
+  .ukb-main-header .navbar-brand {
+    margin-left: -15px; }
   .ukb-main-header .navbar-collapse {
     margin-top: 10px; }
   .ukb-main-header .ukb-nav-videos {

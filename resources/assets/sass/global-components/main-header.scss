@@ -59,6 +59,9 @@ align-items: center;
 	    height: auto; 
 		}
   }
+  .navbar-brand {
+  	margin-left: 0;
+  }
 
   .nav-user-access {
   	display: flex;
@@ -96,7 +99,10 @@ align-items: center;
   }
 
 
-  @media (max-width: 767px) {
+  @media (max-width: 767px) { 
+	  .navbar-brand {
+	  	margin-left: -15px;
+	  }
   	.navbar-collapse { 
   		margin-top: 10px;
   	}
