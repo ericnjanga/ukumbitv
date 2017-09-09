@@ -2347,11 +2347,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .ukb-main-header .frame-search form {
     width: 53%; } }
 
-@media (min-width: 886px) and (max-width: 959px) {
+@media (min-width: 886px) and (max-width: 1149px) {
   .ukb-main-header .frame-search form {
     width: 60%; } }
 
-@media (min-width: 960px) {
+@media (min-width: 1150px) {
   .ukb-main-header .frame-search form {
     width: 70%; } }
 
