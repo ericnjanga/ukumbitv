@@ -2303,6 +2303,17 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .main-header .frame-useraccount {
     width: calc(25% - 30px); }
 
+.ukb-main-header .navbar-brand {
+  width: 200px;
+  padding-left: 20px;
+  margin-left: 15px;
+  line-height: 0;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .ukb-main-header .navbar-brand img {
+    width: 150px;
+    height: auto; }
+
 .main-footer {
   margin-top: 150px;
   font-size: 13px;
