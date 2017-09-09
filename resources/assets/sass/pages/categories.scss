@@ -11,14 +11,14 @@
 //------------------------------------------
 .page-movies {
 	.GP-menu { 
-		.play-menu li:nth-child(1) + .menu-entry-text {
+		.play-menu li.movies .menu-entry-text {
 		  background: $color-darkred;
 		}
 	}
 }
 .page-animations {
 	.GP-menu { 
-		.play-menu li:nth-child(2) + .menu-entry-text {
+		.play-menu li.animations .menu-entry-text {
 		  background: $color-yellow-green;
 		}
 	}
