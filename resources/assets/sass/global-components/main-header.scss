@@ -94,6 +94,14 @@ align-items: center;
   .ukb-nav-videos {
   	display: none;
   }
+  .frame-search {
+  	form {
+  		width: 70%;
+  		.input-group-btn {
+  			width: 70px;
+  		}
+  	}
+  }
 
 
   @media (max-width: 767px) { 
