@@ -32,7 +32,7 @@
 
 
       <div id="frame-search" class="frame-search">
-        <form action="{{route('search-all')}}" navbar-form navbar-left method="post">  
+        <form action="{{route('search-all')}}" class="navbar-form navbar-left" method="post">  
           <div class="input-group">
 			      <input name="key" type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false">
 			      <span class="input-group-btn">
