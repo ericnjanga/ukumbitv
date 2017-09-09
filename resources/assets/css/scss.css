@@ -2343,10 +2343,22 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .ukb-main-header .ukb-nav-videos {
   display: none; }
 
-.ukb-main-header .frame-search form {
-  width: 70%; }
-  .ukb-main-header .frame-search form .input-group-btn {
-    width: 70px; }
+@media (min-width: 768px) and (max-width: 885px) {
+  .ukb-main-header .frame-search form {
+    width: 53%; } }
+
+@media (min-width: 886px) and (max-width: 959px) {
+  .ukb-main-header .frame-search form {
+    width: 60%; } }
+
+@media (min-width: 960px) {
+  .ukb-main-header .frame-search form {
+    width: 70%; } }
+
+.ukb-main-header .frame-search form .input-group-btn {
+  width: 70px; }
+  .ukb-main-header .frame-search form .input-group-btn .btn {
+    width: 100%; }
 
 @media (max-width: 767px) {
   .ukb-main-header .navbar-collapse {
