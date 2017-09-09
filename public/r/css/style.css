@@ -2361,7 +2361,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 @media (min-width: 768px) {
   .ukb-main-header .navbar-brand {
-    margin-left: 0; } }
+    margin-left: 0 !important; } }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: #ccc; }
