@@ -59,9 +59,6 @@ align-items: center;
 	    height: auto; 
 		}
   }
-  .navbar-brand {
-  	margin-left: 0;
-  }
 
   .nav-user-access {
   	display: flex;
@@ -100,9 +97,6 @@ align-items: center;
 
 
   @media (max-width: 767px) { 
-	  .navbar-brand {
-	  	margin-left: -15px;
-	  }
   	.navbar-collapse { 
   		margin-top: 10px;
   	}
@@ -125,6 +119,12 @@ align-items: center;
 				padding-left: 30px;
 			}
 		}
+  }
+
+  @media (min-width: 768px) {
+	  .navbar-brand {
+	  	margin-left: 0;
+	  }
   }
 }//.ukb-main-header
 
