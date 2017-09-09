@@ -2268,41 +2268,6 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .page-myaccount .GP-menu .play-menu > li:first-child a span {
     color: #fff; }
 
-.main-header {
-  height: 60px;
-  background-color: #eeeeee;
-  margin: 0 0 30px 0; }
-  .main-header .row {
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -o-align-items: center;
-    -ms-flex-align: center;
-    align-items: center; }
-  .main-header .frame-logo,
-  .main-header .frame-search,
-  .main-header .frame-useraccount {
-    float: left; }
-  .main-header .frame-logo {
-    width: 200px;
-    padding-left: 20px;
-    margin-left: 15px;
-    line-height: 0;
-    padding-top: 10px;
-    padding-bottom: 10px; }
-    .main-header .frame-logo img {
-      width: 150px;
-      height: auto; }
-  .main-header .frame-search {
-    margin-left: 30px;
-    width: calc(75% - 230px); }
-  .main-header .frame-useraccount {
-    width: calc(25% - 30px); }
-
 .ukb-main-header .navbar-brand {
   width: 200px;
   padding-left: 20px;

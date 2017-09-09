@@ -55,7 +55,7 @@
 
 
 
-
+<!-- 
 
 
 <header class="main-header">
@@ -73,13 +73,12 @@
 			      <span class="input-group-btn">
 			        <button class="btn btn-search btn-primary" type="submit">{{trans('messages.search')}}!</button>
 			      </span>
-			    </div><!-- /input-group -->
+			    </div> 
         </form> 
       </div>
-      <div class="frame-useraccount">
-        <!-- <a style="position:absolute;" href="{{route('user.reset-trial')}}">RESET TRIAL</a> -->
+      <div class="frame-useraccount"> 
           @include('r.chunks._login_block')
       </div>
     </div>
   </div>
-</header>
+</header> -->
