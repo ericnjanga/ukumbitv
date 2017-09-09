@@ -2063,6 +2063,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .landing-header .navbar {
     background-color: transparent !important;
     border-width: 0 !important; }
+    .landing-header .navbar .btn-link {
+      color: #fff;
+      text-decoration: underline; }
+      .landing-header .navbar .btn-link:hover {
+        text-decoration: none; }
     @media (min-width: 768px) {
       .landing-header .navbar .navbar-header {
         padding-left: 20px; } }

@@ -118,6 +118,14 @@
 	.navbar{
 		background-color: transparent!important;
 		border-width: 0!important;
+
+		.btn-link {
+			color: #fff;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			} 
+		}
 		
 		.navbar-header { 
 		  @media (min-width: 768px) { 
