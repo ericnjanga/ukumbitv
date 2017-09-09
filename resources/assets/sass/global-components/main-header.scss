@@ -103,6 +103,9 @@ align-items: center;
 			.nav-package-info {
 				float: left;
 			}
+			.dropdown-menu > li > a {
+				padding-left: 0;
+			}
 		}
 		.frame-search{
 			form {

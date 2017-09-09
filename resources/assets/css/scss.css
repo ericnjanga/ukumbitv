@@ -2348,6 +2348,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     margin-left: 30px; }
     .ukb-main-header .nav-user-access .nav-package-info {
       float: left; }
+    .ukb-main-header .nav-user-access .dropdown-menu > li > a {
+      padding-left: 0; }
   .ukb-main-header .frame-search form {
     padding-left: 30px; } }
 
