@@ -20,8 +20,12 @@
 	border: 5px solid red!important;
 	.GP-menu { 
 		border: 5px solid blue!important;
-		.play-menu li.animations .menu-entry-text {
-		  background: $color-yellow-green;
+		.play-menu li.animations {
+			border: 5px solid green!important;
+			.menu-entry-text {
+				background: $color-yellow-green;
+			}
+		  
 		}
 	}
 }
