@@ -2196,16 +2196,12 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   margin-bottom: 30px; }
 
 .page-movies .GP-menu .play-menu li#movies .menu-entry-text {
+  color: #fff;
   background: #990033; }
 
-.page-animations {
-  border: 5px solid red !important; }
-  .page-animations .GP-menu {
-    border: 5px solid blue !important; }
-    .page-animations .GP-menu .play-menu li#animations {
-      border: 5px solid green !important; }
-      .page-animations .GP-menu .play-menu li#animations .menu-entry-text {
-        background: #798801; }
+.page-animations .GP-menu .play-menu li#animations .menu-entry-text {
+  color: #fff;
+  background: #798801; }
 
 .page-packages h1 {
   margin-bottom: 30px; }
