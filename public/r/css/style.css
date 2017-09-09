@@ -2314,6 +2314,13 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     width: 150px;
     height: auto; }
 
+.ukb-main-header .nav-user-access {
+  border: 2px solid red;
+  display: block; }
+  .ukb-main-header .nav-user-access span {
+    display: block;
+    border: 1px solid green; }
+
 .main-footer {
   margin-top: 150px;
   font-size: 13px;

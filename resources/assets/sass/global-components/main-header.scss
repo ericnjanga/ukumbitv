@@ -59,5 +59,14 @@ align-items: center;
 	    height: auto; 
 		}
   }
+
+  .nav-user-access {
+  	border: 2px solid red;
+  	display: block;
+  	span {
+  		display: block;
+  		border: 1px solid green;
+  	}
+  }
 }//.ukb-main-header
 
