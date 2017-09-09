@@ -2067,6 +2067,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
       color: #fff;
       text-decoration: underline; }
       .landing-header .navbar .btn-link:hover {
+        color: #fff;
         text-decoration: none; }
     @media (min-width: 768px) {
       .landing-header .navbar .navbar-header {
@@ -2266,6 +2267,15 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   background-color: #757575; }
   .page-myaccount .GP-menu .play-menu > li:first-child a span {
     color: #fff; }
+
+.page-404 {
+  display: -ms-flexbox;
+  display: flex;
+  height: 350px;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .ukb-main-header .nav-user-access {
   display: -ms-flexbox;
