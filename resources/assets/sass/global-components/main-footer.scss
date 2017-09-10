@@ -4,6 +4,10 @@
 	font-size: 13px;
 	color: #616161;
 
+	@media (max-width: 767px) {
+		text-align: center;
+	}
+
 	h4{
 	  color: #424242;
 	  font-size: 18px;

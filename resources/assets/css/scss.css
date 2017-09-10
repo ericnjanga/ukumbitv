@@ -2401,6 +2401,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   margin-top: 150px;
   font-size: 13px;
   color: #616161; }
+  @media (max-width: 767px) {
+    .main-footer {
+      text-align: center; } }
   .main-footer h4 {
     color: #424242;
     font-size: 18px;
