@@ -210,8 +210,8 @@
 	      	</div>
 				</div><!-- hero-sub -->
 
-
-
+	      <hr>
+ 
 				<div class="hero-sub">
           @if($checkTrial)
           <div class="comment-block" id="new-comment-section">
