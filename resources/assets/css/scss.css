@@ -2332,7 +2332,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
         width: 925px; } }
 
 .GP-menu {
-  position: fixed; }
+  position: fixed;
+  left: 0; }
 
 .ukb-main-header .nav-user-access {
   display: -ms-flexbox;
