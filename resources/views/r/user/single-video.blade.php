@@ -208,31 +208,31 @@
 	      			</span>
 	      		</div>
 	      	</div>
+				</div><!-- hero-sub -->
 
 
 
-
-
-	          @if($checkTrial)
-	          <div class="comment-block" id="new-comment-section">
-	          	<h2>Comments</h2>
-	          	@foreach($video->comments as $comment)
-	            <div class="comment">
-	              <div class="img-block">
-	                <!--<span class="icon icon-man-user"></span>-->
-	                <img src="{{$comment->user->picture}}" alt="">
-	              </div>
-	              <div class="comment-text-block">
-	                <div class="comment-name">@if($comment->user->name == '') {{$comment->user->email}} @else {{$comment->user->name}} @endif</div>
-	                <p class="comment-text">
-	                    {{$comment->text}}
-	                </p>
-	              </div>
-	            </div>
-	            @endforeach
-	          </div>
-	          @endif
-	          {{--<a href="" class="butn btn-cta1 btn-lg">Load more</a>--}}
+				<div class="hero-sub">
+          @if($checkTrial)
+          <div class="comment-block" id="new-comment-section">
+          	<h2>Comments</h2>
+          	@foreach($video->comments as $comment)
+            <div class="comment">
+              <div class="img-block">
+                <!--<span class="icon icon-man-user"></span>-->
+                <img src="{{$comment->user->picture}}" alt="">
+              </div>
+              <div class="comment-text-block">
+                <div class="comment-name">@if($comment->user->name == '') {{$comment->user->email}} @else {{$comment->user->name}} @endif</div>
+                <p class="comment-text">
+                    {{$comment->text}}
+                </p>
+              </div>
+            </div>
+            @endforeach
+          </div>
+          @endif
+          {{--<a href="" class="butn btn-cta1 btn-lg">Load more</a>--}}
 	      </div>
 
 
