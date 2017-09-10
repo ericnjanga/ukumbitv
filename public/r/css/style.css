@@ -2313,8 +2313,10 @@ fieldset[disabled] .twitter-typeahead .tt-input {
  * Global layout styling
  * --------------------------------------
 */
+.page-video-landing .global-display {
+  min-width: 600px; }
+
 .global-display {
-  min-width: 600px;
   border: 2px solid red; }
   @media (min-width: 768px) {
     .global-display {

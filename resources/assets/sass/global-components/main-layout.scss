@@ -14,8 +14,14 @@
 $tmb-unit: 185px;
 $sidebar-gap: 230px;
 
+//Fixing layout on certain pages
+.page-video-landing {
+	.global-display {
+		min-width: $sidebar-gap + ($tmb-unit * 2);
+	}
+}
+
 .global-display{
-	min-width: $sidebar-gap + ($tmb-unit * 2);
 	border: 2px solid red;
 
 	@media (min-width: 768px){
@@ -24,9 +30,6 @@ $sidebar-gap: 230px;
 
 	.global-content {
 		border: 2px solid green;
-		// @media (min-width: 630px){
-		// 	width: $tmb-unit * 2; //2 thumbnails in a row
-		// }
 		@media (min-width: 795px){
 			width: $tmb-unit * 3; //3 thumbnails in a row
 		}
@@ -37,18 +40,9 @@ $sidebar-gap: 230px;
 			width: $tmb-unit * 5; //5 thumbnails in a row
 		}
 	}//global-content
-	
-	// float: left;
- //  width: 75%; 
- //  margin-left: $gap2;  
-	// .block-wrap:last-of-type {
-	// 	margin-bottom: 0;
-	// }
 }
 
-// #GP-menu-sticky-wrapper {
-// 	margin-left: -15px;
-// }
+
 .GP-menu {
 	position: fixed;
 	left: 0;
