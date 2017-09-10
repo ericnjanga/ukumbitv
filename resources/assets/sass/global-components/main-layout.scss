@@ -12,9 +12,11 @@
  * --------------------------------------
 */ 
 $tmb-unit: 185px;
+$sidebar-gap: 230px;
 
 .global-display{
-	padding-left: 230px;
+	min-width: $sidebar-gap + ($tmb-unit * 2);
+	padding-left: $sidebar-gap;
 	border: 2px solid red;
 
 	.global-content {

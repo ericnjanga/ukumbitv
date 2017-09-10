@@ -2314,6 +2314,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
  * --------------------------------------
 */
 .global-display {
+  min-width: 600px;
   padding-left: 230px;
   border: 2px solid red; }
   .global-display .global-content {
