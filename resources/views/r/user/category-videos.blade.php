@@ -11,12 +11,12 @@
             <div class="filter-block">
               @include('r.chunks._sort_by')
             </div>
-            <div class="block-wrap">
+            <div class="filter-block">
               @include('r.chunks._filter_tags')
             </div>
           </div>
            
-          <div class="video-list-block">
+          <div class="block-wrap">
               @foreach($videos as $video)
                       <div class="video-item">
                           <a href="{{route('user.singleVideo',$video->watchid)}}">
