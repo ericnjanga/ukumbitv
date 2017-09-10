@@ -2239,6 +2239,15 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   margin-top: 70px;
   margin-bottom: 70px; }
 
+@media (max-width: 767px) {
+  .page-packages {
+    padding-left: 20px;
+    padding-right: 20px; }
+    .page-packages .section-payment,
+    .page-packages .section-packages {
+      margin: 0 auto;
+      max-width: 600px; } }
+
 .page-packages .price-item .btn-block {
   margin-top: 10px;
   margin-left: 20px;

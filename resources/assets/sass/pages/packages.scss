@@ -11,9 +11,19 @@
     margin-bottom: 70px;
 	}
 
+	@media (max-width: 767px){
+		padding-left: 20px;
+		padding-right: 20px;
+		.section-payment,
+		.section-packages {
+			margin: 0 auto;
+			max-width: 600px; 
+		}
+	}
+
 	.price-item {
 		.btn-block {
-			    margin-top: 10px;
+			margin-top: 10px;
 			margin-left: 20px;
 	    margin-right: 20px;
 	    width: calc(100% - 40px);
