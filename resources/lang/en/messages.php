@@ -839,7 +839,7 @@ return array(
   //----------------------------------- 
   'and' => 'and',
   'msg_trial_ended' => 'Your trial has ended',
-  'msg_upgrade' => 'Please ugrade your membership',
+  'msg_upgrade' => 'Ugrade your membership',
 
   //GENERAL WORDS ...
   //----------------------------------- 
