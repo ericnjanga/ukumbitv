@@ -2309,6 +2309,13 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   -ms-flex-pack: center;
   justify-content: center; }
 
+/**
+ * Global layout styling
+ * --------------------------------------
+*/
+.global-main-content {
+  border: 4px solid red; }
+
 .ukb-main-header .nav-user-access {
   display: -ms-flexbox;
   display: flex;
@@ -2451,83 +2458,52 @@ form.xl-inputs input, form.xl-inputs select {
   max-width: 200px; }
 
 /**
- * Global layout styling
+ * utv-card
  * --------------------------------------
 */
-.global-main-content {
-  float: left;
-  width: 75%;
-  margin-left: 30px; }
-  .global-main-content.utv-card {
-    background-color: #fff;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2); }
-  .global-main-content .block-wrap:last-of-type {
-    margin-bottom: 0; }
+.utv-card {
+  background-color: #fff;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2); }
 
-#GP-menu-sticky-wrapper.is-sticky + .global-main-content {
-  margin-left: 230px; }
-
-.layout-3-columns {
-  min-width: 750px; }
-  .layout-3-columns .global-main-content {
-    width: calc(82% - 300px); }
-  .layout-3-columns .block-aside {
-    margin-left: 30px;
-    float: right;
-    width: 260px; }
-    .layout-3-columns .block-aside .list-horizontal-wrapper {
-      width: 100%; }
-  .layout-3-columns #GP-menu-sticky-wrapper.is-sticky + .global-main-content {
-    margin-left: 230px; }
-  @media (max-width: 1240px) {
-    .layout-3-columns .global-main-content,
-    .layout-3-columns .block-aside {
-      margin-left: 0;
-      width: calc(100% - 230px);
-      float: right;
-      min-width: 500px; }
-    .layout-3-columns .block-aside {
-      margin-top: 30px; } }
-
-.global-main-content.utv-card .title {
+.utv-card .title {
   font-size: 30px; }
 
-.global-main-content.utv-card .hero,
-.global-main-content.utv-card .hero-sub,
-.global-main-content.utv-card .hero-sub_heading,
-.global-main-content.utv-card .rating-stats {
+.utv-card .hero,
+.utv-card .hero-sub,
+.utv-card .hero-sub_heading,
+.utv-card .rating-stats {
   margin-bottom: 30px; }
-  .global-main-content.utv-card .hero hr,
-  .global-main-content.utv-card .hero-sub hr,
-  .global-main-content.utv-card .hero-sub_heading hr,
-  .global-main-content.utv-card .rating-stats hr {
+  .utv-card .hero hr,
+  .utv-card .hero-sub hr,
+  .utv-card .hero-sub_heading hr,
+  .utv-card .rating-stats hr {
     margin-bottom: 30px; }
 
-.global-main-content.utv-card .hero-sub_heading h2 {
+.utv-card .hero-sub_heading h2 {
   margin-top: 8px; }
 
-.global-main-content.utv-card .rating-stats .col-mid {
+.utv-card .rating-stats .col-mid {
   margin-top: 20px; }
 
-.global-main-content.utv-card .rating-stats .icon {
+.utv-card .rating-stats .icon {
   cursor: pointer; }
 
-.global-main-content.utv-card .icon-thumbs-up.btn-on,
-.global-main-content.utv-card .icon-thumbs-down-hand.btn-on {
+.utv-card .icon-thumbs-up.btn-on,
+.utv-card .icon-thumbs-down-hand.btn-on {
   color: #990033; }
 
-.global-main-content.utv-card .hero {
+.utv-card .hero {
   position: relative; }
 
-.global-main-content.utv-card .hero-sub {
+.utv-card .hero-sub {
   margin-left: 40px;
   margin-right: 40px; }
 
-.global-main-content.utv-card hr {
+.utv-card hr {
   margin-left: 25px;
   margin-right: 25px; }
 
-.global-main-content.utv-card h2 {
+.utv-card h2 {
   text-transform: uppercase;
   font-size: 16px; }
 

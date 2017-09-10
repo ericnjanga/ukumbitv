@@ -2277,6 +2277,7 @@ input:-webkit-autofill {
 @import 'pages/packages';
 @import 'pages/account';
 @import 'pages/404';
+@import 'global-components/main-layout';
 @import 'global-components/main-header';
 @import 'global-components/main-footer';
 @import 'global-components/form';
@@ -2303,61 +2304,19 @@ input:-webkit-autofill {
 
 
 
+
+
 /**
- * Global layout styling
+ * utv-card
  * --------------------------------------
-*/ 
-.global-main-content{
-	float: left;
-  width: 75%; 
-  margin-left: $gap2; 
-  &.utv-card {
-  	background-color: #fff;
-    -webkit-box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.2);
-    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.2);
-	} 
-
-	.block-wrap:last-of-type {
-		margin-bottom: 0;
-	}
-}
-#GP-menu-sticky-wrapper.is-sticky + .global-main-content{
-	margin-left: $width-GP-menu + $gap2;  
-}
-.layout-3-columns {
-	min-width: 750px;
-	$width-aside: 300px;
-	.global-main-content { 
-	  width: calc(82% - #{$width-aside}); 
-	}
-	.block-aside {
-		margin-left: 30px;
-		float: right;
-		width: $width-aside - (30px + 10px);
-		.list-horizontal-wrapper {
-			width: 100%;
-		}
-	}
-	#GP-menu-sticky-wrapper.is-sticky + .global-main-content{
-		margin-left: $width-GP-menu + $gap2;  
-	}
-
-
-	@media (max-width: 1240px) { 
-		.global-main-content,
-		.block-aside {
-			margin-left: 0;
-		  width: calc(100% - 230px);
-    	float: right;
-    	min-width: 500px;
-		}
-		.block-aside{
-			margin-top: 30px;
-		}
-	}
+*/
+.utv-card {
+	background-color: #fff;
+  -webkit-box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.2);
 }
 
-.global-main-content.utv-card {
+.utv-card {
 	.title{
 		font-size: 30px;
 	}
@@ -2408,9 +2367,7 @@ input:-webkit-autofill {
 		text-transform: uppercase;
     font-size: 16px;
 	}
-
-
-}//.global-main-content.utv-card 
+}//utv-card 
 
 
 
