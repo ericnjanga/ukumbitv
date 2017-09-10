@@ -14,6 +14,8 @@
 $tmb-unit: 185px;
 
 .global-main-content{
+	margin-left: auto;
+	margin-right: auto;
 	border: 4px solid red;
 	width: $tmb-unit * 5; //5 thumbnails in a row
 	// float: left;
