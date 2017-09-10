@@ -5,6 +5,7 @@
     	@include('r.chunks._account_menu') 
 
     	<div class="global-content">
+    		<h1>Change your preferences</h1>
 	    	<div class="row">
 	    		<div class="col-sm-2">
 		        <div class="img-block">
