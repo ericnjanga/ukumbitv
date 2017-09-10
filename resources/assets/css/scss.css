@@ -2315,13 +2315,12 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 */
 .global-display {
   min-width: 600px;
-  padding-left: 230px;
   border: 2px solid red; }
+  @media (min-width: 768px) {
+    .global-display {
+      padding-left: 230px; } }
   .global-display .global-content {
     border: 2px solid green; }
-    @media (min-width: 630px) {
-      .global-display .global-content {
-        width: 370px; } }
     @media (min-width: 795px) {
       .global-display .global-content {
         width: 555px; } }

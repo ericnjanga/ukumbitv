@@ -16,14 +16,17 @@ $sidebar-gap: 230px;
 
 .global-display{
 	min-width: $sidebar-gap + ($tmb-unit * 2);
-	padding-left: $sidebar-gap;
 	border: 2px solid red;
+
+	@media (min-width: 768px){
+		padding-left: $sidebar-gap; 
+	}
 
 	.global-content {
 		border: 2px solid green;
-		@media (min-width: 630px){
-			width: $tmb-unit * 2; //2 thumbnails in a row
-		}
+		// @media (min-width: 630px){
+		// 	width: $tmb-unit * 2; //2 thumbnails in a row
+		// }
 		@media (min-width: 795px){
 			width: $tmb-unit * 3; //3 thumbnails in a row
 		}
