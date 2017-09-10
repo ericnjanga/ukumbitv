@@ -2319,6 +2319,16 @@ fieldset[disabled] .twitter-typeahead .tt-input {
       .page-myaccount .account-form-block .page-block {
         width: 100%; } }
 
+@media (max-width: 767px) {
+  .page-myaccount .global-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px; }
+    .page-myaccount .global-content .img-block {
+      max-width: 150px;
+      margin: 0 auto; } }
+
 .page-404 {
   display: -ms-flexbox;
   display: flex;

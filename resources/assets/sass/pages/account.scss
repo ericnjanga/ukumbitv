@@ -28,4 +28,18 @@
 			}
 		}
 	}//account-form-block
+
+	
+	@media (max-width: 767px){
+		.global-content{
+			.img-block {
+				max-width: 150px;
+    		margin: 0 auto;
+			}
+			max-width: 600px;
+	    margin: 0 auto;
+	    padding-left: 20px;
+	    padding-right: 20px;
+		}
+	}
 }//page-myaccount
