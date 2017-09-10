@@ -2303,6 +2303,14 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .page-myaccount .GP-menu .play-menu > li:first-child a span {
     color: #fff; }
 
+.page-myaccount .account-form-block {
+  display: -ms-flexbox;
+  display: flex; }
+  .page-myaccount .account-form-block .page-block {
+    width: 47%; }
+    .page-myaccount .account-form-block .page-block:last-child {
+      margin-left: auto; }
+
 .page-404 {
   display: -ms-flexbox;
   display: flex;

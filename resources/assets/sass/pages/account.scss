@@ -10,4 +10,16 @@
 			}
 		}
 	}
-}
+
+
+
+	.account-form-block {
+		display: flex;
+		.page-block{
+			width: 47%;
+			&:last-child {
+				margin-left: auto;
+			}
+		}
+	}//account-form-block
+}//page-myaccount

@@ -14,7 +14,7 @@
 		    	</div>
 			    <div class="col-sm-10">
 		        <form class="account-form-block">
-							<div class="cadca"> 
+							<div class="page-block"> 
 	                <div class="form-group">
                     <label>Full name</label>
                     <input id="user-name" class="form-control" type="text" name="name" value="{{Auth::user()->name}}">
@@ -34,7 +34,7 @@
 
 							<hr>
 
-	            <div class="change-pas-block"> 
+	            <div class="page-block"> 
                 <div class="form-group">
                     <label>Enter current password</label>
                     <input id="old-password" class="form-control" type="password" name="old_password" class="mypass">
