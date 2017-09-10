@@ -2289,10 +2289,6 @@ input:-webkit-autofill {
  * Styling main content of the entire app
  * --------------------------------------
 */
-.container-fluid {
-	padding-left: 0; 
-	//to allow #GP-menu-sticky-wrapper to to be right at the left edge of the page's layout
-}
 #GP-menu-sticky-wrapper { 
 	float: left;
 } 

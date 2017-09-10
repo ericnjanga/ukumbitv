@@ -2447,9 +2447,6 @@ form.xl-inputs input, form.xl-inputs select {
  * Styling main content of the entire app
  * --------------------------------------
 */
-.container-fluid {
-  padding-left: 0; }
-
 #GP-menu-sticky-wrapper {
   float: left; }
 
