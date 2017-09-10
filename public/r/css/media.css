@@ -196,9 +196,7 @@
 
   .payment-form-block form {
     display: block; }
-
-  .payment-form-block form > div {
-    width: 100%; }
+ 
 
   .acc-menu {
     top: -20px; }
