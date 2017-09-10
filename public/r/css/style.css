@@ -877,6 +877,13 @@ img {
   display: flex;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media (max-width: 994px) {
+    .price-block {
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .price-block .price-item {
+        margin-bottom: 20px;
+        max-width: 350px; } }
   .price-block .price-item {
     width: 25%;
     padding: 0 0 15px 0;
