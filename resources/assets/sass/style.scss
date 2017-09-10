@@ -1143,12 +1143,10 @@ align-items: center;
   display: flex; 
   justify-content: center;
 
-
-
 	@media (max-width: 994px){ 
 		flex-direction: column;
 		.price-item {
-			margin-bottom: 20px;
+			margin-bottom: 20px!important;
 			max-width: 350px;
 			    align-items: center;
 		}
