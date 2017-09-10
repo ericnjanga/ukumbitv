@@ -35,6 +35,16 @@
 	      </div>
 
 	      <div class="block-wrap">
+	          <h2>Popular Videos</h2>  
+	          
+	          <div class="list-horizontal-wrapper">
+	              @foreach($trendings as $video)
+	                  @include('r.chunks._video_item')
+	              @endforeach
+	          </div>
+	      </div>
+
+	      <div class="block-wrap">
 	          <h2>My List</h2>  
 	          @if($my_lists->isEmpty())
 	              <div class="block-msg">
@@ -49,16 +59,6 @@
 	                  @endforeach
 	              </div>
 	          @endif
-	      </div>
-
-	      <div class="block-wrap">
-	          <h2>Popular Videos</h2>  
-	          
-	          <div class="list-horizontal-wrapper">
-	              @foreach($trendings as $video)
-	                  @include('r.chunks._video_item')
-	              @endforeach
-	          </div>
 	      </div>
 
 	      <div class="block-wrap">
