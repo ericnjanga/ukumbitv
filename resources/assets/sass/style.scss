@@ -1429,7 +1429,10 @@ align-items: center;
 // }
 
 .comment-block{
-  margin: 40px 0;
+  margin: 10px 0 40px 0;
+  h2 {
+  	margin-bottom: 20px;
+  }
   .comment{
     display: -webkit-box;
     display: -webkit-flex;
