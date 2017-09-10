@@ -1,0 +1,13 @@
+
+//Apply "clearfix" class from bootstrap
+.container-fluid,
+.list-horizontal-wrapper,
+.block-wrap, 
+.card-samples,
+.hero-sub {
+	&:before, &:after {
+	  display: table;
+	  content: " ";
+	  clear: both;
+	}
+}

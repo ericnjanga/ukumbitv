@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+
 use App\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -12,6 +15,7 @@ use Illuminate\Http\Request;
 use App\Helpers\Helper;
 
 use Setting;
+
 
 class AuthController extends Controller
 {
@@ -35,7 +39,11 @@ class AuthController extends Controller
      */
     protected $redirectTo = '/';
 
-    protected $redirectAfterLogout = '/login';
+
+    protected $redirectAfterLogout = '/';
+
+
+
 
     /**
      * The Login form view that should be used.
@@ -43,7 +51,7 @@ class AuthController extends Controller
      * @var string
      */
 
-    protected $loginView = 'user.auth.login';
+    protected $loginView = 'r.user.auth.login';
 
     /**
      * The Register form view that should be used.
@@ -51,7 +59,7 @@ class AuthController extends Controller
      * @var string
      */
 
-    protected $registerView = 'user.auth.register';
+    protected $registerView = 'r.user.auth.register';
 
 
     /**
@@ -73,9 +81,9 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            'name' => 'max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:6',
         ]);
     }
 
@@ -88,10 +96,10 @@ class AuthController extends Controller
     protected function create(array $data)
     {        
         $User = User::create([
-            'name' => $data['name'],
+            //'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'timezone' => $data['timezone'],
+            //'timezone' => $data['timezone'],
             'picture' => asset('placeholder.png'),
             'is_activated' => 1,
             'login_by' => 'manual',
@@ -110,15 +118,29 @@ class AuthController extends Controller
 
             $User->save();
         }
+
+        $this->sendVerifyEmail($User);
         
+        return $User;
+    }
+
+    public function sendVerifyEmail($User)
+    {
         // Send welcome email to the new user:
         $subject = trans('messages.user_welcome_title');
         $email_data = $User;
         $page = "emails.welcome";
-        $email = $data['email'];
+        $email = $User->email;
         Helper::send_email($page,$subject,$email,$email_data);
-        
-        return $User;
+    }
+
+    public function resendVerifyEmail($id)
+    {
+        $User = User::find($id);
+        $this->sendVerifyEmail($User);
+
+        return redirect()->route('user.confirm-email')
+            ->with('user', $User);
     }
 
 
@@ -140,7 +162,8 @@ class AuthController extends Controller
 
                         Helper::check_email_verification("" , $user, $error);
 
-                        return redirect(route('user.login.form'))->with('flash_error', trans('messages.email_verify_alert'));
+//                        return redirect(route('user.login.form'))->with('flash_error', trans('messages.email_verify_alert'));
+                        return view('r.user.auth.confirm-msg')->with('user', $user);
 
                     }
 
@@ -152,6 +175,31 @@ class AuthController extends Controller
             }   
         }
        return redirect()->intended($this->redirectPath());
+    }
+
+    public function confirmEmailMsg()
+    {
+        //dd(Session::get('user'));
+        return view('r.user.auth.confirm-msg')->with('user', Session::get('user'))->with('flash_success', 'New email was sent successfully');
+    }
+
+    public function register(Request $request)
+    {
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails()) {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        Auth::guard($this->getGuard())->login($this->create($request->all()));
+        Auth::guard($this->getGuard())->logout();
+        $user = User::where('email', $request->email)->first();
+        return view('r.user.auth.confirm-msg')->with('user', $user);
+
+
+
     }
 
 }

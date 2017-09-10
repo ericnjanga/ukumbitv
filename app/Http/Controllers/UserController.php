@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Actor;
 use App\AdminVideo;
+use App\Director;
+use App\Like;
 use App\PaymentPlan;
+use App\TrialPeriod;
 use App\UserHistory;
 use App\UserPayment;
+use App\UserPlaylist;
+use App\VideoActor;
+use App\VideoDirector;
 use App\Videoimage;
+use App\VideoTag;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -27,6 +36,7 @@ use App\Flag;
 
 use Auth;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\URL;
 use Omnipay\Omnipay;
 use phpDocumentor\Reflection\Types\Object_;
@@ -57,34 +67,97 @@ class UserController extends Controller {
         $this->UserAPI = $API;
         
 //        $this->middleware('auth', ['except' => ['watchVideo', 'index','single_video','all_categories' ,'category_videos' , 'sub_category_videos' , 'contact','trending']]);
-        $this->middleware('auth', ['except' => []]);
+        $this->middleware('auth', ['except' => ['index','contact', 'showVideo', 'sendContactForm']]);
     }
 
+
+    public function account()
+    {
+        return view('r.user.account');
+    }
+
+    public function packages()
+    {
+        return view('r.user.packages')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
+    }
+
+    public function checkVideoPlays(Request $request)
+    {
+        $video = AdminVideo::where('watchid', $request->id)->first();
+        if(!$video) {
+            return response()->json(['status' => 'error no video'], 500);
+        }
+
+        $video->watch_count++;
+        $video->save();
+
+        $checkTrialRecord = false;
+        $trials = TrialPeriod::where('user_id', Auth::id())->get();
+        if(count($trials) < 3) {
+            foreach ($trials as $trial) {
+                if ($trial->admin_video_id == $video->id) {
+                    $checkTrialRecord = true;
+                }
+            }
+
+            if(!$checkTrialRecord) {
+                $trialRecord = new TrialPeriod();
+                $trialRecord->user_id = Auth::id();
+                $trialRecord->admin_video_id = $video->id;
+                $trialRecord->save();
+            }
+        }
+
+        if (Auth::check()) {
+            $hist = new UserHistory();
+            $hist->user_id = Auth::id();
+            $hist->admin_video_id = $video->id;
+            $hist->status = 0;
+            $hist->save();
+
+            return response()->json(['status' => 'ok'], 200);
+        } else {
+            return response()->json(['status' => 'error'], 500);
+        }
+    }
     /**
      * Show the user dashboard.
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
+
+        //#testing
+        if(!Auth::check()) {
+            return view('r.landing')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
+        }
+//        }else{
+//            return view('r.user.home-video');
+//        }
+        //#end
+
         $histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
         $database = config('database.connections.mysql.database');
         $username = config('database.connections.mysql.username');
-
         if($database && $username && Setting::get('installation_process') == 3) {
             counter('home');
             $watch_lists = $wishlists = array();
 
             if(\Auth::check()){
                 $wishlists  = Helper::wishlist(\Auth::user()->id,WEB);  
-                $watch_lists = Helper::watch_list(\Auth::user()->id,WEB);  
+//                $watch_lists = Helper::watch_list(\Auth::user()->id,WEB);
+                $watch_lists = Helper::watch_list(\Auth::user()->id,WEB);
             }
             
             $recent_videos = Helper::recently_added(WEB);
+
             $trendings = Helper::trending(WEB);
+
             $suggestions  = Helper::suggestion_videos(WEB);
             $categories = get_categories();
 
-            $videos = AdminVideo::with('videoimage')->orderBy('id', 'desc')->get();
+            $videos = AdminVideo::with('videoimage', 'likes')->with('category')->orderBy('id', 'desc')->limit(15)->get();
+            //dd($videos);
 
             $lastVideos = [];
             $allCategories = Category::all();
@@ -96,18 +169,24 @@ class UserController extends Controller {
                     }
             }
 
+            $grandVideo = AdminVideo::with('videoimage', 'category', 'likes')->where('is_banner', 1)->first();
 
-            return view('user.home-video')
+            $my_lists =$this->myPlaylist();
+
+            return view('r.user.home-video')
                         ->with('page' , 'home')
                         ->with('subPage' , 'home')
                         ->with('wishlists' , $wishlists)
                         ->with('recent_videos' , $recent_videos)
                         ->with('trendings' , $trendings)
                         ->with('watch_lists' , $watch_lists)
+                        ->with('my_lists' , $my_lists)
                         ->with('suggestions' , $suggestions)
                         ->with('categories' , $categories)
                         ->with('videos_by_cat' , $lastVideos)
+                        ->with('grandVideo' , $grandVideo)
                         ->with('videos', $videos)
+                        ->with('payPlan', Auth::user()->paymentPlans[0]->flag)
                         ->with('trialCount', 3-count($histories));
         } else {
             return redirect()->route('installTheme');
@@ -132,7 +211,7 @@ class UserController extends Controller {
             }
         }
 
-        return view('user.home-video')
+        return view('r.user.tag-videos')
             ->with('page' , 'Videos by tag')
             ->with('subPage' , 'Videos by tag')
             ->with('categories' , $categories)
@@ -140,15 +219,27 @@ class UserController extends Controller {
             ->with('videos', $videos);
     }
 
+    public function videosByType($id)
+    {
+
+        $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('video_type', $id)->get();
+
+        return view('r.user.category-videos')->with('videos', $videos)->with('videoType', $id);
+    }
+
     public function getVideosByCategory($id)
     {
-        $category = Category::where('name', $id)
-            ->orWhere('name', str_replace('-', ' ', $id))
-            ->firstOrFail();
+        //#testing
+        if($id == '0'){
+            $videos = AdminVideo::with('videoimage')
+                ->orderBy('id', 'desc')->get();
+        }else{
+            $category = Category::where('id',$id)->firstOrFail();
+            $videos = AdminVideo::with('videoimage')
+                ->where('category_id', $category->id)
+                ->orderBy('id', 'desc')->get();
+        }
 
-        $videos = AdminVideo::with('videoimage')
-            ->where('category_id', $category->id)
-            ->orderBy('id', 'desc')->get();
 
         $lastVideos = [];
         $allCategories = Category::all();
@@ -161,12 +252,14 @@ class UserController extends Controller {
             }
         }
 
-        return view('user.home-video')
+        return view('r.chunks._filter_results')
+            ->with('id',$id)
             ->with('page' , 'Videos by tag')
             ->with('subPage' , 'Videos by tag')
             ->with('categories' , $categories)
             ->with('videos_by_cat' , $lastVideos)
-            ->with('videos', $videos);
+            ->with('videos', $videos)
+            ->render();
     }
 
     public function vimeoVideo()
@@ -187,46 +280,112 @@ class UserController extends Controller {
 
     public function checkTrial($id)
     {
+        $trials = TrialPeriod::where('user_id', Auth::id())->get();
 
-        $histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
-
-        if(count($histories) != 0){
-
-            foreach ($histories as $history) {
-                if($history->admin_video_id == $id) {
-                    return true;
-                }
-            }
-
-            if(count($histories) < 3){
-                return true;
-            }
-
-            return false;
-
+        if(count($trials) < 3) {
+            return true;
         }
+        return false;
 
-        return true;
+//        if(count($trials) > 0) {
+//            foreach ($trials as $trial) {
+//                if ($trial->admin_video_id == $id) {
+//                    return true;
+//                }
+//            }
+//            if(count($trials ) < 3) {
+//                return true;
+//            } else {
+//            return false;
+//            }
+//        }
+//
+//        return true;
+
     }
 
+    public function getRelatedVideos($video)
+    {
+//        $videos = $video->videoTags;
+        $tags = $video->videoTags;
+        $collection = new Collection;
+        foreach ($tags as $tag) {
+            $collection->push($tag->adminVideos()->with('videoimage', 'category', 'likes')->get());
+        }
+
+//       dd($collection);
+
+        $collection2 = new Collection;
+
+        foreach ($collection as $item) {
+            foreach ($item as $value) {
+                $collection2->push($value);
+            }
+        }
+
+
+        $unique = $collection2->unique('watchid');
+
+        $keyed = $unique->keyBy('watchid');
+
+        $keyed->forget($video->watchid);
+
+        if ($keyed->count() == 0) {
+            $random = [];
+        }
+        elseif ($keyed->count() == 1) {
+            $random = $keyed;
+        }
+        elseif ($keyed->count() < 15) {
+            $random = $keyed->random($keyed->count());
+        } else {
+            $random = $keyed->random(15);
+        }
+
+
+//        dd($keyed);
+
+        return $random;
+    }
+
+    public function myPlaylist()
+    {
+        $videosId = UserPlaylist::where('user_id', Auth::id())->get();
+        $ids = [];
+        foreach($videosId as $item) {
+            array_push($ids, $item->admin_video_id);
+        }
+        $videos = AdminVideo::with('videoimage', 'likes', 'category')->find($ids);
+
+        return $videos;
+//        return view('r.user.movie-list')
+//            ->with('videos', $videos);
+    }
 
     public function watchVideo($id)
     {
-        //$histories = Helper::watch_list(\Auth::user()->id,WEB);
-      //  $histories = UserHistory::where('user_id', Auth::id())->distinct()->get();
-        //$histories = UserHistory::distinct()->select('admin_video_id')->where('user_id', '=', Auth::id())->limit(3)->get();
-        //dd($histories);
-        $video = AdminVideo::where('watchid', $id)->firstOrFail();
 
-        $checkTrial = $this->checkTrial($video->id);
-        if(!$checkTrial){
-            $payPlans = PaymentPlan::all();
-            return view('user.select_payment_plan')
-                ->with('payPlans', $payPlans);
+        $video = AdminVideo::with('comments.user', 'videoimage')->where('watchid', $id)->firstOrFail();
+
+        $checkTrial = true;
+        $flag = 0;
+        if(Auth::check()) {
+            $flag = Auth::user()->paymentPlans[0]->flag;
+            if($flag == 1) {
+                $checkTrial = $this->checkTrial($video->id);
+            }
+        } else {
+            return view('r.landing')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get())
+                ->with('video', $video);
         }
 
 
-        $videos = AdminVideo::all();
+
+
+
+        $relatedVideos = $this->getRelatedVideos($video);
+
+
         $images = Videoimage::where('admin_video_id', $video->id)->first();
         if ($images == null)
         {
@@ -235,9 +394,165 @@ class UserController extends Controller {
 
         $videoId = substr($video->video, 8);
 
-        $main_video = $video->video;
-        $trailer_video = "";
-        $wishlist_status = $history_status = WISHLIST_EMPTY;
+
+
+        $likes = Like::where('admin_video_id', $video->id)->where('type', 'like')->get();
+        $disLikes = Like::where('admin_video_id', $video->id)->where('type', 'dislike')->get();
+        $checkLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'like')->first();
+        $checkDisLike = Like::where('user_id', Auth::id())->where('admin_video_id', $video->id)->where('type', 'dislike')->first();
+
+
+        $tags = [];
+        foreach($video->videoTags as $tag) {
+            array_push($tags, $tag->name);
+        }
+        $tags = implode(', ', $tags);
+
+        $actors = [];
+        foreach($video->videoActors as $actor) {
+            array_push($actors, $actor->name);
+        }
+        $actors = implode(', ', $actors);
+
+        $directors = [];
+        foreach($video->videoDirectors as $director) {
+            array_push($directors, $director->name);
+        }
+        $directors = implode(', ', $directors);
+
+
+        return view('r.user.single-video')
+//            ->with('trailer_video' , $trailer_video)
+//            ->with('main_video' , $main_video)
+//            ->with('videoStreamUrl', $main_video)
+//            ->with('history_status' , $history_status)
+//            ->with('videos' , $videos)
+//            ->with('videoTitle' , $video)
+//            ->with('images' , $images)
+            ->with('video', $video)
+            ->with('checkTrial', $checkTrial)
+            ->with('videoId', $videoId)
+            ->with('actors', $actors)
+            ->with('checkLike', $checkLike)
+            ->with('checkDisLike', $checkDisLike)
+            ->with('tags', $tags)
+            ->with('relatedVideos', $relatedVideos)
+            ->with('payPlan', $flag)
+            ->with('likes', count($likes))
+            ->with('dislikes', count($disLikes))
+            ->with('directors', $directors);
+//            ->with('categories', $categories);
+    }
+
+    public function addToPlaylist(Request $request)
+    {
+        switch (Auth::user()->paymentPlans[0]->flag) {
+            case 1:
+
+                $result = [
+                    'title' => 'Oops...',
+                    'text' => 'To add video int your <a href="/my-playlist">playlist</a> you need to <a href="#">upgrade</a> the payment plan',
+                    'type' => 'warning'
+                ];
+
+                return response()->json($result);
+                break;
+            case 2:
+
+                $playlist = UserPlaylist::where('user_id', Auth::id())->get();
+                if(count($playlist) < 5) {
+                    foreach ($playlist as $item) {
+                        if($item->admin_video_id == $request->id) {
+                            $result = [
+                                'title' => 'Hey!',
+                                'text' => 'Video already added in your <a href="/my-playlist">playlist</a>',
+                                'type' => 'info'
+                            ];
+                            return response()->json($result);
+                        }
+                    }
+                    $newPlaylist = new UserPlaylist();
+                    $newPlaylist->user_id = Auth::id();
+                    $newPlaylist->admin_video_id = $request->id;
+                    $newPlaylist->save();
+
+                    $result = [
+                        'title' => 'Good job!',
+                        'text' => 'Video was added in your <a href="/my-playlist">playlist</a>',
+                        'type' => 'success'
+                    ];
+                    return response()->json($result);
+                } else {
+                    $result = [
+                        'title' => 'Oops...',
+                        'text' => 'You have already 5 videos in your <a href="/my-playlist">playlist</a>! To add video you need to <a href="#">upgrade</a> the payment plan',
+                        'type' => 'error'
+                    ];
+                    return response()->json($result);
+                }
+                break;
+            case 3:
+                $playlist = UserPlaylist::where('user_id', Auth::id())->get();
+                    foreach ($playlist as $item) {
+                        if($item->admin_video_id == $request->id) {
+                            $result = [
+                                'title' => 'Hey!',
+                                'text' => 'Video already added in your <a href="/my-playlist">playlist</a>',
+                                'type' => 'info'
+                            ];
+                            return response()->json($result);
+                        }
+                    }
+                $newPlaylist = new UserPlaylist();
+                $newPlaylist->user_id = Auth::id();
+                $newPlaylist->admin_video_id = $request->id;
+                $newPlaylist->save();
+
+                $result = [
+                    'title' => 'Good job!',
+                    'text' => 'Video was added in your <a href="/my-playlist">playlist</a>',
+                    'type' => 'success'
+                ];
+                return response()->json($result);
+                break;
+            default:
+                $result = [
+                    'title' => 'Oops..',
+                    'text' => 'Something went wrong, try later',
+                    'type' => 'success'
+                ];
+                return response()->json($result);
+        }
+
+    }
+
+    public function showVideo($id)
+    {
+
+        $video = AdminVideo::where('watchid', $id)->first();
+
+        $checkTrial = $this->checkTrial($video->id);
+
+        $checkTrialRecord = false;
+        $trials = TrialPeriod::where('user_id', Auth::id())->get();
+        if(count($trials) < 3) {
+                foreach ($trials as $trial) {
+                    if ($trial->admin_video_id == $video->id) {
+                        $checkTrialRecord = true;
+                    }
+                }
+
+            if(!$checkTrialRecord) {
+                $trialRecord = new TrialPeriod();
+                $trialRecord->user_id = Auth::id();
+                $trialRecord->admin_video_id = $video->id;
+                $trialRecord->save();
+            }
+        }
+
+        $video->watch_count++;
+        $video->save();
+        $videoId = substr($video->video, 8);
 
         if (Auth::check()) {
             $hist = new UserHistory();
@@ -247,19 +562,10 @@ class UserController extends Controller {
             $hist->save();
         }
 
-        $categories = get_categories();
-
-        return view('user.single_newvideo')
-            ->with('trailer_video' , $trailer_video)
-            ->with('main_video' , $main_video)
-            ->with('videoStreamUrl', $main_video)
-            ->with('history_status' , $history_status)
-            ->with('videos' , $videos)
-            ->with('videoTitle' , $video)
-            ->with('images' , $images)
-            ->with('video', $video)
+        return view('r.user.watch-video')
             ->with('videoId', $videoId)
-            ->with('categories', $categories);
+            ->with('checkTrial', $checkTrial)
+            ->with('video', $video);
     }
 
 
@@ -383,6 +689,10 @@ class UserController extends Controller {
 	// End By Vishnu
 	 
 	public function single_video($id) {
+
+	    //#testing
+	    return view('r.user.single-video');
+	    //#end
 
         $video = Helper::get_video_details($id);
 
@@ -751,7 +1061,7 @@ class UserController extends Controller {
 
         $category = Category::find($id);
 
-        return view('user.category-videos')
+        return view('r.user.category-videos')
                     ->with('page' , 'categories')
                     ->with('subPage' , 'categories')
                     ->with('category' , $category)
@@ -803,14 +1113,23 @@ class UserController extends Controller {
                     ->with('suggestions' , $suggestions);
     }
 
-    public function contact(Request $request) {
+    public function contact() {
 
-        $contact = Page::where('type', 'contact')->first();
 
-        return view('contact')->with('contact' , $contact)
-                        ->with('page' , 'contact')
-                        ->with('subPage' , '');
 
+        return view('r.contact');
+
+    }
+
+    public function sendContactForm(Request $requset)
+    {
+        $subject = trans('messages.user_welcome_title');
+        $email_data = $requset;
+        $page = "emails.contact";
+        $email = 'info@ukumbitv.com';
+        Helper::send_email($page,$subject,$email,$email_data);
+
+        return response()->json(['message' => 'ok'], 200);
     }
 
     public function trending()
@@ -985,9 +1304,11 @@ class UserController extends Controller {
     public function payment()
     {
         $videos = AdminVideo::all();
+        $categories = Category::all();
         return view('user.userpayment')
                     ->with('page' , 'profile')
                     ->with('subPage' , 'user-profile')
+                    ->with('categories' , $categories)
                     ->with('videos', $videos);
     }
 
@@ -1171,4 +1492,147 @@ class UserController extends Controller {
 
         return 'ERROR';
     }
+
+   public function unique_multidim_array($array, $key) {
+        $temp_array = [];
+        $i = 0;
+        $key_array = [];
+
+        foreach($array as $val) {
+            if (!in_array($val[$key], $key_array)) {
+                $key_array[$i] = $val[$key];
+                $temp_array[$i] = $val;
+            }
+            $i++;
+        }
+        return $temp_array;
+    }
+
+    public function searchData()
+    {
+        $videos = AdminVideo::with('videoDirectors', 'videoActors', 'videoTags')->get();
+
+        $result = [];
+//        foreach ($videos as $video) {
+//            if(array_search($video->title, array_column($result, 'word')) === FALSE) {
+//              array_push($result, ['word' => $video->title, 'type' => 'video title']);
+//            }
+//            foreach ($video->videoDirectors as $director) {
+//                if(array_search($director->name, array_column($result, 'word')) === FALSE) {
+//                    array_push($result, ['word' => $director->name, 'type' => 'directors']);
+//                }
+//            }
+//            foreach ($video->videoActors as $actor) {
+//                if(array_search($actor->name, array_column($result, 'word')) === FALSE) {
+//                    array_push($result, ['word' => $actor->name, 'type' => 'actors']);
+//                }
+//            }
+//            foreach ($video->videoTags as $tag) {
+//                if(array_search($tag->name, array_column($result, 'word')) === FALSE) {
+//                    array_push($result, ['word' => $tag->name, 'type' => 'tags']);
+//                }
+//            }
+//        }
+
+        foreach($videos as $video) {
+            array_push($result, $video->title);
+            foreach ($video->videoDirectors as $director) {
+                array_push($result, $director->name);
+            }
+            foreach ($video->videoActors as $actor) {
+                array_push($result, $actor->name);
+            }
+            foreach ($video->videoTags as $tag) {
+                array_push($result, $tag->name);
+            }
+        }
+//        $result = implode(',', $result);
+
+
+//       $result = $this->unique_multidim_array($result,'word');
+//        $found_key = array_search('test', array_column($result, 'word'));
+//dd($found_key);
+        return response()->json($result);
+//        return $result;
+
+    }
+
+    public function searchAll(Request $request)
+    {
+        $result = new Collection;
+        $videos = AdminVideo::with('videoimage', 'likes', 'category')->where('title', 'like', '%'.$request->key.'%')->get();
+        $videosByTag = VideoTag::with('adminVideos.videoimage', 'adminVideos.likes', 'adminVideos.category')->where('name', $request->key)->get();
+        $videosByActor = VideoActor::with('adminVideos.videoimage', 'adminVideos.likes', 'adminVideos.category')->where('name', $request->key)->get();
+        $videosByDirector = VideoDirector::with('adminVideos.videoimage', 'adminVideos.likes', 'adminVideos.category')->where('name', $request->key)->get();
+
+        foreach ($videos as $adminVideo) {
+            $result->push($adminVideo);
+        }
+        foreach ($videosByTag as $videoByTag) {
+            foreach ($videoByTag->adminVideos as $video) {
+                $result->push($video);
+            }
+        }
+        foreach ($videosByActor as $videoByActor) {
+            foreach ($videoByActor->adminVideos as $video) {
+                $result->push($video);
+            }
+        }
+        foreach ($videosByDirector as $videoByDirector) {
+            foreach ($videoByDirector->adminVideos as $video) {
+                $result->push($video);
+            }
+        }
+
+        $unique = $result->unique();
+//        dd($unique);
+
+        return view('r.user.search-result')->with('videos', $unique);
+    }
+
+    public function updateProfile(Request $request)
+    {
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'email' => 'required|email',
+            'phone' => 'max:255',
+        ]);
+        // If validator Fails, redirect same with error values
+        if ($validator->fails()) {
+            //throw new Exception("error", tr('admin_published_video_failure'));
+            return response()->json(['title' => 'Hmm...', 'message' => 'You need to fill in all the fields', 'type' => 'error']);
+        }
+
+        $user = Auth::user();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->mobile = $request->phone;
+
+        $user->save();
+
+        return response()->json($user);
+    }
+
+    public function updatePassword(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'oldpassword' => 'required|max:255',
+            'newpassword' => 'required|max:255',
+        ]);
+        // If validator Fails, redirect same with error values
+        if ($validator->fails()) {
+            //throw new Exception("error", tr('admin_published_video_failure'));
+            return response()->json(['title' => 'Hmm...', 'message' => 'You need to fill in all the fields', 'type' => 'error', 'errors' => $validator->messages()]);
+        }
+
+        if (Hash::check($request->oldpassword, Auth::user()->password)) {
+            $user = Auth::user();
+            $user->password = bcrypt($request->newpassword);
+            $user->save();
+            return response()->json(['title' => 'Cool', 'message' => 'Password was updated', 'type' => 'success']);
+        }
+        return response()->json(['title' => 'Hmm...', 'message' => 'Wrong current password', 'type' => 'error']);
+    }
+
 }

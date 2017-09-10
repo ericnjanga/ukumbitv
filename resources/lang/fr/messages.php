@@ -110,9 +110,7 @@ return array(
 	'settings'	=>	'Settings',
 	'delete_account' => 'Delete Account',
 
-	'forgot_password' 	=> 'Mot de passe oublié',
-	'forgot'	=>	'Forgot Your Password',
-	'remember'	=>	'Remember Me',
+	'forgot'	=>	'Forgot Your Password', 
 
 	'reset_password' => 'Reset Password',
 	'change_password'	=> 	'Change Password',
@@ -139,10 +137,7 @@ return array(
 	'remove'	=> 	'Remove',
 	'change'	=> 	'Change',
 	'upgrade' => 'Upgrade',
-	'submit' 						=> 'Soumettre',
-	'join_for_free_week'	=>	'Abonnement / première semaine gratuite',
-	'you_get_per_month'		=>	'Pour 3$ par mois, vous obtenez',
-	'first_week_free'		=>	'Le première semaine est gratuite',
+	'submit' 						=> 'Soumettre', 
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',
@@ -151,7 +146,7 @@ return array(
 
 	'paynow'	=> 'Paynow',
 	'duration' => 'Duration',
-	'close' => 'Close',
+	'close' => 'Fermer',
 	'search' => 'Search',
 	'view_all' => 'View All',
 	'see_all' => 'See All',
@@ -211,7 +206,7 @@ return array(
 	// Web Register 
 	'registration_form'	=>	'Registration Form',
 	'already_register'	=>	'Already Registered? Login',
-	'already_account' 		=> 'Vous avez déjà un compte?',
+	 
 	
 	'login_form'	=>	'Login Form',
 	'password_ph'	=>	'Atleast 6 letters',
@@ -271,6 +266,7 @@ return array(
 	'trending_videos' => 'Trending Videos',
 	'all_videos' => 'All Videos',
 	'suggestions' => 'Suggestions',
+    'empty_my_list'=>'No video added to list1',
 
 	// Search
 
@@ -515,7 +511,7 @@ return array(
 	'publish' => 'Publish',
 	
 	'ratings' => 'Ratings',
-	'reviews' => 'Reviews',
+	'reviews' => 'Les Avis',
 
 	'default_image' => 'Default image',
 	'other_image1' => 'Other Image 1',
@@ -688,4 +684,65 @@ return array(
   'change_plan' => 'Changer le plan',
 
 
+
+
+
+
+
+
+  //HOME PAGE ...
+  //-----------------------------------
+  //--Call to ation ..
+  'home_cta' => 'Essayez UkumbiTV gratuitement',
+
+  //--middle section ..
+  'home_midsec_title1' => 'Les meilleures productions',
+  'home_midsec_blurb1' => 'Découvrez des films audacieux et passionnants de talentueux jeunes producteurs africains qui ont déplacé des centaines de milliers de Youtubers à travers des montagnes russes de larmes et de rires avec leur style de direction peu conventionnel et sans remords.
+Nous produisons et promouvons des films, des spectacles de télévision, des séries Web, des documentaires et des films d\'animation.',
+  'home_midsec_title2' => 'The comfort & convenience',
+  'home_midsec_blurb2' => '
+Découvrez notre contenu incroyable sur n\'importe quel appareil de votre choix (smartphone, tablette ou bureau) et profitez de la même expérience. Téléchargez votre vidéo préférée pour regarder en mode hors connexion. Participez, commentez et partagez votre expérience avec vos amis.',
+  'home_midsec_title3' => 'Great video quality & experience',
+  'home_midsec_blurb3' => 'Watch videos on High Definition, experience the ease to search and find your favorite content, receive movie suggestions based on your preferences, stay up to date with latest african shows and be the first to watch them.',
+
+  //--plans section ..
+  'home_plansec_title' => 'Choisissez votre expérience',
+
+  //--SEO text section ..
+  'home_seotext_title' => 'Our Mission',
+  'home_seotext_blurb' => '<p><b>Ukumbi</b> wants to rebrand the African cinema as a dynamic, culturally rich and entertaining cinema to the world audience.
+For this, we are teaming up with young, talented and bold movie producers, screenwriters, actors and artists to create a new wave of exceptional African content.</p>
+<p>But we believe African stories, without the perspective of other people from African descent would be incomplete, that\'s why we are actively collaborating with cinema professionals from the caribbean, the Americas and Europe to create the <b>360 degrees African cinema experience</b>.
+And to insure en exceptional delivery all this unique experience, we have created <b>UkumbiTV</b>, a platform which aims to be among the best content streaming platforms in the world.</p>
+
+<p>This is how UkumbiTV is going to rebrand the African cinema, this is how UkumbiTV will redefine the African quality!</p>',
+  //HOME PAGE ...
+  //----------------------------------- 
+
+
+
+
+
+
+
+//videos ......
+  'Similar_Videos' => 'Vidéos similaires',
+  'There_is_no_videos' => 'Il n\'y a pas de vidéos',
+  'Write_a_review' => 'Écrire une critique',
+  'Play' => 'Jouer',
+  'Add_to_list' => 'Ajouter à la liste',
+  'share' => 'Partager',
+  'Episodes' => 'Épisodes',
+  'Cast_and_credits' => 'L\'équipe de le casting',
+  'Review_by' => 'Revue par',
+
+	//...... ......
+  'Search_placeholder' => 'Rechercher: Titres, personnes, tags',
+  'review_help' => 'Les commentaires les plus utiles ont 100 mots ou plus',
+
+
+
+
+
+  
 );

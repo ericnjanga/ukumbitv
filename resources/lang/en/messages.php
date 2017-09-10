@@ -110,9 +110,7 @@ return array(
 	'settings'	=>	'Settings',
 	'delete_account' => 'Delete Account',
 
-	'forgot_password'	=>	'Forgot Password',
 	'forgot'	=>	'Forgot Your Password',
-	'remember'	=>	'Remember Me',
 
 	'reset_password' => 'Reset Password',
 	'change_password'	=> 	'Change Password',
@@ -139,10 +137,7 @@ return array(
 	'remove'	=> 	'Remove',
 	'change'	=> 	'Change',
 	'upgrade' => 'Upgrade',
-	'submit'	=>	'Submit',
-	'join_for_free_week'	=>	'Join / first week is free',
-	'you_get_per_month'	=>	'For $3 a month, you get',
-	'first_week_free'	=>	'The first week is free',
+	'submit'	=>	'Submit', 
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',
@@ -162,6 +157,7 @@ return array(
 	'from'	=>	'From',
 	'to'	=>	'To',
 	'date' => 'Date',
+	'free' => 'free',
 
 	'message' => 'Message',
 	'upload_image' => 'Upload Image',
@@ -211,7 +207,7 @@ return array(
 	// Web Register 
 	'registration_form'	=>	'Registration Form',
 	'already_register'	=>	'Already Registered? Login',
-	'already_account' => 'Already Have an Account?', 
+	 
 	
 	'login_form'	=>	'Login Form',
 	'password_ph'	=>	'Atleast 6 letters',
@@ -271,6 +267,7 @@ return array(
 	'trending_videos' => 'Trending Videos',
 	'all_videos' => 'All Videos',
 	'suggestions' => 'Suggestions',
+    'empty_my_list'=>'No video added to list.',
 
 	// Search
 
@@ -542,6 +539,7 @@ return array(
 	
 	'ratings' => 'Ratings',
 	'reviews' => 'Reviews',
+	'month' => 'month',
 
 	'default_image' => 'Default image',
 	'other_image1' => 'Other Image 1',
@@ -713,5 +711,146 @@ return array(
   'plan_details' => 'Plan Details',
   'change_plan' => 'Change Plan',
 
+
+
+
+
+
+
+
+  //HOME PAGE ...
+  //----------------------------------- 
+  //--Call to ation ..
+  'home_cta' => 'Try UkumbiTV for free',
+
+  //--middle section ..
+  'home_midsec_title1' => 'The finest African productions',
+  'home_midsec_blurb1' => 'You will never undergrade African productions once you watch what we promote here on Ukumbi TV. We give you the best and high standard productions from great producers and talented actors. Catch your favorite movies, TV shows, web series, documentaires here on your number 1 mobile TV. We make viewing for you a pleasure.',
+  'home_midsec_title2' => 'The comfort & convenience',
+  'home_midsec_blurb2' => 'Catch the best of funs watching our captivating programs wherever you find yourself, being it on your smartphone, tablet or desktop the experience remains thesame. You can equally download and watch off line your favorite programs, movies, TV shows, documentaries or any other production of your choice. We give you not only all types of productions, but the best in each domain.',
+  'home_midsec_title3' => 'Great video quality & experience',
+  'home_midsec_blurb3' => 'Ukumbi TV gives you videos of high definition just as you will get in a theatre. Feel the moment, the action, the sound, the emotion and the passion on any device of your choice. Easily search your favorite movies here in no time, share with us your suggestions and be updated with the latest African movies and other TV programs, be the first to watch them as a King/queen.',
+
+  //--plans section ..
+  'home_plansec_title' => 'Pick your experience',
+
+  //--SEO text section ..
+  'home_seotext_title' => 'Our Mission',
+  'home_seotext_blurb' => '<p>We believe in Africa and it\'s strength. Africa just like any other continent is in a perpetual search of innovation and originallity. That is why we created the Ukumbi TV which is to renovate, rebrand and redifine the African film industries. We want to show not only to Africans the originallity of thier movies but to let the entire world know of them. We bring together young and talented movie producers, scriptwriters, actors, artists and TV hosts to create exceptional and amazing African brands in terms of entertainement. </p>',
+  //HOME PAGE ...
+  //----------------------------------- 
+
+
+
+
+
+
+
+
+  //SING-IN/REGISTER PAGE (AUTH) ...
+  //----------------------------------- 
+  'auth_signin' => 'Sign In',
+  'auth_signin_blurb' => 'The easiest way for you to sign in is with Facebook',
+  'auth_signin_fb' => 'Sign in with Facebook',
+  'auth_or' => 'or',
+  'auth_no_account' => 'Don’t have an account?',
+  'auth_have_account' => 'Already have an account?',
+
+	'auth_forgot_password'	=>	'Forgot Password?',
+	'auth_remember'	=>	'Remember Me',
+	'auth_password'	=>	'Password',
+	'auth_enter_email'	=>	'Enter your e-mail', 
+	'auth_signup'	=>	'Sign Up',  
+	'auth_signin'	=>	'Sign In', 
+	'auth_policy_check1'	=>	'By clicking Sign Up, I agree to the', 
+	// [fr] 'forgot_password' 	=> 'Mot de passe oublié',
+  //SING-IN/REGISTER PAGE ...
+  //----------------------------------- 
+
+
+
+
+
+
+
+//videos ......
+  'Similar_Videos' => 'Similar Videos',
+  'There_is_no_videos' => 'There is no videos',
+  'Write_a_review' => 'Write a review',
+  'Play' => 'Jouer',
+  'Add_to_list' => 'Add to list',
+  'share' => 'Share',
+  'Episodes' => 'Episodes',
+  'Cast_and_credits' => 'Cast and credits',
+  'Review_by' => 'Review by',
+
+	//...... ......
+  'Search_placeholder' => 'Search for: Titles, people, tags',
+  'review_help' => 'Most helpful reviews have 100 words or more',
+
+
+
+
+
+  //TERMS OF USE PAGE ...
+  //----------------------------------- 
+  'tos_title' => 'Terms of Use',
+
+  'tos_section1' => '<p>UkumbiTV provides a subscription service that allows our members to access movies and TV shows streamed over the Internet to certain Internet-connected computers and other devices.</p>',
+
+  'tos_section2' => '<p>The UkumbiTV service is provided to you by Mungo Digital Inc., a Canadian limited liability company. These Terms of Use govern your use of our service. As used in these Terms of Use, "UkumbiTV service", "our service" or "the service" means the service provided by UkumbiTV for discovering and watching UkumbiTV content, including all features and functionalities, recommendations and reviews, the website, and user interfaces, as well as all content and software associated with our service.</p>',
+
+  'tos_section3' => '<h2>Membership:</h2><p>Your UkumbiTV membership will continue month-to-month until terminated. To use the UkumbiTV service you must have Internet access and a modern web browser, and provide a current, valid, accepted method of payment, which you may update from time to time ("Payment Method"). Unless you cancel your membership before your monthly billing date, you authorize us to charge your next month&#146;/s membership fee to your Payment Method (see "Cancellation" below). You can find specific details regarding your UkumbiTV membership by visiting our website and clicking on the "Your Account" link available at the top of the pages of the UkumbiTV website under your profile name.</p>',
+
+  'tos_section4' => '<h3>Free Trials</h3><p>2.1. Your UkumbiTV membership may start with a free trial. The free trial period of your membership lasts for one week, or as otherwise specified during sign-up and is intended to allow new members and certain former members to try the service.</p><p>2.2. Free trial eligibility is determined by UkumbiTV at its sole discretion and we may limit eligibility to prevent free trial abuse. We reserve the right to revoke the free trial and put your account on hold in the event that we determine that you are not eligible. Members of households with an existing or recent UkumbiTV membership are not eligible. We may use information such as device ID, method of payment or an account email address used with an existing or recent UkumbiTV membership to determine eligibility. For combinations with other offers, restrictions may apply.</p><p>2.3. We will charge your Payment Method for your monthly membership fee at the end of the free trial period unless you cancel your membership prior to the end of the free trial period. To view the monthly membership price and end date of your free trial period, visit our website and click the "Billing details" link on the "Your Account" page.</p>',
+
+  'tos_section5' => '',
+
+  'tos_section6' => '',
+
+  'tos_section7' => '',
+
+  'tos_section8' => '',
+
+  'tos_section9' => '',
+
+  'tos_section10' => '',
+
+
+  //TERMS OF USE PAGE ...
+  //----------------------------------- 
+
+
+
+
+
+  //PRIVACY POLICY PAGE ...
+  //----------------------------------- 
+  'PP_title' => 'Privacy policy',
+
+  //PRIVACY POLICY PAGE ...
+  //----------------------------------- 
+
+
+
+
+
+  //GENERAL WORDS ...
+  //----------------------------------- 
+  'and' => 'and',
+  'msg_trial_ended' => 'Your trial has ended',
+  'msg_upgrade' => 'Ugrade your membership',
+
+  //GENERAL WORDS ...
+  //----------------------------------- 
+
+
+
  
+
+
+
+
+
+
 );

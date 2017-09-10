@@ -4,6 +4,34 @@ use Illuminate\Database\Eloquent\Model;
 use DB;
 class AdminVideo extends Model
 {
+    public function users()
+    {
+        return $this->belongsToMany('App\User');
+    }
+    public function videoDirectors()
+    {
+        return $this->belongsToMany('App\VideoDirector');
+    }
+    public function videoActors()
+    {
+        return $this->belongsToMany('App\VideoActor');
+    }
+    public function videoTags()
+    {
+        return $this->belongsToMany('App\VideoTag');
+    }
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+    public function likes()
+    {
+        return $this->hasMany('App\Like');
+    }
+    public function tags()
+    {
+        return $this->hasMany('App\Tag');
+    }
     public function movieProducer()
     {
         return $this->hasOne('App\MovieProducer');

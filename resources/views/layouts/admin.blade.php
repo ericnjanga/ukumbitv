@@ -61,6 +61,7 @@
     <link rel="stylesheet" href="{{ asset('admin-css/dist/css/skins/_all-skins.css')}}">
 
     <link rel="stylesheet" href="{{ asset('admin-css/dist/css/custom.css')}}">
+    <link rel="stylesheet" href="{{ asset('packages/sweetalert/sweetalert.css')}}">
 
     @yield('styles')
 
@@ -174,6 +175,7 @@
     
     <script src="{{asset('admin-resources/js/admin-sidebar-nav.js')}}"></script>
     <script src="{{asset('admin-resources/js/admin-datatables.js')}}"></script>
+    <script src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script>
 
      
     @yield('scripts')

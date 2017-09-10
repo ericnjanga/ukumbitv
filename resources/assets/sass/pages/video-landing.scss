@@ -1,0 +1,25 @@
+
+.page-video-landing {
+	.hero, .block-wrap {
+		margin-bottom: 35px;
+	}
+
+	h2 {
+		margin-bottom: 10px;
+	}
+
+	.hero {
+		position: relative;
+		min-height: 310px; 
+		.fast-links {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 15px;
+		}
+	}
+
+	.block-wrap{ 
+	  overflow-x: hidden;
+	}
+}

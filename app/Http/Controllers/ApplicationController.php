@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\PaymentPlan;
+use App\UserPaymentPlan;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Requests;
@@ -29,6 +32,7 @@ use App\Page;
 class ApplicationController extends Controller {
 
     public $expiry_date = "";
+
 
     public function test(Request $request) {
 
@@ -79,16 +83,28 @@ class ApplicationController extends Controller {
 
         $about = Page::where('type', 'about')->first();
 
-        return view('static.about-us')->with('about' , $about)
+        return view('r.static.about-us')->with('about' , $about)
                         ->with('page' , 'about')
                         ->with('subPage' , '');
 
     }
 
-    public function jobs(Request $request) {
+    public function helpCenter($id=false){
+        if($id !== false){
+            return view('r.static.help')->with('back_url',route('user.help-center'));
+        }
+        return view('r.static.help-center');
+    }
 
+    public function advertising(){
+        return view('r.static.advertising');
+    }
 
-        return view('static.jobs');
+    public function jobs($id=false) {
+        if($id !== false){
+            return view('r.static.job',['back_url'=>route('user.jobs')]);
+        }
+        return view('r.static.jobs');
 
     }
 
@@ -97,7 +113,7 @@ class ApplicationController extends Controller {
         $page = Page::where('type', 'privacy')->first();;
 
         // dd($page);
-        return view('static.privacy')->with('data' , $page)
+        return view('r.static.privacy')->with('data' , $page)
                         ->with('page' , 'conact_page')
                         ->with('subPage' , '');
 
@@ -108,7 +124,7 @@ class ApplicationController extends Controller {
         $page = Page::where('type', 'terms')->first();;
 
         // dd($page);
-        return view('static.terms')->with('data' , $page)
+        return view('r.static.terms')->with('data' , $page)
                         ->with('page' , 'terms_and_condition')
                         ->with('subPage' , '');
 
@@ -305,7 +321,7 @@ class ApplicationController extends Controller {
 
             $videos = Helper::search_video($q,1);
 
-            return view('user.search-result')->with('key' , $q)->with('videos' , $videos)->with('page' , "")->with('subPage' , "");
+            return view('r.user.search-result')->with('key' , $q)->with('videos' , $videos)->with('page' , "")->with('subPage' , "");
         }     
     
     }
@@ -330,6 +346,13 @@ class ApplicationController extends Controller {
 
                         $user->is_verified = true;
                         $user->save();
+
+                        $payPlan = PaymentPlan::where('flag', 1)->first();
+                        $userPayPlan = new UserPaymentPlan();
+                        $userPayPlan->user_id = $user->id;
+                        $userPayPlan->payment_plan_id = $payPlan->id;
+                        $userPayPlan->expiry_date = Carbon::now()->addMonth(1);
+                        $userPayPlan->save();
 
                         \Auth::loginUsingId($request->id);
 

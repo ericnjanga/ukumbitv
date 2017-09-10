@@ -53,6 +53,11 @@
                     <i class="fa fa-video-camera"></i> <span>{{tr('videos')}}</span>
                 </a>
             </li>
+            <li id="episodes" data-btn-add="{{route('admin.add.episode')}}" data-btn-view="{{route('admin.episodes')}}">
+                <a href="{{route('admin.episodes')}}">
+                    <i class="fa fa-video-camera"></i> <span>Episodes</span>
+                </a>
+            </li>
             <li id="producer_agents" data-btn-add="{{route('admin.add.producer-agent')}}" data-btn-view="{{route('admin.producer-agents')}}">
                 <a href="{{route('admin.producer-agents')}}">
                     <i class="fa fa-smile-o"></i> <span>Producer Agents</span>

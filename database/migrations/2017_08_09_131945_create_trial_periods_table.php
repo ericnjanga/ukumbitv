@@ -15,7 +15,7 @@ class CreateTrialPeriodsTable extends Migration
         Schema::create('trial_periods', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->integer('video_id');
+            $table->integer('admin_video_id');
             $table->timestamps();
         });
     }

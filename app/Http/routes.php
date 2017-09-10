@@ -132,14 +132,18 @@ Route::get('/privacy', 'UserApiController@privacy')->name('user.privacy');
 Route::get('/terms', 'UserApiController@terms')->name('user.terms');
 
 Route::get('/contact', 'UserController@contact')->name('user.contact');
+Route::post('/contact', 'UserController@sendContactForm')->name('user.send-contact-form');
 
 Route::get('/privacy-statement', 'ApplicationController@privacy')->name('user.privacy_policy');
 
 Route::get('/terms-of-use', 'ApplicationController@terms')->name('user.terms-condition');
 
 Route::get('/about-us', 'ApplicationController@about')->name('user.about');
-Route::get('/jobs', 'ApplicationController@jobs')->name('user.jobs');
+Route::get('/jobs/{id?}', 'ApplicationController@jobs')->name('user.jobs');
 Route::get('/test' , 'ApplicationController@test');
+Route::get('/help-center/{id?}','ApplicationController@helpCenter')->name('user.help-center');
+Route::get('/advertising','ApplicationController@advertising')->name('user.advertising');
+Route::get('/package', 'UserController@packages')->name('user.package');
 
 // Video upload 
 
@@ -311,6 +315,18 @@ Route::group(['prefix' => 'admin'], function(){
     Route::post('delete-movie', ['as' => 'delete-movie', 'uses' =>'AdminController@deleteMovie']);
     Route::get('edit-movie/{id}', ['as' => 'edit-movie', 'uses' =>'AdminController@editMovie']);
 
+    //episodes
+    Route::get('/episodes', 'AdminController@episodes')->name('admin.episodes');
+    Route::get('/add/episode', 'AdminController@addEpisode')->name('admin.add.episode');
+    Route::post('/add/episode', 'AdminController@addEpisodeProcess')->name('admin.save.episode');
+    Route::post('edit-episode/update-episode', 'AdminController@updateEpisode')->name('admin.update.episode');
+
+    Route::post('episode-upload-image', ['as' => 'episode-upload-images', 'uses' =>'AdminController@postEpisodeUpload']);
+    Route::post('add/episode-upload-image/delete', ['as' => 'episode-upload-remove', 'uses' =>'AdminController@deleteEpisodeUpload']);
+    Route::post('add/create-episode', ['as' => 'create-episode', 'uses' =>'AdminController@createEpisode']);
+    Route::post('delete-episode', ['as' => 'delete-episode', 'uses' =>'AdminController@deleteEpisode']);
+    Route::get('edit-episode/{id}', ['as' => 'edit-episode', 'uses' =>'AdminController@editEpisode']);
+
     //category
     Route::post('add/create-category', ['as' => 'create-category', 'uses' =>'AdminController@createCategory']);
     Route::post('delete-category', ['as' => 'delete-category', 'uses' =>'AdminController@deleteCategory']);
@@ -430,33 +446,50 @@ Route::group(['prefix' => 'admin'], function(){
 Route::get('/', 'UserController@index')->name('user.dashboard');
 Route::get('/tag/{id}', 'UserController@getVideosByTag');
 
-Route::get('/single', 'UserController@single_video');
+Route::get('/single/{id}', 'UserController@single_video')->name('single-video');
 
 Route::get('/user/searchall' , 'ApplicationController@search_video')->name('search');
 
-Route::any('/user/search' , 'ApplicationController@search_all')->name('search-all');
+Route::post('search' , 'UserController@searchAll')->name('search-all');
+Route::get('search-data' , 'UserController@searchData')->name('search-data');
 
 // Route::any('/user/search' , 'ApplicationController@search_all')->name('search-all');
 
 // Categories and single video 
 
 Route::get('categories', 'UserController@all_categories')->name('user.categories');
+Route::get('videos/{id}', 'UserController@videosByType')->name('user.videotype');
 
 Route::get('category/{id}', 'UserController@getVideosByCategory');
 
 Route::get('subcategory/{id}', 'UserController@sub_category_videos')->name('user.sub-category');
+//Route::get('category/{id}', 'UserController@category_videos')->name('user.category');
 
 Route::get('genre/{id}', 'UserController@genre_videos')->name('user.genre');
+Route::post('add-to-playlist', 'UserController@addToPlaylist')->name('user.add-to-playlist');
 
-Route::get('video/{id}', 'UserController@single_video')->name('user.single');
+Route::post('vimeo-video-play', 'UserController@checkVideoPlays')->name('user.vimeo-video-play');
+
+
+
+//Route::get('video/{id}', 'UserController@single_video')->name('user.single');
 
 Route::get('newvideo/{id}', 'UserController@single_newvideo')->name('user.single'); // Added By Vishnu
 
-Route::get('watch/{id}', 'UserController@watchVideo')->name('user.singleVideo');
+//Route::get('videos/{id}', 'UserController@watchVideo')->name('user.singleVideo');
+Route::get('video/{id}', 'UserController@watchVideo')->name('user.singleVideo');
+Route::get('watch/{id}', 'UserController@ShowVideo')->name('user.show-video');
 //Route::get('watch', 'UserController@watchVideo')->name('user.singleVideo');
+
+Route::get('my-playlist', 'UserController@myPlaylist')->name('user.playlist');
+
+Route::post('like', 'LikeController@like')->name('like');
+Route::post('unlike', 'LikeController@unLike')->name('unlike');
+Route::post('send-commentsend-comment', 'CommentController@sendComment')->name('send-comment');
 
 
 Route::get('vimeo', 'UserController@vimeoVideo');
+Route::get('account', 'UserController@account')->name('user.account');
 
 Route::get('/stripe-pay', 'UserController@stripePay')->name('stripe-pay');
 Route::post('/stripe-pay-post', 'UserController@stripePayPost')->name('stripe-pay-post');
@@ -487,9 +520,16 @@ Route::group([], function(){
     // Registration Routes...
     Route::get('register', 'Auth\AuthController@showRegistrationForm')->name('user.register.form');
 
+
     Route::post('register', 'Auth\AuthController@register')->name('user.register.post');
+
+    Route::get('confirm-email', 'Auth\AuthController@confirmEmailMsg')->name('user.confirm-email');
+    Route::get('resend-email/{id}', 'Auth\AuthController@resendVerifyEmail')->name('user.resend-confirm-email');
+
     
     Route::get('payment', 'UserController@payment')->name('user.userpayment');
+
+
 
     // Password Reset Routes...
     Route::get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
@@ -497,12 +537,14 @@ Route::group([], function(){
     Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
 
     Route::post('password/reset', 'Auth\PasswordController@reset');
+    Route::post('profile-update', 'UserController@updateProfile')->name('user.update-profile');
+    Route::post('password-update-new', 'UserController@updatePassword')->name('user.update-password');
 
-    Route::get('profile', 'UserController@profile')->name('user.profile');
-
-    Route::get('update/profile', 'UserController@update_profile')->name('user.update.profile');
-
-    Route::post('update/profile', 'UserController@profile_save')->name('user.profile.save');
+//    Route::get('profile', 'UserController@profile')->name('user.profile');
+//
+//    Route::get('update/profile', 'UserController@update_profile')->name('user.update.profile');
+//
+//    Route::post('update/profile', 'UserController@profile_save')->name('user.profile.save');
 
     Route::get('/profile/password', 'UserController@profile_change_password')->name('user.change.password');
 

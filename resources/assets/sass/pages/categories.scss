@@ -1,0 +1,30 @@
+
+.page-categories{
+	.video-item {
+		margin-bottom: 30px;
+	}
+}
+
+
+
+//Activate main menu items on specific pages
+//------------------------------------------
+.page-movies {
+	.GP-menu { 
+		.play-menu li#movies .menu-entry-text {
+			color: #fff;
+		  background: $color-darkred;
+		}
+	}
+}
+.page-animations { 
+	.GP-menu {  
+		.play-menu li#animations { 
+			.menu-entry-text {
+				color: #fff;
+				background: $color-yellow-green;
+			}
+		  
+		}
+	}
+}

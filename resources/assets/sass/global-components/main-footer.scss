@@ -1,0 +1,36 @@
+
+.main-footer {
+	margin-top: 150px;
+	font-size: 13px;
+	color: #616161;
+
+	@media (max-width: 767px) {
+		text-align: center;
+	}
+
+	h4{
+	  color: #424242;
+	  font-size: 18px;
+	  font-weight: 500;
+	  line-height: 18px;
+	  margin: 0 0 15px 0;
+	}//h4 
+  a{
+    color: #757575;
+    font-weight: 400; 
+  } 
+
+	.footer-main {
+		padding-top: 34px;
+		padding-bottom: 34px;
+		background-color: #ddd;
+	}
+
+
+	.copyright{
+	  background-color: #bbb;
+	  font-weight: 500; 
+	  line-height: 35px;
+	}
+
+}//main-footer
