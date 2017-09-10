@@ -215,6 +215,7 @@
 
 	          @if($checkTrial)
 	          <div class="comment-block" id="new-comment-section">
+	          	<h2>Comments</h2>
 	          	@foreach($video->comments as $comment)
 	            <div class="comment">
 	              <div class="img-block">

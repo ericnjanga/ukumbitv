@@ -1030,7 +1030,7 @@ img {
   width: 80%; }
 
 .comment-block {
-  margin: 57px 0 70px; }
+  margin: 40px 0; }
   .comment-block .comment {
     display: -ms-flexbox;
     display: flex;
@@ -1525,10 +1525,10 @@ input:-webkit-autofill {
 .list-horizontal-wrapper:after,
 .block-wrap:before,
 .block-wrap:after,
-.layout-3-columns:before,
-.layout-3-columns:after,
 .card-samples:before,
-.card-samples:after {
+.card-samples:after,
+.hero-sub:before,
+.hero-sub:after {
   display: table;
   content: " ";
   clear: both; }
