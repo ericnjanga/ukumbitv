@@ -14,7 +14,7 @@
 $tmb-unit: 185px;
 
 .global-display{
-	margin-left: 230px;
+	padding-left: 230px;
 	border: 4px solid red;
 	@media (min-width: 630px){
 		width: $tmb-unit * 2; //2 thumbnails in a row
