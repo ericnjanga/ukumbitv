@@ -1152,9 +1152,10 @@ align-items: center;
 		}
 	}
   .price-item { 
-		@media (min-width: 995px){ 
-	    width: 25%;
-	  }
+  	width: 100%;
+		// @media (min-width: 995px){ 
+	 //    width: 25%;
+	 //  }
     padding: 0 0 15px 0;
     position: relative;
     .price-title{
@@ -1587,14 +1588,8 @@ align-items: center;
     }
   }
 }
-// .video-list-block-wrap{
-//   margin: 0 0 90px 0;
-//   .butn{
-//     margin: 0 auto;
-//     width: 160px;
-//     display: block;
-//   }
-// }
+
+
 .video-list-block{
   display: -webkit-box;
   display: -webkit-flex;
