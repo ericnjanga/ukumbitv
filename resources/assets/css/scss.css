@@ -2305,6 +2305,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   .page-myaccount .GP-menu .play-menu > li:first-child a span {
     color: #fff; }
 
+.page-myaccount .img-block img {
+  border-radius: 50%; }
+
 .page-myaccount .account-form-block {
   display: -ms-flexbox;
   display: flex; }
@@ -2312,8 +2315,6 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     width: 47%; }
     .page-myaccount .account-form-block .page-block:last-child {
       margin-left: auto; }
-  .page-myaccount .account-form-block .img-block img {
-    border-radius: 50%; }
   @media (max-width: 981px) {
     .page-myaccount .account-form-block {
       -ms-flex-direction: column;
