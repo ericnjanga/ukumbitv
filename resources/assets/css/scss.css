@@ -2174,13 +2174,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     margin: 0;
     padding: 0; }
   .page-video-single .video-placeholder .video-placeholder--title {
-    position: absolute;
-    text-align: center;
     line-height: 50px;
-    font-size: 23px;
-    width: 60%;
-    left: 20%;
-    top: 130px; }
+    font-size: 23px; }
     .page-video-single .video-placeholder .video-placeholder--title span {
       display: block; }
     .page-video-single .video-placeholder .video-placeholder--title a {
