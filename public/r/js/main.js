@@ -162,7 +162,7 @@ var VideoFilter = (function () {
 
 //Stick "GP-menu"
 $(document).ready(function(){ 
-  $('#GP-menu').sticky({topSpacing:0});
+  // $('#GP-menu').sticky({topSpacing:0});
 
 
  	$('body').on('click', '#btn-comment-rate-modal', function(){
