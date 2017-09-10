@@ -11,8 +11,11 @@
  * Global layout styling
  * --------------------------------------
 */ 
+$tmb-unit: 185px;
+
 .global-main-content{
 	border: 4px solid red;
+	width: $tmb-unit * 5; //5 thumbnails in a row
 	// float: left;
  //  width: 75%; 
  //  margin-left: $gap2;  
