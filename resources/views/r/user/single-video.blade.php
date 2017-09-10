@@ -192,16 +192,16 @@
 	      	</div>
 
 	      	<div class="row rating-stats">
-	      		<div class="col-sm-4">
+	      		<div class="col-xs-4">
 	      			<span class="txt-xxl">
 								<span id="likes-count">{{$likes}} </span>
 	        			<span class="btn-like icon icon-thumbs-up {{($checkLike != null)?'btn-on':'btn-off'}}" data-route-like="{{route('like')}}" data-video-id="{{$video->id}}" data-route-unlike="{{route('unlike')}}"></span>
 	            </span>
 	      		</div>
-	      		<div class="col-sm-4 text-center col-mid">
+	      		<div class="col-xs-4 text-center col-mid">
 	      			<i class="fa fa-user" aria-hidden="true"></i> {{$likes + $dislikes}} total
 	      		</div>
-	      		<div class="col-sm-4">
+	      		<div class="col-xs-4">
 	      			<span class="txt-xxl pull-right">
 	      				<span id="dislikes-count">{{$dislikes}} </span>
 	      				<span class="btn-dislike icon icon-thumbs-down-hand {{($checkDisLike != null)?'btn-on':'btn-off'}}" data-route-like="{{route('like')}}" data-video-id="{{$video->id}}" data-route-unlike="{{route('unlike')}}"></span>
