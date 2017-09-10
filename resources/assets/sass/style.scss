@@ -1148,14 +1148,11 @@ align-items: center;
 		align-items: center;
 		.price-item {
 			margin-bottom: 20px!important;
-			max-width: 350px;
 		}
 	}
   .price-item { 
   	width: 100%;
-		// @media (min-width: 995px){ 
-	 //    width: 25%;
-	 //  }
+		max-width: 350px; 
     padding: 0 0 15px 0;
     position: relative;
     .price-title{

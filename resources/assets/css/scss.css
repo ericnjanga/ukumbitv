@@ -884,10 +884,10 @@ img {
       -ms-flex-align: center;
       align-items: center; }
       .price-block .price-item {
-        margin-bottom: 20px !important;
-        max-width: 350px; } }
+        margin-bottom: 20px !important; } }
   .price-block .price-item {
     width: 100%;
+    max-width: 350px;
     padding: 0 0 15px 0;
     position: relative; }
     .price-block .price-item .price-title {
