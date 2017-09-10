@@ -880,12 +880,12 @@ img {
   @media (max-width: 994px) {
     .price-block {
       -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+      -ms-flex-align: center;
+      align-items: center; }
       .price-block .price-item {
         margin-bottom: 20px !important;
-        max-width: 350px;
-        -ms-flex-align: center;
-        align-items: center; } }
+        max-width: 350px; } }
   .price-block .price-item {
     padding: 0 0 15px 0;
     position: relative; }
