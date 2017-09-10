@@ -24,6 +24,14 @@
 		display: flex;
 		align-items: center;
     justify-content: center;
+    text-align: center;
+
+		@media (max-width: 981px){
+			flex-direction: column;
+			.video-placeholder--title{
+				margin-left: 0!important;
+			}
+		}
 
     .video-img, .video-item{
     	margin: 0;
@@ -31,13 +39,9 @@
     }//video-img 
 
     .video-placeholder--title{
-    	// position: absolute;
-    	// text-align: center;
+    	margin-left: 10px;
     	line-height: 50px;
-    	font-size: 23px;
-   //  	width: 60%;
-			// left: 20%;
-			// top: 130px;
+    	font-size: 23px; 
 
     	span{
     		display: block;

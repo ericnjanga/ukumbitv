@@ -2169,11 +2169,19 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  text-align: center; }
+  @media (max-width: 981px) {
+    .page-video-single .video-placeholder {
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .page-video-single .video-placeholder .video-placeholder--title {
+        margin-left: 0 !important; } }
   .page-video-single .video-placeholder .video-img, .page-video-single .video-placeholder .video-item {
     margin: 0;
     padding: 0; }
   .page-video-single .video-placeholder .video-placeholder--title {
+    margin-left: 10px;
     line-height: 50px;
     font-size: 23px; }
     .page-video-single .video-placeholder .video-placeholder--title span {

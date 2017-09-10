@@ -58,10 +58,6 @@
 	          <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
 	        @else
 	          <div class="video-placeholder">
-	          	<h2 class="video-placeholder--title">
-	          		<span>{{trans('messages.msg_trial_ended')}}</span>
-	          		<a href="#" class="btn btn-block btn-cta1b">{{trans('messages.msg_upgrade')}}</a>
-	          	</h2>
 	          	<div class="video-item">
 	          		<div class="video-img">
 	          			<!-- {{$video->videoimage->imgPreview1}} -->
@@ -72,6 +68,10 @@
 				          @endif 
 	          		</div>
 	          	</div> 
+	          	<h2 class="video-placeholder--title">
+	          		<span>{{trans('messages.msg_trial_ended')}}</span>
+	          		<a href="#" class="btn btn-block btn-cta1b">{{trans('messages.msg_upgrade')}}</a>
+	          	</h2>
 	        	</div> 
 	        @endif
 	      </div>
