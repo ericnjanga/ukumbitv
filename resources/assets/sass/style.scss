@@ -1154,7 +1154,10 @@ align-items: center;
 		}
 	}
   .price-item {
-    width: 25%;
+
+		@media (min-width: 995px){ 
+	    width: 25%;
+	  }
     padding: 0 0 15px 0;
     position: relative;
     .price-title{

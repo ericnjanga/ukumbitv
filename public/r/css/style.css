@@ -885,9 +885,11 @@ img {
         margin-bottom: 20px;
         max-width: 350px; } }
   .price-block .price-item {
-    width: 25%;
     padding: 0 0 15px 0;
     position: relative; }
+    @media (min-width: 995px) {
+      .price-block .price-item {
+        width: 25%; } }
     .price-block .price-item .price-title {
       color: #ffffff;
       font-size: 20px;
