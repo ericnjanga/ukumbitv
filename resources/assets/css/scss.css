@@ -1114,13 +1114,6 @@ img {
         top: 4px;
         left: 0; }
 
-.video-list-block-wrap {
-  margin: 0 0 90px 0; }
-  .video-list-block-wrap .butn {
-    margin: 0 auto;
-    width: 160px;
-    display: block; }
-
 .video-list-block {
   display: -ms-flexbox;
   display: flex;
@@ -2319,22 +2312,21 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-video-landing .global-display {
   min-width: 600px; }
 
-.global-display {
-  border: 2px solid red; }
-  @media (min-width: 768px) {
-    .global-display {
-      padding-left: 230px; } }
+@media (min-width: 768px) {
+  .global-display {
+    padding-left: 230px; } }
+
+@media (min-width: 795px) {
   .global-display .global-content {
-    border: 2px solid green; }
-    @media (min-width: 795px) {
-      .global-display .global-content {
-        width: 555px; } }
-    @media (min-width: 982px) {
-      .global-display .global-content {
-        width: 740px; } }
-    @media (min-width: 1170px) {
-      .global-display .global-content {
-        width: 925px; } }
+    width: 555px; } }
+
+@media (min-width: 982px) {
+  .global-display .global-content {
+    width: 740px; } }
+
+@media (min-width: 1170px) {
+  .global-display .global-content {
+    width: 925px; } }
 
 .GP-menu {
   position: fixed;

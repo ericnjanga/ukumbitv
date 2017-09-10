@@ -22,14 +22,13 @@ $sidebar-gap: 230px;
 }
 
 .global-display{
-	border: 2px solid red;
-
+	// border: 2px solid red; 
 	@media (min-width: 768px){
 		padding-left: $sidebar-gap; 
 	}
 
 	.global-content {
-		border: 2px solid green;
+		// border: 2px solid green;
 		@media (min-width: 795px){
 			width: $tmb-unit * 3; //3 thumbnails in a row
 		}
