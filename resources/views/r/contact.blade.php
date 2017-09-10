@@ -53,12 +53,12 @@
 	        		{{--<form action="{{route('user.send-contact-form')}}" method="POST">--}}
 	              <div class="form-group select-wrap">
 	                <select id="q-category" class="form-control" name="category">
-	                  <option selected>Select the appeal category</option>
-	                  <option>appeal 1</option>
-	                  <option>appeal 2</option>
-	                  <option>appeal 3</option>
-	                  <option>appeal 4</option>
-	                  <option>appeal 5</option>
+	                  <option selected>Select a subject</option>
+	                  <option>Leave a comment</option>
+	                  <option>Leave a Suggestion</option>
+	                  <option>Having an issue</option>
+	                  <option>Having a complain</option>
+	                  <option>Other</option>
 	                </select>
 	              </div>
 								<div class="form-group">

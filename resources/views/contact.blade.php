@@ -25,49 +25,45 @@
                     </div>
                 </div>
                 <div class="row secBg">
-                    <div class="large-12 columns">
-                        <article class="page-content contact-form">
+                  <div class="large-12 columns">
+                    <article class="page-content contact-form"> 
+                      @include('layouts.user.notification')
 
-                            @include('layouts.user.notification')
+                      <form action="{{ route('user.profile.save') }}" method="POST" enctype="multipart/form-data">
 
-                                <form action="{{ route('user.profile.save') }}" method="POST" enctype="multipart/form-data">
+                          <div class="setting-form-inner">
 
-                                    <div class="setting-form-inner">
+                              <div class="row">
 
-                                        <div class="row">
+                                  <div class="medium-6 columns">
+                                      <label>{{tr('username')}}:
+                                          <input type="text"  name="name" required  placeholder="enter your {{tr('username')}}..">
+                                      </label>
+                                  </div>
 
-                                            <div class="medium-6 columns">
-                                                <label>{{tr('username')}}:
-                                                    <input type="text"  name="name" required  placeholder="enter your {{tr('username')}}..">
-                                                </label>
-                                            </div>
+                                  <div class="medium-6 columns">
+                                      <label>{{tr('email')}}:
+                                          <input type="email" name="email" required  placeholder="enter your {{tr('username')}}..">
+                                      </label>
+                                  </div>
 
-                                            <div class="medium-6 columns">
-                                                <label>{{tr('email')}}:
-                                                    <input type="email" name="email" required  placeholder="enter your {{tr('username')}}..">
-                                                </label>
-                                            </div>
+                                  <div class="medium-12 columns">
+                                      <label>{{tr('description')}}:
+                                          <textarea name="description"></textarea>
+                                      </label>
+                                  </div>
+                                  
+                                  <button class="button expanded" type="submit" name="setting">{{tr('submit')}}</button>
 
-                                            <div class="medium-12 columns">
-                                                <label>{{tr('description')}}:
-                                                    <textarea name="description"></textarea>
-                                                </label>
-                                            </div>
-                                            
-                                            <button class="button expanded" type="submit" name="setting">{{tr('submit')}}</button>
+                              </div>
 
-                                        </div>
+                              <!--setting-form-inner row end-->
+                          </div>
 
-                                        <!--setting-form-inner row end-->
-                                    </div>
-
-                                    <!--setting-form-inner end-->
-
-
-                                </form>
-                        	
-                        </article>
-                    </div>
+                          <!--setting-form-inner end--> 
+                      </form> 
+                    </article>
+                  </div>
                 </div>
             
             </section>
