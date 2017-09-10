@@ -1150,11 +1150,10 @@ align-items: center;
 		.price-item {
 			margin-bottom: 20px;
 			max-width: 350px;
-			// margin-left: 
+			    align-items: center;
 		}
 	}
-  .price-item {
-
+  .price-item { 
 		@media (min-width: 995px){ 
 	    width: 25%;
 	  }

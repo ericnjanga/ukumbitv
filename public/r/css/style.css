@@ -883,7 +883,9 @@ img {
       flex-direction: column; }
       .price-block .price-item {
         margin-bottom: 20px;
-        max-width: 350px; } }
+        max-width: 350px;
+        -ms-flex-align: center;
+        align-items: center; } }
   .price-block .price-item {
     padding: 0 0 15px 0;
     position: relative; }
