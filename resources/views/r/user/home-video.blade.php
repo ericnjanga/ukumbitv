@@ -1,7 +1,7 @@
 @extends('r.layouts.user-search')
 @section('content')
     
-  <div class="container-fluid page-video-landing">  
+  <div class="page-video-landing">  
     <div class="global-display">
 			@include('r.chunks._filter_video')
 
