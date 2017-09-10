@@ -2346,7 +2346,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
  * --------------------------------------
 */
 .page-video-landing .global-display {
-  min-width: 600px; }
+  min-width: 596px; }
 
 @media (min-width: 768px) {
   .global-display {
@@ -2354,15 +2354,15 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 @media (min-width: 795px) {
   .global-display .global-content {
-    width: 555px; } }
+    width: 549px; } }
 
 @media (min-width: 982px) {
   .global-display .global-content {
-    width: 740px; } }
+    width: 732px; } }
 
 @media (min-width: 1170px) {
   .global-display .global-content {
-    width: 925px; } }
+    width: 915px; } }
 
 .GP-menu {
   position: fixed;
