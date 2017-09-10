@@ -10,7 +10,7 @@
 	    		<div class="col-sm-2">
 		        <div class="img-block">
 		        	<img src="{{Auth::user()->picture}}" alt="">
-	            <a href="" class="change-photo-butn"><span class="icon icon-pencil-edit-button"></span></a>
+	            <!-- <a href="" class="change-photo-butn"><span class="icon icon-pencil-edit-button"></span></a> -->
 	        	</div>
 		    	</div>
 			    <div class="col-sm-10">
@@ -24,13 +24,13 @@
                     <label>E-mail</label>
                     <input id="user-email" class="form-control" type="email" name="email" value="{{Auth::user()->email}}">
 	                </div>
+
+	                <button id="btn-update-profile" data-update-profile="{{route('user.update-profile')}}"  class="btn btn-cta1b btn-lg">Save Changes</button>
 	                <!-- <div class="form-group input-tel">
 	                    <label>Phone</label>
 	                    <input id="user-phone" class="form-control" type="number" name="usrtel" value="{{Auth::user()->mobile}}">
 	                </div> -->
-	                <div id="change-pas" class="change-pas like-link">Change password</div>
-
-	                <button id="btn-update-profile" data-update-profile="{{route('user.update-profile')}}"  class="btn btn-cta1b btn-lg">Save Changes</button>
+	                <!-- <div id="change-pas" class="change-pas like-link">Change password</div> -->
 							</div>
 
 							<hr>
@@ -47,7 +47,7 @@
                 {{--<div class="operations-pass">--}}
                     {{--<span id="show-pas" class="like-link">Show password</span>--}}
                 {{--</div>--}}
-                <button id="btn-update-password" data-update-password="{{route('user.update-password')}}" class="btn btn-cta1 btn-lg">Save new password</button> 
+                <button id="btn-update-password" data-update-password="{{route('user.update-password')}}" class="btn btn-cta1b btn-lg">Save new password</button> 
 	            </div>
 
 		        </form>

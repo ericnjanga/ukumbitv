@@ -2312,6 +2312,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     width: 47%; }
     .page-myaccount .account-form-block .page-block:last-child {
       margin-left: auto; }
+  .page-myaccount .account-form-block .img-block img {
+    border-radius: 50%; }
   @media (max-width: 981px) {
     .page-myaccount .account-form-block {
       -ms-flex-direction: column;

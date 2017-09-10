@@ -21,6 +21,11 @@
 				margin-left: auto;
 			}
 		}
+		.img-block {
+			img {
+				border-radius: 50%;
+			}
+		}
 		@media (max-width: 981px){
 			flex-direction: column;
 			.page-block {
