@@ -289,7 +289,7 @@
 	    <aside class="block-aside">
 	        <div class="title">{{trans('messages.Similar_Videos')}}</div>
 
-	            <div class="list-horizontal-wrapper">
+	            <div class="list-horizontal-wrapper-">
 	                @if(count($relatedVideos) == 0)
 	                    <h1>{{trans('messages.There_is_no_videos')}}</h1>
 	                @else
