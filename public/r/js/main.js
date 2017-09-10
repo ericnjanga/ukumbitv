@@ -177,7 +177,7 @@ $(document).ready(function(){
 
 //Submit comment on click
 //------------------------
-$('body').on('click', '#btn-submitcomment', function(){
+$('body').on('click', '#btn-submit-comment', function(){
 	//console.log('***heyeyey');
 	comment_submit($(this).data('comment-route'), $(this).data('video-id'));
 });
