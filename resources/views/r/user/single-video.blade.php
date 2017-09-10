@@ -286,7 +286,7 @@
 	      <!-- comment and rating modal -->
 	    </div><!-- global-display -->
 
-	    <aside class="block-aside">
+	    <aside class="block-aside" style="display:none;">
 	        <div class="title">{{trans('messages.Similar_Videos')}}</div>
 
 	            <div class="list-horizontal-wrapper-">
