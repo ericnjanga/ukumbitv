@@ -13,17 +13,17 @@
 	        	</div>
 		    	</div>
 			    <div class="col-sm-10">
-		        <div class="account-form-block">
+		        <form class="account-form-block">
 							<div class="cadca"> 
-	                <div class="input-group">
+	                <div class="form-group">
                     <label>Full name</label>
                     <input id="user-name" class="form-control" type="text" name="name" value="{{Auth::user()->name}}">
 	                </div>
-	                <div class="input-group">
+	                <div class="form-group">
                     <label>E-mail</label>
                     <input id="user-email" class="form-control" type="email" name="email" value="{{Auth::user()->email}}">
 	                </div>
-	                <!-- <div class="input-group input-tel">
+	                <!-- <div class="form-group input-tel">
 	                    <label>Phone</label>
 	                    <input id="user-phone" class="form-control" type="number" name="usrtel" value="{{Auth::user()->mobile}}">
 	                </div> -->
@@ -35,11 +35,11 @@
 							<hr>
 
 	            <div class="change-pas-block"> 
-                <div class="input-group">
+                <div class="form-group">
                     <label>Enter current password</label>
                     <input id="old-password" class="form-control" type="password" name="old_password" class="mypass">
                 </div>
-                <div class="input-group">
+                <div class="form-group">
                     <label>Enter new password</label>
                     <input id="new-password" class="form-control"  type="password" name="new_password" class="mypass">
                 </div>
@@ -49,7 +49,7 @@
                 <button id="btn-update-password" data-update-password="{{route('user.update-password')}}" class="btn btn-cta1 btn-lg">Save new password</button> 
 	            </div>
 
-		        </div>
+		        </form>
 			    </div>
 	    	</div><!-- row -->
 	    </div><!-- "global-content -->
