@@ -6,7 +6,7 @@
     <div class="layout-3-columns">
   		@include('r.chunks._filter_video')
 
-      <div class="global-main-content utv-card">
+      <div class="global-display utv-card">
         <div class="hero">
 
 
@@ -285,7 +285,7 @@
 				  </div>
 				</div>
         <!-- comment and rating modal -->
-      </div><!-- global-main-content -->
+      </div><!-- global-display -->
 
       <aside class="block-aside">
           <div class="title">{{trans('messages.Similar_Videos')}}</div>

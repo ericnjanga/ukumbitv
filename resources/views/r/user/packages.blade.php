@@ -3,7 +3,7 @@
   <div class="container-fluid page-packages"> 
     @include('r.chunks._account_menu')
                
-    <div class="global-main-content">
+    <div class="global-display">
     	<!-- packages selection section -->
       <section class="section-packages">
         <h1>{{trans('messages.home_plansec_title')}}</h1> 
@@ -237,6 +237,6 @@
 				  </div><!-- panel-paypal -->
 				</div><!-- panel-group --> 
       </section> <!-- section-payment --> 
-    </div><!-- "global-main-content -->
+    </div><!-- "global-display -->
   </div>
 @endsection

@@ -1,10 +1,9 @@
 @extends('r.layouts.user-search')
 @section('content')
     
-  <div class="container-fluid page-video-landing"> 
-		@include('r.chunks._filter_video')
-     
-    <div class="global-main-content">
+  <div class="container-fluid page-video-landing">  
+    <div class="global-display">
+			@include('r.chunks._filter_video')
       <div class="hero">
       	<img src="{{ $grandVideo->videoimage->imgHero }}" alt="{{ $grandVideo->title }}">
       	<!-- <p>{{ $grandVideo }}</p> -->
@@ -68,7 +67,7 @@
               <p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>
           </div>
       </div>
-    </div><!-- global-main-content -->
+    </div><!-- global-display -->
   </div>
   @include('r.chunks._video_item_popup')
      

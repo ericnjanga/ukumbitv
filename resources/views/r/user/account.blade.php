@@ -3,7 +3,7 @@
   <div class="container-fluid page-myaccount">  
     @include('r.chunks._account_menu') 
 
-    <div class="global-main-content">
+    <div class="global-display">
     	<div class="row">
     		<div class="col-sm-2">
 	        <div class="img-block">
@@ -50,6 +50,6 @@
 		        </div>
 		    </div>
     	</div><!-- row -->
-    </div><!-- global-main-content --> 
+    </div><!-- global-display --> 
   </div>
 @endsection

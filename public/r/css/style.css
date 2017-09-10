@@ -2313,20 +2313,20 @@ fieldset[disabled] .twitter-typeahead .tt-input {
  * Global layout styling
  * --------------------------------------
 */
-.global-main-content {
+.global-display {
   margin-left: 230px;
   border: 4px solid red; }
   @media (min-width: 630px) {
-    .global-main-content {
+    .global-display {
       width: 370px; } }
   @media (min-width: 795px) {
-    .global-main-content {
+    .global-display {
       width: 555px; } }
   @media (min-width: 982px) {
-    .global-main-content {
+    .global-display {
       width: 740px; } }
   @media (min-width: 1170px) {
-    .global-main-content {
+    .global-display {
       width: 925px; } }
 
 .GP-menu {

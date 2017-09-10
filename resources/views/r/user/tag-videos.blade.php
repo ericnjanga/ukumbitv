@@ -5,7 +5,7 @@
             <div class="clearfix">
             		@include('r.chunks._filter_video')
                  
-                <div class="global-main-content">
+                <div class="global-display">
                     <div class="video-list-wrap">
                         <div class="title">
                           <div class="butn-menu">

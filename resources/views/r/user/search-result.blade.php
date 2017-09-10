@@ -3,7 +3,7 @@
   <div class="container-fluid page-search">
     @include('r.chunks._filter_video')
 
-    <div class="global-main-content"> 
+    <div class="global-display"> 
       <div class="video-list-wrap">
           <div class="title">
               <div class="butn-menu">
@@ -28,6 +28,6 @@
               <a href="" class="butn btn-cta1 btn-lg">Load more</a>
           </div> -->
       </div><!-- video-list-wrap --> 
-    </div><!-- global-main-content -->
+    </div><!-- global-display -->
   </div>
 @endsection
