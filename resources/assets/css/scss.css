@@ -2229,10 +2229,12 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   color: #fff;
   background: #798801; }
 
-.page-packages h1 {
+.page-packages h1,
+.page-myaccount h1 {
   margin-bottom: 30px; }
 
-.page-packages h2 {
+.page-packages h2,
+.page-myaccount h2 {
   font-size: 24px; }
 
 .page-packages hr {
