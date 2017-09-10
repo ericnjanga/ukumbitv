@@ -255,6 +255,7 @@ function comment_submit(urlCommentRoute, videoId){
             }
 
             $('#comment-text').val('');
+            $('#comment-rate-modal').modal('hide')
             $("#new-comment-section").append('<div class="comment"><div class="img-block"><img src="'+rep.user.picture+'" alt=""></div><div class="comment-text-block"><div class="comment-name">'+userName+'</div><p class="comment-text">'+rep.text+'</p></div></div>');
         },
         error: function (data) {
