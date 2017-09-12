@@ -2130,13 +2130,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   margin-bottom: 10px; }
 
 .page-video-landing .hero {
-  position: relative;
-  min-height: 310px; }
+  position: relative; }
   .page-video-landing .hero .fast-links {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 15px; }
+    bottom: 15px;
+    left: 15px; }
 
 .page-video-landing .block-wrap {
   overflow-x: hidden; }
