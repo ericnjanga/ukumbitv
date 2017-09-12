@@ -148,9 +148,11 @@
 			              	<div class="row">
 			              		<div class="col-md-4"> 
 					                <div class="input-group">
-					                  <label>Expiration (MM)</label>
+					                  <label for="expiry-month">Expiration (MM)</label>
 					                  <select name="expiry-month" id="expiry-month" class="form-control">
-					                  	<option value="">Month</option>
+										  @for($i = 1; $i < 13; $i++)
+					                  		<option value="{{$i}}">{{$i}}</option>
+										  @endfor
 					                  	<!-- option list -->
 					                  	<!-- All 12 months -->
 					                  </select> 
@@ -159,9 +161,11 @@
 
 			              		<div class="col-md-4"> 
 					                <div class="input-group">
-					                  <label>Expiration (YYYY)</label>
+					                  <label for="expiry-year">Expiration (YYYY)</label>
 					                  <select name="expiry-year" id="expiry-year" class="form-control">
-					                  	<option value="">Year</option> 
+										  @for($i = \Carbon\Carbon::now()->year; $i < \Carbon\Carbon::now()->addYears(20)->year; $i++)
+					                  		<option value="{{$i}}">{{$i}}</option>
+										  @endfor
 					                  	<!-- option list -->
 					                  	<!-- from current year up to 30 years -->
 					                  </select> 
@@ -170,8 +174,8 @@
 
 			              		<div class="col-md-4"> 
 					                <div class="input-group">
-					                  <label>CVV</label>
-			                      <input type="text" name="cvv" id="cvv" class="form-control"> 
+					                    <label for="cvv">CVV</label>
+										<input type="text" name="cvv" id="cvv" class="form-control">
 					                </div><!-- year -->
 			              		</div><!-- col -->
 			              	</div><!-- row -->
@@ -179,8 +183,8 @@
 			              	<div class="row">
 			              		<div class="col-md-12"> 
 					                <div class="input-group">
-			                      <label>Cardholder Name</label>
-			                      <input type="text" name="cardhlder-name" class="form-control">
+									  <label for="cardhlder-name">Cardholder Name</label>
+									  <input type="text" name="cardhlder-name" id="cardhlder-name" class="form-control">
 					                </div>
 			              		</div><!-- col -->
 			              	</div><!-- row -->
