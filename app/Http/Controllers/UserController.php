@@ -421,6 +421,12 @@ class UserController extends Controller {
         $directors = implode(', ', $directors);
 
 
+        list($hours, $minutes, $seconds) = explode(':', $video->duration);
+        $duration = $hours.'h '.$minutes.'min '.$seconds.'s';
+
+
+
+
         return view('r.user.single-video')
 //            ->with('trailer_video' , $trailer_video)
 //            ->with('main_video' , $main_video)
@@ -430,6 +436,7 @@ class UserController extends Controller {
 //            ->with('videoTitle' , $video)
 //            ->with('images' , $images)
             ->with('video', $video)
+            ->with('duration', $duration)
             ->with('checkTrial', $checkTrial)
             ->with('videoId', $videoId)
             ->with('actors', $actors)

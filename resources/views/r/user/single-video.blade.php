@@ -16,7 +16,7 @@
 	            	<!-- <span class="age">16+</span> -->
 	              <ul class="list-date-duration list-inline">
 	              	<li>{{$video->created_at->format('Y')}}</li>
-	              	<li>{{$video->duration}}</li>
+	              	<li>{{$duration}}</li>
 	              </ul>
 	              <div>
 	              	{{$video->direct}}
