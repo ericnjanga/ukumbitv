@@ -7,7 +7,13 @@
 	    <div class="global-content">
 	    	<!-- packages selection section -->
 	      <section class="section-packages">
-	        <h1>{{trans('messages.home_plansec_title')}}</h1> 
+	        <h1>{{trans('messages.home_plansec_title')}}</h1>
+			  @if(Session::has('flash_success'))
+				  <div class="alert alert-success"  >
+					  <button type="button" class="close" data-dismiss="alert">×</button>
+					  {{Session::get('flash_success')}}
+				  </div>
+			  @endif
 	        <div class="price-block">
 	            {{--<div class="price-item">--}}
 	                {{--<div class="price-title">Basic</div>--}}

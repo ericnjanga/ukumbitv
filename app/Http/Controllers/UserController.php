@@ -1500,7 +1500,7 @@ class UserController extends Controller {
             $userPaymentPlan->expiry_date = $expiry_date;
             $userPaymentPlan->save();
 
-            return redirect()->action('UserController@packages');
+            return redirect()->action('UserController@packages')->with('flash_success' , 'Plan was successful updated');
         }
 
 
