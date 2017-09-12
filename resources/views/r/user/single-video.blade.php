@@ -19,7 +19,7 @@
 	              	<li>{{$video->duration}}</li>
 	              </ul>
 	              <div>
-	              	{{$video}}
+	              	{{$video->direct}}
 	              </div>
 	              <!-- <div class="cat">
 	              	category
@@ -27,6 +27,9 @@
 	              <div class="list-tags">
 	                  {{$tags}}
 	              </div>
+	              <div class="cast-credits-title">
+	                  	<b>Director : </b> {{$directors}} 
+	                  </div> 
 	            </div><!-- info-left -->
 	            <div class="info-right link-red-on">
 	            	<div class="info-likes">
@@ -154,18 +157,14 @@
 	              <div class="cast-credits-item">
 	                  <div class="cast-credits-title">Actors</div>
 	                  <p class="cast-credits-text">
-	                      {{$actors}}
+	                      {{$actors}} ---Actors Here---
 	                  </p>
 	              </div>
 	              {{--<div class="cast-credits-item">--}}
 	                  {{--<div class="cast-credits-title">Writers</div>--}}
 	                  {{--<p class="cast-credits-text">Jamie Moss, William Wheeler, Ehren Kruger</p>--}}
 	              {{--</div>--}}
-	              <div class="cast-credits-item">
-	                  <div class="cast-credits-title">
-	                  	<b>Director : </b> {{$directors}}
-	                  </div> 
-	              </div>
+	               
 	              {{--<div class="cast-credits-item">--}}
 	                  {{--<div class="cast-credits-title">Producers</div>--}}
 	                  {{--<p class="cast-credits-text">Avi Arad, Ari Arad, Steven Paul, Michael Costigan,--}}
