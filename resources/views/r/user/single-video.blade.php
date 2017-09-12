@@ -31,7 +31,7 @@
                 	<b>Director : </b> {{$directors}} 
                 </div> 
                 <div class="cast-credits-text">
-                  <b>Director : </b> {{$actors}} ---Actors Here---
+                  <b>Actors : </b> {{$actors}}
                 </div>
 	            </div><!-- info-left -->
 	            <div class="info-right link-red-on">
