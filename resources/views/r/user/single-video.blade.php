@@ -18,6 +18,9 @@
 	              	<li>{{$video->created_at->format('Y')}}</li>
 	              	<li>{{$video->duration}}</li>
 	              </ul>
+	              <div>
+	              	{{$video}}
+	              </div>
 	              <!-- <div class="cat">
 	              	category
 	              </div> -->
@@ -159,10 +162,9 @@
 	                  {{--<p class="cast-credits-text">Jamie Moss, William Wheeler, Ehren Kruger</p>--}}
 	              {{--</div>--}}
 	              <div class="cast-credits-item">
-	                  <div class="cast-credits-title">Director</div>
-	                  <p class="cast-credits-text">
-	                      {{$directors}}
-	                  </p>
+	                  <div class="cast-credits-title">
+	                  	<b>Director : </b> {{$directors}}
+	                  </div> 
 	              </div>
 	              {{--<div class="cast-credits-item">--}}
 	                  {{--<div class="cast-credits-title">Producers</div>--}}
