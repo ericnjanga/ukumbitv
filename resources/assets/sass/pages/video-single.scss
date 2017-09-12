@@ -69,6 +69,13 @@
 		.list-tags {
 			color: $color-darkred;
 		}
+		.list-date-duration {
+			li {
+				&:first-child {
+					margin-right: 25px;
+				}
+			}
+		}
 	}
 
 	.title-reviews{

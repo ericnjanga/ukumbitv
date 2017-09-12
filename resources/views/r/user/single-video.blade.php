@@ -14,7 +14,7 @@
 	          <div class="video-info-main">
 	            <div class="info-left">
 	            	<!-- <span class="age">16+</span> -->
-	              <ul class="list-inline">
+	              <ul class="list-date-duration list-inline">
 	              	<li>{{$video->created_at->format('Y')}}</li>
 	              	<li>{{$video->duration}}</li>
 	              </ul>
