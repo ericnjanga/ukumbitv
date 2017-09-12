@@ -9,13 +9,11 @@
 	}
 
 	.hero {
-		position: relative;
-		min-height: 310px; 
+		position: relative;  
 		.fast-links {
 			position: absolute;
-			bottom: 0;
-			left: 0;
-			padding: 15px;
+			bottom: 15px;
+			left: 15px; 
 		}
 	}
 

@@ -137,6 +137,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+b, strong {
+  font-weight: 700; }
+
 hr {
   border-top: 1px solid #999;
   border-bottom: 1px solid #fff; }
@@ -616,7 +619,7 @@ img {
   margin-left: -5px; }
 
 .video-item {
-  margin: 5px;
+  margin: 5px 6px;
   float: left;
   width: 175px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -2127,13 +2130,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   margin-bottom: 10px; }
 
 .page-video-landing .hero {
-  position: relative;
-  min-height: 310px; }
+  position: relative; }
   .page-video-landing .hero .fast-links {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 15px; }
+    bottom: 15px;
+    left: 15px; }
 
 .page-video-landing .block-wrap {
   overflow-x: hidden; }
@@ -2186,12 +2187,17 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-video-single .video-info-main {
   display: -ms-flexbox;
   display: flex;
-  position: relative; }
+  position: relative;
+  font-size: 14px; }
   .page-video-single .video-info-main .info-left, .page-video-single .video-info-main .info-right {
     -ms-flex: 1;
     flex: 1; }
   .page-video-single .video-info-main .info-right {
     text-align: right; }
+  .page-video-single .video-info-main .list-tags {
+    color: #990033; }
+  .page-video-single .video-info-main .list-date-duration li:first-child {
+    margin-right: 25px; }
 
 .page-video-single .title-reviews {
   margin-top: 0; }
@@ -2222,6 +2228,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 
 .page-categories .video-item {
   margin-bottom: 30px; }
+
+@media (min-width: 1170px) {
+  .page-categories .block-wrap {
+    margin-left: -6px;
+    width: calc(100% + 10px); } }
 
 .page-movies .GP-menu .play-menu li#movies .menu-entry-text {
   color: #fff;

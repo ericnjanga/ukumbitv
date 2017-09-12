@@ -14,16 +14,25 @@
 	          <div class="video-info-main">
 	            <div class="info-left">
 	            	<!-- <span class="age">16+</span> -->
-	              <ul class="list-inline">
+	              <ul class="list-date-duration list-inline">
 	              	<li>{{$video->created_at->format('Y')}}</li>
-	              	<li>1h22min</li>
+	              	<li>{{$duration}}</li>
 	              </ul>
-	              <div class="cat">
-	              	category
+	              <div>
+	              	{{$video->direct}}
 	              </div>
-	              <div class="tags">
+	              <!-- <div class="cat">
+	              	category
+	              </div> -->
+	              <div class="list-tags">
 	                  {{$tags}}
 	              </div>
+	              <div class="cast-credits-title">
+                	<b>Director: </b> {{$directors}} 
+                </div> 
+                <div class="cast-credits-text">
+                  <b>Actors: </b> {{$actors}}
+                </div>
 	            </div><!-- info-left -->
 	            <div class="info-right link-red-on">
 	            	<div class="info-likes">
@@ -143,27 +152,20 @@
 	        <p>{{$video->description}}</p>
 	      </div>
 
-	      <hr>
+<!-- 	      <hr>
 
 	      <div class="hero-sub">
 	          <h2>{{trans('messages.Cast_and_credits')}}</h2>
 	          <div class="cast-credits-block">
 	              <div class="cast-credits-item">
 	                  <div class="cast-credits-title">Actors</div>
-	                  <p class="cast-credits-text">
-	                      {{$actors}}
-	                  </p>
+	                  
 	              </div>
 	              {{--<div class="cast-credits-item">--}}
 	                  {{--<div class="cast-credits-title">Writers</div>--}}
 	                  {{--<p class="cast-credits-text">Jamie Moss, William Wheeler, Ehren Kruger</p>--}}
 	              {{--</div>--}}
-	              <div class="cast-credits-item">
-	                  <div class="cast-credits-title">Director</div>
-	                  <p class="cast-credits-text">
-	                      {{$directors}}
-	                  </p>
-	              </div>
+	               
 	              {{--<div class="cast-credits-item">--}}
 	                  {{--<div class="cast-credits-title">Producers</div>--}}
 	                  {{--<p class="cast-credits-text">Avi Arad, Ari Arad, Steven Paul, Michael Costigan,--}}
@@ -171,7 +173,7 @@
 	                      {{--Mitsuhisa Ishikawa</p>--}}
 	              {{--</div>--}}
 	          </div>
-	      </div>
+	      </div> -->
 
 	      <hr>
 

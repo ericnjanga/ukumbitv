@@ -168,6 +168,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+b, strong {
+	font-weight: 700;
+}
+
 
 hr {
   border-top: 1px solid #999;
@@ -742,7 +746,7 @@ img{
 }
  
 .video-item{
-	margin: 5px;
+	margin: 5px 6px;
 	float: left;
   width: 175px; 
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);

@@ -60,11 +60,22 @@
 	.video-info-main {
 		display: flex;
 		position: relative;
+		    font-size: 14px;
 		.info-left, .info-right {
 			flex: 1;
 		}
 		.info-right {
 			text-align: right;
+		}
+		.list-tags {
+			color: $color-darkred;
+		}
+		.list-date-duration {
+			li {
+				&:first-child {
+					margin-right: 25px;
+				}
+			}
 		}
 	}
 
