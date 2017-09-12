@@ -28,8 +28,11 @@
 	                  {{$tags}}
 	              </div>
 	              <div class="cast-credits-title">
-	                  	<b>Director : </b> {{$directors}} 
-	                  </div> 
+                	<b>Director : </b> {{$directors}} 
+                </div> 
+                <div class="cast-credits-text">
+                  <b>Director : </b> {{$actors}} ---Actors Here---
+                </div>
 	            </div><!-- info-left -->
 	            <div class="info-right link-red-on">
 	            	<div class="info-likes">
@@ -149,16 +152,14 @@
 	        <p>{{$video->description}}</p>
 	      </div>
 
-	      <hr>
+<!-- 	      <hr>
 
 	      <div class="hero-sub">
 	          <h2>{{trans('messages.Cast_and_credits')}}</h2>
 	          <div class="cast-credits-block">
 	              <div class="cast-credits-item">
 	                  <div class="cast-credits-title">Actors</div>
-	                  <p class="cast-credits-text">
-	                      {{$actors}} ---Actors Here---
-	                  </p>
+	                  
 	              </div>
 	              {{--<div class="cast-credits-item">--}}
 	                  {{--<div class="cast-credits-title">Writers</div>--}}
@@ -172,7 +173,7 @@
 	                      {{--Mitsuhisa Ishikawa</p>--}}
 	              {{--</div>--}}
 	          </div>
-	      </div>
+	      </div> -->
 
 	      <hr>
 
