@@ -59,7 +59,7 @@
 					@else
 					<div class="price"><span>$</span> {{$payment_plan->price}}</div>
 					@endif
-	                <button  class="btn btn-block butn-white-trans">Select this</button>
+	                <button id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="btn btn-block butn-white-trans select-plan-btn" onclick="selectPlan(this)">Select this</button>
 					@if($indexKey == 2)
 	                <div class="best-text">
 	                    <div>Best Choice</div>
@@ -232,7 +232,7 @@
 					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo"> 
 				        <div class="panel-body paypal-block"> 
 		              <p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
-		              <a href="" class="btn btn-primary btn-block btn-lg btn-submit">Continue to Pay Pal</a>
+		              <button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>
 			          </div><!-- panel-body paypal-block -->  
 					    </div><!-- collapseTwo -->
 					  </div><!-- panel-paypal -->
@@ -241,4 +241,41 @@
 	    </div><!-- "global-content -->
 	  </div><!-- global-display -->
   </div>
+@endsection
+
+@section('scripts')
+	<script>
+
+		var selectedPlan = '';
+
+        function selectPlan(btn) {
+
+            selectedPlan = $(btn).data('plan-id');
+
+            $( ".select-plan-btn" ).each(function() {
+                if (! $(this).hasClass('butn-white-trans')) {
+                    $(this).addClass('butn-white-trans');
+                } else if ($(this).data('plan-id') === selectedPlan) {
+                    $(this).removeClass('butn-white-trans');
+                }
+            });
+
+
+        }
+
+        function checkoutPlanPayPal() {
+            if(selectedPlan === '') {
+              return swal('Oops!', 'Select payment plan please', 'error');
+			}
+            if(selectedPlan === 2) {
+                return swal('Hey!', 'You can\'t pay for the free plan', 'warning');
+            }
+
+            $('#btn-checkout-paypal').addClass('disabled');
+
+            window.location = "select-payment-plan/"+selectedPlan;
+
+		}
+
+	</script>
 @endsection
