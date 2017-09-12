@@ -18,10 +18,10 @@
 	              	<li>{{$video->created_at->format('Y')}}</li>
 	              	<li>1h22min</li>
 	              </ul>
-	              <div class="cat">
+	              <!-- <div class="cat">
 	              	category
-	              </div>
-	              <div class="tags">
+	              </div> -->
+	              <div class="list-tags">
 	                  {{$tags}}
 	              </div>
 	            </div><!-- info-left -->
