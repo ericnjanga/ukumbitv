@@ -79,7 +79,7 @@
 	          	</div> 
 	          	<h2 class="video-placeholder--title">
 	          		<span>{{trans('messages.msg_trial_ended')}}</span>
-	          		<a href="#" class="btn btn-block btn-cta1b">{{trans('messages.msg_upgrade')}}</a>
+	          		<a href="{{route('user.package')}}" class="btn btn-block btn-cta1b">{{trans('messages.msg_upgrade')}}</a>
 	          	</h2>
 	        	</div> 
 	        @endif

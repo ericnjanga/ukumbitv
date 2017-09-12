@@ -10,11 +10,13 @@ use App\PaymentPlan;
 use App\TrialPeriod;
 use App\UserHistory;
 use App\UserPayment;
+use App\UserPaymentPlan;
 use App\UserPlaylist;
 use App\VideoActor;
 use App\VideoDirector;
 use App\Videoimage;
 use App\VideoTag;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 
@@ -1491,9 +1493,14 @@ class UserController extends Controller {
             $payment->expiry_date = $data['TIMESTAMP'];
             $payment->save();
 
-            $payPlans = PaymentPlan::all();
+            $expiry_date = Carbon::now()->addMonth();
 
-            return redirect()->action('UserController@selectPayPlan');
+            $userPaymentPlan = UserPaymentPlan::where('user_id', Auth::id())->first();
+            $userPaymentPlan->payment_plan_id = $payPlan->id;
+            $userPaymentPlan->expiry_date = $expiry_date;
+            $userPaymentPlan->save();
+
+            return redirect()->action('UserController@packages')->with('flash_success' , 'Plan was successful updated');
         }
 
 

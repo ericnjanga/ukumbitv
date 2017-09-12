@@ -7,7 +7,13 @@
 	    <div class="global-content">
 	    	<!-- packages selection section -->
 	      <section class="section-packages">
-	        <h1>{{trans('messages.home_plansec_title')}}</h1> 
+	        <h1>{{trans('messages.home_plansec_title')}}</h1>
+			  @if(Session::has('flash_success'))
+				  <div class="alert alert-success"  >
+					  <button type="button" class="close" data-dismiss="alert">×</button>
+					  {{Session::get('flash_success')}}
+				  </div>
+			  @endif
 	        <div class="price-block">
 	            {{--<div class="price-item">--}}
 	                {{--<div class="price-title">Basic</div>--}}
@@ -59,7 +65,7 @@
 					@else
 					<div class="price"><span>$</span> {{$payment_plan->price}}</div>
 					@endif
-	                <button  class="btn btn-block butn-white-trans">Select this</button>
+	                <button id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="btn btn-block butn-white-trans select-plan-btn" onclick="selectPlan(this)">Select this</button>
 					@if($indexKey == 2)
 	                <div class="best-text">
 	                    <div>Best Choice</div>
@@ -142,9 +148,11 @@
 			              	<div class="row">
 			              		<div class="col-md-4"> 
 					                <div class="input-group">
-					                  <label>Expiration (MM)</label>
+					                  <label for="expiry-month">Expiration (MM)</label>
 					                  <select name="expiry-month" id="expiry-month" class="form-control">
-					                  	<option value="">Month</option>
+										  @for($i = 1; $i < 13; $i++)
+					                  		<option value="{{$i}}">{{$i}}</option>
+										  @endfor
 					                  	<!-- option list -->
 					                  	<!-- All 12 months -->
 					                  </select> 
@@ -153,9 +161,11 @@
 
 			              		<div class="col-md-4"> 
 					                <div class="input-group">
-					                  <label>Expiration (YYYY)</label>
+					                  <label for="expiry-year">Expiration (YYYY)</label>
 					                  <select name="expiry-year" id="expiry-year" class="form-control">
-					                  	<option value="">Year</option> 
+										  @for($i = \Carbon\Carbon::now()->year; $i < \Carbon\Carbon::now()->addYears(20)->year; $i++)
+					                  		<option value="{{$i}}">{{$i}}</option>
+										  @endfor
 					                  	<!-- option list -->
 					                  	<!-- from current year up to 30 years -->
 					                  </select> 
@@ -164,8 +174,8 @@
 
 			              		<div class="col-md-4"> 
 					                <div class="input-group">
-					                  <label>CVV</label>
-			                      <input type="text" name="cvv" id="cvv" class="form-control"> 
+					                    <label for="cvv">CVV</label>
+										<input type="text" name="cvv" id="cvv" class="form-control">
 					                </div><!-- year -->
 			              		</div><!-- col -->
 			              	</div><!-- row -->
@@ -173,8 +183,8 @@
 			              	<div class="row">
 			              		<div class="col-md-12"> 
 					                <div class="input-group">
-			                      <label>Cardholder Name</label>
-			                      <input type="text" name="cardhlder-name" class="form-control">
+									  <label for="cardhlder-name">Cardholder Name</label>
+									  <input type="text" name="cardhlder-name" id="cardhlder-name" class="form-control">
 					                </div>
 			              		</div><!-- col -->
 			              	</div><!-- row -->
@@ -232,7 +242,7 @@
 					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo"> 
 				        <div class="panel-body paypal-block"> 
 		              <p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
-		              <a href="" class="btn btn-primary btn-block btn-lg btn-submit">Continue to Pay Pal</a>
+		              <button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>
 			          </div><!-- panel-body paypal-block -->  
 					    </div><!-- collapseTwo -->
 					  </div><!-- panel-paypal -->
@@ -241,4 +251,41 @@
 	    </div><!-- "global-content -->
 	  </div><!-- global-display -->
   </div>
+@endsection
+
+@section('scripts')
+	<script>
+
+		var selectedPlan = '';
+
+        function selectPlan(btn) {
+
+            selectedPlan = $(btn).data('plan-id');
+
+            $( ".select-plan-btn" ).each(function() {
+                if (! $(this).hasClass('butn-white-trans')) {
+                    $(this).addClass('butn-white-trans');
+                } else if ($(this).data('plan-id') === selectedPlan) {
+                    $(this).removeClass('butn-white-trans');
+                }
+            });
+
+
+        }
+
+        function checkoutPlanPayPal() {
+            if(selectedPlan === '') {
+              return swal('Oops!', 'Select payment plan please', 'error');
+			}
+            if(selectedPlan === 2) {
+                return swal('Hey!', 'You can\'t pay for the free plan', 'warning');
+            }
+
+            $('#btn-checkout-paypal').addClass('disabled');
+
+            window.location = "select-payment-plan/"+selectedPlan;
+
+		}
+
+	</script>
 @endsection

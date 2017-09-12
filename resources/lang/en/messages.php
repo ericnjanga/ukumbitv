@@ -839,7 +839,7 @@ return array(
   //----------------------------------- 
   'and' => 'and',
   'msg_trial_ended' => 'Your trial has ended',
-  'msg_upgrade' => 'Ugrade your membership',
+  'msg_upgrade' => 'Ugrade your plan',
   'website_title' => 'Online african movie platform - movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more'
 
   //GENERAL WORDS ...
