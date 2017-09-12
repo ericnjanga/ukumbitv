@@ -2189,14 +2189,15 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-video-single .video-info-main {
   display: -ms-flexbox;
   display: flex;
-  position: relative; }
+  position: relative;
+  font-size: 14px; }
   .page-video-single .video-info-main .info-left, .page-video-single .video-info-main .info-right {
     -ms-flex: 1;
     flex: 1; }
   .page-video-single .video-info-main .info-right {
     text-align: right; }
   .page-video-single .video-info-main .list-tags {
-    color: #990033; }
+    color: #798801; }
   .page-video-single .video-info-main .list-date-duration li:first-child {
     margin-right: 25px; }
 

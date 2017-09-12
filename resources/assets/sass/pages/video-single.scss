@@ -60,6 +60,7 @@
 	.video-info-main {
 		display: flex;
 		position: relative;
+		    font-size: 14px;
 		.info-left, .info-right {
 			flex: 1;
 		}
@@ -67,7 +68,7 @@
 			text-align: right;
 		}
 		.list-tags {
-			color: $color-darkred;
+			color: $color-yellow-green;
 		}
 		.list-date-duration {
 			li {
