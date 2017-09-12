@@ -6,6 +6,16 @@
 }
 
 
+.page-categories { 
+	@media (min-width: 1170px){
+		.block-wrap {
+			margin-left: -6px;
+	    width: calc(100% + 10px);
+		}
+	} 
+}
+
+
 
 //Activate main menu items on specific pages
 //------------------------------------------

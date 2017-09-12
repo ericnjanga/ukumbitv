@@ -2229,6 +2229,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-categories .video-item {
   margin-bottom: 30px; }
 
+@media (min-width: 1170px) {
+  .page-categories .block-wrap {
+    margin-left: -6px;
+    width: calc(100% + 10px); } }
+
 .page-movies .GP-menu .play-menu li#movies .menu-entry-text {
   color: #fff;
   background: #990033; }
