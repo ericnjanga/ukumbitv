@@ -137,6 +137,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+b, strong {
+  font-weight: 700; }
+
 hr {
   border-top: 1px solid #999;
   border-bottom: 1px solid #fff; }
