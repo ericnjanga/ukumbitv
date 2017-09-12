@@ -2197,6 +2197,8 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     text-align: right; }
   .page-video-single .video-info-main .list-tags {
     color: #990033; }
+  .page-video-single .video-info-main .list-date-duration li:first-child {
+    margin-right: 25px; }
 
 .page-video-single .title-reviews {
   margin-top: 0; }
