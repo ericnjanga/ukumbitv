@@ -16,7 +16,7 @@
 	            	<!-- <span class="age">16+</span> -->
 	              <ul class="list-inline">
 	              	<li>{{$video->created_at->format('Y')}}</li>
-	              	<li>1h22min</li>
+	              	<li>{{$video}}</li>
 	              </ul>
 	              <!-- <div class="cat">
 	              	category
