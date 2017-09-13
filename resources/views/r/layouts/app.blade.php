@@ -31,7 +31,13 @@
     <link rel="stylesheet" href="{{asset('packages/sweetalert/sweetalert.css')}}">
     {{--<link rel="stylesheet" href="{{asset('r/css/less.css')}}">--}}
     <link rel="stylesheet" href="{{asset('r/css/passfield.min.css')}}">
-
+		
+		
+		<style>
+		[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+		    display: none !important;
+		}
+		</style>
 </head>
 <body data-search-route="{{route('search-data')}}">
  	{{--FACEBOOK CODE--}}
