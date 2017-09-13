@@ -11,6 +11,7 @@ use PayPal\Api\AgreementStateDescriptor;
 use PayPal\Api\ChargeModel;
 use PayPal\Api\Currency;
 use PayPal\Api\MerchantPreferences;
+use PayPal\Api\Payer;
 use PayPal\Api\PaymentDefinition;
 use PayPal\Api\Plan;
 use PayPal\Api\Patch;
@@ -117,16 +118,16 @@ class PaypalPlanController extends Controller
                 "status" => "ACTIVE",
                 "total_required" => "yes"
             ];
-            $planList = Plan::all($params, $this->apiContext);
-            $agree = Agreement::get('I-X7M7965089MX', $this->apiContext);
-            $plan = Plan::get('P-0JB09328YE923024WPFRHONQ', $this->apiContext);
+//            $planList = Plan::all($params, $this->apiContext);
+//            $agree = Agreement::get('I-L6SM2U7R19JA', $this->apiContext);
+//            $plan = Plan::get('P-0JB09328YE923024WPFRHONQ', $this->apiContext);
+
 
         } catch (Exception $ex) {
 
             exit(1);
         }
 
-        dd($agree->getPlan()->id);
 
         return 'sss';
     }

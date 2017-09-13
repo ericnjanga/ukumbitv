@@ -78,9 +78,20 @@ class UserController extends Controller {
         return view('r.user.account');
     }
 
+    public function getUserPaymentPlan()
+    {
+        $payPlanId = UserPaymentPlan::where('user_id', Auth::id())->first();
+        $payPlan = PaymentPlan::find($payPlanId->id);
+
+        return $payPlan;
+    }
+
     public function packages()
     {
-        return view('r.user.packages')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
+
+        return view('r.user.packages')
+            ->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get())
+            ->with('userPayPlan', $this->getUserPaymentPlan());
     }
 
     public function checkVideoPlays(Request $request)
