@@ -428,7 +428,10 @@
 																		<table class="flexibleContainerBoxNext" border="0" cellpadding="0" cellspacing="0" width="210" style="max-width:100%;">
 																			<tr>
 																				<td align="left" class="textContent">
-																					<a href="https://ukumbitv.com/video/20170802124753" target="_blank"><img src="https://ukumbitv.com/images/20170802124753/small_image21505222838Baobab-portrait.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /></a>
+																					<a href="https://ukumbitv.com/video/20170802124753" target="_blank">
+
+
+																					<img src="{{asset('r/img/logo.png')}}" width="210" class="flexibleImage" style="max-width:100%;" alt="UkumbiTV" title="UkumbiTV" />
 																					
 																					<!-- <img src="http://www.charlesmudy.com/respmail/respmail-full.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /> -->
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:10px;margin-bottom:3px;text-align:left;">Baobab</h3>
