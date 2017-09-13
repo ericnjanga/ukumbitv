@@ -41,7 +41,7 @@
           	<a href="{{url('/password/reset')}}">{{trans('messages.auth_forgot_password')}}</a>
           </div> 
         </div>
-        <button type="submit" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signin')}}</button>
+        <button type="submit" class="btn btn-block btn-cta1b btn-lg" ng-disabled="loginForm.$invalid">{{trans('messages.auth_signin')}}</button>
     </form>
 
     <div>
