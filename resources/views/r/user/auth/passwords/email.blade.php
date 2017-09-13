@@ -5,7 +5,7 @@
   <div class="page-auth" ng-app="validationApp" ng-controller="mainController">
     <h1 class="text-center">Reset password</h1>
 
-    <p>We will send new password on your e-mail</p>
+    <p class="text-center">We will send new password on your e-mail</p>
     <form name="recoverForm" action="" method="">
 
 
