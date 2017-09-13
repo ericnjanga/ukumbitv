@@ -14,8 +14,8 @@
         <input class="form-control" type="email" name="email" ng-model="user.email" required>
         <div ng-cloak ng-show="recoverForm.email.$invalid && !recoverForm.email.$pristine" class="help-block">Enter a valid email.</div> 
       </div>
- 
-      <button type="submit" class="butn btn-cta1b btn-lg" ng-disabled="loginForm.$invalid">Reset password</button>
+
+      <button type="submit" class="btn btn-cta1b btn-lg" ng-disabled="loginForm.$invalid">Reset password</button>
     </form>
 	</div>
 
