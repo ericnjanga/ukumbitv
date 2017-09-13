@@ -861,6 +861,7 @@ return array(
   'welcome_email_section2_p' => 'Wether you enjoy comedy, drama, action or adventure, you have a great movie for you!',
   'welcome_email_contactus1' => 'Your feedback is important to us, so don\'t forget to ',
   'welcome_email_contactus2' => 'let us know how we are doing',
+  'welcome_email_section3_h3' => 'Experience more by upgrading your plan',
 
 
  

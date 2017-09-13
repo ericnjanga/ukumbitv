@@ -485,6 +485,53 @@
 								</td>
 							</tr>
 							<!-- // MODULE ROW -->
+
+
+
+
+
+
+
+							<!-- MODULE ROW // -->
+							<tr>
+								<td align="center" valign="top">
+									<!-- CENTERING TABLE // -->
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#F8F8F8">
+										<tr>
+											<td align="center" valign="top">
+												<!-- FLEXIBLE CONTAINER // -->
+												<table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
+													<tr>
+														<td align="center" valign="top" width="500" class="flexibleContainerCell">
+															<table border="0" cellpadding="30" cellspacing="0" width="100%">
+																<tr>
+																	<td align="center" valign="top">
+
+																		<!-- CONTENT TABLE // -->
+																		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+																			<tr>
+																				<td valign="top" class="textContent"> 
+																					<h3 mc:edit="header" style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">
+																						{{trans('messages.welcome_email_section3_h3')}}</h3> 
+																				</td>
+																			</tr>
+																		</table>
+																		<!-- // CONTENT TABLE -->
+
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+												<!-- // FLEXIBLE CONTAINER -->
+											</td>
+										</tr>
+									</table>
+									<!-- // CENTERING TABLE -->
+								</td>
+							</tr>
+							<!-- // MODULE ROW -->
  
 
 							<!-- MODULE ROW // -->
@@ -506,8 +553,12 @@
 																		<table border="0" cellpadding="30" cellspacing="0" width="100%" style="max-width:100%;">
 																			<tr>
 																				<td align="left" class="textContent">
-																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">Left Column</h3>
-																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis.</div>
+																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">Special</h3>
+																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">
+																						&bull; Unlimited videos <br />
+																						&bull; Latest movie notifications <br />
+																						&bull; Movies Playlist (up to 5) 
+																					</div>
 																				</td>
 																			</tr>
 																		</table>
@@ -516,8 +567,14 @@
 																		<table class="flexibleContainerBoxNext" border="0" cellpadding="30" cellspacing="0" width="100%" style="max-width:100%;">
 																			<tr>
 																				<td align="left" class="textContent">
-																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">Right Column</h3>
-																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis.</div>
+																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">VIP</h3>
+																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">
+
+																						&bull; Unlimited videos <br />
+																						&bull; Latest movie notifications <br />
+																						&bull; Unlimited Movie in Playlist <br />
+																						&bull; And more ...
+																					</div>
 																				</td>
 																			</tr>
 																		</table>

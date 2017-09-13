@@ -6,8 +6,11 @@
 			<div class="row">
 			  <aside id="fixed-info" class="col-md-3 fixed-info">
 			  	<ul class="list-unstyled">
-			  		<li><a href="{{route('user.terms-condition')}}">{{trans('messages.tos_title')}}</a></li>
-			  		<li><a href="{{route('user.privacy_policy')}}">{{trans('messages.PP_title')}}</a></li>
+			  		<!-- <li><a href="{{route('user.terms-condition')}}">{{trans('messages.tos_title')}}</a></li>
+			  		<li><a href="{{route('user.privacy_policy')}}">{{trans('messages.PP_title')}}</a></li> -->
+
+			  		<li><a href="#">{{trans('messages.tos_title')}}</a></li>
+			  		<li><a href="#">{{trans('messages.PP_title')}}</a></li>
 			  		<li class="active">{{trans('messages.contact')}}</li>
 			  	</ul> 
 			  </aside>
