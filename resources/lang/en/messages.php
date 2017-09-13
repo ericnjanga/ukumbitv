@@ -761,7 +761,7 @@ return array(
 	'auth_password'	=>	'Password',
 	'auth_enter_email'	=>	'Enter your e-mail', 
 	'auth_signup'	=>	'Sign Up',  
-	'auth_signin'	=>	'Sign In', 
+	'auth_signin'	=>	'Register', 
 	'auth_policy_check1'	=>	'By clicking Sign Up, I agree to the', 
 	// [fr] 'forgot_password' 	=> 'Mot de passe oublié',
   //SING-IN/REGISTER PAGE ...
