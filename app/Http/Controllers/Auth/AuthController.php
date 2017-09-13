@@ -135,6 +135,7 @@ class AuthController extends Controller
         Helper::send_email($page,$subject,$email,$email_data);
     }
 
+
     public function resendVerifyEmail($id)
     {
         $User = User::find($id);
