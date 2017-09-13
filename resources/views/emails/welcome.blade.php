@@ -316,13 +316,13 @@
 												<!-- FLEXIBLE CONTAINER // -->
 												<table border="0" cellpadding="30" cellspacing="0" width="500" class="flexibleContainer">
 													<tr>
-														<td style="padding-top:0;" align="center" valign="top" width="500" class="flexibleContainerCell">
+														<td style="" align="center" valign="top" width="500" class="flexibleContainerCell">
 
 															<!-- CONTENT TABLE // -->
-															<table border="0" cellpadding="0" cellspacing="0" width="50%" class="emailButton" style="background-color: #eeb33d;">
+															<table border="0" cellpadding="0" cellspacing="0" width="50%" class="emailButton" style="background-color: #333333;">
 																<tr>
 																	<td align="center" valign="middle" class="buttonContent" style="padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;">
-																		<a style="color:#FFFFFF;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="#" target="_blank"> {{trans('messages.welcome_email_cta1')}} </a>
+																		<a style="color:#eeb33d;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="#" target="_blank"> {{trans('messages.welcome_email_cta1')}} </a>
 																	</td>
 																</tr>
 															</table>
