@@ -270,8 +270,14 @@
 															<table border="0" cellpadding="30" cellspacing="0" width="100%">
 																<tr>
 																	<td align="center" valign="top" class="textContent">
+
+
+																		<img src="https://ukumbitv.com/r/img/logo.png" alt="" style="display:block; margin:0 0 20px 0;">
+
+
 																		<h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;">{{trans('messages.welcome_email_H1')}}</h1>
-																		<h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#205478;line-height:135%;">{{trans('messages.welcome_email_H1')}}</h2>
+																		<br /><br />
+																		<!-- <h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#205478;line-height:135%;">{{trans('messages.welcome_email_H1')}}</h2> -->
 																		<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">{{trans('messages.welcome_email_introtxt')}}</div>
 																	</td>
 																</tr>
@@ -360,7 +366,7 @@
 														<td style="padding-top:0;" align="center" valign="top" width="500" class="flexibleContainerCell">
 
 															<!-- CONTENT TABLE // -->
-															<table border="0" cellpadding="0" cellspacing="0" width="50%" class="emailButton" style="background-color: #3498DB;">
+															<table border="0" cellpadding="0" cellspacing="0" width="50%" class="emailButton" style="background-color: #eeb33d;">
 																<tr>
 																	<td align="center" valign="middle" class="buttonContent" style="padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;">
 																		<a style="color:#FFFFFF;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="#" target="_blank">Confirmation</a>
