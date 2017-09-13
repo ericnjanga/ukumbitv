@@ -871,6 +871,18 @@ return array(
   'welcome_email_unsubscribe2' => 'unsubscribe',
 
 
+
+
+
+
+  //Registration confirmation page
+  'registration_confirm_h1' => 'Confirm your e-mail!', 
+  'registration_confirm_p1' => 'Please check your inbox for a confirmation link.',
+  'registration_confirm_p2_1' => 'If you do not receive the email at',
+  'registration_confirm_p2_2' => 'within an hour, we can',
+  'registration_confirm_p2_3' => 'resend it to you',
+
+
  
 
 
