@@ -405,9 +405,6 @@
 															<!-- CONTENT TABLE // -->
 															<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
 																<tr>
-
-																	<!-- Should be coming from database --> 
-																	<!-- Should be coming from database -->
 																	<td align="left" valign="top" class="flexibleContainerBox">
 																		<table border="0" cellpadding="0" cellspacing="0" width="210" style="max-width:100%;">
 																			<tr>
@@ -427,9 +424,6 @@
 																			</tr>
 																		</table>
 																	</td>
-
-																	<!-- Should be coming from database --> 
-																	<!-- Should be coming from database -->
 																	<td align="right" valign="middle" class="flexibleContainerBox">
 																		<table class="flexibleContainerBoxNext" border="0" cellpadding="0" cellspacing="0" width="210" style="max-width:100%;">
 																			<tr>
@@ -530,8 +524,6 @@
 																	<td align="left" valign="top" class="flexibleContainerBox" style="background-color:#5F5F5F;">
 																		<table border="0" cellpadding="30" cellspacing="0" width="100%" style="max-width:100%;">
 																			<tr>
-																				<!-- Should be coming from database -->
-																				<!-- Should be coming from database -->
 																				<td align="left" class="textContent">
 																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left; text-transform:uppercase;">Special</h3>
 																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">
@@ -550,8 +542,6 @@
 																	<td align="right" valign="top" class="flexibleContainerBox" style="background-color:#27ae60;">
 																		<table class="flexibleContainerBoxNext" border="0" cellpadding="30" cellspacing="0" width="100%" style="max-width:100%;">
 																			<tr>
-																				<!-- Should be coming from database -->
-																				<!-- Should be coming from database -->
 																				<td align="left" class="textContent">
 																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left; text-transform:uppercase;">VIP</h3>
 																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">
