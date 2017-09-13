@@ -202,7 +202,7 @@
 																				<td align="left" class="textContent">
 																					<!-- CONTENT // -->
 																					<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;">  
-																						{{trans('messages.welcome_email_cantread1')}}, <a href="#" target="_blank" style="text-decoration:none;border-bottom:1px solid #828282;color:#828282;"><span style="color:#828282;">{{trans('messages.welcome_email_cantread2')}}</span></a>.
+																						{{trans('messages.welcome_email_cantread1')}}, <a href="https://ukumbitv.com/welcome-email" target="_blank" style="text-decoration:none;border-bottom:1px solid #828282;color:#828282;"><span style="color:#828282;">{{trans('messages.welcome_email_cantread2')}}</span></a>.
 																					</div>
 																				</td>
 																			</tr>
@@ -321,7 +321,7 @@
 															<table border="0" cellpadding="0" cellspacing="0" width="50%" class="emailButton" style="background-color: #333333;">
 																<tr>
 																	<td align="center" valign="middle" class="buttonContent" style="padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;">
-																		<a style="color:#eeb33d;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="#" target="_blank"> {{trans('messages.welcome_email_cta1')}} </a>
+																		<a style="color:#eeb33d;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="https://ukumbitv.com" target="_blank"> {{trans('messages.welcome_email_cta1')}} </a>
 																	</td>
 																</tr>
 															</table>
@@ -344,7 +344,7 @@
 							<tr>
 								<td align="center" valign="top">
 									<!-- CENTERING TABLE // -->
-									<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#F8F8F8">
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#E1E1E1">
 										<tr>
 											<td align="center" valign="top">
 												<!-- FLEXIBLE CONTAINER // -->
@@ -388,45 +388,7 @@
 							<!-- // MODULE ROW -->
 
   
-
-							<!-- MODULE DIVIDER // -->
-							<tr>
-								<td align="center" valign="top">
-									<!-- CENTERING TABLE // -->
-									<table border="0" cellpadding="0" cellspacing="0" width="100%">
-										<tr>
-											<td align="center" valign="top">
-												<!-- FLEXIBLE CONTAINER // -->
-												<table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
-													<tr>
-														<td align="center" valign="top" width="500" class="flexibleContainerCell">
-															<table class="flexibleContainerCellDivider" border="0" cellpadding="30" cellspacing="0" width="100%">
-																<tr>
-																	<td align="center" valign="top" style="padding-top:0px;padding-bottom:0px;">
-
-																		<!-- CONTENT TABLE // -->
-																		<table border="0" cellpadding="0" cellspacing="0" width="100%">
-																			<tr>
-																				<td align="center" valign="top" style="border-top:1px solid #C8C8C8;"></td>
-																			</tr>
-																		</table>
-																		<!-- // CONTENT TABLE -->
-
-																	</td>
-																</tr>
-															</table>
-														</td>
-													</tr>
-												</table>
-												<!-- // FLEXIBLE CONTAINER -->
-											</td>
-										</tr>
-									</table>
-									<!-- // CENTERING TABLE -->
-								</td>
-							</tr>
-							<!-- // END -->
-
+ 
 
 							<!-- MODULE ROW // -->
 							<tr>
@@ -553,7 +515,7 @@
 																		<table border="0" cellpadding="30" cellspacing="0" width="100%" style="max-width:100%;">
 																			<tr>
 																				<td align="left" class="textContent">
-																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">Special</h3>
+																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left; text-transform:uppercase;">Special</h3>
 																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">
 																						&bull; Unlimited videos <br />
 																						&bull; Latest movie notifications <br />
@@ -571,7 +533,7 @@
 																		<table class="flexibleContainerBoxNext" border="0" cellpadding="30" cellspacing="0" width="100%" style="max-width:100%;">
 																			<tr>
 																				<td align="left" class="textContent">
-																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">VIP</h3>
+																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left; text-transform:uppercase;">VIP</h3>
 																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">
 
 																						&bull; Unlimited videos <br />
