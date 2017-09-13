@@ -31,14 +31,7 @@
         <div ng-cloak ng-show="loginForm.password.$dirty && loginForm.password.$viewValue.length==0" class="help-block">You password is required.</div> 
         <div ng-cloak ng-show="loginForm.password.$error.minlength" class="help-block">Password is too short.</div>
         <div ng-cloak ng-show="loginForm.password.$error.pattern" class="help-block">Your assword should contain at least 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character.</div>
-    </div>
-      
-
-
-<!--     <div class="form-group">
-      <label for="password">{{trans('messages.auth_password')}} <span>*</span></label>
-      <input class="form-control" type="password" name="password" required>
-    </div> -->
+    	</div>   
 
 
       <div class="checkbox">
