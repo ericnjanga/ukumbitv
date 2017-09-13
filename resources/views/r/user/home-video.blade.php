@@ -5,7 +5,8 @@
     <div class="global-display">
 			@include('r.chunks._filter_video')
 
-			<div class="global-content"> 
+			<div class="global-content">
+				@if(isset($grandVideo))
 	      <div class="hero">
 	      	<img src="{{ $grandVideo->videoimage->imgHero }}" alt="{{ $grandVideo->title }}">
 	      	<!-- <p>{{ $grandVideo }}</p> -->
@@ -24,6 +25,7 @@
 	      		</li>
 	      	</ul>
 	      </div><!-- hero -->
+				@endif
 
 	      <div class="block-wrap">
 	        <h2>New Videos</h2> 
