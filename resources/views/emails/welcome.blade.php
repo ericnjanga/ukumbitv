@@ -190,7 +190,7 @@
 																			<tr>
 																				<td align="left" class="textContent">
 																					<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;">
-																						The introduction of your message preview goes here. Try to make it short.
+																						{{trans('messages.welcome_email_intromsg')}}
 																					</div>
 																				</td>
 																			</tr>
@@ -409,7 +409,7 @@
 																		<table border="0" cellpadding="0" cellspacing="0" width="210" style="max-width:100%;">
 																			<tr>
 																				<td align="left" class="textContent">
-																					<a href="https://ukumbitv.com/video/20170814024810" target="_blank"><img src="https://ukumbitv.com/images/20170814024810/small_image21505268654Raging Hearts.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /></a>
+																					<a href="https://ukumbitv.com/video/20170814024810" target="_blank"><img src="https://ukumbitv.com/images/20170814024810/small_image21505309525raging-hearts.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /></a>
 																					
 
 																					<!-- <img src="http://www.charlesmudy.com/respmail/respmail-full.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /> -->
