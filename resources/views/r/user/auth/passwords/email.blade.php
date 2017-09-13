@@ -15,11 +15,11 @@
         <div ng-cloak ng-show="recoverForm.email.$invalid && !recoverForm.email.$pristine" class="help-block">Enter a valid email.</div> 
       </div>
 
-      <button type="submit" class="btn btn-cta1b btn-lg" ng-disabled="loginForm.$invalid">Reset password</button>
+      <button type="submit" class="btn btn-cta1b btn-block btn-lg" ng-disabled="loginForm.$invalid">Reset password</button>
     </form>
 
     <div>
-        <span>{{trans('messages.auth_no_account')}}</span>
+        <a href="{{route('user.login.form')}}" class="sign-butn">{{trans('messages.auth_signin')}}</a> | 
         <a href="{{route('user.register.form')}}" class="sign-butn">{{trans('messages.auth_signup')}}</a>
     </div>
 	</div>
