@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "851f99e87755e80cb080c239ea895a8d",
+    "content-hash": "c6dcbf3da602032084fb158607f1828f",
     "packages": [
         {
             "name": "anlutro/l4-settings",
