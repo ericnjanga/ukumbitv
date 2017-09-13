@@ -2406,11 +2406,15 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     display: inline-block !important;
     color: #000; }
 
+@media (min-width: 768px) {
+  .ukb-main-header .navbar-right {
+    margin-top: 7px; } }
+
 .ukb-main-header .nav-user-tmb {
   margin-left: 10px; }
   .ukb-main-header .nav-user-tmb img {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%; }
 
 .ukb-main-header #link-update-package {
