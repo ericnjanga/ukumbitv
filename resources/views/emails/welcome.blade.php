@@ -272,7 +272,7 @@
 																	<td align="center" valign="top" class="textContent">
 
 
-																		<img src="https://ukumbitv.com/r/img/logo.png" alt="" style="display:block; margin:0 0 20px 0;">
+																		<img src="https://ukumbitv.com/r/img/logo.png" alt="" style="display:block; margin:0 0 30px 0; max-width: 200px;">
 
 
 																		<h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;">{{trans('messages.welcome_email_H1')}}</h1>
