@@ -24,13 +24,13 @@
 
 
       <!-- Password -->
-      <div class="form-group" ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+     <!--  <div class="form-group" ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
         <label>Password</label>   
         <input type="password" name="password" class="form-control" ng-model="user.password" ng-minlength="6" required>
         <p ng-show="loginForm.password.$dirty && loginForm.password.$viewValue.length==0" class="help-block">You password is required.</p> 
         <p ng-show="loginForm.password.$error.minlength" class="help-block">Password is too short.</p>
         <p ng-show="loginForm.password.$error.pattern" class="help-block">Your assword should contain at least 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character.</p>
-    </div>
+    </div> -->
       
 
 
