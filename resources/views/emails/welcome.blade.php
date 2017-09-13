@@ -271,9 +271,7 @@
 																<tr>
 																	<td align="center" valign="top" class="textContent">
 
-
-																		<img src="https://ukumbitv.com/r/img/logo.png" alt="" style="display:block; margin:0 0 30px 0; max-width:130px;">
-
+																		<img src="{{asset('r/img/logo.png')}}" width="210" class="flexibleImage" style="display:block; margin:0 0 30px 0; max-width:130px;" alt="UkumbiTV" title="UkumbiTV" /> 
 
 																		<h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;">{{trans('messages.welcome_email_section1_h1')}}</h1>
 																		<br />  
@@ -428,12 +426,8 @@
 																		<table class="flexibleContainerBoxNext" border="0" cellpadding="0" cellspacing="0" width="210" style="max-width:100%;">
 																			<tr>
 																				<td align="left" class="textContent">
-																					<a href="https://ukumbitv.com/video/20170802124753" target="_blank">
-
-
-																					<img src="{{asset('r/img/logo.png')}}" width="210" class="flexibleImage" style="max-width:100%;" alt="UkumbiTV" title="UkumbiTV" />
-																					
-																					<!-- <img src="http://www.charlesmudy.com/respmail/respmail-full.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /> -->
+																					<a href="https://ukumbitv.com/video/20170802124753" target="_blank"> 
+																						<img src="https://ukumbitv.com/images/20170802124753/small_image21505222838Baobab-portrait.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /></a> 
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:10px;margin-bottom:3px;text-align:left;">Baobab</h3>
 																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Deux jeunes hommes donc KULU et AWOUZOA, vont en aventure dans le village voisin pour demander en ...
 
