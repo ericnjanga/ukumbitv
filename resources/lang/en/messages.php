@@ -859,6 +859,8 @@ return array(
   'welcome_email_cta1' => 'Start Watching Now!',
   'welcome_email_section2_h1' => 'A great selection of movies is awaiting!',
   'welcome_email_section2_p' => 'Wether you enjoy comedy, drama, action or adventure, you have a great movie for you!',
+  'welcome_email_contactus1' => 'Your feedback is important to us, so don\'t forget to ',
+  'welcome_email_contactus2' => 'let us know how we are doing',
 
 
  
