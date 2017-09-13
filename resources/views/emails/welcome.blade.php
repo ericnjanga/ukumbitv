@@ -32,7 +32,7 @@
 			.flexibleImage{height:auto;}
 			.linkRemoveBorder{border-bottom:0 !important;}
 			table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}
-			body, #bodyTable{background-color:#E1E1E1;}
+			body, #bodyTable{background-color:#333333;}
 			#emailHeader{background-color:#E1E1E1;}
 			#emailBody{background-color:#FFFFFF;}
 			#emailFooter{background-color:#E1E1E1;}
