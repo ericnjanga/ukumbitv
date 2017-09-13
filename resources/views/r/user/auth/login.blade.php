@@ -23,7 +23,7 @@
           <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
           <input class="form-control" type="email" name="email" ng-model="user.email" required>
           <p ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" class="help-block">Enter a valid email.</p>
-          <p>{{}}</p>
+        
         </div>
 
 
