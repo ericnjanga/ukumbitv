@@ -558,7 +558,7 @@
 																		<table border="0" cellpadding="0" cellspacing="0" width="100%">
 																			<tr>
 																				<td valign="top" class="textContent">
-																					<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">Empty row for your custom contents</div>
+																					<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">{{trans('messages.welcome_email_contactus1')}} <a href="https://ukumbitv.com/contact" target="_blank" style="color:#3498db; text-decoration:underline;">{{trans('messages.welcome_email_contactus2')}}</a></div>
 																				</td>
 																			</tr>
 																		</table>
