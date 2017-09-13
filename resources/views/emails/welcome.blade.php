@@ -458,7 +458,7 @@
 							<tr>
 								<td align="center" valign="top">
 									<!-- CENTERING TABLE // -->
-									<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#F8F8F8">
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#E1E1E1">
 										<tr>
 											<td align="center" valign="top">
 												<!-- FLEXIBLE CONTAINER // -->
@@ -473,7 +473,7 @@
 																		<table border="0" cellpadding="0" cellspacing="0" width="100%">
 																			<tr>
 																				<td valign="top" class="textContent"> 
-																					<h3 mc:edit="header" style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">
+																					<h3 mc:edit="header" style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:center;">
 																						{{trans('messages.welcome_email_section3_h3')}}</h3> 
 																				</td>
 																			</tr>
