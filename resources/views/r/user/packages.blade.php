@@ -51,7 +51,8 @@
 	            {{--</div>--}}
 				@foreach($payment_plans as $indexKey => $payment_plan)
 	            <div class="price-item">
-	                <div class="price-title">{{$payment_plan->name}}</div>
+
+	                <div class="price-title">{{$payment_plan->name}} {{$payment_plan->id}}</div>
 	                <div class="count-text">{{$payment_plan->description}}</div>
 	                <ul class="includ-list">
 						@php($i=1)

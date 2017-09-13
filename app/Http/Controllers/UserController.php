@@ -81,7 +81,7 @@ class UserController extends Controller {
     public function getUserPaymentPlan()
     {
         $payPlanId = UserPaymentPlan::where('user_id', Auth::id())->first();
-        $payPlan = PaymentPlan::find($payPlanId->id);
+        $payPlan = PaymentPlan::find($payPlanId->payment_plan_id);
 
         return $payPlan;
     }
