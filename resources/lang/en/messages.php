@@ -840,11 +840,20 @@ return array(
   'and' => 'and',
   'msg_trial_ended' => 'Your trial has ended',
   'msg_upgrade' => 'Ugrade your plan',
-  'website_title' => 'Online african movie platform - movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more'
+  'website_title' => 'Online african movie platform - movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more',
 
   //GENERAL WORDS ...
-  //----------------------------------- 
+  //-----------------------------------
 
+
+
+
+
+  //WELCOME EMAIL ...
+  //-----------------------------------  
+  'welcome_email_title' => 'Welcome to UkumbiTV',
+  'welcome_email_cantread1' => 'If you can\'t see this message,',
+  'welcome_email_cantread2' => 'If you can\'t see this message,',
 
 
  
