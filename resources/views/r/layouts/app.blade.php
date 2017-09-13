@@ -62,32 +62,36 @@
     @yield('layout')
 
 </body>
-  <script type="text/javascript" src="{{asset('r/js/libs/jquery.min.js')}}"></script>
+  <script src="{{asset('r/js/libs/jquery.min.js')}}"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="{{asset('r/js/libs/passfield.min.js')}}"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
-  <script type="text/javascript" src="{{asset('r/js/libs/slick.min.js')}}"></script>
+  <script src="{{asset('r/js/libs/passfield.min.js')}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+  <script src="{{asset('r/js/libs/slick.min.js')}}"></script>
   <!-- lightbox librairy
-  <script type="text/javascript" src="{{asset('r/js/libs/jquery.colorbox-min.js')}}"></script>
+  <script src="{{asset('r/js/libs/jquery.colorbox-min.js')}}"></script>
 -->
 
 	<!-- autocomplete librairy -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
 
-  <script type="text/javascript" src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script>
+  <script src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
 
   <!--
   ... Will reactivate plugin another time ...
-  <script type="text/javascript" src="{{asset('r/js/libs/Google-play-menu.js')}}"></script>
+  <script src="{{asset('r/js/libs/Google-play-menu.js')}}"></script>
 -->
-  <script type="text/javascript" src="{{asset('r/js/libs/jQuery.YoutubeBackground.js')}}"></script>
+  <script src="{{asset('r/js/libs/jQuery.YoutubeBackground.js')}}"></script>
 
-  <script type="text/javascript" src="{{asset('r/js/libs/anchor-smooth-scroll.js')}}"></script>
+  <script src="{{asset('r/js/libs/anchor-smooth-scroll.js')}}"></script>
 		
 		<!-- main script -->
-  <script type="text/javascript" src="{{asset('r/js/main.js')}}"></script>
+  <script src="{{asset('r/js/main.js')}}"></script>
+		
+		<!-- Forms Validation -->
+  <script src="{{asset('r/js/forms-validation.js')}}"></script>
 
 
 
