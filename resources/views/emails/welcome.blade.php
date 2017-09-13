@@ -557,7 +557,9 @@
 																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">
 																						&bull; Unlimited videos <br />
 																						&bull; Latest movie notifications <br />
-																						&bull; Movies Playlist (up to 5) 
+																						&bull; Movies Playlist (up to 5)  <br />
+
+																						<a href="https://ukumbitv.com/package" target="_blank" style="color: #eeb33d; text-decoration: none; font-family: Helvetica,Arial,sans-serif; font-size: 20px; line-height: 135%;">Upgrade</a>
 																					</div>
 																				</td>
 																			</tr>
@@ -573,7 +575,9 @@
 																						&bull; Unlimited videos <br />
 																						&bull; Latest movie notifications <br />
 																						&bull; Unlimited Movie in Playlist <br />
-																						&bull; And more ...
+																						&bull; And more ... <br />
+
+																						<a href="https://ukumbitv.com/package" target="_blank" style="color: #eeb33d; text-decoration: none; font-family: Helvetica,Arial,sans-serif; font-size: 20px; line-height: 135%;">Upgrade</a>
 																					</div>
 																				</td>
 																			</tr>
