@@ -13,16 +13,17 @@
     <div class="or-line upper">{{trans('messages.auth_or')}}</div>
 
 
-    <form action="{{route('user.login.post')}}" method="POST" autocomplete="off" novalidate>
+    <form name="loginForm" action="{{route('user.login.post')}}" method="POST" autocomplete="off" novalidate>
 
 
  
 
 
-        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+        <div class="form-group" ng-class="{ 'has-error' : loginForm.email.$invalid && !loginForm.email.$pristine }">
           <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
           <input class="form-control" type="email" name="email" ng-model="user.email" required>
-          <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+          <p ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" class="help-block">Enter a valid email.</p>
+          <p>{{}}</p>
         </div>
 
 
