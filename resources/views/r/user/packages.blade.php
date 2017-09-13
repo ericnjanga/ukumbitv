@@ -243,7 +243,8 @@
 				        <div class="panel-body paypal-block"> 
 		              <p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
 		              <button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>
-		              <a href="{{ url('subscribe/paypal') }}" class="btn btn-primary btn-block btn-lg btn-submit">subscribe Pay Pal</a>
+		              {{--<button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>--}}
+{{--		              <a href="{{ url('subscribe/paypal') }}" class="btn btn-primary btn-block btn-lg btn-submit">subscribe Pay Pal</a>--}}
 
 			          </div><!-- panel-body paypal-block -->  
 					    </div><!-- collapseTwo -->
@@ -285,6 +286,7 @@
 
             $('#btn-checkout-paypal').addClass('disabled');
 
+//            window.location = "subscribe/paypal/plan/"+selectedPlan;
             window.location = "select-payment-plan/"+selectedPlan;
 
 		}

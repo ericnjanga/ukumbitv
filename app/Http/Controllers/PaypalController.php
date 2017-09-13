@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\PaymentPlan;
+use App\UserPaymentPlan;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PayPal\Rest\ApiContext;
@@ -40,16 +43,20 @@ class PaypalController extends Controller
         $this->apiContext->setConfig(config('paypal.settings'));
     }
 
-    public function paypalRedirect(){
+    public function paypalRedirect($id){
+
+        $paymentPlan = PaymentPlan::find($id);
+        $desc = $paymentPlan->name." Subscription";
+
         // Create new agreement
         $agreement = new Agreement();
-        $agreement->setName('App Name Monthly Subscription Agreement')
-            ->setDescription('Basic Subscription')
+        $agreement->setName('UkumbiTV Monthly Subscription Agreement')
+            ->setDescription($desc)
             ->setStartDate(\Carbon\Carbon::now()->addMinutes(5)->toIso8601String());
 
         // Set plan id
         $plan = new Plan();
-        $plan->setId($this->plan_id);
+        $plan->setId($paymentPlan->paypal_plan_id);
         $agreement->setPlan($plan);
 
         // Add payer type
@@ -83,6 +90,7 @@ class PaypalController extends Controller
         try {
             // Execute agreement
             $result = $agreement->execute($token, $this->apiContext);
+
             $user = Auth::user();
             $user->role = 'subscriber';
             $user->paypal = 1;
@@ -91,7 +99,15 @@ class PaypalController extends Controller
             }
             $user->save();
 
-            echo 'New Subscriber Created and Billed';
+//            $expiry_date = Carbon::now()->addMonth();
+//
+//            $userPaymentPlan = UserPaymentPlan::where('user_id', Auth::id())->first();
+//            $userPaymentPlan->payment_plan_id = $agreement;
+//            $userPaymentPlan->expiry_date = $expiry_date;
+//            $userPaymentPlan->save();
+
+//            echo 'New Subscriber Created and Billed';
+            return redirect()->action('UserController@packages')->with('flash_success' , 'Payment plan was successful updated');
 
         } catch (\PayPal\Exception\PayPalConnectionException $ex) {
             echo 'You have either cancelled the request or your session has expired';

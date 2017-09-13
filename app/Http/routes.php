@@ -145,7 +145,7 @@ Route::get('/help-center/{id?}','ApplicationController@helpCenter')->name('user.
 Route::get('/advertising','ApplicationController@advertising')->name('user.advertising');
 Route::get('/package', 'UserController@packages')->name('user.package');
 Route::get('create_paypal_plan', 'PaypalPlanController@create_plan');
-Route::get('/subscribe/paypal', 'PaypalController@paypalRedirect')->name('paypal.redirect');
+Route::get('/subscribe/paypal/plan/{id}', 'PaypalController@paypalRedirect')->name('paypal.redirect');
 Route::get('/subscribe/paypal/return', 'PaypalController@paypalReturn')->name('paypal.return');
 Route::get('/getplanlist', 'PaypalPlanController@getPlansList')->name('paypal.list');
 

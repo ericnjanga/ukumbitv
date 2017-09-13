@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 // Used to process plans
 use Illuminate\Support\Facades\URL;
+use PayPal\Api\Agreement;
+use PayPal\Api\AgreementStateDescriptor;
 use PayPal\Api\ChargeModel;
 use PayPal\Api\Currency;
 use PayPal\Api\MerchantPreferences;
@@ -46,8 +48,8 @@ class PaypalPlanController extends Controller
 
         // Create a new billing plan
         $plan = new Plan();
-        $plan->setName('App Name Monthly Billing')
-            ->setDescription('Monthly Subscription to the App Name')
+        $plan->setName('VIP Payment Plan')
+            ->setDescription('Monthly Subscription to the UkumbiTV')
             ->setType('infinite');
 
         // Set billing plan definitions
@@ -57,7 +59,7 @@ class PaypalPlanController extends Controller
             ->setFrequency('Month')
             ->setFrequencyInterval('1')
             ->setCycles('0')
-            ->setAmount(new Currency(array('value' => 9, 'currency' => 'RUB')));
+            ->setAmount(new Currency(array('value' => 5.99, 'currency' => 'USD')));
 
         // Set merchant preferences
         $merchantPreferences = new MerchantPreferences();
@@ -106,17 +108,27 @@ class PaypalPlanController extends Controller
 
     public function getPlansList()
     {
+
         try {
-            $params = array('page_size' => '2');
+
+
+            $params = [
+                "page_size" => "3",
+                "status" => "ACTIVE",
+                "total_required" => "yes"
+            ];
             $planList = Plan::all($params, $this->apiContext);
+            $agree = Agreement::get('I-X7M7965089MX', $this->apiContext);
+            $plan = Plan::get('P-0JB09328YE923024WPFRHONQ', $this->apiContext);
+
         } catch (Exception $ex) {
 
             exit(1);
         }
 
+        dd($agree->getPlan()->id);
 
-
-        return $planList;
+        return 'sss';
     }
 
 
