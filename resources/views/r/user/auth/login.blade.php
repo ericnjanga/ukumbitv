@@ -11,7 +11,13 @@
 
 
     <div class="or-line upper">{{trans('messages.auth_or')}}</div>
+		
 
+		<style>
+		[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+    display: none !important;
+}
+		</style>
 
     <form name="loginForm" action="{{route('user.login.post')}}" method="POST" autocomplete="off" novalidate>
 
