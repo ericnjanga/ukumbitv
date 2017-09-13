@@ -2345,6 +2345,18 @@ fieldset[disabled] .twitter-typeahead .tt-input {
       max-width: 150px;
       margin: 0 auto; } }
 
+.page-emailconfirm {
+  margin: 100px auto;
+  max-width: 600px;
+  padding: 20px;
+  line-height: 35px; }
+  .page-emailconfirm h1 {
+    margin-bottom: 30px; }
+  .page-emailconfirm a {
+    text-decoration: underline; }
+    .page-emailconfirm a:hover {
+      text-decoration: none; }
+
 .page-404 {
   display: -ms-flexbox;
   display: flex;
