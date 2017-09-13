@@ -854,10 +854,11 @@ return array(
   'welcome_email_title' => 'Welcome to UkumbiTV',
   'welcome_email_cantread1' => 'If you can\'t see this message',
   'welcome_email_cantread2' => 'view&nbsp;it&nbsp;in&nbsp;your&nbsp;browser',
-  'welcome_email_H1' => 'Welcome to UkumbiTV',
-  'welcome_email_H2' => 'Thank You for registering',
-  'welcome_email_introtxt' => 'Get ready to enjoy the finest african productions: movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more',
+  'welcome_email_section1_h1' => 'Welcome to UkumbiTV', 
+  'welcome_email_section1_p' => 'Get ready to enjoy the finest african productions: movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more',
   'welcome_email_cta1' => 'Start Watching Now!',
+  'welcome_email_section2_h1' => 'A great selection of movies is awaiting!',
+  'welcome_email_section2_p' => 'Wether you enjoy comedy, drama, action or adventure, you have a great movie for you!',
 
 
  
