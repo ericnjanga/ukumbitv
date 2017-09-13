@@ -73,7 +73,7 @@
 	                <div class="best-text">
 	                    <div>Best Choice</div>
 	                </div>
-						@endif
+					@endif
 	            </div>
 					@endforeach
 	        </div>

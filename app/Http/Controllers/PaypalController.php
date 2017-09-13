@@ -47,6 +47,7 @@ class PaypalController extends Controller
     public function paypalRedirect($id){
 
         $paymentPlan = PaymentPlan::find($id);
+
         $desc = $paymentPlan->name." Subscription";
 
         // Create new agreement
