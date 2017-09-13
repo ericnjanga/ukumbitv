@@ -857,6 +857,7 @@ return array(
   'welcome_email_H1' => 'Welcome to UkumbiTV',
   'welcome_email_H2' => 'Thank You for registering',
   'welcome_email_introtxt' => 'Get ready to enjoy the finest african productions: movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more',
+  'welcome_email_cta1' => 'Start Watching Now!',
 
 
  
