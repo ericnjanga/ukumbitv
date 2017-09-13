@@ -249,6 +249,7 @@ ul li {
 
 .butn-dblue {
   background-color: #3b5998;
+  border: 2px solid #3b5998;
   color: #fff;
   font-size: 16px;
   font-weight: 300; }
