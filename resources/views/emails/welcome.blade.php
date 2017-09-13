@@ -367,7 +367,7 @@
 																					<h3 mc:edit="header" style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">
 																						{{trans('messages.welcome_email_section2_h1')}}</h3>
 																					<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">{{trans('messages.welcome_email_section2_p')}}</div>
-																				</td>
+																				</td> 
 																			</tr>
 																		</table>
 																		<!-- // CONTENT TABLE -->
@@ -405,6 +405,9 @@
 															<!-- CONTENT TABLE // -->
 															<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
 																<tr>
+
+																	<!-- Should be coming from database --> 
+																	<!-- Should be coming from database -->
 																	<td align="left" valign="top" class="flexibleContainerBox">
 																		<table border="0" cellpadding="0" cellspacing="0" width="210" style="max-width:100%;">
 																			<tr>
@@ -414,11 +417,19 @@
 
 																					<!-- <img src="http://www.charlesmudy.com/respmail/respmail-full.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /> -->
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:10px;margin-bottom:3px;text-align:left;">Raging Heart</h3>
-																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">A Liberian soldier (Vundo) turned fugitive after disobeying direct orders from his supperiors ...</div>
+																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">A Liberian soldier (Vundo) turned fugitive after disobeying direct orders from his supperiors ...
+
+																						<br />
+
+																					<a href="https://ukumbitv.com/video/20170814024810" target="_blank" style="color: #3498db; text-decoration: none; font-family: Helvetica,Arial,sans-serif; font-size: 20px; line-height: 135%;">{{trans('messages.welcome_email_cta_watch1')}}</a>
+																					</div>
 																				</td>
 																			</tr>
 																		</table>
 																	</td>
+
+																	<!-- Should be coming from database --> 
+																	<!-- Should be coming from database -->
 																	<td align="right" valign="middle" class="flexibleContainerBox">
 																		<table class="flexibleContainerBoxNext" border="0" cellpadding="0" cellspacing="0" width="210" style="max-width:100%;">
 																			<tr>
@@ -427,7 +438,12 @@
 																					
 																					<!-- <img src="http://www.charlesmudy.com/respmail/respmail-full.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /> -->
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:10px;margin-bottom:3px;text-align:left;">Baobab</h3>
-																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Deux jeunes hommes donc KULU et AWOUZOA, vont en aventure dans le village voisin pour demander en ...</div>
+																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Deux jeunes hommes donc KULU et AWOUZOA, vont en aventure dans le village voisin pour demander en ...
+
+																						<br />
+
+																					<a href="https://ukumbitv.com/video/20170802124753" target="_blank" style="color: #3498db; text-decoration: none; font-family: Helvetica,Arial,sans-serif; font-size: 20px; line-height: 135%;">{{trans('messages.welcome_email_cta_watch1')}}</a>
+																					</div>
 																				</td>
 																			</tr>
 																		</table>
@@ -514,6 +530,8 @@
 																	<td align="left" valign="top" class="flexibleContainerBox" style="background-color:#5F5F5F;">
 																		<table border="0" cellpadding="30" cellspacing="0" width="100%" style="max-width:100%;">
 																			<tr>
+																				<!-- Should be coming from database -->
+																				<!-- Should be coming from database -->
 																				<td align="left" class="textContent">
 																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left; text-transform:uppercase;">Special</h3>
 																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">
@@ -532,6 +550,8 @@
 																	<td align="right" valign="top" class="flexibleContainerBox" style="background-color:#27ae60;">
 																		<table class="flexibleContainerBoxNext" border="0" cellpadding="30" cellspacing="0" width="100%" style="max-width:100%;">
 																			<tr>
+																				<!-- Should be coming from database -->
+																				<!-- Should be coming from database -->
 																				<td align="left" class="textContent">
 																					<h3 style="color:#FFFFFF;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left; text-transform:uppercase;">VIP</h3>
 																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">
@@ -636,8 +656,8 @@
 																	<td valign="top" bgcolor="#E1E1E1">
 
 																		<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;">
-																			<div>Copyright &#169; 2017 <a href="https://www.ukumbitv.com" target="_blank" style="text-decoration:none;color:#828282;"><span style="color:#828282;">UkumbiTV</span></a>. All&nbsp;rights&nbsp;reserved.</div>
-																			<div>If you do not want to recieve emails from us, you can <a href="#" target="_blank" style="text-decoration:none;color:#828282;"><span style="color:#828282;">unsubscribe</span></a>.</div>
+																			<div>{{trans('messages.welcome_email_copyright')}} &#169; <?php echo date("Y"); ?> <a href="https://www.ukumbitv.com" target="_blank" style="text-decoration:none;color:#828282;"><span style="color:#828282;">UkumbiTV</span></a>. {!!trans('messages.welcome_email_all_rights')!!}.</div>
+																			<div>{{trans('messages.welcome_email_unsubscribe1')}} <a href="#" target="_blank" style="text-decoration:none;color:#828282;"><span style="color:#828282;">{{trans('messages.welcome_email_unsubscribe2')}}</span></a>.</div>
 																		</div>
 
 																	</td>

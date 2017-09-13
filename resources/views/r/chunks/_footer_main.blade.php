@@ -53,6 +53,6 @@
    </div>
   </div> 
   <div class="copyright text-center">
-   @2017 Ukumbi TV
+   @<?php echo date("Y"); ?> Ukumbi TV
   </div>  
 </footer> 

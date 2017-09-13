@@ -861,14 +861,13 @@ return array(
   'welcome_email_section2_p' => 'Wether you enjoy comedy, drama, action or adventure, you have a great movie for you!',
   'welcome_email_contactus1' => 'Your feedback is important to us, so don\'t forget to ',
   'welcome_email_contactus2' => 'let us know how we are doing',
-  'welcome_email_section3_h3' => 'Experience more by upgrading your plan',
+  'welcome_email_section3_h3' => 'Experience more by upgrading your plan!',
+  'welcome_email_cta_watch1' => 'Watch Now!',
+  'welcome_email_copyright' => 'Copyright',
+  'welcome_email_all_rights' => 'All&nbsp;rights&nbsp;reserved.',
+  'welcome_email_all_rights' => 'All&nbsp;rights&nbsp;reserved.',
+  'welcome_email_unsubscribe1' => 'If you do not want to recieve emails from us, you can',
+  'welcome_email_unsubscribe2' => 'unsubscribe',
 
 
  
-
-
-
-
-
-
-);
