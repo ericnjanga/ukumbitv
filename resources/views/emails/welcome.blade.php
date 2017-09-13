@@ -646,8 +646,7 @@
 																	<td valign="top" bgcolor="#E1E1E1">
 
 																		<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;">
-																			<div>{{trans('messages.welcome_email_copyright')}} &#169; <?php echo date("Y"); ?> <a href="https://www.ukumbitv.com" target="_blank" style="text-decoration:none;color:#828282;"><span style="color:#828282;">UkumbiTV</span></a>. {!!trans('messages.welcome_email_all_rights')!!}.</div>
-																			<div>{{trans('messages.welcome_email_unsubscribe1')}} <a href="#" target="_blank" style="text-decoration:none;color:#828282;"><span style="color:#828282;">{{trans('messages.welcome_email_unsubscribe2')}}</span></a>.</div>
+																			<div>{{trans('messages.welcome_email_copyright')}} &#169; <?php echo date("Y"); ?> <a href="https://www.ukumbitv.com" target="_blank" style="text-decoration:none;color:#828282;"><span style="color:#828282;">UkumbiTV</span></a>. {!!trans('messages.welcome_email_all_rights')!!}</div>
 																		</div>
 
 																	</td>
