@@ -319,7 +319,8 @@
 															<table border="0" cellpadding="0" cellspacing="0" width="50%" class="emailButton" style="background-color: #333333;">
 																<tr>
 																	<td align="center" valign="middle" class="buttonContent" style="padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;">
-																		<a style="color:#eeb33d;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="https://ukumbitv.com" target="_blank"> {{trans('messages.welcome_email_cta1')}} </a>
+																		<a style="color:#eeb33d;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="{{route('email.verify' , ['id' => $email_data->id , 'verification_code' => $email_data->verification_code])}}" target="_blank"> {{trans('messages.welcome_email_cta1')}} </a>
+
 																	</td>
 																</tr>
 															</table>
