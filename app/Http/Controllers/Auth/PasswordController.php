@@ -42,7 +42,7 @@ class PasswordController extends Controller
      * @var string
      */
 
-    protected $resetView = 'user.auth.passwords.reset';
+    protected $resetView = 'r.user.auth.passwords.reset';
 
     /**
      * Create a new password controller instance.

@@ -3,10 +3,16 @@
 
  
   <div class="page-auth" ng-app="validationApp" ng-controller="mainController">
+    @if(Session::has('status'))
+      <div class="alert alert-success"  >
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        {{Session::get('status')}}
+      </div>
+    @endif
     <h1 class="text-center">Reset password</h1>
 
     <p class="text-center">We will send new password on your e-mail</p>
-    <form name="recoverForm" action="" method="">
+    <form name="recoverForm" action="{{ url('/password/email') }}" method="POST">
 
 
       <div class="form-group" ng-class="{ 'has-error' : recoverForm.email.$invalid && !recoverForm.email.$pristine }">

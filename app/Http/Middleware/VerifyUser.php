@@ -50,7 +50,7 @@ class VerifyUser
             }
         } else {
             //Allowed paths while not logged in
-            if (!$request->is('email/*') && !$request->is('video/*') && !$request->is('admin/*') && !$request->is('social/*') && !$request->is('jobs/*') && !$request->is('resend-email/*') && !$request->is('help-center/*') && !in_array($request->path(), $this->allowed_paths)) {
+            if (!$request->is('email/*') && !$request->is('password/*') && !$request->is('video/*') && !$request->is('admin/*') && !$request->is('social/*') && !$request->is('jobs/*') && !$request->is('resend-email/*') && !$request->is('help-center/*') && !in_array($request->path(), $this->allowed_paths)) {
                 return redirect(route('user.login.form'));
             }
         }
