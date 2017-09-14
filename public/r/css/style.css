@@ -2019,7 +2019,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
       flex-direction: column;
       -ms-flex-align: center;
       align-items: center; }
-      .page-landing .txt-presentation3 li {
+      .page-landing .txt-presentation3 .section-block {
         margin-bottom: 50px; }
       .page-landing .txt-presentation3 .title {
         margin-bottom: 0; }
@@ -2027,10 +2027,10 @@ fieldset[disabled] .twitter-typeahead .tt-input {
           line-height: 70px; }
       .page-landing .txt-presentation3 .txt {
         margin: 0 !important; } }
-  .page-landing .txt-presentation3 > li {
+  .page-landing .txt-presentation3 > .section-block {
     max-width: 350px; }
     @media (min-width: 995px) {
-      .page-landing .txt-presentation3 > li {
+      .page-landing .txt-presentation3 > .section-block {
         margin-left: 30px;
         margin-right: 30px; } }
   .page-landing .txt-presentation3 .icon {
