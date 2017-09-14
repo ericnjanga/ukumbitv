@@ -3,11 +3,17 @@
 
  
   <div class="page-auth" ng-app="validationApp" ng-controller="mainController">
+    @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
     <div class="text-center">
     	<h1>{{trans('messages.auth_signin')}}</h1>
       <p>{{trans('messages.auth_signin_blurb')}}</p>
-      <a href="" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</a>
+      <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
+        <input type="hidden" value="facebook" name="provider" id="provider">
+        {{--<a href="{{ route('SocialLogin') }}" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</a>--}}
+        <button type="submit" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</button>
+      </form>
     </div>
+    @endif
 
 
     <div class="or-line upper">{{trans('messages.auth_or')}}</div>

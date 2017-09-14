@@ -51,11 +51,11 @@
  
       
       <!-- Password Confirmation -->
-      <div class="form-group" ng-class="{ 'has-error' : (registerForm.password.$valid && registerForm.confirmPassword.$dirty &&registerForm.confirmPassword.$error.passwordMatch) }">
+      <div class="form-group" ng-class="{ 'has-error' : (registerForm.password.$valid && registerForm.password_confirmation.$dirty &&registerForm.password_confirmation.$error.passwordMatch) }">
         <label>Re-Type New Password</label> 
       
-				<input type="password" match-password="password" name="password_confirmation" ng-model="user.confirmPassword" class="form-control" required>
-        <p ng-show="(registerForm.password.$valid && registerForm.confirmPassword.$dirty &&registerForm.confirmPassword.$error.passwordMatch)" class="help-block">Password doesn't match.</p> 
+				<input type="password" match-password="password" name="password_confirmation" ng-model="user.password_confirmation" class="form-control" required>
+        <p ng-show="(registerForm.password.$valid && registerForm.password_confirmation.$dirty &&registerForm.password_confirmation.$error.passwordMatch)" class="help-block">Password doesn't match.</p> 
       </div>
  
 
