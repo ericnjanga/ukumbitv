@@ -5,44 +5,29 @@
     <div class="section text-center">
     	<a class="link-inner-redirect" name="section1"></a> 
     	<div class="container">
-      	<ul class="list-inline txt-presentation3">
-      		<li>
+      	<div class="list-inline txt-presentation3">
+      		<section>
       			<h2 class="title">
       				<span class="txt">{{trans('messages.home_midsec_title1')}}</span>
       				<span class="icon icon-video"></span>
       			</h2> 
             <p>{{trans('messages.home_midsec_blurb1')}}</p>
-      		</li>
-      		<li> 
+      		</section>
+      		<section> 
             <h2 class="title">
             	<span class="txt">{{trans('messages.home_midsec_title2')}}</span>
             	<span class="icon icon-monitor-tablet-and-smartohone"></span>
             </h2> 
             <p>{{trans('messages.home_midsec_blurb2')}}</p>
-      		</li>
-      		<li> 
+      		</section>
+      		<section> 
             <h2 class="title">
             	<span class="txt">{{trans('messages.home_midsec_title3')}}</span>
             	<span class="icon icon-computer-screen"></span>
             </h2>
             <p>{{trans('messages.home_midsec_blurb3')}}</p>
-      		</li>
-      	</ul>
-          <!-- <div class="row"> -->
-              <!-- <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 offset-xl-1 list-text-block"> -->
-                  <!-- <div class="list-text-item">
-                      
-                  </div> -->
-              <!-- </div>
-              <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 list-text-block"> -->
-                  <!-- <div class="list-text-item">
-                  </div> -->
-              <!-- </div>
-              <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 list-text-block"> -->
-                  <!-- <div class="list-text-item">
-                  </div> -->
-              <!-- </div> -->
-          <!-- </div> -->
+      		</section>
+      	</div>
       </div>
  
 			<a class="btn-down btn-dark" href="#section2">
