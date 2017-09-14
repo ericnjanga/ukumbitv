@@ -52,7 +52,7 @@
 				@foreach($payment_plans as $indexKey => $payment_plan)
 	            <div class="price-item">
 
-	                <div class="price-title">{{$payment_plan->name}} {{$payment_plan->id}}</div>
+	                <div class="price-title">{{$payment_plan->name}}</div>
 	                <div class="count-text">{{$payment_plan->description}}</div>
 	                <ul class="includ-list">
 						@php($i=1)
@@ -78,28 +78,13 @@
 	            </div>
 					@endforeach
 	        </div>
+			  {{--<a href="#">Cancel payment plan</a>--}}
 	      </section>
 	    	<!-- packages selection section -->
 
 
 
 	      <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

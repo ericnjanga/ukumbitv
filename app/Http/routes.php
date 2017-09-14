@@ -529,7 +529,7 @@ Route::group([], function(){
 
     Route::get('confirm-email', 'Auth\AuthController@confirmEmailMsg')->name('user.confirm-email');
     Route::get('resend-email/{id}', 'Auth\AuthController@resendVerifyEmail')->name('user.resend-confirm-email');
-    Route::get('welcome-email', 'UserController@welcomeEmail');
+    Route::get('welcome-email/{id?}', 'Auth\AuthController@welcomeEmail')->name('user.welcome-email');
 
     
     Route::get('payment', 'UserController@payment')->name('user.userpayment');

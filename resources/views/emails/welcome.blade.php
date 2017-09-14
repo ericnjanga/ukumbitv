@@ -202,7 +202,7 @@
 																				<td align="left" class="textContent">
 																					<!-- CONTENT // -->
 																					<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;">  
-																						{{trans('messages.welcome_email_cantread1')}}, <a href="https://ukumbitv.com/welcome-email" target="_blank" style="text-decoration:none;border-bottom:1px solid #828282;color:#828282;"><span style="color:#828282;">{{trans('messages.welcome_email_cantread2')}}</span></a>.
+																						{{trans('messages.welcome_email_cantread1')}}, <a href="{{route('user.welcome-email', $email_data->id)}}" target="_blank" style="text-decoration:none;border-bottom:1px solid #828282;color:#828282;"><span style="color:#828282;">{{trans('messages.welcome_email_cantread2')}}</span></a>.
 																					</div>
 																				</td>
 																			</tr>
