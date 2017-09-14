@@ -6,21 +6,21 @@
     	<a class="link-inner-redirect" name="section1"></a> 
     	<div class="container">
       	<div class="list-inline txt-presentation3">
-      		<section>
+      		<section class="section-block">
       			<h2 class="title">
       				<span class="txt">{{trans('messages.home_midsec_title1')}}</span>
       				<span class="icon icon-video"></span>
       			</h2> 
             <p>{{trans('messages.home_midsec_blurb1')}}</p>
       		</section>
-      		<section> 
+      		<section class="section-block"> 
             <h2 class="title">
             	<span class="txt">{{trans('messages.home_midsec_title2')}}</span>
             	<span class="icon icon-monitor-tablet-and-smartohone"></span>
             </h2> 
             <p>{{trans('messages.home_midsec_blurb2')}}</p>
       		</section>
-      		<section> 
+      		<section class="section-block"> 
             <h2 class="title">
             	<span class="txt">{{trans('messages.home_midsec_title3')}}</span>
             	<span class="icon icon-computer-screen"></span>
