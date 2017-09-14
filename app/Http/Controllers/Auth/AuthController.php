@@ -200,8 +200,15 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
         return view('r.user.auth.confirm-msg')->with('user', $user);
 
+    }
 
-
+    public function welcomeEmail($id=null)
+    {
+        if(Auth::check()) {
+            return view('emails.welcome')->with('email_data', Auth::user());
+        }
+        $user = User::find($id);
+        return view('emails.welcome')->with('email_data', $user);
     }
 
 }

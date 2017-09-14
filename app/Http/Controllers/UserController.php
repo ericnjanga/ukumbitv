@@ -1472,10 +1472,6 @@ class UserController extends Controller {
 
     }
 
-    public function welcomeEmail()
-    {
-        return view('emails.welcome')->with('email_data', Auth::user());
-    }
 
     public function successPayPalPay($id)
     {
