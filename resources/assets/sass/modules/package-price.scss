@@ -14,6 +14,19 @@
 			margin-bottom: 20px!important;
 		}
 	}
+
+
+
+	.price-item.active {
+		&:after {
+			border: 10px solid #000;
+		}
+		&:hover{
+			&:after {
+				border: 10px solid #000;
+			}
+		}
+	}
   .price-item { 
   	width: 100%;
 		max-width: 350px; 
@@ -27,6 +40,10 @@
 			left:0;
 			top: 0;
     }
+
+
+
+
     .price-title{
       color: #ffffff;
       font-size: 20px;

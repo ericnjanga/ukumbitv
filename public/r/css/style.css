@@ -2440,6 +2440,10 @@ form.xl-inputs input, form.xl-inputs select {
       align-items: center; }
       .price-block .price-item {
         margin-bottom: 20px !important; } }
+  .price-block .price-item.active:after {
+    border: 10px solid #000; }
+  .price-block .price-item.active:hover:after {
+    border: 10px solid #000; }
   .price-block .price-item {
     width: 100%;
     max-width: 350px;
