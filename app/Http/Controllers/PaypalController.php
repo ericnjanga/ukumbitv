@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use PayPal\Api\AgreementStateDescriptor;
 use PayPal\Rest\ApiContext;
 use PayPal\Auth\OAuthTokenCredential;
 
@@ -121,5 +122,32 @@ class PaypalController extends Controller
         } catch (\PayPal\Exception\PayPalConnectionException $ex) {
             return redirect()->action('UserController@packages')->with('flash_error' , 'You have either cancelled the request or your session has expired');
         }
+    }
+
+    public function cancelPaymentPlan()
+    {
+        //Create an Agreement State Descriptor, explaining the reason to suspend.
+        $agreementStateDescriptor = new AgreementStateDescriptor();
+        $agreementStateDescriptor->setNote("Suspending the agreement");
+        try {
+            $agree = Agreement::get(Auth::user()->paypal_agreement_id, $this->apiContext);
+
+            $agree->suspend($agreementStateDescriptor, $this->apiContext);
+            // Lets get the updated Agreement Object
+            $agreement = Agreement::get($agree->getId(), $this->apiContext);
+            $user = Auth::user();
+            $user->role = $agreement->getState();
+            $user->paypal_agreement_id = $agreement->getId();
+            $user->save();
+
+            $userPaymentPlan = UserPaymentPlan::where('user_id', Auth::id())->first();
+            $userPaymentPlan->payment_plan_id = 2;
+            $userPaymentPlan->save();
+        } catch (Exception $ex) {
+            // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
+            return redirect()->action('UserController@packages')->with('flash_error' , 'Something went wrong, try again later');
+        }
+
+        return redirect()->action('UserController@packages')->with('flash_success' , 'Payment plan was successful canceled');
     }
 }

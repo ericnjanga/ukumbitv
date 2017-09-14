@@ -144,10 +144,7 @@ Route::get('/test' , 'ApplicationController@test');
 Route::get('/help-center/{id?}','ApplicationController@helpCenter')->name('user.help-center');
 Route::get('/advertising','ApplicationController@advertising')->name('user.advertising');
 Route::get('/package', 'UserController@packages')->name('user.package');
-//Route::get('create_paypal_plan', 'PaypalPlanController@create_plan');
-Route::get('/subscribe/paypal/plan/{id}', 'PaypalController@paypalRedirect')->name('paypal.redirect');
-Route::get('/subscribe/paypal/return', 'PaypalController@paypalReturn')->name('paypal.return');
-Route::get('/getplanlist', 'PaypalPlanController@getPlansList')->name('paypal.list');
+
 
 // Video upload 
 
@@ -530,6 +527,12 @@ Route::group([], function(){
     Route::get('confirm-email', 'Auth\AuthController@confirmEmailMsg')->name('user.confirm-email');
     Route::get('resend-email/{id}', 'Auth\AuthController@resendVerifyEmail')->name('user.resend-confirm-email');
     Route::get('welcome-email/{id?}', 'Auth\AuthController@welcomeEmail')->name('user.welcome-email');
+
+    //Route::get('create_paypal_plan', 'PaypalPlanController@create_plan');
+    Route::get('/subscribe/paypal/plan/{id}', 'PaypalController@paypalRedirect')->name('paypal.redirect');
+    Route::get('/subscribe/paypal/return', 'PaypalController@paypalReturn')->name('paypal.return');
+    Route::get('/getplanlist', 'PaypalPlanController@getPlansList')->name('paypal.list');
+    Route::get('/cancel-payment-plan', 'PaypalController@cancelPaymentPlan')->name('user.cancel-payment-plan');
 
     
     Route::get('payment', 'UserController@payment')->name('user.userpayment');

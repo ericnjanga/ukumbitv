@@ -78,7 +78,7 @@
 	            </div>
 					@endforeach
 	        </div>
-			  {{--<a href="#">Cancel payment plan</a>--}}
+			  <a href="{{route('user.cancel-payment-plan')}}">Cancel payment plan</a>
 	      </section>
 	    	<!-- packages selection section -->
 
