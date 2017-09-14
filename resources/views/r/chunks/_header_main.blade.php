@@ -25,7 +25,7 @@
 
 
 
-  <div class="container landing-header__content">    
+  <article class="container landing-header__content">    
     <div class="row">
       <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xl-5 offset-xl-1">
         <div class="title-white">{{l("Enjoy the finest African productions")}}</div>
@@ -35,7 +35,7 @@
         </div>
       </div> 
     </div>
-  </div> 
+  </article> 
 
 
 
