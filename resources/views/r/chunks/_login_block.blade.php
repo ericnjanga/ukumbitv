@@ -2,7 +2,10 @@
 	<span class="nav-package-info">
     <span class="login-text">@if(isset($videoCount)){{$videoCount}} videos left @else Unlimited videos @endif</span>
     <span id="link-update-package" data-route="{{route('user.package')}}">
-    	upgrade package
+		@if(Auth::user()->paymentPlans[0]->flag != 3)
+    	  upgrade package
+        @else
+        @endif
     </span> 
 	</span>  
 	 
