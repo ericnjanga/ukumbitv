@@ -49,34 +49,38 @@
 	                {{--<div class="price"><span>$</span> 5</div>--}}
 	                {{--<a href="" class="btn btn-block butn-white-trans">Select this</a>--}}
 	            {{--</div>--}}
-				@foreach($payment_plans as $indexKey => $payment_plan)
-	            <div class="price-item">
-
-	                <div class="price-title">{{$payment_plan->name}} {{$payment_plan->id}}</div>
-	                <div class="count-text">{{$payment_plan->description}}</div>
-	                <ul class="includ-list">
-						@php($i=1)
-							@while(isset($payment_plan->{'product'.$i}))
-								<li>{!! $payment_plan->{'product'.$i} !!}</li>
-								@php($i++)
+						@foreach($payment_plans as $indexKey => $payment_plan)
+							<!-- activate current selected package if possible -->
+							@if($userPayPlan->id == $payment_plan->id)
+								<section class="price-item active"> 
+							@else
+								<section class="price-item"> 
+							@endif
+							<!-- activate current selected package if possible -->
+	            <section class="price-item"> 
+                <div class="price-title">{{$payment_plan->name}} {{$payment_plan->id}}</div>
+                <div class="count-text">{{$payment_plan->description}}</div>
+                <ul class="includ-list">
+									@php($i=1)
+									@while(isset($payment_plan->{'product'.$i}))
+										<li>{!! $payment_plan->{'product'.$i} !!}</li>
+										@php($i++)
 									@endwhile
-	                </ul>
-					@if($payment_plan->price == 0)
-						<div class="price">FREE</div>
-					@else
-					<div class="price"><span>$</span> {{$payment_plan->price}}</div>
-					@endif
-					@if($userPayPlan->id == $payment_plan->id)
-						<p>CURRENT PLAN</p>
-					@endif
-	                <button id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="btn btn-block butn-white-trans select-plan-btn" onclick="selectPlan(this)">Select this</button>
-					@if($indexKey == 2)
+			          </ul>
+								@if($payment_plan->price == 0)
+									<div class="price">FREE</div>
+								@else
+									<div class="price"><span>$</span> {{$payment_plan->price}}</div>
+								@endif
+								
+				        <button id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="btn btn-block butn-white-trans select-plan-btn" onclick="selectPlan(this)">Select this</button>
+								@if($indexKey == 2)
 	                <div class="best-text">
 	                    <div>Best Choice</div>
 	                </div>
-					@endif
-	            </div>
-					@endforeach
+								@endif
+	            </section>
+						@endforeach
 	        </div>
 	      </section>
 	    	<!-- packages selection section -->
