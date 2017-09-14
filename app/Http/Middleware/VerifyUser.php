@@ -23,7 +23,7 @@ class VerifyUser
     //List of paths allowed to access while user not logged in
     private $allowed_paths = ['login', 'register', 'social', 'advertising', 'callback/facebook', 'password/reset',
         'admin', 'email', 'setlocale', 'setlocale/fr', 'setlocale/en', 'about-us',
-        'terms-of-use', 'privacy-statement', 'jobs', 'help-center', 'contact', 'video', 'test', '/', 'confirm-email'];
+        'terms-of-use', 'privacy-statement', 'jobs', 'help-center', 'contact', 'video', 'test', '/', 'confirm-email', 'welcome-email'];
     /**
      * Handle an incoming request.
      *
@@ -50,7 +50,7 @@ class VerifyUser
             }
         } else {
             //Allowed paths while not logged in
-            if (!$request->is('email/*') && !$request->is('video/*') && !$request->is('admin/*') && !$request->is('social/*') && !$request->is('jobs/*') && !$request->is('resend-email/*') && !$request->is('help-center/*') && !in_array($request->path(), $this->allowed_paths)) {
+            if (!$request->is('email/*') && !$request->is('welcome-email/*') && !$request->is('video/*') && !$request->is('admin/*') && !$request->is('social/*') && !$request->is('jobs/*') && !$request->is('resend-email/*') && !$request->is('help-center/*') && !in_array($request->path(), $this->allowed_paths)) {
                 return redirect(route('user.login.form'));
             }
         }

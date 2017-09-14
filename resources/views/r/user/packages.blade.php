@@ -49,22 +49,22 @@
 	                {{--<div class="price"><span>$</span> 5</div>--}}
 	                {{--<a href="" class="btn btn-block butn-white-trans">Select this</a>--}}
 	            {{--</div>--}}
+
 						@foreach($payment_plans as $indexKey => $payment_plan)
 							<!-- activate current selected package if possible -->
-							@if($userPayPlan->id == $payment_plan->id)
-								<section class="price-item active"> 
-							@else
-								<section class="price-item"> 
-							@endif
+						@if($userPayPlan->id == $payment_plan->id)
+							<section class="price-item active"> 
+						@else
+							<section class="price-item"> 
+						@endif
 							<!-- activate current selected package if possible -->
-	            <section class="price-item"> 
                 <div class="price-title">{{$payment_plan->name}} {{$payment_plan->id}}</div>
                 <div class="count-text">{{$payment_plan->description}}</div>
                 <ul class="includ-list">
 									@php($i=1)
 									@while(isset($payment_plan->{'product'.$i}))
 										<li>{!! $payment_plan->{'product'.$i} !!}</li>
-										@php($i++)
+										@php($i++) 
 									@endwhile
 			          </ul>
 								@if($payment_plan->price == 0)
@@ -82,28 +82,13 @@
 	            </section>
 						@endforeach
 	        </div>
+			  <a href="{{route('user.cancel-payment-plan')}}">Cancel payment plan</a>
 	      </section>
 	    	<!-- packages selection section -->
 
 
 
 	      <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
