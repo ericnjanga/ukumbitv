@@ -54,6 +54,9 @@
 							<!-- activate current selected package if possible -->
 						@if($userPayPlan->id == $payment_plan->id)
 							<section class="price-item active"> 
+								<div class="alert alert-info" role="alert">
+									Your current Plan
+								</div>
 						@else
 							<section class="price-item"> 
 						@endif
