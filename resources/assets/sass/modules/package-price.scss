@@ -27,6 +27,17 @@
 			}
 		}
 	}
+
+
+	.price-item { 
+		&:hover{
+			&:after {
+				border: 10px solid #000;
+			}
+		}
+	}
+
+
   .price-item { 
   	width: 100%;
 		max-width: 350px; 

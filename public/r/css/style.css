@@ -2444,6 +2444,8 @@ form.xl-inputs input, form.xl-inputs select {
     border: 10px solid #000; }
   .price-block .price-item.active:hover:after {
     border: 10px solid #000; }
+  .price-block .price-item:hover:after {
+    border: 10px solid #000; }
   .price-block .price-item {
     width: 100%;
     max-width: 350px;
