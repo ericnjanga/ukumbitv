@@ -1,4 +1,4 @@
-<div id="GP-menu" class="GP-menu">
+<nav id="GP-menu" class="GP-menu">
 	<div class="show-entries-hover hidden">
 		<span class="hover-arrow"></span>
 	</div>
@@ -16,4 +16,4 @@
 			</a> 
 		</li>  
 	</ul>
-</div>
+</nav>

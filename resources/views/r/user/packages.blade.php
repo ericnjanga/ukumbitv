@@ -51,7 +51,8 @@
 	            {{--</div>--}}
 				@foreach($payment_plans as $indexKey => $payment_plan)
 	            <div class="price-item">
-	                <div class="price-title">{{$payment_plan->name}}</div>
+
+	                <div class="price-title">{{$payment_plan->name}} {{$payment_plan->id}}</div>
 	                <div class="count-text">{{$payment_plan->description}}</div>
 	                <ul class="includ-list">
 						@php($i=1)
@@ -65,12 +66,15 @@
 					@else
 					<div class="price"><span>$</span> {{$payment_plan->price}}</div>
 					@endif
+					@if($userPayPlan->id == $payment_plan->id)
+						<p>CURRENT PLAN</p>
+					@endif
 	                <button id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="btn btn-block butn-white-trans select-plan-btn" onclick="selectPlan(this)">Select this</button>
 					@if($indexKey == 2)
 	                <div class="best-text">
 	                    <div>Best Choice</div>
 	                </div>
-						@endif
+					@endif
 	            </div>
 					@endforeach
 	        </div>
@@ -242,8 +246,8 @@
 					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo"> 
 				        <div class="panel-body paypal-block"> 
 		              <p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
-		              <button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>
 		              {{--<button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>--}}
+		              <button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>
 {{--		              <a href="{{ url('subscribe/paypal') }}" class="btn btn-primary btn-block btn-lg btn-submit">subscribe Pay Pal</a>--}}
 
 			          </div><!-- panel-body paypal-block -->  
@@ -286,8 +290,8 @@
 
             $('#btn-checkout-paypal').addClass('disabled');
 
-//            window.location = "subscribe/paypal/plan/"+selectedPlan;
-            window.location = "select-payment-plan/"+selectedPlan;
+            window.location = "subscribe/paypal/plan/"+selectedPlan;
+//            window.location = "select-payment-plan/"+selectedPlan;
 
 		}
 

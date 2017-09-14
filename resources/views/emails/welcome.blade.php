@@ -190,7 +190,7 @@
 																			<tr>
 																				<td align="left" class="textContent">
 																					<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;">
-																						The introduction of your message preview goes here. Try to make it short.
+																						{{trans('messages.welcome_email_intromsg')}}
 																					</div>
 																				</td>
 																			</tr>
@@ -271,9 +271,7 @@
 																<tr>
 																	<td align="center" valign="top" class="textContent">
 
-
-																		<img src="https://ukumbitv.com/r/img/logo.png" alt="" style="display:block; margin:0 0 30px 0; max-width:130px;">
-
+																		<img src="{{asset('r/img/logo.png')}}" width="210" class="flexibleImage" style="display:block; margin:0 0 30px 0; max-width:130px;" alt="UkumbiTV" title="UkumbiTV" /> 
 
 																		<h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;">{{trans('messages.welcome_email_section1_h1')}}</h1>
 																		<br />  
@@ -321,7 +319,8 @@
 															<table border="0" cellpadding="0" cellspacing="0" width="50%" class="emailButton" style="background-color: #333333;">
 																<tr>
 																	<td align="center" valign="middle" class="buttonContent" style="padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;">
-																		<a style="color:#eeb33d;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="https://ukumbitv.com" target="_blank"> {{trans('messages.welcome_email_cta1')}} </a>
+																		<a style="color:#eeb33d;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="{{route('email.verify' , ['id' => $email_data->id , 'verification_code' => $email_data->verification_code])}}" target="_blank"> {{trans('messages.welcome_email_cta1')}} </a>
+
 																	</td>
 																</tr>
 															</table>
@@ -409,7 +408,7 @@
 																		<table border="0" cellpadding="0" cellspacing="0" width="210" style="max-width:100%;">
 																			<tr>
 																				<td align="left" class="textContent">
-																					<a href="https://ukumbitv.com/video/20170814024810" target="_blank"><img src="https://ukumbitv.com/images/20170814024810/small_image21505268654Raging Hearts.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /></a>
+																					<a href="https://ukumbitv.com/video/20170814024810" target="_blank"><img src="https://ukumbitv.com/images/20170814024810/small_image21505309525raging-hearts.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /></a>
 																					
 
 																					<!-- <img src="http://www.charlesmudy.com/respmail/respmail-full.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /> -->
@@ -428,9 +427,8 @@
 																		<table class="flexibleContainerBoxNext" border="0" cellpadding="0" cellspacing="0" width="210" style="max-width:100%;">
 																			<tr>
 																				<td align="left" class="textContent">
-																					<a href="https://ukumbitv.com/video/20170802124753" target="_blank"><img src="https://ukumbitv.com/images/20170802124753/small_image21505222838Baobab-portrait.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /></a>
-																					
-																					<!-- <img src="http://www.charlesmudy.com/respmail/respmail-full.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /> -->
+																					<a href="https://ukumbitv.com/video/20170802124753" target="_blank"> 
+																						<img src="https://ukumbitv.com/images/20170802124753/small_image21505222838Baobab-portrait.jpg" width="210" class="flexibleImage" style="max-width:100%;" alt="Text" title="Text" /></a> 
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:10px;margin-bottom:3px;text-align:left;">Baobab</h3>
 																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Deux jeunes hommes donc KULU et AWOUZOA, vont en aventure dans le village voisin pour demander en ...
 
@@ -646,8 +644,7 @@
 																	<td valign="top" bgcolor="#E1E1E1">
 
 																		<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;">
-																			<div>{{trans('messages.welcome_email_copyright')}} &#169; <?php echo date("Y"); ?> <a href="https://www.ukumbitv.com" target="_blank" style="text-decoration:none;color:#828282;"><span style="color:#828282;">UkumbiTV</span></a>. {!!trans('messages.welcome_email_all_rights')!!}.</div>
-																			<div>{{trans('messages.welcome_email_unsubscribe1')}} <a href="#" target="_blank" style="text-decoration:none;color:#828282;"><span style="color:#828282;">{{trans('messages.welcome_email_unsubscribe2')}}</span></a>.</div>
+																			<div>{{trans('messages.welcome_email_copyright')}} &#169; <?php echo date("Y"); ?> <a href="https://www.ukumbitv.com" target="_blank" style="text-decoration:none;color:#828282;"><span style="color:#828282;">UkumbiTV</span></a>. {!!trans('messages.welcome_email_all_rights')!!}</div>
 																		</div>
 
 																	</td>

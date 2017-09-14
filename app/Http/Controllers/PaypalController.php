@@ -7,6 +7,7 @@ use App\UserPaymentPlan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use PayPal\Rest\ApiContext;
 use PayPal\Auth\OAuthTokenCredential;
 
@@ -46,6 +47,7 @@ class PaypalController extends Controller
     public function paypalRedirect($id){
 
         $paymentPlan = PaymentPlan::find($id);
+
         $desc = $paymentPlan->name." Subscription";
 
         // Create new agreement
@@ -57,7 +59,9 @@ class PaypalController extends Controller
         // Set plan id
         $plan = new Plan();
         $plan->setId($paymentPlan->paypal_plan_id);
+
         $agreement->setPlan($plan);
+
 
         // Add payer type
         $payer = new Payer();
@@ -68,10 +72,12 @@ class PaypalController extends Controller
             // Create agreement
             $agreement = $agreement->create($this->apiContext);
 
+
             // Extract approval URL to redirect user
             $approvalUrl = $agreement->getApprovalLink();
 
-            return redirect($approvalUrl);
+
+            return redirect($approvalUrl)->with('planid', $plan->getId());
         } catch (PayPal\Exception\PayPalConnectionException $ex) {
             echo $ex->getCode();
             echo $ex->getData();
@@ -85,11 +91,13 @@ class PaypalController extends Controller
     public function paypalReturn(Request $request){
 
         $token = $request->token;
+
         $agreement = new \PayPal\Api\Agreement();
 
         try {
             // Execute agreement
             $result = $agreement->execute($token, $this->apiContext);
+
 
             $user = Auth::user();
             $user->role = 'subscriber';
@@ -99,18 +107,19 @@ class PaypalController extends Controller
             }
             $user->save();
 
-//            $expiry_date = Carbon::now()->addMonth();
-//
-//            $userPaymentPlan = UserPaymentPlan::where('user_id', Auth::id())->first();
-//            $userPaymentPlan->payment_plan_id = $agreement;
-//            $userPaymentPlan->expiry_date = $expiry_date;
-//            $userPaymentPlan->save();
+            $expiry_date = Carbon::now()->addMonth();
+            $paymentPlanId = PaymentPlan::where('paypal_plan_id', Session::get('planid'))->first();
+
+            $userPaymentPlan = UserPaymentPlan::where('user_id', Auth::id())->first();
+            $userPaymentPlan->payment_plan_id = $paymentPlanId->id;
+            $userPaymentPlan->expiry_date = $expiry_date;
+            $userPaymentPlan->save();
 
 //            echo 'New Subscriber Created and Billed';
             return redirect()->action('UserController@packages')->with('flash_success' , 'Payment plan was successful updated');
 
         } catch (\PayPal\Exception\PayPalConnectionException $ex) {
-            echo 'You have either cancelled the request or your session has expired';
+            return redirect()->action('UserController@packages')->with('flash_error' , 'You have either cancelled the request or your session has expired');
         }
     }
 }

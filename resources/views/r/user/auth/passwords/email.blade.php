@@ -1,26 +1,31 @@
 @extends('r.layouts.simple')
 @section('content')
-    <div class="resetpas-wrap">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
-                    <div class="title-page">Reset password</div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
-                    <div class="notice-block">
-                        <div class="text-add">We will send new password on your e-mail</div>
-                        <form  action="" method="">
-                            <div class="input-wrap">
-                                <label>E-mail <span>*</span></label>
-                                <input type="email" name="email" required>
-                            </div>
-                            <button type="submit" class="butn btn-cta1b btn-lg">Reset password</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+ 
+  <div class="page-auth" ng-app="validationApp" ng-controller="mainController">
+    <h1 class="text-center">Reset password</h1>
+
+    <p class="text-center">We will send new password on your e-mail</p>
+    <form name="recoverForm" action="" method="">
+
+
+      <div class="form-group" ng-class="{ 'has-error' : recoverForm.email.$invalid && !recoverForm.email.$pristine }">
+        <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
+        <input class="form-control" type="email" name="email" ng-model="user.email" required>
+        <div ng-cloak ng-show="recoverForm.email.$invalid && !recoverForm.email.$pristine" class="help-block">Enter a valid email.</div> 
+      </div>
+
+      <button type="submit" class="btn btn-cta1b btn-block btn-lg" ng-disabled="recoverForm.$invalid">Reset password</button>
+    </form>
+
+    <div>
+        <a href="{{route('user.login.form')}}" class="sign-butn">{{trans('messages.auth_signin')}}</a> | 
+        <a href="{{route('user.register.form')}}" class="sign-butn">{{trans('messages.auth_signup')}}</a>
     </div>
+	</div>
+
+
+    
+        
+    
 @endsection
