@@ -60,7 +60,7 @@
 	                  <option>Leave a comment</option>
 	                  <option>Leave a Suggestion</option>
 	                  <option>Having an issue</option>
-	                  <option>Having a complain</option>
+	                  <option>Having a complaint</option>
 	                  <option>Other</option>
 	                </select>
 	              </div>

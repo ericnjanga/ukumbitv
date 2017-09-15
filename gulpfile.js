@@ -16,10 +16,14 @@ config.css.autoprefix.options.browsers =  ['last 15 versions'] ;
 
 
 elixir(function(mix) {
+	//Compile all "scss" files into a "style.css" file
 	mix.sass([
         'resources/assets/sass/style.scss' 
     ], 'public/r/css/style.css');
 
-    // mix.sass(['style.scss', 'media.scss'],'resources/assets/css/scss.css').less(['menu.less'], 'resources/assets/css/less.css')
-    //     .styles(['/resources/assets/css/scss.css', 'resources/assets/css/less.css'],'public/r/css/style.css');
+    
+	//Compile all "scss" files into a "style.css" file
+	mix.scripts(['main.js', 'forms-validation.js'], 'public/js/app.js')
+
+    
 });

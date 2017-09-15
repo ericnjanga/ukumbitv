@@ -24,13 +24,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="{{asset('r/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
-    <!-- <link rel="stylesheet" href="{{asset('packages/sweetalert/sweetalert.css')}}">  -->
+    <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"> 
-
-    <link rel="stylesheet" href="{{asset('r/css/passfield.min.css')}}">
-		
-		
+		<!--<link rel="stylesheet" href="{{asset('r/css/passfield.min.css')}}">-->
 		<style>
 		[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
 		    display: none !important;
@@ -66,37 +62,30 @@
     @yield('layout')
 
 </body>
-  <script src="{{asset('r/js/libs/jquery.min.js')}}"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="{{asset('r/js/libs/passfield.min.js')}}"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script> 
-<script src="https://js.stripe.com/v2/"></script>
+	<!-- CDN libraries -->
+	<!-- CDN libraries -->
+	<!-- CDN libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <!-- Payment platform (stripe) -->
+	<script src="https://js.stripe.com/v2/"></script>
 	<!-- autocomplete librairy -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-  <!-- <script src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script> -->
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
+  <!-- Alerts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> 
 
-  <!--
-  ... Will reactivate plugin another time ...
-  <script src="{{asset('r/js/libs/Google-play-menu.js')}}"></script>
--->
-  <script src="{{asset('r/js/libs/jQuery.YoutubeBackground.js')}}"></script>
-
+	<!-- Local libraries -->
+	<!-- Local libraries -->
+	<!-- Local libraries --> 
+  <script src="{{asset('r/js/libs/jQuery.YoutubeBackground.js')}}"></script> 
   <script src="{{asset('r/js/libs/anchor-smooth-scroll.js')}}"></script>
-		
-		<!-- main script -->
-  <script src="{{asset('r/js/main.js')}}"></script>
-		
-		<!-- Forms Validation -->
-  <script src="{{asset('r/js/forms-validation.js')}}"></script>
 
-
-
-
+	<!-- Main JS file -->
+	<!-- Main JS file -->
+	<!-- Main JS file --> 
+	<script src="{{asset('js/app.js')}}"></script>  
 
 @yield('scripts')
 </html>
