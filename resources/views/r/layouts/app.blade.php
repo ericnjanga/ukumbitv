@@ -74,13 +74,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
   <!-- Alerts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> 
-
-	<!-- Local libraries -->
-	<!-- Local libraries -->
-	<!-- Local libraries --> 
-  <script src="{{asset('r/js/libs/jQuery.YoutubeBackground.js')}}"></script> 
-  <script src="{{asset('r/js/libs/anchor-smooth-scroll.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>  
 
 	<!-- Main JS file -->
 	<!-- Main JS file -->

@@ -22,8 +22,19 @@ elixir(function(mix) {
     ], 'public/r/css/style.css');
 
     
-	//Compile all "scss" files into a "style.css" file
-	mix.scripts(['main.js', 'forms-validation.js'], 'public/js/app.js')
+	//Concatenating local librairies and main js files
+	mix.scripts([
+		//Local libraries
+		'/libs/jQuery.YoutubeBackground.js', 
+		'/libs/anchor-smooth-scroll.js', 
+		//main js files
+		'main.js', 
+		'forms-validation.js'], 
+	'public/js/app.js')
 
-    
+
 });
+
+
+
+ 

@@ -1,4 +1,7 @@
+
 /*
+ **************************[YoutubeBackground.js]**************************
+ **************************[YoutubeBackground.js]**************************
  * YoutubeBackground - A wrapper for the Youtube API - Great for fullscreen background videos or just regular videos.
  *
  * Licensed under the MIT license:
