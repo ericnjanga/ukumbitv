@@ -63,7 +63,8 @@
 									<div class="alert alert-info" role="alert">
 										<h2 class="alert-title">{{trans('messages.packages_yourcurrplan')}}</h2>
 										@if($payment_plan->price > 0)
-											<a class="btn-cancel" @if($checkStripe) href="{{route('stripe.cancel-payment-plan')}}" @elseif($checkPayPal) href="{{route('paypal.cancel-payment-plan')}}" @endif>&raquo;{{trans('messages.packages_cancelsubs')}}</a>
+											@if($checkStripe) <a class="btn-cancel" href="{{route('stripe.cancel-payment-plan')}}">{{trans('messages.packages_cancelsubs')}}</a> @elseif($checkPayPal)
+											<a class="btn-cancel" href="{{route('paypal.cancel-payment-plan')}}">{{trans('messages.packages_cancelsubs')}}</a> @endif
 										@endif
 									</div>
 									@else
@@ -71,7 +72,8 @@
 											<div class="alert alert-info" role="alert">
 												@if($payment_plan->price == 0)
 													<h2 class="alert-title">{{trans('messages.packages_returnguest')}}</h2>
-													<a class="btn-cancel" @if($checkStripe) href="{{route('stripe.cancel-payment-plan')}}" @elseif($checkPayPal) href="{{route('paypal.cancel-payment-plan')}}" @endif>&raquo;{{trans('messages.packages_cancelplan')}}</a>
+													@if($checkStripe) <a class="btn-cancel" href="{{route('stripe.cancel-payment-plan')}}">{{trans('messages.packages_cancelsubs')}}</a> @elseif($checkPayPal)
+														<a class="btn-cancel" href="{{route('paypal.cancel-payment-plan')}}">{{trans('messages.packages_cancelplan')}}</a> @endif
 												@else
 													<h2 class="alert-title">{{trans('messages.packages_nextplan')}}</h2>
 												@endif
