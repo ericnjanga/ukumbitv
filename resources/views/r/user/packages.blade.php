@@ -259,9 +259,12 @@
 	<script> 
 		var selectedPlan = '';
 
+			console.log('>>>>>>>>>1');
+
 		//Allow user to select the whole block, not just the button
 		//can only select inactive plans
 		$('body').on('click', '.price-item:not(.active)', function(){
+			console.log('>>>>>>>>>2');
 			selectPlan($(this));
 		});
 
