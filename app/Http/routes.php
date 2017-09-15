@@ -537,6 +537,7 @@ Route::group([], function(){
 
     //STRIPE ROUTES
     Route::post('stripe/create/card', 'StripeController@createUserCard')->name('stripe.create-card');
+
     Route::get('payment', 'UserController@payment')->name('user.userpayment');
     Route::get('getcustomer', 'StripeController@getCustomer')->name('stripe.getcustomer');
 

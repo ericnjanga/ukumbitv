@@ -59,7 +59,7 @@
 					@foreach($payment_plans as $indexKey => $payment_plan)
 						<!-- activate current selected package if possible -->
 							@if($userPayPlan->id == $payment_plan->id)
-								<section id="plan{{$payment_plan->id}}" class="price-item active">
+								<section id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="price-item active">
 									<div class="alert alert-info" role="alert">
 										<h2 class="alert-title">{{trans('messages.packages_yourcurrplan')}}</h2>
 										@if($payment_plan->price > 0)
@@ -80,7 +80,7 @@
 										@endif
 										<!-- activate current selected package if possible -->
 											<div class="price-title">
-												{{$payment_plan->name}} {{$payment_plan->id}}
+												{{$payment_plan->name}}
 												@if($payment_plan->price > 0)
 													<small>({{trans('messages.packages_monthlysubs')}})</small>
 												@endif
@@ -296,6 +296,14 @@
 
             $('.price-item.active').removeClass('active');
             $plan.addClass('active');
+
+            //if paymentplan is free disabled buttons
+            if(selectedPlan === 2) {
+                $('#btn-checkout-paypal, #update-pay-method-btn').prop('disabled', true);
+			} else {
+                $('#btn-checkout-paypal, #update-pay-method-btn').prop('disabled', false);
+			}
+
         }
 
 
@@ -351,6 +359,7 @@
 
                 // Insert the token ID into the form so it gets submitted to the server:
                 $form.append($('<input type="hidden" name="stripeToken">').val(token));
+                $form.append($('<input type="hidden" name="selectedPlan">').val(selectedPlan));
 
                 // Submit the form:
                 $form.get(0).submit();
