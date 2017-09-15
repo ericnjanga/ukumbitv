@@ -2427,6 +2427,43 @@ form .row {
 form.xl-inputs input, form.xl-inputs select {
   height: 45px; }
 
+.page-packages .price-item {
+  width: 100%;
+  max-width: 350px;
+  padding: 0 0 15px 0;
+  position: relative; }
+  .page-packages .price-item:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease; }
+
+.page-packages .price-item.active:after {
+  border: 10px solid #337ab7;
+  background: rgba(51, 122, 183, 0.5); }
+
+.page-packages .price-item.active:hover:after {
+  background: rgba(51, 122, 183, 0.5); }
+
+.page-packages .price-item.active .alert {
+  position: absolute;
+  /* transform: rotate(-30deg); */
+  top: 9px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  background: #337ab7;
+  margin: 0;
+  color: #fff;
+  z-index: 5;
+  border-width: 0; }
+
+.page-packages .price-item:hover:after {
+  border: 10px solid #337ab7; }
+
 .price-block {
   display: -ms-flexbox;
   display: flex;
@@ -2440,24 +2477,11 @@ form.xl-inputs input, form.xl-inputs select {
       align-items: center; }
       .price-block .price-item {
         margin-bottom: 20px !important; } }
-  .price-block .price-item.active:after {
-    border: 10px solid #337ab7; }
-  .price-block .price-item.active:hover:after {
-    border: 10px solid #337ab7; }
-  .price-block .price-item:hover:after {
-    border: 10px solid #337ab7; }
   .price-block .price-item {
     width: 100%;
     max-width: 350px;
     padding: 0 0 15px 0;
     position: relative; }
-    .price-block .price-item:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0; }
     .price-block .price-item .price-title {
       color: #ffffff;
       font-size: 20px;
