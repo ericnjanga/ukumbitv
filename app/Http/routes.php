@@ -492,8 +492,8 @@ Route::post('send-commentsend-comment', 'CommentController@sendComment')->name('
 Route::get('vimeo', 'UserController@vimeoVideo');
 Route::get('account', 'UserController@account')->name('user.account');
 
-Route::get('/stripe-pay', 'UserController@stripePay')->name('stripe-pay');
-Route::post('/stripe-pay-post', 'UserController@stripePayPost')->name('stripe-pay-post');
+//Route::get('/stripe-pay', 'UserController@stripePay')->name('stripe-pay');
+//Route::post('/stripe-pay-post', 'UserController@stripePayPost')->name('stripe-pay-post');
 
 //payment plans
 
@@ -528,14 +528,18 @@ Route::group([], function(){
     Route::get('resend-email/{id}', 'Auth\AuthController@resendVerifyEmail')->name('user.resend-confirm-email');
     Route::get('welcome-email/{id?}', 'Auth\AuthController@welcomeEmail')->name('user.welcome-email');
 
+    //PAYPAL ROUTES
     //Route::get('create_paypal_plan', 'PaypalPlanController@create_plan');
     Route::get('/subscribe/paypal/plan/{id}', 'PaypalController@paypalRedirect')->name('paypal.redirect');
     Route::get('/subscribe/paypal/return', 'PaypalController@paypalReturn')->name('paypal.return');
     Route::get('/getplanlist', 'PaypalPlanController@getPlansList')->name('paypal.list');
     Route::get('/cancel-payment-plan', 'PaypalController@cancelPaymentPlan')->name('user.cancel-payment-plan');
 
-    
+    //STRIPE ROUTES
+    Route::post('stripe/create/card', 'StripeController@createUserCard')->name('stripe.create-card');
+
     Route::get('payment', 'UserController@payment')->name('user.userpayment');
+    Route::get('getcustomer', 'StripeController@getCustomer')->name('stripe.getcustomer');
 
 
 

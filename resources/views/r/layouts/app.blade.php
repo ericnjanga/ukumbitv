@@ -77,7 +77,7 @@
   <!-- lightbox librairy
   <script src="{{asset('r/js/libs/jquery.colorbox-min.js')}}"></script>
 -->
-
+<script src="https://js.stripe.com/v2/"></script>
 	<!-- autocomplete librairy -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
 
