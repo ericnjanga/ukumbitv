@@ -127,7 +127,7 @@
 	      		<h1> 
 						<span class="badge">2</span>
 						Method of Payment</h1>
-	        	<p class="payment-text">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
+	        	<p>Your payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
 	      	</header>
 	        	
  
@@ -252,9 +252,9 @@
 								<span class="badge">3</span>
 								Paypal
 							</h2> 
-	        		<p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
+	        		<p>To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
 		              {{--<button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>--}}
-		              <button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>
+		              <button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal section-submit" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>
 {{--		              <a href="{{ url('subscribe/paypal') }}" class="btn btn-primary btn-block btn-lg btn-submit">subscribe Pay Pal</a>--}}
 	        	</div><!-- col-right -->
 	        </div><!-- row -->
