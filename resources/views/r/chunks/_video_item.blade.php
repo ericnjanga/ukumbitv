@@ -1,7 +1,7 @@
 <figure class="video-item">
   <a href="{{route('user.singleVideo',$video->watchid)}}">
     <div class="video-img">
-        <img src="{{$video->videoimage->imgPreview1}}" alt="">
+      <img data-src="{{$video->videoimage->imgPreview1}}" class="lazyload" alt="{{$video->title}}">
     </div>
     <figcaption class="video-title ellipsis-gradient">{{$video->title}}
     </figcaption>
@@ -11,3 +11,4 @@
     <div class="butn-like"><span class="icon icon-thumbs-up"></span><span class="likes-count">{{count($video->likes)}}</span></div>
   </div>
 </figure>
+ 

@@ -8,8 +8,7 @@
 			<div class="global-content">
 				@if(isset($grandVideo))
 	      <div class="hero">
-	      	<img src="{{ $grandVideo->videoimage->imgHero }}" alt="{{ $grandVideo->title }}">
-	      	<!-- <p>{{ $grandVideo }}</p> -->
+	      	<img data-src="{{ $grandVideo->videoimage->imgHero }}" class="lazyload" alt="{{ $grandVideo->title }}"> 
 	      	<ul class="fast-links list-inline">
 	      		<li>
 	      			<a href="{{route('user.singleVideo', $grandVideo->watchid)}}" class="btn btn-block btn-cta1b">
