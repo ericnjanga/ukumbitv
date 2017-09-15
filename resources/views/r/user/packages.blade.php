@@ -77,6 +77,7 @@
 									<div class="price">FREE</div>
 								@else
 									<div class="price"><span>$</span> {{$payment_plan->price}}</div>
+									<a class="btn btn-default" href="{{route('user.cancel-payment-plan')}}">Cancel payment plan</a>
 								@endif
 								
 				        <!-- <button id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="btn btn-block butn-white-trans select-plan-btn" onclick="selectPlan(this)">Select this</button> -->
@@ -88,7 +89,7 @@
 	            </section>
 						@endforeach
 	        </div>
-			  <a href="{{route('user.cancel-payment-plan')}}">Cancel payment plan</a>
+			  
 	      </section>
 	    	<!-- packages selection section -->
 
@@ -257,14 +258,11 @@
 
 @section('scripts')
 	<script> 
-		var selectedPlan = '';
-
-			console.log('>>>>>>>>>1');
+		var selectedPlan = ''; 
 
 		//Allow user to select the whole block, not just the button
 		//can only select inactive plans
-		$('body').on('click', '.price-item:not(.active)', function(){
-			console.log('>>>>>>>>>2');
+		$('body').on('click', '.price-item:not(.active)', function(){ 
 			selectPlan($(this));
 		});
 
@@ -275,14 +273,7 @@
       selectedPlan = $plan.data('plan-id');
 
       $('.price-item.active').removeClass('active');
-      $plan.addClass('active');
-      // $( ".select-plan-btn" ).each(function() {
-      //   if (! $(this).hasClass('butn-white-trans')) {
-      //       $(this).addClass('butn-white-trans');
-      //   } else if ($(this).data('plan-id') === selectedPlan) {
-      //       $(this).removeClass('butn-white-trans');
-      //   }
-      // }); 
+      $plan.addClass('active'); 
     }
 
 
