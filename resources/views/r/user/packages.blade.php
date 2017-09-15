@@ -10,6 +10,7 @@
 	        <h1>
 						<span class="badge">1</span>
 	        	{{trans('messages.home_plansec_title')}}</h1>
+	        <p>Start by picking the right package for you. If you select a monthly subscription plan then select a payment method (</p>
 			  @if(Session::has('flash_success'))
 				  <div class="alert alert-success"  >
 					  <button type="button" class="close" data-dismiss="alert">×</button>
@@ -59,17 +60,26 @@
 									<div class="alert alert-info" role="alert">
 										<h2 class="alert-title">Your current Plan</h2> 
 										@if($payment_plan->price > 0)
-											<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;Cancel plan</a>
+											<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;Cancel Subscription</a>
 										@endif
 									</div>
 							@else
 								<section id="plan{{$payment_plan->id}}" class="price-item" data-plan-id="{{$payment_plan->id}}"> 
 									<div class="alert alert-info" role="alert">
-										<h2 class="alert-title">Your next Plan</h2>
+										@if($payment_plan->price == 0)
+											<h2 class="alert-title">Return to Guest Plan</h2>
+											<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;Cancel current plan</a>
+										@else
+											<h2 class="alert-title">Your next Plan</h2>
+										@endif
+										
 									</div>
 							@endif
 							<!-- activate current selected package if possible -->
-                <div class="price-title">{{$payment_plan->name}} {{$payment_plan->id}}</div>
+                <div class="price-title">
+                	{{$payment_plan->name}} {{$payment_plan->id}}
+									<small>(monthly subscription)</small>
+                </div>
                 <div class="count-text">{{$payment_plan->description}}</div>
                 <ul class="includ-list">
 									@php($i=1)
@@ -110,7 +120,7 @@
 	      <section class="section-payment">
 	        <h1> 
 						<span class="badge">2</span>
-						Payment information</h1>
+						Method of Payment</h1>
 	        	<p class="payment-text" style="max-width: 500px; margin-bottom: 30px;">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
 
 
@@ -246,7 +256,7 @@
 
 
 
-					
+
 	      </section> <!-- section-payment --> 
 	    </div><!-- "global-content -->
 	  </div><!-- global-display -->

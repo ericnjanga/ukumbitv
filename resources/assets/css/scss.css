@@ -2514,6 +2514,10 @@ form.xl-inputs input, form.xl-inputs select {
       line-height: 40px;
       background-color: rgba(0, 0, 0, 0.3);
       margin: 0 0 7px 0; }
+      .price-block .price-item .price-title small {
+        font-size: 12px;
+        display: block;
+        line-height: 0; }
     .price-block .price-item .count-text {
       color: #ffffff;
       font-size: 18px;
