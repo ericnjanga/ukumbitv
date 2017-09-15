@@ -56,9 +56,8 @@ $bg-color: #f5f5f5;
 	  position: relative;
 	  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 	}
-	.play-menu li { border: 10px solid purple!important;
-		position: relative;
-	  // position: absolute;
+	.play-menu li { 
+		position: relative; 
 	  height: 46px;
 	  // -webkit-transition: top 500ms, left 500ms, background 0s, opacity 500ms;
 	  // -moz-transition: top 500ms, left 500ms, background 0s, opacity 500ms;

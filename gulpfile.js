@@ -12,6 +12,11 @@ config.css.autoprefix.options.browsers =  ['last 15 versions'] ;
  |
  */
 
+//Development mode:
+//type: gulp
+
+//Production mode:
+//type: gulp --production (will also minify "css" and "js" files)
 
 
 
@@ -22,7 +27,7 @@ elixir(function(mix) {
     ], 'public/r/css/style.css');
 
     
-	//Concatenating local librairies and main js files
+	//Concatenating local librairies and main js files 
 	mix.scripts([
 		//Local libraries
 		'/libs/jQuery.YoutubeBackground.js', 
@@ -31,8 +36,6 @@ elixir(function(mix) {
 		'main.js', 
 		'forms-validation.js'], 
 	'public/js/app.js')
-
-
 });
 
 
