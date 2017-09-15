@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="{{asset('r/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"> 
-		<!--<link rel="stylesheet" href="{{asset('r/css/passfield.min.css')}}">-->
+
+    <!-- Allow AngularJS cloaked items to stay hidden on page load -->
 		<style>
 		[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
 		    display: none !important;
