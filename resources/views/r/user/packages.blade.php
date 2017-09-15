@@ -7,7 +7,9 @@
 	    <div class="global-content">
 	    	<!-- packages selection section -->
 	      <section class="section-packages">
-	        <h1>{{trans('messages.home_plansec_title')}}</h1>
+	        <h1>
+						<span class="badge">1</span>
+	        	{{trans('messages.home_plansec_title')}}</h1>
 			  @if(Session::has('flash_success'))
 				  <div class="alert alert-success"  >
 					  <button type="button" class="close" data-dismiss="alert">×</button>
@@ -106,13 +108,19 @@
 
 	    	<!-- payment info section --> 
 	      <section class="section-payment">
-	        <h1>Payment information</h1>
+	        <h1> 
+						<span class="badge">2</span>
+						Payment information</h1>
+	        	<p class="payment-text" style="max-width: 500px;">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
 
 
 	        <div class="row">
 	        	<div class="col-left col-md-6">
-	        		<h2>Credit Card</h2>
-	        		<p class="payment-text">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
+	        		<h2>
+								<span class="badge">3</span>
+								Credit Card
+							</h2>
+	        		
 
 	        		<div class="payment-form-block">
 	              <form action="" method="" class="xl-inputs"> 
@@ -222,8 +230,11 @@
 
 
 	        	</div><!-- col-left -->
-	        	<div class="col-right col-md-6">
-	        		<h2>Paypal</h2>
+	        	<div class="col-right col-md-5 col-md-offset-1">
+	        		<h2>
+								<span class="badge">3</span>
+								Paypal
+							</h2> 
 	        		<p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
 		              {{--<button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>--}}
 		              <button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>
