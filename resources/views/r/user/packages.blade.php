@@ -57,7 +57,7 @@
 								<div class="alert alert-info" role="alert">
 									<div>Your current Plan</div> 
 									@if($payment_plan->price > 0)
-										<a class="btn btn-default" href="{{route('user.cancel-payment-plan')}}">Cancel payment plan</a>
+										<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">Cancel payment plan</a>
 									@endif
 								</div>
 						@else

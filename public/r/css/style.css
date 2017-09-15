@@ -2469,6 +2469,12 @@ form.xl-inputs input, form.xl-inputs select {
   z-index: 5;
   border-width: 0; }
 
+.page-packages .price-item.active .btn-cancel {
+  color: #eeb33d;
+  text-decoration: none; }
+  .page-packages .price-item.active .btn-cancel:hover {
+    text-decoration: underline; }
+
 .page-packages .price-item:hover:after {
   border: 10px solid #333; }
 

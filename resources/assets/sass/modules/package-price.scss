@@ -56,6 +56,13 @@
 	    z-index: 5;
 	    border-width: 0;
 		}
+		.btn-cancel {
+			color: $color-primary;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
 	}
 
 
