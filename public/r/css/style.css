@@ -1084,7 +1084,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     color: #000;
     position: absolute;
     top: 15px;
-    right: -15px; }
+    right: -5px; }
 
 @media (min-width: 768px) {
   .ukb-main-header .navbar-right {
