@@ -7,10 +7,13 @@
 	    <div class="global-content">
 	    	<!-- packages selection section -->
 	      <section class="section-packages">
-	        <h1>
-						<span class="badge">1</span>
+	      	<header>
+	      		<h1>
+							<span class="badge">1</span>
 	        	{{trans('messages.home_plansec_title')}}</h1>
-	        <p>Start by picking the right package for you. If you select a monthly subscription plan then select a payment method (</p>
+	        	<p>Start by picking the right package for you. Then choose a payment method.</p>
+	      	</header>
+	        
 			  @if(Session::has('flash_success'))
 				  <div class="alert alert-success"  >
 					  <button type="button" class="close" data-dismiss="alert">×</button>
@@ -120,12 +123,14 @@
 
 	    	<!-- payment info section --> 
 	      <section class="section-payment">
-	        <h1> 
+	      	<header>
+	      		<h1> 
 						<span class="badge">2</span>
 						Method of Payment</h1>
-	        	<p class="payment-text" style="max-width: 500px; margin-bottom: 30px;">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
-
-
+	        	<p class="payment-text">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
+	      	</header>
+	        	
+ 
 	        <div class="row">
 	        	<div class="col-left col-md-6">
 	        		<h2>

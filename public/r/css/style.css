@@ -2156,6 +2156,13 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-myaccount h2 {
   font-size: 24px; }
 
+.page-packages header h1, .page-packages header p {
+  margin-bottom: 10px; }
+
+.page-packages header p {
+  margin-bottom: 30px;
+  max-width: 500px; }
+
 .page-packages hr {
   margin-top: 70px;
   margin-bottom: 70px; }

@@ -13,6 +13,15 @@
 }
 
 .page-packages { 
+	header {
+		h1, p{
+			margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 30px;
+			max-width: 500px; 
+		}
+	}
 
 	hr {
 		margin-top: 70px;
