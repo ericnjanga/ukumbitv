@@ -1066,6 +1066,7 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   left: 0; }
 
 .ukb-main-header .nav-user-access {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1080,19 +1081,21 @@ fieldset[disabled] .twitter-typeahead .tt-input {
     display: block; }
   .ukb-main-header .nav-user-access .caret {
     display: inline-block !important;
-    color: #000; }
+    color: #000;
+    position: absolute;
+    top: 15px;
+    right: -15px; }
 
 @media (min-width: 768px) {
   .ukb-main-header .navbar-right {
     margin-top: 7px; } }
 
 .ukb-main-header .nav-user-tmb {
-  margin-left: 10px; }
-  .ukb-main-header .nav-user-tmb img {
-    height: 30px;
-    width: 30px;
-    -webkit-border-radius: 50%;
-    border-radius: 50%; }
+  margin-left: 5px;
+  margin-right: 10px; }
+  .ukb-main-header .nav-user-tmb .user-tmb {
+    font-size: 30px;
+    color: #666; }
 
 .ukb-main-header #link-update-package {
   cursor: pointer;

@@ -11,7 +11,8 @@
 	 
 
 	<a href="#" class="dropdown-toggle nav-user-tmb" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-		<img class="user-tmb" src="{{asset('r/img/no-img.png')}}" alt=""> 
+		<i class="fa fa-user-circle-o user-tmb" aria-hidden="true"></i>
+		<!-- <img class="user-tmb" src="{{asset('r/img/no-img.png')}}" alt="">  -->
 		<span class="caret"></span>
 	</a>
 	<ul class="dropdown-menu">

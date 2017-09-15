@@ -2,6 +2,7 @@
 .ukb-main-header { 
 
   .nav-user-access {
+  	position: relative;
   	display: flex;
   	// border: 2px solid red; 
   	font-size: 12px;
@@ -14,6 +15,9 @@
   	.caret {
   		display: inline-block!important;
   		color: #000;
+  		position: absolute;
+	    top: 15px;
+	    right: -15px;
   	}
   }
 
@@ -25,11 +29,11 @@
   
 
 	.nav-user-tmb {
-		margin-left: 10px;
-		img {
-			height: 30px;
-	    width: 30px;
-	    border-radius: 50%;
+		margin-left: 5px;
+		margin-right: 10px;
+		.user-tmb {
+			font-size: 30px; 
+			color: #666;
 		}
 	}
   #link-update-package {
