@@ -842,8 +842,16 @@ return array(
   'msg_upgrade' => 'Ugrade your plan',
   'website_title' => 'Online african movie platform - movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more',
 
-  //GENERAL WORDS ...
-  //-----------------------------------
+ 
+
+
+
+
+
+  //PACKAGES ...
+  //----------------------------------- 
+  'packages_h1' => 'Confirm your e-mail!', 
+ 
 
 
 
@@ -870,12 +878,14 @@ return array(
   'welcome_email_unsubscribe1' => 'If you do not want to recieve emails from us, you can',
   'welcome_email_unsubscribe2' => 'unsubscribe',
 
+ 
 
 
 
 
 
-  //Registration confirmation page
+  //REGISTRATION CONFIRMATION ...
+  //----------------------------------- 
   'registration_confirm_h1' => 'Confirm your e-mail!', 
   'registration_confirm_p1' => 'Please check your inbox for a confirmation link.',
   'registration_confirm_p2_1' => 'If you do not receive the email at',
