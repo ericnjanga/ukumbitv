@@ -78,7 +78,9 @@
 							<!-- activate current selected package if possible -->
                 <div class="price-title">
                 	{{$payment_plan->name}} {{$payment_plan->id}}
-									<small>(monthly subscription)</small>
+                	@if($payment_plan->price > 0)
+										<small>(monthly subscription)</small>
+									@endif
                 </div>
                 <div class="count-text">{{$payment_plan->description}}</div>
                 <ul class="includ-list">
