@@ -57,7 +57,7 @@
 								<div class="alert alert-info" role="alert">
 									<h2 class="alert-title">Your current Plan</h2> 
 									@if($payment_plan->price > 0)
-										<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&ra	uo;Cancel plan</a>
+										<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;Cancel plan</a>
 									@endif
 								</div>
 						@else
