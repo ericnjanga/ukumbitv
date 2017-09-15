@@ -102,6 +102,7 @@ return array(
 	'privacy_statement' => 'Privacy Statement',
 	'question_contactus' => 'Questions? Contact us',
 	'Copyright' => 'Copyright',
+	'credit_card' => 'Credit Card',
 
 	'profile'	=>	'Profile',
 	'account'	=> 	'Account',
@@ -163,6 +164,7 @@ return array(
 	'upload_image' => 'Upload Image',
 	'amount'	=> 	'Amount',
 	'currency' 	=>	'Currency',
+	'best_choice' => 'Best Choice',
 
 	'approve'	=>	'Approve',
 	'decline'	=>	'Decline',
@@ -842,8 +844,24 @@ return array(
   'msg_upgrade' => 'Ugrade your plan',
   'website_title' => 'Online african movie platform - movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more',
 
-  //GENERAL WORDS ...
-  //-----------------------------------
+ 
+
+
+
+
+
+  //PACKAGES ...
+  //----------------------------------- 
+  'packages_hero1_p' => 'To activate a plan, start by picking a package, then choose a payment method (you can cancel your monthly subscription at any time).', 
+  'packages_yourcurrplan' => 'Your current Plan', 
+  'packages_cancelsubs' => 'Cancel Subscription', 
+  'packages_returnguest' => 'Return to Guest Plan',
+  'packages_cancelplan' => 'Cancel current plan', 
+  'packages_nextplan' => 'Your next Plan',  
+  'packages_monthlysubs' => 'monthly subscription', 
+  'packages_hero2' => 'Method of Payment',
+  'packages_hero2_p' => 'Your payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.',
+ 
 
 
 
@@ -870,12 +888,14 @@ return array(
   'welcome_email_unsubscribe1' => 'If you do not want to recieve emails from us, you can',
   'welcome_email_unsubscribe2' => 'unsubscribe',
 
+ 
 
 
 
 
 
-  //Registration confirmation page
+  //REGISTRATION CONFIRMATION ...
+  //----------------------------------- 
   'registration_confirm_h1' => 'Confirm your e-mail!', 
   'registration_confirm_p1' => 'Please check your inbox for a confirmation link.',
   'registration_confirm_p2_1' => 'If you do not receive the email at',
