@@ -32,6 +32,11 @@
 		    display: none !important;
 		}
 		</style>
+
+		<!-- Allow IE legacy browsers to understand HTML5 -->
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<![endif]-->
 </head>
 <body data-search-route="{{route('search-data')}}">
  	{{--FACEBOOK CODE--}}
