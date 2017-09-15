@@ -1,0 +1,243 @@
+
+
+.page-packages { 
+  .price-item { 
+  	width: 100%;
+		max-width: 350px; 
+    padding: 0 0 15px 0;
+    position: relative;
+    &:after{
+    	content: '';
+    	position: absolute;
+    	width:100%;
+    	height: 100%;
+			left:0;
+			top: 0;
+			transition: all 0.3s linear;
+    }
+  }
+  .price-item:not(.active) { 
+  	&:hover{
+  		cursor: pointer;
+	    &:after{ 
+				transition: all 0.3s linear;
+	    }
+  	} 
+  }
+  .price-item:not(.active) { 
+  	.alert{
+  		display: none;
+  	} 
+  }
+
+
+
+	$color-active: #333;
+	.price-item.active {
+		&:after {
+			border: 10px solid $color-active;
+			background: rgba(0,0,0, 0.7);
+		}
+		&:hover{
+			&:after {
+				background: rgba(0,0,0, 0.7);
+			}
+		}
+		.alert {
+			position: absolute;
+	    /* transform: rotate(-30deg); */
+	    top: 9px;
+	    width: 100%;
+	    left: 0;
+	    text-align: center;
+	    background: $color-active;
+	    margin: 0;
+	    color: #fff;
+	    z-index: 5;
+	    border-width: 0;
+		}
+		.btn-cancel {
+			color: $color-primary;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		.alert-title {
+			color: #fff;
+		}
+	}
+
+
+	.price-item { 
+		&:hover{
+			&:after {
+				border: 10px solid $color-active;
+			}
+		}
+	}//.price-item
+ 
+}//.page-packages
+
+
+
+
+
+
+
+
+
+
+
+.price-block{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; 
+  justify-content: center;
+
+	@media (max-width: 994px){ 
+		flex-direction: column;
+		align-items: center;
+		.price-item {
+			margin-bottom: 20px!important;
+		}
+	}
+
+
+
+
+
+  .price-item { 
+  	width: 100%;
+  	min-height: 300px;
+		max-width: 350px; 
+    padding: 0 0 15px 0;
+    position: relative; 
+
+    .includ-list,
+    .price{
+			position: relative;
+			z-index: 10;
+    }
+ 
+
+    .price-title{
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+      height: 60px;
+      line-height: 40px;
+      background-color: rgba(0, 0, 0, 0.3);
+      margin: 0 0 7px 0;
+
+      small {
+      	    font-size: 12px;
+		    display: block;
+		    line-height: 0;
+      }
+    }
+    .count-text{
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      margin: 0 0 5px 0;
+    }
+    .includ-list{
+      min-height: 115px;
+      padding: 0 40px;
+      li{
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 18px;
+        margin: 0 0 3px 0;
+        &:before{
+          content: '-';
+          margin: 0 3px 0 0;
+        }
+      }
+    }
+    .price{
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      small {
+      	text-transform: none;
+      	font-size: 20px;
+      }
+      span{
+        font-size: 24px;
+        font-weight: 300;
+      }
+    }
+    .butn{
+      width: 200px;
+      display: block;
+      margin: 10px auto 0;
+    }
+    .butn.active{
+      background-color: #fff;
+      &:hover{
+        cursor: default;
+      }
+    }
+  }
+  .price-item:nth-child(1){
+    background-color: $color-yellow-green; 
+    .price{
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 300;
+    }
+    .butn{
+      &:hover{
+        color: #00f076;
+      }
+    }
+    .butn.active{
+        color: #00f076;
+    }
+  }
+  .price-item:nth-child(2){
+    background-color: $color-primary;
+    .butn{
+      &:hover{
+        color: #00d7ff;
+      }
+    }
+    .butn.active{
+      color: #00d7ff;
+    }
+  }
+  .price-item:nth-child(3){
+    background-color: $color-darkred;
+    .butn{
+      &:hover{
+        color: $color-primary;
+      }
+    }
+    .butn.active{
+      color: $color-primary;
+    }
+  }
+  .price-item:nth-child(4){
+    background-color: #f83647;
+    .butn{
+      &:hover{
+        color: #f83647;
+      }
+    }
+    .butn.active{
+      color: #f83647;
+    }
+  }
+}

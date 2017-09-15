@@ -166,7 +166,8 @@ return [
         Aws\Laravel\AwsServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         vidhyar2612\Enveditor\EnveditorServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Laravel\Cashier\CashierServiceProvider::class
 
     ],
 
@@ -216,6 +217,7 @@ return [
         'Setting' => anlutro\LaravelSettings\Facade::class,
         'AWS' => Aws\Laravel\AwsFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+//        'Cashier' => Laravel\Cashier\CashierServiceProvider::class,
         'Enveditor' => 'vidhyar2612\Enveditor\Facade',
     ],
 

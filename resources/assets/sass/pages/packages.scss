@@ -3,6 +3,9 @@
 .page-myaccount {
 	h1 {
 		margin-bottom: 30px;
+		> .badge {
+			margin-right: 10px;
+		}
 	}
 	h2 {
 	 	font-size: 24px;
@@ -10,10 +13,24 @@
 }
 
 .page-packages { 
+	header {
+		h1, p{
+			margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 30px;
+			max-width: 500px; 
+		}
+	}
 
 	hr {
 		margin-top: 70px;
     margin-bottom: 70px;
+	}
+	.section-payment {
+		h2 {
+			margin-bottom: 10px;
+		}
 	}
 
 	@media (max-width: 767px){
@@ -43,18 +60,18 @@
 		}
 	}
 
-	.section-payment {
-		max-width: 600px; 
-	}
+	// .section-payment {
+	// 	max-width: 600px; 
+	// }
 
 	.section-submit {
-		margin-top: 50px;
+		margin-top: 30px;
     margin-bottom: 0;
 	}
 
-	.btn-submit {
-		max-width: 300px;
-	}
+	// .btn-submit {
+	// 	max-width: 300px;
+	// }
 }
 
 

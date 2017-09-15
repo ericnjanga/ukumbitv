@@ -46,7 +46,12 @@
             <div class="price-block">
               @foreach($payment_plans as $payment_plan)
                 <section class="price-item">
-                  <div class="price-title">{{$payment_plan->name}}</div>
+                  <div class="price-title">
+                  	{{$payment_plan->name}}
+                  	@if($payment_plan->price > 0) 
+											<small>({{trans('messages.packages_monthlysubs')}})</small>
+                  	@endif 
+                  </div>
                   <div class="count-text">{{$payment_plan->description}}</div>
                   <ul class="includ-list">
                     @php($i=1)
