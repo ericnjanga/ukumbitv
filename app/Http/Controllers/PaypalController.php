@@ -116,6 +116,10 @@ class PaypalController extends Controller
             $userPaymentPlan->expiry_date = $expiry_date;
             $userPaymentPlan->save();
 
+            if (Auth::user()->subscribed('main')) {
+                $this->cancelStripeSubscription();
+            }
+
 //            echo 'New Subscriber Created and Billed';
             return redirect()->action('UserController@packages')->with('flash_success' , 'Payment plan was successful updated');
 
@@ -150,4 +154,10 @@ class PaypalController extends Controller
 
         return redirect()->action('UserController@packages')->with('flash_success' , 'Payment plan was successful canceled');
     }
+
+    public function cancelStripeSubscription()
+    {
+        Auth::user()->subscription('main')->cancel();
+    }
+
 }

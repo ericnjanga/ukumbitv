@@ -12,7 +12,7 @@
 							<span class="badge">1</span>
 							{{trans('messages.home_plansec_title')}}</h1>
 						<p>{{trans('messages.packages_hero1_p')}}</p>
-					</header>
+											</header>
 
 					@if(Session::has('flash_success'))
 						<div class="alert alert-success"  >
@@ -63,7 +63,7 @@
 									<div class="alert alert-info" role="alert">
 										<h2 class="alert-title">{{trans('messages.packages_yourcurrplan')}}</h2>
 										@if($payment_plan->price > 0)
-											<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;{{trans('messages.packages_cancelsubs')}}</a>
+											<a class="btn-cancel" @if($checkStripe) href="{{route('stripe.cancel-payment-plan')}}" @elseif($checkPayPal) href="{{route('paypal.cancel-payment-plan')}}" @endif>&raquo;{{trans('messages.packages_cancelsubs')}}</a>
 										@endif
 									</div>
 									@else
@@ -71,7 +71,7 @@
 											<div class="alert alert-info" role="alert">
 												@if($payment_plan->price == 0)
 													<h2 class="alert-title">{{trans('messages.packages_returnguest')}}</h2>
-													<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;{{trans('messages.packages_cancelplan')}}</a>
+													<a class="btn-cancel" @if($checkStripe) href="{{route('stripe.cancel-payment-plan')}}" @elseif($checkPayPal) href="{{route('paypal.cancel-payment-plan')}}" @endif>&raquo;{{trans('messages.packages_cancelplan')}}</a>
 												@else
 													<h2 class="alert-title">{{trans('messages.packages_nextplan')}}</h2>
 												@endif
@@ -99,7 +99,7 @@
 												<div class="price"><span>$</span> {{$payment_plan->price}}</div>
 											@endif
 
-										<!-- <button id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="btn btn-block butn-white-trans select-plan-btn" onclick="selectPlan(this)">Select this</button> -->
+
 											@if($indexKey == 2)
 												<div class="best-text">
 													<div>{{trans('messages.best_choice')}}</div>

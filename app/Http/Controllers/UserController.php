@@ -88,9 +88,23 @@ class UserController extends Controller {
 
     public function packages()
     {
+        $me = Auth::user();
+        //check stripe
+        if ($me && ! $me->subscribed('main') || $me->subscription('main')->onGracePeriod()) {
+            // This user is not a paying customer...
+            $checkStripe = false;
+        } else {
+            $checkStripe = true;
+        }
+
+        if($me->paypal == 1) {
+            $checkPayPal = true;
+        } else { $checkPayPal = false; }
 
         return view('r.user.packages')
             ->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get())
+            ->with('checkStripe', $checkStripe)
+            ->with('checkPayPal', $checkPayPal)
             ->with('userPayPlan', $this->getUserPaymentPlan());
     }
 
