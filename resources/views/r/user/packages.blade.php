@@ -11,7 +11,7 @@
 	      		<h1>
 							<span class="badge">1</span>
 	        	{{trans('messages.home_plansec_title')}}</h1>
-	        	<p>To activate a plan, start by picking a package, then choose a payment method.</p>
+	        	<p>To activate a plan, start by picking a package, then choose a payment method (you can cancel your monthly subscription at any time).</p>
 	      	</header>
 	        
 			  @if(Session::has('flash_success'))
