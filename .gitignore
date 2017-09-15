@@ -10,3 +10,4 @@ Homestead.json
 /.idea
 /public/images
 /public/movies
+composer.lock
