@@ -56,7 +56,9 @@
 							<section id="plan{{$payment_plan->id}}" class="price-item active"> 
 								<div class="alert alert-info" role="alert">
 									<div>Your current Plan</div> 
-									<a class="btn btn-default" href="{{route('user.cancel-payment-plan')}}">Cancel payment plan</a>
+									@if($payment_plan->price > 0)
+										<a class="btn btn-default" href="{{route('user.cancel-payment-plan')}}">Cancel payment plan</a>
+									@endif
 								</div>
 						@else
 							<section id="plan{{$payment_plan->id}}" class="price-item" data-plan-id="{{$payment_plan->id}}"> 
