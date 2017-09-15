@@ -12,35 +12,35 @@ class StripeController extends Controller
     public function createUserCard(Request $request)
     {
         // Validate request
-        $this->validate( $request, [ 'stripeToken' => 'required'] );
+        $this->validate( $request, [ 'stripeToken' => 'required', 'plan' => 'required'] );
 
 
 
 //        // Current logged in user
-//        $me = Auth::user();
+        $me = Auth::user();
 
         try {
 
-            Auth::user()->updateCard($request->stripeToken);
-//            // check already subscribed and if already subscribed with picked plan
-//            if( $me->subscribed('main') && ! $me->subscribedToPlan(Auth::user()->paymentPlans[0]->flag, 'main') ) {
-//
-//                // swap if different plan attempt
-//                $me->subscription('main')->swap(Auth::user()->paymentPlans[0]->flag);
-//
-//            } else {
-//                // Its new subscription
-//
-//
-//
-//                    // Create subscription
-//                    $me->newSubscription( 'main', Auth::user()->paymentPlans[0]->flag)->create($request->get('stripeToken'), [
-//                        'email' => $me->email,
-//                        'description' => $me->name
-//                    ]);
-//
-//
-//            }
+            $me->updateCard($request->stripeToken);
+            // check already subscribed and if already subscribed with picked plan
+            if( $me->subscribed('main') && ! $me->subscribedToPlan(Auth::user()->paymentPlans[0]->flag, 'main') ) {
+
+                // swap if different plan attempt
+                $me->subscription('main')->swap(Auth::user()->paymentPlans[0]->flag);
+
+            } else {
+                // Its new subscription
+
+
+
+                    // Create subscription
+                    $me->newSubscription( 'main', Auth::user()->paymentPlans[0]->flag)->create($request->get('stripeToken'), [
+                        'email' => $me->email,
+                        'description' => $me->name
+                    ]);
+
+
+            }
 
         } catch (\Exception $e) {
             // Catch any error from Stripe API request and show
