@@ -53,12 +53,15 @@
 						@foreach($payment_plans as $indexKey => $payment_plan)
 							<!-- activate current selected package if possible -->
 						@if($userPayPlan->id == $payment_plan->id)
-							<section class="price-item active"> 
+							<section id="plan{{$payment_plan->id}}" class="price-item active"> 
 								<div class="alert alert-info" role="alert">
 									Your current Plan
 								</div>
 						@else
-							<section class="price-item"> 
+							<section id="plan{{$payment_plan->id}}" class="price-item" data-plan-id="{{$payment_plan->id}}"> 
+								<div class="alert alert-info" role="alert">
+									Your new Plan
+								</div>
 						@endif
 							<!-- activate current selected package if possible -->
                 <div class="price-title">{{$payment_plan->name}} {{$payment_plan->id}}</div>
@@ -76,7 +79,7 @@
 									<div class="price"><span>$</span> {{$payment_plan->price}}</div>
 								@endif
 								
-				        <button id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="btn btn-block butn-white-trans select-plan-btn" onclick="selectPlan(this)">Select this</button>
+				        <!-- <button id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="btn btn-block butn-white-trans select-plan-btn" onclick="selectPlan(this)">Select this</button> -->
 								@if($indexKey == 2)
 	                <div class="best-text">
 	                    <div>Best Choice</div>
@@ -253,36 +256,44 @@
 @endsection
 
 @section('scripts')
-	<script>
-
+	<script> 
 		var selectedPlan = '';
 
-        function selectPlan(btn) {
-
-            selectedPlan = $(btn).data('plan-id');
-
-            $( ".select-plan-btn" ).each(function() {
-                if (! $(this).hasClass('butn-white-trans')) {
-                    $(this).addClass('butn-white-trans');
-                } else if ($(this).data('plan-id') === selectedPlan) {
-                    $(this).removeClass('butn-white-trans');
-                }
-            });
+		//Allow user to select the whole block, not just the button
+		//can only select inactive plans
+		$('body').on('click', '.price-item:not(.active)', function(){
+			selectPlan($(this));
+		});
 
 
-        }
+		//Deactivate current plan, activate new plan
+		//Keep a reference of the selected plan
+    function selectPlan($plan) { 
+      selectedPlan = $plan.data('plan-id');
 
-        function checkoutPlanPayPal() {
-            if(selectedPlan === '') {
-              return swal('Oops!', 'Select payment plan please', 'error');
+      $('.price-item.active').removeClass('active');
+      $plan.addClass('active');
+      // $( ".select-plan-btn" ).each(function() {
+      //   if (! $(this).hasClass('butn-white-trans')) {
+      //       $(this).addClass('butn-white-trans');
+      //   } else if ($(this).data('plan-id') === selectedPlan) {
+      //       $(this).removeClass('butn-white-trans');
+      //   }
+      // }); 
+    }
+
+
+    function checkoutPlanPayPal() {
+      if(selectedPlan === '') {
+        return swal('Oops!', 'Select payment plan please', 'error');
 			}
-            if(selectedPlan === 2) {
-                return swal('Hey!', 'You can\'t pay for the free plan', 'warning');
-            }
+      if(selectedPlan === 2) {
+          return swal('Hey!', 'You can\'t pay for the free plan', 'warning');
+      }
 
-            $('#btn-checkout-paypal').addClass('disabled');
+      $('#btn-checkout-paypal').addClass('disabled');
 
-            window.location = "subscribe/paypal/plan/"+selectedPlan;
+      window.location = "subscribe/paypal/plan/"+selectedPlan;
 //            window.location = "select-payment-plan/"+selectedPlan;
 
 		}

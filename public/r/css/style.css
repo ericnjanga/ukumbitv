@@ -2443,6 +2443,8 @@ form.xl-inputs input, form.xl-inputs select {
 
 .page-packages .price-item:not(.active):hover {
   cursor: pointer; }
+  .page-packages .price-item:not(.active):hover:after {
+    transition: all 0.3s linear; }
 
 .page-packages .price-item.active:after {
   border: 10px solid #337ab7;

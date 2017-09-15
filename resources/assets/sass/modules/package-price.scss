@@ -20,6 +20,9 @@
   .price-item:not(.active) { 
   	&:hover{
   		cursor: pointer;
+	    &:after{ 
+				transition: all 0.3s linear;
+	    }
   	}
   }
 
