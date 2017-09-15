@@ -31,7 +31,7 @@
 	        <h2>New Videos</h2> 
 	        <div class="list-horizontal-wrapper">
 	            @foreach($recent_videos as $video)
-	                @include('r.chunks._video_item')
+	              @include('r.chunks._video_item')
 	            @endforeach 
 	        </div> 
 	      </div>
@@ -41,7 +41,7 @@
 	          
 	          <div class="list-horizontal-wrapper">
 	              @foreach($trendings as $video)
-	                  @include('r.chunks._video_item')
+	                @include('r.chunks._video_item')
 	              @endforeach
 	          </div>
 	      </div>
@@ -57,7 +57,7 @@
 
 	              <div class="list-horizontal-wrapper">
 	                  @foreach($my_lists as $video)
-	                      @include('r.chunks._video_item')
+	                    @include('r.chunks._video_item')
 	                  @endforeach
 	              </div>
 	          @endif
