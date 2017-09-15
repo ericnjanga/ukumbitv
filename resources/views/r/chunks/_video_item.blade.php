@@ -1,4 +1,4 @@
-<div class="video-item" style="border:5px solid lime;">
+<div class="video-item" style="border:1px solid lime;">
     <a href="{{route('user.singleVideo',$video->watchid)}}">
         <div class="video-img">
             <img src="{{$video->videoimage->imgPreview1}}" alt="">
