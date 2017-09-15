@@ -25,7 +25,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="{{asset('r/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
-    <link rel="stylesheet" href="{{asset('packages/sweetalert/sweetalert.css')}}"> 
+    <!-- <link rel="stylesheet" href="{{asset('packages/sweetalert/sweetalert.css')}}">  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"> 
+
     <link rel="stylesheet" href="{{asset('r/css/passfield.min.css')}}">
 		
 		
@@ -73,7 +75,8 @@
 	<!-- autocomplete librairy -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
 
-  <script src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <!-- <script src="{{asset('packages/sweetalert/sweetalert.min.js')}}"></script> -->
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
 
