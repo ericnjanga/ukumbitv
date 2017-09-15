@@ -1,7 +1,6 @@
 
 
-.page-packages {
-
+.page-packages { 
   .price-item { 
   	width: 100%;
 		max-width: 350px; 
@@ -33,15 +32,15 @@
 
 
 
-	$color-active: #337ab7;
+	$color-active: #333;
 	.price-item.active {
 		&:after {
 			border: 10px solid $color-active;
-			background: rgba(51, 122, 183, 0.5);
+			background: rgba(51, 122, 183, 0.7);
 		}
 		&:hover{
 			&:after {
-				background: rgba(51, 122, 183, 0.5);
+				background: rgba(51, 122, 183, 0.7);
 			}
 		}
 		.alert {
@@ -66,12 +65,8 @@
 				border: 10px solid $color-active;
 			}
 		}
-	}
-
-
-
-
-
+	}//.price-item
+ 
 }//.page-packages
 
 
@@ -109,6 +104,12 @@
 		max-width: 350px; 
     padding: 0 0 15px 0;
     position: relative; 
+
+    .includ-list,
+    .price{
+			position: relative;
+			z-index: 10;
+    }
  
 
     .price-title{

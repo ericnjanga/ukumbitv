@@ -2450,11 +2450,11 @@ form.xl-inputs input, form.xl-inputs select {
   display: none; }
 
 .page-packages .price-item.active:after {
-  border: 10px solid #337ab7;
-  background: rgba(51, 122, 183, 0.5); }
+  border: 10px solid #333;
+  background: rgba(51, 122, 183, 0.7); }
 
 .page-packages .price-item.active:hover:after {
-  background: rgba(51, 122, 183, 0.5); }
+  background: rgba(51, 122, 183, 0.7); }
 
 .page-packages .price-item.active .alert {
   position: absolute;
@@ -2463,14 +2463,14 @@ form.xl-inputs input, form.xl-inputs select {
   width: 100%;
   left: 0;
   text-align: center;
-  background: #337ab7;
+  background: #333;
   margin: 0;
   color: #fff;
   z-index: 5;
   border-width: 0; }
 
 .page-packages .price-item:hover:after {
-  border: 10px solid #337ab7; }
+  border: 10px solid #333; }
 
 .price-block {
   display: -ms-flexbox;
@@ -2491,6 +2491,10 @@ form.xl-inputs input, form.xl-inputs select {
     max-width: 350px;
     padding: 0 0 15px 0;
     position: relative; }
+    .price-block .price-item .includ-list,
+    .price-block .price-item .price {
+      position: relative;
+      z-index: 10; }
     .price-block .price-item .price-title {
       color: #ffffff;
       font-size: 20px;
