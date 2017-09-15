@@ -108,6 +108,136 @@
 	      <section class="section-payment">
 	        <h1>Payment information</h1>
 
+
+	        <div class="row">
+	        	<div class="col-left col-md-6">
+	        		<h2>Credit Card</h2>
+	        		<p class="payment-text">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
+
+	        		<div class="payment-form-block">
+	              <form action="" method="" class="xl-inputs"> 
+	              	<div class="row">
+	              		<div class="col-md-12"> 
+			                <div class="input-group">
+			                  <label>Card Number</label>
+			                  <input type="text" name="cardnumber" class="form-control">
+			                  <div class="card-samples">
+			                  	<div id="card-image-container-Visa" role="widget" aria-live="polite" name="card-image-creditCardType" class="card-image-Visa-disabled card-image " aria-selected="false" aria-hidden="true" aria-disabled="true">
+							              <span id="card-image-text-Visa" class="card-image-text-Visa sr-only">
+							                Visa 
+							              </span>
+							           </div><!-- Visa -->
+							           <div id="card-image-container-MasterCard" role="widget" aria-live="polite" name="card-image-creditCardType" class="card-image-MasterCard-disabled card-image " aria-selected="false" aria-hidden="true" aria-disabled="true">
+							              <span id="card-image-text-MasterCard" class="card-image-text-MasterCard sr-only">
+							                MasterCard 
+							              </span>
+							           </div><!-- MasterCard -->
+			                  </div><!-- card samples -->
+			                </div>
+	              		</div><!-- col -->
+	              	</div><!-- row -->
+
+	              	<div class="row">
+	              		<div class="col-md-4"> 
+			                <div class="input-group">
+			                  <label for="expiry-month">Expiration (MM)</label>
+			                  <select name="expiry-month" id="expiry-month" class="form-control">
+								  	@for($i = 1; $i < 13; $i++)
+			                  		<option value="{{$i}}">{{$i}}</option>
+								  	@endfor
+			                  	<!-- option list -->
+			                  	<!-- All 12 months -->
+			                  </select> 
+			                </div><!-- month -->
+	              		</div><!-- col -->
+
+	              		<div class="col-md-4"> 
+			                <div class="input-group">
+			                  <label for="expiry-year">Expiration (YYYY)</label>
+			                  <select name="expiry-year" id="expiry-year" class="form-control">
+								  @for($i = \Carbon\Carbon::now()->year; $i < \Carbon\Carbon::now()->addYears(20)->year; $i++)
+			                  		<option value="{{$i}}">{{$i}}</option>
+								  @endfor
+			                  	<!-- option list -->
+			                  	<!-- from current year up to 30 years -->
+			                  </select> 
+			                </div><!-- year -->
+	              		</div><!-- col -->
+
+	              		<div class="col-md-4"> 
+			                <div class="input-group">
+			                    <label for="cvv">CVV</label>
+								<input type="text" name="cvv" id="cvv" class="form-control">
+			                </div><!-- year -->
+	              		</div><!-- col -->
+	              	</div><!-- row -->
+	              	
+	              	<div class="row">
+	              		<div class="col-md-12"> 
+			                <div class="input-group">
+							  <label for="cardhlder-name">Cardholder Name</label>
+							  <input type="text" name="cardhlder-name" id="cardhlder-name" class="form-control">
+			                </div>
+	              		</div><!-- col -->
+	              	</div><!-- row -->
+	              	
+	              	<div class="row">
+	              		<div class="col-md-12"> 
+			                <div class="input-group">
+			                  <label>Country</label>
+			                  <select name="expiry-year" id="expiry-year" class="form-control">
+			                  	<option value="">Select a country</option> 
+			                  	<!-- option list -->
+			                  	<!-- from current year up to 30 years -->
+			                  </select> 
+			                </div>
+	              		</div><!-- col -->
+	              	</div><!-- row -->
+	              	
+	              	<div class="row">
+	              		<div class="col-md-12"> 
+			                <div class="input-group">
+	                      <label>State/Province/Region</label>
+	                      <input type="text" name="cardhlder-state" class="form-control">
+			                </div>
+	              		</div><!-- col -->
+	              	</div><!-- row -->
+	              	
+	              	<div class="row">
+	              		<div class="col-md-12"> 
+			                <div class="input-group">
+	                      <label>Zip/Postal Code</label>
+	                      <input type="text" name="cardhlder-zip" class="form-control">
+			                </div>
+	              		</div><!-- col -->
+	              	</div><!-- row -->
+	     
+	                <div class="row section-submit">
+	                	<div class="col-md-12">
+	                		<button type="submit" class="btn btn-primary btn-block btn-lg btn-submit">Update payment method</button>
+	                	</div><!-- col -->  
+	                </div><!-- row -->
+	              </form>
+	            </div>
+
+
+	        	</div><!-- col-left -->
+	        	<div class="col-right col-md-6">
+	        		<h2>Paypal</h2>
+	        		<p class="payment-text">To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
+		              {{--<button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>--}}
+		              <button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>
+{{--		              <a href="{{ url('subscribe/paypal') }}" class="btn btn-primary btn-block btn-lg btn-submit">subscribe Pay Pal</a>--}}
+	        	</div><!-- col-right -->
+	        </div><!-- row -->
+
+
+
+
+
+
+
+
 		      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 					  <div class="panel panel-default panel-payinfo">
 					    <div class="panel-heading" role="tab" id="headingOne">
