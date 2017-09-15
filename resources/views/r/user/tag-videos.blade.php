@@ -26,21 +26,7 @@
                             <div class="video-list-block">
                                 @for($row=1;$row<4;$row++)
                                     @for($i=1;$i<6;$i++) 
-                                        <div class="video-item">
-                                            <a href="{{route('single-video',0)}}">
-                                                <div class="video-img">
-                                                    <img src="{{asset('r/img/video'.$i.'.png')}}" alt="">
-                                                </div>
-                                                <div class="video-title ellipsis-gradient">Transformers: Revenge of the
-                                                    Fallen
-                                                </div>
-                                            </a>
-                                            <div class="video-info">
-                                                <div class="video-genre">Drama</div>
-                                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>25
-                                                </div>
-                                            </div>
-                                        </div> 
+                                        @include('r.chunks._video_item')
                                     @endfor
                                 @endfor
                             </div>

@@ -22,14 +22,10 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{asset('r/css/colorbox.css')}}">
-    <link rel="stylesheet" href="{{asset('r/css/normalize.css')}}">
-    <link rel="stylesheet" href="{{asset('r/css/slick.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="{{asset('r/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('r/css/media.css')}}">
-    <link rel="stylesheet" href="{{asset('packages/sweetalert/sweetalert.css')}}">
-    {{--<link rel="stylesheet" href="{{asset('r/css/less.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('packages/sweetalert/sweetalert.css')}}"> 
     <link rel="stylesheet" href="{{asset('r/css/passfield.min.css')}}">
 		
 		
@@ -72,11 +68,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="{{asset('r/js/libs/passfield.min.js')}}"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
-  <script src="{{asset('r/js/libs/slick.min.js')}}"></script>
-  <!-- lightbox librairy
-  <script src="{{asset('r/js/libs/jquery.colorbox-min.js')}}"></script>
--->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script> 
 <script src="https://js.stripe.com/v2/"></script>
 	<!-- autocomplete librairy -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
