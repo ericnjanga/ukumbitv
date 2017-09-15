@@ -2439,7 +2439,10 @@ form.xl-inputs input, form.xl-inputs select {
     height: 100%;
     left: 0;
     top: 0;
-    transition: all 0.5s ease; }
+    transition: all 0.3s ease; }
+
+.page-packages .price-item:not(.active):hover {
+  cursor: pointer; }
 
 .page-packages .price-item.active:after {
   border: 10px solid #337ab7;
