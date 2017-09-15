@@ -11,7 +11,7 @@
 	      		<h1>
 							<span class="badge">1</span>
 	        	{{trans('messages.home_plansec_title')}}</h1>
-	        	<p>To activate a plan, start by picking a package, then choose a payment method (you can cancel your monthly subscription at any time).</p>
+	        	<p>{{trans('messages.packages_hero1_p')}}</p>
 	      	</header>
 	        
 			  @if(Session::has('flash_success'))
@@ -61,19 +61,19 @@
 							@if($userPayPlan->id == $payment_plan->id)
 								<section id="plan{{$payment_plan->id}}" class="price-item active"> 
 									<div class="alert alert-info" role="alert">
-										<h2 class="alert-title">Your current Plan</h2> 
+										<h2 class="alert-title">{{trans('messages.packages_yourcurrplan')}}</h2> 
 										@if($payment_plan->price > 0)
-											<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;Cancel Subscription</a>
+											<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;{{trans('messages.packages_cancelsubs')}}</a>
 										@endif
 									</div>
 							@else
 								<section id="plan{{$payment_plan->id}}" class="price-item" data-plan-id="{{$payment_plan->id}}"> 
 									<div class="alert alert-info" role="alert">
 										@if($payment_plan->price == 0)
-											<h2 class="alert-title">Return to Guest Plan</h2>
-											<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;Cancel current plan</a>
+											<h2 class="alert-title">{{trans('messages.packages_returnguest')}}</h2>
+											<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;{{trans('messages.packages_cancelplan')}}</a>
 										@else
-											<h2 class="alert-title">Your next Plan</h2>
+											<h2 class="alert-title">{{trans('messages.packages_nextplan')}}</h2>
 										@endif
 										
 									</div>
@@ -82,7 +82,7 @@
                 <div class="price-title">
                 	{{$payment_plan->name}} {{$payment_plan->id}}
                 	@if($payment_plan->price > 0)
-										<small>(monthly subscription)</small>
+										<small>({{trans('messages.packages_monthlysubs')}})</small>
 									@endif
                 </div>
                 <div class="count-text">{{$payment_plan->description}}</div>
@@ -94,7 +94,7 @@
 									@endwhile
 			          </ul>
 								@if($payment_plan->price == 0)
-									<div class="price">FREE</div>
+									<div class="price text-uppercase">{{trans('messages.free')}}</div>
 								@else
 									<div class="price"><span>$</span> {{$payment_plan->price}}</div>
 								@endif
@@ -102,7 +102,7 @@
 				        <!-- <button id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="btn btn-block butn-white-trans select-plan-btn" onclick="selectPlan(this)">Select this</button> -->
 								@if($indexKey == 2)
 	                <div class="best-text">
-	                    <div>Best Choice</div>
+	                  <div>{{trans('messages.best_choice')}}</div>
 	                </div>
 								@endif
 	            </section>
@@ -125,9 +125,8 @@
 	      <section class="section-payment">
 	      	<header>
 	      		<h1> 
-						<span class="badge">2</span>
-						Method of Payment</h1>
-	        	<p>Your payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
+						<span class="badge">2</span> {{trans('messages.packages_hero2')}}</h1>
+	        	<p>{{trans('messages.packages_hero2_p')}}</p>
 	      	</header>
 	        	
  
@@ -135,7 +134,7 @@
 	        	<div class="col-left col-md-6">
 	        		<h2>
 								<span class="badge">3</span>
-								Credit Card
+								{{trans('messages.credit_card')}}
 							</h2>
 	        		
 
@@ -168,7 +167,7 @@
 			                  <label for="expiry-month">Expiration (MM)</label>
 			                  <select name="expiry-month" id="expiry-month" class="form-control">
 								  	@for($i = 1; $i < 13; $i++)
-			                  		<option value="{{$i}}">{{$i}}</option>
+			                <option value="{{$i}}">{{$i}}</option>
 								  	@endfor
 			                  	<!-- option list -->
 			                  	<!-- All 12 months -->

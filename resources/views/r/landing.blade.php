@@ -49,7 +49,7 @@
                   <div class="price-title">
                   	{{$payment_plan->name}}
                   	@if($payment_plan->price > 0) 
-											<small>(monthly subscription)</small>
+											<small>({{trans('messages.packages_monthlysubs')}})</small>
                   	@endif 
                   </div>
                   <div class="count-text">{{$payment_plan->description}}</div>
