@@ -3,11 +3,11 @@
     <div class="video-img">
         <img src="{{$video->videoimage->imgPreview1}}" alt="">
     </div>
-    <div class="video-title ellipsis-gradient">{{$video->title}}
-    </div>
+    <figcaption class="video-title ellipsis-gradient">{{$video->title}}
+    </figcaption>
   </a>
-  <figcaption class="video-info">
+  <div class="video-info">
     <div class="video-genre">{{$video->category->name}}</div>
     <div class="butn-like"><span class="icon icon-thumbs-up"></span><span class="likes-count">{{count($video->likes)}}</span></div>
-  </figcaption>
+  </div>
 </figure>
