@@ -36,11 +36,11 @@
 	.price-item.active {
 		&:after {
 			border: 10px solid $color-active;
-			background: rgba(51, 122, 183, 0.7);
+			background: rgba(0,0,0, 0.7);
 		}
 		&:hover{
 			&:after {
-				background: rgba(51, 122, 183, 0.7);
+				background: rgba(0,0,0, 0.7);
 			}
 		}
 		.alert {

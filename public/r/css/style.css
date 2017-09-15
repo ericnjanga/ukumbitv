@@ -2451,10 +2451,10 @@ form.xl-inputs input, form.xl-inputs select {
 
 .page-packages .price-item.active:after {
   border: 10px solid #333;
-  background: rgba(51, 122, 183, 0.7); }
+  background: rgba(0, 0, 0, 0.7); }
 
 .page-packages .price-item.active:hover:after {
-  background: rgba(51, 122, 183, 0.7); }
+  background: rgba(0, 0, 0, 0.7); }
 
 .page-packages .price-item.active .alert {
   position: absolute;
