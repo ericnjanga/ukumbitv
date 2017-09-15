@@ -2487,6 +2487,7 @@ form.xl-inputs input, form.xl-inputs select {
         margin-bottom: 20px !important; } }
   .price-block .price-item {
     width: 100%;
+    min-height: 300px;
     max-width: 350px;
     padding: 0 0 15px 0;
     position: relative; }
