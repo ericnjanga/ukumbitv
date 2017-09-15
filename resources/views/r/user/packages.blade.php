@@ -54,20 +54,20 @@
 
 						@foreach($payment_plans as $indexKey => $payment_plan)
 							<!-- activate current selected package if possible -->
-						@if($userPayPlan->id == $payment_plan->id)
-							<section id="plan{{$payment_plan->id}}" class="price-item active"> 
-								<div class="alert alert-info" role="alert">
-									<h2 class="alert-title">Your current Plan</h2> 
-									@if($payment_plan->price > 0)
-										<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;Cancel plan</a>
-									@endif
-								</div>
-						@else
-							<section id="plan{{$payment_plan->id}}" class="price-item" data-plan-id="{{$payment_plan->id}}"> 
-								<div class="alert alert-info" role="alert">
-									<h2 class="alert-title">Your new Plan</h2>
-								</div>
-						@endif
+							@if($userPayPlan->id == $payment_plan->id)
+								<section id="plan{{$payment_plan->id}}" class="price-item active"> 
+									<div class="alert alert-info" role="alert">
+										<h2 class="alert-title">Your current Plan</h2> 
+										@if($payment_plan->price > 0)
+											<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;Cancel plan</a>
+										@endif
+									</div>
+							@else
+								<section id="plan{{$payment_plan->id}}" class="price-item" data-plan-id="{{$payment_plan->id}}"> 
+									<div class="alert alert-info" role="alert">
+										<h2 class="alert-title">Your next Plan</h2>
+									</div>
+							@endif
 							<!-- activate current selected package if possible -->
                 <div class="price-title">{{$payment_plan->name}} {{$payment_plan->id}}</div>
                 <div class="count-text">{{$payment_plan->description}}</div>
@@ -111,7 +111,7 @@
 	        <h1> 
 						<span class="badge">2</span>
 						Payment information</h1>
-	        	<p class="payment-text" style="max-width: 500px;">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
+	        	<p class="payment-text" style="max-width: 500px; margin-bottom: 30px;">Your new payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.</p>
 
 
 	        <div class="row">

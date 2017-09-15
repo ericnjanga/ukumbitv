@@ -2148,6 +2148,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-packages h1,
 .page-myaccount h1 {
   margin-bottom: 30px; }
+  .page-packages h1 > .badge,
+  .page-myaccount h1 > .badge {
+    margin-right: 10px; }
 
 .page-packages h2,
 .page-myaccount h2 {
@@ -2156,6 +2159,9 @@ fieldset[disabled] .twitter-typeahead .tt-input {
 .page-packages hr {
   margin-top: 70px;
   margin-bottom: 70px; }
+
+.page-packages .section-payment h2 {
+  margin-bottom: 10px; }
 
 @media (max-width: 767px) {
   .page-packages {
