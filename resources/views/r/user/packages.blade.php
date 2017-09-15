@@ -55,15 +55,15 @@
 						@if($userPayPlan->id == $payment_plan->id)
 							<section id="plan{{$payment_plan->id}}" class="price-item active"> 
 								<div class="alert alert-info" role="alert">
-									<div>Your current Plan</div> 
+									<h2 class="alert-title">Your current Plan</h2> 
 									@if($payment_plan->price > 0)
-										<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">Cancel payment plan</a>
+										<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&ra	uo;Cancel plan</a>
 									@endif
 								</div>
 						@else
 							<section id="plan{{$payment_plan->id}}" class="price-item" data-plan-id="{{$payment_plan->id}}"> 
 								<div class="alert alert-info" role="alert">
-									Your new Plan
+									<h2 class="alert-title">Your new Plan</h2>
 								</div>
 						@endif
 							<!-- activate current selected package if possible -->

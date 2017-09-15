@@ -2475,6 +2475,9 @@ form.xl-inputs input, form.xl-inputs select {
   .page-packages .price-item.active .btn-cancel:hover {
     text-decoration: underline; }
 
+.page-packages .price-item.active .alert-title {
+  color: #fff; }
+
 .page-packages .price-item:hover:after {
   border: 10px solid #333; }
 
