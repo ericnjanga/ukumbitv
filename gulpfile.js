@@ -32,6 +32,7 @@ elixir(function(mix) {
 		//Local libraries
 		'/libs/jQuery.YoutubeBackground.js', 
 		'/libs/anchor-smooth-scroll.js', 
+		'/libs/ng-password.js', //<-- Angularjs password comparison directive
 		//main js files
 		'main.js', 
 		'forms-validation.js'], 
