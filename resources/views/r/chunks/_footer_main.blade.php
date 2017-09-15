@@ -1,7 +1,7 @@
 <footer class="main-footer link-yellow-green-hover">
   <div class="footer-main">
    <div class="container">
-    <div class="row">
+    <nav class="row">
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 offset-xl-1 footer-top-item">
       <h4>{{l("About us")}}</h4>
       <ul class="footer-list">
@@ -49,7 +49,7 @@
        </div>
       </div>
      </div>
-    </div>
+    </nav>
    </div>
   </div> 
   <div class="copyright text-center">

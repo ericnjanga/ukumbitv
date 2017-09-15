@@ -8,8 +8,7 @@
 			<div class="global-content">
 				@if(isset($grandVideo))
 	      <div class="hero">
-	      	<img src="{{ $grandVideo->videoimage->imgHero }}" alt="{{ $grandVideo->title }}">
-	      	<!-- <p>{{ $grandVideo }}</p> -->
+	      	<img data-src="{{ $grandVideo->videoimage->imgHero }}" class="lazyload" alt="{{ $grandVideo->title }}"> 
 	      	<ul class="fast-links list-inline">
 	      		<li>
 	      			<a href="{{route('user.singleVideo', $grandVideo->watchid)}}" class="btn btn-block btn-cta1b">
@@ -31,7 +30,7 @@
 	        <h2>New Videos</h2> 
 	        <div class="list-horizontal-wrapper">
 	            @foreach($recent_videos as $video)
-	                @include('r.chunks._video_item')
+	              @include('r.chunks._video_item')
 	            @endforeach 
 	        </div> 
 	      </div>
@@ -41,7 +40,7 @@
 	          
 	          <div class="list-horizontal-wrapper">
 	              @foreach($trendings as $video)
-	                  @include('r.chunks._video_item')
+	                @include('r.chunks._video_item')
 	              @endforeach
 	          </div>
 	      </div>
@@ -57,7 +56,7 @@
 
 	              <div class="list-horizontal-wrapper">
 	                  @foreach($my_lists as $video)
-	                      @include('r.chunks._video_item')
+	                    @include('r.chunks._video_item')
 	                  @endforeach
 	              </div>
 	          @endif

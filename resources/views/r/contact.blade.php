@@ -60,7 +60,7 @@
 	                  <option>Leave a comment</option>
 	                  <option>Leave a Suggestion</option>
 	                  <option>Having an issue</option>
-	                  <option>Having a complain</option>
+	                  <option>Having a complaint</option>
 	                  <option>Other</option>
 	                </select>
 	              </div>
@@ -72,7 +72,7 @@
 					        <label>Enter your message <span>*</span></label>
 	                <textarea class="form-control" name="message" id="message-text" placeholder="Type your message here"></textarea>
 	              </div>
-					      <button id="btn-submit-contact" data-contact-route="{{route('user.send-contact-form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</button>
+					      <button id="btn-submit-contact" data-contact-route="{{route('user.send-contact-form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.submit')}}</button>
 	 
 	            {{--</form>--}}
 	        	</div><!-- col2 -->

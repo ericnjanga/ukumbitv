@@ -1,54 +1,8 @@
 
-
-// .main-header{
-//   height: 60px;
-//   background-color: #eeeeee;
-//   margin: 0 0 30px 0;
-//   .row {
-//   	display: -webkit-flex;
-// display: -moz-flex;
-// display: -ms-flex;
-// display: -o-flex;
-// display: flex;
-// -webkit-align-items: center;
-// -moz-align-items: center;
-// -ms-align-items: center;
-// -o-align-items: center;
-// align-items: center;
-//   }
-//   .frame-logo,
-//   .frame-search,
-//   .frame-useraccount {
-//     float: left;
-//   }
-//   .frame-logo { 
-//     width: 200px;
-//     padding-left: 20px;
-//     margin-left: 15px; 
-// 	  line-height: 0;  
-//     padding-top: 10px;
-//     padding-bottom: 10px;  
-// 	  img{
-// 	    width: 150px;
-// 	    height: auto; 
-// 		}
-//   }
-//   .frame-search { 
-//     margin-left: 30px; 
-//     width: calc(75% - 230px);
-//   }
-//   .frame-useraccount { 
-//   	width: calc(25% - 30px);
-//   }
-// }
-
-
-
-
-
 .ukb-main-header { 
 
   .nav-user-access {
+  	position: relative;
   	display: flex;
   	// border: 2px solid red; 
   	font-size: 12px;
@@ -61,6 +15,9 @@
   	.caret {
   		display: inline-block!important;
   		color: #000;
+  		position: absolute;
+	    top: 15px;
+	    right: -5px;
   	}
   }
 
@@ -72,11 +29,11 @@
   
 
 	.nav-user-tmb {
-		margin-left: 10px;
-		img {
-			height: 30px;
-	    width: 30px;
-	    border-radius: 50%;
+		margin-left: 5px;
+		margin-right: 10px;
+		.user-tmb {
+			font-size: 30px; 
+			color: #666;
 		}
 	}
   #link-update-package {

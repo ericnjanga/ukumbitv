@@ -1,138 +1,40 @@
 
 
 
-
-
 /**
- * Global variables
+ * Import:
+ * - Google play menu
+ * - utilities/cleafix
+ * - libs/typehead
  * --------------------------------------
 */
-$color-h: #424242;
-$width-GP-menu: 200px;
-$gap1: 20px;
-$gap1-2: 25px;
-$gap2: 30px;
-$gap3: 40px;
-$color-primary: #eeb33d;
-$color-darkred: #990033;
-$color-yellow-green : #798801;
+@import 'utilities/vars';
+@import 'utilities/clearfix';
+@import 'libs/icomoon'; 
+@import 'libs/typehead';
+@import 'libs/Google-play-menu';
+@import 'pages/mixed';
+@import 'pages/landing';
+@import 'pages/auth'; 
+@import 'pages/video-landing';
+@import 'pages/video-single';
+@import 'pages/terms-and-privacy';
+@import 'pages/categories';
+@import 'pages/packages';
+@import 'pages/account';
+@import 'pages/email-confirm';
+@import 'pages/404';
+@import 'global-components/main-layout';
+@import 'global-components/main-header';
+@import 'global-components/main-footer';
+@import 'global-components/form';
+@import 'modules/package-price';
 
 
 
 
 
 
-
-
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?mmzk1o');
-  src:  url('../fonts/icomoon.eot?mmzk1o#iefix') format('embedded-opentype'),
-  url('../fonts/icomoon.ttf?mmzk1o') format('truetype'),
-  url('../fonts/icomoon.woff?mmzk1o') format('woff'),
-  url('../fonts/icomoon.svg?mmzk1o#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-padlock:before {
-  content: "\e934";
-}
-
-.icon-paypal-big-logo:before {
-  content: "\e949";
-}
-
-.icon-angle-arrow-pointing-to-right:before {
-  content: "\e900";
-}
-.icon-angle-pointing-to-left:before {
-  content: "\e901";
-}
-.icon-back:before {
-  content: "\e902";
-}
-.icon-check-symbol:before {
-  content: "\e903";
-}
-.icon-computer-screen:before {
-  content: "\e904";
-}
-.icon-drop-down-arrow:before {
-  content: "\e905";
-}
-.icon-envelope:before {
-  content: "\e906";
-}
-.icon-facebook:before {
-  content: "\e907";
-}
-.icon-film:before {
-  content: "\e908";
-}
-.icon-film-roll:before {
-  content: "\e909";
-}
-.icon-folder:before {
-  content: "\e90a";
-}
-.icon-instagram:before {
-  content: "\e90b";
-}
-.icon-magnifying-glass:before {
-  content: "\e90c";
-}
-.icon-man-user:before {
-  content: "\e90d";
-}
-.icon-monitor-tablet-and-smartohone:before {
-  content: "\e90e";
-}
-.icon-next:before {
-  content: "\e90f";
-}
-.icon-pencil-edit-button:before {
-  content: "\e910";
-}
-.icon-phone-receiver:before {
-  content: "\e911";
-}
-.icon-play-arrow:before {
-  content: "\e912";
-}
-.icon-screen_play:before {
-  content: "\e913";
-}
-.icon-scroll-arrow-to-down:before {
-  content: "\e914";
-}
-.icon-television:before {
-  content: "\e915";
-}
-.icon-thumbs-down-hand:before {
-  content: "\e916";
-}
-.icon-thumbs-up:before {
-  content: "\e917";
-}
-.icon-twitter:before {
-  content: "\e918";
-}
-.icon-video:before {
-  content: "\e919";
-}
 
 * {
   margin: 0;
@@ -162,12 +64,7 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
+ 
 b, strong {
 	font-weight: 700;
 }
@@ -191,18 +88,7 @@ q:before, q:after {
   content: '';
   content: none;
 }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-html {
-  // height: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.15;
-}
+ 
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -213,16 +99,7 @@ body {
   line-height: 25px;
   //Font Smoothing
   -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-  // display: -webkit-box;
-  // display: -webkit-flex;
-  // display: -ms-flexbox;
-  // display: flex;
-  // -webkit-box-orient: vertical;
-  // -webkit-box-direction: normal;
-  // -webkit-flex-direction: column;
-  // -ms-flex-direction: column;
-  // flex-direction: column; 
+	-moz-osx-font-smoothing: grayscale; 
   text-rendering: optimizeLegibility;
 }
 
@@ -1851,36 +1728,6 @@ input:-webkit-autofill {
     color: rgba(238, 179, 61, 0.8);
   }
 }
-
-
-
-/**
- * Import:
- * - Google play menu
- * - utilities/cleafix
- * - libs/typehead
- * --------------------------------------
-*/
-@import 'utilities/clearfix';
-@import 'libs/typehead';
-@import 'libs/Google-play-menu';
-@import 'pages/mixed';
-@import 'pages/landing';
-@import 'pages/auth'; 
-@import 'pages/video-landing';
-@import 'pages/video-single';
-@import 'pages/terms-and-privacy';
-@import 'pages/categories';
-@import 'pages/packages';
-@import 'pages/account';
-@import 'pages/email-confirm';
-@import 'pages/404';
-@import 'global-components/main-layout';
-@import 'global-components/main-header';
-@import 'global-components/main-footer';
-@import 'global-components/form';
-@import 'modules/package-price';
-
 
 
 

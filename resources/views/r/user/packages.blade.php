@@ -12,7 +12,7 @@
 							<span class="badge">1</span>
 							{{trans('messages.home_plansec_title')}}</h1>
 						<p>{{trans('messages.packages_hero1_p')}}</p>
-					</header>
+											</header>
 
 					@if(Session::has('flash_success'))
 						<div class="alert alert-success"  >
@@ -59,11 +59,12 @@
 					@foreach($payment_plans as $indexKey => $payment_plan)
 						<!-- activate current selected package if possible -->
 							@if($userPayPlan->id == $payment_plan->id)
-								<section id="plan{{$payment_plan->id}}" class="price-item active">
+								<section id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="price-item active">
 									<div class="alert alert-info" role="alert">
 										<h2 class="alert-title">{{trans('messages.packages_yourcurrplan')}}</h2>
 										@if($payment_plan->price > 0)
-											<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;{{trans('messages.packages_cancelsubs')}}</a>
+											@if($checkStripe) <a class="btn-cancel" href="{{route('stripe.cancel-payment-plan')}}">{{trans('messages.packages_cancelsubs')}}</a> @elseif($checkPayPal)
+											<a class="btn-cancel" href="{{route('paypal.cancel-payment-plan')}}">{{trans('messages.packages_cancelsubs')}}</a> @endif
 										@endif
 									</div>
 									@else
@@ -71,7 +72,8 @@
 											<div class="alert alert-info" role="alert">
 												@if($payment_plan->price == 0)
 													<h2 class="alert-title">{{trans('messages.packages_returnguest')}}</h2>
-													<a class="btn-cancel" href="{{route('user.cancel-payment-plan')}}">&raquo;{{trans('messages.packages_cancelplan')}}</a>
+													@if($checkStripe) <a class="btn-cancel" href="{{route('stripe.cancel-payment-plan')}}">{{trans('messages.packages_cancelsubs')}}</a> @elseif($checkPayPal)
+														<a class="btn-cancel" href="{{route('paypal.cancel-payment-plan')}}">{{trans('messages.packages_cancelplan')}}</a> @endif
 												@else
 													<h2 class="alert-title">{{trans('messages.packages_nextplan')}}</h2>
 												@endif
@@ -80,7 +82,7 @@
 										@endif
 										<!-- activate current selected package if possible -->
 											<div class="price-title">
-												{{$payment_plan->name}} {{$payment_plan->id}}
+												{{$payment_plan->name}}
 												@if($payment_plan->price > 0)
 													<small>({{trans('messages.packages_monthlysubs')}})</small>
 												@endif
@@ -99,7 +101,7 @@
 												<div class="price"><span>$</span> {{$payment_plan->price}}</div>
 											@endif
 
-										<!-- <button id="plan{{$payment_plan->id}}" data-plan-id="{{$payment_plan->id}}" class="btn btn-block butn-white-trans select-plan-btn" onclick="selectPlan(this)">Select this</button> -->
+
 											@if($indexKey == 2)
 												<div class="best-text">
 													<div>{{trans('messages.best_choice')}}</div>
@@ -137,14 +139,22 @@
 								{{trans('messages.credit_card')}}
 							</h2>
 
+							@if(Session::has('status'))
+								<div class="alert alert-success"  >
+									<button type="button" class="close" data-dismiss="alert">×</button>
+									{{Session::get('status')}}
+								</div>
+							@endif
+
 
 							<div class="payment-form-block">
-								<form action="" method="" class="xl-inputs">
+								<form id="payment-form" action="{{route('stripe.create-card')}}" method="post" class="xl-inputs">
+									{{ csrf_field() }}
 									<div class="row">
 										<div class="col-md-12">
 											<div class="input-group">
 												<label>Card Number</label>
-												<input type="text" name="cardnumber" class="form-control">
+												<input type="text" data-stripe="number" class="form-control" required>
 												<div class="card-samples">
 													<div id="card-image-container-Visa" role="widget" aria-live="polite" name="card-image-creditCardType" class="card-image-Visa-disabled card-image " aria-selected="false" aria-hidden="true" aria-disabled="true">
 							              <span id="card-image-text-Visa" class="card-image-text-Visa sr-only">
@@ -165,7 +175,7 @@
 										<div class="col-md-4">
 											<div class="input-group">
 												<label for="expiry-month">Expiration (MM)</label>
-												<select name="expiry-month" id="expiry-month" class="form-control">
+												<select data-stripe="exp_month" id="expiry-month" class="form-control" required>
 													@for($i = 1; $i < 13; $i++)
 														<option value="{{$i}}">{{$i}}</option>
 												@endfor
@@ -178,7 +188,7 @@
 										<div class="col-md-4">
 											<div class="input-group">
 												<label for="expiry-year">Expiration (YYYY)</label>
-												<select name="expiry-year" id="expiry-year" class="form-control">
+												<select data-stripe="exp_year" required id="expiry-year" class="form-control">
 													@for($i = \Carbon\Carbon::now()->year; $i < \Carbon\Carbon::now()->addYears(20)->year; $i++)
 														<option value="{{$i}}">{{$i}}</option>
 												@endfor
@@ -191,7 +201,7 @@
 										<div class="col-md-4">
 											<div class="input-group">
 												<label for="cvv">CVV</label>
-												<input type="text" name="cvv" id="cvv" class="form-control">
+												<input type="text" data-stripe="cvc" id="cvv" class="form-control" required>
 											</div><!-- year -->
 										</div><!-- col -->
 									</div><!-- row -->
@@ -200,7 +210,7 @@
 										<div class="col-md-12">
 											<div class="input-group">
 												<label for="cardhlder-name">Cardholder Name</label>
-												<input type="text" name="cardhlder-name" id="cardhlder-name" class="form-control">
+												<input type="text" data-stripe="name" id="cardhlder-name" class="form-control" required>
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
@@ -209,8 +219,9 @@
 										<div class="col-md-12">
 											<div class="input-group">
 												<label>Country</label>
-												<select name="expiry-year" id="expiry-year" class="form-control">
-													<option value="">Select a country</option>
+												<select data-stripe="address_country" class="form-control" required>
+													<option value="usa">USA</option>
+													<option value="uk">UK</option>
 													<!-- option list -->
 													<!-- from current year up to 30 years -->
 												</select>
@@ -222,7 +233,7 @@
 										<div class="col-md-12">
 											<div class="input-group">
 												<label>State/Province/Region</label>
-												<input type="text" name="cardhlder-state" class="form-control">
+												<input type="text" data-stripe="address_state" class="form-control" required>
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
@@ -231,14 +242,14 @@
 										<div class="col-md-12">
 											<div class="input-group">
 												<label>Zip/Postal Code</label>
-												<input type="text" name="cardhlder-zip" class="form-control">
+												<input type="text" data-stripe="address_zip" class="form-control" required>
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
 
 									<div class="row section-submit">
 										<div class="col-md-12">
-											<button type="submit" class="btn btn-primary btn-block btn-lg btn-submit">Update payment method</button>
+											<button type="submit" id="update-pay-method-btn" class="btn btn-primary btn-block btn-lg btn-submit">Update payment method</button>
 										</div><!-- col -->
 									</div><!-- row -->
 								</form>
@@ -287,6 +298,14 @@
 
             $('.price-item.active').removeClass('active');
             $plan.addClass('active');
+
+            //if paymentplan is free disabled buttons
+            if(selectedPlan === 2) {
+                $('#btn-checkout-paypal, #update-pay-method-btn').prop('disabled', true);
+			} else {
+                $('#btn-checkout-paypal, #update-pay-method-btn').prop('disabled', false);
+			}
+
         }
 
 
@@ -305,5 +324,48 @@
 
         }
 
+	</script>
+
+	<script type="text/javascript">
+
+        Stripe.setPublishableKey("{{ config('services.stripe.key') }}");
+
+        $(function() {
+            var $form = $('#payment-form');
+            $form.submit(function(event) {
+                // Disable the submit button to prevent repeated clicks:
+                $form.find('#update-pay-method-btn').prop('disabled', true);
+
+                // Request a token from Stripe:
+                Stripe.card.createToken($form, stripeResponseHandler);
+
+                // Prevent the form from being submitted:
+                return false;
+            });
+        });
+
+        function stripeResponseHandler(status, response) {
+            // Grab the form:
+            var $form = $('#payment-form');
+
+            if (response.error) { // Problem!
+
+                // Show the errors on the form:
+                $form.find('.payment-errors').text(response.error.message);
+                $form.find('#update-pay-method-btn').prop('disabled', false); // Re-enable submission
+
+            } else { // Token was created!
+
+                // Get the token ID:
+                var token = response.id;
+
+                // Insert the token ID into the form so it gets submitted to the server:
+                $form.append($('<input type="hidden" name="stripeToken">').val(token));
+                $form.append($('<input type="hidden" name="selectedPlan">').val(selectedPlan));
+
+                // Submit the form:
+                $form.get(0).submit();
+            }
+        }
 	</script>
 @endsection

@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+config.css.autoprefix.options.browsers =  ['last 15 versions'] ;
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +12,33 @@ var elixir = require('laravel-elixir');
  |
  */
 
+//Development mode:
+//type: gulp
+
+//Production mode:
+//type: gulp --production (will also minify "css" and "js" files)
+
+
+
 elixir(function(mix) {
-    mix.sass(['style.scss', 'media.scss'],'resources/assets/css/scss.css').less(['menu.less'], 'resources/assets/css/less.css')
-        .styles(['/resources/assets/css/scss.css', 'resources/assets/css/less.css'],'public/r/css/style.css');
+	//Compile all "scss" files into a "style.css" file
+	mix.sass([
+        'resources/assets/sass/style.scss' 
+    ], 'public/r/css/style.css');
+
+    
+	//Concatenating local librairies and main js files 
+	mix.scripts([
+		//Local libraries
+		'/libs/jQuery.YoutubeBackground.js', 
+		'/libs/anchor-smooth-scroll.js', 
+		'/libs/ng-password.js', //<-- Angularjs password comparison directive
+		//main js files
+		'main.js', 
+		'forms-validation.js'], 
+	'public/js/app.js')
 });
+
+
+
+ 

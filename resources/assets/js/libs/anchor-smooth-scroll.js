@@ -1,3 +1,8 @@
+/**
+ **************************[smoothscroll.js]**************************
+ **************************[smoothscroll.js]**************************
+ * Created by admin on 15.08.2017.
+ */
 // Select all links with hashes
 $('a[href*="#"]')
   // Remove links that don't actually link to anything

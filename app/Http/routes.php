@@ -96,6 +96,10 @@ if(!defined('BANNER')) define('BANNER' , 'banner');
 
 if(!defined('WEB')) define('WEB' , 1);
 
+Route::post(
+    'stripe/webhook',
+    '\Laravel\Cashier\Http\Controllers\WebhookController@handleWebhook'
+);
 
 Route::get('select-payment-plan', 'UserController@selectPayPlan')->name('user.select-pay-plan');
 Route::get('/email/verification' , 'ApplicationController@email_verify')->name('email.verify');
@@ -533,10 +537,12 @@ Route::group([], function(){
     Route::get('/subscribe/paypal/plan/{id}', 'PaypalController@paypalRedirect')->name('paypal.redirect');
     Route::get('/subscribe/paypal/return', 'PaypalController@paypalReturn')->name('paypal.return');
     Route::get('/getplanlist', 'PaypalPlanController@getPlansList')->name('paypal.list');
-    Route::get('/cancel-payment-plan', 'PaypalController@cancelPaymentPlan')->name('user.cancel-payment-plan');
+    Route::get('/cancel-payment-plan', 'PaypalController@cancelPaymentPlan')->name('paypal.cancel-payment-plan');
 
     //STRIPE ROUTES
     Route::post('stripe/create/card', 'StripeController@createUserCard')->name('stripe.create-card');
+    Route::get('stripe/cancel-payment-plan', 'StripeController@cancelSubscription')->name('stripe.cancel-payment-plan');
+
     Route::get('payment', 'UserController@payment')->name('user.userpayment');
     Route::get('getcustomer', 'StripeController@getCustomer')->name('stripe.getcustomer');
 
