@@ -57,12 +57,12 @@
 							@endif
 	        		<form name="contactForm" action="{{route('user.send-contact-form')}}" method="POST">
 	              <div class="form-group select-wrap">
+					        <label for="category">How can we help? <span>*</span></label>
 	                <select id="q-category" class="form-control" name="category">
-	                  <option selected>Select a subject</option>
-	                  <option>Leave a comment</option>
-	                  <option>Leave a Suggestion</option>
-	                  <option>Having an issue</option>
-	                  <option>Having a complaint</option>
+	                  <option selected>Just want to leave a comment</option>
+	                  <option>I'm having an issue</option>
+	                  <option>I'm having a complaint</option>
+	                  <option>Just want to leave a suggestion</option>
 	                  <option>Other</option>
 	                </select>
 	              </div>
@@ -77,15 +77,15 @@
  
 
 								<!-- Email Address -->
-					      <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
+					      <!-- <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
 					        <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
 					        <input id="user-email" class="form-control" type="email" name="email" ng-model="user.email" required>
 					        <div ng-cloak ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</div> 
-					      </div>
+					      </div> -->
 
 
 	              <div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
-					        <label>Enter your message <span>*</span></label>
+					        <label for="message">Enter your message <span>*</span></label>
 	                <textarea class="form-control" name="message" id="message-text" placeholder="Type your message here" ng-minlength="8" ng-required="true"></textarea>
 					        <div ng-cloak ng-show="contactForm.message.$error.minlength" class="help-block">Enter a valid email.</div> 
 	              </div>
