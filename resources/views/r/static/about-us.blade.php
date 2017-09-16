@@ -54,7 +54,7 @@
       	<h2 class="text-center">The Team</h2>
 				<article class="col-md-4">
 					<figure>
-						<img src="http://via.placeholder.com/500x350" alt="" class="tmb img-responsive">
+						<img src="{{asset('r/img/team/Eric_0784.jpg')}}" alt="Eric Njanga, founder, CEO" class="tmb img-responsive">
 						<figcaption>
 							<b>Eric Njanga</b>
 							<span>Founder, CEO</span>
