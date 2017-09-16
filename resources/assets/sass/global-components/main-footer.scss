@@ -20,6 +20,16 @@
     font-weight: 400; 
   } 
 
+  .footer-list {
+  	a { 
+	    text-decoration: underline;
+	    &:hover {
+	    	text-decoration: none;
+	    	color: $color-yellow-green;
+	    }
+  	}
+  }
+
 	.footer-main {
 		padding-top: 34px;
 		padding-bottom: 34px;
