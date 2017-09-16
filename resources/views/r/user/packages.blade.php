@@ -139,7 +139,7 @@
 									{{ csrf_field() }}
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group" ng-class="{ 'has-error' : (paymentForm.card_number.$invalid && paymentForm.card_number.$dirty) }">
+											<div class="input-group" ng-class="{ 'has-error' : (paymentForm.card_number.$invalid && paymentForm.$dirty) }">
 												<label>Card Number</label>
 												<input type="text" name="card_number" ng-model="user.card_number" ng-minlength="4" data-stripe="number" class="form-control" required>
 												<div class="card-samples">
@@ -188,7 +188,7 @@
 										</div><!-- col -->
 
 										<div class="col-md-4">
-											<div class="input-group" ng-class="{ 'has-error' : (paymentForm.cvv.$invalid && !paymentForm.cvv.$pristine) }">
+											<div class="input-group" ng-class="{ 'has-error' : (paymentForm.cvv.$invalid && paymentForm.$dirty) }">
 												<label for="cvv">CVV</label>
 												<input type="text" data-stripe="cvc" name="cvv" ng-model="user.cvv" id="cvv" class="form-control" required>
 											</div><!-- year -->
