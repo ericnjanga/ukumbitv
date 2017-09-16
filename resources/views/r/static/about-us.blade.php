@@ -55,7 +55,7 @@
       <hr>
 
       <section class="row">
-      	<h2>The Team</h2>
+      	<h2 class="text-center">The Team</h2>
 				<article class="col-md-4">
 					<figure>
 						<img src="http://via.placeholder.com/500x350" alt="" class="tmb img-responsive">
