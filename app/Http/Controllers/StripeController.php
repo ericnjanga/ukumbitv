@@ -92,6 +92,11 @@ class StripeController extends Controller
             $suspendPayPal = $this->cancelPayPalPaymentPlan();
         }
 
+        $user = Auth::user();
+        $user->paypal = 0;
+        $user->save();
+
+
         return redirect()->route('user.package')
             ->with('status', 'The Payment information was successfully updated')
             ->with('suspendPayPal', $suspendPayPal);
