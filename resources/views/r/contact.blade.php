@@ -16,7 +16,9 @@
 			  </aside>
 
 			  <div class="col-md-9">
-	        <h1>{{trans('messages.contact')}}</h1>
+	        <header>
+	        	<h1>{{trans('messages.contact')}}</h1>
+	        </header>
 	        <div class="row">
 	        	<div class="col-md-5 contact-text">
 	        		<p>Fill free to ask questions</p>
