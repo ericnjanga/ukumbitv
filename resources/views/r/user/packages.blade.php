@@ -209,7 +209,7 @@
 										<div class="col-md-12">
 											<div class="input-group" ng-class="{ 'has-error' : paymentForm.country.$invalid && paymentForm.$dirty }"> 
 												<label>Country</label>
-												<input type="text" name="province" ng-model="user.country" data-stripe="address_state" class="form-control" required>
+												<input type="text" name="country" ng-model="user.country" data-stripe="address_state" class="form-control" required>
         								<div ng-cloak ng-show="paymentForm.country.$invalid && paymentForm.$dirty" class="help-block">Please enter your country.</div> 
 											</div>
 										</div><!-- col -->
