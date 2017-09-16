@@ -2,7 +2,7 @@
 @section('content')
   <div class="page-about">
     <div class="container">
-      <section class="row section1"> 
+      <section class="section1"> 
 	      <header class="text-center"> 
 	        <h1>About us</h1> 
 	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem nemo, sint autem atque suscipit minima vel exercitationem quisquam consequatur aut quibusdam quos quasi deleniti quia tempora quae officiis officia dicta!</p>
