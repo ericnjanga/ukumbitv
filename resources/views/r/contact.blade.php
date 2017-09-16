@@ -66,30 +66,25 @@
 	                  <option>Other</option>
 	                </select>
 	              </div>
-
-
-
-								<!-- <div class="form-group">
-					        <label>Enter your e-mail <span>*</span></label>
-					        <input id="user-email" type="email" name="email" class="form-control" required>
-					      </div> -->
-
+ 
  
 
 								<!-- Email Address -->
-					      <!-- <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
+					      <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
 					        <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
 					        <input id="user-email" class="form-control" type="email" name="email" ng-model="user.email" required>
 					        <div ng-cloak ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</div> 
-					      </div> -->
+					      </div>
+ 
+ 
 
-
-	              <div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
+								<div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
 					        <label for="message">Enter your message <span>*</span></label>
 	                <textarea class="form-control" name="message" id="message-text"  ng-model="user.message" placeholder="Type your message here" ng-minlength="8" ng-required="true"></textarea>
-					        <div ng-cloak ng-show="contactForm.message.$error.minlength" class="help-block">Enter a valid email.</div> 
+					        <div ng-cloak ng-show="contactForm.message.$error.minlength" class="help-block">Message too small! (Please enter at least 8 characters)</div> 
 	              </div>
 					      <button id="btn-submit-contact" data-contact-route="{{route('user.send-contact-form')}}" class="btn btn-block btn-cta1b btn-lg" ng-disabled="contactForm.$invalid">{{trans('messages.submit')}}</button>  
+					      
 	            </form>
 	        	</div><!-- col2 -->
 	        </div><!-- row -->	
