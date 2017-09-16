@@ -139,7 +139,7 @@
 									{{ csrf_field() }}
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group" ng-class="{ 'has-warning' : loginForm.password.$invalid && loginForm.password.$pristine,  'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+											<div class="input-group" ng-class="{ 'has-warning' : (loginForm.password.$invalid && loginForm.password.$pristine)  }">
 												<label>Card Number</label>
 												<input type="text" name="card_number" ng-model="user.card_number" data-stripe="number" class="form-control" required>
 												<div class="card-samples">
