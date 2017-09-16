@@ -20,6 +20,15 @@
     font-weight: 400; 
   } 
 
+  .footer-list {
+  	a { 
+	    text-decoration: underline;
+	    &:hover {
+	    	text-decoration: none;
+	    }
+  	}
+  }
+
 	.footer-main {
 		padding-top: 34px;
 		padding-bottom: 34px;
