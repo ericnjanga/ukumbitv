@@ -49,7 +49,7 @@ class PaypalPlanController extends Controller
 
         // Create a new billing plan
         $plan = new Plan();
-        $plan->setName('Special Payment Plan')
+        $plan->setName('VIP Payment Plan')
             ->setDescription('Monthly Subscription to the UkumbiTV')
             ->setType('infinite');
 
@@ -60,7 +60,7 @@ class PaypalPlanController extends Controller
             ->setFrequency('Month')
             ->setFrequencyInterval('1')
             ->setCycles('0')
-            ->setAmount(new Currency(array('value' => 3.99, 'currency' => 'USD')));
+            ->setAmount(new Currency(array('value' => 5.99, 'currency' => 'USD')));
 
         // Set merchant preferences
         $merchantPreferences = new MerchantPreferences();
