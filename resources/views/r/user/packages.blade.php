@@ -155,7 +155,7 @@
 													</div><!-- MasterCard -->
 												</div><!-- card samples -->
 
-        								<div ng-cloak ng-show="paymentForm.card_number.$invalid && paymentForm.$invalid && paymentForm.$dirty" class="help-block">Please enter your credit card number.</div> 
+        								<div ng-cloak ng-show="paymentForm.card_number.$invalid && paymentForm.$dirty" class="help-block">Please enter your credit card number.</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
@@ -197,40 +197,40 @@
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group" ng-class="{ 'has-error' : paymentForm.username.$invalid && paymentForm.$invalid && paymentForm.username.$dirty }"> 
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.username.$invalid && paymentForm.$dirty }"> 
 												<label for="cardhlder-name">Cardholder Name</label>
 												<input type="text" name="username" ng-model="user.username" data-stripe="name" id="cardhlder-name" ng-minlength="3" class="form-control" required>
-        								<div ng-cloak ng-show="paymentForm.username.$invalid && paymentForm.$invalid && paymentForm.$dirty" class="help-block">Please enter your name (as it is on the credit card), with at least 3 characters.</div> 
+        								<div ng-cloak ng-show="paymentForm.username.$invalid && paymentForm.$dirty" class="help-block">Please enter your name (as it is on the credit card), with at least 3 characters.</div> 
 											</div>
 										</div><!-- col --> 
 									</div><!-- row -->
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group" ng-class="{ 'has-error' : paymentForm.country.$invalid && paymentForm.$invalid && paymentForm.country.$dirty }"> 
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.country.$invalid && paymentForm.$dirty }"> 
 												<label>Country</label>
 												<input type="text" name="province" ng-model="user.country" data-stripe="address_state" class="form-control" required>
-        								<div ng-cloak ng-show="paymentForm.country.$invalid && paymentForm.$invalid && paymentForm.$dirty" class="help-block">Please enter your country.</div> 
+        								<div ng-cloak ng-show="paymentForm.country.$invalid && paymentForm.$dirty" class="help-block">Please enter your country.</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group" ng-class="{ 'has-error' : paymentForm.province.$invalid && paymentForm.$invalid && paymentForm.province.$dirty }"> 
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.province.$invalid && paymentForm.$dirty }"> 
 												<label>State/Province/Region</label>
 												<input type="text" name="province" ng-model="user.province" data-stripe="address_state" class="form-control" required>
-        								<div ng-cloak ng-show="paymentForm.province.$invalid && paymentForm.$invalid && paymentForm.$dirty" class="help-block">Please enter a province.</div> 
+        								<div ng-cloak ng-show="paymentForm.province.$invalid && paymentForm.$dirty" class="help-block">Please enter a province.</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group" ng-class="{ 'has-error' : paymentForm.postalcode.$invalid && paymentForm.$invalid && paymentForm.postalcode.$dirty }"> 
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.postalcode.$invalid && paymentForm.$dirty }"> 
 												<label>Zip/Postal Code</label>
 												<input type="text" name="postalcode" ng-model="user.postalcode" data-stripe="address_zip" class="form-control" required>
-        								<div ng-cloak ng-show="paymentForm.postalcode.$invalid && paymentForm.$invalid && paymentForm.$dirty" class="help-block">Please enter a Zip/Postal Code.</div> 
+        								<div ng-cloak ng-show="paymentForm.postalcode.$invalid && paymentForm.$dirty" class="help-block">Please enter a Zip/Postal Code.</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
