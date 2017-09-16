@@ -53,7 +53,7 @@ class StripeController extends Controller
         $me = Auth::user();
         $selectedPlanId = PaymentPlan::find($request->selectedPlan);
         if(!$selectedPlanId) {
-            return redirect()->back()->with('error', 'Something went wrong, try again later');
+            return redirect()->back()->with('flash_error', 'Something went wrong, try again later');
         }
 
 
@@ -81,7 +81,8 @@ class StripeController extends Controller
 
         } catch (\Exception $e) {
             // Catch any error from Stripe API request and show
-            return redirect()->back()->withErrors(['status' => $e->getMessage()]);
+//            return redirect()->back()->withErrors(['status' => $e->getMessage()]);
+            return redirect()->back()->with('flash_error', 'try later');
         }
         $userPlan = UserPaymentPlan::where('user_id', Auth::id())->first();
         $userPlan->payment_plan_id = $request->selectedPlan;
@@ -98,7 +99,7 @@ class StripeController extends Controller
 
 
         return redirect()->route('user.package')
-            ->with('status', 'The Payment information was successfully updated')
+            ->with('flash_success', 'The Payment information was successfully updated')
             ->with('suspendPayPal', $suspendPayPal);
     }
 
@@ -106,7 +107,7 @@ class StripeController extends Controller
     {
         Auth::user()->subscription('main')->cancel();
         return redirect()->route('user.package')
-            ->with('status', 'The Payment Plan was successfully suspended');
+            ->with('flash_success', 'The Payment Plan was successfully suspended');
 
     }
 
