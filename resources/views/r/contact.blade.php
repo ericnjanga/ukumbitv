@@ -55,7 +55,7 @@
 									{{$flash_success}} aaaa
 								</div>
 							@endif
-	        		<form name="contactForm" action="{{route('user.send-contact-form')}}" method="POST">
+	        		<form name="contactForm" action="{{route('user.send-contact-form')}}" method="POST" autocomplete="off" novalidate>
 	              <div class="form-group select-wrap">
 					        <label for="category">How can we help? <span>*</span></label>
 	                <select id="q-category" class="form-control" name="category">
