@@ -141,7 +141,7 @@
 										<div class="col-md-12">
 											<div class="input-group">
 												<label>Card Number</label>
-												<input type="text" data-stripe="number" class="form-control" required>
+												<input type="text" name="card_number" ng-model="user.card_number" data-stripe="number" class="form-control" required>
 												<div class="card-samples">
 													<div id="card-image-container-Visa" role="widget" aria-live="polite" name="card-image-creditCardType" class="card-image-Visa-disabled card-image " aria-selected="false" aria-hidden="true" aria-disabled="true">
 							              <span id="card-image-text-Visa" class="card-image-text-Visa sr-only">
@@ -154,6 +154,8 @@
 							              </span>
 													</div><!-- MasterCard -->
 												</div><!-- card samples -->
+
+        								<div ng-cloak ng-show="paymentForm.card_number.$error.required && paymentForm.$invalid" class="help-block">Please enter your credit card number.</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
