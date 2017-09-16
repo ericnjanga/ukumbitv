@@ -6,7 +6,7 @@
         <h1>About us</h1> 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem nemo, sint autem atque suscipit minima vel exercitationem quisquam consequatur aut quibusdam quos quasi deleniti quia tempora quae officiis officia dicta!</p>
       </header>
-      <article class="row">
+      <section class="row">
       	<div class="col-md-4">
       		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore at, quasi officiis vero distinctio voluptatibus dolor, dicta a repellendus ea soluta et obcaecati aut veniam. Numquam id ipsa quam odit.</p>
       	</div>
@@ -37,7 +37,37 @@
             </div>
           </div>
         </div> -->
-      </article>
+      </section>
+
+      <hr>
+
+      <section class="row">
+      	<h2>The Team</h2>
+				<article class="col-md-4">
+					<figure>
+						<img src="http://via.placeholder.com/500x350" alt="" class="tmb img-responsive">
+						<figcaption>
+							<b>Eric Njanga</b>
+							<span>Founder, CEO</span>
+						</figcaption>
+					</figure>
+					<p>Young and talented, he is the founder and CEO of this brand. He is an internet entrepreneur with a 10years experience as a web developer from Toronto ( Canada). He has a great passion for cinema, visual arts and technology. His biggest dream is to give a different view to the African cinema.</p>
+					<p>A big fan of Marvel's panther, Eric dreams to bring up successful fiction characters. As a responsible and serious man, he lives in Toronto with his wife and three children. What facinates him most is travelling accross Africa.</p>
+				</article>
+				<article class="col-md-4">
+					<figure>
+						<img src="http://via.placeholder.com/500x350" alt="" class="tmb img-responsive">
+						<figcaption>
+							<b>Joel Njanga</b>
+							<span>Chief of Technology</span>
+						</figcaption>
+					</figure>
+					<p>Equally young and talented, he is a technology director and senior advicer. He is also an Electrical engineer who successfully graduated from the university of Concordia ( Montréal Canada). Joel has been actively overseeing the developement of software for more than 500 fortune companies in the US. He has a great love for scientific fictions ( star wars, star trek). He so much dreams of creating home made African scientific fictions. Also very responsible, he lives in Washington ( USA) with his wife and two children.</p>
+				</article>
+				<article class="col-md-4">
+					
+				</article>
+      </section>
     </div>
   </div>
 @endsection
