@@ -119,7 +119,7 @@ class PaypalPlanController extends Controller
                 "total_required" => "yes"
             ];
 //            $planList = Plan::all($params, $this->apiContext);
-            $agree = Agreement::get('I-R5KSNJXRU9FA', $this->apiContext);
+            $agree = Agreement::get('I-4EY2V7DGPH9P', $this->apiContext);
 //            $plan = Plan::get('P-0JB09328YE923024WPFRHONQ', $this->apiContext);
 dd($agree);
 
