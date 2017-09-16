@@ -21,19 +21,15 @@
 	      	<div class="col-md-4"> -->
 	      		<h3>The Problem : Limited regulation, Little progress</h3>
 	      		<p>The film industry in some African countries is still undesirable and less regulated. This turns to obstruct it from reaching international standards thereby reducing it's chances to compete with other industries world wide. It has had a great negative impact on their productions, and has hinder local talents by preventing them from making a living out of their art.</p>
-	      	<!-- </div>
-	      	<div class="col-md-4"> -->
+	      	
 	      		<h3>The solution : Why not do it like Netflix ?</h3>
 	      		<p>It is not a secret and will neither be an exageration to say that Netflix has successfully brought back to life the home television business by creating a multi-billion dollar film industry, firstly by streaming Hollywood movies and secondly by indulging herself in her own original movies production. Ukumbi TV dreams same for the African cinema. We are taking a bold step ahead in nourishing local talented actors and producers.</p>
-	      		<ul>
+	      		<ul class="list-decimal">
 	      			<li>Firstly,Ukumbi TV streams African movies locally made by talented actors and producers of the continent.</li>
 	      			<li>The initial benefits will be re-invested in the production of the brand's own original movies.</li>
 	      			<li>From our benefits, we shall proceed into the establishment of local art schools, inorder to elevate the huge local talents Africa has and to further improve the quality so as to make the African cinema meet up competetively with international standards of film making.</li>
 	      		</ul>
-	      	<!-- </div> -->
-	      	<!-- <div class="col-md-4"> -->
-	      		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore at, quasi officiis vero distinctio voluptatibus dolor, dicta a repellendus ea soluta et obcaecati aut veniam. Numquam id ipsa quam odit.</p>
-	      	<!-- </div> -->
+	      	
       	</article><!-- row -->
       	<!-- 
         <div class="col-sm-12 col-md-9 col-lg-7 col-xl-6">

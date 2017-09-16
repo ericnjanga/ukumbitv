@@ -34,4 +34,21 @@
 			}			   
 		}
 	}
+
+	figure{
+		img {
+			margin-bottom: 10px;
+		}
+		b, span {
+			display: block;
+		}
+	}
+
+	.list-decimal {
+		list-style: decimal;
+    li {
+    	list-style: decimal;
+    	margin-left: 30px;
+    }
+	}
 }
