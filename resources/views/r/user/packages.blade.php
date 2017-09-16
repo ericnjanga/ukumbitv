@@ -14,12 +14,6 @@
 						<p>{{trans('messages.packages_hero1_p')}}</p>
 											</header>
 
-					@if(Session::has('flash_success'))
-						<div class="alert alert-success"  >
-							<button type="button" class="close" data-dismiss="alert">×</button>
-							{{Session::get('flash_success')}}
-						</div>
-					@endif
 					<div class="price-block">
 					{{--<div class="price-item">--}}
 					{{--<div class="price-title">Basic</div>--}}
@@ -138,13 +132,6 @@
 								<span class="badge">3</span>
 								{{trans('messages.credit_card')}}
 							</h2>
-
-							@if(Session::has('status'))
-								<div class="alert alert-success"  >
-									<button type="button" class="close" data-dismiss="alert">×</button>
-									{{Session::get('status')}}
-								</div>
-							@endif
 
 
 							<div class="payment-form-block">
@@ -278,6 +265,21 @@
 			</div><!-- "global-content -->
 		</div><!-- global-display -->
 	</div>
+
+	@if(Session::has('flash_success'))
+		<script>
+            window.onload=function(){
+                swal("Cool!", "{{Session::get('flash_success')}}", "success");
+            }
+		</script>
+	@endif
+	@if(Session::has('flash_error'))
+		<script>
+            window.onload=function(){
+                swal("Oops!", "{{Session::get('flash_error')}}", "error");
+            }
+		</script>
+	@endif
 @endsection
 
 @section('scripts')
