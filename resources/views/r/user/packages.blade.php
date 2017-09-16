@@ -199,7 +199,7 @@
 										<div class="col-md-12">
 											<div class="input-group" ng-class="{ 'has-error' : paymentForm.username.$invalid && paymentForm.$invalid }"> 
 												<label for="cardhlder-name">Cardholder Name</label>
-												<input type="text" name="username" ng-model="user.uername" data-stripe="name" id="cardhlder-name" ng-minlength="3" class="form-control" required>
+												<input type="text" name="username" ng-model="user.username" data-stripe="name" id="cardhlder-name" ng-minlength="3" class="form-control" required>
         								<div ng-cloak ng-show="paymentForm.username.$invalid && paymentForm.$invalid && paymentForm.$dirty" class="help-block">Please enter your name (as it is on the credit card), with at least 3 characters.</div> 
 											</div>
 										</div><!-- col --> 
