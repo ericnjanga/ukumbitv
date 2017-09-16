@@ -86,7 +86,7 @@
 
 	              <div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
 					        <label>Enter your message <span>*</span></label>
-	                <textarea class="form-control" name="message" id="message-text" placeholder="Type your message here" ng-minlength="8" required></textarea>
+	                <textarea class="form-control" name="message" id="message-text" placeholder="Type your message here" ng-minlength="8" ng-required="true"></textarea>
 					        <div ng-cloak ng-show="contactForm.message.$error.minlength" class="help-block">Enter a valid email.</div> 
 	              </div>
 					      <button id="btn-submit-contact" data-contact-route="{{route('user.send-contact-form')}}" class="btn btn-block btn-cta1b btn-lg" ng-disabled="contactForm.$invalid">{{trans('messages.submit')}}</button>  
