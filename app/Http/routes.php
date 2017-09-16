@@ -533,7 +533,7 @@ Route::group([], function(){
     Route::get('welcome-email/{id?}', 'Auth\AuthController@welcomeEmail')->name('user.welcome-email');
 
     //PAYPAL ROUTES
-    //Route::get('create_paypal_plan', 'PaypalPlanController@create_plan');
+    Route::get('create_paypal_plan', 'PaypalPlanController@create_plan');
     Route::get('/subscribe/paypal/plan/{id}', 'PaypalController@paypalRedirect')->name('paypal.redirect');
     Route::get('/subscribe/paypal/return', 'PaypalController@paypalReturn')->name('paypal.return');
     Route::get('/getplanlist', 'PaypalPlanController@getPlansList')->name('paypal.list');

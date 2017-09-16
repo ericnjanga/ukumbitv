@@ -50,7 +50,7 @@ class PaypalPlanController extends Controller
         // Create a new billing plan
         $plan = new Plan();
         $plan->setName('Special Payment Plan')
-            ->setDescription('Monthly Subscription to the UkumbiTV dev')
+            ->setDescription('Monthly Subscription to the UkumbiTV')
             ->setType('infinite');
 
         // Set billing plan definitions
