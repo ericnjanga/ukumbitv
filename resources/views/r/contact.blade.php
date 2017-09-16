@@ -1,6 +1,6 @@
 @extends('r.layouts.simple')
 @section('content')
-  <div class="page-tersm-and-privacy">
+  <div class="page-tersm-and-privacy pace-contact">
     <div class="container">
 
 			<div class="row">
@@ -46,13 +46,13 @@
 
 	        	</div><!-- col1 -->
 
-	        	<div class="col-md-5 col-md-offset-1">
-					@if(isset($flash_success))
-						<div class="alert alert-success"  >
-							{{--<button type="button" class="close" data-dismiss="alert">×</button>--}}
-							{{$flash_success}} aaaa
-						</div>
-					@endif
+	        	<div class="col-md-5 col-md-offset-1" ng-app="validationApp" ng-controller="mainController">
+							@if(isset($flash_success))
+								<div class="alert alert-success"  >
+									{{--<button type="button" class="close" data-dismiss="alert">×</button>--}}
+									{{$flash_success}} aaaa
+								</div>
+							@endif
 	        		{{--<form action="{{route('user.send-contact-form')}}" method="POST">--}}
 	              <div class="form-group select-wrap">
 	                <select id="q-category" class="form-control" name="category">
