@@ -134,8 +134,8 @@
 							</h2>
 
 
-							<div class="payment-form-block">
-								<form id="payment-form" action="{{route('stripe.create-card')}}" method="post" class="xl-inputs">
+							<div class="payment-form-block" ng-app="validationApp" ng-controller="mainController">
+								<form id="payment-form" name="paymentForm" action="{{route('stripe.create-card')}}" method="post" class="xl-inputs" autocomplete="off" novalidate>
 									{{ csrf_field() }}
 									<div class="row">
 										<div class="col-md-12">
@@ -186,18 +186,19 @@
 										</div><!-- col -->
 
 										<div class="col-md-4">
-											<div class="input-group">
+											<div class="input-group" ng-class="{ 'has-error' : loginForm.cvv.$invalid && !loginForm.$invalid }"> 
 												<label for="cvv">CVV</label>
-												<input type="text" data-stripe="cvc" id="cvv" class="form-control" required>
+												<input type="text" data-stripe="cvc" name="cvv" id="cvv" class="form-control" required>
 											</div><!-- year -->
 										</div><!-- col -->
 									</div><!-- row -->
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group">
+											<div class="input-group" ng-class="{ 'has-error' : loginForm.username.$invalid && !loginForm.$invalid }"> 
 												<label for="cardhlder-name">Cardholder Name</label>
-												<input type="text" data-stripe="name" id="cardhlder-name" class="form-control" required>
+												<input type="text" name="username" data-stripe="name" id="cardhlder-name" class="form-control" required>
+        								<div ng-cloak ng-show="loginForm.username.$invalid && !loginForm.$invalid" class="help-block">Please enter your name (as it is on the credit card).</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
@@ -218,25 +219,27 @@
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group">
+											<div class="input-group" ng-class="{ 'has-error' : loginForm.province.$invalid && !loginForm.$invalid }"> 
 												<label>State/Province/Region</label>
-												<input type="text" data-stripe="address_state" class="form-control" required>
+												<input type="text" name="province" data-stripe="address_state" class="form-control" required>
+        								<div ng-cloak ng-show="loginForm.province.$invalid && !loginForm.$invalid" class="help-block">Please enter a province.</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group">
+											<div class="input-group" ng-class="{ 'has-error' : loginForm.postalcode.$invalid && !loginForm.$invalid }"> 
 												<label>Zip/Postal Code</label>
-												<input type="text" data-stripe="address_zip" class="form-control" required>
+												<input type="text" name="postalcode" data-stripe="address_zip" class="form-control" required>
+        								<div ng-cloak ng-show="loginForm.postalcode.$invalid && !loginForm.$invalid" class="help-block">Please enter a Zip/Postal Code.</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
 
 									<div class="row section-submit">
 										<div class="col-md-12">
-											<button type="submit" id="update-pay-method-btn" class="btn btn-primary btn-block btn-lg btn-submit">Update payment method</button>
+											<button type="submit" id="update-pay-method-btn" class="btn btn-primary btn-block btn-lg btn-submit" ng-disabled="loginForm.$invalid">Update payment method</button>
 										</div><!-- col -->
 									</div><!-- row -->
 								</form>
