@@ -90,6 +90,8 @@
 					        <div ng-cloak ng-show="contactForm.message.$error.minlength" class="help-block">Enter a valid email.</div> 
 	              </div>
 					      <button id="btn-submit-contact" data-contact-route="{{route('user.send-contact-form')}}" class="btn btn-block btn-cta1b btn-lg" ng-disabled="contactForm.$invalid">{{trans('messages.submit')}}</button>
+
+					      <p>{{contactForm}}</p>
 	 
 	            </form>
 	        	</div><!-- col2 -->
