@@ -17,7 +17,17 @@
 	.section1 { 
 		h2{
 			font-size: 23px;
+			margin-top: 30px;
 			margin-bottom: 10px;
+			text-transform: uppercase;
+		}
+		article {
+			@media (min-width:992px){
+				column-count: 2;
+			}
+			@media (min-width:1200px){
+				column-count: 3;
+			}			   
 		}
 	}
 }

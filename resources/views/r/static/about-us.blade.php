@@ -7,12 +7,12 @@
 	        <h1>About us</h1> 
 	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem nemo, sint autem atque suscipit minima vel exercitationem quisquam consequatur aut quibusdam quos quasi deleniti quia tempora quae officiis officia dicta!</p>
 	      </header>
-      	<div>
+      	<article>
       		<!-- <article class="col-md-4"> -->
 	      		<h2>The Brand</h2>
 	      		<p>Drawn from her Swahilian origin « theatre », Ukumbi signifies « the show happening on the user's device ». Our main focus here is to embrace the Africain cultural heritage through our brand in its modern
 	context and without any fear nor doubt, « Ukumbi TV » after a great reflection is just the perfect brand's name.</p>
-	      	</article>
+	      	<!-- </article> -->
 	      	<!-- <div class="col-md-4"> -->
 	      		<h2>ORIGINS</h2>
 	      		<h3>The rise of African independent filmakers</h3>
@@ -34,7 +34,7 @@
 	      	<!-- <div class="col-md-4"> -->
 	      		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore at, quasi officiis vero distinctio voluptatibus dolor, dicta a repellendus ea soluta et obcaecati aut veniam. Numquam id ipsa quam odit.</p>
 	      	<!-- </div> -->
-      	</div><!-- row -->
+      	</article><!-- row -->
       	<!-- 
         <div class="col-sm-12 col-md-9 col-lg-7 col-xl-6">
           <div class="content-block">
