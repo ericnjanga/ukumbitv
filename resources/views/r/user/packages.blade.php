@@ -139,7 +139,7 @@
 									{{ csrf_field() }}
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group" ng-class="{ 'has-error' : (paymentForm.card_number.$invalid && !paymentForm.card_number.$pristine) }">
+											<div class="input-group" ng-class="{ 'has-error' : (paymentForm.card_number.$invalid && paymentForm.card_number.$dirty) }">
 												<label>Card Number</label>
 												<input type="text" name="card_number" ng-model="user.card_number" ng-minlength="4" data-stripe="number" class="form-control" required>
 												<div class="card-samples">
@@ -197,7 +197,7 @@
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group" ng-class="{ 'has-error' : paymentForm.username.$invalid && paymentForm.$invalid }"> 
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.username.$invalid && paymentForm.$invalid && paymentForm.username.$dirty }"> 
 												<label for="cardhlder-name">Cardholder Name</label>
 												<input type="text" name="username" ng-model="user.username" data-stripe="name" id="cardhlder-name" ng-minlength="3" class="form-control" required>
         								<div ng-cloak ng-show="paymentForm.username.$invalid && paymentForm.$invalid && paymentForm.$dirty" class="help-block">Please enter your name (as it is on the credit card), with at least 3 characters.</div> 
@@ -207,7 +207,7 @@
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group" ng-class="{ 'has-error' : paymentForm.country.$invalid && paymentForm.$invalid }"> 
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.country.$invalid && paymentForm.$invalid && paymentForm.country.$dirty }"> 
 												<label>Country</label>
 												<input type="text" name="province" ng-model="user.country" data-stripe="address_state" class="form-control" required>
         								<div ng-cloak ng-show="paymentForm.country.$invalid && paymentForm.$invalid && paymentForm.$dirty" class="help-block">Please enter your country.</div> 
@@ -217,7 +217,7 @@
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group" ng-class="{ 'has-error' : paymentForm.province.$invalid && paymentForm.$invalid }"> 
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.province.$invalid && paymentForm.$invalid && paymentForm.province.$dirty }"> 
 												<label>State/Province/Region</label>
 												<input type="text" name="province" ng-model="user.province" data-stripe="address_state" class="form-control" required>
         								<div ng-cloak ng-show="paymentForm.province.$invalid && paymentForm.$invalid && paymentForm.$dirty" class="help-block">Please enter a province.</div> 
@@ -227,7 +227,7 @@
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group" ng-class="{ 'has-error' : paymentForm.postalcode.$invalid && paymentForm.$invalid }"> 
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.postalcode.$invalid && paymentForm.$invalid && paymentForm.postalcode.$dirty }"> 
 												<label>Zip/Postal Code</label>
 												<input type="text" name="postalcode" ng-model="user.postalcode" data-stripe="address_zip" class="form-control" required>
         								<div ng-cloak ng-show="paymentForm.postalcode.$invalid && paymentForm.$invalid && paymentForm.$dirty" class="help-block">Please enter a Zip/Postal Code.</div> 
