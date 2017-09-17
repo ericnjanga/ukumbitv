@@ -7,7 +7,7 @@
 
 			<div class="global-content">
 				@if(isset($grandVideo))
-	      <div class="hero">
+	      <header class="hero">
 	      	<img data-src="{{ $grandVideo->videoimage->imgHero }}" class="lazyload" alt="{{ $grandVideo->title }}"> 
 	      	<ul class="fast-links list-inline">
 	      		<li>
@@ -23,19 +23,19 @@
 							</button> 
 	      		</li>
 	      	</ul>
-	      </div><!-- hero -->
+	      </header><!-- hero -->
 				@endif
 
-	      <div class="block-wrap">
+	      <section class="block-wrap">
 	        <h2>New Videos</h2> 
 	        <div class="list-horizontal-wrapper">
 	            @foreach($recent_videos as $video)
 	              @include('r.chunks._video_item')
 	            @endforeach 
 	        </div> 
-	      </div>
+	      </section>
 
-	      <div class="block-wrap">
+	      <section class="block-wrap">
 	          <h2>Popular Videos</h2>  
 	          
 	          <div class="list-horizontal-wrapper">
@@ -43,9 +43,9 @@
 	                @include('r.chunks._video_item')
 	              @endforeach
 	          </div>
-	      </div>
+	      </section>
 
-	      <div class="block-wrap">
+	      <section class="block-wrap">
 	          <h2>My List</h2>  
 	          @if($my_lists->isEmpty())
 	              <div class="block-msg">
@@ -60,16 +60,17 @@
 	                  @endforeach
 	              </div>
 	          @endif
-	      </div>
+	      </section>
 
-	      <div class="block-wrap">
+	      <section class="block-wrap">
 	          <h2>Liked Videos</h2>  
 	          
 	          <div class="block-msg">
 	              <div>No liked videos yet</div>
 	              <p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>
 	          </div>
-	      </div>
+	      </section>
+	      
 			</div><!-- global-content -->
     </div><!-- global-display -->
   </div>

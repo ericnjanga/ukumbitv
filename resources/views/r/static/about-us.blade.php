@@ -53,6 +53,24 @@
 					<p>Young and talented, he is the founder and CEO of this brand. He is an internet entrepreneur with a 10years experience as a web developer from Toronto ( Canada). He has a great passion for cinema, visual arts and technology. His biggest dream is to give a different view to the African cinema.</p>
 					<p>A big fan of Marvel's Black Panther, Eric dreams to bring up successful fiction characters. As a responsible and serious man, he lives in Toronto with his wife and three children. What facinates him most is travelling accross Africa.</p>
 				</article>
+				<article class="col-md-4">
+					<figure>
+						<img src="{{asset('r/img/team/Eric_0784.jpg')}}" alt="Eric Njanga, founder, CEO" class="tmb img-responsive">
+						<figcaption>
+							<b>Seraphine Beng</b>
+							<span>Chief Copywriter</span>
+						</figcaption>
+					</figure>
+					<ul class="list-inline">
+						<li>
+							<a href="https://www.linkedin.com/in/ericanjanga/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/ericnjanga/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						</li>
+					</ul>
+					<p>Born and raised up In Douala (Cameron), she is a very brilliant, talented and dynamic lady. Always very active when it comes to work.  She is the chief copywriter of this  TV brand. Academically, she is very studious and successfully obtained a masters degree In entrepreneuriat communication from the university of Douala (Cameron). She is a journalist, TV show  host and also do present events too. She loves reading, writing and travelling. She loves to associate herself with hard working people, those who are constantly involve in creating innovative stuffs, people who are in search of originality. She is a volunteer in so many projets, she fights so hard when it comes to realising her dreams. Her greatest dream is to own a purely entertainment TV station. She lives in Douala ( Cameron) and hopes to explore other nations with time.</p>
+				</article>
 				<!-- <article class="col-md-4">
 					<figure>
 						<img src="http://via.placeholder.com/500x350" alt="" class="tmb img-responsive">
