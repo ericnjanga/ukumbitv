@@ -25,9 +25,10 @@
 			color: #000;
     	margin-top: 10px;
 		}
-		article {
+		article { 
 			@media (min-width:992px){
 				column-count: 2;
+				column-gap: 50px;
 			}
 			@media (min-width:1200px){
 				column-count: 3;
