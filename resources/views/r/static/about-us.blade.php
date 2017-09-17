@@ -60,6 +60,14 @@
 							<span>Founder, CEO</span>
 						</figcaption>
 					</figure>
+					<ul class="list-inline">
+						<li>
+							<a href="https://www.linkedin.com/in/ericanjanga/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/ericnjanga/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+						</li>
+					</ul>
 					<p>Young and talented, he is the founder and CEO of this brand. He is an internet entrepreneur with a 10years experience as a web developer from Toronto ( Canada). He has a great passion for cinema, visual arts and technology. His biggest dream is to give a different view to the African cinema.</p>
 					<p>A big fan of Marvel's panther, Eric dreams to bring up successful fiction characters. As a responsible and serious man, he lives in Toronto with his wife and three children. What facinates him most is travelling accross Africa.</p>
 				</article>
