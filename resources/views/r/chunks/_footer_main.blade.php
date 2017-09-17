@@ -5,10 +5,10 @@
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 offset-xl-1 footer-top-item">
       <h4>{{l("About us")}}</h4>
       <ul class="footer-list">
-       <!-- <li><a href="{{route("user.about")}}">{{l("About Us")}}</a></li>
+      	<li><a href="{{route("user.about")}}">{{l("About Us")}}</a></li>
+       <!-- 
        <li><a href="{{route("user.jobs")}}">{{l("Jobs")}}</a></li>
-       <li><a href="{{route("user.contact")}}">{{l("Contact Us")}}</a></li> -->
-       <li>{{l("About Us")}}</li>
+       <li><a href="{{route("user.contact")}}">{{l("Contact Us")}}</a></li> --> 
        <li>{{l("Jobs")}}</li>
         <li><a href="{{route("user.contact")}}">{{l("Contact Us")}}</a></li>
       </ul>
