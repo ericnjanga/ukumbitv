@@ -37,6 +37,14 @@ elixir(function(mix) {
 		'main.js', 
 		'forms-validation.js'], 
 	'public/js/app.js')
+
+    
+	//Concatenating local librairies and main js files 
+	mix.scripts([
+		//Local libraries
+		'/libs/loadCSS.js', 
+		'/libs/cssrelpreload.js'], 
+	'public/js/loadCSSlib.js')
 });
 
 
