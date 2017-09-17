@@ -1,8 +1,10 @@
 /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 	(function(w){
 		"use strict";
+
+		alert('1?????');
 		/* exported loadCSS */
-		var loadCSS = function( href, before, media ){ alert('?????');
+		var loadCSS = function( href, before, media ){ alert('2?????');
 			// Arguments explained:
 			// `href` [REQUIRED] is the URL for your CSS file.
 			// `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
