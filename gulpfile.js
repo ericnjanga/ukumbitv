@@ -44,7 +44,7 @@ elixir(function(mix) {
 		//Local libraries
 		'/libs/loadCSS.js', 
 		'/libs/cssrelpreload.js'], 
-	'public/js/loadCSSlib.js')
+	'public/js/wwloadCSSlib.js')
 });
 
 
