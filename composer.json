@@ -18,7 +18,8 @@
         "vimeo/vimeo-api": "^1.2",
         "omnipay/omnipay": "~2.0",
         "guzzlehttp/guzzle": "~6.0",
-        "laravel/cashier": "~6.0"
+        "laravel/cashier": "~6.0",
+        "htmlmin/htmlmin": "^5.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

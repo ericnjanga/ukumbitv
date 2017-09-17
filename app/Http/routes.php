@@ -113,7 +113,7 @@ Route::post('/install/theme', 'InstallationController@theme_check_process')->nam
 
 Route::post('/install/settings', 'InstallationController@settings_process')->name('install.settings');
 
-Route::get('/test', 'ApplicationController@test')->name('test');
+Route::get('/testmin', 'UserController@test')->name('test');
 
 // Elastic Search Test
 

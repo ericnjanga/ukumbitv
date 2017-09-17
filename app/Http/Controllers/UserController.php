@@ -1675,4 +1675,9 @@ class UserController extends Controller {
         return response()->json(['title' => 'Hmm...', 'message' => 'Wrong current password', 'type' => 'error']);
     }
 
+    public function test()
+    {
+        return view('r.user.test');
+    }
+
 }
