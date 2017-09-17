@@ -54,7 +54,59 @@
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
   	<link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
   </noscript>
-  <script>
+  
+
+
+	<!-- Allow IE legacy browsers to understand HTML5 -->
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+	<!-- lazy loader for images (including responsive images) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js" async=""></script>
+</head>
+<body data-search-route="{{route('search-data')}}">
+ 	{{--FACEBOOK CODE--}}
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1900426896906624";
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+ 	{{--GOOGLE ANALYTICS CODE--}}
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-106334552-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+
+
+    @yield('layout')
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
 	/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 	(function(w){
 		"use strict";
@@ -186,43 +238,14 @@
 	<!-- Reducing render blocking CSS -->
 
 
-	<!-- Allow IE legacy browsers to understand HTML5 -->
-	<!--[if lt IE 9]>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<![endif]-->
+
+
+
+
+
+
+
 	
-	<!-- lazy loader for images (including responsive images) -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js" async=""></script>
-</head>
-<body data-search-route="{{route('search-data')}}">
- 	{{--FACEBOOK CODE--}}
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1900426896906624";
-          fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
- 	{{--GOOGLE ANALYTICS CODE--}}
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-106334552-1', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
-
-
-
-
-    @yield('layout')
-
-</body>
 	<!-- CDN libraries -->
 	<!-- CDN libraries -->
 	<!-- CDN libraries -->
