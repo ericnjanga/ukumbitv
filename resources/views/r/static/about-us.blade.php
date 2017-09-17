@@ -5,7 +5,7 @@
       <section class="section1"> 
 	      <header class="text-center"> 
 	        <h1>About us</h1> 
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem nemo, sint autem atque suscipit minima vel exercitationem quisquam consequatur aut quibusdam quos quasi deleniti quia tempora quae officiis officia dicta!</p>
+	        <p>At UkumbiTV, we're passionate about developing the African cinema to the highest international standards!</p>
 	      </header>
       	<article>
       		<!-- <article class="col-md-4"> -->
