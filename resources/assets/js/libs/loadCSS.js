@@ -2,9 +2,8 @@
 	(function(w){
 		"use strict";
 
-		alert('1?????');
 		/* exported loadCSS */
-		var loadCSS = function( href, before, media ){ alert('2?????');
+		var loadCSS = function( href, before, media ){
 			// Arguments explained:
 			// `href` [REQUIRED] is the URL for your CSS file.
 			// `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before

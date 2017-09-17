@@ -39,12 +39,12 @@ elixir(function(mix) {
 	'public/js/app.js')
 
     
-	//Concatenating local librairies and main js files 
-	mix.scripts([
-		//Local libraries
-		'/libs/loadCSS.js', 
-		'/libs/cssrelpreload.js'], 
-	'public/js/wwloadCSSlib.js')
+	// //Concatenating local librairies and main js files 
+	// mix.scripts([
+	// 	//Local libraries
+	// 	'/libs/loadCSS.js', 
+	// 	'/libs/cssrelpreload.js'], 
+	// 'public/js/wwloadCSSlib.js')
 });
 
 
