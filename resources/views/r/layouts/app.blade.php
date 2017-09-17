@@ -54,6 +54,12 @@
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
   	<link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
   </noscript>
+
+
+  <script id="loadcss">
+	  // load a CSS file just before the script element containing this code
+	  loadCSS( "{{asset('r/css/style.css')}}", document.getElementById("loadcss") );
+	</script>
   
 
 
