@@ -52,7 +52,7 @@
 
       <section class="row">
       	<h2 class="text-center">The Team</h2>
-				<article class="col-md-4">
+				<article class="col-md-4 col-md-offset-2">
 					<figure>
 						<img src="{{asset('r/img/team/Eric_0784.jpg')}}" alt="Eric Njanga, founder, CEO" class="tmb img-responsive">
 						<figcaption>
@@ -71,7 +71,7 @@
 					<p>Young and talented, he is the founder and CEO of this brand. He is an internet entrepreneur with a 10years experience as a web developer from Toronto ( Canada). He has a great passion for cinema, visual arts and technology. His biggest dream is to give a different view to the African cinema.</p>
 					<p>A big fan of Marvel's panther, Eric dreams to bring up successful fiction characters. As a responsible and serious man, he lives in Toronto with his wife and three children. What facinates him most is travelling accross Africa.</p>
 				</article>
-				<article class="col-md-4">
+				<!-- <article class="col-md-4">
 					<figure>
 						<img src="http://via.placeholder.com/500x350" alt="" class="tmb img-responsive">
 						<figcaption>
@@ -83,7 +83,7 @@
 				</article>
 				<article class="col-md-4">
 					
-				</article>
+				</article> -->
       </section>
     </div>
   </div>
