@@ -56,6 +56,8 @@
   </noscript>
 
 
+	
+	<script src="{{asset('js/wwloadCSSlib.js')}}"></script>
   <script id="loadcss">
 	  // load a CSS file just before the script element containing this code
 	  loadCSS( "{{asset('r/css/style.css')}}", document.getElementById("loadcss") );
@@ -112,7 +114,6 @@
 
 
 
-	<script src="{{asset('js/wwloadCSSlib.js')}}"></script>
 	<!-- Reducing render blocking CSS -->
 	<!-- Reducing render blocking CSS -->
 	<!-- Reducing render blocking CSS -->
