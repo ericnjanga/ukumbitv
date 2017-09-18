@@ -39,20 +39,13 @@
 		<!-- critical css -->
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 
-	  <!-- need to place some non critical css here -->
-
 	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,500i,700,900">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
 	  <link rel="stylesheet" href="{{asset('r/css/style.css')}}">
 	  <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
 	 
-		<!-- Reducing render blocking CSS -->
-		<!-- Reducing render blocking CSS -->
-		<!-- Reducing render blocking CSS -->
-	  
-
-
+		
 		<!-- Allow IE legacy browsers to understand HTML5 -->
 		<!--[if lt IE 9]>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -98,21 +91,19 @@
 	<!-- CDN libraries -->
 	<!-- CDN libraries -->
 	<!-- CDN libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" async></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js" async></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" async></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
   <!-- Payment platform (stripe) -->
-	<script src="https://js.stripe.com/v2/" async></script>
+	<script src="https://js.stripe.com/v2/"></script>
 	<!-- autocomplete librairy -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js" async></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js" async></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
   <!-- Alerts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js" async></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>  
 
 	<!-- Main JS file -->
-	<!-- Main JS file -->
-	<!-- Main JS file --> 
-	<script src="{{asset('js/app.js')}}" async></script>  
+	<script src="{{asset('js/app.js')}}"></script>  
 
 	@yield('scripts')
 
