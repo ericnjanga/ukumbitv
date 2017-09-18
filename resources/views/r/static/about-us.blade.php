@@ -54,9 +54,9 @@
 					<p>A big fan of Marvel's Black Panther, Eric dreams to bring up successful fiction characters. As a responsible and serious man, he lives in Toronto with his wife and three children. What facinates him most is travelling accross Africa.</p>
 				</article>
 				
-				<!-- <article class="col-md-4">
+				<article class="col-md-4">
 					<figure>
-						<img src="{{asset('r/img/team/Eric_0784.jpg')}}" alt="Eric Njanga, founder, CEO" class="tmb img-responsive">
+						<img src="{{asset('r/img/team/seraphine.jpgEric_0784.jpg')}}" alt="Seraphine Beng, Chief Copywriter" class="tmb img-responsive">
 						<figcaption>
 							<b>Seraphine Beng</b>
 							<span>Chief Copywriter</span>
@@ -71,7 +71,7 @@
 						</li>
 					</ul>
 					<p>Born and raised up In Douala (Cameron), she is a very brilliant, talented and dynamic lady. Always very active when it comes to work.  She is the chief copywriter of this  TV brand. Academically, she is very studious and successfully obtained a masters degree In entrepreneuriat communication from the university of Douala (Cameron). She is a journalist, TV show  host and also do present events too. She loves reading, writing and travelling. She loves to associate herself with hard working people, those who are constantly involve in creating innovative stuffs, people who are in search of originality. She is a volunteer in so many projets, she fights so hard when it comes to realising her dreams. Her greatest dream is to own a purely entertainment TV station. She lives in Douala ( Cameron) and hopes to explore other nations with time.</p>
-				</article> -->
+				</article>
 
 				<!-- <article class="col-md-4">
 					<figure>
