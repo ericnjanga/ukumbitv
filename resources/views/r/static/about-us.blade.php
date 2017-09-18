@@ -56,7 +56,7 @@
 				
 				<article class="col-md-4">
 					<figure>
-						<img src="{{asset('r/img/team/seraphine.jpgEric_0784.jpg')}}" alt="Seraphine Beng, Chief Copywriter" class="tmb img-responsive">
+						<img src="{{asset('r/img/team/seraphine.jpg')}}" alt="Seraphine Beng, Chief Copywriter" class="tmb img-responsive">
 						<figcaption>
 							<b>Seraphine Beng</b>
 							<span>Chief Copywriter</span>
