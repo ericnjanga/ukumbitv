@@ -7,6 +7,7 @@ use App\AdminVideo;
 use App\Director;
 use App\Like;
 use App\PaymentPlan;
+use App\Season;
 use App\TrialPeriod;
 use App\UserHistory;
 use App\UserPayment;
@@ -451,7 +452,13 @@ class UserController extends Controller {
         list($hours, $minutes, $seconds) = explode(':', $video->duration);
         $duration = $hours.'h '.$minutes.'min '.$seconds.'s';
 
-
+        $seasonsArr = [];
+        $episodes = Season::where('admin_video_id', $video->id)->where('season_id', 1)->get();
+        foreach ($episodes as $episode) {
+            array_push($seasonsArr, 'https://vimeo.com/'.$episode->title);
+        }
+        $seasonsArr = implode(',', $seasonsArr);
+//        $seasonsArr = 'https://vimeo.com/39050404,https://vimeo.com/39050404';
 
 
         return view('r.user.single-video')
@@ -472,6 +479,7 @@ class UserController extends Controller {
             ->with('tags', $tags)
             ->with('relatedVideos', $relatedVideos)
             ->with('payPlan', $flag)
+            ->with('episodesArr', $seasonsArr)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))
             ->with('directors', $directors);
