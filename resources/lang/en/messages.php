@@ -162,6 +162,7 @@ return array(
 	'free' => 'free',
 	'devices' => 'Devices',
 	'social_medias' => 'Social Medias',
+	'month' => 'month',
 
 	'message' => 'Message',
 	'upload_image' => 'Upload Image',
@@ -544,7 +545,7 @@ return array(
 	
 	'ratings' => 'Ratings',
 	'reviews' => 'Reviews',
-	'month' => 'month',
+	
 
 	'default_image' => 'Default image',
 	'other_image1' => 'Other Image 1',
