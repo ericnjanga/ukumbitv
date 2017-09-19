@@ -21,10 +21,7 @@
                             <thead>
                             <tr>
                                 <th>{{tr('id')}}</th>
-                                <th>{{tr('title')}}</th>
-                                <th>{{tr('category')}}</th>
-                                <th>M.Producer</th>
-                                <th>P.Agent</th>
+                                <th>Video title</th>
                                 <th>{{tr('action')}}</th>
                             </tr>
                             </thead>
@@ -32,15 +29,13 @@
                             <tbody>
                             @foreach($videos as $i => $video)
 
-                                <tr id="row{{$video->video_id}}">
+                                <tr id="row{{$video->id}}">
                                     <td>{{$i+1}}</td>
-                                    <td>{{substr($video->title , 0,25)}}...</td>
-                                    <td>{{$video->category_name}}</td>
-                                    <td>{{$video->producer_name}}</td>
-                                    <td>{{$video->agent_name}}</td>
+                                    <td>{{$video->title}}</td>
                                     <td>
-                                        <a href="edit-movie/{{$video->video_id}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <button class="btn btn-danger" onclick="return confirmDelete({{$video->video_id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                        <a href="{{route('admin.edit.episode', $video->id)}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add record"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                        <a href="{{route('admin.edit.episodes', [$video->id, 1])}}" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <button class="btn btn-danger" onclick="return confirmDelete({{$video->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                     </td>
                                 </tr>
                             @endforeach

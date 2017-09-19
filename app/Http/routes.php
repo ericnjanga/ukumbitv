@@ -323,8 +323,13 @@ Route::group(['prefix' => 'admin'], function(){
     //episodes
     Route::get('/episodes', 'AdminController@episodes')->name('admin.episodes');
     Route::get('/add/episode', 'AdminController@addEpisode')->name('admin.add.episode');
+    Route::get('/edit-season/{id}', 'AdminController@editEpisode')->name('admin.edit.episode');
+    Route::get('/edit-seasons/{id}/{sid}', 'AdminController@editEpisodes')->name('admin.edit.episodes');
     Route::post('/add/episode', 'AdminController@addEpisodeProcess')->name('admin.save.episode');
+    Route::post('/update/episode', 'AdminController@updateEpisode')->name('admin.updateone.episode');
     Route::post('edit-episode/update-episode', 'AdminController@updateEpisode')->name('admin.update.episode');
+    Route::get('/delete-seasons/{id}', 'AdminController@deleteEpisode')->name('admin.delete-episode');
+    Route::get('/edit-one-episode/{id}', 'AdminController@editOneEpisode')->name('admin.editOneEpisode');
 
     Route::post('episode-upload-image', ['as' => 'episode-upload-images', 'uses' =>'AdminController@postEpisodeUpload']);
     Route::post('add/episode-upload-image/delete', ['as' => 'episode-upload-remove', 'uses' =>'AdminController@deleteEpisodeUpload']);
@@ -545,6 +550,10 @@ Route::group([], function(){
 
     Route::get('payment', 'UserController@payment')->name('user.userpayment');
     Route::get('getcustomer', 'StripeController@getCustomer')->name('stripe.getcustomer');
+
+    //VIMEO ROUTES
+    Route::get('vimeo/videos', 'VimeoController@getVideos');
+    Route::get('vimeo/create-album', 'VimeoController@createAlbum');
 
 
 
