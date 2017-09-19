@@ -749,6 +749,8 @@ And to insure en exceptional delivery all this unique experience, we have create
 	'auth_enter_email'	=>	'Entrez votre e-mail', 
 	'auth_error_email'	=>	'Entrez une addresse email valide.', 
 	'auth_enter_password'	=>	'Entrez votre mot de passe', 
+	'auth_retype_password'	=>	'Re-taper le nouveau mot de passe', 
+	'auth_retypeerror_password'	=>	'Le mot de passe ne correspond pas.',
 	'auth_error_password1'	=>	'Votre mot de passe est requis.', 
 	'auth_error_password2'	=>	'Votre mot de passe est trop court.',  
 	'auth_error_password3'	=>	'Votre mot de passe doit contenir au moins 1 lettre minuscule, 1 lettre majuscule, 1 numéro, 1 caractère spécial.', 
@@ -867,6 +869,19 @@ And to insure en exceptional delivery all this unique experience, we have create
 
   //PRIVACY POLICY PAGE ...
   //----------------------------------- 
+
+
+
+
+
+  //GENERAL WORDS ...
+  //----------------------------------- 
+  'and' => 'et',
+  'msg_trial_ended' => 'Votre essai a pris fin',
+  'msg_upgrade' => 'Améliorez votre plan',
+  'website_title' => 'Plateforme de films africains noirs en ligne - films, séries web, documentaires, films animés, émissions télévisées, spectacles, événements, concerts et plus',
+
+ 
 
 
 

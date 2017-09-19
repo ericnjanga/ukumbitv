@@ -770,6 +770,8 @@ return array(
 	'auth_enter_email'	=>	'Enter your e-mail', 
 	'auth_error_email'	=>	'Enter a valid email.', 
 	'auth_enter_password'	=>	'Enter your password', 
+	'auth_retype_password'	=>	'Re-Type New Password', 
+	'auth_retypeerror_password'	=>	'Password doesn’t match.', 
 	'auth_error_password1'	=>	'You password is required.', 
 	'auth_error_password2'	=>	'Password is too short.',  
 	'auth_error_password3'	=>	'Your assword should contain at least 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character.', 
@@ -871,7 +873,7 @@ return array(
   'and' => 'and',
   'msg_trial_ended' => 'Your trial has ended',
   'msg_upgrade' => 'Ugrade your plan',
-  'website_title' => 'Online african movie platform - movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more',
+  'website_title' => 'Online black african movie platform - movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more',
 
  
 
