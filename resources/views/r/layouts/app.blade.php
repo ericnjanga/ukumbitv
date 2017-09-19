@@ -82,8 +82,9 @@
 
 
 		<div style="border:30px solid purple; font-size:40px;">
+			 
 			<?php
-				$locale = substr($request->server('HTTP_ACCEPT_LANGUAGE'), 0, 2);
+				$locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
 				echo $locale;
 				?>
