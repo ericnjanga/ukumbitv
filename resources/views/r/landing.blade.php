@@ -62,14 +62,18 @@
                   <!-- <div class="price upper">{{$payment_plan->price == '0'?'Free':'$ '.$payment_plan->price}}</div> -->
                   
 									@if($payment_plan->price == '0') 
-										<!-- <div class="price upper">{{trans('messages.free')}}</div> -->
-										<a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a> 
+										<div class="price upper">{{trans('messages.free')}}</div>
 									@else 
 										<div class="price upper">{{$payment_plan->price}}<small>/{{trans('messages.month')}}</small></div>
 									@endif 
                 </section>
               @endforeach 
             </div> 
+
+            <div class="text-center">
+            	<h3>Not yet a member?</h3> 
+							<a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a> 
+            </div>
           </div>
         </div>
       </div> 
