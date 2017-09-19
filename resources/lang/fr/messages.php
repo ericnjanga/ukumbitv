@@ -752,8 +752,20 @@ And to insure en exceptional delivery all this unique experience, we have create
 	'auth_error_password1'	=>	'Votre mot de passe est requis.', 
 	'auth_error_password2'	=>	'Votre mot de passe est trop court.',  
 	'auth_error_password3'	=>	'Votre mot de passe doit contenir au moins 1 lettre minuscule, 1 lettre majuscule, 1 numéro, 1 caractère spécial.', 
-	'auth_signup'	=>	'Vous enregistrer',   
-	'auth_policy_check1'	=>	'En cliquant sur Inscription, j’accepte le',  
+	'auth_signup'	=>	'S’enregistrer',   
+	'auth_policy_check1'	=>	'En cliquant sur Inscription, j’accepte le', 
+
+
+
+
+
+
+
+
+  //PASSWORD Reset PAGE (AUTH) ...
+  //----------------------------------- 
+	'preset_h1'	=>	'Réinitialiser le mot de passe',
+	'preset_wewill'	=>	'Nous vous enverrons un nouveau mot de passe sur votre e-mail', 
 
 
 

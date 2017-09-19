@@ -2,7 +2,7 @@
 @section('content')
     <div class="page-auth" ng-app="validationApp" ng-controller="mainController">
         <div class="text-center">
-            <h1>Password Reset</h1>
+            <h1>{{trans('messages.preset_h1')}}</h1>
         </div>
 
         <form name="resetPasswordForm" action="{{ url('password/reset') }}" method="POST" autocomplete="off" novalidate>

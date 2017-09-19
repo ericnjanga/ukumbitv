@@ -784,6 +784,18 @@ return array(
 
 
 
+
+  //PASSWORD Reset PAGE (AUTH) ...
+  //----------------------------------- 
+	'preset_h1'	=>	'Reset password',
+	'preset_wewill'	=>	'We will send new password on your e-mail',
+
+
+
+
+
+
+
 //videos ......
   'Similar_Videos' => 'Similar Videos',
   'There_is_no_videos' => 'There is no videos',
