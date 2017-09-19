@@ -51,7 +51,7 @@
 						</li>
 					</ul>
 					<p>Young and talented internet entrepreneur with a 10years experience as a web developer from Toronto (Canada). He has a great passion for cinema, visual arts and technology. His biggest dream is to give a different view to the African cinema.</p>
-					<p>A big fan of <a href="http://marvel.com/characters/5/black_panther" target="_blank">Marvel's Black Panther</a> , Eric dreams to bring up successful fiction characters. As a responsible and serious man, he lives in Toronto with his wife and three children. What facinates him most is travelling accross Africa.</p>
+					<p>A big fan of <a href="http://marvel.com/characters/5/black_panther" target="_blank">Marvel's Black Panther</a>, Eric dreams to bring up successful fiction characters. As a responsible and serious man, he lives in Toronto with his wife and three children. What facinates him most is travelling accross Africa.</p>
 				</article>
 				
 				<article class="col-md-4">

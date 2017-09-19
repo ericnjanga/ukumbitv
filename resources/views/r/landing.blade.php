@@ -2,7 +2,7 @@
 @section('content')
   <div class="page-landing">
 
-    <section class="section text-center">
+    <!-- <section class="section text-center">
     	<a class="link-inner-redirect" name="section1"></a> 
     	<div class="container">
       	<div class="list-inline txt-presentation3">
@@ -33,8 +33,7 @@
 			<a class="btn-down btn-dark" href="#section2">
 		   	<span class="icon icon-scroll-arrow-to-down"></span>
 		  </a>
-    </section><!-- section -->   
-      
+    </section>  -->
        
 
   	<section class="bg1 section text-center">
@@ -82,7 +81,7 @@
       
       
 
-    <section class="section text-center">
+    <!-- <section class="section text-center">
     	<a class="link-inner-redirect" name="section3"></a> 
       <div class="container"> 
         <div class="row">
@@ -92,6 +91,6 @@
           </article>
         </div>
       </div>
-    </section><!-- section -->
+    </section>  -->
   </div><!-- page-landing -->
 @stop
