@@ -1552,7 +1552,7 @@ class AdminController extends Controller
         $adminVideo->genre_id = 0;
         $adminVideo->video = $uri;
         $adminVideo->trailer_video = 'trailer url';
-        $adminVideo->default_image = $small3;
+        $adminVideo->default_image = $small2;
         $adminVideo->banner_image = '';
         $adminVideo->ratings = 5;
         $adminVideo->reviews = 'review';
