@@ -26,17 +26,17 @@
       <div class="form-group" ng-class="{ 'has-error' : loginForm.email.$invalid && !loginForm.email.$pristine }">
         <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
         <input class="form-control" type="email" name="email" ng-model="user.email" required>
-        <div ng-cloak ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" class="help-block">Enter a valid email.</div> 
+        <div ng-cloak ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" class="help-block">{{trans('messages.auth_error_email')}}</div> 
       </div>
 
 
       <!-- Password -->
       <div class="form-group" ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
-        <label>Password</label>   
+        <label>{{trans('messages.auth_enter_password')}}</label>   
         <input type="password" name="password" class="form-control" ng-model="user.password" ng-minlength="6" required>
-        <div ng-cloak ng-show="loginForm.password.$dirty && loginForm.password.$viewValue.length==0" class="help-block">You password is required.</div> 
-        <div ng-cloak ng-show="loginForm.password.$error.minlength" class="help-block">Password is too short.</div>
-        <div ng-cloak ng-show="loginForm.password.$error.pattern" class="help-block">Your assword should contain at least 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character.</div>
+        <div ng-cloak ng-show="loginForm.password.$dirty && loginForm.password.$viewValue.length==0" class="help-block">{{trans('messages.auth_error_password1')}}</div> 
+        <div ng-cloak ng-show="loginForm.password.$error.minlength" class="help-block">{{trans('messages.auth_error_password2')}}</div>
+        <div ng-cloak ng-show="loginForm.password.$error.pattern" class="help-block">{{trans('messages.auth_error_password3')}}</div>
     	</div>   
 
 

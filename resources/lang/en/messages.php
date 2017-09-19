@@ -768,6 +768,11 @@ return array(
 	'auth_remember'	=>	'Remember Me',
 	'auth_password'	=>	'Password',
 	'auth_enter_email'	=>	'Enter your e-mail', 
+	'auth_error_email'	=>	'Enter a valid email.', 
+	'auth_enter_password'	=>	'Enter your password', 
+	'auth_error_password1'	=>	'You password is required.', 
+	'auth_error_password2'	=>	'Password is too short.',  
+	'auth_error_password3'	=>	'Your assword should contain at least 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character.', 
 	'auth_signup'	=>	'Register',   
 	'auth_policy_check1'	=>	'By clicking Sign Up, I agree to the',  
   //SING-IN/REGISTER PAGE ...
