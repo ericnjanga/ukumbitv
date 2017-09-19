@@ -276,21 +276,21 @@
 	              </div>
 	          
 	              <div class="form-group">
-	                  <label for="small_image2" class="">Preview image 1</label>
+	                  <label for="small_image2" class="">Preview image 1 *</label>
 	                  <input type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small2');">
 	                  <div id="previewArea3"></div>
 	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 510x800)</p>
 	              </div>
 	           
 	              <div class="form-group">
-	                  <label for="small_image3" class="">Preview image 2 *</label>
+	                  <label for="small_image3" class="">Preview image 2</label>
 	                  <input type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small3');">
 	                  <div id="previewArea4"></div>
 	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 510x650)</p>
 	              </div>
 	           
 	              <div class="form-group">
-	                  <label for="preview_image" class="">Preview image 3 *</label>
+	                  <label for="preview_image" class="">Preview image 3</label>
 	                  <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
 	                  <div id="previewArea5"></div>
 	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 450x450)</p>
@@ -479,8 +479,8 @@
         });
 
         function createMovie() {
-            if($('#small_image3').prop('files')[0] === undefined || $('#preview_image').prop('files')[0] === undefined) {
-                swal("Hmmm...", "Preview 2 and Preview 3 images is required", "error");
+            if($('#small_image2').prop('files')[0] === undefined) {
+                swal("Hmmm...", "Preview 1 is required", "error");
             } else {
 
             var tagsArr = $('.alltags').map(function(){
