@@ -160,6 +160,8 @@ return array(
 	'to'	=>	'To',
 	'date' => 'Date',
 	'free' => 'free',
+	'devices' => 'Devices',
+	'social_medias' => 'Social Medias',
 
 	'message' => 'Message',
 	'upload_image' => 'Upload Image',

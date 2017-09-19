@@ -140,6 +140,9 @@ return array(
 	'upgrade' => 'Upgrade',
 	'submit' 						=> 'Soumettre', 
 	'free' => 'gratuit',
+	'devices' => 'Appareils',
+	'social_medias' => 'Médias Sociaux',
+	'month' => 'mois',
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',
