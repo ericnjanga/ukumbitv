@@ -138,6 +138,7 @@ return array(
 	'change'	=> 	'Change',
 	'upgrade' => 'Upgrade',
 	'submit' 						=> 'Soumettre', 
+	'free' => 'gratuit',
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',
