@@ -1,6 +1,6 @@
 .page-landing { 
 	background: #333;
-	
+
 	.section {
 		$size: 90px;
 		position: relative;
@@ -18,16 +18,6 @@
 
 	.title {
 		margin-bottom: 30px;
-		// span {
-		// 	display: block;
-		// }
-		// .txt {
-		// 	line-height: 35px;
-  //   	margin-bottom: 10px;
-		// }
-		// .icon {
-		// 	font-size: 50px;
-		// }
 	}
  
 	.price-block {
@@ -101,6 +91,11 @@
 .landing-header .navbar {
 	position: relative;
   z-index: 10;
+}
+
+
+.landing-header__content{
+	border: 1px solid red;
 }
 
 

@@ -693,7 +693,7 @@ return array(
   //HOME PAGE ...
   //-----------------------------------
   //--Call to ation ..
-  'home_cta' => 'Essayez UkumbiTV gratuitement',
+  'home_cta' => 'Inscription Gratuite',
 
   //--middle section ..
   'home_midsec_title1' => 'Les meilleures productions',
@@ -739,6 +739,31 @@ And to insure en exceptional delivery all this unique experience, we have create
 	//...... ......
   'Search_placeholder' => 'Rechercher: Titres, personnes, tags',
   'review_help' => 'Les commentaires les plus utiles ont 100 mots ou plus',
+ 
+
+
+
+
+
+  //WELCOME EMAIL ...
+  //----------------------------------- 
+  'welcome_email_intromsg' => 'Vérifiez votre adresse e-mail', 
+  'welcome_email_title' => 'Bienvenue sur UkumbiTV',
+  'welcome_email_cantread1' => 'Si vous ne pouvez pas voir ce message',
+  'welcome_email_cantread2' => 'Visionnez-le&nbsp;dans&nbsp;votre&nbsp;navigateur',
+  'welcome_email_section1_h1' => 'Bienvenue sur UkumbiTV', 
+  'welcome_email_section1_p' => 'Préparez-vous à profiter des plus belles productions africaines: films, séries web, documentaires, films animés, émissions de télévision, spectacles, événements, concerts &amp; plus',
+  'welcome_email_cta1' => 'Regarder maintenant!',
+  'welcome_email_section2_h1' => 'Vos meilleurs films vous attendent!',
+  'welcome_email_section2_p' => 'Vous aimez de la comedie? du drame ou de l\'action? Nous avons un film pour vous!',
+  'welcome_email_contactus1' => 'Vos commentaires sont important! ',
+  'welcome_email_contactus2' => 'dites-nous ce que vous pensez!',
+  'welcome_email_section3_h3' => 'Améliorez votre expérience!',
+  'welcome_email_cta_watch1' => 'Visionnez maintenant!',
+  'welcome_email_copyright' => 'Droits d\'auteur',
+  'welcome_email_all_rights' => 'Tous&nbsp;droitss&nbsp;réservés.', 
+  'welcome_email_unsubscribe1' => 'Si vous ne souhaitez pas nous recevoir d\'emails, vous pouvez',
+  'welcome_email_unsubscribe2' => 'vous désabonner',
 
 
 
