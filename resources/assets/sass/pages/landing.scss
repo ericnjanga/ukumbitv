@@ -95,12 +95,19 @@
 
 
 .landing-header__content{
-	border: 1px solid red;
-  margin: 150px auto 0 auto;
-  max-width: 600px;
-  padding: 0 20px;
-  color: #fff;
+	// border: 1px solid red;
+  margin: 150px auto 0 auto; 
+  padding: 0 20px; 
   text-align: center; 
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+  	color: #fff;
+  	margin-bottom: 10px;
+	}
+  p {
+  	margin-bottom: 50px;
+  }
 }
 
 
