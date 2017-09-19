@@ -121,8 +121,9 @@ return array(
 	'password_confirmation' => 'Confirm Password', 
 
 	'help'	=>	'Help',
-	'contact' => 'Contact Us',
+	'contact_us' => 'Contact Us',
 	'about_us' => 'About Us',
+	'About_project' => 'About The Project',
 	'alittle_about_yourself' => 'A little about yourself',
 	'profile_update' => 'Profile Update',
 	'terms_conditions' => 'Terms and Conditions',
@@ -826,6 +827,14 @@ return array(
 
 
 
+  //HELP CENTRE PAGE ...
+  //----------------------------------- 
+  'HC_title' => 'Help center', 
+
+
+
+
+
   //PRIVACY POLICY PAGE ...
   //----------------------------------- 
   'PP_title' => 'Privacy policy',
@@ -900,6 +909,16 @@ return array(
   'registration_confirm_p2_1' => 'If you do not receive the email at',
   'registration_confirm_p2_2' => 'within an hour, we can',
   'registration_confirm_p2_3' => 'resend it to you',
+
+ 
+
+
+
+
+
+  //MAIN FOOTER ...
+  //----------------------------------- 
+  'main_footer' => 'Confirm your e-mail!',
 
 
  

@@ -3,26 +3,26 @@
    <div class="container">
     <nav class="row">
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 offset-xl-1 footer-top-item">
-      <h4>{{l("About us")}}</h4>
+      <h4></h4>
       <ul class="footer-list">
-      	<li><a href="{{route("user.about")}}">{{l("About Us")}}</a></li>
+      	<li><a href="{{route("user.about")}}">{{trans('messages.about_us)}}</a></li>
        <!-- 
-       <li><a href="{{route("user.jobs")}}">{{l("Jobs")}}</a></li>
-       <li><a href="{{route("user.contact")}}">{{l("Contact Us")}}</a></li> --> 
-       <li>{{l("Jobs")}}</li>
-        <li><a href="{{route("user.contact")}}">{{l("Contact Us")}}</a></li>
+       <li><a href="{{route("user.jobs")}}">{{trans('messages.about_us)}}</a></li>
+       <li><a href="{{route("user.contact")}}">{{trans('messages.contact_us)}}</a></li> --> 
+       <li>{{trans('messages.jobs)}}</li>
+        <li><a href="{{route("user.contact")}}">{{trans('messages.contact_us)}}</a></li>
       </ul>
      </div>
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 footer-top-item">
-      <h4>{{l("About The Project")}}</h4>
+      <h4>{{trans('messages.About_project)}}</h4>
       <ul class="footer-list">
        <!-- <li><a href="{{route("user.privacy_policy")}}">{{l("Privacy Policy")}}</a></li>
        <li><a href="{{route("user.terms-condition")}}">{{l("Terms of Use")}}</a></li>
        <li><a href="{{route("user.advertising")}}">{{l("Advertising")}}</a></li>
        <li><a href="{{route("user.help-center")}}">{{l("Help center")}}</a></li> -->
-       <li>{{l("Privacy Policy")}}</li>
-       <li>{{l("Terms of Use")}}</li>
-       <li>{{l("Help center")}}</li>
+       <li>{{trans('messages.PP_title)}}</li>
+       <li>{{trans('messages.tos_title)}}</li>
+       <li>{{trans('messages.HC_title)}}</li>
       </ul>
      </div>
      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 footer-top-item">

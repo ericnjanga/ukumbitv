@@ -120,8 +120,9 @@ return array(
 	'password_confirmation' => 'Confirm Password', 
 
 	'help'	=>	'Help',
-	'contact' => 'Contact Us',
+	'contact_us' => 'Contactez nous',
 	'about_us' => 'À propos',
+	'About_project' => 'À propos du roject',
 	'alittle_about_yourself' => 'Quelque chose vous concernant',
 	'profile_update' => 'Mise à jour du profile',
 	'terms_conditions' => 'Terms and Conditions',
@@ -790,6 +791,62 @@ And to insure en exceptional delivery all this unique experience, we have create
   'welcome_email_all_rights' => 'Tous&nbsp;droitss&nbsp;réservés.', 
   'welcome_email_unsubscribe1' => 'Si vous ne souhaitez pas nous recevoir d\'emails, vous pouvez',
   'welcome_email_unsubscribe2' => 'vous désabonner',
+
+
+
+
+
+
+
+
+
+  //TERMS OF USE PAGE ...
+  //----------------------------------- 
+  'tos_title' => 'Conditions d\'utilisation',
+
+  'tos_section1' => '<p>UkumbiTV provides a subscription service that allows our members to access movies and TV shows streamed over the Internet to certain Internet-connected computers and other devices.</p>',
+
+  'tos_section2' => '<p>The UkumbiTV service is provided to you by Mungo Digital Inc., a Canadian limited liability company. These Terms of Use govern your use of our service. As used in these Terms of Use, "UkumbiTV service", "our service" or "the service" means the service provided by UkumbiTV for discovering and watching UkumbiTV content, including all features and functionalities, recommendations and reviews, the website, and user interfaces, as well as all content and software associated with our service.</p>',
+
+  'tos_section3' => '<h2>Membership:</h2><p>Your UkumbiTV membership will continue month-to-month until terminated. To use the UkumbiTV service you must have Internet access and a modern web browser, and provide a current, valid, accepted method of payment, which you may update from time to time ("Payment Method"). Unless you cancel your membership before your monthly billing date, you authorize us to charge your next month&#146;/s membership fee to your Payment Method (see "Cancellation" below). You can find specific details regarding your UkumbiTV membership by visiting our website and clicking on the "Your Account" link available at the top of the pages of the UkumbiTV website under your profile name.</p>',
+
+  'tos_section4' => '<h3>Free Trials</h3><p>2.1. Your UkumbiTV membership may start with a free trial. The free trial period of your membership lasts for one week, or as otherwise specified during sign-up and is intended to allow new members and certain former members to try the service.</p><p>2.2. Free trial eligibility is determined by UkumbiTV at its sole discretion and we may limit eligibility to prevent free trial abuse. We reserve the right to revoke the free trial and put your account on hold in the event that we determine that you are not eligible. Members of households with an existing or recent UkumbiTV membership are not eligible. We may use information such as device ID, method of payment or an account email address used with an existing or recent UkumbiTV membership to determine eligibility. For combinations with other offers, restrictions may apply.</p><p>2.3. We will charge your Payment Method for your monthly membership fee at the end of the free trial period unless you cancel your membership prior to the end of the free trial period. To view the monthly membership price and end date of your free trial period, visit our website and click the "Billing details" link on the "Your Account" page.</p>',
+
+  'tos_section5' => '',
+
+  'tos_section6' => '',
+
+  'tos_section7' => '',
+
+  'tos_section8' => '',
+
+  'tos_section9' => '',
+
+  'tos_section10' => '',
+
+
+  //TERMS OF USE PAGE ...
+  //-----------------------------------  
+
+
+
+
+
+  //HELP CENTRE PAGE ...
+  //----------------------------------- 
+  'HC_title' => 'Centre d\'aide',
+
+
+
+
+
+  //PRIVACY POLICY PAGE ...
+  //----------------------------------- 
+  'PP_title' => 'Politique de confidentialité',
+
+  //PRIVACY POLICY PAGE ...
+  //----------------------------------- 
+
 
 
 
