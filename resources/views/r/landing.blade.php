@@ -70,8 +70,7 @@
               @endforeach 
             </div> 
 
-            <div class="text-center">
-            	<h3>Not yet a member?</h3> 
+            <div class="text-center"> 
 							<a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a> 
             </div>
           </div>

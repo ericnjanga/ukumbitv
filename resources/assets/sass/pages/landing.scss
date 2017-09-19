@@ -12,48 +12,54 @@
 		// }
 	}
 
-	.txt-presentation3 {
-	  display: -webkit-flex;
-	  display: -moz-flex;
-	  display: -ms-flex;
-	  display: -o-flex;
-	  display: flex;
-	  -webkit-justify-content: center;
-	  -moz-justify-content: center;
-	  -ms-justify-content: center;
-	  -o-justify-content: center;
-	  justify-content: center;
+	// .txt-presentation3 {
+	//   display: -webkit-flex;
+	//   display: -moz-flex;
+	//   display: -ms-flex;
+	//   display: -o-flex;
+	//   display: flex;
+	//   -webkit-justify-content: center;
+	//   -moz-justify-content: center;
+	//   -ms-justify-content: center;
+	//   -o-justify-content: center;
+	//   justify-content: center;
 
-  	@media (max-width: 994px){ 
-	  	flex-direction: column;
-	  	align-items: center;
-	  	.section-block {
-	  		margin-bottom: 50px;
-	  	}
-	  	.title {
-	  		margin-bottom: 0;
-	  		.icon {
-	  			line-height: 70px;
-	  		}
-	  	}
-	  	.txt {
-	  		margin: 0!important;
-	  	}
-  	}
+ //  	@media (max-width: 994px){ 
+	//   	flex-direction: column;
+	//   	align-items: center;
+	//   	.section-block {
+	//   		margin-bottom: 50px;
+	//   	}
+	//   	.title {
+	//   		margin-bottom: 0;
+	//   		.icon {
+	//   			line-height: 70px;
+	//   		}
+	//   	}
+	//   	.txt {
+	//   		margin: 0!important;
+	//   	}
+ //  	}
 
-	  > .section-block {
-		 	max-width: 350px;
-	  	@media (min-width: 995px){ 
-		  	margin-left: 30px;
-	    	margin-right: 30px;
-	  	}
-	  }
-	  .icon{
-	    // font-size: 70px;
-	    color: $color-darkred;
-	    line-height: 90px;
-	  }
-	}
+	//   > .section-block {
+	// 	 	max-width: 350px;
+	//   	@media (min-width: 995px){ 
+	// 	  	margin-left: 30px;
+	//     	margin-right: 30px;
+	//   	}
+	//   }
+	//   .icon{
+	//     // font-size: 70px;
+	//     color: $color-darkred;
+	//     line-height: 90px;
+	//   }
+	// }
+
+	
+  
+  .btn-cta1b{ 
+    font-size: 24px;
+  }
 
 	p {
 		line-height: 24px;
@@ -102,8 +108,7 @@
 }
 
 
-
-
+ 
 
 
 .landing-header {
@@ -119,10 +124,6 @@
   	height: 100%;
   	z-index: 1;
 		background-color: rgba(0,0,0,0.6);
-  }
-  
-  .btn-cta1b{ 
-    font-size: 24px;
   }
 
   #intro-video{
