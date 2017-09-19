@@ -33,13 +33,13 @@
 		            <ul class="list-inline" style="padding:0;">
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-movie" value="movies" @if($video->video_type == 'movies') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-movie" value="movies" @if($video->video_type == 'webseries') disabled @endif @if($video->video_type == 'movies') checked @endif>
 		            			Movie
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshows" @if($video->video_type == 'tvshows') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshows" @if($video->video_type == 'webseries') disabled @endif @if($video->video_type == 'tvshows') checked @endif>
 		            			TvShow
 		            		</label>
 		            	</li>
@@ -51,13 +51,13 @@
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-documentary" value="documentaries" @if($video->video_type == 'documentaries') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-documentary" value="documentaries" @if($video->video_type == 'webseries') disabled @endif @if($video->video_type == 'documentaries') checked @endif>
 		            			Documentary
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-anime" value="animations" @if($video->video_type == 'animations') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-anime" value="animations" @if($video->video_type == 'webseries') disabled @endif @if($video->video_type == 'animations') checked @endif>
 		            			Anime Movie
 		            		</label>
 		            	</li>
@@ -296,30 +296,30 @@
               	{{--images end--}}
               </fieldset>
 							<!-- IMAGES -->  
-  
+
           		<fieldset class="blk col-md-12 mb35">
 								<legend>Video file</legend>
 								
 	              <div class="form-group">
 	                  <label for="video-file" class="">{{tr('video')}}</label>
-	                  <input required type="file" id="video-file" accept="video/mp4" name="video-file">
+	                  <input required type="file" id="video-file" accept="video/mp4" name="video-file" @if($video->video_type == 'webseries') disabled @endif>
 	                  <p class="help-block">{{tr('video_validate')}}</p>
 	              </div>
 
                     <div class="form-group">
                         <label for="vimeoid" class="">Vimeo video ID ex: 227573689  </label>
-                        <input type="text" class="form-control" id="vimeoid" name="vimeoid" value="{{substr($video->video, 8)}}" placeholder="Vimeo video ID">
+                        <input type="text" class="form-control" id="vimeoid" name="vimeoid" value="{{substr($video->video, 8)}}" placeholder="Vimeo video ID" @if($video->video_type == 'webseries') disabled @endif>
                     </div>
           		</fieldset><!-- fieldset -->
-            </div><!-- col-md-6 --> 
+            </div><!-- col-md-6 -->
 
-						
+
 						<div class="col-md-12">
 	            <fieldset class="blk col-md-12 mb35">
 								<legend>Video Preview</legend>
 	              <iframe src="https://player.vimeo.com/video/{{$videoId}}" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	            </fieldset><!-- col-md-12 -->  
-						</div><!-- col-md-12 --> 
+						</div><!-- col-md-12 -->
 
 
  

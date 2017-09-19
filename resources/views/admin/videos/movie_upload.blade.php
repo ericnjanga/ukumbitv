@@ -298,7 +298,7 @@
               </fieldset>
 							{{--images end--}} 
   
-          		<fieldset class="blk col-md-12 mb35">
+          		<fieldset id="video-file-field" class="blk col-md-12 mb35">
 								<legend>Video file</legend>
 								
 	              <div class="form-group">
@@ -468,6 +468,15 @@
             freeInput: true
         });
 
+
+
+        $("input[type='radio']").click(function(){
+            if($("#video-type-webserie").is(":checked")) {
+                $('#video-file-field').css( 'display', 'none' );
+            } else {
+                $('#video-file-field').css( 'display', 'block' );
+            }
+        });
 
         function createMovie() {
             if($('#small_image3').prop('files')[0] === undefined || $('#preview_image').prop('files')[0] === undefined) {
