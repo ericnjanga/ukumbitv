@@ -723,6 +723,8 @@ return array(
   //HOME PAGE ...
   //----------------------------------- 
   //--Call to ation ..
+  'home_title1' => 'Enjoy the finest African productions',
+  'home_substitle1' => 'Unlimited high-definition videos at your fingertips',
   'home_cta' => 'Try UkumbiTV for free',
 
   //--middle section ..

@@ -27,8 +27,8 @@
 
   <article class="landing-header__content">    
     <!-- <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xl-5 offset-xl-1"> -->
-    <div class="title-white">{{l("Enjoy the finest African productions")}}</div>
-    <div class="title-white-add upper">{{l("Unlimited high-definition videos at your fingertips")}}</div>
+    <h1>{{trans('messages.home_title1')}}</h1>
+    <p>{{trans('messages.home_substitle1')}}</p>
     <div>
       <a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a>
     </div>
