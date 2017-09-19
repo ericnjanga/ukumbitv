@@ -80,6 +80,16 @@
 
 
 
+
+		<div style="border:30px solid purple; font-size:40px;">
+			<?php
+				echo $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+				?>
+		</div>
+
+
+
+
 	@yield('layout')
 
 
