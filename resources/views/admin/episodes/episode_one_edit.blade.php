@@ -30,63 +30,40 @@
         <div class="col-lg-12">
             <div class="box tab-content tab-content-movie-add">
 
-                    <div class="row">
+                <div class="row">
 
-                        <fieldset class="blk col-md-12 mb35">
-                            <legend>Season for {{$video->title}}</legend>
-
-
-                            <div class="form-group">
-                                <label for="season" class="">Select season</label>
-                                <select required id="season" name="season" class="form-control">
-                                    @for($i=1; $i<30; $i++)
-                                        <option value="{{$i}}" @if($selectedSeason == $i) selected @endif>Season {{$i}}</option>
-                                    @endfor
-                                </select>
-                            </div>
-
-                            @if(count($seasons) > 0)
-                                <table id="example1" class="table table-bordered table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>{{tr('id')}}</th>
-                                        <th>Video title</th>
-                                        <th>{{tr('action')}}</th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-                                    @foreach($seasons as $i => $season)
-
-                                        <tr id="row{{$season->id}}">
-                                            <td>{{$i+1}}</td>
-                                            <td>{{$season->title}}</td>
-                                            <td>
-                                                <a href="{{route('admin.editOneEpisode', $season->id)}}" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                <button class="btn btn-danger" onclick="return confirmDelete({{$season->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                    </tbody>
-                                </table>
-                            @else
-                                <h3 class="no-result">{{tr('no_video_found')}}</h3>
-                            @endif
+                    <fieldset class="blk col-md-12 mb35">
+                        <legend>Episode edit</legend>
 
 
+                        <div class="form-group">
+                            <label for="season" class="">Select season</label>
+                            <select required id="season" name="season" class="form-control">
+                                @for($i=1; $i<30; $i++)
+                                    <option value="{{$i}}" @if($episode->season_id == $i) selected @endif>Season {{$i}}</option>
+                                @endfor
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vimeoid" class="">Vimeo video ID ex: 227573689  </label>
+                            <input type="text" class="form-control" id="vimeoid" value="{{$episode->title}}" name="vimeoid" placeholder="Vimeo video ID">
+                        </div>
 
 
-                        </fieldset><!-- fieldset -->
+                    </fieldset><!-- fieldset -->
 
 
-                    </div><!-- row -->
+                </div><!-- row -->
 
 
             </div><!-- tab-content -->
         </div><!-- col-lg-12 -->
 
 
-
+        <div class="col-md-4 col-md-offset-8 form-group">
+            <button class="btn btn-submit btn-block" id="finishBtn" onclick="saveEpisode({{$episode->id}})">Save</button>
+        </div>
 
 
         <div class="col-md-12 form-group">
@@ -121,20 +98,35 @@
 
     <script type="text/javascript">
 
-        $('#season').on('change', function(){
-            console.log(this.value);
 
-            window.location = "/admin/edit-seasons/{{$video->id}}/"+this.value;
+        function saveEpisode(id) {
+
+            var fd = new FormData;
+            fd.append('_token', $('#csrf-token').val());
+            fd.append('season', $('#season').val());
+            fd.append('vimeoid', $('#vimeoid').val());
+            fd.append('id', id);
 
 
-        });
-
-        function confirmDelete(id) {
-
-            if (confirm("Remove video?")) {
-                window.location = "/admin/delete-seasons/"+id;
-            }
-
+            $.ajax({
+                type: 'POST',
+                url: "{{route('admin.updateone.episode')}}",
+                contentType: false,
+                processData: false,
+                data: fd,
+                dataType: 'html',
+                success: function(data){
+                    var rep = JSON.parse(data);
+                    console.log(rep);
+                    $( '.overlay' ).css( 'display', 'none' );
+                    swal("Great!", "Episode successfully updated", "success");
+                },
+                error: function (data) {
+                    $( '.overlay' ).css( 'display', 'none' );
+                    swal("Hmmm...", "Something went wrong, try later", "error");
+                    //alert('error '+data);
+                }
+            });
         }
 
 

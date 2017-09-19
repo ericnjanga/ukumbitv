@@ -1681,6 +1681,22 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function editOneEpisode($id)
+    {
+        $episode = Season::find($id);
+        return view('admin.episodes.episode_one_edit')->with('episode', $episode)->with('page', 'seasons');
+    }
+
+    public function updateEpisode(Request $request)
+    {
+        $episode = Season::find($request->id);
+        $episode->season_id = $request->season;
+        $episode->title = $request->vimeoid;
+        $episode->save();
+
+        return response()->json($episode);
+    }
+
 
     //langs
     public function langs(Request $request) {
