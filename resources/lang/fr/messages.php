@@ -727,6 +727,29 @@ And to insure en exceptional delivery all this unique experience, we have create
 
 
 
+
+  //SING-IN/REGISTER PAGE (AUTH) ...
+  //----------------------------------- 
+  'auth_signin' => 'Se Connecter',
+  'auth_signin_blurb' => 'The easiest way for you to sign in is with Facebook',
+  'auth_signin_fb' => 'Sign in with Facebook',
+  'auth_or' => 'or',
+  'auth_no_account' => 'Don’t have an account?',
+  'auth_have_account' => 'Already have an account?',
+
+	'auth_forgot_password'	=>	'Forgot Password?',
+	'auth_remember'	=>	'Remember Me',
+	'auth_password'	=>	'Password',
+	'auth_enter_email'	=>	'Enter your e-mail', 
+	'auth_signup'	=>	'Register',   
+	'auth_policy_check1'	=>	'By clicking Sign Up, I agree to the',  
+
+
+
+
+
+
+
 //videos ......
   'Similar_Videos' => 'Vidéos similaires',
   'There_is_no_videos' => 'Il n\'y a pas de vidéos',

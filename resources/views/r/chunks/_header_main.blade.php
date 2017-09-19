@@ -16,7 +16,7 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">  
 	      <ul class="nav navbar-nav navbar-right"> 
 	      	<li>
-	      		<a href="{{route('user.login.form')}}" class="btn btn-link btn-lg">{{l("Sign in")}}</a>
+	      		<a href="{{route('user.login.form')}}" class="btn btn-link btn-lg">{{trans('messages.auth_signin')}}</a>
 	      	</li> 
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
