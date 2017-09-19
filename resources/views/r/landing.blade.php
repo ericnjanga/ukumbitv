@@ -72,11 +72,7 @@
             </div> 
           </div>
         </div>
-      </div>
- 
-			<a class="btn-down" href="#section3">
-		   	<span class="icon icon-scroll-arrow-to-down"></span>
-		  </a>
+      </div> 
   	</section><!-- section -->
       
       
