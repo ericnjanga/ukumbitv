@@ -796,6 +796,7 @@ And to insure en exceptional delivery all this unique experience, we have create
   'Write_a_review' => 'Écrire une critique',
   'Play' => 'Jouer',
   'Add_to_list' => 'Ajouter à la liste',
+  'Add_to_list_error' => 'Ajouter à la liste',
   'share' => 'Partager',
   'Episodes' => 'Épisodes',
   'Cast_and_credits' => 'L\'équipe de le casting',

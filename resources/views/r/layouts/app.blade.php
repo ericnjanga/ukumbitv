@@ -54,7 +54,7 @@
 		<!-- lazy loader for images (including responsive images) -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js" async></script>
 	</head>
-	<body data-search-route="{{route('search-data')}}">
+	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}">
 	 	{{--FACEBOOK CODE--}}
 	  <div id="fb-root"></div>
 	  <script>(function(d, s, id) {

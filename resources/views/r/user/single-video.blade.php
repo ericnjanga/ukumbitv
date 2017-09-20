@@ -363,14 +363,13 @@
               data: fd,
               dataType: 'html',
               success: function(data){
-
-                  var rep = JSON.parse(data);
-                  swal({
-                      title: rep.title,
-                      text: rep.text,
-                      type: rep.type,
-                      html: true
-                  });
+                var rep = JSON.parse(data);
+                swal({
+                    title: rep.title,
+                    text: rep.text,
+                    type: rep.type,
+                    html: true
+                });
               },
               error: function(data){
                   swal("Hmm", "Something went wrong, try again pls", "error");
