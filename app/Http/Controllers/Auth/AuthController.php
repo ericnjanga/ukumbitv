@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 
 use App\User;
+use App\UserPaymentPlan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Validator;
@@ -115,9 +116,12 @@ class AuthController extends Controller
 
         if(!Setting::get('email_verify_control')) {
 
-            $User->is_verified = 1;
-
-            $User->save();
+            //$User->is_verified = 1;
+            $payPlan = new UserPaymentPlan();
+            $payPlan->user_id = $User->id;
+            $payPlan->payment_plan_id = 2;
+            $payPlan->save();
+            //$User->save();
         }
 
         $this->sendVerifyEmail($User);
@@ -183,6 +187,12 @@ class AuthController extends Controller
     {
         //dd(Session::get('user'));
         return view('r.user.auth.confirm-msg')->with('user', Session::get('user'))->with('flash_success', 'New email was sent successfully');
+    }
+
+    public function confirmEmailMsgPage()
+    {
+        //dd(Session::get('user'));
+        return view('r.user.auth.confirm-msg')->with('user', Auth::user())->with('flash_success', 'New email was sent successfully');
     }
 
     public function register(Request $request)
