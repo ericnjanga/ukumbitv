@@ -139,8 +139,14 @@ return array(
 	'remove'	=> 	'Remove',
 	'change'	=> 	'Change',
 	'upgrade' => 'Am&#233;liorez',
-	'submit' 						=> 'Soumettre', 
-	'free' => 'gratuit',
+	'submit' 						=> 'Soumettre',
+	'free' => 'gratuit', 
+	'save_changes' => 'Sauvegarder',
+	'full_name' => 'Nom complet',
+	'enter_curr_pass' => 'Mot de passe actuel',
+	'enter_new_pass' => 'Nouveau mot de passe', 
+
+	'toggle_navigation' => 'Changez la navigation',
 	'devices' => 'Appareils',
 	'social_medias' => 'Médias Sociaux',
 	'month' => 'mois',
@@ -188,7 +194,7 @@ return array(
 	'id'	=>	'ID',
 	'name'							=>	'Nom',
 	'username' => 'Nom d\'utilisateur',
-	'email'							=>	'Adresse electronique',
+	'email'							=>	'Adresse email',
 	'password'					=>	'Mot de passe',
 	'mobile'	=>	'Tel mobile',
 	'picture'	=>	'Picture',
@@ -797,6 +803,16 @@ And to insure en exceptional delivery all this unique experience, we have create
 	//...... ......
   'Search_placeholder' => 'Rechercher: Titres, personnes, mots cl&#233;s',
   'review_help' => 'Les commentaires les plus utiles ont 100 mots ou plus',
+
+ 
+
+
+
+
+
+  //MY ACCOUNT PAGE ...
+  //----------------------------------- 
+  'PMA_title' => 'Changez vos pr&#233;f&#233;rences',
  
 
 

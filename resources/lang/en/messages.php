@@ -161,6 +161,12 @@ return array(
 	'to'	=>	'To',
 	'date' => 'Date',
 	'free' => 'free',
+	'save_changes' => 'Save Changes',
+	'full_name' => 'Full name',
+	'enter_curr_pass' => 'Enter current password',
+	'enter_new_pass' => 'Enter new password',
+
+	'toggle_navigation' => 'Toggle navigation',
 	'devices' => 'Devices',
 	'social_medias' => 'Social Medias',
 	'month' => 'month',
@@ -900,6 +906,16 @@ return array(
   'packages_monthlysubs' => 'monthly subscription', 
   'packages_hero2' => 'Method of Payment',
   'packages_hero2_p' => 'Your payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.',
+
+ 
+
+
+
+
+
+  //MY ACCOUNT PAGE ...
+  //----------------------------------- 
+  'PMA_title' => 'Change your preferences',
  
 
 

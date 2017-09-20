@@ -5,7 +5,7 @@
     	@include('r.chunks._account_menu') 
 
     	<div class="global-content">
-    		<h1>Change your preferences</h1>
+    		<h1>{{trans('messages.PMA_title')}}</h1>
 	    	<div class="row">
 	    		<div class="col-sm-2">
 		        <div class="img-block">
@@ -17,15 +17,15 @@
 		        <form class="account-form-block">
 							<div class="page page-block"> 
 	                <div class="form-group">
-                    <label>Full name</label>
+                    <label>{{trans('messages.full_name')}}</label>
                     <input id="user-name" class="form-control" type="text" name="name" value="{{Auth::user()->name}}">
 	                </div>
 	                <div class="form-group">
-                    <label>E-mail</label>
+                    <label>{{trans('messages.email')}}</label>
                     <input id="user-email" class="form-control" type="email" name="email" value="{{Auth::user()->email}}">
 	                </div>
 
-	                <button id="btn-update-profile" data-update-profile="{{route('user.update-profile')}}"  class="btn btn-cta1b btn-lg">Save Changes</button>
+	                <button id="btn-update-profile" data-update-profile="{{route('user.update-profile')}}"  class="btn btn-cta1b btn-lg">{{trans('messages.save_changes')}}</button>
 	                <!-- <div class="form-group input-tel">
 	                    <label>Phone</label>
 	                    <input id="user-phone" class="form-control" type="number" name="usrtel" value="{{Auth::user()->mobile}}">
@@ -37,17 +37,17 @@
 
 	            <div class="page page-block"> 
                 <div class="form-group">
-                    <label>Enter current password</label>
+                    <label>{{trans('messages.enter_curr_pass')}}</label>
                     <input id="old-password" class="form-control" type="password" name="old_password" class="mypass">
                 </div>
                 <div class="form-group">
-                    <label>Enter new password</label>
+                    <label>{{trans('messages.enter_new_pass')}}</label>
                     <input id="new-password" class="form-control"  type="password" name="new_password" class="mypass">
                 </div>
                 {{--<div class="operations-pass">--}}
                     {{--<span id="show-pas" class="like-link">Show password</span>--}}
                 {{--</div>--}}
-                <button id="btn-update-password" data-update-password="{{route('user.update-password')}}" class="btn btn-cta1b btn-lg">Save new password</button> 
+                <button id="btn-update-password" data-update-password="{{route('user.update-password')}}" class="btn btn-cta1b btn-lg">{{trans('messages.save_changes')}}</button> 
 	            </div>
 
 		        </form>
