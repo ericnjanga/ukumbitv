@@ -103,6 +103,18 @@ return array(
 	'privacy_statement' => 'Déclaration de confidentialité',
 	'question_contactus' 	=> 'Des questions? Contactez nous',
 	'Copyright' 					=> 'Droits d\'auteur',
+	'credit_card' => 'Carte de Crédit',
+	'card_number' => 'numéro de carte',
+	'card_number_err_enter' => 'Entrez votre numéro de carte de crédit.',
+	'card_holder_name' => 'Nom sur la carte',
+	'card_holder_name_error' => 'Entrez votre nom (tel qu\'il figure sur la carte de crédit), avec au moins 2 caractères.',
+	'country'	=>	'Pays',
+	'country_error'	=>	'Veuillez entrer le pays.',
+	'state_province_region'	=> 'État/province/région',
+	'state_province_region_error'	=> 'Veuillez entrer la province (État ou région)',
+	'zip_Postal_code'	=> 'Zip/Code Postal',
+	'zip_Postal_code_error'	=> 'Veuillez entrer votre Zip ou code postal',
+	'update_payment_method'	=> 'Mettre à jour la méthode de paiement',
 
 	'profile'	=>	'Profile',
 	'account'	=> 	'Mon Compte',
@@ -949,6 +961,9 @@ And to insure en exceptional delivery all this unique experience, we have create
   'packages_monthlysubs' => 'abonnement mensuel', 
   'packages_hero2' => 'Méthode de paiement',
   'packages_hero2_p' => 'Votre méthode de paiement sera appliquée à votre prochain cycle de facturation. Votre adhésion mensuelle est facturée le premier jour de chaque période de facturation.',
+  'packages_creditcard_msg' => 'Vous pouvez utiliser directement utiliser votre carte de crédit',
+  'packages_paypal_msg' => 'Ou bien, vous pouvez utiliser Paypal simplement en suivant le lien ci-dessous',
+  'packages_paypal_cta' => 'Continuer avec Paypal',
 
  
 

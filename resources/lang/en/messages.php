@@ -104,6 +104,17 @@ return array(
 	'question_contactus' => 'Questions? Contact us',
 	'Copyright' => 'Copyright',
 	'credit_card' => 'Credit Card',
+	'card_number' => 'Card Number',
+	'card_number_err_enter' => 'Please enter your credit card number.',
+	'card_holder_name' => 'Cardholder Name',
+	'card_holder_name_error' => 'Please enter your name (as it is on the credit card), with at least 2 characters.',
+	'country'	=>	'Country',
+	'country_error'	=>	'Please enter the country.',
+	'state_province_region'	=> 'State/Province/Region',
+	'state_province_region_error'	=> 'Please enter a province (State or region).',
+	'zip_Postal_code'	=> 'Zip/Postal Code',
+	'zip_Postal_code_error'	=> 'Please enter a Zip/Postal Code.',
+	'update_payment_method'	=> 'Update payment method',
 
 	'profile'	=>	'Profile',
 	'account'	=> 	'Account',
@@ -917,6 +928,9 @@ return array(
   'packages_monthlysubs' => 'monthly subscription', 
   'packages_hero2' => 'Method of Payment',
   'packages_hero2_p' => 'Your payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.',
+  'packages_creditcard_msg' => 'You can use your credit card directly',
+  'packages_paypal_msg' => 'Or, you can use paypal by simply follow the link bellow',
+  'packages_paypal_cta' => 'Continue with Pay Pal',
 
  
 
