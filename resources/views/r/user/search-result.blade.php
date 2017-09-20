@@ -1,6 +1,6 @@
 @extends('r.layouts.user-search')
 @section('content')
-  <div class="container-fluid page-search">
+  <div class="container-fluid page page-search">
     @include('r.chunks._filter_video')
 
     <div class="global-display"> 
@@ -21,12 +21,12 @@
                   @include('r.chunks._filter_tags')
               </div>
           </div>
-          <!-- <div class="video-list-block-wrap">
+          <div class="video-list-block-wrap">
               <div class="js-filter-results">
                   @include('r.chunks._filter_results')
               </div>
-              <a href="" class="butn btn-cta1 btn-lg">Load more</a>
-          </div> -->
+              <!-- <a href="" class="butn btn-cta1 btn-lg">Load more</a> -->
+          </div>
       </div><!-- video-list-wrap --> 
     </div><!-- global-display -->
   </div>

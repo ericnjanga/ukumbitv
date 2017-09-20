@@ -9,7 +9,6 @@
 
 
 
-To activate a plan, start by picking a p
 
 <header class="ukb-main-header">
 	<nav class="navbar navbar-default">
@@ -30,12 +29,12 @@ To activate a plan, start by picking a p
 	    	<ul class="ukb-nav-videos nav navbar-nav">
 	        <li id="movies">
 						<a href="{{route('user.videotype', 'movies')}}"> 
-							Movies
+							{{trans('messages.movies')}}
 						</a> 
 					</li>
 					<li id="animations">
 						<a href="{{route('user.videotype', 'animations')}}"> 
-							Animation
+							{{trans('messages.animations')}}
 						</a> 
 					</li>  
 	      </ul>
