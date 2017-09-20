@@ -1,11 +1,11 @@
 @extends('r.layouts.user-search')
 @section('content')
-  <div class="container-fluid page page-search">
+  <div class="page page-search">
     @include('r.chunks._filter_video')
 
     <div class="global-display"> 
       <div class="video-list-wrap">
-          <div class="title">
+          <!-- <div class="title">
               <div class="butn-menu">
                   <span></span>
                   <span></span>
@@ -20,7 +20,10 @@
               <div class="filter-block">
                   @include('r.chunks._filter_tags')
               </div>
-          </div>
+          </div> -->
+          <h1>
+          	{{trans('messages.your_search_results')}}
+          </h1>
           <div class="video-list-block-wrap">
               <div class="js-filter-results">
                   @include('r.chunks._filter_results')

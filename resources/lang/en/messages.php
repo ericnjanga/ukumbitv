@@ -161,6 +161,7 @@ return array(
 	'to'	=>	'To',
 	'date' => 'Date',
 	'free' => 'free',
+	'your_search_results' => 'Your search results',
 	'save_changes' => 'Save Changes',
 	'full_name' => 'Full name',
 	'enter_curr_pass' => 'Enter current password',

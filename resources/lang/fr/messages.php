@@ -141,6 +141,7 @@ return array(
 	'upgrade' => 'Am&#233;liorez',
 	'submit' 						=> 'Soumettre',
 	'free' => 'gratuit', 
+	'your_search_results' => 'R&#233;sultats de votre recherche',
 	'save_changes' => 'Sauvegarder',
 	'full_name' => 'Nom complet',
 	'enter_curr_pass' => 'Mot de passe actuel',
