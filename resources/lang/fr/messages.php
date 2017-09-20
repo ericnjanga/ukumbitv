@@ -937,6 +937,24 @@ And to insure en exceptional delivery all this unique experience, we have create
 
 
 
+  //PACKAGES ...
+  //----------------------------------- 
+  'packages_hero1_p' => 'Pour activer un plan, commencez par choisir un paquet, puis choisissez un mode de paiement (vous pouvez annuler votre abonnement mensuel à tout moment).', 
+  'packages_yourcurrplan' => 'Votre paquet', 
+  'packages_cancelsubs' => 'Annuler l\'abonnement', 
+  'packages_returnguest' => 'Retour au paquet de base',
+  'packages_cancelplan' => 'Annuler le paquet', 
+  'packages_nextplan' => 'Votre prochain paquet',  
+  'packages_monthlysubs' => 'abonnement mensuel', 
+  'packages_hero2' => 'Méthode de paiement',
+  'packages_hero2_p' => 'Votre méthode de paiement sera appliquée à votre prochain cycle de facturation. Votre adhésion mensuelle est facturée le premier jour de chaque période de facturation.',
+
+ 
+
+
+
+
+
 
   
 );
