@@ -500,13 +500,13 @@ class UserController extends Controller {
             	if(App::getLocale()=='en'){
             		$result = [
                     'title' => 'Oops...',
-                    'text' => 'To add video int your <a href="/my-playlist">playlist</a>, you need to <a href="#">upgrade</a> the payment plan',
+                    'text' => 'To add a video to <b>your playlist</b>, you need to <a href="/package">upgrade the payment plan</a>',
                     'type' => 'warning'
                 ];
             	}else{
             		$result = [
                     'title' => 'Oooh...',
-                    'text' => 'Pour ajouter une video à votre <a href="/my-playlist">liste</a>, vous devez tout dabord <a href="#">améliorer</a> votre paquet',
+                    'text' => 'Pour ajouter une video à <b>votre liste</b>, vous devez tout dabord <a href="/package">améliorer votre paquet</a>',
                     'type' => 'warning'
                 ];
             	}
