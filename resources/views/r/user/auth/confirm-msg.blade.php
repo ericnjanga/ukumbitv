@@ -22,7 +22,7 @@
     		<li>
     			{{trans('messages.registration_confirm_p1')}} <b>{{$user->email}}</b>
     		</li>
-    		<li>{{trans('messages.registration_confirm_p2')}}</li> 
+    		<li>{!!trans('messages.registration_confirm_p2')!!}</li> 
     		<li>{{trans('messages.registration_confirm_p3')}}</li> 
     		<li>{{trans('messages.registration_confirm_p4')}} <i class="fa fa-smile-o" aria-hidden="true"></i></li>    	
     	</ul>

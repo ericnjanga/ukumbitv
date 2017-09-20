@@ -831,9 +831,9 @@ And to insure en exceptional delivery all this unique experience, we have create
   'registration_confirm_h1' => 'Marche &#224; suivre pour confirmer votre email!', 
   'registration_confirm_emailsent_alert' => 'Email de confirmation envoy&#233; avec succ&#232;s',
   'registration_confirm_p1' => 'Veuillez v&#233;rifier votre bo&#238;te de r&#233;ception &#224;: ',
-  'registration_confirm_p2' => 'Recherchez l\'email avec le titre "Bienvenue sur UkumbiTV"',
+  'registration_confirm_p2' => 'Recherchez l\'email avec le titre <b>"Bienvenue sur UkumbiTV"</b>',
   'registration_confirm_p3' => 'Ouvrez cet email et cliquez sur le bouton "Visionnez maintenant!"',
-  'registration_confirm_p4' => 'La confirmation de votre email s\'&#233;ffectuera au instantan&#233;ment et vous serez redirig&#233; sur la platforme UkumbiTV!',
+  'registration_confirm_p4' => 'La confirmation de votre email s\'&#233;ffectuera instantan&#233;ment et vous serez redirig&#233; sur la platforme UkumbiTV!',
   'registration_confirm_error1' => 'Toujours pas d\'email de confirmation? ',
   'registration_confirm_error2' => 'Veuillez suivre ce lien pour qu\'un autre vous soit envoy&#233; au plus vite!',
 
