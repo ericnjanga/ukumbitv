@@ -534,6 +534,7 @@ Route::group([], function(){
     Route::post('register', 'Auth\AuthController@register')->name('user.register.post');
 
     Route::get('confirm-email', 'Auth\AuthController@confirmEmailMsg')->name('user.confirm-email');
+    Route::get('confirm-user-email', 'UserController@confirmEmailMsgPage')->name('user.confirm-user-email');
     Route::get('resend-email/{id}', 'Auth\AuthController@resendVerifyEmail')->name('user.resend-confirm-email');
     Route::get('welcome-email/{id?}', 'Auth\AuthController@welcomeEmail')->name('user.welcome-email');
 

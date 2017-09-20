@@ -28,6 +28,7 @@
 	      </ul>
 
 	      <div id="frame-search" class="frame-search">
+			  @if(!Auth::user()->isVerified()) <a href="{{route('user.confirm-user-email')}}">Confirm</a> email please @endif
 	        <form action="{{route('search-all')}}" class="navbar-form navbar-left" method="post">  
 	          <div class="input-group">
 				      <input name="key" type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false">

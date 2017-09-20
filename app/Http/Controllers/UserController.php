@@ -148,13 +148,19 @@ class UserController extends Controller {
             return response()->json(['status' => 'error'], 500);
         }
     }
+
+    public function confirmEmailMsgPage()
+    {
+        //dd(Session::get('user'));
+        return view('r.user.auth.confirm-msg')->with('user', Auth::user())->with('flash_success', 'New email was sent successfully');
+    }
     /**
      * Show the user dashboard.
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
-
+//dd(Auth::user()->isVerified());
         //#testing
         if(!Auth::check()) {
             return view('r.landing')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
