@@ -132,6 +132,7 @@
 								<span class="badge">3</span>
 								{{trans('messages.credit_card')}}
 							</h2>
+							<p>{{trans('messages.packages_creditcard_msg')}}</p>
 
 
 							<div class="payment-form-block" ng-app="validationApp" ng-controller="mainController">
