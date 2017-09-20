@@ -938,7 +938,7 @@ return array(
   'registration_confirm_p3' => 'Open that email and click on the "Start Watching Now" button',
   'registration_confirm_p4' => 'Your email confirmation will be done instantly and you\'ll be redirected on the UkumbiTV platform!',
   'registration_confirm_error1' => 'Still no email confirmation yet? Please ',
-  'registration_confirm_error2' => 'click to have another it resent right away!',
+  'registration_confirm_error2' => 'click to have another it resent right away',
 
  
 

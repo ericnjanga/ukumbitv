@@ -1,7 +1,10 @@
 .alert__force-notice {
-	margin-bottom: 0; 
-	position: fixed; 
-	top: 0;
+	margin-bottom: 0;  
 	z-index: 99; 
 	width: 100%;
+
+	&.alert__fixed {
+		position: fixed; 
+		top: 0;
+	}
 }
