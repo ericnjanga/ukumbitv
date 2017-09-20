@@ -526,7 +526,7 @@ class UserController extends Controller {
                               'text' => 'Video already added in your <a href="/my-playlist">playlist</a>',
                               'type' => 'info'
                           ];
-                        else{
+	                      }else{
                           $result = [
                               'title' => 'Hey!',
                               'text' => 'Cette video a déjà ajoutée à la <a href="/my-playlist">liste</a>',
