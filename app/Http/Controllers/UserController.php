@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App;
 use App\Actor;
 use App\AdminVideo;
 use App\Director;
