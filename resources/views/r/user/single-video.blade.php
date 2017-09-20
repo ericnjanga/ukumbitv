@@ -42,8 +42,8 @@
 	              </div><!-- info-likes -->
 
 								<button class="btn-link" onclick="addToList()">
-									<i class="fa fa-bookmark" aria-hidden="true"></i>
-									{{trans('messages.Add_to_list')}}
+									<i class="fa fa-plus" aria-hidden="true"></i>
+									{{trans('messages.plus_my_list)}}
 								</button>
 
 	            </div><!-- info-right -->

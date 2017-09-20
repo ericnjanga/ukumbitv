@@ -1,0 +1,99 @@
+
+.btn {
+	font-size: 16px;
+}
+
+
+
+.btn-transparent1 {
+	border: 2px solid #fff;
+	background-color: transparent;
+	&:hover{
+		border: 2px solid $color-primary;
+		color: $color-primary;
+	}
+}
+
+
+
+
+.butn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid transparent;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  height: 35px;
+  line-height: 34px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+ 
+.btn-cta1b-dark{
+  background-color: $color-primary;
+  color: #343436;
+  font-size: 16px;
+  font-weight: 700;
+  &:hover, &:active{
+    border: 2px solid $color-primary;
+    background-color: transparent;
+    color:  $color-primary;
+  }
+
+}
+.butn-dblue{
+  background-color: #3b5998;
+  border: 2px solid #3b5998;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  &:hover, &:active{
+    border: 2px solid #3b5998;
+    background-color: #fff;
+    color:  #3b5998;
+  }
+}
+.butn-white-trans{
+  border: 2px solid #fff;
+  color: #ffffff;
+  background-color: transparent;
+  &:hover, &:active{
+    background-color: #fff;
+  }
+}
+.butn-face{
+  position: relative;
+  .icon{
+    position: absolute;
+    left: 18px;
+    top: 9px;
+    font-size: 25px;
+  }
+}
+.btn-cta1{ 
+  font-weight: 400;
+  color: $color-primary;
+  background-color: #fff;
+  border: 2px solid $color-primary;
+  &:hover, &:active{
+    background-color: $color-primary;
+    color: #ffffff;
+  }
+}
+.btn-cta1b{
+  background-color: $color-primary;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  &:hover, &:active{
+  	background-color: #333;
+    color: $color-primary;
+    // border: 2px solid $color-primary;
+  }
+}

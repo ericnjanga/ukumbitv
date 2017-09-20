@@ -142,6 +142,7 @@ return array(
 	'submit' 						=> 'Soumettre',
 	'free' => 'gratuit', 
 	'my_list' => 'Ma Liste',
+  'my_list_empty'=>'Aucune vidéo n\'a été ajoutée à la liste.',
 	'liked_videos' => 'Vidéos Aimées',
 	'new_videos' => 'Nouvelles vidéos',
 	'popular_videos' => 'Vidéos populaires',
@@ -284,8 +285,7 @@ return array(
 	'browse_category' => 'Browse Videos By Category',
 	'trending_videos' => 'Trending Videos',
 	'all_videos' => 'All Videos',
-	'suggestions' => 'Suggestions',
-    'empty_my_list'=>'No video added to list1',
+	'suggestions' => 'Suggestions', 
 
 	// Search
 
@@ -346,7 +346,7 @@ return array(
 	// History
 
 	'history' => 'History',
-	'watch_video' => 'Watch Video',
+	'watch_video' => 'Lecture',
 
 	// Comments
 
@@ -800,6 +800,7 @@ And to insure en exceptional delivery all this unique experience, we have create
   'Write_a_review' => 'Écrire une critique',
   'Play' => 'Jouer',
   'Add_to_list' => 'Ajouter à la liste', 
+  'plus_my_list' => 'Ma Liste',
   'share' => 'Partager',
   'Episodes' => 'Épisodes',
   'Cast_and_credits' => 'L\'équipe de le casting',

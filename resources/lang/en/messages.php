@@ -161,7 +161,9 @@ return array(
 	'to'	=>	'To',
 	'date' => 'Date',
 	'free' => 'free',
+	'free' => 'free',
 	'my_list' => 'My List',
+  'my_list_empty'=>'No video added to list.',
 	'liked_videos' => 'Liked Videos',
 	'new_videos' => 'New Videos',
 	'popular_videos' => 'Popular Videos',
@@ -287,7 +289,6 @@ return array(
 	'trending_videos' => 'Trending Videos',
 	'all_videos' => 'All Videos',
 	'suggestions' => 'Suggestions',
-    'empty_my_list'=>'No video added to list.',
 
 	// Search
 
@@ -348,7 +349,7 @@ return array(
 	// History
 
 	'history' => 'History',
-	'watch_video' => 'Watch Video',
+	'watch_video' => 'Play',
 
 	// Comments
 
@@ -823,6 +824,7 @@ return array(
   'Write_a_review' => 'Write a review',
   'Play' => 'Jouer',
   'Add_to_list' => 'Add to list',
+  'plus_my_list' => 'My List',
   'Add_to_list_error' => 'Ajouter à la liste',
   'share' => 'Share',
   'Episodes' => 'Episodes',

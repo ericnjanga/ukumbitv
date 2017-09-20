@@ -17,9 +17,9 @@
 	      			</a>
 	      		</li>
 	      		<li>
-							<button class="btn btn-block btn-cta1b" onclick="addToList()">
-								<i class="fa fa-bookmark" aria-hidden="true"></i>
-								{{trans('messages.Add_to_list')}}
+							<button class="btn btn-block btn-transparent1" onclick="addToList()">
+								<i class="fa fa-plus" aria-hidden="true"></i>
+								{{trans('messages.plus_my_list)}}
 							</button> 
 	      		</li>
 	      	</ul>
@@ -48,8 +48,7 @@
           <h2>{{trans('messages.my_list')}}</h2>  
           @if($my_lists->isEmpty())
             <div class="block-msg">
-              <div>{{trans('messages.empty_my_list')}}</div>
-              {{--<p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>--}}
+              <div>{{trans('messages.my_list_empty')}}</div> 
             </div>
           @else 
             <div class="list-horizontal-wrapper">
