@@ -27,49 +27,46 @@
 				@endif
 
 	      <section class="block-wrap">
-	        <h2>New Videos</h2> 
+	        <h2>{{trans('messages.new_videos')}}</h2> 
 	        <div class="list-horizontal-wrapper">
-	            @foreach($recent_videos as $video)
-	              @include('r.chunks._video_item')
-	            @endforeach 
+            @foreach($recent_videos as $video)
+              @include('r.chunks._video_item')
+            @endforeach 
 	        </div> 
 	      </section>
 
-	      <section class="block-wrap">
-	          <h2>Popular Videos</h2>  
-	          
-	          <div class="list-horizontal-wrapper">
-	              @foreach($trendings as $video)
-	                @include('r.chunks._video_item')
-	              @endforeach
-	          </div>
+	      <section class="block-wrap"> 
+        	<h2>{{trans('messages.popular_videos')}}</h2>
+          <div class="list-horizontal-wrapper">
+            @foreach($trendings as $video)
+              @include('r.chunks._video_item')
+            @endforeach
+          </div>
 	      </section>
 
 	      <section class="block-wrap">
-	          <h2>My List</h2>  
-	          @if($my_lists->isEmpty())
-	              <div class="block-msg">
-	                  <div>{{trans('messages.empty_my_list')}}</div>
-	                  {{--<p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>--}}
-	              </div>
-	          @else
-
-	              <div class="list-horizontal-wrapper">
-	                  @foreach($my_lists as $video)
-	                    @include('r.chunks._video_item')
-	                  @endforeach
-	              </div>
-	          @endif
+          <h2>{{trans('messages.my_list')}}</h2>  
+          @if($my_lists->isEmpty())
+            <div class="block-msg">
+              <div>{{trans('messages.empty_my_list')}}</div>
+              {{--<p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>--}}
+            </div>
+          @else 
+            <div class="list-horizontal-wrapper">
+              @foreach($my_lists as $video)
+                @include('r.chunks._video_item')
+              @endforeach
+            </div>
+          @endif
 	      </section>
 
-	      <section class="block-wrap">
-	          <h2>Liked Videos</h2>  
-	          
-	          <div class="block-msg">
-	              <div>No liked videos yet</div>
-	              <p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>
-	          </div>
-	      </section>
+	      <!-- <section class="block-wrap">
+          <h2>{{trans('messages.liked_videos')}}</h2>  
+          <div class="block-msg">
+            <div>No liked videos yet</div>
+            <p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>
+          </div>
+	      </section> -->
 	      
 			</div><!-- global-content -->
     </div><!-- global-display -->
