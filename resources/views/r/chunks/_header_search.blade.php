@@ -1,8 +1,8 @@
 <!-- email confirmation reminder -->
 @if(!Auth::user()->isVerified())
-	<div class="alert alert-info" role="alert">
+	<div class="alert alert-info text-center" role="alert" style="margin-bottom:0;">
 		{{trans('messages.auth_confirm_reminder1')}}
-		<b><a href="{{route('user.confirm-user-email')}}">{{trans('messages.auth_confirm_reminder2')}}</a></b> <i class="fa fa-smile-o" aria-hidden="true"></i>
+		<a href="{{route('user.confirm-user-email')}}"><b>{{trans('messages.auth_confirm_reminder2')}}</b></a> <i class="fa fa-smile-o" aria-hidden="true"></i>
 	</div>
 @endif
 <!-- email confirmation reminder -->
