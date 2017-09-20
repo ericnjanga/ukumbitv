@@ -1,6 +1,6 @@
 @extends('r.layouts.user-search')
 @section('content')
-	<div class="page-packages">
+	<div class="page page-packages">
 		<div class="global-display">
 			@include('r.chunks._account_menu')
 

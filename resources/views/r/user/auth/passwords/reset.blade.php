@@ -1,6 +1,6 @@
 @extends('r.layouts.simple')
 @section('content')
-    <div class="page-auth" ng-app="validationApp" ng-controller="mainController">
+    <div class="page page-auth" ng-app="validationApp" ng-controller="mainController">
         <div class="text-center">
             <h1>{{trans('messages.preset_h1')}}</h1>
         </div>

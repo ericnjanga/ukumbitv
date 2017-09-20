@@ -2,7 +2,7 @@
 @section('content')
 
  
-  <div class="page-auth" ng-app="validationApp" ng-controller="mainController">
+  <div class="page page-auth" ng-app="validationApp" ng-controller="mainController">
     @if(Session::has('status'))
       <div class="alert alert-success">
         <button type="button" class="close" data-dismiss="alert">×</button>

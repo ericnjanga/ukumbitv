@@ -928,11 +928,13 @@ return array(
 
   //REGISTRATION CONFIRMATION ...
   //----------------------------------- 
-  'registration_confirm_h1' => 'Confirm your e-mail!', 
-  'registration_confirm_p1' => 'Please check your inbox for a confirmation link.',
-  'registration_confirm_p2_1' => 'If you do not receive the email at',
-  'registration_confirm_p2_2' => 'within an hour, we can',
-  'registration_confirm_p2_3' => 'resend it to you',
+  'registration_confirm_h1' => 'Here is how you can confirm your e-mail!', 
+  'registration_confirm_p1' => 'Please check your inbox at: ',
+  'registration_confirm_p2' => 'Look for an email with a "Welcome to UkumbiTV" title',
+  'registration_confirm_p3' => 'Open that email and click on the "Start Watching Now" button',
+  'registration_confirm_p4' => 'Your email confirmation will be done instantly and you\'ll be redirected on the UkumbiTV platform!',
+  'registration_confirm_error1' => 'Still no email confirmation yet? Please ',
+  'registration_confirm_error2' => 'click to have another it resent right away!',
 
  
 

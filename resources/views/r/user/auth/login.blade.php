@@ -2,7 +2,7 @@
 @section('content')
 
  
-  <div class="page-auth" ng-app="validationApp" ng-controller="mainController">
+  <div class="page page-auth" ng-app="validationApp" ng-controller="mainController">
     @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
     <div class="text-center">
     	<h1>{{trans('messages.auth_signin')}}</h1>

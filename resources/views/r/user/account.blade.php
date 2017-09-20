@@ -1,6 +1,6 @@
 @extends('r.layouts.user-search')
 @section('content')
-  <div class="page-myaccount"> 
+  <div class="page page-myaccount"> 
   	<div class="global-display"> 
     	@include('r.chunks._account_menu') 
 
@@ -15,7 +15,7 @@
 		    	</div>
 			    <div class="col-sm-10">
 		        <form class="account-form-block">
-							<div class="page-block"> 
+							<div class="page page-block"> 
 	                <div class="form-group">
                     <label>Full name</label>
                     <input id="user-name" class="form-control" type="text" name="name" value="{{Auth::user()->name}}">
@@ -35,7 +35,7 @@
 
 							<hr>
 
-	            <div class="page-block"> 
+	            <div class="page page-block"> 
                 <div class="form-group">
                     <label>Enter current password</label>
                     <input id="old-password" class="form-control" type="password" name="old_password" class="mypass">

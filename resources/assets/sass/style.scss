@@ -30,6 +30,7 @@
 @import 'global-components/main-footer';
 @import 'global-components/form';
 @import 'modules/package-price';
+@import 'modules/alerts';
 
 
 
@@ -174,6 +175,11 @@ ul {
   li {
     list-style-type: none;
   }
+}
+
+
+.page {
+	min-height: 500px;
 }
 
 .butn {

@@ -805,7 +805,7 @@ And to insure en exceptional delivery all this unique experience, we have create
   'welcome_email_cantread2' => 'Visionnez-le&nbsp;dans&nbsp;votre&nbsp;navigateur',
   'welcome_email_section1_h1' => 'Bienvenue sur UkumbiTV', 
   'welcome_email_section1_p' => 'Préparez-vous à profiter des plus belles productions africaines: films, séries web, documentaires, films animés, émissions de télévision, spectacles, événements, concerts &amp; plus',
-  'welcome_email_cta1' => 'Regarder maintenant!',
+  'welcome_email_cta1' => 'Visionnez maintenant!',
   'welcome_email_section2_h1' => 'Vos meilleurs films vous attendent!',
   'welcome_email_section2_p' => 'Vous aimez de la comedie? du drame ou de l\'action? Nous avons un film pour vous!',
   'welcome_email_contactus1' => 'Vos commentaires sont important! ',
@@ -816,6 +816,22 @@ And to insure en exceptional delivery all this unique experience, we have create
   'welcome_email_all_rights' => 'Tous&nbsp;droitss&nbsp;réservés.', 
   'welcome_email_unsubscribe1' => 'Si vous ne souhaitez pas nous recevoir d\'emails, vous pouvez',
   'welcome_email_unsubscribe2' => 'vous désabonner',
+
+ 
+
+
+
+
+
+  //REGISTRATION CONFIRMATION ...
+  //----------------------------------- 
+  'registration_confirm_h1' => 'Marche &#224; suivre pour confirmer votre email!', 
+  'registration_confirm_p1' => 'Veuillez v&#233;rifier votre bo&#238;te de r&#233;ception &#224;: ',
+  'registration_confirm_p2' => 'Recherchez l\'email avec le titre "Bienvenue sur UkumbiTV"',
+  'registration_confirm_p3' => 'Ouvrez cet email et cliquez sur le bouton "Visionnez maintenant!"',
+  'registration_confirm_p4' => 'La confirmation de votre email s\'&#233;ffectuera au instantan&#233;ment et vous serez redirig&#233; sur la platforme UkumbiTV!',
+  'registration_confirm_error1' => 'Toujours pas d\'email de confirmation? ',
+  'registration_confirm_error2' => 'Veuillez suivre ce lien pour qu\'un autre vous soit envoy&#233; au plus vite!',
 
 
 

@@ -1,6 +1,6 @@
 @extends('r.layouts.simple')
 @section('content')
-  <div class="page-about">
+  <div class="page page-about">
     <div class="container">
       <section class="section1"> 
 	      <header class="text-center"> 

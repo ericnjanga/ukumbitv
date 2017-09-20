@@ -1,6 +1,6 @@
 @extends('r.layouts.simple')
 @section('content')
-  <div class="page-tersm-and-privacy pace-contact">
+  <div class="page page-tersm-and-privacy pace-contact">
     <div class="container">
 
 			<div class="row">

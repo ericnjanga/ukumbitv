@@ -1,6 +1,6 @@
 @extends('r.layouts.main')
 @section('content')
-  <div class="page-landing">
+  <div class="page page-landing">
 
     <!-- <section class="section text-center">
     	<a class="link-inner-redirect" name="section1"></a> 

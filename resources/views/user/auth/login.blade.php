@@ -12,7 +12,7 @@
 
                 <!-- <div class="row collapse borderBottom">
                     <div class="medium-6 large-centered medium-centered">
-                        <div class="page-heading text-center" style="margin-top:20px;padding:0px !important">
+                        <div class="page page-heading text-center" style="margin-top:20px;padding:0px !important">
                             <h3>{{tr('login')}}</h3>
                         </div>
                     </div>

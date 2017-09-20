@@ -6,7 +6,7 @@
     <div class="row y-content-row">
         @include('layouts.user.nav')
 
-        <div class="page-inner col-sm-9 col-md-10 profile-edit">
+        <div class="page page-inner col-sm-9 col-md-10 profile-edit">
             
             <div class="profile-content">
                 <div class="row no-margin">
