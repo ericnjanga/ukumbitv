@@ -496,12 +496,20 @@ class UserController extends Controller {
     {
         switch (Auth::user()->paymentPlans[0]->flag) {
             case 1:
-
-                $result = [
+            	if(App::getLocale()=='en'){
+            		$result = [
                     'title' => 'Oops...',
-                    'text' => 'To add video int your <a href="/my-playlist">playlist</a> you need to <a href="#">upgrade</a> the payment plan',
+                    'text' => 'To add video int your <a href="/my-playlist">playlist</a>, you need to <a href="#">upgrade</a> the payment plan',
                     'type' => 'warning'
                 ];
+            	}else{
+            		$result = [
+                    'title' => 'Oooh...',
+                    'text' => 'Pour ajouter une video à votre <a href="/my-playlist">liste</a>, vous devez tout dabord <a href="#">améliorer</a> votre paquet',
+                    'type' => 'warning'
+                ];
+            	}
+                
 
                 return response()->json($result);
                 break;
