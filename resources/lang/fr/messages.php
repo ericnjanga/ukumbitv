@@ -962,7 +962,7 @@ And to insure en exceptional delivery all this unique experience, we have create
   'packages_hero2' => 'Méthode de paiement',
   'packages_hero2_p' => 'Votre méthode de paiement sera appliquée à votre prochain cycle de facturation. Votre adhésion mensuelle est facturée le premier jour de chaque période de facturation.',
   'packages_creditcard_msg' => 'Vous avez le choix de saisir les informations de votre carte de crédit directement sous la forme ci-dessous.',
-  'packages_paypal_msg' => 'Ou bien, vous pouvez utiliser Paypal simplement en suivant le lien ci-dessous',
+  'packages_paypal_msg' => 'Ou alors, vous pouvez utiliser le portail sécurisé de paypal simplement en suivant le lien ci-dessous',
   'packages_paypal_cta' => 'Continuer avec Paypal',
 
  
