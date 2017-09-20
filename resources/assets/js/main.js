@@ -66,7 +66,12 @@ $('body').on('click','.btn-dislike', function(){
 function comment_submit(urlCommentRoute, videoId){
 
 	if($('#comment-text').val() === '') {
-    swal("Hmm", "Need to write a review, try again pls", "error");
+		var curr_lang = $('body').data('active-lang');
+		if(curr_lang=='en'){
+    	swal("Hmm", "Need to write a review, try again pls", "error");
+    }else{
+    	swal("Hmm", "Vous devez écrire un commentaire, Veuillez réessayer", "error");
+    }
 	} else {
 
     var token = $('meta[name="csrf-token"]').attr('content');
@@ -113,9 +118,7 @@ function movie_like($btn) {
   fd.append('id', $btn.data('video-id'));
   fd.append('type', 'like');
 
-
-  //console.log('>>>>>"', $btn.data('route-like'));
-
+  //...
   $.ajax({
     type: 'POST',
     url: $btn.data('route-like'),
@@ -136,8 +139,13 @@ function movie_like($btn) {
           $('#dislikes-count').text(+disLikesCount - 1);
       } 
     },
-    error: function(data){
-        swal("Hmm", "Something went wrong, try again pls", "error");
+    error: function(data){ 
+    	var curr_lang = $('body').data('active-lang');
+    	if(curr_lang=='en'){
+    		swal("Oh no!", "Problem \"linking\" your movie. Please try again later", "error");
+    	}else{
+    		swal("Oh non!", "Difficulté a \"aimer\" votre video. Veuillez réessayer plus tard", "error");
+    	}  
   	}
   });
 }//like
@@ -164,8 +172,13 @@ function movie_unlike($btn) {
 
       var rep = JSON.parse(data); 
     },
-    error: function(data){
-      swal("Hmm", "Something went wrong, try again pls", "error");
+    error: function(data){ 
+    	var curr_lang = $('body').data('active-lang');
+    	if(curr_lang=='en'){
+    		swal("Oh no!", "Problem \"unlinking\" your movie. Please try again later", "error");
+    	}else{
+    		swal("Oh non!", "Difficulté a annuler l'action \"aimer\" sur votre video. Veuillez réessayer plus tard", "error");
+    	}   
     }
   });
 }//unlike
@@ -196,8 +209,13 @@ function movie_dislike($btn) {
           $('#likes-count, #likes-count-top').text(+likesCount - 1);
       } 
     },
-    error: function(data){
-        swal("Hmm", "Something went wrong, try again pls", "error");
+    error: function(data){ 
+    	var curr_lang = $('body').data('active-lang');
+    	if(curr_lang=='en'){
+    		swal("Oh no!", "Problem \"dislinking\" your movie. Please try again later", "error");
+    	}else{
+    		swal("Oh non!", "Difficulté a \"pas aimer\" votre video. Veuillez réessayer plus tard", "error");
+    	}  
     }
   });
 }//dislike
@@ -222,7 +240,12 @@ function movie_undislike($btn) {
       var rep = JSON.parse(data); 
     },
     error: function(data){
-      swal("Hmm", "Something went wrong, try again pls", "error");
+		  var curr_lang = $('body').data('active-lang');
+		  if(curr_lang=='en'){
+      	swal("Oh no!", "Couldn't \"undislike\" the movie. Please try again later", "error");
+      }else{
+      	swal("Oh no!", "Problème enlever l'action \"pas aimer\" sur le film. Veuillez réessayer plus tard", "error");
+      }
     }
   });
 }//undislike
@@ -241,21 +264,31 @@ function sendContactForm(url) {
 
 
     $.ajax({
-        type: 'POST',
-        url: url,
-        contentType: false,
-        processData: false,
-        data: fd,
-        dataType: 'html',
-        success: function(data){
-
-       // var rep = JSON.parse(data);
-        swal("Cool!", "Email sent successfully", "success");
-            $('#btn-submit-contact').prop('disabled', false);
+      type: 'POST',
+      url: url,
+      contentType: false,
+      processData: false,
+      data: fd,
+      dataType: 'html',
+      success: function(data){ 
+      // var rep = JSON.parse(data);
+	    var curr_lang = $('body').data('active-lang');
+	    if(curr_lang=='en'){
+      	swal("Cool!", "Email sent successfully", "success");
+      }else{
+      	swal("Superbe!", "L'email a été envoyé avec succès", "success");
+      }
+      $('#btn-submit-contact').prop('disabled', false);
     },
     error: function(data){
-        swal("Hmm", "Something went wrong, try again pls", "error");
-        $('#btn-submit-contact').prop('disabled', false);
+	    var curr_lang = $('body').data('active-lang');
+	    if(curr_lang=='en'){
+      	swal("Oh no!", "Email couldn't be sent. Please try again later", "success");
+      }else{
+      	swal("Oh non", "L'email n'a pas pu être envoyé. Veuillez réessayer plus tard", "success");
+      }
+      
+      $('#btn-submit-contact').prop('disabled', false);
     }
 });
 }
@@ -279,15 +312,27 @@ function updateProfile(url) {
         processData: false,
         data: fd,
         dataType: 'html',
-        success: function(data){
+        success: function(data){ 
+		    	var curr_lang = $('body').data('active-lang');
 
-            // var rep = JSON.parse(data);
-            swal("Cool!", "Profile was successfully updated", "success");
-            $('#btn-update-profile').prop('disabled', false);
+		    	if(curr_lang=='en'){
+	          // var rep = JSON.parse(data);
+	          swal("Cool!", "Profile was successfully updated", "success"); 
+	        else{
+	          swal("Superbe!", "Votre profil a été mis à jour avec succès", "success");
+	        }
+	        $('#btn-update-profile').prop('disabled', false);
         },
         error: function(data){
-            swal("Hmm", "Something went wrong, try again pls", "error");
-            $('#btn-update-profile').prop('disabled', false);
+		    	var curr_lang = $('body').data('active-lang');
+		    	if(curr_lang=='en'){
+						swal("Oh no!", "Couldn't update your profile. Please try again later", "error");
+		    	}else{
+		    		swal("Oh non!", "Difficulté à mettre à jour votre profile. Veuillez réessayer plus tard", "error");
+
+		    	}
+            
+          $('#btn-update-profile').prop('disabled', false);
         }
     });
 }
@@ -309,16 +354,26 @@ function updatePassword(url) {
         processData: false,
         data: fd,
         dataType: 'html',
-        success: function(data){
-
-            var rep = JSON.parse(data);
-            console.log(rep.errors);
-            swal(rep.title, rep.message, rep.type);
-            $('#btn-update-password').prop('disabled', false);
+        success: function(data){ 
+          var rep = JSON.parse(data);
+          // console.log(rep.errors);
+           
+		    	var curr_lang = $('body').data('active-lang');
+		    	if(curr_lang=='en'){
+		    		swal(rep.title, rep.message, rep.type);
+		    	}else{
+		    		swal("Superbe!", "Votre mot de passe a été mis à jour", "error");
+		    	}   
+          $('#btn-update-password').prop('disabled', false);
         },
-        error: function(data){
-            swal("Hmm", "Something went wrong, try again pls", "error");
-            $('#btn-update-password').prop('disabled', false);
+        error: function(data){ 
+		    	var curr_lang = $('body').data('active-lang');
+		    	if(curr_lang=='en'){
+		    		swal("Oh no!", "Couldn't update your password. Please try again later", "error");
+		    	}else{
+		    		swal("Oh non!", "Difficulté à mettre à jour votre mot de passe. Veuillez réessayer plus tard", "error");
+		    	}  
+          $('#btn-update-password').prop('disabled', false);
         }
     });
 }

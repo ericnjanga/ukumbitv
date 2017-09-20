@@ -372,7 +372,12 @@
                 });
               },
               error: function(data){
-                  swal("Hmm", "Something went wrong, try again pls", "error");
+              	var curr_lang = $('body').data('active-lang')
+              	if(curr_lang=='en'){
+              		swal("Oh no!", "We couldn't add the movie to your list. Please try again later", "error");
+              	}else{
+              		swal("Oh non!", "Nous n'avons pas pu ajouter le film à votre liste. Veuillez réessayer plus tard", "error");
+              	} 
               }
           });
       }

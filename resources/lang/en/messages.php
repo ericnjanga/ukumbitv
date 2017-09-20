@@ -819,6 +819,7 @@ return array(
   'Write_a_review' => 'Write a review',
   'Play' => 'Jouer',
   'Add_to_list' => 'Add to list',
+  'Add_to_list_error' => 'Ajouter à la liste',
   'share' => 'Share',
   'Episodes' => 'Episodes',
   'Cast_and_credits' => 'Cast and credits',
