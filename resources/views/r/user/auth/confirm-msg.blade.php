@@ -3,12 +3,14 @@
 	
 	<!-- Letting the user know that the email was sent successfuly -->
 	@if(isset($flash_success))
-    <div class="alert__force-notice alert alert-success">
+    <div class="alert__force-notice alert alert-success text-center">
         {{--<button type="button" class="close" data-dismiss="alert">×</button>--}}
-        {{$flash_success}}
+        <!--{{$flash_success}}-->
+        {{trans('messages.registration_confirm_emailsent_alert')}}
     </div>
   @endif
 	<!-- Letting the user know that the email was sent successfuly -->
+
 
 
 

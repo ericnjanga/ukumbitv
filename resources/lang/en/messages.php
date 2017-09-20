@@ -291,6 +291,9 @@ return array(
 	// Profile
 	'account' => 'Account',
 	'my_account' => 'My Account',
+	'packages' => 'Packages',
+	'movies' => 'Movies',
+	'animations' => 'Animations',
 	'welcome_user'	=> 	'Welcome',
 
 	'payment_method'	=> 	'Payment Method',
@@ -928,7 +931,8 @@ return array(
 
   //REGISTRATION CONFIRMATION ...
   //----------------------------------- 
-  'registration_confirm_h1' => 'Here is how you can confirm your e-mail!', 
+  'registration_confirm_h1' => 'Here is how you can confirm your email!',
+  'registration_confirm_emailsent_alert' => 'Confirmation email sent successfully', 
   'registration_confirm_p1' => 'Please check your inbox at: ',
   'registration_confirm_p2' => 'Look for an email with a "Welcome to UkumbiTV" title',
   'registration_confirm_p3' => 'Open that email and click on the "Start Watching Now" button',

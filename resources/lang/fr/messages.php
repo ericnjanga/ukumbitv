@@ -289,6 +289,9 @@ return array(
 	// Profile
 	'account' => 'Compte',
 	'my_account' => 'Mon Compte',
+	'packages' => 'Paquets',
+	'movies' => 'Films',
+	'animations' => 'Dessins Anim&#233;s',
 	'welcome_user'	=> 	'Welcome',
 
 	'payment_method'	=> 	'Payment Method',
@@ -826,6 +829,7 @@ And to insure en exceptional delivery all this unique experience, we have create
   //REGISTRATION CONFIRMATION ...
   //----------------------------------- 
   'registration_confirm_h1' => 'Marche &#224; suivre pour confirmer votre email!', 
+  'registration_confirm_emailsent_alert' => 'Email de confirmation envoy&#233; avec succ&#232;s',
   'registration_confirm_p1' => 'Veuillez v&#233;rifier votre bo&#238;te de r&#233;ception &#224;: ',
   'registration_confirm_p2' => 'Recherchez l\'email avec le titre "Bienvenue sur UkumbiTV"',
   'registration_confirm_p3' => 'Ouvrez cet email et cliquez sur le bouton "Visionnez maintenant!"',
