@@ -98,6 +98,7 @@ return array(
 	'login'	=>	'Login',
 	'login2'	=>	'Login', 
 	'sign_out_of_ukumbiTV' => 'Sign out of UkumbiTV',
+	'sign_out' => 'Sign Out',
 	'terms_of_use' => 'Terms of use',
 	'privacy_statement' => 'Privacy Statement',
 	'question_contactus' => 'Questions? Contact us',
@@ -163,6 +164,8 @@ return array(
 	'devices' => 'Devices',
 	'social_medias' => 'Social Medias',
 	'month' => 'month',
+	'videos_left' => 'video(s) left',
+	'unlimited_videos' => 'Unlimited videos', 
 
 	'message' => 'Message',
 	'upload_image' => 'Upload Image',

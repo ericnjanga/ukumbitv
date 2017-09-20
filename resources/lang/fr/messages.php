@@ -98,6 +98,7 @@ return array(
 	'login'	=>	'S\'identifier',
 	'login2'	=>	'Indentifiez vous', 
 	'sign_out_of_ukumbiTV' 					=> 'Se déconnecter d\'UkumbiTV',
+	'sign_out' => 'D&#233;connexion',
 	'terms_of_use' 			=> 'Conditions d\'utilisation',
 	'privacy_statement' => 'Déclaration de confidentialité',
 	'question_contactus' 	=> 'Des questions? Contactez nous',
@@ -137,12 +138,14 @@ return array(
 	'disable' => 'Disable',
 	'remove'	=> 	'Remove',
 	'change'	=> 	'Change',
-	'upgrade' => 'Upgrade',
+	'upgrade' => 'Am&#233;liorez',
 	'submit' 						=> 'Soumettre', 
 	'free' => 'gratuit',
 	'devices' => 'Appareils',
 	'social_medias' => 'Médias Sociaux',
 	'month' => 'mois',
+	'videos_left' => 'vid&#233;o(s) restante(s)',
+	'unlimited_videos' => 'Vid&#233;os Illimit&#233;es', 
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',
@@ -792,7 +795,7 @@ And to insure en exceptional delivery all this unique experience, we have create
   'Review_by' => 'Revue par',
 
 	//...... ......
-  'Search_placeholder' => 'Rechercher: Titres, personnes, tags',
+  'Search_placeholder' => 'Rechercher: Titres, personnes, mots cl&#233;s',
   'review_help' => 'Les commentaires les plus utiles ont 100 mots ou plus',
  
 
@@ -900,7 +903,7 @@ And to insure en exceptional delivery all this unique experience, we have create
   //----------------------------------- 
   'and' => 'et',
   'msg_trial_ended' => 'Votre essai a pris fin',
-  'msg_upgrade' => 'Améliorez votre plan',
+  'msg_upgrade' => 'Am&#233;liorez votre paquet',
   'website_title' => 'Plateforme de films africains noirs en ligne - films, séries web, documentaires, films animés, émissions télévisées, spectacles, événements, concerts et plus',
 
  
