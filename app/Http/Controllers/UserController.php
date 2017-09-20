@@ -519,23 +519,23 @@ class UserController extends Controller {
                 $playlist = UserPlaylist::where('user_id', Auth::id())->get();
                 if(count($playlist) < 5) {
                     foreach ($playlist as $item) {
-                        if($item->admin_video_id == $request->id) {
-            							if(App::getLocale()=='en'){
-                            $result = [
-                                'title' => 'Hey!',
-                                'text' => 'Video already added in your <a href="/my-playlist">playlist</a>',
-                                'type' => 'info'
-                            ];
-                          else{
-                            $result = [
-                                'title' => 'Hey!',
-                                'text' => 'Cette video a déjà ajoutée à la <a href="/my-playlist">liste</a>',
-                                'type' => 'info'
-                            ];
-                          }
-                            return response()->json($result);
-                        }
-                    }
+                      if($item->admin_video_id == $request->id) {
+          							if(App::getLocale()=='en'){
+                          $result = [
+                              'title' => 'Hey!',
+                              'text' => 'Video already added in your <a href="/my-playlist">playlist</a>',
+                              'type' => 'info'
+                          ];
+                        else{
+                          $result = [
+                              'title' => 'Hey!',
+                              'text' => 'Cette video a déjà ajoutée à la <a href="/my-playlist">liste</a>',
+                              'type' => 'info'
+                          ];
+                        }//else
+                        return response()->json($result);
+                      }//if
+                    }//foreach
                     $newPlaylist = new UserPlaylist();
                     $newPlaylist->user_id = Auth::id();
                     $newPlaylist->admin_video_id = $request->id;
