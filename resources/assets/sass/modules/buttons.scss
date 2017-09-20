@@ -6,8 +6,11 @@
 
 
 .btn-transparent1 {
+	padding-top: 5px;
+	padding-bottom: 5px;
 	border: 2px solid #fff;
 	background-color: transparent;
+	color: #fff;
 	&:hover{
 		border: 2px solid $color-primary;
 		color: $color-primary;
