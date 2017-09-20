@@ -19,7 +19,7 @@
 	      		<li>
 							<button class="btn btn-block btn-transparent1" onclick="addToList()">
 								<i class="fa fa-plus" aria-hidden="true"></i>
-								{{trans('messages.plus_my_list)}}
+								{{trans('messages.plus_my_list')}}
 							</button> 
 	      		</li>
 	      	</ul>
