@@ -206,9 +206,10 @@ class AuthController extends Controller
         }
 
         Auth::guard($this->getGuard())->login($this->create($request->all()));
-        Auth::guard($this->getGuard())->logout();
+//        Auth::guard($this->getGuard())->logout();
         $user = User::where('email', $request->email)->first();
-        return view('r.user.auth.confirm-msg')->with('user', $user);
+//        return view('r.user.auth.confirm-msg')->with('user', $user);
+        return redirect()->action('UserController@index');
 
     }
 
