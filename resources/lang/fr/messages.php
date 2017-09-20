@@ -182,6 +182,7 @@ return array(
 	'upload_image' => 'Soumettre une image',
 	'amount'	=> 	'Amount',
 	'currency' 	=>	'Currency',
+	'best_choice' => 'Meilleur choix',
 
 	'approve'	=>	'Approve',
 	'decline'	=>	'Decline',

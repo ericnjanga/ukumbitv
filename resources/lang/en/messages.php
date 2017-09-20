@@ -911,7 +911,7 @@ return array(
   'packages_hero1_p' => 'To activate a plan, start by picking a package, then choose a payment method (you can cancel your monthly subscription at any time).', 
   'packages_yourcurrplan' => 'Your current Plan', 
   'packages_cancelsubs' => 'Cancel Subscription', 
-  'packages_returnguest' => 'Return to Guest Plan',
+  'packages_returnguest' => 'Back to basic Plan',
   'packages_cancelplan' => 'Cancel current plan', 
   'packages_nextplan' => 'Your next Plan',  
   'packages_monthlysubs' => 'monthly subscription', 
