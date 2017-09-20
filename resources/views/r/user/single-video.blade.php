@@ -43,7 +43,7 @@
 
 								<button class="btn-link" onclick="addToList()">
 									<i class="fa fa-plus" aria-hidden="true"></i>
-									{{trans('messages.plus_my_list)}}
+									{{trans('messages.plus_my_list')}}
 								</button>
 
 	            </div><!-- info-right -->
