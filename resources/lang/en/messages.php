@@ -928,7 +928,7 @@ return array(
   'packages_monthlysubs' => 'monthly subscription', 
   'packages_hero2' => 'Method of Payment',
   'packages_hero2_p' => 'Your payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.',
-  'packages_creditcard_msg' => 'You can use your credit card directly',
+  'packages_creditcard_msg' => 'You have the choice of entering your credit card information directly in the form bellow.',
   'packages_paypal_msg' => 'Or, you can use paypal by simply follow the link bellow',
   'packages_paypal_cta' => 'Continue with Pay Pal',
 
