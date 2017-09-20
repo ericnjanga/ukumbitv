@@ -616,6 +616,8 @@ return array(
 	'date_time'	=>	'Date & Time',
 	'comments'	=>	'Comments',
 	'likes' => 'Likes',
+	'Director' => 'Director',
+	'actors' => 'Acteurs/Actrices',
 
 	//Admin Payment
 	'payment'	=>	'Payment',

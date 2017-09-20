@@ -586,6 +586,8 @@ return array(
 	'date_time'	=>	'Date & Time',
 	'comments'	=>	'Commentaires',
 	'likes' => 'J\'aimes',
+	'director' => 'Réalisateur',
+	'actors' => 'Acteurs/Actrices',
 
 	//Admin Payment
 	'payment'	=>	'Payment',

@@ -28,10 +28,10 @@
 	                  {{$tags}}
 	              </div>
 	              <div class="cast-credits-title">
-                	<b>Director: </b> {{$directors}} 
+                	<b>{{trans('messages.director')}}: </b> {{$directors}} 
                 </div> 
                 <div class="cast-credits-text">
-                  <b>Actors: </b> {{$actors}}
+                  <b>{{trans('messages.actors')}}: </b> {{$actors}}
                 </div>
 	            </div><!-- info-left -->
 	            <div class="info-right link-red-on">
