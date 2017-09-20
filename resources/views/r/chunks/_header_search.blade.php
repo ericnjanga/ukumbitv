@@ -9,7 +9,7 @@
 
 
 
-
+To activate a plan, start by picking a p
 
 <header class="ukb-main-header">
 	<nav class="navbar navbar-default">
@@ -17,7 +17,7 @@
 	    <!-- Brand and toggle -->
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
+	        <span class="sr-only">{{trans('messages.toggle_navigation')}}</span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
