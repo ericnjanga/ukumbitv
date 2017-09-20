@@ -1,3 +1,16 @@
+<!-- email confirmation reminder -->
+@if(!Auth::user()->isVerified())
+	<div class="alert alert-info" role="alert">
+		{{trans('messages.auth_confirm_reminder1')}}
+		<b><a href="{{route('user.confirm-user-email')}}">{{trans('messages.auth_confirm_reminder2')}}</a></b> <i class="fa fa-smile-o" aria-hidden="true"></i>
+	</div>
+@endif
+<!-- email confirmation reminder -->
+
+
+
+
+
 <header class="ukb-main-header">
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
@@ -27,12 +40,7 @@
 					</li>  
 	      </ul>
 
-				@if(!Auth::user()->isVerified())
-	      <div class="alert alert-info" role="alert">
-	      	{{trans('messages.auth_confirm_reminder1')}}
-					<b><a href="{{route('user.confirm-user-email')}}">{{trans('messages.auth_confirm_reminder2')}}</a></b> <i class="fa fa-smile-o" aria-hidden="true"></i>
-	      </div>
-	       @endif
+				
 
 	      <div id="frame-search" class="frame-search">
 			  
