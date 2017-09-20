@@ -755,7 +755,9 @@ And to insure en exceptional delivery all this unique experience, we have create
 	'auth_error_password2'	=>	'Votre mot de passe est trop court.',  
 	'auth_error_password3'	=>	'Votre mot de passe doit contenir au moins 1 lettre minuscule, 1 lettre majuscule, 1 numéro, 1 caractère spécial.', 
 	'auth_signup'	=>	'S’enregistrer',   
-	'auth_policy_check1'	=>	'En cliquant sur Inscription, j’accepte les', 
+	'auth_policy_check1'	=>	'En cliquant sur Inscription, j’accepte les',   
+	'auth_confirm_reminder1'	=>	'Salut! N\'oubliez surtout pas de',    
+	'auth_confirm_reminder2'	=>	'confirmer votre addresse email.', 
 
 
 

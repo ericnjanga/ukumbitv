@@ -27,8 +27,15 @@
 					</li>  
 	      </ul>
 
+				@if(!Auth::user()->isVerified())
+	      <div class="alert alert-info" role="alert">
+	      	{{trans('messages.auth_confirm_reminder1')}}
+					<b><a href="{{route('user.confirm-user-email')}}">{{trans('messages.auth_confirm_reminder2')}}</a></b> <i class="fa fa-smile-o" aria-hidden="true"></i>
+	      </div>
+	       @endif
+
 	      <div id="frame-search" class="frame-search">
-			  @if(!Auth::user()->isVerified()) <a href="{{route('user.confirm-user-email')}}">Confirm</a> email please @endif
+			  
 	        <form action="{{route('search-all')}}" class="navbar-form navbar-left" method="post">  
 	          <div class="input-group">
 				      <input name="key" type="text" id="search-input" class="form-control search-input typeahead" placeholder="{{trans('messages.Search_placeholder')}}" autocomplete="false">
