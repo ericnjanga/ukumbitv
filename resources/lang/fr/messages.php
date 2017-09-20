@@ -584,7 +584,8 @@ return array(
 	'provider_name'	=>	'Provider Name',
 	'rating'	=>	'Rating',
 	'date_time'	=>	'Date & Time',
-	'comments'	=>	'Comments',
+	'comments'	=>	'Commentaires',
+	'likes' => 'J\'aimes',
 
 	//Admin Payment
 	'payment'	=>	'Payment',
@@ -797,7 +798,7 @@ And to insure en exceptional delivery all this unique experience, we have create
 //videos ......
   'Similar_Videos' => 'Vidéos similaires',
   'There_is_no_videos' => 'Il n\'y a pas de vidéos',
-  'Write_a_review' => 'Écrire une critique',
+  'Write_a_review' => 'Commenter',
   'Play' => 'Jouer',
   'Add_to_list' => 'Ajouter à la liste', 
   'plus_my_list' => 'Ma Liste',

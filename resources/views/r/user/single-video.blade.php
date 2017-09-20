@@ -38,7 +38,7 @@
 	            	<div class="info-likes">
 	            		<span class="icon icon-thumbs-up"></span>&nbsp;
 	            		{{$likes}}
-	                <span>&nbsp; Likes</span>
+	                <span>&nbsp; {{trans('messages.likes')}}</span>
 	              </div><!-- info-likes -->
 
 								<button class="btn-link" onclick="addToList()">
@@ -224,7 +224,7 @@
 					<div class="hero-sub">
 	          
 	          <div class="comment-block" id="new-comment-section">
-	          	<h2>Comments</h2>
+	          	<h2>{{trans('messages.comments')}}</h2>
 	          	@foreach($video->comments as $comment)
 	            <div class="comment">
 	              <div class="img-block">

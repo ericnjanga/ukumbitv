@@ -615,6 +615,7 @@ return array(
 	'rating'	=>	'Rating',
 	'date_time'	=>	'Date & Time',
 	'comments'	=>	'Comments',
+	'likes' => 'Likes',
 
 	//Admin Payment
 	'payment'	=>	'Payment',
