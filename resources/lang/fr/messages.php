@@ -104,7 +104,7 @@ return array(
 	'question_contactus' 	=> 'Des questions? Contactez nous',
 	'Copyright' 					=> 'Droits d\'auteur',
 	'credit_card' => 'Carte de Crédit',
-	'card_number' => 'numéro de carte',
+	'card_number' => 'Numéro sur la carte',
 	'card_number_err_enter' => 'Entrez votre numéro de carte de crédit.',
 	'card_holder_name' => 'Nom sur la carte',
 	'card_holder_name_error' => 'Entrez votre nom (tel qu\'il figure sur la carte de crédit), avec au moins 2 caractères.',
