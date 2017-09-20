@@ -24,7 +24,8 @@
 
 
 
-.page-myaccount {
+.page-myaccount,
+.page-search  {
 	h1 {
 		margin-bottom: 30px;
 		> .badge {
@@ -39,7 +40,7 @@
 
 .page-tersm-and-privacy,
 .page-packages,
-.page-about { 
+.page-about{ 
 	header {
 		max-width: 500px; 
 		margin-bottom: 30px;  
