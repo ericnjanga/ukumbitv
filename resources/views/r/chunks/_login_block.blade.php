@@ -4,7 +4,7 @@
     	@if(isset($videoCount))
     		{{$videoCount}} {{trans('messages.videos_left')}}
     	@else 
-    		{{$videoCount}} {{trans('messages.unlimited_videos')}} 
+    		{{trans('messages.unlimited_videos')}}
     	@endif
     </span>
     <span id="link-update-package" data-route="{{route('user.package')}}">
