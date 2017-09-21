@@ -1,0 +1,48 @@
+
+.page-about { 
+	header {
+		margin-left: auto; 
+		margin-right: auto; 
+	}
+
+	hr{
+		margin-top: 60px;
+    margin-bottom: 60px;
+	}
+
+	h2{
+		margin-bottom: 30px;
+	}
+
+	.section1 { 
+		h2{
+			font-size: 23px;
+			margin-top: 30px;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+		}
+		h3{
+			color: #000;
+			font-weight: bold;
+    	margin-top: 10px;
+		}
+		article { 
+			@media (min-width:992px){
+				column-count: 2;
+				column-gap: 50px;
+			}
+			@media (min-width:1200px){
+				column-count: 3;
+			}			   
+		}
+	}
+
+	figure{
+		img {
+			margin-bottom: 10px;
+		}
+		b, span {
+			display: block;
+		}
+	}
+}

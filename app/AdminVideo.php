@@ -4,6 +4,10 @@ use Illuminate\Database\Eloquent\Model;
 use DB;
 class AdminVideo extends Model
 {
+    public function seasons()
+    {
+        return $this->hasMany('App\Season');
+    }
     public function users()
     {
         return $this->belongsToMany('App\User');

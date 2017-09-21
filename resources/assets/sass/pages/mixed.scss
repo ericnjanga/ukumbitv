@@ -23,8 +23,42 @@
 
 
 
-.page-auth,
-.page-tersm-and-privacy{
+
+.page-myaccount,
+.page-search  {
+	h1 {
+		margin-bottom: 30px;
+		> .badge {
+			margin-right: 10px;
+		}
+	}
+	h2 {
+	 	font-size: 24px;
+	}
+}
+
+
+.page-tersm-and-privacy,
+.page-packages,
+.page-about{ 
+	header {
+		max-width: 500px; 
+		margin-bottom: 30px;  
+		h1 {
+			margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 0; 
+		}
+	}
+}
+
+
+
+
+
+
+.page-auth{
   h1, p {
   	margin-bottom: 30px;
   }

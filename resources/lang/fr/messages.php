@@ -98,10 +98,23 @@ return array(
 	'login'	=>	'S\'identifier',
 	'login2'	=>	'Indentifiez vous', 
 	'sign_out_of_ukumbiTV' 					=> 'Se déconnecter d\'UkumbiTV',
+	'sign_out' => 'D&#233;connexion',
 	'terms_of_use' 			=> 'Conditions d\'utilisation',
 	'privacy_statement' => 'Déclaration de confidentialité',
 	'question_contactus' 	=> 'Des questions? Contactez nous',
 	'Copyright' 					=> 'Droits d\'auteur',
+	'credit_card' => 'Carte de Crédit',
+	'card_number' => 'Numéro sur la carte',
+	'card_number_err_enter' => 'Entrez votre numéro de carte de crédit.',
+	'card_holder_name' => 'Nom sur la carte',
+	'card_holder_name_error' => 'Entrez votre nom (tel qu\'il figure sur la carte de crédit), avec au moins 2 caractères.',
+	'country'	=>	'Pays',
+	'country_error'	=>	'Veuillez entrer le pays.',
+	'state_province_region'	=> 'État/province/région',
+	'state_province_region_error'	=> 'Veuillez entrer la province (État ou région)',
+	'zip_Postal_code'	=> 'Zip/Code Postal',
+	'zip_Postal_code_error'	=> 'Veuillez entrer votre Zip ou code postal',
+	'update_payment_method'	=> 'Mettre à jour la méthode de paiement',
 
 	'profile'	=>	'Profile',
 	'account'	=> 	'Mon Compte',
@@ -120,8 +133,9 @@ return array(
 	'password_confirmation' => 'Confirm Password', 
 
 	'help'	=>	'Help',
-	'contact' => 'Contact Us',
+	'contact_us' => 'Contactez nous',
 	'about_us' => 'À propos',
+	'About_project' => 'À propos du roject',
 	'alittle_about_yourself' => 'Quelque chose vous concernant',
 	'profile_update' => 'Mise à jour du profile',
 	'terms_conditions' => 'Terms and Conditions',
@@ -136,8 +150,26 @@ return array(
 	'disable' => 'Disable',
 	'remove'	=> 	'Remove',
 	'change'	=> 	'Change',
-	'upgrade' => 'Upgrade',
-	'submit' 						=> 'Soumettre', 
+	'upgrade' => 'Am&#233;liorez',
+	'submit' 						=> 'Soumettre',
+	'free' => 'gratuit', 
+	'my_list' => 'Ma Liste',
+  'my_list_empty'=>'Aucune vidéo n\'a été ajoutée à la liste.',
+	'liked_videos' => 'Vidéos Aimées',
+	'new_videos' => 'Nouvelles vidéos',
+	'popular_videos' => 'Vidéos populaires',
+	'your_search_results' => 'R&#233;sultats de votre recherche',
+	'save_changes' => 'Sauvegarder',
+	'full_name' => 'Nom complet',
+	'enter_curr_pass' => 'Mot de passe actuel',
+	'enter_new_pass' => 'Nouveau mot de passe', 
+
+	'toggle_navigation' => 'Changez la navigation',
+	'devices' => 'Appareils',
+	'social_medias' => 'Médias Sociaux',
+	'month' => 'mois',
+	'videos_left' => 'vid&#233;o(s) restante(s)',
+	'unlimited_videos' => 'Vid&#233;os Illimit&#233;es', 
 
 	'status'	=>	'Status',
 	'upload'	=> 	'Upload',
@@ -162,6 +194,7 @@ return array(
 	'upload_image' => 'Soumettre une image',
 	'amount'	=> 	'Amount',
 	'currency' 	=>	'Currency',
+	'best_choice' => 'Meilleur choix',
 
 	'approve'	=>	'Approve',
 	'decline'	=>	'Decline',
@@ -180,7 +213,7 @@ return array(
 	'id'	=>	'ID',
 	'name'							=>	'Nom',
 	'username' => 'Nom d\'utilisateur',
-	'email'							=>	'Adresse electronique',
+	'email'							=>	'Adresse email',
 	'password'					=>	'Mot de passe',
 	'mobile'	=>	'Tel mobile',
 	'picture'	=>	'Picture',
@@ -265,8 +298,7 @@ return array(
 	'browse_category' => 'Browse Videos By Category',
 	'trending_videos' => 'Trending Videos',
 	'all_videos' => 'All Videos',
-	'suggestions' => 'Suggestions',
-    'empty_my_list'=>'No video added to list1',
+	'suggestions' => 'Suggestions', 
 
 	// Search
 
@@ -284,6 +316,9 @@ return array(
 	// Profile
 	'account' => 'Compte',
 	'my_account' => 'Mon Compte',
+	'packages' => 'Paquets',
+	'movies' => 'Films',
+	'animations' => 'Dessins Anim&#233;s',
 	'welcome_user'	=> 	'Welcome',
 
 	'payment_method'	=> 	'Payment Method',
@@ -324,7 +359,7 @@ return array(
 	// History
 
 	'history' => 'History',
-	'watch_video' => 'Watch Video',
+	'watch_video' => 'Lecture',
 
 	// Comments
 
@@ -562,7 +597,10 @@ return array(
 	'provider_name'	=>	'Provider Name',
 	'rating'	=>	'Rating',
 	'date_time'	=>	'Date & Time',
-	'comments'	=>	'Comments',
+	'comments'	=>	'Commentaires',
+	'likes' => 'J\'aimes',
+	'director' => 'Réalisateur',
+	'actors' => 'Acteurs/Actrices',
 
 	//Admin Payment
 	'payment'	=>	'Payment',
@@ -693,7 +731,9 @@ return array(
   //HOME PAGE ...
   //-----------------------------------
   //--Call to ation ..
-  'home_cta' => 'Essayez UkumbiTV gratuitement',
+  'home_title1' => 'Les meilleures productions Africaines',
+  'home_substitle1' => 'Des vidéos illimitées en haute définition à portée de main',
+  'home_cta' => 'Inscription Gratuite',
 
   //--middle section ..
   'home_midsec_title1' => 'Les meilleures productions',
@@ -725,20 +765,208 @@ And to insure en exceptional delivery all this unique experience, we have create
 
 
 
+
+
+  //SING-IN/REGISTER PAGE (AUTH) ...
+  //----------------------------------- 
+  'auth_signin' => 'Se Connecter',
+  'auth_signin_blurb' => 'La façon la plus simple pour vous de vous connecter est avec Facebook',
+  'auth_signin_fb' => 'Se connecter avec Facebook',
+  'auth_or' => 'ou',
+  'auth_no_account' => 'Vous n’avez pas de compte?',
+  'auth_have_account' => 'Vous avez déjà un compte?',
+
+	'auth_forgot_password'	=>	'Mot de passe oublié?',
+	'auth_remember'	=>	'Se souvenir',
+	'auth_password'	=>	'Mot de passe',
+	'auth_enter_email'	=>	'Entrez votre e-mail', 
+	'auth_error_email'	=>	'Entrez une addresse email valide.', 
+	'auth_enter_password'	=>	'Entrez votre mot de passe', 
+	'auth_retype_password'	=>	'Re-taper le nouveau mot de passe', 
+	'auth_retypeerror_password'	=>	'Le mot de passe ne correspond pas.',
+	'auth_error_password1'	=>	'Votre mot de passe est requis.', 
+	'auth_error_password2'	=>	'Votre mot de passe est trop court.',  
+	'auth_error_password3'	=>	'Votre mot de passe doit contenir au moins 1 lettre minuscule, 1 lettre majuscule, 1 numéro, 1 caractère spécial.', 
+	'auth_signup'	=>	'S’enregistrer',   
+	'auth_policy_check1'	=>	'En cliquant sur Inscription, j’accepte les',   
+	'auth_confirm_reminder1'	=>	'Merci de vous &#234;tre enregistr&#233;! N\'oubliez surtout pas de',    
+	'auth_confirm_reminder2'	=>	'confirmer votre addresse email.', 
+
+
+
+
+
+
+
+
+  //PASSWORD Reset PAGE (AUTH) ...
+  //----------------------------------- 
+	'preset_h1'	=>	'Réinitialiser le mot de passe',
+	'preset_wewill'	=>	'Nous vous enverrons un nouveau mot de passe sur votre e-mail', 
+
+
+
+
+
+
+
 //videos ......
   'Similar_Videos' => 'Vidéos similaires',
   'There_is_no_videos' => 'Il n\'y a pas de vidéos',
-  'Write_a_review' => 'Écrire une critique',
+  'Write_a_review' => 'Commenter',
   'Play' => 'Jouer',
-  'Add_to_list' => 'Ajouter à la liste',
+  'Add_to_list' => 'Ajouter à la liste', 
+  'plus_my_list' => 'Ma Liste',
   'share' => 'Partager',
   'Episodes' => 'Épisodes',
   'Cast_and_credits' => 'L\'équipe de le casting',
   'Review_by' => 'Revue par',
 
 	//...... ......
-  'Search_placeholder' => 'Rechercher: Titres, personnes, tags',
+  'Search_placeholder' => 'Rechercher: Titres, personnes, mots cl&#233;s',
   'review_help' => 'Les commentaires les plus utiles ont 100 mots ou plus',
+
+ 
+
+
+
+
+
+  //MY ACCOUNT PAGE ...
+  //----------------------------------- 
+  'PMA_title' => 'Changez vos pr&#233;f&#233;rences',
+ 
+
+
+
+
+
+  //WELCOME EMAIL ...
+  //----------------------------------- 
+  'welcome_email_intromsg' => 'Vérifiez votre adresse e-mail', 
+  'welcome_email_title' => 'Bienvenue sur UkumbiTV',
+  'welcome_email_cantread1' => 'Si vous ne pouvez pas voir ce message',
+  'welcome_email_cantread2' => 'Visionnez-le&nbsp;dans&nbsp;votre&nbsp;navigateur',
+  'welcome_email_section1_h1' => 'Bienvenue sur UkumbiTV', 
+  'welcome_email_section1_p' => 'Préparez-vous à profiter des plus belles productions africaines: films, séries web, documentaires, films animés, émissions de télévision, spectacles, événements, concerts &amp; plus',
+  'welcome_email_cta1' => 'Visionnez maintenant!',
+  'welcome_email_section2_h1' => 'Vos meilleurs films vous attendent!',
+  'welcome_email_section2_p' => 'Vous aimez de la comedie? du drame ou de l\'action? Nous avons un film pour vous!',
+  'welcome_email_contactus1' => 'Vos commentaires sont important! ',
+  'welcome_email_contactus2' => 'dites-nous ce que vous pensez!',
+  'welcome_email_section3_h3' => 'Améliorez votre expérience!',
+  'welcome_email_cta_watch1' => 'Visionnez maintenant!',
+  'welcome_email_copyright' => 'Droits d\'auteur',
+  'welcome_email_all_rights' => 'Tous&nbsp;droitss&nbsp;réservés.', 
+  'welcome_email_unsubscribe1' => 'Si vous ne souhaitez pas nous recevoir d\'emails, vous pouvez',
+  'welcome_email_unsubscribe2' => 'vous désabonner',
+
+ 
+
+
+
+
+
+  //REGISTRATION CONFIRMATION ...
+  //----------------------------------- 
+  'registration_confirm_h1' => 'Marche &#224; suivre pour confirmer votre email!', 
+  'registration_confirm_emailsent_alert' => 'Email de confirmation envoy&#233;',
+  'registration_confirm_p1' => 'Veuillez v&#233;rifier votre bo&#238;te de r&#233;ception &#224;: ',
+  'registration_confirm_p2' => 'Recherchez l\'email avec le titre <b>"Bienvenue sur UkumbiTV"</b>',
+  'registration_confirm_p3' => 'Ouvrez cet email et cliquez sur le bouton "Visionnez maintenant!"',
+  'registration_confirm_p4' => 'La confirmation de votre email s\'&#233;ffectuera instantan&#233;ment et vous serez redirig&#233; sur la platforme UkumbiTV!',
+  'registration_confirm_error1' => 'Toujours pas d\'email de confirmation? ',
+  'registration_confirm_error2' => 'Veuillez suivre ce lien pour qu\'un autre vous soit envoy&#233; au plus vite',
+
+
+
+
+
+
+
+
+
+  //TERMS OF USE PAGE ...
+  //----------------------------------- 
+  'tos_title' => 'Conditions d\'utilisation',
+
+  'tos_section1' => '<p>UkumbiTV provides a subscription service that allows our members to access movies and TV shows streamed over the Internet to certain Internet-connected computers and other devices.</p>',
+
+  'tos_section2' => '<p>The UkumbiTV service is provided to you by Mungo Digital Inc., a Canadian limited liability company. These Terms of Use govern your use of our service. As used in these Terms of Use, "UkumbiTV service", "our service" or "the service" means the service provided by UkumbiTV for discovering and watching UkumbiTV content, including all features and functionalities, recommendations and reviews, the website, and user interfaces, as well as all content and software associated with our service.</p>',
+
+  'tos_section3' => '<h2>Membership:</h2><p>Your UkumbiTV membership will continue month-to-month until terminated. To use the UkumbiTV service you must have Internet access and a modern web browser, and provide a current, valid, accepted method of payment, which you may update from time to time ("Payment Method"). Unless you cancel your membership before your monthly billing date, you authorize us to charge your next month&#146;/s membership fee to your Payment Method (see "Cancellation" below). You can find specific details regarding your UkumbiTV membership by visiting our website and clicking on the "Your Account" link available at the top of the pages of the UkumbiTV website under your profile name.</p>',
+
+  'tos_section4' => '<h3>Free Trials</h3><p>2.1. Your UkumbiTV membership may start with a free trial. The free trial period of your membership lasts for one week, or as otherwise specified during sign-up and is intended to allow new members and certain former members to try the service.</p><p>2.2. Free trial eligibility is determined by UkumbiTV at its sole discretion and we may limit eligibility to prevent free trial abuse. We reserve the right to revoke the free trial and put your account on hold in the event that we determine that you are not eligible. Members of households with an existing or recent UkumbiTV membership are not eligible. We may use information such as device ID, method of payment or an account email address used with an existing or recent UkumbiTV membership to determine eligibility. For combinations with other offers, restrictions may apply.</p><p>2.3. We will charge your Payment Method for your monthly membership fee at the end of the free trial period unless you cancel your membership prior to the end of the free trial period. To view the monthly membership price and end date of your free trial period, visit our website and click the "Billing details" link on the "Your Account" page.</p>',
+
+  'tos_section5' => '',
+
+  'tos_section6' => '',
+
+  'tos_section7' => '',
+
+  'tos_section8' => '',
+
+  'tos_section9' => '',
+
+  'tos_section10' => '',
+
+
+  //TERMS OF USE PAGE ...
+  //-----------------------------------  
+
+
+
+
+
+  //HELP CENTRE PAGE ...
+  //----------------------------------- 
+  'HC_title' => 'Centre d\'aide',
+
+
+
+
+
+  //PRIVACY POLICY PAGE ...
+  //----------------------------------- 
+  'PP_title' => 'Politique de confidentialité',
+
+  //PRIVACY POLICY PAGE ...
+  //----------------------------------- 
+
+
+
+
+
+  //GENERAL WORDS ...
+  //----------------------------------- 
+  'and' => 'et',
+  'msg_trial_ended' => 'Votre essai a pris fin',
+  'msg_upgrade' => 'Am&#233;liorez votre paquet',
+  'website_title' => 'Plateforme de films africains noirs en ligne - films, séries web, documentaires, films animés, émissions télévisées, spectacles, événements, concerts et plus',
+
+ 
+
+
+
+
+
+  //PACKAGES ...
+  //----------------------------------- 
+  'packages_hero1_p' => 'Pour activer un plan, commencez par choisir un paquet, puis choisissez un mode de paiement (vous pouvez annuler votre abonnement mensuel à tout moment).', 
+  'packages_yourcurrplan' => 'Votre paquet', 
+  'packages_cancelsubs' => 'Annuler l\'abonnement', 
+  'packages_returnguest' => 'Retour au paquet de base',
+  'packages_cancelplan' => 'Annuler le paquet', 
+  'packages_nextplan' => 'Votre prochain paquet',  
+  'packages_monthlysubs' => 'abonnement mensuel', 
+  'packages_hero2' => 'Méthode de paiement',
+  'packages_hero2_p' => 'Votre méthode de paiement sera appliquée à votre prochain cycle de facturation. Votre adhésion mensuelle est facturée le premier jour de chaque période de facturation.',
+  'packages_creditcard_msg' => 'Vous avez le choix de saisir les informations de votre carte de crédit directement sous la forme ci-dessous.',
+  'packages_paypal_msg' => 'Ou alors, vous pouvez utiliser le portail sécurisé de paypal simplement en suivant le lien ci-dessous',
+  'packages_paypal_cta' => 'Continuer avec Paypal',
+
+ 
+
 
 
 

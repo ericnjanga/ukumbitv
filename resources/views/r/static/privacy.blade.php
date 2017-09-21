@@ -1,6 +1,6 @@
 @extends('r.layouts.simple')
 @section('content')
-  <div class="page-tersm-and-privacy">
+  <div class="page page-tersm-and-privacy">
     <div class="container">
 			<div class="row"> 
 			  <aside id="fixed-info" class="col-md-3 fixed-info">

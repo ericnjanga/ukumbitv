@@ -1,6 +1,6 @@
 @extends('r.layouts.simple')
 @section('content')
-  <div class="page-auth" ng-app="validationApp" ng-controller="mainController">  
+  <div class="page page-auth" ng-app="validationApp" ng-controller="mainController">  
     <div class="text-center">
     	<h1>{{trans('messages.auth_signup')}}</h1>
       <p>{{trans('messages.auth_signin_blurb')}}</p>
@@ -35,27 +35,27 @@
       <div class="form-group" ng-class="{ 'has-error' : registerForm.email.$invalid && !registerForm.email.$pristine }">
         <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
         <input class="form-control" type="email" name="email" ng-model="user.email" required>
-        <div ng-cloak ng-show="registerForm.email.$invalid && !registerForm.email.$pristine" class="help-block">Enter a valid email.</div> 
+        <div ng-cloak ng-show="registerForm.email.$invalid && !registerForm.email.$pristine" class="help-block">{{trans('messages.auth_error_email')}}</div> 
       </div>
 
 
       <!-- Password -->
       <div class="form-group" ng-class="{ 'has-error' : registerForm.password.$invalid && !registerForm.password.$pristine }">
-        <label>Password</label>   
+        <label>{{trans('messages.auth_enter_password')}}</label>   
         <input type="password" name="password" class="form-control" ng-model="user.password" ng-minlength="6" required>
-        <div ng-cloak ng-show="registerForm.password.$dirty && registerForm.password.$viewValue.length==0" class="help-block">You password is required.</div> 
-        <div ng-cloak ng-show="registerForm.password.$error.minlength" class="help-block">Password is too short.</div>
-        <div ng-cloak ng-show="registerForm.password.$error.pattern" class="help-block">Your assword should contain at least 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character.</div>
+        <div ng-cloak ng-show="registerForm.password.$dirty && registerForm.password.$viewValue.length==0" class="help-block">{{trans('messages.auth_error_password1')}}</div> 
+        <div ng-cloak ng-show="registerForm.password.$error.minlength" class="help-block">{{trans('messages.auth_error_password2')}}</div>
+        <div ng-cloak ng-show="registerForm.password.$error.pattern" class="help-block">{{trans('messages.auth_error_password3')}}</div>
     	</div> 
 
  
       
       <!-- Password Confirmation -->
       <div class="form-group" ng-class="{ 'has-error' : (registerForm.password.$valid && registerForm.password_confirmation.$dirty &&registerForm.password_confirmation.$error.passwordMatch) }">
-        <label>Re-Type New Password</label> 
+        <label>{{trans('messages.auth_retype_password')}}</label> 
       
 				<input type="password" match-password="password" name="password_confirmation" ng-model="user.password_confirmation" class="form-control" required>
-        <p ng-show="(registerForm.password.$valid && registerForm.password_confirmation.$dirty &&registerForm.password_confirmation.$error.passwordMatch)" class="help-block">Password doesn't match.</p> 
+        <p ng-show="(registerForm.password.$valid && registerForm.password_confirmation.$dirty &&registerForm.password_confirmation.$error.passwordMatch)" class="help-block">{{trans('messages.auth_retypeerror_password')}}</p> 
       </div>
  
 

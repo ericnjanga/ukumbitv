@@ -98,11 +98,23 @@ return array(
 	'login'	=>	'Login',
 	'login2'	=>	'Login', 
 	'sign_out_of_ukumbiTV' => 'Sign out of UkumbiTV',
+	'sign_out' => 'Sign Out',
 	'terms_of_use' => 'Terms of use',
 	'privacy_statement' => 'Privacy Statement',
 	'question_contactus' => 'Questions? Contact us',
 	'Copyright' => 'Copyright',
 	'credit_card' => 'Credit Card',
+	'card_number' => 'Card Number',
+	'card_number_err_enter' => 'Please enter your credit card number.',
+	'card_holder_name' => 'Cardholder Name',
+	'card_holder_name_error' => 'Please enter your name (as it is on the credit card), with at least 2 characters.',
+	'country'	=>	'Country',
+	'country_error'	=>	'Please enter the country.',
+	'state_province_region'	=> 'State/Province/Region',
+	'state_province_region_error'	=> 'Please enter a province (State or region).',
+	'zip_Postal_code'	=> 'Zip/Postal Code',
+	'zip_Postal_code_error'	=> 'Please enter a Zip/Postal Code.',
+	'update_payment_method'	=> 'Update payment method',
 
 	'profile'	=>	'Profile',
 	'account'	=> 	'Account',
@@ -121,8 +133,9 @@ return array(
 	'password_confirmation' => 'Confirm Password', 
 
 	'help'	=>	'Help',
-	'contact' => 'Contact Us',
+	'contact_us' => 'Contact Us',
 	'about_us' => 'About Us',
+	'About_project' => 'About The Project',
 	'alittle_about_yourself' => 'A little about yourself',
 	'profile_update' => 'Profile Update',
 	'terms_conditions' => 'Terms and Conditions',
@@ -159,6 +172,24 @@ return array(
 	'to'	=>	'To',
 	'date' => 'Date',
 	'free' => 'free',
+	'free' => 'free',
+	'my_list' => 'My List',
+  'my_list_empty'=>'No video added to list.',
+	'liked_videos' => 'Liked Videos',
+	'new_videos' => 'New Videos',
+	'popular_videos' => 'Popular Videos',
+	'your_search_results' => 'Your search results',
+	'save_changes' => 'Save Changes',
+	'full_name' => 'Full name',
+	'enter_curr_pass' => 'Enter current password',
+	'enter_new_pass' => 'Enter new password',
+
+	'toggle_navigation' => 'Toggle navigation',
+	'devices' => 'Devices',
+	'social_medias' => 'Social Medias',
+	'month' => 'month',
+	'videos_left' => 'video(s) left',
+	'unlimited_videos' => 'Unlimited videos', 
 
 	'message' => 'Message',
 	'upload_image' => 'Upload Image',
@@ -269,7 +300,6 @@ return array(
 	'trending_videos' => 'Trending Videos',
 	'all_videos' => 'All Videos',
 	'suggestions' => 'Suggestions',
-    'empty_my_list'=>'No video added to list.',
 
 	// Search
 
@@ -287,6 +317,9 @@ return array(
 	// Profile
 	'account' => 'Account',
 	'my_account' => 'My Account',
+	'packages' => 'Packages',
+	'movies' => 'Movies',
+	'animations' => 'Animations',
 	'welcome_user'	=> 	'Welcome',
 
 	'payment_method'	=> 	'Payment Method',
@@ -327,7 +360,7 @@ return array(
 	// History
 
 	'history' => 'History',
-	'watch_video' => 'Watch Video',
+	'watch_video' => 'Play',
 
 	// Comments
 
@@ -541,7 +574,7 @@ return array(
 	
 	'ratings' => 'Ratings',
 	'reviews' => 'Reviews',
-	'month' => 'month',
+	
 
 	'default_image' => 'Default image',
 	'other_image1' => 'Other Image 1',
@@ -593,6 +626,9 @@ return array(
 	'rating'	=>	'Rating',
 	'date_time'	=>	'Date & Time',
 	'comments'	=>	'Comments',
+	'likes' => 'Likes',
+	'Director' => 'Director',
+	'actors' => 'Acteurs/Actrices',
 
 	//Admin Payment
 	'payment'	=>	'Payment',
@@ -723,6 +759,8 @@ return array(
   //HOME PAGE ...
   //----------------------------------- 
   //--Call to ation ..
+  'home_title1' => 'Enjoy the finest African productions',
+  'home_substitle1' => 'Unlimited high-definition videos at your fingertips',
   'home_cta' => 'Try UkumbiTV for free',
 
   //--middle section ..
@@ -762,12 +800,31 @@ return array(
 	'auth_remember'	=>	'Remember Me',
 	'auth_password'	=>	'Password',
 	'auth_enter_email'	=>	'Enter your e-mail', 
-	'auth_signup'	=>	'Register',  
-	'auth_signin'	=>	'Sign In', 
-	'auth_policy_check1'	=>	'By clicking Sign Up, I agree to the', 
-	// [fr] 'forgot_password' 	=> 'Mot de passe oublié',
+	'auth_error_email'	=>	'Enter a valid email.', 
+	'auth_enter_password'	=>	'Enter your password', 
+	'auth_retype_password'	=>	'Re-Type New Password', 
+	'auth_retypeerror_password'	=>	'Password doesn’t match.', 
+	'auth_error_password1'	=>	'You password is required.', 
+	'auth_error_password2'	=>	'Password is too short.',  
+	'auth_error_password3'	=>	'Your assword should contain at least 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character.', 
+	'auth_signup'	=>	'Register',   
+	'auth_policy_check1'	=>	'By clicking Sign Up, I agree to the',   
+	'auth_confirm_reminder1'	=>	'Thanks for signing up! Please don\'t forget to',    
+	'auth_confirm_reminder2'	=>	'confirm your email address.', 
   //SING-IN/REGISTER PAGE ...
   //----------------------------------- 
+
+
+
+
+
+
+
+
+  //PASSWORD Reset PAGE (AUTH) ...
+  //----------------------------------- 
+	'preset_h1'	=>	'Reset password',
+	'preset_wewill'	=>	'We will send new password on your e-mail',
 
 
 
@@ -781,6 +838,8 @@ return array(
   'Write_a_review' => 'Write a review',
   'Play' => 'Jouer',
   'Add_to_list' => 'Add to list',
+  'plus_my_list' => 'My List',
+  'Add_to_list_error' => 'Ajouter à la liste',
   'share' => 'Share',
   'Episodes' => 'Episodes',
   'Cast_and_credits' => 'Cast and credits',
@@ -826,6 +885,14 @@ return array(
 
 
 
+  //HELP CENTRE PAGE ...
+  //----------------------------------- 
+  'HC_title' => 'Help center', 
+
+
+
+
+
   //PRIVACY POLICY PAGE ...
   //----------------------------------- 
   'PP_title' => 'Privacy policy',
@@ -842,7 +909,7 @@ return array(
   'and' => 'and',
   'msg_trial_ended' => 'Your trial has ended',
   'msg_upgrade' => 'Ugrade your plan',
-  'website_title' => 'Online african movie platform - movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more',
+  'website_title' => 'Online black african movie platform - movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more',
 
  
 
@@ -855,12 +922,25 @@ return array(
   'packages_hero1_p' => 'To activate a plan, start by picking a package, then choose a payment method (you can cancel your monthly subscription at any time).', 
   'packages_yourcurrplan' => 'Your current Plan', 
   'packages_cancelsubs' => 'Cancel Subscription', 
-  'packages_returnguest' => 'Return to Guest Plan',
+  'packages_returnguest' => 'Back to basic Plan',
   'packages_cancelplan' => 'Cancel current plan', 
   'packages_nextplan' => 'Your next Plan',  
   'packages_monthlysubs' => 'monthly subscription', 
   'packages_hero2' => 'Method of Payment',
   'packages_hero2_p' => 'Your payment method will be applied to your next billing cycle. Your monthly membership is billed on the first day of each billing period.',
+  'packages_creditcard_msg' => 'You have the choice of entering your credit card information directly in the form bellow.',
+  'packages_paypal_msg' => 'Or, you can use paypal\'s secure portal by simply follow the link bellow',
+  'packages_paypal_cta' => 'Continue with Pay Pal',
+
+ 
+
+
+
+
+
+  //MY ACCOUNT PAGE ...
+  //----------------------------------- 
+  'PMA_title' => 'Change your preferences',
  
 
 
@@ -877,14 +957,13 @@ return array(
   'welcome_email_section1_p' => 'Get ready to enjoy the finest african productions: movies, web series, documentaries, animated movies, tv shows, spectacles, events, concerts & more',
   'welcome_email_cta1' => 'Start Watching Now!',
   'welcome_email_section2_h1' => 'A great selection of movies is awaiting!',
-  'welcome_email_section2_p' => 'Wether you enjoy comedy, drama, action or adventure, you have a great movie for you!',
+  'welcome_email_section2_p' => 'Wether you enjoy comedy, drama, action or adventure, we have a great movie for you!',
   'welcome_email_contactus1' => 'Your feedback is important to us, so don\'t forget to ',
   'welcome_email_contactus2' => 'let us know how we are doing',
   'welcome_email_section3_h3' => 'Experience more by upgrading your plan!',
   'welcome_email_cta_watch1' => 'Watch Now!',
   'welcome_email_copyright' => 'Copyright',
-  'welcome_email_all_rights' => 'All&nbsp;rights&nbsp;reserved.',
-  'welcome_email_all_rights' => 'All&nbsp;rights&nbsp;reserved.',
+  'welcome_email_all_rights' => 'All&nbsp;rights&nbsp;reserved.', 
   'welcome_email_unsubscribe1' => 'If you do not want to recieve emails from us, you can',
   'welcome_email_unsubscribe2' => 'unsubscribe',
 
@@ -896,11 +975,24 @@ return array(
 
   //REGISTRATION CONFIRMATION ...
   //----------------------------------- 
-  'registration_confirm_h1' => 'Confirm your e-mail!', 
-  'registration_confirm_p1' => 'Please check your inbox for a confirmation link.',
-  'registration_confirm_p2_1' => 'If you do not receive the email at',
-  'registration_confirm_p2_2' => 'within an hour, we can',
-  'registration_confirm_p2_3' => 'resend it to you',
+  'registration_confirm_h1' => 'Here is how you can confirm your email!',
+  'registration_confirm_emailsent_alert' => 'Confirmation email sent', 
+  'registration_confirm_p1' => 'Please check your inbox at: ',
+  'registration_confirm_p2' => 'Look for an email with a <b>"Welcome to UkumbiTV"</b> title',
+  'registration_confirm_p3' => 'Open that email and click on the "Start Watching Now" button',
+  'registration_confirm_p4' => 'Your email confirmation will be done instantly and you\'ll be redirected on the UkumbiTV platform!',
+  'registration_confirm_error1' => 'Still no email confirmation yet? Please ',
+  'registration_confirm_error2' => 'click to have another it resent right away',
+
+ 
+
+
+
+
+
+  //MAIN FOOTER ...
+  //----------------------------------- 
+  'main_footer' => 'Confirm your e-mail!',
 
 
  

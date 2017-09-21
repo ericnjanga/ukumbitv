@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App;
 use App\Actor;
 use App\AdminVideo;
 use App\Director;
 use App\Like;
 use App\PaymentPlan;
+use App\Season;
 use App\TrialPeriod;
 use App\UserHistory;
 use App\UserPayment;
@@ -147,13 +149,19 @@ class UserController extends Controller {
             return response()->json(['status' => 'error'], 500);
         }
     }
+
+    public function confirmEmailMsgPage()
+    {
+        //dd(Session::get('user'));
+        return view('r.user.auth.confirm-msg')->with('user', Auth::user())->with('flash_success', 'New email was sent successfully');
+    }
     /**
      * Show the user dashboard.
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
-
+//dd(Auth::user()->isVerified());
         //#testing
         if(!Auth::check()) {
             return view('r.landing')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
@@ -451,7 +459,13 @@ class UserController extends Controller {
         list($hours, $minutes, $seconds) = explode(':', $video->duration);
         $duration = $hours.'h '.$minutes.'min '.$seconds.'s';
 
-
+        $seasonsArr = [];
+        $episodes = Season::where('admin_video_id', $video->id)->where('season_id', 1)->get();
+        foreach ($episodes as $episode) {
+            array_push($seasonsArr, 'https://vimeo.com/'.$episode->title);
+        }
+        $seasonsArr = implode(',', $seasonsArr);
+//        $seasonsArr = 'https://vimeo.com/39050404,https://vimeo.com/39050404';
 
 
         return view('r.user.single-video')
@@ -472,6 +486,7 @@ class UserController extends Controller {
             ->with('tags', $tags)
             ->with('relatedVideos', $relatedVideos)
             ->with('payPlan', $flag)
+            ->with('episodesArr', $seasonsArr)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))
             ->with('directors', $directors);
@@ -482,12 +497,20 @@ class UserController extends Controller {
     {
         switch (Auth::user()->paymentPlans[0]->flag) {
             case 1:
-
-                $result = [
+            	if(App::getLocale()=='en'){
+            		$result = [
                     'title' => 'Oops...',
-                    'text' => 'To add video int your <a href="/my-playlist">playlist</a> you need to <a href="#">upgrade</a> the payment plan',
+                    'text' => 'To add a video to <b>your playlist</b>, you need to <a href="/package">upgrade the payment plan</a>',
                     'type' => 'warning'
                 ];
+            	}else{
+            		$result = [
+                    'title' => 'Oh la la...',
+                    'text' => 'Pour ajouter une video à <b>votre liste</b>, vous devez tout dabord <a href="/package">améliorer votre paquet</a>',
+                    'type' => 'warning'
+                ];
+            	}
+                
 
                 return response()->json($result);
                 break;
@@ -496,66 +519,117 @@ class UserController extends Controller {
                 $playlist = UserPlaylist::where('user_id', Auth::id())->get();
                 if(count($playlist) < 5) {
                     foreach ($playlist as $item) {
-                        if($item->admin_video_id == $request->id) {
-                            $result = [
-                                'title' => 'Hey!',
-                                'text' => 'Video already added in your <a href="/my-playlist">playlist</a>',
-                                'type' => 'info'
-                            ];
-                            return response()->json($result);
-                        }
-                    }
+                      if($item->admin_video_id == $request->id) {
+          							if(App::getLocale()=='en'){
+                          $result = [
+                              'title' => 'Hey!',
+                              'text' => 'Video already added in your <a href="/my-playlist">playlist</a>',
+                              'type' => 'info'
+                          ];
+	                      }else{
+                          $result = [
+                              'title' => 'Hey!',
+                              'text' => 'Cette video a déjà ajoutée à la <a href="/my-playlist">liste</a>',
+                              'type' => 'info'
+                          ];
+                        }//else
+                        return response()->json($result);
+                      }//if
+                    }//foreach
                     $newPlaylist = new UserPlaylist();
                     $newPlaylist->user_id = Auth::id();
                     $newPlaylist->admin_video_id = $request->id;
                     $newPlaylist->save();
 
-                    $result = [
-                        'title' => 'Good job!',
-                        'text' => 'Video was added in your <a href="/my-playlist">playlist</a>',
-                        'type' => 'success'
-                    ];
+
+            				if(App::getLocale()=='en'){
+	                    $result = [
+	                        'title' => 'Good job!',
+	                        'text' => 'Video was added in your <a href="/my-playlist">playlist</a>',
+	                        'type' => 'success'
+	                    ];
+	                  } else {
+	                    $result = [
+	                        'title' => 'Superbe!',
+	                        'text' => 'la video a été ajoutée à la <a href="/my-playlist">liste</a>',
+	                        'type' => 'success'
+	                    ];
+	                  }
                     return response()->json($result);
                 } else {
+            			if(App::getLocale()=='en'){
                     $result = [
-                        'title' => 'Oops...',
-                        'text' => 'You have already 5 videos in your <a href="/my-playlist">playlist</a>! To add video you need to <a href="#">upgrade</a> the payment plan',
-                        'type' => 'error'
+                      'title' => 'Oops...',
+                      'text' => 'You have already 5 videos in your <a href="/my-playlist">playlist</a>! To add more, you need to <a href="#">upgrade</a> your payment plan',
+                      'type' => 'error'
                     ];
-                    return response()->json($result);
+                  }else{
+                    $result = [
+                      'title' => 'Ouille...',
+                      'text' => 'Vous avez déjà 5 videos dans votre <a href="/my-playlist">liste</a>! Pour en ajouter plus, <a href="#">améliorez</a> votre paquet',
+                      'type' => 'error'
+                    ];
+                  }
+                  return response()->json($result);
                 }
                 break;
             case 3:
                 $playlist = UserPlaylist::where('user_id', Auth::id())->get();
                     foreach ($playlist as $item) {
-                        if($item->admin_video_id == $request->id) {
-                            $result = [
-                                'title' => 'Hey!',
-                                'text' => 'Video already added in your <a href="/my-playlist">playlist</a>',
-                                'type' => 'info'
-                            ];
-                            return response()->json($result);
-                        }
+                      if($item->admin_video_id == $request->id) { 
+            						if(App::getLocale()=='en'){
+	                        $result = [
+                            'title' => 'Hey!',
+                            'text' => 'Video already added in your <a href="/my-playlist">playlist</a>',
+                            'type' => 'info'
+	                        ];
+	                      }else{
+	                        $result = [
+                            'title' => 'Oh!',
+                            'text' => 'Video déjà ajoutée a votre <a href="/my-playlist">liste</a>',
+                            'type' => 'info'
+	                        ];
+	                      }
+                        return response()->json($result);
+                      }
                     }
                 $newPlaylist = new UserPlaylist();
                 $newPlaylist->user_id = Auth::id();
                 $newPlaylist->admin_video_id = $request->id;
                 $newPlaylist->save();
 
-                $result = [
-                    'title' => 'Good job!',
-                    'text' => 'Video was added in your <a href="/my-playlist">playlist</a>',
-                    'type' => 'success'
-                ];
+								if(App::getLocale()=='en'){
+	                $result = [
+	                  'title' => 'Good job!',
+	                  'text' => 'Video was added in your <a href="/my-playlist">playlist</a>',
+	                  'type' => 'success'
+	                ];
+	              }else{
+	                $result = [
+	                  'title' => 'Superbe!',
+	                  'text' => 'Video ajoutée a votre <a href="/my-playlist">liste</a>',
+	                  'type' => 'success'
+	                ];
+	              }
                 return response()->json($result);
                 break;
+
             default:
-                $result = [
-                    'title' => 'Oops..',
-                    'text' => 'Something went wrong, try later',
-                    'type' => 'success'
-                ];
-                return response()->json($result);
+  
+							if(App::getLocale()=='en'){
+	              $result = [
+                  'title' => 'Oops..',
+                  'text' => 'Something went wrong, try later',
+                  'type' => 'error'
+	              ];
+	            }else{
+	              $result = [
+                  'title' => 'Oh la la...',
+                  'text' => 'Quelque chose ne tourne pas rond. Veuillez réessayer plutard.',
+                  'type' => 'error'
+	              ];
+	            }
+              return response()->json($result);
         }
 
     }
@@ -1673,6 +1747,11 @@ class UserController extends Controller {
             return response()->json(['title' => 'Cool', 'message' => 'Password was updated', 'type' => 'success']);
         }
         return response()->json(['title' => 'Hmm...', 'message' => 'Wrong current password', 'type' => 'error']);
+    }
+
+    public function test()
+    {
+        return view('r.user.test');
     }
 
 }

@@ -113,7 +113,7 @@ Route::post('/install/theme', 'InstallationController@theme_check_process')->nam
 
 Route::post('/install/settings', 'InstallationController@settings_process')->name('install.settings');
 
-Route::get('/test', 'ApplicationController@test')->name('test');
+Route::get('/testmin', 'UserController@test')->name('test');
 
 // Elastic Search Test
 
@@ -323,8 +323,13 @@ Route::group(['prefix' => 'admin'], function(){
     //episodes
     Route::get('/episodes', 'AdminController@episodes')->name('admin.episodes');
     Route::get('/add/episode', 'AdminController@addEpisode')->name('admin.add.episode');
+    Route::get('/edit-season/{id}', 'AdminController@editEpisode')->name('admin.edit.episode');
+    Route::get('/edit-seasons/{id}/{sid}', 'AdminController@editEpisodes')->name('admin.edit.episodes');
     Route::post('/add/episode', 'AdminController@addEpisodeProcess')->name('admin.save.episode');
+    Route::post('/update/episode', 'AdminController@updateEpisode')->name('admin.updateone.episode');
     Route::post('edit-episode/update-episode', 'AdminController@updateEpisode')->name('admin.update.episode');
+    Route::get('/delete-seasons/{id}', 'AdminController@deleteEpisode')->name('admin.delete-episode');
+    Route::get('/edit-one-episode/{id}', 'AdminController@editOneEpisode')->name('admin.editOneEpisode');
 
     Route::post('episode-upload-image', ['as' => 'episode-upload-images', 'uses' =>'AdminController@postEpisodeUpload']);
     Route::post('add/episode-upload-image/delete', ['as' => 'episode-upload-remove', 'uses' =>'AdminController@deleteEpisodeUpload']);
@@ -529,11 +534,12 @@ Route::group([], function(){
     Route::post('register', 'Auth\AuthController@register')->name('user.register.post');
 
     Route::get('confirm-email', 'Auth\AuthController@confirmEmailMsg')->name('user.confirm-email');
+    Route::get('confirm-user-email', 'UserController@confirmEmailMsgPage')->name('user.confirm-user-email');
     Route::get('resend-email/{id}', 'Auth\AuthController@resendVerifyEmail')->name('user.resend-confirm-email');
     Route::get('welcome-email/{id?}', 'Auth\AuthController@welcomeEmail')->name('user.welcome-email');
 
     //PAYPAL ROUTES
-    //Route::get('create_paypal_plan', 'PaypalPlanController@create_plan');
+    Route::get('create_paypal_plan', 'PaypalPlanController@create_plan');
     Route::get('/subscribe/paypal/plan/{id}', 'PaypalController@paypalRedirect')->name('paypal.redirect');
     Route::get('/subscribe/paypal/return', 'PaypalController@paypalReturn')->name('paypal.return');
     Route::get('/getplanlist', 'PaypalPlanController@getPlansList')->name('paypal.list');
@@ -545,6 +551,10 @@ Route::group([], function(){
 
     Route::get('payment', 'UserController@payment')->name('user.userpayment');
     Route::get('getcustomer', 'StripeController@getCustomer')->name('stripe.getcustomer');
+
+    //VIMEO ROUTES
+    Route::get('vimeo/videos', 'VimeoController@getVideos');
+    Route::get('vimeo/create-album', 'VimeoController@createAlbum');
 
 
 

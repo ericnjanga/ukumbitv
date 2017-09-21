@@ -1,13 +1,13 @@
 @extends('r.layouts.user-search')
 @section('content')
     
-  <div class="page-video-landing">  
+  <div class="page page-video-landing">  
     <div class="global-display">
 			@include('r.chunks._filter_video')
 
 			<div class="global-content">
 				@if(isset($grandVideo))
-	      <div class="hero">
+	      <header class="hero">
 	      	<img data-src="{{ $grandVideo->videoimage->imgHero }}" class="lazyload" alt="{{ $grandVideo->title }}"> 
 	      	<ul class="fast-links list-inline">
 	      		<li>
@@ -17,59 +17,56 @@
 	      			</a>
 	      		</li>
 	      		<li>
-							<button class="btn btn-block btn-cta1b" onclick="addToList()">
-								<i class="fa fa-bookmark" aria-hidden="true"></i>
-								{{trans('messages.Add_to_list')}}
+							<button class="btn btn-block btn-transparent1" onclick="addToList()">
+								<i class="fa fa-plus" aria-hidden="true"></i>
+								{{trans('messages.plus_my_list')}}
 							</button> 
 	      		</li>
 	      	</ul>
-	      </div><!-- hero -->
+	      </header><!-- hero -->
 				@endif
 
-	      <div class="block-wrap">
-	        <h2>New Videos</h2> 
+	      <section class="block-wrap">
+	        <h2>{{trans('messages.new_videos')}}</h2> 
 	        <div class="list-horizontal-wrapper">
-	            @foreach($recent_videos as $video)
-	              @include('r.chunks._video_item')
-	            @endforeach 
+            @foreach($recent_videos as $video)
+              @include('r.chunks._video_item')
+            @endforeach 
 	        </div> 
-	      </div>
+	      </section>
 
-	      <div class="block-wrap">
-	          <h2>Popular Videos</h2>  
-	          
-	          <div class="list-horizontal-wrapper">
-	              @foreach($trendings as $video)
-	                @include('r.chunks._video_item')
-	              @endforeach
-	          </div>
-	      </div>
+	      <section class="block-wrap"> 
+        	<h2>{{trans('messages.popular_videos')}}</h2>
+          <div class="list-horizontal-wrapper">
+            @foreach($trendings as $video)
+              @include('r.chunks._video_item')
+            @endforeach
+          </div>
+	      </section>
 
-	      <div class="block-wrap">
-	          <h2>My List</h2>  
-	          @if($my_lists->isEmpty())
-	              <div class="block-msg">
-	                  <div>{{trans('messages.empty_my_list')}}</div>
-	                  {{--<p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>--}}
-	              </div>
-	          @else
+	      <section class="block-wrap">
+          <h2>{{trans('messages.my_list')}}</h2>  
+          @if($my_lists->isEmpty())
+            <div class="block-msg">
+              <div>{{trans('messages.my_list_empty')}}</div> 
+            </div>
+          @else 
+            <div class="list-horizontal-wrapper">
+              @foreach($my_lists as $video)
+                @include('r.chunks._video_item')
+              @endforeach
+            </div>
+          @endif
+	      </section>
 
-	              <div class="list-horizontal-wrapper">
-	                  @foreach($my_lists as $video)
-	                    @include('r.chunks._video_item')
-	                  @endforeach
-	              </div>
-	          @endif
-	      </div>
-
-	      <div class="block-wrap">
-	          <h2>Liked Videos</h2>  
-	          
-	          <div class="block-msg">
-	              <div>No liked videos yet</div>
-	              <p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>
-	          </div>
-	      </div>
+	      <!-- <section class="block-wrap">
+          <h2>{{trans('messages.liked_videos')}}</h2>  
+          <div class="block-msg">
+            <div>No liked videos yet</div>
+            <p>Press <span class="icon icon-thumbs-up"></span> to like the video</p>
+          </div>
+	      </section> -->
+	      
 			</div><!-- global-content -->
     </div><!-- global-display -->
   </div>
@@ -109,7 +106,12 @@
                   });
               },
               error: function(data){
-                  swal("Hmm", "Something went wrong, try again pls", "error");
+              	var curr_lang = $('body').data('active-lang')
+              	if(curr_lang=='en'){
+              		swal("Oh no!", "We couldn't add the movie to your list. Please try again later", "error");
+              	}else{
+              		swal("Oh non!", "Nous n'avons pas pu ajouter le film à votre liste. Veuillez réessayer plus tard", "error");
+              	} 
               }
           });
       }

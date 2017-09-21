@@ -33,13 +33,13 @@
 		            <ul class="list-inline" style="padding:0;">
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-movie" value="movies" @if($video->video_type == 'movies') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-movie" value="movies" @if($video->video_type == 'webseries') disabled @endif @if($video->video_type == 'movies') checked @endif>
 		            			Movie
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshows" @if($video->video_type == 'tvshows') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-tvshow" value="tvshows" @if($video->video_type == 'webseries') disabled @endif @if($video->video_type == 'tvshows') checked @endif>
 		            			TvShow
 		            		</label>
 		            	</li>
@@ -51,13 +51,13 @@
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-documentary" value="documentaries" @if($video->video_type == 'documentaries') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-documentary" value="documentaries" @if($video->video_type == 'webseries') disabled @endif @if($video->video_type == 'documentaries') checked @endif>
 		            			Documentary
 		            		</label>
 		            	</li>
 		            	<li class="mr20">
 		            		<label class="radio-inline">
-		            			<input type="radio" name="video-type" id="video-type-anime" value="animations" @if($video->video_type == 'animations') checked @endif>
+		            			<input type="radio" name="video-type" id="video-type-anime" value="animations" @if($video->video_type == 'webseries') disabled @endif @if($video->video_type == 'animations') checked @endif>
 		            			Anime Movie
 		            		</label>
 		            	</li>
@@ -269,15 +269,15 @@
               	</div>
 
               	<div class="form-group">
-                  <label for="small_image2" class="">Preview image 1</label>
+                  <label for="small_image2" class="">Preview image 1 *</label>
                   <input type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small2');">
                   <img class="thumb img-responsive" src="{{$images->imgPreview1}}" style="max-width:200px" />
                   <div id="previewArea3"></div>
-                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 510x800)</p>
+                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 350x500)</p>
               	</div>
 
               	<div class="form-group">
-                  <label for="small_image3" class="">Preview image 2 *</label>
+                  <label for="small_image3" class="">Preview image 2</label>
                   <input type="file" id="small_image3" name="small_image3" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image3', 'previewArea4', 'small3');">
                   <img class="thumb img-responsive" src="{{$images->imgPreview2}}" style="max-width:200px" />
                   <div id="previewArea4"></div>
@@ -285,7 +285,7 @@
               	</div>
 
               	<div class="form-group">
-                  <label for="preview_image" class="">Preview image 3 *</label>
+                  <label for="preview_image" class="">Preview image 3</label>
                   <input required type="file" id="preview_image" name="preview_image" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('preview_image', 'previewArea5', 'preview');">
                   <img class="thumb img-responsive" src="{{$images->imgPreview3}}" style="max-width:200px" />
                   <div id="previewArea5"></div>
@@ -296,30 +296,30 @@
               	{{--images end--}}
               </fieldset>
 							<!-- IMAGES -->  
-  
+
           		<fieldset class="blk col-md-12 mb35">
 								<legend>Video file</legend>
 								
 	              <div class="form-group">
 	                  <label for="video-file" class="">{{tr('video')}}</label>
-	                  <input required type="file" id="video-file" accept="video/mp4" name="video-file">
+	                  <input required type="file" id="video-file" accept="video/mp4" name="video-file" @if($video->video_type == 'webseries') disabled @endif>
 	                  <p class="help-block">{{tr('video_validate')}}</p>
 	              </div>
 
                     <div class="form-group">
                         <label for="vimeoid" class="">Vimeo video ID ex: 227573689  </label>
-                        <input type="text" class="form-control" id="vimeoid" name="vimeoid" value="{{substr($video->video, 8)}}" placeholder="Vimeo video ID">
+                        <input type="text" class="form-control" id="vimeoid" name="vimeoid" value="{{substr($video->video, 8)}}" placeholder="Vimeo video ID" @if($video->video_type == 'webseries') disabled @endif>
                     </div>
           		</fieldset><!-- fieldset -->
-            </div><!-- col-md-6 --> 
+            </div><!-- col-md-6 -->
 
-						
+
 						<div class="col-md-12">
 	            <fieldset class="blk col-md-12 mb35">
 								<legend>Video Preview</legend>
 	              <iframe src="https://player.vimeo.com/video/{{$videoId}}" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	            </fieldset><!-- col-md-12 -->  
-						</div><!-- col-md-12 --> 
+						</div><!-- col-md-12 -->
 
 
  
@@ -510,9 +510,9 @@
                     imgSize = '1100x510';
                     break;
                 case 'small2':
-                    imgWidth = 510;
-                    imgHeight = 800;
-                    imgSize = '510x800';
+                    imgWidth = 350;
+                    imgHeight = 500;
+                    imgSize = '350x500';
                     break;
                 case 'small3':
                     imgWidth = 510;

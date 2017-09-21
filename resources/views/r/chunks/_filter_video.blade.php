@@ -6,13 +6,13 @@
 		<li id="movies">
 			<a href="{{route('user.videotype', 'movies')}}">
 				<i class="fa fa-film menu-entry-icon movies" aria-hidden="true"></i> 
-				<span class="menu-entry-text">Movies</span>
+				<span class="menu-entry-text">{{trans('messages.movies')}}</span>
 			</a> 
 		</li>
 		<li id="animations">
 			<a href="{{route('user.videotype', 'animations')}}">
 				<i class="fa fa-star menu-entry-icon books" aria-hidden="true"></i> 
-				<span class="menu-entry-text">Animations</span>
+				<span class="menu-entry-text">{{trans('messages.animations')}}</span>
 			</a> 
 		</li>  
 	</ul>

@@ -1,6 +1,6 @@
 @extends('r.layouts.simple')
 @section('content')
-  <div class="page-tersm-and-privacy">
+  <div class="page page-tersm-and-privacy pace-contact">
     <div class="container">
 
 			<div class="row">
@@ -16,7 +16,9 @@
 			  </aside>
 
 			  <div class="col-md-9">
-	        <h1>{{trans('messages.contact')}}</h1>
+	        <header>
+	        	<h1>{{trans('messages.contact')}}</h1>
+	        </header>
 	        <div class="row">
 	        	<div class="col-md-5 contact-text">
 	        		<p>Fill free to ask questions</p>
@@ -46,35 +48,44 @@
 
 	        	</div><!-- col1 -->
 
-	        	<div class="col-md-5 col-md-offset-1">
-					@if(isset($flash_success))
-						<div class="alert alert-success"  >
-							{{--<button type="button" class="close" data-dismiss="alert">×</button>--}}
-							{{$flash_success}} aaaa
-						</div>
-					@endif
-	        		{{--<form action="{{route('user.send-contact-form')}}" method="POST">--}}
+	        	<div class="col-md-5 col-md-offset-1" ng-app="validationApp" ng-controller="mainController">
+							@if(isset($flash_success))
+								<div class="alert alert-success">
+									{{--<button type="button" class="close" data-dismiss="alert">×</button>--}}
+									{{$flash_success}} aaaa
+								</div>
+							@endif
+	        		<form name="contactForm" action="{{route('user.send-contact-form')}}" method="POST" autocomplete="off" novalidate>
 	              <div class="form-group select-wrap">
+					        <label for="category">How can we help? <span>*</span></label>
 	                <select id="q-category" class="form-control" name="category">
-	                  <option selected>Select a subject</option>
-	                  <option>Leave a comment</option>
-	                  <option>Leave a Suggestion</option>
-	                  <option>Having an issue</option>
-	                  <option>Having a complaint</option>
+	                  <option selected>Just want to leave a comment</option>
+	                  <option>I'm having an issue</option>
+	                  <option>I'm having a complaint</option>
+	                  <option>Just want to leave a suggestion</option>
 	                  <option>Other</option>
 	                </select>
 	              </div>
-								<div class="form-group">
-					        <label>Enter your e-mail <span>*</span></label>
-					        <input id="user-email" type="email" name="email" class="form-control" required>
+ 
+ 
+
+								<!-- Email Address -->
+					      <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
+					        <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
+					        <input id="user-email" class="form-control" type="email" name="email" ng-model="user.email" required>
+					        <div ng-cloak ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</div> 
 					      </div>
-	              <div class="form-group">
-					        <label>Enter your message <span>*</span></label>
-	                <textarea class="form-control" name="message" id="message-text" placeholder="Type your message here"></textarea>
+ 
+ 
+
+								<div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
+					        <label for="message">Enter your message <span>*</span></label>
+	                <textarea class="form-control" name="message" id="message-text"  ng-model="user.message" placeholder="Type your message here" ng-minlength="8" ng-required="true"></textarea>
+					        <div ng-cloak ng-show="contactForm.message.$error.minlength" class="help-block">Message too small! (Please enter at least 8 characters)</div> 
 	              </div>
-					      <button id="btn-submit-contact" data-contact-route="{{route('user.send-contact-form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.submit')}}</button>
-	 
-	            {{--</form>--}}
+					      <button id="btn-submit-contact" data-contact-route="{{route('user.send-contact-form')}}" class="btn btn-block btn-cta1b btn-lg" ng-disabled="contactForm.$invalid">{{trans('messages.submit')}}</button>  
+					      
+	            </form>
 	        	</div><!-- col2 -->
 	        </div><!-- row -->	
 			  </div>

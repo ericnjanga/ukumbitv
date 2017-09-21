@@ -17,3 +17,17 @@ $color-primary: #eeb33d;
 $color-darkred: #990033;
 $color-yellow-green : #798801;
 
+
+
+
+
+
+
+	.list-decimal {
+			color: #000;
+		list-style: decimal;
+    li {
+    	list-style: decimal;
+    	margin-left: 30px;
+    }
+	}

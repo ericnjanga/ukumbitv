@@ -167,7 +167,8 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         vidhyar2612\Enveditor\EnveditorServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        Laravel\Cashier\CashierServiceProvider::class
+        Laravel\Cashier\CashierServiceProvider::class,
+        HTMLMin\HTMLMin\HTMLMinServiceProvider::class,
 
     ],
 
@@ -217,8 +218,10 @@ return [
         'Setting' => anlutro\LaravelSettings\Facade::class,
         'AWS' => Aws\Laravel\AwsFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'HTMLMin' => HTMLMin\HTMLMin\Facades\HTMLMin::class,
 //        'Cashier' => Laravel\Cashier\CashierServiceProvider::class,
         'Enveditor' => 'vidhyar2612\Enveditor\Facade',
+
     ],
 
 ];

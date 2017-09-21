@@ -1,7 +1,7 @@
 @extends('r.layouts.user-search')
 @section('content')
 
-  <div class="page-video-single">  
+  <div class="page page-video-single">  
     <div class="global-display">
 			@include('r.chunks._filter_video')
 
@@ -28,22 +28,22 @@
 	                  {{$tags}}
 	              </div>
 	              <div class="cast-credits-title">
-                	<b>Director: </b> {{$directors}} 
+                	<b>{{trans('messages.director')}}: </b> {{$directors}} 
                 </div> 
                 <div class="cast-credits-text">
-                  <b>Actors: </b> {{$actors}}
+                  <b>{{trans('messages.actors')}}: </b> {{$actors}}
                 </div>
 	            </div><!-- info-left -->
 	            <div class="info-right link-red-on">
 	            	<div class="info-likes">
 	            		<span class="icon icon-thumbs-up"></span>&nbsp;
 	            		{{$likes}}
-	                <span>&nbsp; Likes</span>
+	                <span>&nbsp; {{trans('messages.likes')}}</span>
 	              </div><!-- info-likes -->
 
 								<button class="btn-link" onclick="addToList()">
-									<i class="fa fa-bookmark" aria-hidden="true"></i>
-									{{trans('messages.Add_to_list')}}
+									<i class="fa fa-plus" aria-hidden="true"></i>
+									{{trans('messages.plus_my_list')}}
 								</button>
 
 	            </div><!-- info-right -->
@@ -62,8 +62,12 @@
 					</div> -->
 
 	      	@if($checkTrial)
+				@if($video->video_type == 'webseries')
+					  <div id="player"></div>
+					@else
 	          <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	          <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/232604649?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+	          @endif
+					  <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/232604649?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
 	          <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
 	        @else
 	          <div class="video-placeholder">
@@ -220,7 +224,7 @@
 					<div class="hero-sub">
 	          
 	          <div class="comment-block" id="new-comment-section">
-	          	<h2>Comments</h2>
+	          	<h2>{{trans('messages.comments')}}</h2>
 	          	@foreach($video->comments as $comment)
 	            <div class="comment">
 	              <div class="img-block">
@@ -330,6 +334,17 @@
 @section('scripts')
 	<!-- ADD TO LIST -->
 	<!-- (same script on "home-video.blade.php") -->
+
+		<script>
+			var episodes = '{{$episodesArr}}';
+            vimeowrap('player').setup({
+                urls: episodes.split(','),
+                plugins: {
+                    'playlist':{}
+                }
+            });
+		</script>
+
   <script>
       // console.log('{{$checkTrial}}');
       function addToList() {
@@ -348,17 +363,21 @@
               data: fd,
               dataType: 'html',
               success: function(data){
-
-                  var rep = JSON.parse(data);
-                  swal({
-                      title: rep.title,
-                      text: rep.text,
-                      type: rep.type,
-                      html: true
-                  });
+                var rep = JSON.parse(data);
+                swal({
+                    title: rep.title,
+                    text: rep.text,
+                    type: rep.type,
+                    html: true
+                });
               },
               error: function(data){
-                  swal("Hmm", "Something went wrong, try again pls", "error");
+              	var curr_lang = $('body').data('active-lang')
+              	if(curr_lang=='en'){
+              		swal("Oh no!", "We couldn't add the movie to your list. Please try again later", "error");
+              	}else{
+              		swal("Oh non!", "Nous n'avons pas pu ajouter le film à votre liste. Veuillez réessayer plus tard", "error");
+              	} 
               }
           });
       }

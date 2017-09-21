@@ -11,6 +11,7 @@ use App\Lang;
 use App\MovieProducer;
 use App\PaymentPlan;
 use App\ProducerAgent;
+use App\Season;
 use App\Tag;
 use App\VideoActor;
 use App\VideoDirector;
@@ -1551,7 +1552,7 @@ class AdminController extends Controller
         $adminVideo->genre_id = 0;
         $adminVideo->video = $uri;
         $adminVideo->trailer_video = 'trailer url';
-        $adminVideo->default_image = $small3;
+        $adminVideo->default_image = $small2;
         $adminVideo->banner_image = '';
         $adminVideo->ratings = 5;
         $adminVideo->reviews = 'review';
@@ -1593,6 +1594,8 @@ class AdminController extends Controller
         return response()->json($adminVideo);
     }
 
+
+
     public function createVideoTags($tags, $videoId)
     {
         $tagsNew = mb_strtolower($tags);
@@ -1621,7 +1624,8 @@ class AdminController extends Controller
     //episodes
     public function episodes(Request $request) {
 
-        $videos = [];
+        $videos = AdminVideo::with('seasons')->where('video_type', 'webseries')->get();
+//        $videos = Season::with('adminVideos')->get();
         //dd($videos);
         return view('admin.episodes.episodes')->with('videos' , $videos)
             ->withPage('episodes')
@@ -1632,29 +1636,67 @@ class AdminController extends Controller
     public function addEpisode()
     {
 
-
-        $categories = Category::all();
-
-        $actors = VideoActor::all();
-        $directors = VideoDirector::all();
-        $langs = Lang::all();
-        $producers = MovieProducer::all();
-
-        $tags = [];
-        foreach (VideoTag::all() as $tag){
-            array_push($tags, $tag->name);
-        }
-        $tags = implode(',', $tags);
-
+        $videos = AdminVideo::where('video_type', 'webseries')->get();
         return view('admin.episodes.episode_upload')
-            ->with('categories', $categories)
-            ->with('actors', $actors)
-            ->with('directors', $directors)
-            ->with('langs', $langs)
-            ->with('producers', $producers)
             ->with('page', 'videos')
-            ->with('tags', $tags);
+            ->with('videos', $videos);
     }
+
+    public function editEpisode($id)
+    {
+        $season = Season::with('adminVideo')->where('admin_video_id', $id)->get();
+        $video = AdminVideo::find($id);
+        return view('admin.episodes.episode_edit')
+            ->with('video', $video)
+            ->with('seasons', $season)
+            ->with('page', 'seasons');
+    }
+
+    public function addEpisodeProcess(Request $request)
+    {
+        $season = new Season();
+        $season->admin_video_id = $request->videoid;
+        $season->season_id = $request->season;
+        $season->title = $request->vimeoid;
+        $season->save();
+
+        return response()->json($season);
+    }
+
+    public function editEpisodes($id, $sid)
+    {
+        $season = Season::with('adminVideo')->where('admin_video_id', $id)->where('season_id', $sid)->get();
+        $video = AdminVideo::find($id);
+        return view('admin.episodes.episodes_edit')
+            ->with('video', $video)
+            ->with('seasons', $season)
+            ->with('selectedSeason', $sid)
+            ->with('page', 'seasons');
+    }
+
+    public function deleteEpisode($id)
+    {
+        $episode = Season::find($id);
+        $episode->delete();
+        return redirect()->back();
+    }
+
+    public function editOneEpisode($id)
+    {
+        $episode = Season::find($id);
+        return view('admin.episodes.episode_one_edit')->with('episode', $episode)->with('page', 'seasons');
+    }
+
+    public function updateEpisode(Request $request)
+    {
+        $episode = Season::find($request->id);
+        $episode->season_id = $request->season;
+        $episode->title = $request->vimeoid;
+        $episode->save();
+
+        return response()->json($episode);
+    }
+
 
     //langs
     public function langs(Request $request) {

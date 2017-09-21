@@ -7,7 +7,7 @@
 
             @include('layouts.user.nav')
 
-            <div class="page-inner col-sm-9 col-md-10">
+            <div class="page page-inner col-sm-9 col-md-10">
 
                 @include('notification.notify')
 

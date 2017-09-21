@@ -66,7 +66,12 @@ $('body').on('click','.btn-dislike', function(){
 function comment_submit(urlCommentRoute, videoId){
 
 	if($('#comment-text').val() === '') {
-    swal("Hmm", "Need to write a review, try again pls", "error");
+		var curr_lang = $('body').data('active-lang');
+		if(curr_lang=='en'){
+    	swal("Hmm", "Need to write a review, try again pls", "error");
+    }else{
+    	swal("Hmm", "Vous devez écrire un commentaire, Veuillez réessayer", "error");
+    }
 	} else {
 
     var token = $('meta[name="csrf-token"]').attr('content');
@@ -90,7 +95,7 @@ function comment_submit(urlCommentRoute, videoId){
             if(rep.user.name === ''){
                 userName = rep.user.email;
             } else {
-                userName = rep.user.name
+                userName = rep.user.name;
             }
 
             $('#comment-text').val('');
@@ -113,9 +118,7 @@ function movie_like($btn) {
   fd.append('id', $btn.data('video-id'));
   fd.append('type', 'like');
 
-
-  //console.log('>>>>>"', $btn.data('route-like'));
-
+  //...
   $.ajax({
     type: 'POST',
     url: $btn.data('route-like'),
@@ -136,8 +139,13 @@ function movie_like($btn) {
           $('#dislikes-count').text(+disLikesCount - 1);
       } 
     },
-    error: function(data){
-        swal("Hmm", "Something went wrong, try again pls", "error");
+    error: function(data){ 
+    	var curr_lang = $('body').data('active-lang');
+    	if(curr_lang=='en'){
+    		swal("Oh no!", "Problem \"linking\" your movie. Please try again later", "error");
+    	}else{
+    		swal("Oh non!", "Difficulté a \"aimer\" votre video. Veuillez réessayer plus tard", "error");
+    	}  
   	}
   });
 }//like
@@ -164,8 +172,13 @@ function movie_unlike($btn) {
 
       var rep = JSON.parse(data); 
     },
-    error: function(data){
-      swal("Hmm", "Something went wrong, try again pls", "error");
+    error: function(data){ 
+    	var curr_lang = $('body').data('active-lang');
+    	if(curr_lang=='en'){
+    		swal("Oh no!", "Problem \"unlinking\" your movie. Please try again later", "error");
+    	}else{
+    		swal("Oh non!", "Difficulté a annuler l'action \"aimer\" sur votre video. Veuillez réessayer plus tard", "error");
+    	}   
     }
   });
 }//unlike
@@ -196,8 +209,13 @@ function movie_dislike($btn) {
           $('#likes-count, #likes-count-top').text(+likesCount - 1);
       } 
     },
-    error: function(data){
-        swal("Hmm", "Something went wrong, try again pls", "error");
+    error: function(data){ 
+    	var curr_lang = $('body').data('active-lang');
+    	if(curr_lang=='en'){
+    		swal("Oh no!", "Problem \"dislinking\" your movie. Please try again later", "error");
+    	}else{
+    		swal("Oh non!", "Difficulté a \"pas aimer\" votre video. Veuillez réessayer plus tard", "error");
+    	}  
     }
   });
 }//dislike
@@ -222,7 +240,12 @@ function movie_undislike($btn) {
       var rep = JSON.parse(data); 
     },
     error: function(data){
-      swal("Hmm", "Something went wrong, try again pls", "error");
+		  var curr_lang = $('body').data('active-lang');
+		  if(curr_lang=='en'){
+      	swal("Oh no!", "Couldn't \"undislike\" the movie. Please try again later", "error");
+      }else{
+      	swal("Oh no!", "Problème enlever l'action \"pas aimer\" sur le film. Veuillez réessayer plus tard", "error");
+      }
     }
   });
 }//undislike
@@ -241,21 +264,31 @@ function sendContactForm(url) {
 
 
     $.ajax({
-        type: 'POST',
-        url: url,
-        contentType: false,
-        processData: false,
-        data: fd,
-        dataType: 'html',
-        success: function(data){
-
-       // var rep = JSON.parse(data);
-        swal("Cool!", "Email sent successfully", "success");
-            $('#btn-submit-contact').prop('disabled', false);
+      type: 'POST',
+      url: url,
+      contentType: false,
+      processData: false,
+      data: fd,
+      dataType: 'html',
+      success: function(data){ 
+      // var rep = JSON.parse(data);
+	    var curr_lang = $('body').data('active-lang');
+	    if(curr_lang=='en'){
+      	swal("Cool!", "Email sent successfully", "success");
+      }else{
+      	swal("Superbe!", "L'email a été envoyé avec succès", "success");
+      }
+      $('#btn-submit-contact').prop('disabled', false);
     },
     error: function(data){
-        swal("Hmm", "Something went wrong, try again pls", "error");
-        $('#btn-submit-contact').prop('disabled', false);
+	    var curr_lang = $('body').data('active-lang');
+	    if(curr_lang=='en'){
+      	swal("Oh no!", "Email couldn't be sent. Please try again later", "success");
+      }else{
+      	swal("Oh non", "L'email n'a pas pu être envoyé. Veuillez réessayer plus tard", "success");
+      }
+      
+      $('#btn-submit-contact').prop('disabled', false);
     }
 });
 }
@@ -279,15 +312,27 @@ function updateProfile(url) {
         processData: false,
         data: fd,
         dataType: 'html',
-        success: function(data){
+        success: function(data){ 
+		    	var curr_lang = $('body').data('active-lang');
 
-            // var rep = JSON.parse(data);
-            swal("Cool!", "Profile was successfully updated", "success");
-            $('#btn-update-profile').prop('disabled', false);
+		    	if(curr_lang=='en'){
+	          // var rep = JSON.parse(data);
+	          swal("Cool!", "Profile was successfully updated", "success"); 
+	        }else{
+	          swal("Superbe!", "Votre profil a été mis à jour avec succès", "success");
+	        }
+	        $('#btn-update-profile').prop('disabled', false);
         },
         error: function(data){
-            swal("Hmm", "Something went wrong, try again pls", "error");
-            $('#btn-update-profile').prop('disabled', false);
+		    	var curr_lang = $('body').data('active-lang');
+		    	if(curr_lang=='en'){
+						swal("Oh no!", "Couldn't update your profile. Please try again later", "error");
+		    	}else{
+		    		swal("Oh non!", "Difficulté à mettre à jour votre profile. Veuillez réessayer plus tard", "error");
+
+		    	}
+            
+          $('#btn-update-profile').prop('disabled', false);
         }
     });
 }
@@ -309,16 +354,26 @@ function updatePassword(url) {
         processData: false,
         data: fd,
         dataType: 'html',
-        success: function(data){
-
-            var rep = JSON.parse(data);
-            console.log(rep.errors);
-            swal(rep.title, rep.message, rep.type);
-            $('#btn-update-password').prop('disabled', false);
+        success: function(data){ 
+          var rep = JSON.parse(data);
+          // console.log(rep.errors);
+           
+		    	var curr_lang = $('body').data('active-lang');
+		    	if(curr_lang=='en'){
+		    		swal(rep.title, rep.message, rep.type);
+		    	}else{
+		    		swal("Superbe!", "Votre mot de passe a été mis à jour", "error");
+		    	}   
+          $('#btn-update-password').prop('disabled', false);
         },
-        error: function(data){
-            swal("Hmm", "Something went wrong, try again pls", "error");
-            $('#btn-update-password').prop('disabled', false);
+        error: function(data){ 
+		    	var curr_lang = $('body').data('active-lang');
+		    	if(curr_lang=='en'){
+		    		swal("Oh no!", "Couldn't update your password. Please try again later", "error");
+		    	}else{
+		    		swal("Oh non!", "Difficulté à mettre à jour votre mot de passe. Veuillez réessayer plus tard", "error");
+		    	}  
+          $('#btn-update-password').prop('disabled', false);
         }
     });
 }
@@ -432,267 +487,4 @@ $('body').on('click', '#link-update-package', function(){
 
 
 
-
-
-
-
-
-
-
-
-// $("#payinfo").click(function () {
-//     $('.payment-info--edit').slideToggle(500);
-//     $(this).toggleClass("open");
-//     return false;
-// }) 
-// $("#change-pas").click(function () {
-//     $('.change-pas-block').slideToggle(300)
-//         .toggleClass("open");
-//     $(this).toggleClass("open");
-
-// })
  
-/************aside**menu***********/
-// var VideoFilter = (function () {
-//     $container = $('.menu-container');
-//     $($container).css('height', $($container).height() + 'px');
-//     $toggler = $($container).find('.show-on-hover');
-//     $itemsContainer = $($container).find('.menu-items');
-//     $items = $($container).find('.menu-items>li');
-//     $current = false;
-//     $currentActive = false;
-//     $resultsContainer = $('.js-filter-results');
-
-//     var hideElements = function () {
-//         $container.find('.menu-items>li').not($current).css('width', 0);
-//     };
-
-//     var showElements = function () {
-//         $container.find('.menu-items>li').not($current).css('width', '170px');
-//     };
-
-//     var slideDownElements = function () {
-//         $container.find('.menu-items>li').not($current).stop().animate({width: 0}, 500, function () {
-
-//         });
-//     };
-
-//     var slideUpElements = function () {
-
-//         $container.find('.menu-items>li').not($current).stop().animate({width: $container.width()}, 500, function () {
-//         });
-//     };
-
-//     var showSubmenu = function () {
-//         $subMenu = $current.find('.sub-menu');
-//         if ($subMenu.length < 1) {
-//             return false
-//         }
-//         $subMenu = $subMenu[0];
-//         $($subMenu).slideDown();
-//     };
-
-//     var changeActive = function () {
-
-//         if ($current.find('.sub-menu').length > 0) {
-//             hideElements();
-//             $current.css({'position': 'absolute', top: $current.position().top}).animate({top: 0}, 500, function () {
-//                 $(this).addClass('active').removeAttr('style');
-//                 $currentActive.removeClass('active');
-//                 showSubmenu();
-//             });
-
-//         } else {
-//             hideElements();
-//             var $activeClone = $currentActive.clone().removeClass('active');
-//             var offset_top = $current.position().top;
-
-//             $currentActive.stop().animate({top: offset_top}, 500, function () {
-//                 $(this).remove();
-//                 var $before_elem = $current.next();
-//                 if (!$before_elem.length) {
-//                     $($activeClone).insertAfter($current.prev());
-//                 } else {
-//                     $($activeClone).insertBefore($before_elem);
-//                 }
-//                 showElements();
-//             });
-
-//             $current.css({'position': 'absolute', top: $current.position().top}).animate({top: 0}, 500, function () {
-//                 $(this).addClass('active').removeAttr('style');
-//             });
-//         }
-
-//     };
-
-//     var loadFilteredResults = function () {
-//         var href = $current.find('> a').attr('href');
-//         $.get(href, function (data) {
-//             $resultsContainer.html(data);
-//         })
-//     };
-
-//     $(document).on('click', '.menu-items>li', function () {
-//         if ($(this).hasClass('active')) {
-//             return false;
-//         }
-
-//         if ($($container).find(':animated').length > 0) {
-//             return false
-//         }
-
-//         $('.sub-menu:visible').css('display', 'none');
-//         $currentActive = $($itemsContainer).find('.active');
-//         $current = $(this);
-
-//         loadFilteredResults();
-//         changeActive();
-//         return false;
-//     });
-
-
-//     $(document).on('mouseenter', '.show-on-hover', function () {
-//         if ($($container).find(':animated').length > 0) {
-//             return false
-//         }
-//         slideUpElements();
-//     }).on('mouseleave', '.menu-container', function () {
-//         if ($($container).find(':animated').length > 0) {
-//             return false
-//         }
-//         if ($('.active').find('.sub-menu').length > 0) {
-//             slideDownElements();
-//         }
-//     });
-// })();
-
-
-
-
-
-
-
-// //Stick "GP-menu"
-// $(document).ready(function(){ 
-//   // $('#GP-menu').sticky({topSpacing:0});
-
-
-//  	$('body').on('click', '#btn-comment-rate-modal', function(){
-//  		//console.log('heyeyey');
-//  		// $('#comment-rate-modal').modal();
-//  	});
-  
-// });
-
-
-
-
-/*
-1)THERE IS A PROBLEM WHEN TRYING TO IMPLEMENT THE REMOTE VERSION:
-2)IT LOOKS LIKE THE END POINT YOU CREATED DOESN'T MATCH THEIR SYSTEM
---- please check it out ---
-//http://twitter.github.io/typeahead.js/examples/#remote
-
-
-
-var db_keywords = new Bloodhound({
-  datumTokenizer: Bloodhound.tokenizers.whitespace,
-  queryTokenizer: Bloodhound.tokenizers.whitespace,
-  // url points to a json file that contains an array of country names, see
-  // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
-  prefetch: '',//<-- this needs to point to a local json file of values
-  remote: {
-    url: $('body').data('search-route'),//<!-- route is on the body tag
-    // wildcard: '%QUERY'
-  }
-});
-
-// passing in `null` for the `options` arguments will result in the default
-// options being used
-$('#frame-search .typeahead').typeahead(null, {
-  name: 'search-keywords',
-  display: 'value',
-  source: db_keywords
-});
-*/
-
-/**
-//PREVIOUS SEARCH SCRIPT THAT ALEX HAS DONE!
-// var searchData;
-        // var searchList = '';
-
-        // $( '.search-list' ).click(function(event) {
-        //     $( '#search-input' ).val(event.target.text);
-        //     $('.search-list-block').css('display', 'none');
-
-        //     console.log(event.target.text);
-        // });
-        // $( '#search-input' ).focus(function() {
-        //     $('.search-list-block').css('display', 'block');
-        // });
-        // $('#search-input').focusout(function(){
-        //     setTimeout(function(){ $('.search-list-block').css('display', 'none'); }, 300);
-        // });
-
- 
-
-        // function getSearchData() {
-        //     $.ajax({
-        //         type: 'POST',
-        //         url: '{{route('search-data')}}',
-        //         contentType: false,
-        //         processData: false,
-        //         data: {},
-        //         dataType: 'html',
-        //         success: function(data){
-        //             var rep = JSON.parse(data);
-
-        //             searchData = rep;
-
-        //             rep.forEach(function(item, i, rep) {
-        //                 searchList = searchList+'<li><a href="#">'+item.word+'</a></li>';
-        //             });
-
-        //             $(".search-list").html(searchList);
-
-
-        //         },
-        //         error: function(data){
-        //             console.log('error ' + data);
-        //         }
-        //     });
-        // }
-
-        // $(function(){
-        //     $("#search-input").keyup(function(){
-        //         var search = $("#search-input").val();
-
-
-        //         var positiveArr = searchData.filter(function(word) {
-        //             if(word.word.toLowerCase().indexOf(search.toLowerCase()) === -1){
-        //                 return false
-        //             } else {
-        //                 return true;
-        //             }
-
-        //         });
-        //         var newSearchList = '';
-        //         positiveArr.forEach(function(item, i, positiveArr) {
-        //             newSearchList = newSearchList+'<li><a href="#">'+item.word+'</a></li>';
-        //         });
-
-        //         $(".search-list").html(newSearchList);
-        //         return false;
-        //     });
-        // });
-*/
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,8 @@
 @extends('r.layouts.main')
 @section('content')
-  <div class="page-landing">
+  <div class="page page-landing">
 
-    <section class="section text-center">
+    <!-- <section class="section text-center">
     	<a class="link-inner-redirect" name="section1"></a> 
     	<div class="container">
       	<div class="list-inline txt-presentation3">
@@ -33,8 +33,7 @@
 			<a class="btn-down btn-dark" href="#section2">
 		   	<span class="icon icon-scroll-arrow-to-down"></span>
 		  </a>
-    </section><!-- section -->   
-      
+    </section>  -->
        
 
   	<section class="bg1 section text-center">
@@ -63,26 +62,27 @@
                   <!-- <div class="price upper">{{$payment_plan->price == '0'?'Free':'$ '.$payment_plan->price}}</div> -->
                   
 									@if($payment_plan->price == '0') 
-										<!-- <div class="price upper">{{trans('messages.free')}}</div> -->
-										<a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a> 
+										<div class="price upper">{{trans('messages.free')}}</div>
 									@else 
-										<div class="price upper">{{$payment_plan->price}}<small>/{{trans('messages.month')}}</small></div>
+										<div class="price upper">
+											<small>$</small>
+											{{$payment_plan->price}}<small>/{{trans('messages.month')}}</small></div>
 									@endif 
                 </section>
               @endforeach 
             </div> 
+
+            <div class="text-center"> 
+							<a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a> 
+            </div>
           </div>
         </div>
-      </div>
- 
-			<a class="btn-down" href="#section3">
-		   	<span class="icon icon-scroll-arrow-to-down"></span>
-		  </a>
+      </div> 
   	</section><!-- section -->
       
       
 
-    <section class="section text-center">
+    <!-- <section class="section text-center">
     	<a class="link-inner-redirect" name="section3"></a> 
       <div class="container"> 
         <div class="row">
@@ -92,6 +92,6 @@
           </article>
         </div>
       </div>
-    </section><!-- section -->
+    </section>  -->
   </div><!-- page-landing -->
 @stop

@@ -1,6 +1,6 @@
 @extends('r.layouts.user-search')
 @section('content')
-	<div class="page-packages">
+	<div class="page page-packages">
 		<div class="global-display">
 			@include('r.chunks._account_menu')
 
@@ -14,12 +14,6 @@
 						<p>{{trans('messages.packages_hero1_p')}}</p>
 											</header>
 
-					@if(Session::has('flash_success'))
-						<div class="alert alert-success"  >
-							<button type="button" class="close" data-dismiss="alert">×</button>
-							{{Session::get('flash_success')}}
-						</div>
-					@endif
 					<div class="price-block">
 					{{--<div class="price-item">--}}
 					{{--<div class="price-title">Basic</div>--}}
@@ -138,23 +132,17 @@
 								<span class="badge">3</span>
 								{{trans('messages.credit_card')}}
 							</h2>
-
-							@if(Session::has('status'))
-								<div class="alert alert-success"  >
-									<button type="button" class="close" data-dismiss="alert">×</button>
-									{{Session::get('status')}}
-								</div>
-							@endif
+							<p style="margin-bottom: 20px;">{{trans('messages.packages_creditcard_msg')}}</p>
 
 
-							<div class="payment-form-block">
-								<form id="payment-form" action="{{route('stripe.create-card')}}" method="post" class="xl-inputs">
+							<div class="payment-form-block" ng-app="validationApp" ng-controller="mainController">
+								<form id="payment-form" name="paymentForm" action="{{route('stripe.create-card')}}" method="post" class="xl-inputs" autocomplete="off" novalidate>
 									{{ csrf_field() }}
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group">
-												<label>Card Number</label>
-												<input type="text" data-stripe="number" class="form-control" required>
+											<div class="input-group" ng-class="{ 'has-error' : (paymentForm.card_number.$invalid && paymentForm.$dirty) }">
+												<label>{{trans('messages.card_number')}}</label>
+												<input type="text" name="card_number" ng-model="user.card_number" ng-minlength="4" data-stripe="number" class="form-control" required>
 												<div class="card-samples">
 													<div id="card-image-container-Visa" role="widget" aria-live="polite" name="card-image-creditCardType" class="card-image-Visa-disabled card-image " aria-selected="false" aria-hidden="true" aria-disabled="true">
 							              <span id="card-image-text-Visa" class="card-image-text-Visa sr-only">
@@ -167,6 +155,8 @@
 							              </span>
 													</div><!-- MasterCard -->
 												</div><!-- card samples -->
+
+        								<div ng-cloak ng-show="paymentForm.card_number.$invalid && paymentForm.$dirty" class="help-block">{{trans('messages.card_number_err_enter')}}</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
@@ -199,57 +189,56 @@
 										</div><!-- col -->
 
 										<div class="col-md-4">
-											<div class="input-group">
+											<div class="input-group" ng-class="{ 'has-error' : (paymentForm.cvv.$invalid && paymentForm.$dirty) }">
 												<label for="cvv">CVV</label>
-												<input type="text" data-stripe="cvc" id="cvv" class="form-control" required>
+												<input type="text" data-stripe="cvc" name="cvv" ng-model="user.cvv" id="cvv" class="form-control" required>
 											</div><!-- year -->
 										</div><!-- col -->
 									</div><!-- row -->
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group">
-												<label for="cardhlder-name">Cardholder Name</label>
-												<input type="text" data-stripe="name" id="cardhlder-name" class="form-control" required>
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.username.$invalid && paymentForm.$dirty }"> 
+												<label for="cardhlder-name">{{trans('messages.card_holder_name')}}</label>
+												<input type="text" name="username" ng-model="user.username" data-stripe="name" id="cardhlder-name" ng-minlength="2" class="form-control" required>
+        								<div ng-cloak ng-show="paymentForm.username.$invalid && paymentForm.$dirty" class="help-block">{{trans('messages.card_holder_name_error')}}</div> 
+											</div>
+										</div><!-- col --> 
+									</div><!-- row -->
+
+									<div class="row">
+										<div class="col-md-12">
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.country.$invalid && paymentForm.$dirty }"> 
+												<label>{{trans('messages.country')}}</label>
+												<input type="text" name="country" ng-model="user.country" data-stripe="address_state" class="form-control" required>
+        								<div ng-cloak ng-show="paymentForm.country.$invalid && paymentForm.$dirty" class="help-block">{{trans('messages.country_error')}}</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group">
-												<label>Country</label>
-												<select data-stripe="address_country" class="form-control" required>
-													<option value="usa">USA</option>
-													<option value="uk">UK</option>
-													<!-- option list -->
-													<!-- from current year up to 30 years -->
-												</select>
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.province.$invalid && paymentForm.$dirty }"> 
+												<label>{{trans('messages.state_province_region')}}</label>
+												<input type="text" name="province" ng-model="user.province" data-stripe="address_state" class="form-control" required>
+        								<div ng-cloak ng-show="paymentForm.province.$invalid && paymentForm.$dirty" class="help-block">{{trans('messages.state_province_region_error')}}</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
 
 									<div class="row">
 										<div class="col-md-12">
-											<div class="input-group">
-												<label>State/Province/Region</label>
-												<input type="text" data-stripe="address_state" class="form-control" required>
-											</div>
-										</div><!-- col -->
-									</div><!-- row -->
-
-									<div class="row">
-										<div class="col-md-12">
-											<div class="input-group">
-												<label>Zip/Postal Code</label>
-												<input type="text" data-stripe="address_zip" class="form-control" required>
+											<div class="input-group" ng-class="{ 'has-error' : paymentForm.postalcode.$invalid && paymentForm.$dirty }"> 
+												<label>{{trans('messages.zip_Postal_code')}}</label>
+												<input type="text" name="postalcode" ng-model="user.postalcode" data-stripe="address_zip" class="form-control" required>
+        								<div ng-cloak ng-show="paymentForm.postalcode.$invalid && paymentForm.$dirty" class="help-block">{{trans('messages.zip_Postal_code_error')}}</div> 
 											</div>
 										</div><!-- col -->
 									</div><!-- row -->
 
 									<div class="row section-submit">
 										<div class="col-md-12">
-											<button type="submit" id="update-pay-method-btn" class="btn btn-primary btn-block btn-lg btn-submit">Update payment method</button>
+											<button type="submit" id="update-pay-method-btn" class="btn btn-primary btn-block btn-lg btn-submit" ng-disabled="paymentForm.$invalid">{{trans('messages.update_payment_method')}}</button>
 										</div><!-- col -->
 									</div><!-- row -->
 								</form>
@@ -262,9 +251,9 @@
 								<span class="badge">3</span>
 								Paypal
 							</h2>
-							<p>To finish sign-up, click on the "Continue to PayPal" button and log on to PayPal using your email and password.</p>
-							{{--<button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>--}}
-							<button class="btn btn-primary btn-block btn-lg btn-submit section-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">Continue to Pay Pal</button>
+							<p>{{trans('messages.packages_paypal_msg')}}</p>
+							{{--<button class="btn btn-primary btn-block btn-lg btn-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">{{trans('messages.packages_paypal_cta')}}</button>--}}
+							<button class="btn btn-primary btn-block btn-lg btn-submit section-submit" id="btn-checkout-paypal" onclick="checkoutPlanPayPal()">{{trans('messages.packages_paypal_cta')}}</button>
 							{{--		              <a href="{{ url('subscribe/paypal') }}" class="btn btn-primary btn-block btn-lg btn-submit">subscribe Pay Pal</a>--}}
 						</div><!-- col-right -->
 					</div><!-- row -->
@@ -278,6 +267,21 @@
 			</div><!-- "global-content -->
 		</div><!-- global-display -->
 	</div>
+
+	@if(Session::has('flash_success'))
+		<script>
+            window.onload=function(){
+                swal("Cool!", "{{Session::get('flash_success')}}", "success");
+            }
+		</script>
+	@endif
+	@if(Session::has('flash_error'))
+		<script>
+            window.onload=function(){
+                swal("Oops!", "{{Session::get('flash_error')}}", "error");
+            }
+		</script>
+	@endif
 @endsection
 
 @section('scripts')

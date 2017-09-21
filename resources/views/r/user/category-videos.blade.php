@@ -1,6 +1,6 @@
 @extends('r.layouts.user-search')
 @section('content')
-  <div class="page-categories page-{{$videoType}}"> 
+  <div class="page page-categories page-{{$videoType}}"> 
     <div class="global-display"> 
     	@include('r.chunks._filter_video')
 
