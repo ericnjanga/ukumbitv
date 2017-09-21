@@ -279,7 +279,7 @@
 	                  <label for="small_image2" class="">Preview image 1 *</label>
 	                  <input type="file" id="small_image2" name="small_image2" accept="image/jpeg,image/png" onchange="previewUploadedPhoto('small_image2', 'previewArea3', 'small2');">
 	                  <div id="previewArea3"></div>
-	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 510x800)</p>
+	                  <p class="help-block">Please enter .png .jpeg .jpg images only. (size: 350x500)</p>
 	              </div>
 	           
 	              <div class="form-group">
@@ -573,9 +573,9 @@
                     imgSize = '1100x510';
                     break;
                 case 'small2':
-                    imgWidth = 510;
-                    imgHeight = 800;
-                    imgSize = '510x800';
+                    imgWidth = 350;
+                    imgHeight = 500;
+                    imgSize = '350x500';
                     break;
                 case 'small3':
                     imgWidth = 510;
