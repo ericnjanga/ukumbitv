@@ -976,7 +976,7 @@ return array(
   //REGISTRATION CONFIRMATION ...
   //----------------------------------- 
   'registration_confirm_h1' => 'Here is how you can confirm your email!',
-  'registration_confirm_emailsent_alert' => 'Confirmation email sent successfully', 
+  'registration_confirm_emailsent_alert' => 'Confirmation email sent', 
   'registration_confirm_p1' => 'Please check your inbox at: ',
   'registration_confirm_p2' => 'Look for an email with a <b>"Welcome to UkumbiTV"</b> title',
   'registration_confirm_p3' => 'Open that email and click on the "Start Watching Now" button',
