@@ -158,6 +158,8 @@ return array(
 	'liked_videos' => 'Vidéos Aimées',
 	'new_videos' => 'Nouvelles vidéos',
 	'popular_videos' => 'Vidéos populaires',
+	'dramas' => 'Drames',
+	'comedies' => 'Com&#233;dies',
 	'your_search_results' => 'R&#233;sultats de votre recherche',
 	'save_changes' => 'Sauvegarder',
 	'full_name' => 'Nom complet',
