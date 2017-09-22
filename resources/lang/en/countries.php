@@ -15,7 +15,7 @@ return [
     // 'Comoros',
     // 'Democratic Republic of the Congo',
     // 'Republic of the Congo',
-    'Cote d\'Ivoire',
+    'Ivory Coast',
     // 'Djibouti',
     // 'Egypt',
     // 'Equatorial Guinea',
