@@ -271,7 +271,7 @@
 				        	<!-- -->
 				        <div class="media">
 								  <div class="media-left">
-								  	<img class="media-object" src="{{$video->videoimage->imgSmall1}}" alt="">
+								  	<img class="media-object" src="{{$video->videoimage->imgPreview1}}" alt="">
 								  	<p>{{$video->title}}</p>
 								  </div>
 								  <div class="media-body">
