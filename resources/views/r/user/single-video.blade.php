@@ -309,7 +309,7 @@
 	                    <div class="video-item">
 	                        <a href="{{route('user.singleVideo',$relatedVideo->watchid)}}">
 	                            <div class="video-img">
-	                                <img src="{{$relatedVideo->videoimage->imgSmall1}}" alt="">
+	                                <img src="{{$video->videoimage->imgPreview1}}" alt="">
 	                            </div>
 	                            <div class="video-title ellipsis-gradient">
 	                              {{$relatedVideo->title}} ({{$video->created_at->format('Y')}})
