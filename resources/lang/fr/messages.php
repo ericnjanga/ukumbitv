@@ -153,6 +153,7 @@ return array(
 	'upgrade' => 'Am&#233;liorez',
 	'submit' 						=> 'Soumettre',
 	'free' => 'gratuit', 
+	'comment_placeholder' => 'Dites aux autres ce que vous pensez du film. Le recommenderiez-vous? Pourquoi?', 
 	'my_list' => 'Ma Liste',
   'my_list_empty'=>'Aucune vidéo n\'a été ajoutée à la liste.',
 	'liked_videos' => 'Vidéos Aimées',

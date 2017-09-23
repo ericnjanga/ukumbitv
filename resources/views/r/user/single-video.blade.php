@@ -272,11 +272,10 @@
 				      <div class="modal-body modal-cr__body">  
 						  	<img class="img-poster" src="{{$video->videoimage->imgPreview1}}" alt="{{$video->title}}">
 						  	 
-						  
 						    <form>
-                  <textarea name="comment-text" class="comment-text" id="comment-text" placeholder="Tell others what you think about the movie. Would you recommend it, and why?"></textarea>
+                  <textarea name="comment-text" class="comment-text" id="comment-text" placeholder="{{trans('messages.comment_placeholder')}}"></textarea>
                   <div class="clearfix"></div>
-                 	<p class="rate-info">{{trans('messages.review_help')}}</p> 
+                 	<p class="rate-info"><i>{{trans('messages.review_help')}}</i></p> 
                 </form> 
 				      </div>
 				      <div class="modal-footer modal-cr__footer">
