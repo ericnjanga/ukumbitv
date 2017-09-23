@@ -117,8 +117,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
   <!-- Alerts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-		<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.js"></script>
-		<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.playlist.js"></script>
+  <!--
+	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.js"></script>
+	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.playlist.js"></script>
+-->
 
 	<!-- Main JS file -->
 	<script src="{{asset('js/app.js')}}"></script>  
