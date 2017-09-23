@@ -1772,37 +1772,48 @@ input:-webkit-autofill {
 	}
 }
 .modal-cr__body {
-	.media-left {
-		img {
-			margin-bottom: 5px;
-		}
-		p {
-			font-size: 14px;
-		}
+	.img-poster {
+    position: absolute;
+		width: 100px;
+    top: 15px;
+    left: 15px;
 	}
-	.media-body {
-		width: 70%;
-		textarea {
-			height: 200px;
-			border-width: 0;
-			background-color: #eee;
-		}
-		.rate-info {
-			font-size: 13px;
-			font-style: italic;
-			    font-weight: 100;
-		}
-		.rating-frame { 
-			margin: 30px 0 0 -5px;
-			.icon {
-				font-style: 30px;
-				cursor: pointer;
-			}
-			> li:first-child {
-				padding-left: 15px;
-			}
-		}
+	.comment-text {
+		width: calc(100% - 115px); 
+    min-height: 160px;
+    float: right;
 	}
+	// .media-left {
+	// 	img {
+	// 		margin-bottom: 5px;
+	// 	}
+	// 	p {
+	// 		font-size: 14px;
+	// 	}
+	// }
+	// .media-body {
+	// 	width: 70%;
+	// 	textarea {
+	// 		height: 200px;
+	// 		border-width: 0;
+	// 		background-color: #eee;
+	// 	}
+	// 	.rate-info {
+	// 		font-size: 13px;
+	// 		font-style: italic;
+	// 		    font-weight: 100;
+	// 	}
+	// 	.rating-frame { 
+	// 		margin: 30px 0 0 -5px;
+	// 		.icon {
+	// 			font-style: 30px;
+	// 			cursor: pointer;
+	// 		}
+	// 		> li:first-child {
+	// 			padding-left: 15px;
+	// 		}
+	// 	}
+	// }
 }
 .modal-cr__footer {
 	.btn-submit {

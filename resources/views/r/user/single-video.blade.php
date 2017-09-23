@@ -267,15 +267,16 @@
 								  </div>
 								</div> 
 				      </div>
-				      <div class="modal-body modal-cr__body" style="border:10px solid red;">  
-						  	<img src="{{$video->videoimage->imgPreview1}}" alt="">
-						  	<p>{{$video->title}}</p>
+				      <style>
+				      </style>
+				      <div class="modal-body modal-cr__body">  
+						  	<img class="img-poster" src="{{$video->videoimage->imgPreview1}}" alt="{{$video->title}}">
+						  	 
 						  
 						    <form>
-                  <div class="input-wrap textarea-wrap">
-                  	<textarea name="comment-text" id="comment-text" placeholder="Tell others what you think about the movie. Would you recommend it, and why?"></textarea>
-                  	<p class="rate-info">{{trans('messages.review_help')}}</p>
-                  </div>
+                  <textarea name="comment-text" class="comment-text" id="comment-text" placeholder="Tell others what you think about the movie. Would you recommend it, and why?"></textarea>
+                  <div class="clearfix"></div>
+                 	<p class="rate-info">{{trans('messages.review_help')}}</p> 
                 </form> 
 				      </div>
 				      <div class="modal-footer modal-cr__footer">
