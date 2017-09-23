@@ -268,7 +268,7 @@
 								</div> 
 				      </div>
 				      <div class="modal-body modal-cr__body" style="border:10px solid red;">  
-						  	<img class="media-object" src="{{$video->videoimage->imgPreview1}}" alt="">
+						  	<img src="{{$video->videoimage->imgPreview1}}" alt="">
 						  	<p>{{$video->title}}</p>
 						  
 						    <form>
