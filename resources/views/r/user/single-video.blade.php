@@ -326,15 +326,17 @@
 	<!-- ADD TO LIST -->
 	<!-- (same script on "home-video.blade.php") -->
 
+	<!--
 		<script>
-			var episodes = '{{$episodesArr}}';
-            vimeowrap('player').setup({
-                urls: episodes.split(','),
-                plugins: {
-                    'playlist':{}
-                }
-            });
+			// var episodes = '{{$episodesArr}}';
+   //          vimeowrap('player').setup({
+   //              urls: episodes.split(','),
+   //              plugins: {
+   //                  'playlist':{}
+   //              }
+   //          });
 		</script>
+	-->
 
   <script>
       // console.log('{{$checkTrial}}');
