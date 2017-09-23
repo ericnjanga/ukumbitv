@@ -267,25 +267,16 @@
 								  </div>
 								</div> 
 				      </div>
-				      <div class="modal-body modal-cr__body">
-				        	<!-- -->
-				        <div class="media">
-								  <div class="media-left">
-								  	<img class="media-object" src="{{$video->videoimage->imgPreview1}}" alt="">
-								  	<p>{{$video->title}}</p>
-								  </div>
-								  <div class="media-body">
-								    <form>
-	                    <div class="input-wrap textarea-wrap">
-	                    	<textarea name="comment-text" id="comment-text" placeholder="Tell others what you think about the movie. Would you recommend it, and why?"></textarea>
-	                    	<p class="rate-info">{{trans('messages.review_help')}}</p>
-	                    </div>
-	                  </form>
-								  </div>
-				        </div><!-- media -->
-
-
-
+				      <div class="modal-body modal-cr__body" style="border:10px solid red;">  
+						  	<img class="media-object" src="{{$video->videoimage->imgPreview1}}" alt="">
+						  	<p>{{$video->title}}</p>
+						  
+						    <form>
+                  <div class="input-wrap textarea-wrap">
+                  	<textarea name="comment-text" id="comment-text" placeholder="Tell others what you think about the movie. Would you recommend it, and why?"></textarea>
+                  	<p class="rate-info">{{trans('messages.review_help')}}</p>
+                  </div>
+                </form> 
 				      </div>
 				      <div class="modal-footer modal-cr__footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">{{trans('messages.close')}}</button>
