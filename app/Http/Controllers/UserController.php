@@ -208,6 +208,9 @@ class UserController extends Controller {
 
             $my_lists =$this->myPlaylist();
 
+            $dramaVideos = Helper::getDramaMovies();
+            $comedyVideos = Helper::getComedyMovies();
+
             return view('r.user.home-video')
                         ->with('page' , 'home')
                         ->with('subPage' , 'home')
@@ -221,6 +224,8 @@ class UserController extends Controller {
                         ->with('videos_by_cat' , $lastVideos)
                         ->with('grandVideo' , $grandVideo)
                         ->with('videos', $videos)
+                        ->with('dramaVideos', $dramaVideos)
+                        ->with('comedyVideos', $comedyVideos)
                         ->with('payPlan', Auth::user()->paymentPlans[0]->flag)
                         ->with('trialCount', 3-count($histories));
         } else {
@@ -257,7 +262,7 @@ class UserController extends Controller {
     public function videosByType($id)
     {
 
-        $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('video_type', $id)->get();
+        $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('video_type', $id)->orderby('id' , 'desc')->get();
 
         return view('r.user.category-videos')->with('videos', $videos)->with('videoType', $id);
     }
@@ -401,6 +406,9 @@ class UserController extends Controller {
     {
 
         $video = AdminVideo::with('comments.user', 'videoimage')->where('watchid', $id)->firstOrFail();
+
+
+
 
         $checkTrial = true;
         $flag = 0;
