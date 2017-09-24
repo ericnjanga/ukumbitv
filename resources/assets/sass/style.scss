@@ -1669,8 +1669,11 @@ input:-webkit-autofill {
 	}
 	.rate-info {
 		margin-left: 115px;
+    margin-top: 10px;
     font-size: 13px;
     font-style: italic;
+    line-height: 13px;
+    color: #777;
 	}
 }
 .modal-cr__footer {

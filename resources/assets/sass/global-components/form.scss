@@ -23,24 +23,24 @@ form.xl-inputs {
 }
 
 
-$color-input-placeholder: #ccc;
+$color-input-placeholder: #777;
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: $color-input-placeholder;
+  color: $color-input-placeholder!important;
   line-height: 13px;
   font-style: italic;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: $color-input-placeholder;
+  color: $color-input-placeholder!important;
   line-height: 13px;
   font-style: italic;
 }
 :-ms-input-placeholder { /* IE 10+ */
-  color: $color-input-placeholder;
+  color: $color-input-placeholder!important;
   line-height: 13px;
   font-style: italic;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: $color-input-placeholder;
+  color: $color-input-placeholder!important;
   line-height: 13px;
   font-style: italic;
 }
