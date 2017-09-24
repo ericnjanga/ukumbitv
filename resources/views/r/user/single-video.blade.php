@@ -275,7 +275,7 @@
 						    <form>
                   <textarea name="comment-text" class="comment-text" id="comment-text" placeholder="{{trans('messages.comment_placeholder')}}"></textarea>
                   <div class="clearfix"></div>
-                 	<p class="rate-info"><i>{{trans('messages.review_help')}}</i></p> 
+                 	<p class="rate-info"><i>{{trans('messages.comment_placeholder')}}({{trans('messages.review_help')}})</i></p> 
                 </form> 
 				      </div>
 				      <div class="modal-footer modal-cr__footer">
