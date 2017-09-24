@@ -1,21 +1,22 @@
     
+$poster-width: 175px;
+$poster-height: 250px;
 
 .video-item{
 	position: relative;
 	margin: 5px 6px;
 	float: left;
-  width: 175px; 
+  width: $poster-width; 
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   background-color: #fff;
   padding: 0 0 14px 0;
   transition: all 1s ease-in-out;
   border-radius: 4px;
-  overflow: hidden; 
 }
 
-.video-item__frame{
-	border-radius: 4px;
+.video-item__frame{ 
 	background: #000;
+  overflow: hidden; 
 	display: block;
 	&:hover{
 		.video-item__img{ 
@@ -32,12 +33,9 @@
 .video-item__img{
 	display: block;
   margin: 0 0 5px 0;
-  width: 175px;
-  height: 250px;
-  // line-height: 170px;
-  text-align: center;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  width: $poster-width;
+  height: $poster-height; 
+  text-align: center; 
   transition: opacity 0.35s, transform 0.35s; 
 }
 
