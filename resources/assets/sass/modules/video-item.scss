@@ -31,8 +31,7 @@ $poster-height: 250px;
 
 
 .video-item__img{
-	display: block;
-  margin: 0 0 5px 0;
+	display: block; 
   width: $poster-width;
   height: $poster-height; 
   text-align: center; 
@@ -55,6 +54,7 @@ $poster-height: 250px;
 }
 
 .video-item__title{ 
+	margin-top: 5px;
   font-size: 16px;
   font-weight: 300;
   padding: 0 10px;
