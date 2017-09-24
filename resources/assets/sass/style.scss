@@ -1663,6 +1663,9 @@ input:-webkit-autofill {
 		width: calc(100% - 115px); 
     min-height: 160px;
     float: right;
+  //   &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder {  
+		//   color: pink;
+		// }
 	}
 	.rate-info {
 		margin-left: 115px;
