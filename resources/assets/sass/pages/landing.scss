@@ -94,20 +94,24 @@
   z-index: 10;
 }
 .landing-header__hero {
-	position: absolute;
-	top: 200px;
-	left: 100px;
-
-  h1 {
-    font-size: 40px;
-    line-height: 40px;
-  	color: #fff;
-  	margin-bottom: 10px;
-	}
-  p {
-  	margin-bottom: 50px;
-  	font-size: 20px;
-    color: #ccc;
+	display: flex; 
+  position: relative;
+  z-index: 10;
+  top: 100px;
+  width: 100%;
+  padding: 20px;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center; 
+	 
+  h1 { 
+  	position: relative;
+  	z-index: 10;
+  	margin-bottom: 30px;
+	} 
+  .btn {
+  	box-shadow: 0px 0px 205px 57px rgba(255,255,255,1);
   }
 }
 

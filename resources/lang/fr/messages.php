@@ -735,7 +735,7 @@ return array(
   //HOME PAGE ...
   //-----------------------------------
   //--Call to ation ..
-  'home_title1' => 'Les meilleures productions Africaines',
+  'home_title1' => 'Les meilleurs films Africaines',
   'home_substitle1' => 'Des vidéos illimitées en haute définition à portée de main',
   'home_cta' => 'Inscription Gratuite',
 
