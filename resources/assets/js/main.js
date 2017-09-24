@@ -440,15 +440,15 @@ $('#frame-search .typeahead').typeahead({
 
 
 
-/**
- *
- * INITIALIZE INTRO BACKGROUND VIDEO
- * ---------------------------------
-*/
-$('#intro-video').YTPlayer({
-  fitToBackground: true,
-  videoId: 'oJxzaBDUEB8'//youtube video ID
-});
+// /**
+//  *
+//  * INITIALIZE INTRO BACKGROUND VIDEO
+//  * ---------------------------------
+// */
+// $('#intro-video').YTPlayer({
+//   fitToBackground: true,
+//   videoId: 'oJxzaBDUEB8'//youtube video ID
+// });
 
 
 

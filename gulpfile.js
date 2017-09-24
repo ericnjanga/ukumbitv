@@ -30,7 +30,7 @@ elixir(function(mix) {
 	//Concatenating local librairies and main js files 
 	mix.scripts([
 		//Local libraries
-		'/libs/jQuery.YoutubeBackground.js', 
+		// '/libs/jQuery.YoutubeBackground.js', 
 		'/libs/anchor-smooth-scroll.js', 
 		'/libs/ng-password.js', //<-- Angularjs password comparison directive
 		//main js files
