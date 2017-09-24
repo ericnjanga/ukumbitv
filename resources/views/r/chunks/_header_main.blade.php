@@ -44,7 +44,9 @@
     	<img src="https://ukumbitv.com/images/20170814023013/xsmall_image21506008733bessem-android-girl.jpg.pagespeed.ic.ndpRpaoJE6.webp" alt="" class="video-item__img">
     	<img src="https://ukumbitv.com/images/20170814024810/xsmall_image21506006427raging-hearts.jpg.pagespeed.ic.U0gc2TKHRk.webp" alt="" class="video-item__img">
     	<img src="https://ukumbitv.com/images/20170804114141/xsmall_image21506009821infidele.jpg.pagespeed.ic.mPx5sEOs_5.webp" alt="" class="video-item__img">
-    
+    	<img src="https://ukumbitv.com/images/20170803012913/xsmall_image21506096046panique-portrait2.jpg.pagespeed.ic.6UVQm_mQAk.webp" alt="" class="video-item__img">
+    	<img src="https://ukumbitv.com/images/20170804110921/xsmall_image21506010033bloody-night.jpg.pagespeed.ic.dUEzpz04BK.webp" alt="" class="video-item__img">
+    	<img src="https://ukumbitv.com/images/20170806122946/xsmall_image21506009571la-don-nga.jpg.pagespeed.ic.tw3ihifdiP.webp" alt="" class="video-item__img">
      
   </section> 
 

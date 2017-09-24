@@ -100,6 +100,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+	width: calc(100% + 175px);
 	overflow: hidden;
 	// border: 1px solid red;
   // margin: 150px auto 0 auto; 
@@ -123,6 +124,7 @@
   }
   .video-item__img{
   	float: left;
+  	opacity: 0.5;
   }
 }
 
