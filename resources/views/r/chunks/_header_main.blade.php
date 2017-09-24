@@ -22,21 +22,18 @@
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>  
-
-
-
-  <section class="landing-header__content">    
  		
- 		<article>
- 			<h1>{{trans('messages.home_title1')}}</h1>
-    	<p>{{trans('messages.home_substitle1')}}</p>
-    	<a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a>
- 		</article>
-    
-    
-       
 
-     
+
+	<article class="landing-header__hero">
+		<h1>{{trans('messages.home_title1')}}</h1>
+  	<p>{{trans('messages.home_substitle1')}}</p>
+  	<a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a>
+	</article>
+
+
+
+  <section class="landing-header__content">     
     	<img src="https://ukumbitv.com/images/20170923131344/xsmall_image21506172424papa-chef.jpg.pagespeed.ic.L59TM7dqYw.webp" alt="" class="video-item__img">
     	<img src="https://ukumbitv.com/images/20170922172952/xsmall_image21506101392le-contrat.jpg.pagespeed.ic.AvJ0VboVgV.webp" alt="" class="video-item__img">
     	<img src="https://ukumbitv.com/images/20170921003810/xsmall_image21506004522ultime_sursis.jpg.pagespeed.ic.YpiFBp5lji.webp" alt="" class="video-item__img">
