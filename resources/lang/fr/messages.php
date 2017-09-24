@@ -153,11 +153,15 @@ return array(
 	'upgrade' => 'Am&#233;liorez',
 	'submit' 						=> 'Soumettre',
 	'free' => 'gratuit', 
+	'new' => 'nouveau',
+	'comment_placeholder' => 'Dites aux autres ce que vous pensez du film. Le recommenderiez-vous? Pourquoi?', 
 	'my_list' => 'Ma Liste',
   'my_list_empty'=>'Aucune vidéo n\'a été ajoutée à la liste.',
 	'liked_videos' => 'Vidéos Aimées',
 	'new_videos' => 'Nouvelles vidéos',
 	'popular_videos' => 'Vidéos populaires',
+	'dramas' => 'Drames',
+	'comedies' => 'Com&#233;dies',
 	'your_search_results' => 'R&#233;sultats de votre recherche',
 	'save_changes' => 'Sauvegarder',
 	'full_name' => 'Nom complet',
@@ -731,7 +735,7 @@ return array(
   //HOME PAGE ...
   //-----------------------------------
   //--Call to ation ..
-  'home_title1' => 'Les meilleures productions Africaines',
+  'home_title1' => 'Les meilleurs films Africaines',
   'home_substitle1' => 'Des vidéos illimitées en haute définition à portée de main',
   'home_cta' => 'Inscription Gratuite',
 
@@ -744,6 +748,8 @@ Nous produisons et promouvons des films, des spectacles de télévision, des sé
 Découvrez notre contenu incroyable sur n\'importe quel appareil de votre choix (smartphone, tablette ou bureau) et profitez de la même expérience. Téléchargez votre vidéo préférée pour regarder en mode hors connexion. Participez, commentez et partagez votre expérience avec vos amis.',
   'home_midsec_title3' => 'Great video quality & experience',
   'home_midsec_blurb3' => 'Watch videos on High Definition, experience the ease to search and find your favorite content, receive movie suggestions based on your preferences, stay up to date with latest african shows and be the first to watch them.',
+
+  'home_footnote' => 'UkumbiTV est une plateforme de diffusion de films africains noirs produits sur continent et dans la diaspora. Notre but est de connecter les cinéphilles Africains de tous les horizons avec les meilleures productions cinematiques africaines et d\'encourager le developement du cinema africain noir.',
 
   //--plans section ..
   'home_plansec_title' => 'Choisissez votre expérience',

@@ -171,12 +171,16 @@ return array(
 	'from'	=>	'From',
 	'to'	=>	'To',
 	'date' => 'Date',
-	'free' => 'free',
-	'free' => 'free',
+	'free' => 'free', 
+	'new' => 'new',
+	'comment_placeholder' => 'Tell others what you think about the movie. Would you recommend it, and why?', 
 	'my_list' => 'My List',
   'my_list_empty'=>'No video added to list.',
 	'liked_videos' => 'Liked Videos',
 	'new_videos' => 'New Videos',
+	'popular_videos' => 'Popular Videos',
+	'dramas' => 'Dramas',
+	'comedies' => 'Comedies',
 	'popular_videos' => 'Popular Videos',
 	'your_search_results' => 'Your search results',
 	'save_changes' => 'Save Changes',
@@ -627,7 +631,7 @@ return array(
 	'date_time'	=>	'Date & Time',
 	'comments'	=>	'Comments',
 	'likes' => 'Likes',
-	'Director' => 'Director',
+	'director' => 'Director',
 	'actors' => 'Acteurs/Actrices',
 
 	//Admin Payment
@@ -759,7 +763,7 @@ return array(
   //HOME PAGE ...
   //----------------------------------- 
   //--Call to ation ..
-  'home_title1' => 'Enjoy the finest African productions',
+  'home_title1' => 'The best African movies',
   'home_substitle1' => 'Unlimited high-definition videos at your fingertips',
   'home_cta' => 'Try UkumbiTV for free',
 
@@ -770,6 +774,8 @@ return array(
   'home_midsec_blurb2' => 'Catch the best of funs watching our captivating programs wherever you find yourself, being it on your smartphone, tablet or desktop the experience remains thesame. You can equally download and watch off line your favorite programs, movies, TV shows, documentaries or any other production of your choice. We give you not only all types of productions, but the best in each domain.',
   'home_midsec_title3' => 'Great video quality & experience',
   'home_midsec_blurb3' => 'Ukumbi TV gives you videos of high definition just as you will get in a theatre. Feel the moment, the action, the sound, the emotion and the passion on any device of your choice. Easily search your favorite movies here in no time, share with us your suggestions and be updated with the latest African movies and other TV programs, be the first to watch them as a King/queen.',
+
+  'home_footnote' => 'UkumbiTV is a movie streaming platform dedicated to black African films produced on the continent and in the diaspora. Our goal is to connect black African cinephiles from all walks of life with the best African cinema productions and to encourage the development of black African cinema.',
 
   //--plans section ..
   'home_plansec_title' => 'Pick your experience',

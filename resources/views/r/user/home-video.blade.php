@@ -36,6 +36,24 @@
 	      </section>
 
 	      <section class="block-wrap"> 
+        	<h2>{{trans('messages.dramas')}}</h2>
+          <div class="list-horizontal-wrapper">
+            @foreach($dramaVideos as $video)
+              @include('r.chunks._video_item')
+            @endforeach
+          </div>
+	      </section>
+
+	      <section class="block-wrap"> 
+        	<h2>{{trans('messages.comedies')}}</h2>
+          <div class="list-horizontal-wrapper">
+            @foreach($comedyVideos as $video)
+              @include('r.chunks._video_item')
+            @endforeach
+          </div>
+	      </section>
+
+	      <section class="block-wrap"> 
         	<h2>{{trans('messages.popular_videos')}}</h2>
           <div class="list-horizontal-wrapper">
             @foreach($trendings as $video)

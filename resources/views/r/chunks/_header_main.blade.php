@@ -22,23 +22,45 @@
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>  
+ 		
+
+
+	<article class="landing-header__hero">
+		<!-- <h1>{{trans('messages.home_title1')}}</h1>
+  	<p>{{trans('messages.home_substitle1')}}</p> -->
+  	<a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a>
+	</article>
 
 
 
-  <article class="landing-header__content">    
-    <!-- <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xl-5 offset-xl-1"> -->
-    <h1>{{trans('messages.home_title1')}}</h1>
-    <p>{{trans('messages.home_substitle1')}}</p>
-    <div>
-      <a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a>
-    </div>
-    <!-- </div>   -->
-  </article> 
+  <section class="landing-header__content">     
+  	<img src="https://ukumbitv.com/images/20170923131344/xsmall_image21506172424papa-chef.jpg.pagespeed.ic.L59TM7dqYw.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170922172952/xsmall_image21506101392le-contrat.jpg.pagespeed.ic.AvJ0VboVgV.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170921003810/xsmall_image21506004522ultime_sursis.jpg.pagespeed.ic.YpiFBp5lji.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170815123546/xsmall_image21506005378agony-of-a-widow.jpg.pagespeed.ic.bILhZTwIwh.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170814023013/xsmall_image21506008733bessem-android-girl.jpg.pagespeed.ic.ndpRpaoJE6.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170814024810/xsmall_image21506006427raging-hearts.jpg.pagespeed.ic.U0gc2TKHRk.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170804114141/xsmall_image21506009821infidele.jpg.pagespeed.ic.mPx5sEOs_5.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170803012913/xsmall_image21506096046panique-portrait2.jpg.pagespeed.ic.6UVQm_mQAk.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170804110921/xsmall_image21506010033bloody-night.jpg.pagespeed.ic.dUEzpz04BK.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170806122946/xsmall_image21506009571la-don-nga.jpg.pagespeed.ic.tw3ihifdiP.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170809014207/xsmall_image21506009306meilleures-amies.jpg.pagespeed.ic.ih4s3OW620.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170815015404/xsmall_image21506005660too-good_portrait.jpg.pagespeed.ic.pcxQwpYaoR.webp" alt="" class="video-item__img"> 
+  	<img src="https://ukumbitv.com/images/20170923131344/xsmall_image21506172424papa-chef.jpg.pagespeed.ic.L59TM7dqYw.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170922172952/xsmall_image21506101392le-contrat.jpg.pagespeed.ic.AvJ0VboVgV.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170921003810/xsmall_image21506004522ultime_sursis.jpg.pagespeed.ic.YpiFBp5lji.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170815123546/xsmall_image21506005378agony-of-a-widow.jpg.pagespeed.ic.bILhZTwIwh.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170814023013/xsmall_image21506008733bessem-android-girl.jpg.pagespeed.ic.ndpRpaoJE6.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170814024810/xsmall_image21506006427raging-hearts.jpg.pagespeed.ic.U0gc2TKHRk.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170804114141/xsmall_image21506009821infidele.jpg.pagespeed.ic.mPx5sEOs_5.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170803012913/xsmall_image21506096046panique-portrait2.jpg.pagespeed.ic.6UVQm_mQAk.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170804110921/xsmall_image21506010033bloody-night.jpg.pagespeed.ic.dUEzpz04BK.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170806122946/xsmall_image21506009571la-don-nga.jpg.pagespeed.ic.tw3ihifdiP.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170809014207/xsmall_image21506009306meilleures-amies.jpg.pagespeed.ic.ih4s3OW620.webp" alt="" class="video-item__img">
+  	<img src="https://ukumbitv.com/images/20170815015404/xsmall_image21506005660too-good_portrait.jpg.pagespeed.ic.pcxQwpYaoR.webp" alt="" class="video-item__img"> 
+  </section> 
 
-
-
-	<div id="intro-video"></div>
-	<!-- <a class="btn-down" href="#section1">
-   	<span class="icon icon-scroll-arrow-to-down"></span> 
-  </a> -->
+  <div class="landing-header__footnotes">
+  	{{trans('messages.home_footnote')}} 
+  </div>
 </header>

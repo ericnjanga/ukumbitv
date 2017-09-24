@@ -267,25 +267,16 @@
 								  </div>
 								</div> 
 				      </div>
-				      <div class="modal-body modal-cr__body">
-				        	<!-- -->
-				        <div class="media">
-								  <div class="media-left">
-								  	<img class="media-object" src="{{$video->videoimage->imgSmall1}}" alt="">
-								  	<p>{{$video->title}}</p>
-								  </div>
-								  <div class="media-body">
-								    <form>
-	                    <div class="input-wrap textarea-wrap">
-	                    	<textarea name="comment-text" id="comment-text" placeholder="Tell others what you think about the movie. Would you recommend it, and why?"></textarea>
-	                    	<p class="rate-info">{{trans('messages.review_help')}}</p>
-	                    </div>
-	                  </form>
-								  </div>
-				        </div><!-- media -->
-
-
-
+				      <style>
+				      </style>
+				      <div class="modal-body modal-cr__body">  
+						  	<img class="img-poster" src="{{$video->videoimage->imgPreview1}}" alt="{{$video->title}}">
+						  	 
+						    <form>
+                  <textarea name="comment-text" class="comment-text" id="comment-text" placeholder="{{trans('messages.comment_placeholder')}}"></textarea>
+                  <div class="clearfix"></div>
+                 	<p class="rate-info"><i>{{trans('messages.comment_placeholder')}}({{trans('messages.review_help')}})</i></p> 
+                </form> 
 				      </div>
 				      <div class="modal-footer modal-cr__footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">{{trans('messages.close')}}</button>
@@ -309,7 +300,7 @@
 	                    <div class="video-item">
 	                        <a href="{{route('user.singleVideo',$relatedVideo->watchid)}}">
 	                            <div class="video-img">
-	                                <img src="{{$relatedVideo->videoimage->imgSmall1}}" alt="">
+	                                <img src="{{$video->videoimage->imgPreview1}}" alt="">
 	                            </div>
 	                            <div class="video-title ellipsis-gradient">
 	                              {{$relatedVideo->title}} ({{$video->created_at->format('Y')}})
@@ -335,15 +326,17 @@
 	<!-- ADD TO LIST -->
 	<!-- (same script on "home-video.blade.php") -->
 
+	<!--
 		<script>
-			var episodes = '{{$episodesArr}}';
-            vimeowrap('player').setup({
-                urls: episodes.split(','),
-                plugins: {
-                    'playlist':{}
-                }
-            });
+			// var episodes = '{{$episodesArr}}';
+   //          vimeowrap('player').setup({
+   //              urls: episodes.split(','),
+   //              plugins: {
+   //                  'playlist':{}
+   //              }
+   //          });
 		</script>
+	-->
 
   <script>
       // console.log('{{$checkTrial}}');
