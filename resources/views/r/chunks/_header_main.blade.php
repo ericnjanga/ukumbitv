@@ -26,26 +26,17 @@
 
 
   <section class="landing-header__content">    
- 
-    <h1>{{trans('messages.home_title1')}}</h1>
-    <p>{{trans('messages.home_substitle1')}}</p>
-    <div>
-      <a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a>
-    </div>
+ 		
+ 		<article>
+ 			<h1>{{trans('messages.home_title1')}}</h1>
+    	<p>{{trans('messages.home_substitle1')}}</p>
+    	<a href="{{route('user.register.form')}}" class="btn btn-cta1b btn-lg">{{trans('messages.home_cta')}}</a>
+ 		</article>
+    
+    
+       
 
-    <style>
-    	.intro-sample{
-    		position: absolute;
-    		top: 0;
-    		left: 0;
-    		z-index: 1;
-    	}
-			.intro-sample img {
-				float: left:;
-			}
-    </style>
-
-    <div class="intro-sample" style="position: absolute;">
+     
     	<img src="https://ukumbitv.com/images/20170923131344/xsmall_image21506172424papa-chef.jpg.pagespeed.ic.L59TM7dqYw.webp" alt="" class="video-item__img">
     	<img src="https://ukumbitv.com/images/20170922172952/xsmall_image21506101392le-contrat.jpg.pagespeed.ic.AvJ0VboVgV.webp" alt="" class="video-item__img">
     	<img src="https://ukumbitv.com/images/20170921003810/xsmall_image21506004522ultime_sursis.jpg.pagespeed.ic.YpiFBp5lji.webp" alt="" class="video-item__img">
@@ -53,7 +44,7 @@
     	<img src="https://ukumbitv.com/images/20170814023013/xsmall_image21506008733bessem-android-girl.jpg.pagespeed.ic.ndpRpaoJE6.webp" alt="" class="video-item__img">
     	<img src="https://ukumbitv.com/images/20170814024810/xsmall_image21506006427raging-hearts.jpg.pagespeed.ic.U0gc2TKHRk.webp" alt="" class="video-item__img">
     	<img src="https://ukumbitv.com/images/20170804114141/xsmall_image21506009821infidele.jpg.pagespeed.ic.mPx5sEOs_5.webp" alt="" class="video-item__img">
-    </div>
+    
      
   </section> 
 
