@@ -749,6 +749,8 @@ Découvrez notre contenu incroyable sur n\'importe quel appareil de votre choix 
   'home_midsec_title3' => 'Great video quality & experience',
   'home_midsec_blurb3' => 'Watch videos on High Definition, experience the ease to search and find your favorite content, receive movie suggestions based on your preferences, stay up to date with latest african shows and be the first to watch them.',
 
+  'home_footnote' => 'UkumbiTV est une plateforme de diffusion de films africains noirs produits sur continent et dans la diaspora. Notre but est de connecter les cinéphilles Africains de tous les horizons avec les meilleures productions cinematiques africaines et d\'encourager le developement du cinema africain noir.',
+
   //--plans section ..
   'home_plansec_title' => 'Choisissez votre expérience',
 

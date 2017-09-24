@@ -59,4 +59,8 @@
   	<img src="https://ukumbitv.com/images/20170809014207/xsmall_image21506009306meilleures-amies.jpg.pagespeed.ic.ih4s3OW620.webp" alt="" class="video-item__img">
   	<img src="https://ukumbitv.com/images/20170815015404/xsmall_image21506005660too-good_portrait.jpg.pagespeed.ic.pcxQwpYaoR.webp" alt="" class="video-item__img"> 
   </section> 
+
+  <div class="landing-header__footnotes">
+  	{{trans('messages.home_footnote')}} 
+  </div>
 </header>
