@@ -15,6 +15,7 @@
 
 .video-item__frame{
 	border-radius: 4px;
+	background: #000;
 	display: block;
 	&:hover{
 		.video-item__img{ 
@@ -43,6 +44,7 @@
 .video-item__resume{
 	position: absolute;
   top: 30px;
+  color: #fff;
   font-size: 13px;
   line-height: 15px;
   display: block;
