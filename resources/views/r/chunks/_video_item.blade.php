@@ -1,4 +1,4 @@
-<figure class="video-item">
+<figure class="video-item @if($video->created_at->between(\Carbon\Carbon::now(), \Carbon\Carbon::now()->subDays(2))) new @endif">
   <a href="{{route('user.singleVideo',$video->watchid)}}">
   	<span class="badge video-item__badge">{{trans('messages.new')}}</span>
 
@@ -13,4 +13,3 @@
     <div class="butn-like"><span class="icon icon-thumbs-up"></span><span class="likes-count">{{count($video->likes)}}</span></div>
   </div>
 </figure>
- 

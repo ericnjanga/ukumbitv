@@ -38,7 +38,7 @@
 	      <section class="block-wrap"> 
         	<h2>{{trans('messages.dramas')}}</h2>
           <div class="list-horizontal-wrapper">
-            @foreach($trendings as $video)
+            @foreach($dramaVideos as $video)
               @include('r.chunks._video_item')
             @endforeach
           </div>
@@ -47,7 +47,7 @@
 	      <section class="block-wrap"> 
         	<h2>{{trans('messages.comedies')}}</h2>
           <div class="list-horizontal-wrapper">
-            @foreach($trendings as $video)
+            @foreach($comedyVideos as $video)
               @include('r.chunks._video_item')
             @endforeach
           </div>
