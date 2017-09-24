@@ -1,5 +1,7 @@
 <figure class="video-item">
   <a href="{{route('user.singleVideo',$video->watchid)}}">
+  	<span class="badge video-item__badge">{{trans('messages.new')}}</span>
+
     <div class="video-img">
       <img data-src="{{$video->videoimage->imgPreview1}}" class="lazyload" alt="{{$video->title}}">
     </div>

@@ -20,7 +20,7 @@ return [
     // 'Egypt',
     // 'Equatorial Guinea',
     // 'Eritrea',
-    'Ethiopiw',
+    'Ethiopie',
     'France',
     'Gabon',
     // 'Gambia',
