@@ -924,7 +924,7 @@ img{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 0 35px 0;
+    margin: 0 0 15px 0;
     .img-block{
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 40px;
@@ -939,16 +939,16 @@ img{
       }
     }
     .comment-text-block{
-      padding: 14px 0 0 10px;
+      padding: 0 0 0 10px;
       .comment-name{
-        color: #616161;
+        color: #000;
         font-size: 14px;
         font-weight: 500;
         line-height: 16px; 
       }
       .comment-date {
       	font-size: 12px;
-      	margin: 0 0 5px 0;
+      	// margin: 0 0 5px 0;
       }
       .comment-text{
         color: #757575;
