@@ -29,36 +29,44 @@
 	      <section class="block-wrap">
 	        <h2>{{trans('messages.new_videos')}}</h2> 
 	        <div class="list-horizontal-wrapper">
+                @if(isset($recent_videos))
             @foreach($recent_videos as $video)
               @include('r.chunks._video_item')
-            @endforeach 
+            @endforeach
+                    @endif
 	        </div> 
 	      </section>
 
 	      <section class="block-wrap"> 
         	<h2>{{trans('messages.dramas')}}</h2>
           <div class="list-horizontal-wrapper">
+              @if(isset($dramaVideos))
             @foreach($dramaVideos as $video)
               @include('r.chunks._video_item')
             @endforeach
+                  @endif
           </div>
 	      </section>
 
 	      <section class="block-wrap"> 
         	<h2>{{trans('messages.comedies')}}</h2>
           <div class="list-horizontal-wrapper">
+              @if(isset($comedyVideos))
             @foreach($comedyVideos as $video)
               @include('r.chunks._video_item')
             @endforeach
+                  @endif
           </div>
 	      </section>
 
 	      <section class="block-wrap"> 
         	<h2>{{trans('messages.popular_videos')}}</h2>
           <div class="list-horizontal-wrapper">
+              @if(isset($trendings))
             @foreach($trendings as $video)
               @include('r.chunks._video_item')
             @endforeach
+                  @endif
           </div>
 	      </section>
 
