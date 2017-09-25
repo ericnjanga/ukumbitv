@@ -5,7 +5,7 @@
 		<img data-src="{{$video->videoimage->imgPreview1}}" class="lazyload video-item__img" alt="{{$video->title}}"> 
   </a>
   
-  <figcaption class="video-item__title ellipsis-gradient">{{$video->title}}
+  <figcaption class="video-item__title ellipsis-gradient">{{substr($video->title , 0,50)}}
   </figcaption>
   <div class="video-item__info">
     <div class="video-genre">{{$video->category->name}}</div>
