@@ -105,7 +105,8 @@
      
 	<!-- ADD TO LIST -->
 	<!-- (same script on "single-video.blade.php") -->
-  <script> 
+  <script>
+      @if(isset($grandVideo))
       function addToList() {
 
           var fd = new FormData;
@@ -141,5 +142,6 @@
               }
           });
       }
+      @endif
   </script>
 @endsection
