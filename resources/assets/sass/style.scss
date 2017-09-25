@@ -944,8 +944,11 @@ img{
         color: #616161;
         font-size: 14px;
         font-weight: 500;
-        line-height: 16px;
-        margin: 0 0 5px 0;
+        line-height: 16px; 
+      }
+      .comment-date {
+      	font-size: 12px;
+      	margin: 0 0 5px 0;
       }
       .comment-text{
         color: #757575;

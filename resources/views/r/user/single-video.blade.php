@@ -233,9 +233,9 @@
 	              </div>
 	              <div class="comment-text-block">
 	                <div class="comment-name">@if($comment->user->name == '') {{$comment->user->email}} @else {{$comment->user->name}} @endif</div>
+	                <div class="comment-date">{{$comment->created_at->diffForHumans()}}</div>
 	                <p class="comment-text">
-	                    {{$comment->text}}
-						{{$comment->created_at->diffForHumans()}}
+	                    {{$comment->text}} 
 	                </p>
 	              </div>
 	            </div>
