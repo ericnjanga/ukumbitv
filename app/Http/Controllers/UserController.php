@@ -400,9 +400,9 @@ class UserController extends Controller {
         }
         $videos = AdminVideo::with('videoimage', 'likes', 'category')->find($ids);
 
-        return $videos;
-//        return view('r.user.movie-list')
-//            ->with('videos', $videos);
+//        return $videos;
+        return view('r.user.movie-list')
+            ->with('videos', $videos);
     }
 
     public function watchVideo($id)
