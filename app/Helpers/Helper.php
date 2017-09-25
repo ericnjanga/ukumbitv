@@ -569,14 +569,14 @@
 
         public static function getDramaMovies()
         {
-            $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('category_id', 10)->orderby('id' , 'desc')->limit(16)->get();
+            $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('category_id', 18)->orderby('id' , 'desc')->limit(16)->get();
 
             return $videos;
         }
 
         public static function getComedyMovies()
         {
-            $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('category_id', 7)->orderby('id' , 'desc')->limit(16)->get();
+            $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('category_id', 16)->orderby('id' , 'desc')->limit(16)->get();
 
             return $videos;
         }
