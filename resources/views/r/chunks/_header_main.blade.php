@@ -34,9 +34,11 @@
 
 
   <section class="landing-header__content">
-	  @foreach($recent_videos as $video)
-		  <img data-src="{{$video->videoimage->imgPreview1}}" class="lazyload video-item__img" alt="{{$video->title}}">
-	  @endforeach
+	  @if(isset($recent_videos))
+		  @foreach($recent_videos as $video)
+			  <img data-src="{{$video->videoimage->imgPreview1}}" class="lazyload video-item__img" alt="{{$video->title}}">
+		  @endforeach
+	  @endif
   </section> 
 
   <div class="landing-header__footnotes">

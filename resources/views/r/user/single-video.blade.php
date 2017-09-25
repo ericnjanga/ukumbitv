@@ -222,9 +222,9 @@
 				@if($checkTrial)
 		      <hr> 
 					<div class="hero-sub">
-	          
+						<h2>{{trans('messages.comments')}}</h2>
 	          <div class="comment-block" id="new-comment-section">
-	          	<h2>{{trans('messages.comments')}}</h2>
+
 	          	@foreach($video->comments as $comment)
 	            <div class="comment">
 	              <div class="img-block">
@@ -233,8 +233,9 @@
 	              </div>
 	              <div class="comment-text-block">
 	                <div class="comment-name">@if($comment->user->name == '') {{$comment->user->email}} @else {{$comment->user->name}} @endif</div>
+	                <div class="comment-date">{{$comment->created_at->diffForHumans()}}</div>
 	                <p class="comment-text">
-	                    {{$comment->text}}
+	                    {{$comment->text}} 
 	                </p>
 	              </div>
 	            </div>

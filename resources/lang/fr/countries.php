@@ -29,7 +29,7 @@ return [
     // 'Guinea-Bissau',
     'Kenya',
     // 'Lesotho',
-    // 'Liberia',
+    'Liberia',
     // 'Libya',
     // 'Madagascar',
     // 'Malawi',
