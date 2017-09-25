@@ -164,7 +164,10 @@ class UserController extends Controller {
 //dd(Auth::user()->isVerified());
         //#testing
         if(!Auth::check()) {
-            return view('r.landing')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
+            $recent_videos = Helper::recently_added(WEB);
+            return view('r.landing')
+                ->with('recent_videos' , $recent_videos)
+                ->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
         }
 //        }else{
 //            return view('r.user.home-video');
