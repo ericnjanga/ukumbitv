@@ -111,7 +111,7 @@
           var fd = new FormData;
 
           fd.append('_token', '{{csrf_token()}}');
-          fd.append('id', '{{$video->id}}');
+          fd.append('id', '{{$grandVideo->id}}');
 
 
           $.ajax({
