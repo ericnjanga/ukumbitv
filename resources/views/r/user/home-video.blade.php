@@ -71,7 +71,7 @@
 	      </section>
 
 	      <section class="block-wrap">
-          <h2>{{trans('messages.my_list')}}</h2>  
+          <h2>{{trans('messages.my_list')}}</h2>
           @if($my_lists->isEmpty())
             <div class="block-msg">
               <div>{{trans('messages.my_list_empty')}}</div> 

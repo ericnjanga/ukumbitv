@@ -400,7 +400,44 @@ class UserController extends Controller {
         }
         $videos = AdminVideo::with('videoimage', 'likes', 'category')->find($ids);
 
-//        return $videos;
+        return $videos;
+//        return view('r.user.movie-list')
+//            ->with('videos', $videos);
+    }
+
+    public function updateAvatar(Request $request)
+    {
+
+        $validator = Validator::make($request->all(), [
+            'useravatar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:20048'
+        ]);
+        // If validator Fails, redirect same with error values
+        if ($validator->fails()) {
+            //throw new Exception("error", tr('admin_published_video_failure'));
+            return back()->with('flash_error','Image Upload failed');
+        }
+
+        $image = $request->file('useravatar');
+        $useravatar = time().'.'.$image->getClientOriginalExtension();
+        $destinationPath = public_path('/images/user');
+        $image->move($destinationPath, $useravatar);
+
+        $user = Auth::user();
+        $user->picture = URL::to('/').'/images/user/'.$useravatar;
+        $user->save();
+
+        return back()->with('flash_success','Image Upload successful');
+    }
+
+    public function seeMyPlaylist()
+    {
+        $videosId = UserPlaylist::where('user_id', Auth::id())->get();
+        $ids = [];
+        foreach($videosId as $item) {
+            array_push($ids, $item->admin_video_id);
+        }
+        $videos = AdminVideo::with('videoimage', 'likes', 'category')->find($ids);
+
         return view('r.user.movie-list')
             ->with('videos', $videos);
     }

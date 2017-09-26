@@ -9,7 +9,15 @@
 	    	<div class="row">
 	    		<div class="col-sm-2">
 		        <div class="img-block">
-		        	<img src="{{Auth::user()->picture}}" alt="">
+		        	<img class="img-responsive img-circle" src="{{Auth::user()->picture}}" style="height: 150px;width: 150px;" alt="">
+					<form action="{{route('user.update-avatar')}}" method="POST" enctype="multipart/form-data">
+						{{ csrf_field() }}
+						<div class="form-group">
+							<label for="img-file">Select new image</label>
+							<input type="file" id="img-file" name="useravatar" accept="image/jpeg,image/png">
+						</div>
+						<button id="btn-update-avatar" class="btn btn-cta1b btn-lg">{{trans('messages.save_changes')}}</button>
+					</form>
 	            <!-- <a href="" class="change-photo-butn"><span class="icon icon-pencil-edit-button"></span></a> -->
 	        	</div>
 		    	</div>
@@ -56,4 +64,19 @@
 	    </div><!-- "global-content -->
     </div><!-- global-display --> 
   </div>
+
+  @if(Session::has('flash_success'))
+	  <script>
+          window.onload=function(){
+              swal("Cool!", "{{Session::get('flash_success')}}", "success");
+          }
+	  </script>
+  @endif
+  @if(Session::has('flash_error'))
+	  <script>
+          window.onload=function(){
+              swal("Oops!", "{{Session::get('flash_error')}}", "error");
+          }
+	  </script>
+  @endif
 @endsection
