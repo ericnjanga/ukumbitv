@@ -1,4 +1,4 @@
-<figure class="video-item ruby-hover @if($video->created_at->between(\Carbon\Carbon::now(), \Carbon\Carbon::now()->subDays(2))) new @endif">
+<figure class="video-item ruby-hover @if($video->created_at->between(\Carbon\Carbon::now(), \Carbon\Carbon::now()->subDays(7))) new @endif">
   <a href="{{route('user.singleVideo',$video->watchid)}}" class="video-item__frame">
   	<span class="badge video-item__badge">{{trans('messages.new')}}</span>
   	<span class="video-item__resume">{{substr($video->description , 0,235)}} ...</span>

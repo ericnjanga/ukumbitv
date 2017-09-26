@@ -838,9 +838,29 @@ And to insure en exceptional delivery all this unique experience, we have create
 
 
 
-  //MY ACCOUNT PAGE ...
+  //[PAGE] MY ACCOUNT ...
   //----------------------------------- 
   'PMA_title' => 'Changez vos pr&#233;f&#233;rences',
+
+ 
+
+
+
+
+
+  //[PAGE] CONTACT US ...
+  //----------------------------------- 
+  'PCONTACT_p1' => 'Avez-vous des questions?',
+  'PCONTACT_p2' => 'Nous ferons de notre mieux pour vous r&#233;pondre dans les prochaines 24 heures:',
+  'PCONTACT_h_social' => 'Retrouvez-vous dans les m&#233;dias sociaux',
+  'PCONTACT_form_help_label' => 'Besoin d\'aide?',
+  'PCONTACT_form_help_sugg1' => 'Je veux laisser un commentaire',
+  'PCONTACT_form_help_sugg2' => 'J\'ai est un probl&#232;me',
+  'PCONTACT_form_help_sugg3' => 'J\'ai une plainte',
+  'PCONTACT_form_help_sugg4' => 'J\'ai une suggestion',
+  'PCONTACT_form_help_sugg5' => 'Autre chose',
+  'PCONTACT_form_comment_label' => 'Votre message',
+  'PCONTACT_form_comment_error' => 'Votre message est trop court! (Veuillez saisir au moins 8 caract&#232;res)',
  
 
 

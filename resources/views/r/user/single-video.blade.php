@@ -63,7 +63,7 @@
 
 	      	@if($checkTrial)
 				@if($video->video_type == 'webseries')
-					  <div id="player"></div>
+					  <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					@else
 	          <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	          @endif
@@ -88,69 +88,6 @@
 	        	</div> 
 	        @endif
 	      </div>
-
-
-
-
-
-
-
-	      @if($video->video_type == 'episode')
-	      <div class="block-wrap">
-	        <div class="title">{{trans('messages.Episodes')}}</div>
-	        <div class="series-list-block">
-	            <ul class="series-list-slider">
-	                <li><a href="">Series 1</a></li>
-	                <li><a href="">Series 2</a></li>
-	                <li><a href="">Series 3</a></li>
-	                <li><a href="">Series 4</a></li>
-	                <li><a href="">Series 5</a></li>
-	                <li><a href="">Series 6</a></li>
-	                <li><a href="">Series 7</a></li>
-	                <li><a href="">Series 8</a></li>
-	                <li><a href="">Series 9</a></li>
-	                <li><a href="">Series 10</a></li>
-	                <li><a href="">Series 11</a></li>
-	                <li><a href="">Series 12</a></li>
-	                <li><a href="">Series 13</a></li>
-	                <li><a href="">Series 14</a></li>
-	                <li><a href="">Series 15</a></li>
-	            </ul>
-	        </div>
-	        <div class="list-horizontal-wrapper-wrap">
-	            <div class="list-horizontal-wrapper">
-
-	                @for ($group=1;$group<3;$group++)
-	                    @for($i=1; $i<5; $i++)
-	                        <div class="video-item video-item-dis">
-
-	                            <div class="video-img">
-	                                <img src="{{asset('r/img/video'.$i.'.png')}}" alt="">
-	                            </div>
-	                            <div class="video-title ellipsis-gradient">Transformers: Revenge of the
-	                                Fallen
-	                            </div>
-	                            <div class="video-info">
-	                                <div class="video-genre">Drama</div>
-	                                <div class="butn-like"><span class="icon icon-thumbs-up"></span>
-	                                    125
-	                                </div>
-	                                <div class="butn-dis"><span
-	                                            class="icon icon-thumbs-down-hand"></span>19
-	                                </div>
-	                            </div>
-	                        </div>
-	                    @endfor
-	                @endfor
-	            </div>
-	        </div>
-	      </div>
-	      @endif
-
-
-
-
-
 
 	      <div class="hero-sub">
 	        <p>{{$video->description}}</p>
@@ -324,23 +261,9 @@
 @endsection
 
 @section('scripts')
-	<!-- ADD TO LIST -->
-	<!-- (same script on "home-video.blade.php") -->
-
-	<!--
-		<script>
-			// var episodes = '{{$episodesArr}}';
-   //          vimeowrap('player').setup({
-   //              urls: episodes.split(','),
-   //              plugins: {
-   //                  'playlist':{}
-   //              }
-   //          });
-		</script>
-	-->
 
   <script>
-      // console.log('{{$checkTrial}}');
+
       function addToList() {
 
           var fd = new FormData;
