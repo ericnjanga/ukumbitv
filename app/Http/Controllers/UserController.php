@@ -400,7 +400,20 @@ class UserController extends Controller {
         }
         $videos = AdminVideo::with('videoimage', 'likes', 'category')->find($ids);
 
-//        return $videos;
+        return $videos;
+//        return view('r.user.movie-list')
+//            ->with('videos', $videos);
+    }
+
+    public function seeMyPlaylist()
+    {
+        $videosId = UserPlaylist::where('user_id', Auth::id())->get();
+        $ids = [];
+        foreach($videosId as $item) {
+            array_push($ids, $item->admin_video_id);
+        }
+        $videos = AdminVideo::with('videoimage', 'likes', 'category')->find($ids);
+
         return view('r.user.movie-list')
             ->with('videos', $videos);
     }

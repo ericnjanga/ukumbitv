@@ -491,7 +491,7 @@ Route::get('video/{id}', 'UserController@watchVideo')->name('user.singleVideo');
 Route::get('watch/{id}', 'UserController@ShowVideo')->name('user.show-video');
 //Route::get('watch', 'UserController@watchVideo')->name('user.singleVideo');
 
-Route::get('my-playlist', 'UserController@myPlaylist')->name('user.playlist');
+Route::get('my-playlist', 'UserController@seeMyPlaylist')->name('user.playlist');
 
 Route::post('like', 'LikeController@like')->name('like');
 Route::post('unlike', 'LikeController@unLike')->name('unlike');
