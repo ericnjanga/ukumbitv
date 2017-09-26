@@ -30,7 +30,7 @@
 	        			<li>
 	        				<span class="icon icon-envelope"></span>
 	        				<a href="mailto:info@gmail.com">info@gmail.com</a>
-	        			</li>s
+	        			</li>
 	        			<li>
 	        				<span class="icon icon-phone-receiver"></span>
 	        				<span>+1 647-704-7219</span>
