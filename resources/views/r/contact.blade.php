@@ -1,6 +1,6 @@
 @extends('r.layouts.simple')
 @section('content')
-  <div class="page page-tersm-and-privacy pace-contact">
+  <div class="page page-tersm-and-privacy page-contact">
     <div class="container">
 
 			<div class="row">
@@ -11,13 +11,13 @@
 
 			  		<li><a href="#">{{trans('messages.tos_title')}}</a></li>
 			  		<li><a href="#">{{trans('messages.PP_title')}}</a></li>
-			  		<li class="active">{{trans('messages.contact')}}</li>
+			  		<li class="active">{{trans('messages.contact_us')}}</li>
 			  	</ul> 
 			  </aside>
 
 			  <div class="col-md-9">
 	        <header>
-	        	<h1>{{trans('messages.contact')}}</h1>
+	        	<h1>{{trans('messages.contact_us')}}</h1>
 	        </header>
 	        <div class="row">
 	        	<div class="col-md-5 contact-text">
