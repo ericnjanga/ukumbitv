@@ -18,7 +18,7 @@
 
 	<a href="#" class="dropdown-toggle nav-user-tmb" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 		{{--<i class="fa fa-user-circle-o user-tmb" aria-hidden="true"></i>--}}
-		 <img class="img-circle img-responsive" style="width: 30px;" src="{{Auth::user()->picture}}" alt="">
+		 <img class="img-circle img-responsive" style="width: 30px;height: 30px;" src="{{Auth::user()->picture}}" alt="">
 		<span class="caret"></span>
 	</a>
 	<ul class="dropdown-menu">

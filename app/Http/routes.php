@@ -565,6 +565,7 @@ Route::group([], function(){
 
     Route::post('password/reset', 'Auth\PasswordController@reset');
     Route::post('profile-update', 'UserController@updateProfile')->name('user.update-profile');
+    Route::post('avatar-update', 'UserController@updateAvatar')->name('user.update-avatar');
     Route::post('password-update-new', 'UserController@updatePassword')->name('user.update-password');
 
 //    Route::get('profile', 'UserController@profile')->name('user.profile');
