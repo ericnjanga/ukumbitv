@@ -21,8 +21,8 @@
 	        </header>
 	        <div class="row">
 	        	<div class="col-md-5 contact-text">
-	        		<p>Fill free to ask questions</p>
-	        		<p>We will do our best respond or contact you back within the next 24 hours:</p>
+	        		<p>{{trans('messages.PCONTACT_p1')}}</p>
+	        		<p>{{trans('messages.PCONTACT_p2')}}</p>
 
 	      			<hr>
 
@@ -30,7 +30,7 @@
 	        			<li>
 	        				<span class="icon icon-envelope"></span>
 	        				<a href="mailto:info@gmail.com">info@gmail.com</a>
-	        			</li>
+	        			</li>s
 	        			<li>
 	        				<span class="icon icon-phone-receiver"></span>
 	        				<span>+1 647-704-7219</span>
@@ -39,7 +39,7 @@
 
 	      			<hr>
 
-	      			<div>We are in social</div>
+	      			<div>{{trans('messages.PCONTACT_h_social')}}</div>
 	      			<ul class="social-list list-inline">
 	              <li><a href="https://www.facebook.com/ukumbitv/" target="_blank" class="icon icon-facebook"></a></li>
 	              <li><a href="https://twitter.com/ukumbi_tv" target="_blank" class="icon icon-twitter"></a></li>
@@ -52,18 +52,18 @@
 							@if(isset($flash_success))
 								<div class="alert alert-success">
 									{{--<button type="button" class="close" data-dismiss="alert">×</button>--}}
-									{{$flash_success}} aaaa
+									{{$flash_success}} 
 								</div>
 							@endif
 	        		<form name="contactForm" action="{{route('user.send-contact-form')}}" method="POST" autocomplete="off" novalidate>
 	              <div class="form-group select-wrap">
-					        <label for="category">How can we help? <span>*</span></label>
+					        <label for="category">{{trans('messages.PCONTACT_form_help_label')}} <span>*</span></label>
 	                <select id="q-category" class="form-control" name="category">
-	                  <option selected>Just want to leave a comment</option>
-	                  <option>I'm having an issue</option>
-	                  <option>I'm having a complaint</option>
-	                  <option>Just want to leave a suggestion</option>
-	                  <option>Other</option>
+	                  <option selected>{{trans('messages.PCONTACT_form_help_sugg1')}}</option>
+	                  <option>{{trans('messages.PCONTACT_form_help_sugg2')}}</option>
+	                  <option>{{trans('messages.PCONTACT_form_help_sugg3')}}</option>
+	                  <option>{{trans('messages.PCONTACT_form_help_sugg4')}}</option>
+	                  <option>{{trans('messages.PCONTACT_form_help_sugg5')}}</option>
 	                </select>
 	              </div>
  
@@ -73,15 +73,15 @@
 					      <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
 					        <label for="email">{{trans('messages.auth_enter_email')}} <span>*</span></label>
 					        <input id="user-email" class="form-control" type="email" name="email" ng-model="user.email" required>
-					        <div ng-cloak ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</div> 
+					        <div ng-cloak ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">{{trans('messages.auth_error_email')}}</div> 
 					      </div>
  
  
 
 								<div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
-					        <label for="message">Enter your message <span>*</span></label>
+					        <label for="message">{{trans('messages.PCONTACT_form_comment_label')}} <span>*</span></label>
 	                <textarea class="form-control" name="message" id="message-text"  ng-model="user.message" placeholder="Type your message here" ng-minlength="8" ng-required="true"></textarea>
-					        <div ng-cloak ng-show="contactForm.message.$error.minlength" class="help-block">Message too small! (Please enter at least 8 characters)</div> 
+					        <div ng-cloak ng-show="contactForm.message.$error.minlength" class="help-block">{{trans('messages.PCONTACT_form_comment_error')}}</div> 
 	              </div>
 					      <button id="btn-submit-contact" data-contact-route="{{route('user.send-contact-form')}}" class="btn btn-block btn-cta1b btn-lg" ng-disabled="contactForm.$invalid">{{trans('messages.submit')}}</button>  
 					      

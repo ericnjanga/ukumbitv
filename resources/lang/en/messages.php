@@ -944,9 +944,29 @@ return array(
 
 
 
-  //MY ACCOUNT PAGE ...
+  //[PAGE] MY ACCOUNT ...
   //----------------------------------- 
   'PMA_title' => 'Change your preferences',
+
+ 
+
+
+
+
+
+  //[PAGE] CONTACT US ...
+  //----------------------------------- 
+  'PCONTACT_p1' => 'Fill free to ask questions',
+  'PCONTACT_p2' => 'We will do our best respond or contact you back within the next 24 hours:',
+  'PCONTACT_h_social' => 'We are in social',
+  'PCONTACT_form_help_label' => 'How can we help?',
+  'PCONTACT_form_help_sugg1' => 'Just want to leave a comment',
+  'PCONTACT_form_help_sugg2' => 'I\'m having an issue',
+  'PCONTACT_form_help_sugg3' => 'I\'m having a complaint',
+  'PCONTACT_form_help_sugg4' => 'Just want to leave a suggestion',
+  'PCONTACT_form_help_sugg5' => 'Other',
+  'PCONTACT_form_comment_label' => 'Enter your message',
+  'PCONTACT_form_comment_error' => 'Message too small! (Please enter at least 8 characters)',
  
 
 
