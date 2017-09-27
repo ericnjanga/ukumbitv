@@ -2,7 +2,7 @@
 @section('content')
   <div class="page page-categories page-{{$videoType}}"> 
     <div class="global-display"> 
-    	{!! @include('r.chunks._filter_video') !!}
+    	<!-- @include('r.chunks._filter_video') -->
 
     	<div class="global-content">
 	      <div class="video-list-wrap"> 
