@@ -24,7 +24,7 @@
   	//Redirect to home page after "timeleft" seconds
 	  var timeleft = 10;
 		var downloadTimer = setInterval(function(){
-		  document.getElementById('countdown').innerHTML = 10 - --timeleft;
+		  document.getElementById('countdown').innerHTML = --timeleft;
 		  if(timeleft <= 0){
 		  	document.location.href = document.location.origin;
 		  	clearInterval(downloadTimer);
