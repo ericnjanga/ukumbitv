@@ -101,9 +101,7 @@
 
 
 
-
-	<div class="ukumbitv-overlay"></div>
-
+ 
 
 
 

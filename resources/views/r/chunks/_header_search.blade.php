@@ -98,7 +98,7 @@
 
 			<div id="morphsearch" class="morphsearch">
 				<form class="morphsearch-form">
-					<input class="morphsearch-input" type="search" placeholder="Search..."/>
+					<input class="morphsearch-input" type="search" placeholder="{{trans('messages.Search_placeholder')}}"/>
 					<button class="morphsearch-submit" type="submit">Search</button>
 				</form>
 				<div class="morphsearch-content">

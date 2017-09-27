@@ -829,7 +829,8 @@ And to insure en exceptional delivery all this unique experience, we have create
   'Review_by' => 'Revue par',
 
 	//...... ......
-  'Search_placeholder' => 'Rechercher: Titres, personnes, mots cl&#233;s',
+  'Search_placeholder' => 'Rechercher ...',
+  // 'Search_placeholder' => 'Rechercher: Titres, personnes, mots cl&#233;s',
   'review_help' => 'Les commentaires les plus utiles ont 100 mots ou plus',
 
  

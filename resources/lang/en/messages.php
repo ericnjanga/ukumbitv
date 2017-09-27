@@ -852,7 +852,8 @@ return array(
   'Review_by' => 'Review by',
 
 	//...... ......
-  'Search_placeholder' => 'Search for: Titles, people, tags',
+  'Search_placeholder' => 'Search ...',
+  // 'Search_placeholder' => 'Search for: Titles, people, tags',
   'review_help' => 'Most helpful reviews have 100 words or more',
 
 
