@@ -2,10 +2,10 @@
 @section('content')
     
   <div class="page page-video-landing">  
-    <div class="global-display">
+   <!--  <div class="global-display"> -->
     	<!-- @include('r.chunks._filter_video') -->
 
-			<div class="global-content">
+			<!-- <div class="global-content"> -->
 				@if(isset($grandVideo))
 	      <header class="hero">
 	      	<img data-src="{{ $grandVideo->videoimage->imgHero }}" class="lazyload" alt="{{ $grandVideo->title }}"> 
@@ -93,8 +93,8 @@
           </div>
 	      </section> -->
 	      
-			</div><!-- global-content -->
-    </div><!-- global-display -->
+			<!-- </div> -->
+    <!-- </div>  -->
   </div>
   @include('r.chunks._video_item_popup')
      
