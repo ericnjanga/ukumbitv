@@ -102,6 +102,12 @@
 
 
 
+	<div class="ukumbitv-overlay"></div>
+
+
+
+
+
 
 
 	<!-- CDN libraries -->
@@ -110,6 +116,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>  
   <!-- Payment platform (stripe) -->
 	<script src="https://js.stripe.com/v2/"></script>
 	<!-- autocomplete librairy -->

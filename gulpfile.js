@@ -35,7 +35,8 @@ elixir(function(mix) {
 		'/libs/ng-password.js', //<-- Angularjs password comparison directive
 		//main js files
 		'main.js', 
-		'forms-validation.js'], 
+		'forms-validation.js',
+		'morphSearch.js'], 
 	'public/js/app.js')
 });
 
