@@ -1,40 +1,19 @@
 
-.page-categories{
-	.video-item {
-		margin-bottom: 30px;
-	}
-}
+// .page-categories{
+// 	.video-item {
+// 		margin-bottom: 30px;
+// 	}
+// }
 
 
-.page-categories { 
-	@media (min-width: 1170px){
-		.block-wrap {
-			margin-left: -6px;
-	    width: calc(100% + 10px);
-		}
-	} 
-}
+// .page-categories { 
+// 	@media (min-width: 1170px){
+// 		.block-wrap {
+// 			margin-left: -6px;
+// 	    width: calc(100% + 10px);
+// 		}
+// 	} 
+// }
 
 
-
-//Activate main menu items on specific pages
-//------------------------------------------
-.page-movies {
-	.GP-menu { 
-		.play-menu li#movies .menu-entry-text {
-			color: #fff;
-		  background: $color-darkred;
-		}
-	}
-}
-.page-animations { 
-	.GP-menu {  
-		.play-menu li#animations { 
-			.menu-entry-text {
-				color: #fff;
-				background: $color-yellow-green;
-			}
-		  
-		}
-	}
-}
+//  
