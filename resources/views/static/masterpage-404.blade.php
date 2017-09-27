@@ -4,5 +4,5 @@
     <main>
         @yield('content')
     </main>
-    @include('r.chunks._footer_main')
+    <!-- @include('r.chunks._footer_main') -->
 @endsection
