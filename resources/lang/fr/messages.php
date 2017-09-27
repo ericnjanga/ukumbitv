@@ -862,6 +862,19 @@ And to insure en exceptional delivery all this unique experience, we have create
   'PCONTACT_form_help_sugg5' => 'Autre chose',
   'PCONTACT_form_comment_label' => 'Votre message',
   'PCONTACT_form_comment_error' => 'Votre message est trop court! (Veuillez saisir au moins 8 caract&#232;res)',
+
+ 
+
+
+
+
+
+  //[PAGE] 404 ...
+  //----------------------------------- 
+  'P404_h1' => 'La page n\'a pas été trouvée',
+  'P404_p1' => 'La page demandée n\'existe pas. Nous tenterons de vous rediriger automatiquement vers notre page d\'accueil dans',
+  'P404_p2' => 'Veuillez aller à la page d\'accueil de UkumbiTV en cliquant sur le bouton ci-dessous.',
+  'P404_cta' => 'UkumbiTV Accueil',
  
 
 

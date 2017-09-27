@@ -7,14 +7,14 @@
 @section('content')
 
   <div class="panel panel-default page-404">
-  	<h1>La page n'a pas été trouvée</h1>
-		<p>La page demandée n'existe pas. Nous tenterons de vous rediriger automatiquement vers notre page d'accueil dans <span></span> <span id="countdown" style="font-weight:bold;">10</span> secondes</span>.</p>
-		<p>Veuillez aller à la page d'accueil de Netflix en cliquant sur le bouton ci-dessous.</p>
+  	<h1>{{trans('messages.P404_h1')}}</h1>
+		<p>{{trans('messages.P404_p1')}} <span></span> <span id="countdown" style="font-weight:bold;">10</span> secondes</span>.</p>
+		<p>{{trans('messages.P404_p2')}}</p>
 
 		<br>
 
 		<div>
-			<a href="/" class="btn btn-cta1b btn-lg">UkumbiTV Home</a> 
+			<a href="/" class="btn btn-cta1b btn-lg">{{trans('messages.P404_cta')}}</a> 
 		</div>
 
 

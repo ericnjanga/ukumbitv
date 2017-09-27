@@ -968,6 +968,19 @@ return array(
   'PCONTACT_form_help_sugg5' => 'Other',
   'PCONTACT_form_comment_label' => 'Enter your message',
   'PCONTACT_form_comment_error' => 'Message too small! (Please enter at least 8 characters)',
+
+ 
+
+
+
+
+
+  //[PAGE] 404 ...
+  //----------------------------------- 
+  'P404_h1' => 'Page not found',
+  'P404_p1' => 'The page you are looking for does not exist. We will attempt to automatically redirect you to our homepage in',
+  'P404_p2' => 'Please go to the UkumbiTV homepage by clicking the button below.',
+  'P404_cta' => 'UkumbiTV Accueil',
  
 
 
