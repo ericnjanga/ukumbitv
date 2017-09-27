@@ -3,7 +3,7 @@
     <div class="list-wrap">
         <div class="container">
             <div class="clearfix">
-            		@include('r.chunks._filter_video')
+    	{!! @include('r.chunks._filter_video') !!}
             		
                 <div class="global-display">
                     <div class="video-list-wrap">

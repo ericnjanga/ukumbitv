@@ -3,7 +3,7 @@
     
   <div class="page page-video-landing">  
     <div class="global-display">
-			@include('r.chunks._filter_video')
+    	{!! @include('r.chunks._filter_video') !!}
 
 			<div class="global-content">
 				@if(isset($grandVideo))
