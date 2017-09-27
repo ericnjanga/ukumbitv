@@ -61,6 +61,12 @@
 						{{$videoId}}
 					</div> -->
 
+
+					<iframe class="iframe-video" src="https://vimeo.com/album/4787078autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+					
+
 	      	@if($checkTrial)
 				@if($video->video_type == 'webseries')
 					  <div id="player"></div>
