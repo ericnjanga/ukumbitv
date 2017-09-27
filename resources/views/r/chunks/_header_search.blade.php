@@ -43,7 +43,7 @@
 
 				
 
-	      <div id="frame-search" class="frame-search">
+	      <!-- <div id="frame-search" class="frame-search">
 			  
 	        <form action="{{route('search-all')}}" class="navbar-form navbar-left" method="post">  
 	          <div class="input-group">
@@ -54,9 +54,9 @@
 				      		<span class="sr-only">{{trans('messages.search')}}!</span>
 				      	</button>
 				      </span>
-				    </div><!-- /input-group -->
+				    </div>
 	        </form> 
-	      </div>
+	      </div> -->
 
 	      <ul class="nav navbar-nav navbar-right"> 
 	        <li class="dropdown"> 
