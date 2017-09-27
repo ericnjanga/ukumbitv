@@ -1,3 +1,4 @@
+@if(Auth::check())
 <div class="nav-user-access">
 	<span class="nav-package-info">
     <span class="login-text">
@@ -8,10 +9,12 @@
     	@endif
     </span>
     <span id="link-update-package" data-route="{{route('user.package')}}">
-		@if(Auth::user()->paymentPlans[0]->flag != 3)
-    	{{trans('messages.msg_upgrade')}} 
-    @else
-    @endif
+
+				@if(Auth::user()->paymentPlans[0]->flag != 3)
+				{{trans('messages.msg_upgrade')}}
+			@else
+			@endif
+
     </span> 
 	</span>  
 	 
@@ -28,3 +31,4 @@
     <li><a href="{{route('user.logout')}}">{{trans('messages.sign_out')}}</a></li> 
 	</ul>
 </div>
+@endif
