@@ -1,5 +1,5 @@
 <header class="ukb-main-header">
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle -->
 	    <div class="navbar-header">
