@@ -30,6 +30,18 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
 	    	<ul class="ukb-nav-videos nav navbar-nav">
 	        <li id="movies">
+						<a href="#"> 
+							{{trans('messages.dramas')}}
+						</a> 
+					</li>
+					<li id="animations">
+						<a href="#"> 
+							{{trans('messages.comedies')}}
+						</a> 
+					</li>  
+	      </ul>
+	    	<!-- <ul class="ukb-nav-videos nav navbar-nav">
+	        <li id="movies">
 						<a href="{{route('user.videotype', 'movies')}}"> 
 							{{trans('messages.movies')}}
 						</a> 
@@ -39,7 +51,10 @@
 							{{trans('messages.animations')}}
 						</a> 
 					</li>  
-	      </ul>
+	      </ul> -->
+
+
+
 
 				
 
