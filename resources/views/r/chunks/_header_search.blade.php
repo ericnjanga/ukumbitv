@@ -13,7 +13,7 @@
 
 
 <header class="ukb-main-header">
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle -->
 	    <div class="navbar-header">
