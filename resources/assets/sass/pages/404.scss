@@ -1,7 +1,10 @@
 
 .page-404 {
-  display: flex;
-  height: 350px;
-  align-items: center;
-  justify-content: center;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px;
+  @media (max-width: 699px){
+		margin-left: 20px;
+		margin-right: 20px;
+  }
 }
