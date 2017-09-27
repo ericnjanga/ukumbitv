@@ -8,13 +8,13 @@ body {
 }
 
 .morphsearch {
+	position: fixed;
 	width: 200px;
 	min-height: 40px;
 	background: #f1f1f1;
-	position: absolute;
 	z-index: 10000;
-	top: 50px;
-	right: 50px;
+	top: 5px;
+	right: 200px;
 	-webkit-transform-origin: 100% 0;
 	transform-origin: 100% 0;
 	-webkit-transition-property: min-height, width, top, right;
@@ -23,6 +23,11 @@ body {
 	transition-duration: 0.5s;
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+.morphsearch-input{
+	&:focus {
+		box-shadow: inset 0 0px 0px rgba(0,0,0,.075), 0 0 0px hsla(0,0%,74%,.6);
+	}
 }
 
 .morphsearch.open {
