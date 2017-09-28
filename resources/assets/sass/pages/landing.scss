@@ -155,7 +155,7 @@
   	float: left;
   	opacity: 0.8;
   }
-	$max-width: ($thmb-width * 4);
+	$max-width: ($thmb-width * 9);
   @media (min-width: $max-width + 1px){
 		width: $max-width;
 		left: 50%;
