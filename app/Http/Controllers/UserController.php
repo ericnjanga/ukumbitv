@@ -510,9 +510,12 @@ class UserController extends Controller {
         $seasonsArr = [];
         $episodes = Season::where('admin_video_id', $video->id)->where('season_id', 1)->get();
         foreach ($episodes as $episode) {
-            array_push($seasonsArr, 'https://vimeo.com/'.$episode->title);
+            array_push($seasonsArr, $episode->title);
         }
-        $seasonsArr = implode(',', $seasonsArr);
+        $seasons = [];
+        $seasons = Season::where('admin_video_id', $video->id)->orderBy('id', 'desc')->distinct()->get(['season_id']);
+
+//        $seasonsArr = implode(',', $seasonsArr);
 //        $seasonsArr = 'https://vimeo.com/39050404,https://vimeo.com/39050404';
 
 
@@ -535,10 +538,18 @@ class UserController extends Controller {
             ->with('relatedVideos', $relatedVideos)
             ->with('payPlan', $flag)
             ->with('episodesArr', $seasonsArr)
+            ->with('seasons', $seasons)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))
             ->with('directors', $directors);
 //            ->with('categories', $categories);
+    }
+
+    public function getEpisodesBySeason(Request $request)
+    {
+        $episodes = Season::where('admin_video_id', $request->video_id)->where('season_id', $request->season_id)->get();
+
+        return response()->json($episodes);
     }
 
     public function addToPlaylist(Request $request)

@@ -67,8 +67,27 @@
 
 	      	@if($checkTrial)
 				@if($video->video_type == 'webseries')
-					  <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-					@else
+					  <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$episodesArr[0]}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					  <div id="video-controls" class="row">
+						  <div class="col-md-2 col-md-offset-2">
+							  <label for="video-season"></label>
+							  <select name="video-season" id="video-season" class="form-control">
+								  @foreach($seasons as $season)
+								  	<option value="{{$season->season_id}}">Season {{$season->season_id}}</option>
+							      @endforeach
+							  </select>
+						  </div>
+
+						  <div class="col-md-2">
+							  <label for="video-episodes"></label>
+							  <select name="video-episodes" id="video-episodes" class="form-control">
+								  @foreach($episodesArr as $indexKey => $episode)
+									  <option value="{{$episode}}">Episode {{++$indexKey}}</option>
+								  @endforeach
+							  </select>
+						  </div>
+					  </div>
+				  @else
 	          <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	          @endif
 					  <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/232604649?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
@@ -339,4 +358,49 @@
       });
     })
   </script>
+  @if($video->video_type == 'webseries')
+	  <script>
+		  //select episode
+          $('body').on('change', '#video-episodes', function(){
+              console.log(this.value);
+              player.loadVideo(this.value).then(readyToplay).catch(function(error){});
+
+              function readyToplay(id) {
+                  player.play().catch(function(error) {
+                      console.log(error);
+                  });
+              }
+          });
+			//select season
+          $('body').on('change', '#video-season', function(){
+              console.log(this.value);
+              var fds = new FormData;
+
+              fds.append('_token', '{{csrf_token()}}');
+              fds.append('video_id', '{{$video->id}}');
+              fds.append('season_id', this.value);
+
+
+              $.ajax({
+                  type: 'POST',
+                  url: '{{route('user.get-episodes')}}',
+                  contentType: false,
+                  processData: false,
+                  data: fds,
+                  dataType: 'html',
+                  success: function(data){
+                      var rep = JSON.parse(data);
+                      $("#video-episodes").empty();
+                      rep.forEach(function(item, i, rep) {
+                          $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
+                      });
+                      console.log(rep);
+                  },
+                  error: function(data){
+                      console.log('error');
+                  }
+              });
+          });
+	  </script>
+  @endif
 @endsection

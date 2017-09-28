@@ -479,6 +479,7 @@ Route::get('genre/{id}', 'UserController@genre_videos')->name('user.genre');
 Route::post('add-to-playlist', 'UserController@addToPlaylist')->name('user.add-to-playlist');
 
 Route::post('vimeo-video-play', 'UserController@checkVideoPlays')->name('user.vimeo-video-play');
+Route::post('get-episodes', 'UserController@getEpisodesBySeason')->name('user.get-episodes');
 
 
 
