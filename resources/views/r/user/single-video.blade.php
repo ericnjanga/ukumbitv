@@ -68,25 +68,28 @@
 	      	@if($checkTrial)
 				@if($video->video_type == 'webseries')
 					  <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$episodesArr[0]}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-					  <div id="video-controls" class="row">
-						  <div class="col-md-2 col-md-offset-2">
-							  <label for="video-season"></label>
-							  <select name="video-season" id="video-season" class="form-control">
-								  @foreach($seasons as $season)
-								  	<option value="{{$season->season_id}}">Season {{$season->season_id}}</option>
-							      @endforeach
-							  </select>
-						  </div>
+					  <section class="hero-sub">
+					  	<div id="video-controls" class="row">
+							  <div class="col-md-2">
+								  <label for="video-season"></label>
+								  <select name="video-season" id="video-season" class="form-control">
+									  @foreach($seasons as $season)
+									  	<option value="{{$season->season_id}}">Season {{$season->season_id}}</option>
+								      @endforeach
+								  </select>
+							  </div>
 
-						  <div class="col-md-2">
-							  <label for="video-episodes"></label>
-							  <select name="video-episodes" id="video-episodes" class="form-control">
-								  @foreach($episodesArr as $indexKey => $episode)
-									  <option value="{{$episode}}">Episode {{++$indexKey}}</option>
-								  @endforeach
-							  </select>
+							  <div class="col-md-2">
+								  <label for="video-episodes"></label>
+								  <select name="video-episodes" id="video-episodes" class="form-control">
+									  @foreach($episodesArr as $indexKey => $episode)
+										  <option value="{{$episode}}">Episode {{++$indexKey}}</option>
+									  @endforeach
+								  </select>
+							  </div>
 						  </div>
-					  </div>
+					  </section>
+					  
 				  @else
 	          <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	          @endif
