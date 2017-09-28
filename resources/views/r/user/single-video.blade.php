@@ -70,7 +70,7 @@
 					  <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$episodesArr[0]}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					  <section class="hero-sub">
 					  	<div id="video-controls" class="row">
-							  <div class="col-md-2">
+							  <div class="col-xs-2">
 								  <label for="video-season"></label>
 								  <select name="video-season" id="video-season" class="form-control">
 									  @foreach($seasons as $season)
@@ -79,7 +79,7 @@
 								  </select>
 							  </div>
 
-							  <div class="col-md-2">
+							  <div class="col-xs-2">
 								  <label for="video-episodes"></label>
 								  <select name="video-episodes" id="video-episodes" class="form-control">
 									  @foreach($episodesArr as $indexKey => $episode)
@@ -334,7 +334,14 @@
           }, function(response){});
       })
   </script>
-  <script>
+  <script> 
+		/**
+		 * Load VIMEO player 
+		 * -> Capture "play" event and pause the player
+		 * until the server confirms the user has the
+		 * priviledges to play the video
+		 * ----------------------------------------- 
+		*/
     var vimeo_iframe = $('iframe');
     var player = new Vimeo.Player(vimeo_iframe);
     var vimeo_flag = false;
@@ -361,49 +368,73 @@
       });
     })
   </script>
+
+  <!-- script only for webseries -->
   @if($video->video_type == 'webseries')
-	  <script>
-		  //select episode
-          $('body').on('change', '#video-episodes', function(){
-              console.log(this.value);
-              player.loadVideo(this.value).then(readyToplay).catch(function(error){});
+	  <script>  
+	  	/**
+	  	 * NOTES:
+	  	 * 1) "seasons" are on the server side (#video-season)
+	  	 * 2) "episodes" of the current season are loaded on the server side (#video-episodes)
+	  	 * 3) Each time a season is changed, episodes are laoded via AJAX (#video-episodes)
+	  	*/
 
-              function readyToplay(id) {
-                  player.play().catch(function(error) {
-                      console.log(error);
-                  });
-              }
-          });
-			//select season
-          $('body').on('change', '#video-season', function(){
-              console.log(this.value);
-              var fds = new FormData;
+	  	//current array of videos actually exploited by the player
+			var arr_curr_video_list = [];
 
-              fds.append('_token', '{{csrf_token()}}');
-              fds.append('video_id', '{{$video->id}}');
-              fds.append('season_id', this.value);
+			/**
+			 * Load an episode and start the player 
+			 * (when the episode dropdown is changed)...
+			 * ----------------------------------------- 
+			*/
+      $('body').on('change', '#video-episodes', function(){
+          console.log(this.value);
+          player.loadVideo(this.value).then(readyToplay).catch(function(error){});
 
+          function readyToplay(id) {
+            player.play().catch(function(error) {
+                console.log(error);
+            });
+          }
+      });
+			 
 
-              $.ajax({
-                  type: 'POST',
-                  url: '{{route('user.get-episodes')}}',
-                  contentType: false,
-                  processData: false,
-                  data: fds,
-                  dataType: 'html',
-                  success: function(data){
-                      var rep = JSON.parse(data);
-                      $("#video-episodes").empty();
-                      rep.forEach(function(item, i, rep) {
-                          $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
-                      });
-                      console.log(rep);
-                  },
-                  error: function(data){
-                      console.log('error');
-                  }
-              });
-          });
+			/**
+			 * Load the episodes of the selected season
+			 * (in the episode dropdown)... 
+			 * ----------------------------------------- 
+			*/
+      $('body').on('change', '#video-season', function(){
+        console.log(this.value);
+        var fds = new FormData;
+
+        fds.append('_token', '{{csrf_token()}}');
+        fds.append('video_id', '{{$video->id}}');
+        fds.append('season_id', this.value);
+
+        $.ajax({
+          type: 'POST',
+          url: '{{route('user.get-episodes')}}',
+          contentType: false,
+          processData: false,
+          data: fds,
+          dataType: 'html',
+          success: function(data){
+            var rep = JSON.parse(data);
+            $("#video-episodes").empty();
+            rep.forEach(function(item, i, rep) {
+                $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
+            });
+
+            arr_curr_video_list = rep;
+            console.log('>>arr_curr_video_list=', arr_curr_video_list);
+          },
+          error: function(data){
+              console.log('error');
+          }
+        });
+      });
 	  </script>
   @endif
+  <!-- script only for webseries -->
 @endsection
