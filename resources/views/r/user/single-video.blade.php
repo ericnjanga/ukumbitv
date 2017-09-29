@@ -359,9 +359,11 @@
 					_vimeo_flag = false,
 					_playIndex 	= 0;
 
+			//Update video list and reset play index
 			var _updateVideoList = function(newArray){
+		    _playIndex 	= 0;
 				_video_list = newArray;
-      	console.log('[ukumbitv_video]_video_list=', _video_list);
+      	// console.log('[ukumbitv_video]_video_list=', _video_list);
 			}
 			var _readyToplay = function (id) {
         _player.play().catch(function(error) {
@@ -413,20 +415,24 @@
 				//(with episode ids in the dropdown) 
 		  	var curr_opts = $('#video-episodes')[0].options; 
 				_video_list = $.map(curr_opts, function( elem ) {
-					var val1 = (elem.value || elem.text);
-	      	console.log('parseInt(val1)=', parseInt(val1) );
+					var val1 = (elem.value || elem.text); 
 				  return parseInt(val1);
-				});
+				});//[end]* Initially load
 
 
 
-				//(play next video) ...
-				// console.log('1)>>>>>>ended' );
-		  //   ukumbitv_video.player.on('ended',function(){
-		  //     playIndex = playIndex + 1;
-		  //     console.log('>moving to next index: ',  playIndex);
-		  //     ukumbitv_video.player.loadVideo(ukumbitv_video.video_list[playIndex]).then(readyToplay).catch(function(error){});
-		  //   });
+				//[init]* Play next video when the current one ends ---  
+		    _player.on('ended',function(){
+		      _playIndex = _playIndex + 1;
+		      var _nextVideo = _video_list[_playIndex];
+		      //only if next video is available
+		      if(_nextVideo!==undefined){
+						console.log('>moving to next index: ',  _playIndex);
+			      _player.loadVideo().then(_readyToplay).catch(function(error){
+			      	console.error('[UkumbiTV player error] Cannot play next video');
+			      });
+		      }//[end] only if next video is available 
+		    });//[end]* Play next video
   
 
 			};//[end] initialize
@@ -512,8 +518,7 @@
       				console.log('parseInt(item.title)=', parseInt(item.title) ); 
               $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
             });
-
-            console.log('>>_new_list=', _new_list);
+ 
             ukumbitv_video.updateVideoList(_new_list);
           },
           error: function(data){
