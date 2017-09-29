@@ -370,7 +370,7 @@
       };
  
       //Load VIMEO player with the right episode id
-      var _loadPlayer = funtion(episodeID){
+      var _loadPlayer = function(episodeID){
 				_player.loadVideo(episodeID).then(_readyToplay).catch(function(error){
 					console.error('[UkumbiTV player error] : ', error);
 				});
