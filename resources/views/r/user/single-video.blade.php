@@ -2,7 +2,7 @@
 @section('content')
 
   <div class="page page-video-single">  
-    <div class="global-display">
+    <div class="container"> <!-- global-display -->
     	<!-- @include('r.chunks._filter_video') -->
 
 	    <div class="global-content utv-card">
