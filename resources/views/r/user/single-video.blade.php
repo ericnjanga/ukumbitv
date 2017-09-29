@@ -355,9 +355,9 @@
 
 		var ukumbitv_video = (function(){
 			var _video_list = [], 
-					_player = '',
-					_vimeo_flag : false,
-					_playIndex = 0;
+					_player 		= '',
+					_vimeo_flag = false,
+					_playIndex 	= 0;
 
 			var _updateVideoList = function(newArray){
 				_video_list = newArray;
