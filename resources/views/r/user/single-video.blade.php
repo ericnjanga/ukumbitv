@@ -328,36 +328,24 @@
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script>
       $(".ui.facebook.button").click(function() {
-          FB.ui({
-              method: 'share',
-              href: "{{URL::to('/')}}/video/{{$video->watchid}}"
-          }, function(response){});
+        FB.ui({
+            method: 'share',
+            href: "{{URL::to('/')}}/video/{{$video->watchid}}"
+        }, function(response){});
       })
   </script>
   <script> 
 		/**
-		 * Load VIMEO player 
-		 * -> Capture "play" event and pause the player
-		 * until the server confirms the user has the
-		 * priviledges to play the video
+		 * UkumbiTV video system
 		 * ----------------------------------------- 
 		*/
-		// var ukumbitv_video = {
-		// 	player : new Vimeo.Player($('iframe')),
-		// 	vimeo_flag : false,
-		// 	video_list : [],
-		// 	readyToplay : function (id) {
-  //       ukumbitv_video.player.play().catch(function(error) {
-  //           console.log(error);
-  //       });
-  //     }
-		// };   
-
 		var ukumbitv_video = (function(){
 			var _video_list = [], 
 					_player 		= '',
 					_vimeo_flag = false,
-					_playIndex 	= 0;
+					_playIndex 	= 0,
+					_dd_seasons = '',//$('#video-season'),
+					_dd_episodes = '';//$('#video-episodes');
 
 			//Update video list and reset play index
 			var _updateVideoList = function(newArray){
@@ -380,7 +368,9 @@
 
 
 			var _intialize = function() {
-				_player = new Vimeo.Player($('iframe'));
+				_player = new Vimeo.Player($('iframe')); 
+				_dd_seasons = $('#video-season');
+				_dd_episodes = $('#video-episodes');
 
 				//[init]* Load VIMEO player ---
 				//* -> Capture "play" event and pause the player
@@ -425,12 +415,15 @@
 		    _player.on('ended',function(){
 		      _playIndex = _playIndex + 1;
 		      var _nextVideoID = _video_list[_playIndex];
-		      //only if next video is available
+		      //Change episode dropdown to the next episode value and trigger the 'change' event
+		      //(only if next video is available)
 		      if(_nextVideoID!==undefined){
-						console.log('>moving to next index: ',  _playIndex);
-			      _player.loadVideo(_nextVideoID).then(_readyToplay).catch(function(error){
-			      	console.error('[UkumbiTV player error] Cannot play next video');
-			      });
+						console.log('>***>>moving to next index: ',  _playIndex);
+						_dd_episodes.val(_nextVideoID).change();
+
+			      // _player.loadVideo(_nextVideoID).then(_readyToplay).catch(function(error){
+			      // 	console.error('[UkumbiTV player error] Cannot play next video');
+			      // });
 		      }//[end] only if next video is available 
 		    });//[end]* Play next video
   
