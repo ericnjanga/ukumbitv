@@ -380,7 +380,7 @@
 				//debugger;\$checkTrial
 		    _player.on('play', function() { 
 		      if (_vimeo_flag == true) return;
-		      _player.pause().then(function() {
+		      _player.pause().then(function() { 
 		        $.ajax({
 		          type: 'POST',
 		          url: '/vimeo-video-play',
@@ -391,11 +391,11 @@
 		          success: function(data){
 		            _vimeo_flag = true;
 		            _player.play();
-		          },
+		          }, 
 		          error: function(data) {
 		            console.error('[UkumbiTV player error] Could not play');
 		          }
-		        })
+		        }) 
 		      });
 		    });//[end] * Load VIMEO player - check right to play
 
@@ -491,11 +491,14 @@
 			 * ----------------------------------------- 
 			*/
       $('body').on('change', '#video-season', function(){ 
-        var fds = new FormData;
+        var fds = new FormData, 
+				_spinner = $('#ukumbitv-spinner-frame');
 
         fds.append('_token', '{{csrf_token()}}');
         fds.append('video_id', '{{$video->id}}');
         fds.append('season_id', this.value);
+ 
+        _spinner.addClass('active');
 
         $.ajax({
           type: 'POST',
@@ -525,7 +528,9 @@
           error: function(data){
             console.error('error');
           }
-        });
+        }).done(function() {
+				  _spinner.removeClass('active');
+				});
       });
 	  </script>
   @endif
