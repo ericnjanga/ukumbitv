@@ -386,7 +386,7 @@
 
 	  	//current array of videos actually exploited by the player 
 	  	var curr_opts = $('#video-episodes')[0].options; 
-			var ukumbitv_video.video_list = $.map(curr_opts, function( elem ) {
+			ukumbitv_video.video_list = $.map(curr_opts, function( elem ) {
 				var val1 = (elem.value || elem.text);
       	console.log('parseInt(val1)=', parseInt(val1) );
 			  return parseInt(val1);
