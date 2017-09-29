@@ -71,7 +71,7 @@
 					  <section class="hero-sub">
 					  	<div id="video-controls" class="row">
 							  <div class="col-xs-6 col-sm-2">
-								  <label for="video-season"></label>
+								  <!-- <label for="video-season"></label> -->
 								  <select name="video-season" id="video-season" class="form-control">
 									  @foreach($seasons as $season)
 									  	<option value="{{$season->season_id}}">Season {{$season->season_id}}</option>
@@ -80,7 +80,7 @@
 							  </div>
 
 							  <div class="col-xs-6 col-sm-2">
-								  <label for="video-episodes"></label>
+								  <!-- <label for="video-episodes"></label> -->
 								  <select name="video-episodes" id="video-episodes" class="form-control">
 									  @foreach($episodesArr as $indexKey => $episode)
 										  <option value="{{$episode}}">Episode {{++$indexKey}}</option>
@@ -88,9 +88,7 @@
 								  </select>
 							  </div>
 
-							  <div id="active-episode-title" class="col-sm-8">
-								  
-							  </div>
+							  <div id="active-episode-title" class="col-sm-8"></div>
 						  </div>
 					  </section>
 					  
@@ -422,6 +420,8 @@
 					var val1 = (elem.value || elem.text); 
 				  return parseInt(val1);
 				});//[end]* Initially load 
+				//Displayig the first episode's title
+				$('#active-episode-title').html(_list_episodes[0]);
 
 
 
