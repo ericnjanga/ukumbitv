@@ -363,6 +363,7 @@
  
       //Load VIMEO player with the right episode id
       var _loadPlayer = function(episodeID){
+      	console.log('......_loadPlayer');
 				_player.loadVideo(episodeID).then(_readyToplay).catch(function(error){
 					console.error('[UkumbiTV player error] : ', error);
 				});
@@ -517,7 +518,7 @@
           success: function(data){
             var rep = JSON.parse(data);
             var _new_list = [],
-            	$dd_episodes = $('#video-episodes');  console.log('......aewfewfw');
+            	$dd_episodes = $('#video-episodes');  
             //(dropdown) replace of episodes with new ones
             $dd_episodes.empty();
             rep.forEach(function(item, i, rep) {
