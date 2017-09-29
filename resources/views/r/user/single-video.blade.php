@@ -70,7 +70,7 @@
 					  <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$episodesArr[0]}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					  <section class="hero-sub">
 					  	<div id="video-controls" class="row">
-							  <div class="col-xs-2">
+							  <div class="col-xs-6 col-sm-2">
 								  <label for="video-season"></label>
 								  <select name="video-season" id="video-season" class="form-control">
 									  @foreach($seasons as $season)
@@ -79,13 +79,17 @@
 								  </select>
 							  </div>
 
-							  <div class="col-xs-2">
+							  <div class="col-xs-6 col-sm-2">
 								  <label for="video-episodes"></label>
 								  <select name="video-episodes" id="video-episodes" class="form-control">
 									  @foreach($episodesArr as $indexKey => $episode)
 										  <option value="{{$episode}}">Episode {{++$indexKey}}</option>
 									  @endforeach
 								  </select>
+							  </div>
+
+							  <div id="active-episode-title" class="col-sm-8">
+								  
 							  </div>
 						  </div>
 					  </section>
@@ -482,6 +486,7 @@
 			*/
       $('body').on('change', '#video-episodes', function(){ 
         ukumbitv_video.loadPlayer(this.value); 
+        $('#active-episode-title').html(this.value);
       });
 			 
 
