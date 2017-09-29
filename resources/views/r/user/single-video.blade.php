@@ -385,9 +385,25 @@
 				var val1 = (elem.value || elem.text);
       	console.log('parseInt(val1)=', parseInt(val1) );
 			  return parseInt(val1);
-			}); 
+			});
+    	var playIndex = 0; 
 
       console.log('1)>>arr_curr_video_list=', arr_curr_video_list);
+
+
+
+
+
+
+	    player.on('ended',function(){
+	      playIndex = playIndex + 1;
+	      console.log('>moving to next index: ',  playIndex);
+	      madeInNy.loadVideo(arr_curr_video_list[playIndex]).then(readyToplay).catch(function(error){});
+	    });
+
+
+
+
 
 
 			/**
@@ -435,7 +451,7 @@
                 arr_curr_video_list.push(parseInt(item.title));
 
       	console.log('parseInt(item.title)=', parseInt(item.title) );
-      	
+
                 $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
             });
 
