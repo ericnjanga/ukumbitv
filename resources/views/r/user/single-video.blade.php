@@ -422,11 +422,13 @@
           success: function(data){
             var rep = JSON.parse(data);
             $("#video-episodes").empty();
+              arr_curr_video_list = [];
             rep.forEach(function(item, i, rep) {
+                arr_curr_video_list.push(item.title);
                 $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
             });
 
-            arr_curr_video_list = rep;
+
             console.log('>>arr_curr_video_list=', arr_curr_video_list);
           },
           error: function(data){

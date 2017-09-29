@@ -513,7 +513,7 @@ class UserController extends Controller {
             array_push($seasonsArr, $episode->title);
         }
         $seasons = [];
-        $seasons = Season::where('admin_video_id', $video->id)->orderBy('id', 'desc')->distinct()->get(['season_id']);
+        $seasons = Season::where('admin_video_id', $video->id)->orderBy('id', 'asc')->distinct()->get(['season_id']);
 
 //        $seasonsArr = implode(',', $seasonsArr);
 //        $seasonsArr = 'https://vimeo.com/39050404,https://vimeo.com/39050404';
