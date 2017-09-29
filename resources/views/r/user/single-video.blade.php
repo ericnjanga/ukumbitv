@@ -354,7 +354,7 @@
 		// };   
 
 		var ukumbitv_video = (function(){
-			var _video_list : [], 
+			var _video_list = [], 
 					_player = '',
 					_vimeo_flag : false,
 					_playIndex = 0;
