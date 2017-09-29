@@ -516,19 +516,20 @@
           //start the player on the 1st episode
           success: function(data){
             var rep = JSON.parse(data);
-            var _new_list = [];
+            var _new_list = [],
+            	$dd_episodes = $('#video-episodes');  console.log('......aewfewfw');
             //(dropdown) replace of episodes with new ones
-            $("#video-episodes").empty();
+            $dd_episodes.empty();
             rep.forEach(function(item, i, rep) {
               _new_list.push(parseInt(item.title)); 
       				console.log('parseInt(item.title)=', parseInt(item.title) ); 
-              $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
+              $dd_episodes.append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
             });
  						
  						//save the new list of episodes
             ukumbitv_video.updateVideoList(_new_list);
             //start the player on the 1st episode
-            $('#video-episodes').change();
+            $dd_episodes.change();
           },
           error: function(data){
             console.log('error');
