@@ -342,14 +342,19 @@
 		 * priviledges to play the video
 		 * ----------------------------------------- 
 		*/
-    var vimeo_iframe = $('iframe');
-    var player = new Vimeo.Player(vimeo_iframe);
-    var vimeo_flag = false;
+		var ukumbitv_video = {
+			player : new Vimeo.Player($('iframe')),
+			vimeo_flag : false,
+			video_list : []
+		};
+    // var vimeo_iframe = $('iframe');
+    // var player = new Vimeo.Player($('iframe'));
+    // var ukumbitv_video.vimeo_flag = false;
 //      debugger;\$checkTrial
-    player.on('play', function() {
+    ukumbitv_video.player.on('play', function() {
       console.log('played the video');
-      if (vimeo_flag == true) return;
-      player.pause().then(function() {
+      if (ukumbitv_video.vimeo_flag == true) return;
+      ukumbitv_video.player.pause().then(function() {
         $.ajax({
           type: 'POST',
           url: '/vimeo-video-play',
@@ -358,8 +363,8 @@
             _token: '{{csrf_token()}}'
           },
           success: function(data){
-            vimeo_flag = true;
-            player.play();
+            ukumbitv_video.vimeo_flag = true;
+            ukumbitv_video.player.play();
           },
           error: function(data) {
             console.log('error');
@@ -381,14 +386,14 @@
 
 	  	//current array of videos actually exploited by the player 
 	  	var curr_opts = $('#video-episodes')[0].options; 
-			var arr_curr_video_list = $.map(curr_opts, function( elem ) {
+			var ukumbitv_video.video_list = $.map(curr_opts, function( elem ) {
 				var val1 = (elem.value || elem.text);
       	console.log('parseInt(val1)=', parseInt(val1) );
 			  return parseInt(val1);
 			});
     	var playIndex = 0; 
 
-      console.log('1)>>arr_curr_video_list=', arr_curr_video_list);
+      console.log('1)>>ukumbitv_video.video_list=', ukumbitv_video.video_list);
 
 
 
@@ -396,10 +401,10 @@
 
 
       console.log('1)>>>>>>ended' );
-	    player.on('ended',function(){
+	    ukumbitv_video.player.on('ended',function(){
 	      playIndex = playIndex + 1;
 	      console.log('>moving to next index: ',  playIndex);
-	      madeInNy.loadVideo(arr_curr_video_list[playIndex]).then(readyToplay).catch(function(error){});
+	      ukumbitv_video.player.loadVideo(ukumbitv_video.video_list[playIndex]).then(readyToplay).catch(function(error){});
 	    });
 
 
@@ -414,10 +419,10 @@
 			*/
       $('body').on('change', '#video-episodes', function(){
           console.log(this.value);
-          player.loadVideo(this.value).then(readyToplay).catch(function(error){});
+          ukumbitv_video.player.loadVideo(this.value).then(readyToplay).catch(function(error){});
 
           function readyToplay(id) {
-            player.play().catch(function(error) {
+            ukumbitv_video.player.play().catch(function(error) {
                 console.log(error);
             });
           }
@@ -447,9 +452,9 @@
           success: function(data){
             var rep = JSON.parse(data);
             $("#video-episodes").empty();
-              arr_curr_video_list = [];
+              ukumbitv_video.video_list = [];
             rep.forEach(function(item, i, rep) {
-                arr_curr_video_list.push(parseInt(item.title));
+                ukumbitv_video.video_list.push(parseInt(item.title));
 
       	console.log('parseInt(item.title)=', parseInt(item.title) );
 
@@ -457,7 +462,7 @@
             });
 
 
-            console.log('>>arr_curr_video_list=', arr_curr_video_list);
+            console.log('>>ukumbitv_video.video_list=', ukumbitv_video.video_list);
           },
           error: function(data){
               console.log('error');
