@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\UserPaymentPlan;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -63,6 +64,11 @@ class SocialAuthController extends Controller
             //Automaticly set that email is verified
             $user->is_verified = 1;
             $user->save();
+
+            $userPlan = new UserPaymentPlan();
+            $userPlan->user_id = $user->id;
+            $userPlan->payment_plan_id = 2;
+            $userPlan->save();
 
 		}
 
