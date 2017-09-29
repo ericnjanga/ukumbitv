@@ -379,8 +379,14 @@
 	  	 * 3) Each time a season is changed, episodes are laoded via AJAX (#video-episodes)
 	  	*/
 
-	  	//current array of videos actually exploited by the player
-			var arr_curr_video_list = [];
+	  	//current array of videos actually exploited by the player 
+	  	var curr_opts = $('#video-episodes')[0].options; 
+			var arr_curr_video_list = $.map(curr_opts, function( elem ) {
+			    return (elem.value || elem.text);
+			}); 
+
+      console.log('1)>>arr_curr_video_list=', arr_curr_video_list);
+
 
 			/**
 			 * Load an episode and start the player 

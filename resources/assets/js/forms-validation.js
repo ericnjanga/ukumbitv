@@ -1,4 +1,35 @@
 /**
+ **************************[UkumbiTV App]**************************
+ **************************[UkumbiTV App]************************** 
+ */
+ 
+// ukumbitvApp 
+var ukumbitvApp = angular.module('ukumbitvApp', []);
+
+
+
+ 
+
+/**
+ **************************[UkumbiTV Services]**************************
+ **************************[UkumbiTV Services]************************** 
+ */
+var ukumbitvServices = angular.module('servMovies', []);
+ukumbitvServices.factory('serviceId', function() {
+  var arrMovies = [{
+  	
+  }];
+  // factory function body that constructs arrMovies
+  return arrMovies;
+});
+
+
+
+
+
+
+
+/**
  **************************[forms-validation.js]**************************
  **************************[forms-validation.js]************************** 
  */
