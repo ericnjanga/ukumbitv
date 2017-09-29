@@ -395,6 +395,7 @@
 
 
 
+      console.log('1)>>>>>>ended' );
 	    player.on('ended',function(){
 	      playIndex = playIndex + 1;
 	      console.log('>moving to next index: ',  playIndex);
