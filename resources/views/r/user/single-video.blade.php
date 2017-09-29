@@ -342,36 +342,108 @@
 		 * priviledges to play the video
 		 * ----------------------------------------- 
 		*/
-		var ukumbitv_video = {
-			player : new Vimeo.Player($('iframe')),
-			vimeo_flag : false,
-			video_list : []
-		};
-    // var vimeo_iframe = $('iframe');
-    // var player = new Vimeo.Player($('iframe'));
-    // var ukumbitv_video.vimeo_flag = false;
-//      debugger;\$checkTrial
-    ukumbitv_video.player.on('play', function() {
-      console.log('played the video');
-      if (ukumbitv_video.vimeo_flag == true) return;
-      ukumbitv_video.player.pause().then(function() {
-        $.ajax({
-          type: 'POST',
-          url: '/vimeo-video-play',
-          data: {
-            id: {{$video->watchid}},
-            _token: '{{csrf_token()}}'
-          },
-          success: function(data){
-            ukumbitv_video.vimeo_flag = true;
-            ukumbitv_video.player.play();
-          },
-          error: function(data) {
-            console.log('error');
-          }
-        })
-      });
-    })
+		// var ukumbitv_video = {
+		// 	player : new Vimeo.Player($('iframe')),
+		// 	vimeo_flag : false,
+		// 	video_list : [],
+		// 	readyToplay : function (id) {
+  //       ukumbitv_video.player.play().catch(function(error) {
+  //           console.log(error);
+  //       });
+  //     }
+		// };   
+
+		var ukumbitv_video = (function(){
+			var _video_list : [], 
+					_player = '',
+					_vimeo_flag : false,
+					_playIndex = 0;
+
+			var _updateVideoList = function(newArray){
+				_video_list = newArray;
+      	console.log('[ukumbitv_video]_video_list=', _video_list);
+			}
+			var _readyToplay = function (id) {
+        _player.play().catch(function(error) {
+            console.error('[UkumbiTV player error] : ', error);
+        });
+      };
+ 
+      //Load VIMEO player with the right episode id
+      var _loadPlayer = funtion(episodeID){
+				_player.loadVideo(episodeID).then(_readyToplay).catch(function(error){
+					console.error('[UkumbiTV player error] : ', error);
+				});
+      };
+
+
+			var _intialize = function() {
+				_player = new Vimeo.Player($('iframe'));
+
+				//[init]* Load VIMEO player ---
+				//* -> Capture "play" event and pause the player
+				//* until the server confirms the user has the
+				//* priviledges to play the video
+				//debugger;\$checkTrial
+		    _player.on('play', function() {
+		      console.log('>>played the video');
+		      if (_vimeo_flag == true) return;
+		      _player.pause().then(function() {
+		        $.ajax({
+		          type: 'POST',
+		          url: '/vimeo-video-play',
+		          data: {
+		            id: {{$video->watchid}},
+		            _token: '{{csrf_token()}}'
+		          },
+		          success: function(data){
+		            _vimeo_flag = true;
+		            _player.play();
+		          },
+		          error: function(data) {
+		            console.error('[UkumbiTV player error] Could not play');
+		          }
+		        })
+		      });
+		    });//[end] * Load VIMEO player - check right to play
+
+
+
+				//[init]* Initially load the video list ---
+				//(with episode ids in the dropdown) 
+		  	var curr_opts = $('#video-episodes')[0].options; 
+				_video_list = $.map(curr_opts, function( elem ) {
+					var val1 = (elem.value || elem.text);
+	      	console.log('parseInt(val1)=', parseInt(val1) );
+				  return parseInt(val1);
+				});
+
+
+
+				//(play next video) ...
+				// console.log('1)>>>>>>ended' );
+		  //   ukumbitv_video.player.on('ended',function(){
+		  //     playIndex = playIndex + 1;
+		  //     console.log('>moving to next index: ',  playIndex);
+		  //     ukumbitv_video.player.loadVideo(ukumbitv_video.video_list[playIndex]).then(readyToplay).catch(function(error){});
+		  //   });
+  
+
+			};//[end] initialize
+
+
+
+
+			return {
+				intialize : _intialize,
+				loadPlayer : _loadPlayer,
+				updateVideoList : _updateVideoList
+				// player : _player
+			};
+		})();
+
+
+ 		
   </script>
 
   <!-- script only for webseries -->
@@ -384,30 +456,11 @@
 	  	 * 3) Each time a season is changed, episodes are laoded via AJAX (#video-episodes)
 	  	*/
 
-	  	//current array of videos actually exploited by the player 
-	  	var curr_opts = $('#video-episodes')[0].options; 
-			ukumbitv_video.video_list = $.map(curr_opts, function( elem ) {
-				var val1 = (elem.value || elem.text);
-      	console.log('parseInt(val1)=', parseInt(val1) );
-			  return parseInt(val1);
-			});
-    	var playIndex = 0; 
 
-      console.log('1)>>ukumbitv_video.video_list=', ukumbitv_video.video_list);
-
-
-
-
-
-
-      console.log('1)>>>>>>ended' );
-	    ukumbitv_video.player.on('ended',function(){
-	      playIndex = playIndex + 1;
-	      console.log('>moving to next index: ',  playIndex);
-	      ukumbitv_video.player.loadVideo(ukumbitv_video.video_list[playIndex]).then(readyToplay).catch(function(error){});
-	    });
-
-
+	  	//Initalize ukumbitv player
+	  	ukumbitv_video.intialize();
+	  	
+ 
 
 
 
@@ -418,14 +471,15 @@
 			 * ----------------------------------------- 
 			*/
       $('body').on('change', '#video-episodes', function(){
-          console.log(this.value);
-          ukumbitv_video.player.loadVideo(this.value).then(readyToplay).catch(function(error){});
+        console.log(this.value);
+        ukumbitv_video.loadPlayer(this.value);
+        // ukumbitv_video.player.loadVideo(this.value).then(readyToplay).catch(function(error){});
 
-          function readyToplay(id) {
-            ukumbitv_video.player.play().catch(function(error) {
-                console.log(error);
-            });
-          }
+        // function readyToplay(id) {
+        //   ukumbitv_video.player.play().catch(function(error) {
+        //       console.log(error);
+        //   });
+        // }
       });
 			 
 
@@ -451,18 +505,16 @@
           dataType: 'html',
           success: function(data){
             var rep = JSON.parse(data);
+            var _new_list = [];
             $("#video-episodes").empty();
-              ukumbitv_video.video_list = [];
             rep.forEach(function(item, i, rep) {
-                ukumbitv_video.video_list.push(parseInt(item.title));
-
-      	console.log('parseInt(item.title)=', parseInt(item.title) );
-
-                $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
+              _new_list.push(parseInt(item.title)); 
+      				console.log('parseInt(item.title)=', parseInt(item.title) ); 
+              $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
             });
 
-
-            console.log('>>ukumbitv_video.video_list=', ukumbitv_video.video_list);
+            console.log('>>_new_list=', _new_list);
+            ukumbitv_video.updateVideoList(_new_list);
           },
           error: function(data){
               console.log('error');
