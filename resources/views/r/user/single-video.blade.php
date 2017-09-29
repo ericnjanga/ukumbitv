@@ -383,6 +383,7 @@
 	  	var curr_opts = $('#video-episodes')[0].options; 
 			var arr_curr_video_list = $.map(curr_opts, function( elem ) {
 				var val1 = (elem.value || elem.text);
+      	console.log('parseInt(val1)=', parseInt(val1) );
 			  return parseInt(val1);
 			}); 
 
@@ -432,6 +433,9 @@
               arr_curr_video_list = [];
             rep.forEach(function(item, i, rep) {
                 arr_curr_video_list.push(parseInt(item.title));
+
+      	console.log('parseInt(item.title)=', parseInt(item.title) );
+      	
                 $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
             });
 
