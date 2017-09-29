@@ -382,7 +382,8 @@
 	  	//current array of videos actually exploited by the player 
 	  	var curr_opts = $('#video-episodes')[0].options; 
 			var arr_curr_video_list = $.map(curr_opts, function( elem ) {
-			    return (elem.value || elem.text);
+				var val1 = (elem.value || elem.text);
+			  return parseInt(val1);
 			}); 
 
       console.log('1)>>arr_curr_video_list=', arr_curr_video_list);
@@ -430,7 +431,7 @@
             $("#video-episodes").empty();
               arr_curr_video_list = [];
             rep.forEach(function(item, i, rep) {
-                arr_curr_video_list.push(item.title);
+                arr_curr_video_list.push(parseInt(item.title));
                 $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
             });
 
