@@ -424,11 +424,11 @@
 				//[init]* Play next video when the current one ends ---  
 		    _player.on('ended',function(){
 		      _playIndex = _playIndex + 1;
-		      var _nextVideo = _video_list[_playIndex];
+		      var _nextVideoID = _video_list[_playIndex];
 		      //only if next video is available
-		      if(_nextVideo!==undefined){
+		      if(_nextVideoID!==undefined){
 						console.log('>moving to next index: ',  _playIndex);
-			      _player.loadVideo().then(_readyToplay).catch(function(error){
+			      _player.loadVideo(_nextVideoID).then(_readyToplay).catch(function(error){
 			      	console.error('[UkumbiTV player error] Cannot play next video');
 			      });
 		      }//[end] only if next video is available 
