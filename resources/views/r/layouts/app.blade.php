@@ -103,6 +103,9 @@
 
 
 		<!-- -->
+<div style="border:30px solid red;">
+	
+
 <div class="lds-css ng-scope">
 <div class="lds-spinner" style="100%;height:100%"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 <style type="text/css">@keyframes lds-spinner {
@@ -216,6 +219,8 @@
   transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
 }
 </style></div>
+
+</div>
 		<!-- -->
 
 
