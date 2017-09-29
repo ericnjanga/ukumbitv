@@ -342,15 +342,16 @@
 		var ukumbitv_video = (function(){
 			var _list_episodes 	= [], 
 					_list_seasons 	= [],
-					_player 		= '',
-					_vimeo_flag = false,
-					_playIndex 	= 0,
-					_dd_seasons = '',//$('#video-season'),
-					_dd_episodes = '';//$('#video-episodes');
+					_player 			= '',
+					_vimeo_flag 	= false,
+					_episodeIndex 	= 0,
+					_seasonIndex 		= 0,
+					_dd_seasons 	= '',//$('#video-season'),
+					_dd_episodes 	= '';//$('#video-episodes');
 
 			//Update video list and reset play index
 			var _updateVideoList = function(newArray){
-		    _playIndex 	= 0;
+		    _episodeIndex 	= 0;
 				_list_episodes = newArray;
       	// console.log('[ukumbitv_video]_list_episodes=', _list_episodes);
 			}
@@ -427,16 +428,19 @@
 
 				//[init]* Play next video when the current one ends ---  
 		    _player.on('ended',function(){
-		      _playIndex = _playIndex + 1;
-		      var _nextVideoID = _list_episodes[_playIndex];
+		      _episodeIndex = _episodeIndex + 1;
+		      var _nextVideoID = _list_episodes[_episodeIndex];
 		      //Change episode dropdown to the next episode value and trigger the 'change' event
 		      //(only if next video is available)
 		      if(_nextVideoID!==undefined){
-						console.log('>***>>moving to next index: ',  _playIndex);
+						console.log('>***>>moving to next index: ',  _episodeIndex);
 						_dd_episodes.val(_nextVideoID).change(); 
 		      }//[end] only if next video is available 
 		      else{
 		      	console.log('>>No more episodes!!');
+		      	//go to the next season
+		      	_seasonIndex ++;
+		      	_dd_seasons.val((_seasonIndex + 1)).change(); 
 		      }
 		    });//[end]* Play next video
   
@@ -508,20 +512,26 @@
           processData: false,
           data: fds,
           dataType: 'html',
+          //fetch new episodes of the new season
+          //start the player on the 1st episode
           success: function(data){
             var rep = JSON.parse(data);
             var _new_list = [];
+            //(dropdown) replace of episodes with new ones
             $("#video-episodes").empty();
             rep.forEach(function(item, i, rep) {
               _new_list.push(parseInt(item.title)); 
       				console.log('parseInt(item.title)=', parseInt(item.title) ); 
               $('#video-episodes').append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
             });
- 
+ 						
+ 						//save the new list of episodes
             ukumbitv_video.updateVideoList(_new_list);
+            //start the player on the 1st episode
+            $('#video-episodes').change();
           },
           error: function(data){
-              console.log('error');
+            console.log('error');
           }
         });
       });
