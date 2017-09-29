@@ -352,8 +352,7 @@
 			//Update video list and reset play index
 			var _updateVideoList = function(newArray){
 		    _episodeIndex 	= 0;
-				_list_episodes = newArray;
-      	// console.log('[ukumbitv_video]_list_episodes=', _list_episodes);
+				_list_episodes = newArray; 
 			}
 			var _readyToplay = function (id) {
         _player.play().catch(function(error) {
@@ -362,8 +361,7 @@
       };
  
       //Load VIMEO player with the right episode id
-      var _loadPlayer = function(episodeID){
-      	console.log('......_loadPlayer');
+      var _loadPlayer = function(episodeID){ 
 				_player.loadVideo(episodeID).then(_readyToplay).catch(function(error){
 					console.error('[UkumbiTV player error] : ', error);
 				});
@@ -380,8 +378,7 @@
 				//* until the server confirms the user has the
 				//* priviledges to play the video
 				//debugger;\$checkTrial
-		    _player.on('play', function() {
-		      console.log('>>playing video');
+		    _player.on('play', function() { 
 		      if (_vimeo_flag == true) return;
 		      _player.pause().then(function() {
 		        $.ajax({
@@ -420,10 +417,7 @@
 				_list_episodes = $.map(curr_opts2, function( elem ) {
 					var val1 = (elem.value || elem.text); 
 				  return parseInt(val1);
-				});//[end]* Initially load
-
-				console.log('>>>>_list_seasons=', _list_seasons);
-				console.log('>>>>_list_episodes=', _list_episodes);
+				});//[end]* Initially load 
 
 
 
@@ -433,12 +427,11 @@
 		      var _nextVideoID = _list_episodes[_episodeIndex];
 		      //Change episode dropdown to the next episode value and trigger the 'change' event
 		      //(only if next video is available)
-		      if(_nextVideoID!==undefined){
-						console.log('>***>>moving to next index: ',  _episodeIndex);
+		      if(_nextVideoID!==undefined){ 
 						_dd_episodes.val(_nextVideoID).change(); 
 		      }//[end] only if next video is available 
-		      else{
-		      	console.log('>>No more episodes!!');
+		      else{ 
+		      	//No more episodes
 		      	//go to the next season
 		      	_seasonIndex ++;
 		      	_dd_seasons.val((_seasonIndex + 1)).change(); 
@@ -487,8 +480,7 @@
 			 * (when the episode dropdown is changed)...
 			 * ----------------------------------------- 
 			*/
-      $('body').on('change', '#video-episodes', function(){
-        console.log(this.value);
+      $('body').on('change', '#video-episodes', function(){ 
         ukumbitv_video.loadPlayer(this.value); 
       });
 			 
@@ -498,8 +490,7 @@
 			 * (in the episode dropdown)... 
 			 * ----------------------------------------- 
 			*/
-      $('body').on('change', '#video-season', function(){
-        console.log(this.value);
+      $('body').on('change', '#video-season', function(){ 
         var fds = new FormData;
 
         fds.append('_token', '{{csrf_token()}}');
@@ -522,8 +513,7 @@
             //(dropdown) replace of episodes with new ones
             $dd_episodes.empty();
             rep.forEach(function(item, i, rep) {
-              _new_list.push(parseInt(item.title)); 
-      				console.log('parseInt(item.title)=', parseInt(item.title) ); 
+              _new_list.push(parseInt(item.title));   
               $dd_episodes.append('<option value="'+item.title+'">Episode '+ ++i +'</option>');
             });
  						
@@ -533,7 +523,7 @@
             $dd_episodes.change();
           },
           error: function(data){
-            console.log('error');
+            console.error('error');
           }
         });
       });

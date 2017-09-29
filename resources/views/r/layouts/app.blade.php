@@ -54,44 +54,15 @@
 		<!-- lazy loader for images (including responsive images) -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js" async></script>
 	</head>
-	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}">
-	 	{{--FACEBOOK CODE--}}
-	  <div id="fb-root"></div>
-	  <script>(function(d, s, id) {
-	          var js, fjs = d.getElementsByTagName(s)[0];
-	          if (d.getElementById(id)) return;
-	          js = d.createElement(s); js.id = id;
-	          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1900426896906624";
-	          fjs.parentNode.insertBefore(js, fjs);
-	      }(document, 'script', 'facebook-jssdk'));</script>
-
-	 	{{--GOOGLE ANALYTICS CODE--}}
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-106334552-1', 'auto');
-		  ga('send', 'pageview');
-
-		</script>
+	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}" style="border:30px solid red;">
 
 
 
-		<?php
-			//SET LOCALE DEPENDING ON BROWSER LANGUAGE
-			//(EN by default, FR is necessary)
-			//NEXT: Make this script smarter
-			//-> Save language preference in cookie
-			$locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
-			if($locale=='fr' || $locale=='en'){
-				App::setLocale($locale);
-			}else{
-				App::setLocale('en');
-			}  
-		?>
+
+
+
+
 
 
 
@@ -234,6 +205,48 @@
 
 
 
+
+	 	{{--FACEBOOK CODE--}}
+	  <div id="fb-root"></div>
+	  <script>(function(d, s, id) {
+	          var js, fjs = d.getElementsByTagName(s)[0];
+	          if (d.getElementById(id)) return;
+	          js = d.createElement(s); js.id = id;
+	          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1900426896906624";
+	          fjs.parentNode.insertBefore(js, fjs);
+	      }(document, 'script', 'facebook-jssdk'));</script>
+
+	 	{{--GOOGLE ANALYTICS CODE--}}
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-106334552-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+
+
+		<?php
+			//SET LOCALE DEPENDING ON BROWSER LANGUAGE
+			//(EN by default, FR is necessary)
+			//NEXT: Make this script smarter
+			//-> Save language preference in cookie
+			$locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+
+			if($locale=='fr' || $locale=='en'){
+				App::setLocale($locale);
+			}else{
+				App::setLocale('en');
+			}  
+		?>
+
+
+
+  
 
 
 
