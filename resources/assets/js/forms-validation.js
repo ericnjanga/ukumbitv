@@ -1,10 +1,10 @@
 /**
  **************************[UkumbiTV App]**************************
  **************************[UkumbiTV App]************************** 
- */
-  alert('>>>>>>>>');
+ */ 
 // main app
 var ukumbitvApp = angular.module('ukumbitvApp', []);
+//Changing angular tags to avoid collision with Blade
 ukumbitvApp.config(['$interpolateProvider', function($interpolateProvider) {
   $interpolateProvider.startSymbol('<%');
   $interpolateProvider.endSymbol('%>');
@@ -37,8 +37,14 @@ ukumbitvApp.factory('servMovies', function() {
 	  	video_url : 'https://ukumbitv.com/video/20170927021402'
 	  },
   ];
+
+  var _get = function (){
+  	return arrMovies;
+  }
   // factory function body that constructs arrMovies
-  return arrMovies;
+  return {
+  	get : _get
+  };
 });
 
 
