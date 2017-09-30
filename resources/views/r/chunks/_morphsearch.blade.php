@@ -8,7 +8,7 @@
 			<div class="dummy-column">
 				<p>....<% searchString %></p>
 				<!-- <h2>People</h2> -->
-				<div ng-repeat="i in items | searchForMovies:searchString">
+				<div ng-repeat="i in movies | searchForMovies:searchString">
 					<a class="dummy-media-object" href="<%i.video_url%>">
 					<img class="round" ng-src="<%i.poster%>" alt="<%i.title%>"/>
 					<h3><%i.title%></h3>

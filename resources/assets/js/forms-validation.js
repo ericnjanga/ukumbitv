@@ -81,7 +81,8 @@ ukumbitvApp.filter('searchForMovies', function(){
 ukumbitvApp.controller('InstantSearchController', 
 	['$scope','servMovies', function($scope,servMovies){
 
-		console.log('...servMovies=',servMovies);
+		console.log('...servMovies=',servMovies.get());
+		$scope.movies = servMovies.get();
 	}
 ]);
 
