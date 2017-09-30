@@ -15,9 +15,28 @@ var ukumbitvApp = angular.module('ukumbitvApp', []);
  **************************[UkumbiTV Services]************************** 
  */
 ukumbitvApp.factory('servMovies', function() {
-  var arrMovies = [{
-  	
-  }];
+  var arrMovies = [
+	  {
+	  	title : 'Le Contrat',
+	  	poster : 'https://ukumbitv.com/images/20170928165134/small_image21506617494le-contrat.jpg',
+	  	video_url : 'https://ukumbitv.com/video/20170928165134'
+	  },
+	  {
+	  	title : 'Ultime Sursis',
+	  	poster : 'https://ukumbitv.com/images/20170927160230/small_image21506528150ultime_sursis.jpg',
+	  	video_url : 'https://ukumbitv.com/video/20170927160230'
+	  },
+	  {
+	  	title : 'Les deux pères',
+	  	poster : 'https://ukumbitv.com/images/20170927031133/small_image21506481893les-2-peres.jpg',
+	  	video_url : 'https://ukumbitv.com/video/20170927031133'
+	  },
+	  {
+	  	title : 'Officines ',
+	  	poster : 'https://ukumbitv.com/images/20170927021402/small_image21506478442Officines.jpg',
+	  	video_url : 'https://ukumbitv.com/video/20170927021402'
+	  },
+  ];
   // factory function body that constructs arrMovies
   return arrMovies;
 });
@@ -32,7 +51,7 @@ ukumbitvApp.factory('servMovies', function() {
  */
 ukumbitvApp.controller('InstantSearchController', 
 	['$scope','servMovies', function($scope,servMovies){
-
+		console.log('...servMovies=',servMovies);
 	}
 ]);
 
