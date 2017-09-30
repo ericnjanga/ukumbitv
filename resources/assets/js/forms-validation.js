@@ -2,7 +2,7 @@
  **************************[UkumbiTV App]**************************
  **************************[UkumbiTV App]************************** 
  */
-  
+  alert('>>>>>>>>');
 // main app
 var ukumbitvApp = angular.module('ukumbitvApp', []);
 ukumbitvApp.config(['$interpolateProvider', function($interpolateProvider) {
