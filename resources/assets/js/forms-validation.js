@@ -51,6 +51,7 @@ ukumbitvApp.factory('servMovies', function() {
  */
 ukumbitvApp.controller('InstantSearchController', 
 	['$scope','servMovies', function($scope,servMovies){
+		alert('????');
 		console.log('...servMovies=',servMovies);
 	}
 ]);
