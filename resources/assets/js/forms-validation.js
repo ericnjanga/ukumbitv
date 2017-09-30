@@ -2,11 +2,9 @@
  **************************[UkumbiTV App]**************************
  **************************[UkumbiTV App]************************** 
  */
- 
-// services module
-var ukumbitvServices = angular.module('ukumbitvServ', []);
+  
 // main app
-var ukumbitvApp = angular.module('ukumbitvApp', ['ukumbitvServ']);
+var ukumbitvApp = angular.module('ukumbitvApp', []);
 
 
 
@@ -16,7 +14,7 @@ var ukumbitvApp = angular.module('ukumbitvApp', ['ukumbitvServ']);
  **************************[UkumbiTV Services]**************************
  **************************[UkumbiTV Services]************************** 
  */
-ukumbitvServices.factory('servMovies', function() {
+ukumbitvApp.factory('servMovies', function() {
   var arrMovies = [{
   	
   }];
