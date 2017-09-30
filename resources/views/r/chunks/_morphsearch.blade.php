@@ -8,8 +8,8 @@
 			<div class="dummy-column">
 				<!-- <p>....<% searchString %></p> -->
 				<!-- <h2>People</h2> -->
-				<div ng-repeat="i in movies | searchForMovies:searchString">
-					<figure class="video-item ruby-hover"> 
+				<!-- <div ng-repeat="i in movies | searchForMovies:searchString"> -->
+					<figure class="video-item ruby-hover" ng-repeat="i in movies | searchForMovies:searchString"> 
 						<a href="<%i.video_url%>" class="video-item__frame"> 
 							<span class="video-item__resume"><%i.excerpt%></span> 
 							<img data-src="<%i.poster%>" class="video-item__img lazyloaded" alt="<%i.title%>"> 
@@ -27,7 +27,7 @@
 					</figure> 
 				<!-- <a href="{{i.url}}"><img ng-src="{{i.image}}" /></a>
 				<p>{{i.title}}</p> -->
-				</div>
+				<!-- </div> -->
 		 
 				 
 			</div> 
