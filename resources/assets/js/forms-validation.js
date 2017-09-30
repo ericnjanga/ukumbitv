@@ -10,10 +10,7 @@ var ukumbitvApp = angular.module('ukumbitvApp', []);
 
  
 
-/**
- **************************[UkumbiTV Services]**************************
- **************************[UkumbiTV Services]************************** 
- */
+// [service] Fetch movies from the server
 ukumbitvApp.factory('servMovies', function() {
   var arrMovies = [
 	  {
@@ -42,6 +39,29 @@ ukumbitvApp.factory('servMovies', function() {
 });
 
 
+// [filter] 
+// arr: data that is to be filtered
+// searchString: argument that may be passed with a colon (searchFor:searchString)
+ukumbitvApp.filter('searchForMovies', function(){ 
+	return function(arr, searchString){ 
+		if(!searchString){
+			return arr;
+		}
+
+		var result = []; 
+		searchString = searchString.toLowerCase();
+
+		// Using the forEach helper method to loop through the array
+		angular.forEach(arr, function(item){ 
+			if(item.title.toLowerCase().indexOf(searchString) !== -1){
+				result.push(item);
+			} 
+		}); 
+		return result;
+	};
+});//[end] serchfor filter
+
+
 
  
 
@@ -51,7 +71,7 @@ ukumbitvApp.factory('servMovies', function() {
  */
 ukumbitvApp.controller('InstantSearchController', 
 	['$scope','servMovies', function($scope,servMovies){
-		
+
 		console.log('...servMovies=',servMovies);
 	}
 ]);

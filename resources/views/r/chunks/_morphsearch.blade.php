@@ -1,17 +1,23 @@
 <section ng-app="ukumbitvApp">
 	<div id="morphsearch" class="morphsearch" ng-controller="InstantSearchController">
 		<form class="morphsearch-form">
-			<input class="morphsearch-input" type="search" placeholder="{{trans('messages.Search_placeholder')}}"/>
+			<input class="morphsearch-input" type="search" ng-model="searchString" placeholder="{{trans('messages.Search_placeholder')}}"/>
 			<button class="morphsearch-submit" type="submit">Search</button>
 		</form>
 		<div class="morphsearch-content">
 			<div class="dummy-column">
-				<h2>People</h2>
-				<a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
-					<img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
-					<h3>Sara Soueidan</h3>
+				<!-- <h2>People</h2> -->
+				<div ng-repeat="i in items | searchFor:searchString">
+					<a class="dummy-media-object" href="{{i.video_url}}">
+					<img class="round" ng-src="{{i.poster}}" alt="{{i.title}}"/>
+					<h3>{{i.title}}</h3>
 				</a>
-				<a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+				<!-- <a href="{{i.url}}"><img ng-src="{{i.image}}" /></a>
+				<p>{{i.title}}</p> -->
+				</div>
+		 
+				
+				<!-- <a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
 					<img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
 					<h3>Rachel Smith</h3>
 				</a>
@@ -30,62 +36,8 @@
 				<a class="dummy-media-object" href="https://twitter.com/shaund0na">
 					<img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
 					<h3>Shaun Dona</h3>
-				</a>
-			</div>
-			<div class="dummy-column">
-				<h2>Popular</h2>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/05/page-preloading-effect/">
-					<!-- <img src="img/thumbs/PagePreloadingEffect.png" alt="PagePreloadingEffect"/> -->
-					<h3>Page Preloading Effect</h3>
-				</a>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/05/28/arrow-navigation-styles/">
-					<!-- <img src="img/thumbs/ArrowNavigationStyles.png" alt="ArrowNavigationStyles"/> -->
-					<h3>Arrow Navigation Styles</h3>
-				</a>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/">
-					<!-- <img src="img/thumbs/HoverEffectsIdeasNew.png" alt="HoverEffectsIdeasNew"/> -->
-					<h3>Ideas for Subtle Hover Effects</h3>
-				</a>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/07/14/freebie-halcyon-days-one-page-website-template/">
-					<!-- <img src="img/thumbs/FreebieHalcyonDays.png" alt="FreebieHalcyonDays"/> -->
-					<h3>Halcyon Days Template</h3>
-				</a>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/05/22/inspiration-for-article-intro-effects/">
-					<!-- <img src="img/thumbs/ArticleIntroEffects.png" alt="ArticleIntroEffects"/> -->
-					<h3>Inspiration for Article Intro Effects</h3>
-				</a>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/06/26/draggable-dual-view-slideshow/">
-					<!-- <img src="img/thumbs/DraggableDualViewSlideshow.png" alt="DraggableDualViewSlideshow"/> -->
-					<h3>Draggable Dual-View Slideshow</h3>
-				</a>
-			</div>
-			<div class="dummy-column">
-				<h2>Recent</h2>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/10/07/tooltip-styles-inspiration/">
-					<!-- <img src="img/thumbs/TooltipStylesInspiration.png" alt="TooltipStylesInspiration"/> -->
-					<h3>Tooltip Styles Inspiration</h3>
-				</a>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/23/animated-background-headers/">
-					<!-- <img src="img/thumbs/AnimatedHeaderBackgrounds.png" alt="AnimatedHeaderBackgrounds"/> -->
-					<h3>Animated Background Headers</h3>
-				</a>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/16/off-canvas-menu-effects/">
-					<!-- <img src="img/thumbs/OffCanvas.png" alt="OffCanvas"/> -->
-					<h3>Off-Canvas Menu Effects</h3>
-				</a>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/">
-					<!-- <img src="img/thumbs/TabStyles.png" alt="TabStyles"/> -->
-					<h3>Tab Styles Inspiration</h3>
-				</a>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">
-					<!-- <img src="img/thumbs/ResponsiveSVGs.png" alt="ResponsiveSVGs"/> -->
-					<h3>Make SVGs Responsive with CSS</h3>
-				</a>
-				<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/07/23/notification-styles-inspiration/">
-					<!-- <img src="img/thumbs/NotificationStyles.png" alt="NotificationStyles"/> -->
-					<h3>Notification Styles Inspiration</h3>
-				</a>
-			</div>
+				</a> -->
+			</div> 
 		</div><!-- /morphsearch-content -->
 		<span class="morphsearch-close"></span>
 	</div><!-- /morphsearch -->
