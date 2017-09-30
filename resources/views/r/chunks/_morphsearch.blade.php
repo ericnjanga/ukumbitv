@@ -6,6 +6,7 @@
 		</form>
 		<div class="morphsearch-content">
 			<div class="dummy-column">
+				<p>....<% searchString %></p>
 				<!-- <h2>People</h2> -->
 				<div ng-repeat="i in items | searchFor:searchString">
 					<a class="dummy-media-object" href="<%i.video_url%>">
