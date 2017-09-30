@@ -8,8 +8,8 @@
 			<div class="dummy-column">
 				<!-- <h2>People</h2> -->
 				<div ng-repeat="i in items | searchFor:searchString">
-					<a class="dummy-media-object" href="{{i.video_url}}">
-					<img class="round" ng-src="{{i.poster}}" alt="{{i.title}}"/>
+					<a class="dummy-media-object" href="<%i.video_url%>">
+					<img class="round" ng-src="<%i.poster%>" alt="<%i.title%>"/>
 					<h3>{{i.title}}</h3>
 				</a>
 				<!-- <a href="{{i.url}}"><img ng-src="{{i.image}}" /></a>

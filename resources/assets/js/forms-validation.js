@@ -4,8 +4,10 @@
  */
   
 // main app
-var ukumbitvApp = angular.module('ukumbitvApp', []);
-
+var ukumbitvApp = angular.module('ukumbitvApp', [], function($interpolateProvider) {
+  $interpolateProvider.startSymbol('<%');
+  $interpolateProvider.endSymbol('%>');
+});
 
 
  
