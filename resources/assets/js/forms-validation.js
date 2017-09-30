@@ -25,6 +25,19 @@ ukumbitvServices.factory('serviceId', function() {
 
 
 
+ 
+
+/**
+ **************************[UkumbiTV Services]**************************
+ **************************[UkumbiTV Services]************************** 
+ */
+ukumbitvApp.controller('InstantSearchController', 
+	['$scope','servMovies', function($scope,servMovies){
+
+	}
+]);
+
+
 
 
 
