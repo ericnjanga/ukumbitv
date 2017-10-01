@@ -1657,7 +1657,8 @@ class AdminController extends Controller
         $season = new Season();
         $season->admin_video_id = $request->videoid;
         $season->season_id = $request->season;
-        $season->title = $request->vimeoid;
+        $season->title = $request->title;
+        $season->vimeo_id = $request->vimeoid;
         $season->save();
 
         return response()->json($season);
@@ -1691,7 +1692,8 @@ class AdminController extends Controller
     {
         $episode = Season::find($request->id);
         $episode->season_id = $request->season;
-        $episode->title = $request->vimeoid;
+        $episode->title = $request->title;
+        $episode->vimeo_id = $request->vimeoid;
         $episode->save();
 
         return response()->json($episode);

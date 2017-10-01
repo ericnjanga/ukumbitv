@@ -510,7 +510,7 @@ class UserController extends Controller {
         $seasonsArr = [];
         $episodes = Season::where('admin_video_id', $video->id)->where('season_id', 1)->get();
         foreach ($episodes as $episode) {
-            array_push($seasonsArr, $episode->title);
+            array_push($seasonsArr, $episode->vimeo_id);
         }
         $seasons = [];
         $seasons = Season::where('admin_video_id', $video->id)->orderBy('id', 'asc')->distinct()->get(['season_id']);
