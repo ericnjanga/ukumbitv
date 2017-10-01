@@ -113,7 +113,7 @@
 	                <input type="text" required class="form-control" id="title" name="title" placeholder="{{tr('title')}}">
 	              </div>
 
-	              <div class="form-group">
+	              <div class="form-group" id="duration-form-group">
 	                <label>{{tr('duration')}} * : </label><small> Note: Format must be HH:MM:SS</small>
 
 	                <div class="input-group">
@@ -473,8 +473,10 @@
         $("input[type='radio']").click(function(){
             if($("#video-type-webserie").is(":checked")) {
                 $('#video-file-field').css( 'display', 'none' );
+                $('#duration-form-group').css( 'display', 'none' );
             } else {
                 $('#video-file-field').css( 'display', 'block' );
+                $('#duration-form-group').css( 'display', 'block' );
             }
         });
 

@@ -113,7 +113,7 @@
 	                    <div class="input-group-addon">
 	                        <i class="fa fa-calendar"></i>
 	                    </div>
-	                    <input required type="text" name="duration" class="form-control" data-inputmask="'alias': 'hh:mm:ss'" data-mask id="duration" value="{{$video->duration}}">
+	                    <input @if($video->video_type == 'webseries') disabled @endif required type="text" name="duration" class="form-control" data-inputmask="'alias': 'hh:mm:ss'" data-mask id="duration" value="{{$video->duration}}">
 	                </div>
 	              </div>
 
