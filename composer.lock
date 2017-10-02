@@ -54,16 +54,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.36.9",
+            "version": "3.36.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "7b89fa65cccb966da1599b715dcea8c09eafc175"
+                "reference": "4bf27e8808e5e08a71b7fbdb951f51918c57a1c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/7b89fa65cccb966da1599b715dcea8c09eafc175",
-                "reference": "7b89fa65cccb966da1599b715dcea8c09eafc175",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4bf27e8808e5e08a71b7fbdb951f51918c57a1c6",
+                "reference": "4bf27e8808e5e08a71b7fbdb951f51918c57a1c6",
                 "shasum": ""
             },
             "require": {
@@ -130,7 +130,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-09-15T19:12:04+00:00"
+            "time": "2017-09-29T19:46:41+00:00"
         },
         {
             "name": "aws/aws-sdk-php-laravel",
@@ -3106,16 +3106,16 @@
         },
         {
             "name": "omnipay/sagepay",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-sagepay.git",
-                "reference": "4ca4847935bc31dbcdd627e92377b5c3cf709e9b"
+                "reference": "8e14e235caf6530ee9afcbbb8cd6a54ad160a0f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-sagepay/zipball/4ca4847935bc31dbcdd627e92377b5c3cf709e9b",
-                "reference": "4ca4847935bc31dbcdd627e92377b5c3cf709e9b",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-sagepay/zipball/8e14e235caf6530ee9afcbbb8cd6a54ad160a0f0",
+                "reference": "8e14e235caf6530ee9afcbbb8cd6a54ad160a0f0",
                 "shasum": ""
             },
             "require": {
@@ -3161,7 +3161,7 @@
                 "sage pay",
                 "sagepay"
             ],
-            "time": "2017-01-12T23:36:01+00:00"
+            "time": "2017-09-05T15:31:15+00:00"
         },
         {
             "name": "omnipay/securepay",

@@ -30,12 +30,12 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
 	    	<ul class="ukb-nav-videos nav navbar-nav">
 	        <li id="movies">
-						<a href="#"> 
+						<a href="{{route('user.getVideosByCategory', 'Drama')}}">
 							{{trans('messages.dramas')}}
 						</a> 
 					</li>
 					<li id="animations">
-						<a href="#"> 
+						<a href="{{route('user.getVideosByCategory', 'Comedy')}}">
 							{{trans('messages.comedies')}}
 						</a> 
 					</li>  

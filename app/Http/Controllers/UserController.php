@@ -272,37 +272,10 @@ class UserController extends Controller {
 
     public function getVideosByCategory($id)
     {
-        //#testing
-        if($id == '0'){
-            $videos = AdminVideo::with('videoimage')
-                ->orderBy('id', 'desc')->get();
-        }else{
-            $category = Category::where('id',$id)->firstOrFail();
-            $videos = AdminVideo::with('videoimage')
-                ->where('category_id', $category->id)
-                ->orderBy('id', 'desc')->get();
-        }
+        $category = Category::where('name', $id)->first();
+        $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('category_id', $category->id)->orderby('id' , 'desc')->get();
 
-
-        $lastVideos = [];
-        $allCategories = Category::all();
-        $categories = get_categories();
-
-        foreach ($allCategories as $k){
-            $v = AdminVideo::orderby('id', 'desc')->with('videoimage')->where('category_id', $k->id)->first();
-            if ($v != NULL) {
-                array_push($lastVideos, $v);
-            }
-        }
-
-        return view('r.chunks._filter_results')
-            ->with('id',$id)
-            ->with('page' , 'Videos by tag')
-            ->with('subPage' , 'Videos by tag')
-            ->with('categories' , $categories)
-            ->with('videos_by_cat' , $lastVideos)
-            ->with('videos', $videos)
-            ->render();
+        return view('r.user.category-videos')->with('videos', $videos)->with('videoType', $id);
     }
 
     public function vimeoVideo()
@@ -537,7 +510,8 @@ class UserController extends Controller {
             ->with('tags', $tags)
             ->with('relatedVideos', $relatedVideos)
             ->with('payPlan', $flag)
-            ->with('episodesArr', $seasonsArr)
+//            ->with('episodesArr', $seasonsArr)
+            ->with('episodesArr', $episodes)
             ->with('seasons', $seasons)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))

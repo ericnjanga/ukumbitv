@@ -473,7 +473,7 @@ Route::get('search-data' , 'UserController@searchData')->name('search-data');
 Route::get('categories', 'UserController@all_categories')->name('user.categories');
 Route::get('videos/{id}', 'UserController@videosByType')->name('user.videotype');
 
-Route::get('category/{id}', 'UserController@getVideosByCategory');
+Route::get('category/{id}', 'UserController@getVideosByCategory')->name('user.getVideosByCategory');
 
 Route::get('subcategory/{id}', 'UserController@sub_category_videos')->name('user.sub-category');
 //Route::get('category/{id}', 'UserController@category_videos')->name('user.category');
