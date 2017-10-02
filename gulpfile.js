@@ -37,7 +37,7 @@ elixir(function(mix) {
 		'main.js', 
 		'forms-validation.js',
 		'morphSearch.js'], 
-	'public/js/app335.js')
+	'public/js/app336.js')
 });
 
 
