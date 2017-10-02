@@ -7,7 +7,7 @@
     	<div class="global-content">
     		<h1>{{trans('messages.PMA_title')}}</h1>
 	    	<div class="row">
-	    		<div class="col-sm-3 col-sm-offset-3">
+	    		<div class="col-sm-4 col-md-3 col-sm-offset-3">
 		        <div class="img-block">
 							<form action="{{route('user.update-avatar')}}" method="POST" enctype="multipart/form-data">
 								{{ csrf_field() }}
@@ -16,7 +16,7 @@
 									<input type="file" id="img-file" name="useravatar" accept="image/jpeg,image/png">
 								</div>
 		        		<img class="img-responsive img-circle" src="{{Auth::user()->picture}}" style="margin-bottom: 10px; height: 150px;width: 150px;" alt="">
-								<button id="btn-update-avatar" class="btn btn-cta1b btn-lg" style="margin-bottom: 20px;">{{trans('messages.save_changes')}}</button>
+								<button id="btn-update-avatar" class="btn btn-cta1b btn-lg" style="margin-bottom: 30px;">{{trans('messages.save_changes')}}</button>
 							</form>
 	            <!-- <a href="" class="change-photo-butn"><span class="icon icon-pencil-edit-button"></span></a> -->
 	        	</div>
