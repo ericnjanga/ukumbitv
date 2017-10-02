@@ -1,6 +1,13 @@
 @if(Auth::check())
 <div class="nav-user-access">
-	<span class="nav-package-info">
+
+	<a href="#" class="dropdown-toggle nav-user-tmb" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		{{--<i class="fa fa-user-circle-o user-tmb" aria-hidden="true"></i>--}}
+		 <img class="img-circle img-responsive" style="width: 30px;height: 30px;" src="{{Auth::user()->picture}}" alt="">
+		<span class="caret"></span>
+	</a>
+
+	<span class="nav-package-info" style="margin-right:10px;">
     <span id="link-update-package" data-route="{{route('user.package')}}">
 			@if(Auth::user()->paymentPlans[0]->flag != 3)
 				{{trans('messages.msg_upgrade')}}
@@ -25,14 +32,8 @@
 	    	@endif
 			</span>
     </span>
-	</span>  
-	 
+	</span>   
 
-	<a href="#" class="dropdown-toggle nav-user-tmb" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-		{{--<i class="fa fa-user-circle-o user-tmb" aria-hidden="true"></i>--}}
-		 <img class="img-circle img-responsive" style="width: 30px;height: 30px;" src="{{Auth::user()->picture}}" alt="">
-		<span class="caret"></span>
-	</a>
 	<ul class="dropdown-menu">
 		<li><a href="{{route('user.account')}}">{{trans('messages.my_account')}}</a></li>
     <li><a href="{{route('user.package')}}">{{trans('messages.packages')}}</a></li>
