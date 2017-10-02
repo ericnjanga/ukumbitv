@@ -19,6 +19,24 @@
 	    top: 15px;
 	    right: -5px;
   	}
+  	.nav-user-tmb {
+  		width: 120px;
+  		color: #666;
+  		&:hover{
+  			color: $color-darkred;
+  		}
+  	}
+  	.img-circle{
+  		float: left;
+  		margin-right: 5px;
+  		width: 30px;
+  		height: 30px;
+  	}
+  }
+  .nav-user-access.open{
+  	a , .caret{
+  		color: $color-darkred;
+  	}
   }
 
 
