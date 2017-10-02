@@ -15,7 +15,7 @@
 	            <div class="info-left">
 	            	<!-- <span class="age">16+</span> -->
 	              <ul class="list-date-duration list-inline">
-	              	<li>{{$video->created_at->format('Y')}}</li>
+	              	<li>{{$video->year}}</li>
 	              	@if($video->video_type !== 'webseries')
 	              		<li>{{$duration}}</li>
 	              	@endif

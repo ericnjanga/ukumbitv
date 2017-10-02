@@ -1815,7 +1815,7 @@ class UserController extends Controller {
 
     public function getAllVideos()
     {
-        $videos = AdminVideo::all();
+        $videos = AdminVideo::with('videoimage')->get();
 
         return response()->json($videos, 200);
     }
