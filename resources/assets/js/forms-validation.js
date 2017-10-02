@@ -63,6 +63,26 @@ ukumbitvApp.factory('servMovies', ['$http', function($http) {
 
 
   var _get = function (){
+
+
+
+
+
+  $http({
+	  method: 'GET',
+	  url: document.location.origin + '/get-all-movies'
+	}).then(function successCallback(response) {
+		console.log('>>>response=', response);
+    // this callback will be called asynchronously
+    // when the response is available
+  }, function errorCallback(response) {
+		console.log('>>>response(error)=', response);
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
+
+
+  
   	return arrMovies;
   }
   // factory function body that constructs arrMovies
