@@ -523,6 +523,7 @@
             //(dropdown) replace of episodes with new ones
             $dd_episodes.empty();
             rep.forEach(function(item, i, rep) {
+            	console.log('>>>>item=', item);
               _new_list.push(parseInt(item.vimeo_id));
               $dd_episodes.append('<option value="'+item.vimeo_id+'">Episode '+ ++i +'</option>');
             });
