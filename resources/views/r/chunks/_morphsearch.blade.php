@@ -1,6 +1,7 @@
 <section ng-app="ukumbitvApp">
 	<div id="morphsearch" class="morphsearch" ng-controller="InstantSearchController">
 		<form class="morphsearch-form">
+			<i class="fa fa-search btn-fake-search" aria-hidden="true"></i>
 			<input class="morphsearch-input" type="search" ng-model="searchString" placeholder="{{trans('messages.Search_placeholder')}}"/>
 			<button class="morphsearch-submit" type="submit">Search</button>
 		</form>
