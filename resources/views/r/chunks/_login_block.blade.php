@@ -2,6 +2,14 @@
 <div class="nav-user-access">
 	<span class="nav-package-info">
     <span class="login-text">
+		{{--username--}}
+		@if(Auth::user()->name !== '')
+			{{Auth::user()->name}}
+		@else
+			{{Auth::user()->email}}
+		@endif
+		{{--end username--}}
+
     	@if(isset($videoCount))
     		{{$videoCount}} {{trans('messages.videos_left')}}
     	@else 
