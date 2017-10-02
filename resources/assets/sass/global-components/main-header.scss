@@ -25,6 +25,9 @@
   		&:hover{
   			color: $color-darkred;
   			text-decoration: none;
+  			.caret{
+		  		color: $color-darkred;
+		  	}
   		}
   	}
   	.img-circle{
