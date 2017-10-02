@@ -25,9 +25,9 @@
 				</figure> 
 
 
-		    <p class="animate-repeat" ng-if="filteredMovies.length === 0" style="font-size: 3em; line-height:1em;">
+		    <div class="animate-repeat" ng-if="filteredMovies.length === 0" style="font-size: 3em; line-height:1em;">
 		      <strong>{{trans('messages.no_results')}}</strong>
-		    </p>  
+		    </div>  
 			</div> 
 		</div><!-- /morphsearch-content -->
 		<span class="morphsearch-close"></span>
