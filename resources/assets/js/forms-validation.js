@@ -51,7 +51,7 @@ ukumbitvApp.factory('servMovies', ['$http','$log', function($http, $log) {
 
   var _get = function (){ 
 
-	  return $get({ 
+	  return $http.get({ 
 		  url: document.location.origin + '/get-all-movies'
 		},
 		{ cache: true})
