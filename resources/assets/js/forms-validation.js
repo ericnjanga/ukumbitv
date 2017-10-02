@@ -82,7 +82,7 @@ ukumbitvApp.factory('servMovies', ['$http', function($http) {
   });
 
 
-  
+
   	return arrMovies;
   }
   // factory function body that constructs arrMovies
@@ -123,10 +123,10 @@ ukumbitvApp.filter('searchForMovies', function(){
  **************************[UkumbiTV Services]************************** 
  */
 ukumbitvApp.controller('InstantSearchController', 
-	['$scope','servMovies', function($scope,servMovies){
+	['$scope','servMovies','$log', function($scope, servMovies, $log){
 
-		console.log('...servMovies=',servMovies.get());
-		$scope.movies = servMovies.get();
+		$log.log('...servMovies=',servMovies.get());
+		// $scope.movies = servMovies.get();
 	}
 ]);
 
