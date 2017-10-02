@@ -14,7 +14,7 @@ ukumbitvApp.config(['$interpolateProvider', function($interpolateProvider) {
  
 
 // [service] Fetch movies from the server
-ukumbitvApp.factory('servMovies', ['$http', function($http) {
+ukumbitvApp.factory('servMovies', ['$http','$log', function($http, $log) {
   var arrMovies = [
 	  {
 	  	title : 'Le Contrat',
@@ -46,44 +46,23 @@ ukumbitvApp.factory('servMovies', ['$http', function($http) {
 	  },
   ];
 
-
-  $http({
-	  method: 'GET',
-	  url: document.location.origin + '/get-all-movies'
-	}).then(function successCallback(response) {
-		console.log('>>>response=', response);
-    // this callback will be called asynchronously
-    // when the response is available
-  }, function errorCallback(response) {
-		console.log('>>>response(error)=', response);
-    // called asynchronously if an error occurs
-    // or server returns response with an error status.
-  });
+ 
 
 
+  var _get = function (){ 
 
-  var _get = function (){
-
-
-
-
-
-  $http({
-	  method: 'GET',
-	  url: document.location.origin + '/get-all-movies'
-	}).then(function successCallback(response) {
-		console.log('>>>response=', response);
-    // this callback will be called asynchronously
-    // when the response is available
-  }, function errorCallback(response) {
-		console.log('>>>response(error)=', response);
-    // called asynchronously if an error occurs
-    // or server returns response with an error status.
-  });
-
-
-
-  	return arrMovies;
+	  return $http({
+		  method: 'GET',
+		  url: document.location.origin + '/get-all-movies'
+		}).then(function successCallback(response) {
+			console.log('>>>response=', response);
+	    // this callback will be called asynchronously
+	    // when the response is available
+	  }, function errorCallback(response) {
+			console.log('>>>response(error)=', response);
+	    // called asynchronously if an error occurs
+	    // or server returns response with an error status.
+	  }); 
   }
   // factory function body that constructs arrMovies
   return {
@@ -126,7 +105,7 @@ ukumbitvApp.controller('InstantSearchController',
 	['$scope','servMovies','$log', function($scope, servMovies, $log){
 
 		$log.log('...servMovies=',servMovies.get());
-		// $scope.movies = servMovies.get();
+		$scope.movies = servMovies.get();
 	}
 ]);
 
