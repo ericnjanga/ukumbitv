@@ -96,14 +96,14 @@ ukumbitvApp.filter('searchForMovies', function(){
 ukumbitvApp.controller('InstantSearchController', 
 	['$scope','servMovies','$log', function($scope, servMovies, $log){
 
-		$log.log('...servMovies=',servMovies.get());
+		// $log.log('...servMovies=',servMovies.get());
 		servMovies.get().then(function successCallback(response) {
-			$log.log('>>>response=', response);
+			// $log.log('>>>response=', response);
 			$scope.movies = response.data;
 	    // this callback will be called asynchronously
 	    // when the response is available
 	  }, function errorCallback(response) {
-			$log.log('>>>response(error)=', response);
+			// $log.log('>>>response(error)=', response);
 	    // called asynchronously if an error occurs
 	    // or server returns response with an error status.
 	  });

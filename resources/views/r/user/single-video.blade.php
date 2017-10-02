@@ -96,9 +96,8 @@
 					  
 				  @else
 	          <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	          @endif
-					  <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/232604649?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-	          <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+	        @endif
+					   
 	        @else
 	          <div class="video-placeholder">
 	          	<div class="video-item">
@@ -373,7 +372,8 @@
 
 
 			var _intialize = function() {
-				_player = new Vimeo.Player($('iframe')); 
+				var _the_iframe = document.getElementById('ukumbitv-iframe-video');
+				_player = new Vimeo.Player(_the_iframe); 
 				_dd_seasons = $('#video-season');
 				_dd_episodes = $('#video-episodes');
 
