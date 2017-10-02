@@ -24,6 +24,7 @@
   		color: #666;
   		&:hover{
   			color: $color-darkred;
+  			text-decoration: none;
   		}
   	}
   	.img-circle{
@@ -34,7 +35,7 @@
   	}
   }
   .nav-user-access.open{
-  	a , .caret{
+  	.nav-user-tmb , .caret{
   		color: $color-darkred;
   	}
   }
