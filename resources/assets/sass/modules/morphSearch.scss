@@ -90,22 +90,22 @@ $frame-gap : 50px;
 /* placeholder */
 .morphsearch-input::-webkit-input-placeholder {
 	color: #fff;
-	font-size: 7em;
+	// font-size: 7em;
 }
 
 .morphsearch-input:-moz-placeholder {
 	color: #fff;
-	font-size: 7em;
+	// font-size: 7em;
 }
 
 .morphsearch-input::-moz-placeholder {
 	color: #fff;
-	font-size: 7em;
+	// font-size: 7em;
 }
 
 .morphsearch-input:-ms-input-placeholder {
 	color: #fff;
-	font-size: 7em;
+	// font-size: 7em;
 }
 
 /* hide placeholder when active in Chrome */
@@ -200,7 +200,7 @@ input[type="search"] { /* reset normalize */
 .morphsearch-close:hover.morphsearch-close::before,
 .morphsearch-close:hover.morphsearch-close::after {
 	opacity: 1;
-	color: $color-darkred;
+	background: $color-darkred;
 }
 
 .morphsearch-close::before {
