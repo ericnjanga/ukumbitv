@@ -99,7 +99,7 @@ ukumbitvApp.controller('InstantSearchController',
 		$log.log('...servMovies=',servMovies.get());
 		servMovies.get().then(function successCallback(response) {
 			$log.log('>>>response=', response);
-			$scope.movies = '';
+			$scope.movies = response.data;
 	    // this callback will be called asynchronously
 	    // when the response is available
 	  }, function errorCallback(response) {
