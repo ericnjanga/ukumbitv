@@ -338,3 +338,33 @@ input[type="search"] { /* reset normalize */
 		margin-top: 2em;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+.morphsearch-item.ng-move,
+.morphsearch-item.ng-enter,
+.morphsearch-item.ng-leave {
+  transition:all linear 0.5s;
+}
+
+.morphsearch-item.ng-leave.ng-leave-active,
+.morphsearch-item.ng-move,
+.morphsearch-item.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.morphsearch-item.ng-leave,
+.morphsearch-item.ng-move.ng-move-active,
+.morphsearch-item.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:30px;
+}

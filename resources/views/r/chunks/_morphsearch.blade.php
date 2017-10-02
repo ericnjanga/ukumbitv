@@ -5,31 +5,28 @@
 			<button class="morphsearch-submit" type="submit">Search</button>
 		</form>
 		<div class="morphsearch-content">
-			<div class="dummy-column">
-				<!-- <p>....<% searchString %></p> -->
-				<!-- <h2>People</h2> -->
-				<!-- <div ng-repeat="i in movies | searchForMovies:searchString"> -->
-					<figure class="video-item ruby-hover" ng-repeat="i in movies | searchForMovies:searchString"> 
-						<a href="<%i.video_url%>" class="video-item__frame"> 
-							<span class="video-item__resume"><%i.excerpt%></span> 
-							<img data-src="<%i.poster%>" class="video-item__img lazyloaded" alt="<%i.title%>"> 
-						</a> 
-						<figcaption class="video-item__title ellipsis-gradient">
-							<%i.title%>
-						</figcaption> 
-						<div class="video-item__info"> 
-							<div class="video-genre">Comedy</div> 
-							<div class="butn-like">
-								<span class="icon icon-thumbs-up"></span>
-								<span class="likes-count">0</span>
-							</div> 
+			<div class="dummy-column"> 
+				<figure class="video-item morphsearch-item" ng-repeat="movie in filteredMovies = (movies | searchForMovies:searchString)"> 
+					<a href="<%movie.video_url%>" class="video-item__frame"> 
+						<span class="video-item__resume"><%movie.excerpt%></span> 
+						<img data-src="<%movie.poster%>" class="video-item__img lazyloaded" alt="<%movie.title%>"> 
+					</a> 
+					<figcaption class="video-item__title ellipsis-gradient">
+						<%movie.title%>
+					</figcaption> 
+					<div class="video-item__info"> 
+						<div class="video-genre">Comedy</div> 
+						<div class="butn-like">
+							<span class="icon icon-thumbs-up"></span>
+							<span class="likes-count">0</span>
 						</div> 
-					</figure> 
-				<!-- <a href="{{i.url}}"><img ng-src="{{i.image}}" /></a>
-				<p>{{i.title}}</p> -->
-				<!-- </div> -->
-		 
-				 
+					</div> 
+				</figure> 
+
+
+		    <p class="animate-repeat" ng-if="filteredMovies.length === 0" style="font-size: 3em;">
+		      <strong>{{trans('messages.no_results')}}</strong>
+		    </p>  
 			</div> 
 		</div><!-- /morphsearch-content -->
 		<span class="morphsearch-close"></span>

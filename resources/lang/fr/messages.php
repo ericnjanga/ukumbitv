@@ -153,6 +153,7 @@ return array(
 	'upgrade' => 'Am&#233;liorez',
 	'submit' 						=> 'Soumettre',
 	'free' => 'gratuit', 
+	'no_results' => 'Aucun r&#233;sultat trouv&#233;...',
 	'new' => 'nouveau',
 	'comment_placeholder' => 'Dites aux autres ce que vous pensez du film. Le recommenderiez-vous? Pourquoi?', 
 	'my_list' => 'Ma Liste',

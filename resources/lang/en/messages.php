@@ -172,6 +172,7 @@ return array(
 	'to'	=>	'To',
 	'date' => 'Date',
 	'free' => 'free', 
+	'no_results' => 'No results found...',
 	'new' => 'new',
 	'comment_placeholder' => 'Tell others what you think about the movie. Would you recommend it, and why?', 
 	'my_list' => 'My List',
