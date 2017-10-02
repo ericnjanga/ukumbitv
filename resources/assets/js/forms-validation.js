@@ -51,10 +51,10 @@ ukumbitvApp.factory('servMovies', ['$http','$log', function($http, $log) {
 
   var _get = function (){ 
 
-	  return $http({
-		  method: 'GET',
+	  return $get({ 
 		  url: document.location.origin + '/get-all-movies'
-		})
+		},
+		{ cache: true})
   }
   // factory function body that constructs arrMovies
   return {
