@@ -200,10 +200,13 @@ input[type="search"] { /* reset normalize */
 }
  
 
-.morphsearch-form,
-.morphsearch-content {
-	margin-left: $frame-gap;
+.morphsearch.open{
+	.morphsearch-form,
+	.morphsearch-content {
+		margin-left: $frame-gap;
+	}
 }
+
 
 .morphsearch-content {
 	color: #333;
@@ -323,7 +326,7 @@ input[type="search"] { /* reset normalize */
 
 @media screen and (max-width: 60.625em) {
 	.morphsearch {
-    width: 30%;
+    width: 150px;
     top: 60px;
     right: 20px;
 	}

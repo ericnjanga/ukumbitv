@@ -24,7 +24,7 @@
 				</figure> 
 
 
-		    <p class="animate-repeat" ng-if="filteredMovies.length === 0" style="font-size: 3em;">
+		    <p class="animate-repeat" ng-if="filteredMovies.length === 0" style="font-size: 3em; line-height:1em;">
 		      <strong>{{trans('messages.no_results')}}</strong>
 		    </p>  
 			</div> 
