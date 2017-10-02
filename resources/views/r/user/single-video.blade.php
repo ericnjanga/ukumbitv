@@ -72,7 +72,8 @@
 					  <iframe id="ukumbitv-iframe-video" class="ukumbitv-iframe-video" src="https://player.vimeo.com/video/{{$episodesArr[0]}}?autoplay=0" autoplay="0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					  <section class="hero-sub">
 					  	<div id="video-controls" class="row">
-							  <div class="control-frame col-xs-6 col-sm-3"> 
+							  <div class="control-frame col-xs-6 col-sm-3">
+								  <!-- <label for="video-season"></label> -->
 								  <select name="video-season" id="video-season" class="form-control">
 									  @foreach($seasons as $season)
 									  	<option value="{{$season->season_id}}">Season {{$season->season_id}}</option>
@@ -80,17 +81,11 @@
 								  </select>
 							  </div>
 
-							  <div class="control-frame col-xs-6 col-sm-3"> 
-									  @foreach ( $episodesArr as $key => $value )
-								      <p>key = {{ $key }}</p>
-								      <p>value ={{ $value }}</p>
-								    @endforeach 
-							  </div>
-
-							  <div class="control-frame col-xs-6 col-sm-3"> 
+							  <div class="control-frame col-xs-6 col-sm-3">
+								  <!-- <label for="video-episodes"></label> -->
 								  <select name="video-episodes" id="video-episodes" class="form-control">
 									  @foreach($episodesArr as $indexKey => $episode)
-										  <option data-title="{{$episode}}" value="xxx">Episode {{++$indexKey}} (xxx)</option>
+										  <option data-title="title" value="{{$episode}}">Episode {{++$indexKey}} (title)</option>
 									  @endforeach
 								  </select>
 							  </div>
