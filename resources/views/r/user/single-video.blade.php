@@ -82,8 +82,9 @@
 
 							  <div class="control-frame col-xs-6 col-sm-3"> 
 									  @foreach($episodesArr as $indexKey => $episode)
-										  {{$episode}}
+										  {{$episodesArr}}
 									  @endforeach 
+									  <p>...{{$episodesArr}}</p>
 							  </div>
 
 							  <div class="control-frame col-xs-6 col-sm-3"> 
