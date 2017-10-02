@@ -85,7 +85,7 @@
 								  <!-- <label for="video-episodes"></label> -->
 								  <select name="video-episodes" id="video-episodes" class="form-control">
 									  @foreach($episodesArr as $indexKey => $episode)
-										  <option data-title="{{$episode.title}}" value="{{$episode}}">Episode {{++$indexKey}} ({{$episode.title}})</option>
+										  <option data-title="{{$episode->title}}" value="{{$episode}}">Episode {{++$indexKey}} ({{$episode->title}})</option>
 									  @endforeach
 								  </select>
 							  </div>
