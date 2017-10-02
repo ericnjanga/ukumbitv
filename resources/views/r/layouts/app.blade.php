@@ -135,7 +135,7 @@
 -->
 
 	<!-- Main JS file -->
-	<script src="{{asset('js/app344.js')}}"></script>  
+	<script src="{{asset('js/app345.js')}}"></script>  
 
 	@yield('scripts')
 
