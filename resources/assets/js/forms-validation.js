@@ -3,7 +3,7 @@
  **************************[UkumbiTV App]************************** 
  */ 
 // main app
-var ukumbitvApp = angular.module('ukumbitvApp', []);
+var ukumbitvApp = angular.module('ukumbitvApp', ['ngAnimate']);
 //Changing angular tags to avoid collision with Blade
 ukumbitvApp.config(['$interpolateProvider', function($interpolateProvider) {
   $interpolateProvider.startSymbol('<%');
