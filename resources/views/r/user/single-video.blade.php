@@ -69,7 +69,7 @@
 
 	      	@if($checkTrial)
 				@if($video->video_type == 'webseries')
-					  <iframe id="ukumbitv-iframe-video" class="ukumbitv-iframe-video" src="https://player.vimeo.com/video/{{$episodesArr[0]}}?autoplay=0" autoplay="0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					  <iframe id="ukumbitv-iframe-video" class="ukumbitv-iframe-video" src="https://player.vimeo.com/video/{{$episodesArr[0]->vimeo_id}}?autoplay=0" autoplay="0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					  <section class="hero-sub">
 					  	<div id="video-controls" class="row">
 							  <div class="control-frame col-xs-6 col-sm-3">
