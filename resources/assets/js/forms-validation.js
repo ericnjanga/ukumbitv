@@ -73,7 +73,7 @@ ukumbitvApp.filter('searchForMovies', function(){
 			if(item.title.toLowerCase().indexOf(searchString) !== -1){
 				result.push(item);
 			} 
-		}); 
+		});
 		return result;
 	};
 });//[end] serchfor filter

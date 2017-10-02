@@ -627,6 +627,9 @@ Route::group([], function(){
 
     Route::get('/trending', 'UserController@trending')->name('user.trending');
 
+    //get all movies
+    Route::get('/get-all-movies', 'UserController@getAllVideos')->name('user.getAllVideos');
+
 });
 
 

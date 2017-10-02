@@ -1813,4 +1813,11 @@ class UserController extends Controller {
         return view('r.user.test');
     }
 
+    public function getAllVideos()
+    {
+        $videos = AdminVideo::all();
+
+        return response()->json($videos, 200);
+    }
+
 }
