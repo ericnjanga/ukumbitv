@@ -1,29 +1,30 @@
 @if(Auth::check())
 <div class="nav-user-access">
 	<span class="nav-package-info">
-    <span class="login-text">
-		{{--username--}}
-		@if(Auth::user()->name !== '')
-			{{Auth::user()->name}}
-		@else
-			{{Auth::user()->email}}
-		@endif
-		{{--end username--}}
-
-    	@if(isset($videoCount))
-    		{{$videoCount}} {{trans('messages.videos_left')}}
-    	@else 
-    		{{trans('messages.unlimited_videos')}}
-    	@endif
-    </span>
     <span id="link-update-package" data-route="{{route('user.package')}}">
-
-				@if(Auth::user()->paymentPlans[0]->flag != 3)
+			@if(Auth::user()->paymentPlans[0]->flag != 3)
 				{{trans('messages.msg_upgrade')}}
 			@else
 			@endif
-
     </span> 
+    <span class="login-text">
+			<span class="bold" style="block;">
+				{{--username--}}
+				@if(Auth::user()->name !== '')
+					{{Auth::user()->name}}
+				@else
+					{{Auth::user()->email}}
+				@endif
+				{{--end username--}}
+			</span>
+			<span style="block;">
+				@if(isset($videoCount))
+	    		{{$videoCount}} {{trans('messages.videos_left')}}
+	    	@else 
+	    		{{trans('messages.unlimited_videos')}}
+	    	@endif
+			</span>
+    </span>
 	</span>  
 	 
 
