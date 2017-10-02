@@ -14,7 +14,7 @@ ukumbitvApp.config(['$interpolateProvider', function($interpolateProvider) {
  
 
 // [service] Fetch movies from the server
-ukumbitvApp.factory('servMovies', function() {
+ukumbitvApp.factory('servMovies', ['$http', function($http) {
   var arrMovies = [
 	  {
 	  	title : 'Le Contrat',
@@ -69,7 +69,7 @@ ukumbitvApp.factory('servMovies', function() {
   return {
   	get : _get
   };
-});
+}]);
 
 
 // [filter] 
