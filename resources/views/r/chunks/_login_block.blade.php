@@ -7,7 +7,7 @@
 		<span class="caret"></span>
 	</a>
 
-	<span class="nav-package-info" style="margin-right:10px;">
+	<span class="nav-package-info">
     <span id="link-update-package" data-route="{{route('user.package')}}">
 			@if(Auth::user()->paymentPlans[0]->flag != 3)
 				{{trans('messages.msg_upgrade')}}
@@ -15,7 +15,7 @@
 			@endif
     </span> 
     <span class="login-text">
-			<span class="bold" style="block;">
+			<span class="bold">
 				{{--username--}}
 				@if(Auth::user()->name !== '')
 					{{Auth::user()->name}}
@@ -24,7 +24,7 @@
 				@endif
 				{{--end username--}}
 			</span>
-			<span style="block;">
+			<span class="login-text-vidcounter">
 				@if(isset($videoCount))
 	    		{{$videoCount}} {{trans('messages.videos_left')}}
 	    	@else 

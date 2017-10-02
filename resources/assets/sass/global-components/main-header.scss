@@ -103,6 +103,18 @@
 			}
 		}
   }
+  .nav-package-info {
+  	margin-right:10px;
+  	.login-text {
+  		span {
+  			display: block;
+  		}
+  	}
+  	.login-text-vidcounter {
+  		font-size: 10px;
+    	line-height: 10px;
+  	}
+  }
 
   @media (min-width: 768px) {
 	  .navbar-brand {
