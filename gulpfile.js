@@ -24,7 +24,7 @@ elixir(function(mix) {
 	//Compile all "scss" files into a "style.css" file
 	mix.sass([
         'resources/assets/sass/style.scss' 
-    ], 'public/r/css/style.css');
+    ], 'public/r/css/style0324.css');
 
     
 	//Concatenating local librairies and main js files 
