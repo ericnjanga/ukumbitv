@@ -117,6 +117,9 @@ Route::get('/testmin', 'UserController@test')->name('test');
 
 // Elastic Search Test
 
+//get all movies
+Route::get('/get-all-movies', 'UserController@getAllVideos')->name('user.getAllVideos');
+
 Route::get('/addIndex', 'ApplicationController@addIndex')->name('addIndex');
 
 Route::get('/addAll', 'ApplicationController@addAllVideoToEs')->name('addAll');
@@ -627,8 +630,7 @@ Route::group([], function(){
 
     Route::get('/trending', 'UserController@trending')->name('user.trending');
 
-    //get all movies
-    Route::get('/get-all-movies', 'UserController@getAllVideos')->name('user.getAllVideos');
+
 
 });
 
