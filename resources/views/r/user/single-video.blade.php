@@ -487,7 +487,7 @@
       $('body').on('change', '#video-episodes', function(){ 
         ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
         //Displayig the first title
-        $('#active-episode-title').html( this.find(':selected').data('title') ); 
+        $('#active-episode-title').html( $(this).find(':selected').data('title') ); 
       });
 			 
 
