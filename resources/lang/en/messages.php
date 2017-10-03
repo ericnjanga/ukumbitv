@@ -260,10 +260,7 @@ return array(
 
 	// User
 
-	// mail title configure
-
-	'user_welcome_title' => 'Welcome to UkumbiTV',
-	'provider_welcome_title' => 'Welcome to UkumbiTV',
+	// mail title configure 
 
 	'user_forgot_email_title' => "Your new password",
 	'provider_forgot_email_title' =>  'Your new password',
@@ -991,7 +988,7 @@ return array(
   //WELCOME EMAIL ...
   //-----------------------------------  
   'welcome_email_intromsg' => 'Verify your email address', 
-  'welcome_email_title' => 'Welcome to UkumbiTV',
+  'welcome_email_title' => '**Welcome to UkumbiTV',
   'welcome_email_cantread1' => 'If you can\'t see this message',
   'welcome_email_cantread2' => 'view&nbsp;it&nbsp;in&nbsp;your&nbsp;browser',
   'welcome_email_section1_h1' => 'Welcome to UkumbiTV', 

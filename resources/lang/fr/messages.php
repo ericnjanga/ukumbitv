@@ -259,10 +259,7 @@ return array(
 
 	// User
 
-	// mail title configure
-
-	'user_welcome_title' 			=> 'Bienvenue sur UkumbiTV',
-	'provider_welcome_title' 	=> 'Bienvenue sur UkumbiTV',
+	// mail title configure 
 
 	'user_forgot_email_title' => "Your new password",
 	'provider_forgot_email_title' =>  'Your new password',
