@@ -485,8 +485,7 @@
 			 * ----------------------------------------- 
 			*/
       $('body').on('change', '#video-episodes', function(){ 
-        ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
-        console.log('....changing episode title');
+        ukumbitv_video.loadPlayer(this.value); //pass episode ID to player 
         //Displayig the first title
         $('#active-episode-title').html( $(this).find(':selected').data('title') ); 
       });
@@ -522,8 +521,7 @@
             	$dd_episodes = $('#video-episodes');  
             //(dropdown) replace of episodes with new ones
             $dd_episodes.empty();
-            rep.forEach(function(item, i, rep) {
-            	console.log('>>>>item=', item);
+            rep.forEach(function(item, i, rep) { 
               _new_list.push(parseInt(item.vimeo_id));
               $dd_episodes.append('<option data-title="'+item.title+'" value="'+item.vimeo_id+'">Episode '+ ++i +' ('+item.title+')</option>'); 
             });
