@@ -485,14 +485,9 @@
 			 * ----------------------------------------- 
 			*/
       $('body').on('change', '#video-episodes', function(){ 
-        ukumbitv_video.loadPlayer(this.value); 
-        $('#active-episode-title').html(this.value);
-
-        console.log('.....this=', this);
-
-
-				// //Displayig the first episode's title
-				// $('#active-episode-title').html(_list_episodes[0]);
+        ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
+        //Displayig the first title
+        $('#active-episode-title').html( this.find(':selected').data('title') ); 
       });
 			 
 
