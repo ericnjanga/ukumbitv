@@ -90,7 +90,7 @@
 								  </select>
 							  </div>
 
-							  <div>....{{$episodesArr[0]}}....</div>
+							  <div>....{{$episodesArr[0]->title}}....</div>
 
 							  <div id="active-episode-title" class="col-sm-6"></div>
 						  </div>
