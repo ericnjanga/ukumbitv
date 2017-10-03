@@ -88,11 +88,9 @@
 										  <option data-title="{{$episode->title}}" value="{{$episode->vimeo_id}}">Episode {{++$indexKey}} ({{$episode->title}})</option>
 									  @endforeach
 								  </select>
-							  </div>
+							  </div> 
 
-							  <div>....{{$episodesArr[0]->title}}....</div>
-
-							  <div id="active-episode-title" class="col-sm-6"></div>
+							  <div id="active-episode-title" class="col-sm-6">{{$episodesArr[0]->title}}</div>
 						  </div>
 					  </section>
 					  
@@ -424,8 +422,6 @@
 					var val1 = (elem.value || elem.text); 
 				  return parseInt(val1);
 				});//[end]* Initially load 
-				//Displayig the first episode's title
-				$('#active-episode-title').html(_list_episodes[0]);
 
 
 
@@ -491,6 +487,12 @@
       $('body').on('change', '#video-episodes', function(){ 
         ukumbitv_video.loadPlayer(this.value); 
         $('#active-episode-title').html(this.value);
+
+        console.log('.....this=', this);
+
+
+				// //Displayig the first episode's title
+				// $('#active-episode-title').html(_list_episodes[0]);
       });
 			 
 
