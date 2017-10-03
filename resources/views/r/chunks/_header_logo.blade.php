@@ -12,7 +12,7 @@
 	      <a class="ukb-navbar-brand navbar-brand" href="/"><img src="{{asset('r/img/logo.png')}}" alt="UkumbiTV" title="UkumbiTV"></a>
 	    </div>
 
-			@if(Auth::check())
+			@if(!Auth::check())
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">  
 		      <ul class="nav navbar-nav navbar-right"> 
