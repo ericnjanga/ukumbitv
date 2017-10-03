@@ -525,7 +525,7 @@
             rep.forEach(function(item, i, rep) {
             	console.log('>>>>item=', item);
               _new_list.push(parseInt(item.vimeo_id));
-              $dd_episodes.append('<option value="'+item.vimeo_id+'">Episode '+ ++i +' ('+item.title+')</option>');
+              $dd_episodes.append('<option data-title="'+item.title+'" value="'+item.vimeo_id+'">Episode '+ ++i +' ('+item.title+')</option>'); 
             });
  						
  						//save the new list of episodes
