@@ -254,54 +254,56 @@ function movie_undislike($btn) {
 //contact form
 function sendContactForm(url) {
 
-    var fd = new FormData;
+  var fd = new FormData;
 
-    fd.append('_token', '{{csrf_token()}}');
-    fd.append('category', $('#q-category').val());
-    fd.append('email', $('#user-email').val());
-    fd.append('message', $('#message-text').val());
-    $('#btn-submit-contact').prop('disabled', true);
+  fd.append('_token', '{{csrf_token()}}');
+  fd.append('category', $('#q-category').val());
+  fd.append('email', $('#user-email').val());
+  fd.append('message', $('#message-text').val());
+  $('#btn-submit-contact').prop('disabled', true);
 
-    //Display spinner
-		var _spinner = $('#ukumbitv-spinner-frame');
-		_spinner.addClass('active');
-
-
-    $.ajax({
-      type: 'POST',
-      url: url,
-      contentType: false,
-      processData: false,
-      data: fd,
-      dataType: 'html',
-      success: function(data){ 
-	      // var rep = JSON.parse(data);
-		    var curr_lang = $('body').data('active-lang');
-		    if(curr_lang=='en'){
-	      	swal("Cool!", "Email sent successfully", "success");
-	      }else{
-	      	swal("Superbe!", "L'email a été envoyé avec succès", "success");
-	      }
-	      $('#btn-submit-contact').prop('disabled', false);
-	    },
-	    error: function(data){
-		    var curr_lang = $('body').data('active-lang');
-		    if(curr_lang=='en'){
-	      	swal("Oh no!", "Email couldn't be sent. Please try again later", "success");
-	      }else{
-	      	swal("Oh non", "L'email n'a pas pu être envoyé. Veuillez réessayer plus tard", "success");
-	      }
-	      
-	      $('#btn-submit-contact').prop('disabled', false);
-	    }
-		}).done(function() {
-			//hide spinner when request is done!
-		  _spinner.removeClass('active');
-		});
+  //Display spinner
+	var _spinner = $('#ukumbitv-spinner-frame');
+	_spinner.addClass('active');
 
 
+  $.ajax({
+    type: 'POST',
+    url: url,
+    contentType: false,
+    processData: false,
+    data: fd,
+    dataType: 'html',
+    success: function(data){ 
+      // var rep = JSON.parse(data);
+	    var curr_lang = $('body').data('active-lang');
+	    if(curr_lang=='en'){
+      	swal("Cool!", "Email sent successfully", "success");
+      }else{
+      	swal("Superbe!", "L'email a été envoyé avec succès", "success");
+      }
+      $('#btn-submit-contact').prop('disabled', false);
+    },
+    error: function(data){
+	    var curr_lang = $('body').data('active-lang');
+	    if(curr_lang=='en'){
+      	swal("Oh no!", "Email couldn't be sent. Please try again later", "success");
+      }else{
+      	swal("Oh non", "L'email n'a pas pu être envoyé. Veuillez réessayer plus tard", "success");
+      }
+      
+      $('#btn-submit-contact').prop('disabled', false);
+    }
+	}).done(function() {
+		//hide spinner when request is done!
+	  _spinner.removeClass('active');
+	  //and reload page
+	  location.reload();
+	});
+}//[end] sendContactForm
 
-}
+
+
 
 //user profile
 function updateProfile(url) {
