@@ -11,6 +11,7 @@
 
 	        <div class="info-block hero-sub">
 	          <h1 class="title">{{$video->title}}</h1>
+	          <div>{{$video}}</div>
 	          <div class="video-info-main">
 	            <div class="info-left">
 	            	<!-- <span class="age">16+</span> -->
