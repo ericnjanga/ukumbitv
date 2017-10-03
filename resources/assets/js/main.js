@@ -298,7 +298,9 @@ function sendContactForm(url) {
 		//hide spinner when request is done!
 	  _spinner.removeClass('active');
 	  //and reload page
-	  location.reload();
+	  setTimeout(function(){
+			location.reload();
+		}, 2000); 
 	});
 }//[end] sendContactForm
 
