@@ -262,6 +262,10 @@ function sendContactForm(url) {
     fd.append('message', $('#message-text').val());
     $('#btn-submit-contact').prop('disabled', true);
 
+    //Display spinner
+		var _spinner = $('#ukumbitv-spinner-frame');
+		_spinner.addClass('active');
+
 
     $.ajax({
       type: 'POST',
@@ -271,26 +275,32 @@ function sendContactForm(url) {
       data: fd,
       dataType: 'html',
       success: function(data){ 
-      // var rep = JSON.parse(data);
-	    var curr_lang = $('body').data('active-lang');
-	    if(curr_lang=='en'){
-      	swal("Cool!", "Email sent successfully", "success");
-      }else{
-      	swal("Superbe!", "L'email a été envoyé avec succès", "success");
-      }
-      $('#btn-submit-contact').prop('disabled', false);
-    },
-    error: function(data){
-	    var curr_lang = $('body').data('active-lang');
-	    if(curr_lang=='en'){
-      	swal("Oh no!", "Email couldn't be sent. Please try again later", "success");
-      }else{
-      	swal("Oh non", "L'email n'a pas pu être envoyé. Veuillez réessayer plus tard", "success");
-      }
-      
-      $('#btn-submit-contact').prop('disabled', false);
-    }
-});
+	      // var rep = JSON.parse(data);
+		    var curr_lang = $('body').data('active-lang');
+		    if(curr_lang=='en'){
+	      	swal("Cool!", "Email sent successfully", "success");
+	      }else{
+	      	swal("Superbe!", "L'email a été envoyé avec succès", "success");
+	      }
+	      $('#btn-submit-contact').prop('disabled', false);
+	    },
+	    error: function(data){
+		    var curr_lang = $('body').data('active-lang');
+		    if(curr_lang=='en'){
+	      	swal("Oh no!", "Email couldn't be sent. Please try again later", "success");
+	      }else{
+	      	swal("Oh non", "L'email n'a pas pu être envoyé. Veuillez réessayer plus tard", "success");
+	      }
+	      
+	      $('#btn-submit-contact').prop('disabled', false);
+	    }
+		}).done(function() {
+			//hide spinner when request is done!
+		  _spinner.removeClass('active');
+		});
+
+
+
 }
 
 //user profile
