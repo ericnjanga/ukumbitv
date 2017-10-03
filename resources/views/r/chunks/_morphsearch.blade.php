@@ -11,7 +11,7 @@
 					<a ng-href="<% url_origin %><% movie.watchid %>" class="video-item__frame"> 
 					<!-- <a ng-href="<% url_origin %><% movie.watchid %>" class="video-item__frame"  angular-lazy-load threshold="100"> --> 
 						<span class="video-item__resume"><% getExcerpt(movie.description,235) %></span> 
-						<img data-src="<% movie.videoimage.imgPreview1 %>" class="video-item__img" alt="<% movie.title %>"> 
+						<img ng-src="<% movie.videoimage.imgPreview1 %>" class="video-item__img" alt="<% movie.title %>"> 
 					</a> 
 					<figcaption class="video-item__title ellipsis-gradient">
 						<% movie.title %>
