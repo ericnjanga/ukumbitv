@@ -34,6 +34,7 @@ class CreateUsersTable extends Migration
             $table->double('longitude',15,8);
             $table->string('paypal_email');
             $table->string('address');
+            $table->string('api_token', 60)->unique();
             $table->rememberToken();
             $table->timestamps();
         });

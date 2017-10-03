@@ -15,21 +15,4 @@ class Genre extends Model
         return $this->hasMany('App\AdminVideo');
     }
 
-    public static function boot()
-    {
-        //execute the parent's boot method 
-        parent::boot();
-
-        //delete your related models here, for example
-        static::deleting(function($genres)
-        {
-
-            foreach($genres->adminVideo as $video)
-            {                
-                $video->delete();
-            } 
-
-        });	
-
-    }
 }

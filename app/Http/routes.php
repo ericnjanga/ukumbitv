@@ -13,6 +13,15 @@
 Route::get('setlocale/{locale}', function ($locale) {
     return redirect()->back()->withCookie(cookie('locale', $locale));                             # Redirect with select lang
 });
+
+Route::group(['prefix' => 'api/v1', 'middleware' => 'auth:api'], function () {
+    Route::get('/test', 'ApiController@test');
+});
+
+Route::group(['prefix' => 'api/v1'], function () {
+    Route::post('/login', 'ApiController@login');
+});
+
 // Report Video type
 
 if(!defined('REPORT_VIDEO_KEY')) define('REPORT_VIDEO_KEY', 'REPORT_VIDEO');

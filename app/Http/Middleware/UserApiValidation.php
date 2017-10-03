@@ -57,7 +57,7 @@ class UserApiValidation
                 $user = User::find($request->id);
 
                 if(!$user) {
-                    
+
                     $response = array('success' => false , 'error' => Helper::get_error_message(133) , 'error_code' => 133);
                     return response()->json($response, 200);
                 }
