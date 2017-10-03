@@ -1264,7 +1264,7 @@ class UserController extends Controller {
 
     public function sendContactForm(Request $requset)
     {
-        $subject = trans('messages.user_welcome_title');
+        $subject = "Message from contact form";
         $email_data = $requset;
         $page = "emails.contact";
         $email = 'info@ukumbitv.com';
