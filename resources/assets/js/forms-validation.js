@@ -3,7 +3,7 @@
  **************************[UkumbiTV App]************************** 
  */ 
 // main app
-var ukumbitvApp = angular.module('ukumbitvApp', ['ngAnimate']);
+var ukumbitvApp = angular.module('ukumbitvApp', ['ngAnimate','angular-lazy-loader']);
 //Changing angular tags to avoid collision with Blade
 ukumbitvApp.config(['$interpolateProvider', function($interpolateProvider) {
   $interpolateProvider.startSymbol('<%');
@@ -15,36 +15,6 @@ ukumbitvApp.config(['$interpolateProvider', function($interpolateProvider) {
 
 // [service] Fetch movies from the server
 ukumbitvApp.factory('servMovies', ['$http','$log', function($http, $log) {
-  // var arrMovies = [
-	 //  {
-	 //  	title : 'Le Contrat',
-	 //  	poster : 'https://ukumbitv.com/images/20170928165134/small_image21506617494le-contrat.jpg',
-	 //  	video_url : 'https://ukumbitv.com/video/20170928165134',
-	 //  	excerpt : 'vjsvse fif fqefqefi, vwvwfi qfqpofjoqfeufo',
-	 //  	category: 'catxxx'
-	 //  },
-	 //  {
-	 //  	title : 'Ultime Sursis',
-	 //  	poster : 'https://ukumbitv.com/images/20170927160230/small_image21506528150ultime_sursis.jpg',
-	 //  	video_url : 'https://ukumbitv.com/video/20170927160230',
-	 //  	excerpt : 'vjsvse fif fqefqefi, vwvwfi qfqpofjoqfeufo',
-	 //  	category: 'catxxx'
-	 //  },
-	 //  {
-	 //  	title : 'Les deux pères',
-	 //  	poster : 'https://ukumbitv.com/images/20170927031133/small_image21506481893les-2-peres.jpg',
-	 //  	video_url : 'https://ukumbitv.com/video/20170927031133',
-	 //  	excerpt : 'vjsvse fif fqefqefi, vwvwfi qfqpofjoqfeufo',
-	 //  	category: 'catxxx'
-	 //  },
-	 //  {
-	 //  	title : 'Officines ',
-	 //  	poster : 'https://ukumbitv.com/images/20170927021402/small_image21506478442Officines.jpg',
-	 //  	video_url : 'https://ukumbitv.com/video/20170927021402',
-	 //  	excerpt : 'vjsvse fif fqefqefi, vwvwfi qfqpofjoqfeufo',
-	 //  	category: 'catxxx'
-	 //  },
-  // ];
 
   var _get = function (){ 
 

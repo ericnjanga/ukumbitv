@@ -8,9 +8,9 @@
 		<div class="morphsearch-content">
 			<div class="dummy-column"> 
 				<figure class="video-item morphsearch-item" ng-repeat="movie in filteredMovies = (movies | searchForMovies:searchString)"> 
-					<a href="<% movie.video_url %>" class="video-item__frame"> 
+					<a href="<% movie.video_url %>" class="video-item__frame"  angular-lazy-load threshold="100"> 
 						<span class="video-item__resume"><% getExcerpt(movie.description,235) %></span> 
-						<img data-src="<% movie.videoimage.imgPreview1 %>" class="video-item__img lazyloaded" alt="<% movie.title %>"> 
+						<img data-src="<% movie.videoimage.imgPreview1 %>" class="video-item__img" alt="<% movie.title %>"> 
 					</a> 
 					<figcaption class="video-item__title ellipsis-gradient">
 						<% movie.title %>
