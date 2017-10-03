@@ -93,6 +93,11 @@ ukumbitvApp.filter('searchForMovies', function(){
 ukumbitvApp.controller('InstantSearchController', 
 	['$scope','servMovies','$log', function($scope, servMovies, $log){
 
+		$scope.getExcerpt = function(text, length){
+			return text.substring(0, length) + ' ...';
+		};
+
+
 		// $log.log('...servMovies=',servMovies.get());
 		servMovies.get().then(function successCallback(response) {
 			// $log.log('>>>response=', response);
