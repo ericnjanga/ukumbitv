@@ -63,6 +63,8 @@ ukumbitvApp.filter('searchForMovies', function(){
 ukumbitvApp.controller('InstantSearchController', 
 	['$scope','servMovies','$log', function($scope, servMovies, $log){
 
+
+		$scope.url_origin = docuent.location.origin + '/video/';
 		$scope.getExcerpt = function(text, length){
 			return text.substring(0, length) + ' ...';
 		};
@@ -71,7 +73,7 @@ ukumbitvApp.controller('InstantSearchController',
 		// $log.log('...servMovies=',servMovies.get());
 		servMovies.get().then(function successCallback(response) {
 			// $log.log('>>>response=', response);
-			$scope.movies = response.data;
+			$scope.movies = response.data; 
 			$log.log('>>>>response.data=',response.data);
 	    // this callback will be called asynchronously
 	    // when the response is available

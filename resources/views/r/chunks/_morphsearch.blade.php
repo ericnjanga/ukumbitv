@@ -8,20 +8,21 @@
 		<div class="morphsearch-content">
 			<div class="dummy-column"> 
 				<figure class="video-item morphsearch-item" ng-repeat="movie in filteredMovies = (movies | searchForMovies:searchString)"> 
-					<a href="<% movie.video_url %>" class="video-item__frame"  angular-lazy-load threshold="100"> 
+					<a ng-href="<% url_origin %><% movie.watchid %>" class="video-item__frame"  angular-lazy-load threshold="100"> 
 						<span class="video-item__resume"><% getExcerpt(movie.description,235) %></span> 
 						<img data-src="<% movie.videoimage.imgPreview1 %>" class="video-item__img" alt="<% movie.title %>"> 
 					</a> 
 					<figcaption class="video-item__title ellipsis-gradient">
 						<% movie.title %>
 					</figcaption> 
-					<div class="video-item__info"> 
+					<!-- these elements needs extra customization on the backend -->
+					<!-- <div class="video-item__info"> 
 						<div class="video-genre">Comedy</div> 
 						<div class="butn-like">
 							<span class="icon icon-thumbs-up"></span>
 							<span class="likes-count">0</span>
 						</div> 
-					</div> 
+					</div>  -->
 				</figure> 
 
 
