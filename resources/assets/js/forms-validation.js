@@ -64,7 +64,7 @@ ukumbitvApp.controller('InstantSearchController',
 	['$scope','servMovies','$log', function($scope, servMovies, $log){
 
 
-		$scope.url_origin = docuent.location.origin + '/video/';
+		$scope.url_origin = document.location.origin + '/video/';
 		$scope.getExcerpt = function(text, length){
 			return text.substring(0, length) + ' ...';
 		};
