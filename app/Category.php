@@ -21,45 +21,45 @@ class Category extends Model
         return $this->hasMany('App\AdminVideo');
     }
 
-	public static function boot()
-    {
-        //execute the parent's boot method 
-        parent::boot();
-
-        //delete your related models here, for example
-//        static::deleting(function($categories)
-//        {
-//            foreach($categories->subCategory as $sub_category)
-//            {
-//                if($sub_category->picture1) {
-//                    Helper::delete_picture($sub_category->picture1, "/uploads/");
-//                }
+//	public static function boot()
+//    {
+//        //execute the parent's boot method
+//        parent::boot();
 //
-//                if($sub_category->picture2) {
-//                    Helper::delete_picture($sub_category->picture1, "/uploads/");
-//                }
+//        //delete your related models here, for example
+////        static::deleting(function($categories)
+////        {
+////            foreach($categories->subCategory as $sub_category)
+////            {
+////                if($sub_category->picture1) {
+////                    Helper::delete_picture($sub_category->picture1, "/uploads/");
+////                }
+////
+////                if($sub_category->picture2) {
+////                    Helper::delete_picture($sub_category->picture1, "/uploads/");
+////                }
+////
+////                if($sub_category->picture3) {
+////                    Helper::delete_picture($sub_category->picture1, "/uploads/");
+////                }
+////
+////                $sub_category->delete();
+////            }
+////
+////            foreach($categories->adminVideo as $video)
+////            {
+////                deleteVideoAndImages($video);
+////                $video->delete();
+////            }
+////
+////            foreach($categories->genre as $genre)
+////            {
+////                $genre->delete();
+////            }
+////
+////        });
 //
-//                if($sub_category->picture3) {
-//                    Helper::delete_picture($sub_category->picture1, "/uploads/");
-//                }
-//
-//                $sub_category->delete();
-//            }
-//
-//            foreach($categories->adminVideo as $video)
-//            {
-//                deleteVideoAndImages($video);
-//                $video->delete();
-//            }
-//
-//            foreach($categories->genre as $genre)
-//            {
-//                $genre->delete();
-//            }
-//
-//        });
-
-    }
+//    }
 
     
 }

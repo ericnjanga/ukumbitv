@@ -2,8 +2,8 @@
 @section('content')
 
   <div class="page page-video-single">  
-    <div class="global-display">
-			@include('r.chunks._filter_video')
+    <div class="container" style="max-width: 1100px;"> <!-- global-display -->
+    	<!-- @include('r.chunks._filter_video') -->
 
 	    <div class="global-content utv-card">
 	      <div class="hero">
@@ -15,8 +15,10 @@
 	            <div class="info-left">
 	            	<!-- <span class="age">16+</span> -->
 	              <ul class="list-date-duration list-inline">
-	              	<li>{{$video->created_at->format('Y')}}</li>
-	              	<li>{{$duration}}</li>
+	              	<li>{{$video->year}}</li>
+	              	@if($video->video_type !== 'webseries')
+	              		<li>{{$duration}}</li>
+	              	@endif
 	              </ul>
 	              <div>
 	              	{{$video->direct}}
@@ -61,14 +63,41 @@
 						{{$videoId}}
 					</div> -->
 
+
+
+					
+
 	      	@if($checkTrial)
 				@if($video->video_type == 'webseries')
-					  <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-					@else
-	          <iframe class="iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	          @endif
-					  <!-- <iframe class="iframe-video" src="https://player.vimeo.com/video/232604649?autoplay=0" autoplay="0" width="100%" height="700" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-	          <!-- <iframe src="https://player.vimeo.com/video/232604649" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+					  <iframe id="ukumbitv-iframe-video" class="ukumbitv-iframe-video" src="https://player.vimeo.com/video/{{$episodesArr[0]->vimeo_id}}?autoplay=0" autoplay="0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					  <section class="hero-sub">
+					  	<div id="video-controls" class="row">
+							  <div class="control-frame col-xs-6 col-sm-3">
+								  <!-- <label for="video-season"></label> -->
+								  <select name="video-season" id="video-season" class="form-control">
+									  @foreach($seasons as $season)
+									  	<option value="{{$season->season_id}}">Season {{$season->season_id}}</option>
+								      @endforeach
+								  </select>
+							  </div>
+
+							  <div class="control-frame col-xs-6 col-sm-3">
+								  <!-- <label for="video-episodes"></label> -->
+								  <select name="video-episodes" id="video-episodes" class="form-control">
+									  @foreach($episodesArr as $indexKey => $episode)
+										  <option data-title="{{$episode->title}}" value="{{$episode->vimeo_id}}">Episode {{++$indexKey}} ({{$episode->title}})</option>
+									  @endforeach
+								  </select>
+							  </div> 
+
+							  <div id="active-episode-title" class="col-sm-6">{{$episodesArr[0]->title}}</div>
+						  </div>
+					  </section>
+					  
+				  @else
+	          <iframe id="ukumbitv-iframe-video" class="ukumbitv-iframe-video" src="https://player.vimeo.com/video/{{$videoId}}?autoplay=0" autoplay="0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	        @endif
+					   
 	        @else
 	          <div class="video-placeholder">
 	          	<div class="video-item">
@@ -302,37 +331,214 @@
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script>
       $(".ui.facebook.button").click(function() {
-          FB.ui({
-              method: 'share',
-              href: "{{URL::to('/')}}/video/{{$video->watchid}}"
-          }, function(response){});
+        FB.ui({
+            method: 'share',
+            href: "{{URL::to('/')}}/video/{{$video->watchid}}"
+        }, function(response){});
       })
   </script>
-  <script>
-    var vimeo_iframe = $('iframe');
-    var player = new Vimeo.Player(vimeo_iframe);
-    var vimeo_flag = false;
-//      debugger;\$checkTrial
-    player.on('play', function() {
-      console.log('played the video');
-      if (vimeo_flag == true) return;
-      player.pause().then(function() {
+  <script> 
+		/**
+		 * UkumbiTV video system
+		 * ----------------------------------------- 
+		*/
+		var ukumbitv_video = (function(){
+			var _list_episodes 	= [], 
+					_list_seasons 	= [],
+					_player 			= '',
+					_vimeo_flag 	= false,
+					_episodeIndex 	= 0,
+					_seasonIndex 		= 0,
+					_dd_seasons 	= '',//$('#video-season'),
+					_dd_episodes 	= '';//$('#video-episodes');
+
+			//Update video list and reset play index
+			var _updateVideoList = function(newArray){
+		    _episodeIndex 	= 0;
+				_list_episodes = newArray; 
+			}
+			var _readyToplay = function (id) {
+        _player.play().catch(function(error) {
+            console.error('[UkumbiTV player error] : ', error);
+        });
+      };
+ 
+      //Load VIMEO player with the right episode id
+      var _loadPlayer = function(episodeID){ 
+				_player.loadVideo(episodeID).then(_readyToplay).catch(function(error){
+					console.error('[UkumbiTV player error] : ', error);
+				});
+      };
+
+
+			var _intialize = function() {
+				var _the_iframe = document.getElementById('ukumbitv-iframe-video');
+				_player = new Vimeo.Player(_the_iframe); 
+				_dd_seasons = $('#video-season');
+				_dd_episodes = $('#video-episodes');
+
+				//[init]* Load VIMEO player ---
+				//* -> Capture "play" event and pause the player
+				//* until the server confirms the user has the
+				//* priviledges to play the video
+				//debugger;\$checkTrial
+		    _player.on('play', function() { 
+		      if (_vimeo_flag == true) return;
+		      _player.pause().then(function() { 
+		        $.ajax({
+		          type: 'POST',
+		          url: '/vimeo-video-play',
+		          data: {
+		            id: {{$video->watchid}},
+		            _token: '{{csrf_token()}}'
+		          },
+		          success: function(data){
+		            _vimeo_flag = true;
+		            _player.play();
+		          }, 
+		          error: function(data) {
+		            console.error('[UkumbiTV player error] Could not play');
+		          }
+		        }) 
+		      });
+		    });//[end] * Load VIMEO player - check right to play
+
+
+
+				//[init]* Initially load the list of seasons ---
+				//(with episode ids in the dropdown) 
+		  	var curr_opts1 = _dd_seasons[0].options; 
+				_list_seasons = $.map(curr_opts1, function( elem ) {
+					var val1 = (elem.value || elem.text); 
+				  return parseInt(val1);
+				});//[end]* Initially load
+
+
+
+				//[init]* Initially load the list of episodes ---
+				//(with episode ids in the dropdown) 
+		  	var curr_opts2 = _dd_episodes[0].options; 
+				_list_episodes = $.map(curr_opts2, function( elem ) {
+					var val1 = (elem.value || elem.text); 
+				  return parseInt(val1);
+				});//[end]* Initially load 
+
+
+
+				//[init]* Play next video when the current one ends ---  
+		    _player.on('ended',function(){
+		      _episodeIndex = _episodeIndex + 1;
+		      var _nextVideoID = _list_episodes[_episodeIndex];
+		      //Change episode dropdown to the next episode value and trigger the 'change' event
+		      //(only if next video is available)
+		      if(_nextVideoID!==undefined){ 
+						_dd_episodes.val(_nextVideoID).change(); 
+		      }//[end] only if next video is available 
+		      else{ 
+		      	//No more episodes
+		      	//go to the next season
+		      	_seasonIndex ++;
+		      	_dd_seasons.val((_seasonIndex + 1)).change(); 
+		      }
+		    });//[end]* Play next video
+  
+
+			};//[end] initialize
+
+
+
+
+			return {
+				intialize 			: _intialize,
+				loadPlayer 			: _loadPlayer,
+				updateVideoList : _updateVideoList
+				// player : _player
+			};
+		})();
+
+
+ 		
+  </script>
+
+  <!-- script only for webseries -->
+  @if($video->video_type == 'webseries')
+	  <script>  
+	  	/**
+	  	 * NOTES:
+	  	 * 1) "seasons" are on the server side (#video-season)
+	  	 * 2) "episodes" of the current season are loaded on the server side (#video-episodes)
+	  	 * 3) Each time a season is changed, episodes are laoded via AJAX (#video-episodes)
+	  	*/
+
+
+	  	//Initalize ukumbitv player
+	  	ukumbitv_video.intialize();
+	  	
+ 
+
+
+
+
+			/**
+			 * Load an episode and start the player 
+			 * (when the episode dropdown is changed)...
+			 * ----------------------------------------- 
+			*/
+      $('body').on('change', '#video-episodes', function(){ 
+        ukumbitv_video.loadPlayer(this.value); //pass episode ID to player 
+        //Displayig the first title
+        $('#active-episode-title').html( $(this).find(':selected').data('title') ); 
+      });
+			 
+
+			/**
+			 * Load the episodes of the selected season
+			 * (in the episode dropdown)... 
+			 * ----------------------------------------- 
+			*/
+      $('body').on('change', '#video-season', function(){ 
+        var fds = new FormData, 
+				_spinner = $('#ukumbitv-spinner-frame');
+
+        fds.append('_token', '{{csrf_token()}}');
+        fds.append('video_id', '{{$video->id}}');
+        fds.append('season_id', this.value);
+ 
+        _spinner.addClass('active');
+
         $.ajax({
           type: 'POST',
-          url: '/vimeo-video-play',
-          data: {
-            id: {{$video->watchid}},
-            _token: '{{csrf_token()}}'
-          },
+          url: '{{route('user.get-episodes')}}',
+          contentType: false,
+          processData: false,
+          data: fds,
+          dataType: 'html',
+          //fetch new episodes of the new season
+          //start the player on the 1st episode
           success: function(data){
-            vimeo_flag = true;
-            player.play();
+            var rep = JSON.parse(data);
+            var _new_list = [],
+            	$dd_episodes = $('#video-episodes');  
+            //(dropdown) replace of episodes with new ones
+            $dd_episodes.empty();
+            rep.forEach(function(item, i, rep) { 
+              _new_list.push(parseInt(item.vimeo_id));
+              $dd_episodes.append('<option data-title="'+item.title+'" value="'+item.vimeo_id+'">Episode '+ ++i +' ('+item.title+')</option>'); 
+            });
+ 						
+ 						//save the new list of episodes
+            ukumbitv_video.updateVideoList(_new_list);
+            //start the player on the 1st episode
+            $dd_episodes.change();
           },
-          error: function(data) {
-            console.log('error');
+          error: function(data){
+            console.error('error');
           }
-        })
+        }).done(function() {
+				  _spinner.removeClass('active');
+				});
       });
-    })
-  </script>
+	  </script>
+  @endif
+  <!-- script only for webseries -->
 @endsection

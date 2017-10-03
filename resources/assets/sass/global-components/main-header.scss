@@ -19,11 +19,43 @@
 	    top: 15px;
 	    right: -5px;
   	}
+  	.nav-user-tmb {
+  		width: 120px;
+  		color: #666;
+  		&:hover{
+  			color: $color-darkred;
+  			text-decoration: none;
+  			.caret{
+		  		color: $color-darkred;
+		  	}
+  		}
+  	}
+  	.img-circle{
+  		float: left;
+  		margin-right: 5px;
+  		width: 30px;
+  		height: 30px;
+  	}
+  }
+  .nav-user-access.open{
+  	.nav-user-tmb , .caret{
+  		color: $color-darkred;
+  	}
+  }
+
+
+  .container-fluid {
+  	padding-left: 20px;
+  	padding-right: 20px;
   }
 
 	@media (min-width: 768px) {
 		.navbar-right {
 	  	margin-top: 7px;
+	  }
+	  .container-fluid {
+	  	padding-left: 50px;
+    	padding-right: 50px;
 	  }
 	}
   
@@ -44,7 +76,9 @@
   	}
   }
   .ukb-nav-videos {
-  	display: none;
+  	a {
+  		font-weight: bold;
+  	}
   }
   .frame-search {
   	form { 
@@ -91,29 +125,39 @@
 			}
 		}
   }
+  .nav-package-info {
+  	margin-right:10px;
+  	.login-text {
+  		span {
+  			display: block;
+  		}
+  	}
+  	.login-text-vidcounter {
+  		font-size: 10px;
+    	line-height: 10px;
+  	}
+  }
 
   @media (min-width: 768px) {
 	  .navbar-brand {
 	  	margin-left: 0!important;
 	  }
   }
+
+  .navbar-default {
+  	background: rgba(248, 248, 248, 0.7)!important;
+  	.navbar-nav>li>a {
+			color: #000;
+  	}
+  }
 }//.ukb-main-header
 
-
-.GP-menu { 
-  @media (max-width: 767px) { 
-		display: none;
-  }
-  @media (min-width: 768px) { 
-		display: block;
-  }
-}
-
+ 
 
 
 .ukb-navbar-brand { 
   width: 200px;
-  padding-left: 20px;
+  padding-left: 0px;
   margin-left: 15px; 
   line-height: 0;  
   padding-top: 10px;
@@ -130,4 +174,11 @@
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {  
   border-color: #ccc;
+}
+
+
+
+
+.ukb-main-header.fixed-top + main {
+	margin-top: 70px;
 }

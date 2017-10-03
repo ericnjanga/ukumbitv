@@ -17,6 +17,7 @@ class CreateSeasonsTable extends Migration
             $table->integer('admin_video_id');
             $table->integer('season_id');
             $table->string('title');
+            $table->string('vimeo_id');
             $table->timestamps();
         });
     }

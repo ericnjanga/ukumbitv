@@ -7,23 +7,23 @@
     	<div class="global-content">
     		<h1>{{trans('messages.PMA_title')}}</h1>
 	    	<div class="row">
-	    		<div class="col-sm-2">
+	    		<div class="col-sm-4 col-md-3 col-sm-offset-3">
 		        <div class="img-block">
-		        	<img class="img-responsive img-circle" src="{{Auth::user()->picture}}" style="height: 150px;width: 150px;" alt="">
-					<form action="{{route('user.update-avatar')}}" method="POST" enctype="multipart/form-data">
-						{{ csrf_field() }}
-						<div class="form-group">
-							<label for="img-file">Select new image</label>
-							<input type="file" id="img-file" name="useravatar" accept="image/jpeg,image/png">
-						</div>
-						<button id="btn-update-avatar" class="btn btn-cta1b btn-lg">{{trans('messages.save_changes')}}</button>
-					</form>
+							<form action="{{route('user.update-avatar')}}" method="POST" enctype="multipart/form-data">
+								{{ csrf_field() }}
+								<div class="form-group">
+									<label class="bold" for="img-file">Select new image</label>
+									<input type="file" id="img-file" name="useravatar" accept="image/jpeg,image/png">
+								</div>
+		        		<img class="img-responsive img-circle" src="{{Auth::user()->picture}}" style="margin-bottom: 10px; height: 150px;width: 150px;" alt="">
+								<button id="btn-update-avatar" class="btn btn-cta1b btn-lg" style="margin-bottom: 30px;">{{trans('messages.save_changes')}}</button>
+							</form>
 	            <!-- <a href="" class="change-photo-butn"><span class="icon icon-pencil-edit-button"></span></a> -->
 	        	</div>
 		    	</div>
-			    <div class="col-sm-10">
+			    <div class="col-sm-9">
 		        <form class="account-form-block">
-							<div class="page page-block"> 
+							<div class="page-block"> 
 	                <div class="form-group">
                     <label>{{trans('messages.full_name')}}</label>
                     <input id="user-name" class="form-control" type="text" name="name" value="{{Auth::user()->name}}">
@@ -43,7 +43,7 @@
 
 							<hr>
 
-	            <div class="page page-block"> 
+	            <div class="page-block"> 
                 <div class="form-group">
                     <label>{{trans('messages.enter_curr_pass')}}</label>
                     <input id="old-password" class="form-control" type="password" name="old_password" class="mypass">

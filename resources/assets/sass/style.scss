@@ -10,15 +10,15 @@
 */
 @import 'utilities/vars';
 @import 'utilities/clearfix';
-// @import 'utilities/hover-effects';
+// @import 'utilities/animations';
 @import 'libs/icomoon'; 
 @import 'libs/typehead';
-@import 'libs/Google-play-menu';
+// @import 'libs/Google-play-menu';
 @import 'pages/mixed';
 @import 'pages/about';
 @import 'pages/landing';
 @import 'pages/auth'; 
-@import 'pages/video-landing';
+@import 'pages/grand-display';
 @import 'pages/video-single';
 @import 'pages/terms-and-privacy';
 @import 'pages/categories';
@@ -34,6 +34,8 @@
 @import 'modules/alerts';
 @import 'modules/buttons';
 @import 'modules/video-item';
+@import 'modules/morphSearch';
+@import 'modules/animated-spinner';
 
 
 
@@ -549,8 +551,7 @@ img{
  
 .list-horizontal-wrapper{
   width: 3000px;
-  overflow-x: hidden;
-      margin-left: -5px;
+  overflow-x: hidden; 
 }
  
 .ellipsis-gradient {
@@ -1533,20 +1534,7 @@ input:-webkit-autofill {
     color: rgba(238, 179, 61, 0.8);
   }
 }
-
-
-
-/**
- * Styling main content of the entire app
- * --------------------------------------
-*/
-#GP-menu-sticky-wrapper { 
-	float: left;
-} 
-.GP-menu {
-	float:left;
-  max-width: $width-GP-menu;  
-}
+ 
 
 
 

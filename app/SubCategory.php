@@ -25,32 +25,5 @@ class SubCategory extends Model
         return $this->belongsTo('App\Category');
     }
 
-    public static function boot()
-    {
-        //execute the parent's boot method 
-        parent::boot();
-
-        //delete your related models here, for example
-        static::deleting(function($sub_categories)
-        {
-        	foreach($sub_categories->subCategoryImage as $image)
-            {
-                $image->delete();
-            } 
-
-            foreach($sub_categories->genres as $genre)
-            {                
-                $genre->delete();
-            } 
-
-            foreach($sub_categories->adminVideo as $video)
-            {                
-                deleteVideoAndImages($video);
-                $video->delete();
-            } 
-
-        });	
-
-    }
     
 }

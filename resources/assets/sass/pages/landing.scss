@@ -42,6 +42,7 @@
   position: relative;
   height: 610px;
   overflow: hidden;
+  background: #222;
   &:after {
   	position: absolute;
   	content: '';
@@ -136,12 +137,13 @@
 
 
 .landing-header__content{
+	$thmb-width: 175px;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	width: calc(100% + 175px);
+	width: calc(100% + $thmb-width);
 	background-color: #000;
 	overflow: hidden;
 	z-index: 1;
@@ -152,6 +154,12 @@
   .video-item__img{
   	float: left;
   	opacity: 0.8;
+  }
+	$max-width: ($thmb-width * 9);
+  @media (min-width: $max-width + 1px){
+		width: $max-width;
+		left: 50%;
+		margin-left: -($max-width/2);
   }
 }
 

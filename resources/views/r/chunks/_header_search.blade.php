@@ -12,8 +12,8 @@
 
 
 
-<header class="ukb-main-header">
-	<nav class="navbar navbar-default">
+<header class="ukb-main-header fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle -->
 	    <div class="navbar-header">
@@ -30,6 +30,24 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
 	    	<ul class="ukb-nav-videos nav navbar-nav">
 	        <li id="movies">
+						<a href="{{route('user.getVideosByCategory', 'Drama')}}">
+							{{trans('messages.dramas')}}
+						</a> 
+					</li>
+					<li id="animations">
+						<a href="{{route('user.getVideosByCategory', 'Comedy')}}">
+							{{trans('messages.comedies')}}
+						</a> 
+					</li>  
+	      </ul>
+
+
+
+
+
+
+	    	<!-- <ul class="ukb-nav-videos nav navbar-nav">
+	        <li id="movies">
 						<a href="{{route('user.videotype', 'movies')}}"> 
 							{{trans('messages.movies')}}
 						</a> 
@@ -39,11 +57,14 @@
 							{{trans('messages.animations')}}
 						</a> 
 					</li>  
-	      </ul>
+	      </ul> -->
+
+
+
 
 				
 
-	      <div id="frame-search" class="frame-search">
+	      <!-- <div id="frame-search" class="frame-search">
 			  
 	        <form action="{{route('search-all')}}" class="navbar-form navbar-left" method="post">  
 	          <div class="input-group">
@@ -54,9 +75,9 @@
 				      		<span class="sr-only">{{trans('messages.search')}}!</span>
 				      	</button>
 				      </span>
-				    </div><!-- /input-group -->
+				    </div>
 	        </form> 
-	      </div>
+	      </div> -->
 
 	      <ul class="nav navbar-nav navbar-right"> 
 	        <li class="dropdown"> 
@@ -67,3 +88,12 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 </header>
+
+
+
+
+
+
+
+
+			

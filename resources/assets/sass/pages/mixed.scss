@@ -25,7 +25,8 @@
 
 
 .page-myaccount,
-.page-search  {
+.page-search,
+.page-404  {
 	h1 {
 		margin-bottom: 30px;
 		> .badge {
@@ -132,5 +133,17 @@
       text-decoration: underline;
     }
   } 
+}
+
+
+
+//Common footer margin
+.page-auth,
+.page-myaccount,
+.page-packages,
+.page-about,
+.page-contact,
+.page-tersm-and-privacy{
+	margin-bottom: 40px;
 }
  

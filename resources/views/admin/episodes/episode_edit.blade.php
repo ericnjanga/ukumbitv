@@ -46,6 +46,11 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="title" class="">Title:  </label>
+                                <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                            </div>
+
+                            <div class="form-group">
                                 <label for="vimeoid" class="">Vimeo video ID ex: 227573689  </label>
                                 <input type="text" class="form-control" id="vimeoid" name="vimeoid" placeholder="Vimeo video ID">
                             </div>
@@ -131,6 +136,7 @@
             fd.append('_token', $('#csrf-token').val());
             fd.append('season', $('#season').val());
             fd.append('vimeoid', $('#vimeoid').val());
+            fd.append('title', $('#title').val());
             fd.append('videoid', id);
 
             $.ajax({

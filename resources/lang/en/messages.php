@@ -172,6 +172,7 @@ return array(
 	'to'	=>	'To',
 	'date' => 'Date',
 	'free' => 'free', 
+	'no_results' => 'No results found...',
 	'new' => 'new',
 	'comment_placeholder' => 'Tell others what you think about the movie. Would you recommend it, and why?', 
 	'my_list' => 'My List',
@@ -259,10 +260,7 @@ return array(
 
 	// User
 
-	// mail title configure
-
-	'user_welcome_title' => 'Welcome to UkumbiTV',
-	'provider_welcome_title' => 'Welcome to UkumbiTV',
+	// mail title configure 
 
 	'user_forgot_email_title' => "Your new password",
 	'provider_forgot_email_title' =>  'Your new password',
@@ -852,7 +850,8 @@ return array(
   'Review_by' => 'Review by',
 
 	//...... ......
-  'Search_placeholder' => 'Search for: Titles, people, tags',
+  'Search_placeholder' => 'Search ...',
+  // 'Search_placeholder' => 'Search for: Titles, people, tags',
   'review_help' => 'Most helpful reviews have 100 words or more',
 
 
@@ -967,6 +966,19 @@ return array(
   'PCONTACT_form_help_sugg5' => 'Other',
   'PCONTACT_form_comment_label' => 'Enter your message',
   'PCONTACT_form_comment_error' => 'Message too small! (Please enter at least 8 characters)',
+
+ 
+
+
+
+
+
+  //[PAGE] 404 ...
+  //----------------------------------- 
+  'P404_h1' => 'Page not found',
+  'P404_p1' => 'The page you are looking for does not exist. We will attempt to automatically redirect you to our homepage in',
+  'P404_p2' => 'Please go to the UkumbiTV homepage by clicking the button below.',
+  'P404_cta' => 'UkumbiTV Accueil',
  
 
 
@@ -976,7 +988,7 @@ return array(
   //WELCOME EMAIL ...
   //-----------------------------------  
   'welcome_email_intromsg' => 'Verify your email address', 
-  'welcome_email_title' => 'Welcome to UkumbiTV',
+  'welcome_email_title' => '**Welcome to UkumbiTV',
   'welcome_email_cantread1' => 'If you can\'t see this message',
   'welcome_email_cantread2' => 'view&nbsp;it&nbsp;in&nbsp;your&nbsp;browser',
   'welcome_email_section1_h1' => 'Welcome to UkumbiTV', 

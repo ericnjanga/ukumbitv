@@ -23,7 +23,7 @@ class VerifyUser
     //List of paths allowed to access while user not logged in
     private $allowed_paths = ['login', 'register', 'social', 'advertising', 'callback/facebook', 'password/reset',
         'admin', 'email', 'setlocale', 'setlocale/fr', 'setlocale/en', 'about-us',
-        'terms-of-use', 'privacy-statement', 'jobs', 'help-center', 'contact', 'video', 'test', '/', 'confirm-email', 'welcome-email'];
+        'terms-of-use', 'privacy-statement', 'jobs', 'help-center', 'contact', 'video', 'test', '/', 'confirm-email', 'welcome-email', 'get-all-movies', 'api/v1/login'];
     /**
      * Handle an incoming request.
      *
@@ -33,6 +33,9 @@ class VerifyUser
      */
     public function handle($request, Closure $next)
     {
+        if(\Auth::guard('api')->check()){
+            return $next($request);
+        }
         $user = $request->user();
         //Check if user is set and is not guest
         if($user && !$user->is_guest) {

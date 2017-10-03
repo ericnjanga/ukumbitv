@@ -13,6 +13,15 @@
 Route::get('setlocale/{locale}', function ($locale) {
     return redirect()->back()->withCookie(cookie('locale', $locale));                             # Redirect with select lang
 });
+
+Route::group(['prefix' => 'api/v1', 'middleware' => 'auth:api'], function () {
+    Route::get('/test', 'ApiController@test');
+});
+
+Route::group(['prefix' => 'api/v1'], function () {
+    Route::post('/login', 'ApiController@login');
+});
+
 // Report Video type
 
 if(!defined('REPORT_VIDEO_KEY')) define('REPORT_VIDEO_KEY', 'REPORT_VIDEO');
@@ -116,6 +125,9 @@ Route::post('/install/settings', 'InstallationController@settings_process')->nam
 Route::get('/testmin', 'UserController@test')->name('test');
 
 // Elastic Search Test
+
+//get all movies
+Route::get('/get-all-movies', 'UserController@getAllVideos')->name('user.getAllVideos');
 
 Route::get('/addIndex', 'ApplicationController@addIndex')->name('addIndex');
 
@@ -470,7 +482,7 @@ Route::get('search-data' , 'UserController@searchData')->name('search-data');
 Route::get('categories', 'UserController@all_categories')->name('user.categories');
 Route::get('videos/{id}', 'UserController@videosByType')->name('user.videotype');
 
-Route::get('category/{id}', 'UserController@getVideosByCategory');
+Route::get('category/{id}', 'UserController@getVideosByCategory')->name('user.getVideosByCategory');
 
 Route::get('subcategory/{id}', 'UserController@sub_category_videos')->name('user.sub-category');
 //Route::get('category/{id}', 'UserController@category_videos')->name('user.category');
@@ -479,6 +491,7 @@ Route::get('genre/{id}', 'UserController@genre_videos')->name('user.genre');
 Route::post('add-to-playlist', 'UserController@addToPlaylist')->name('user.add-to-playlist');
 
 Route::post('vimeo-video-play', 'UserController@checkVideoPlays')->name('user.vimeo-video-play');
+Route::post('get-episodes', 'UserController@getEpisodesBySeason')->name('user.get-episodes');
 
 
 
@@ -625,6 +638,8 @@ Route::group([], function(){
     Route::get('/user/payment/video-status','PaypalController@getVideoPaymentStatus')->name('videoPaypalstatus');
 
     Route::get('/trending', 'UserController@trending')->name('user.trending');
+
+
 
 });
 

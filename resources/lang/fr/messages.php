@@ -153,6 +153,7 @@ return array(
 	'upgrade' => 'Am&#233;liorez',
 	'submit' 						=> 'Soumettre',
 	'free' => 'gratuit', 
+	'no_results' => 'Aucun r&#233;sultat trouv&#233;...',
 	'new' => 'nouveau',
 	'comment_placeholder' => 'Dites aux autres ce que vous pensez du film. Le recommenderiez-vous? Pourquoi?', 
 	'my_list' => 'Ma Liste',
@@ -258,10 +259,7 @@ return array(
 
 	// User
 
-	// mail title configure
-
-	'user_welcome_title' 			=> 'Bienvenue sur UkumbiTV',
-	'provider_welcome_title' 	=> 'Bienvenue sur UkumbiTV',
+	// mail title configure 
 
 	'user_forgot_email_title' => "Your new password",
 	'provider_forgot_email_title' =>  'Your new password',
@@ -829,7 +827,8 @@ And to insure en exceptional delivery all this unique experience, we have create
   'Review_by' => 'Revue par',
 
 	//...... ......
-  'Search_placeholder' => 'Rechercher: Titres, personnes, mots cl&#233;s',
+  'Search_placeholder' => 'Rechercher ...',
+  // 'Search_placeholder' => 'Rechercher: Titres, personnes, mots cl&#233;s',
   'review_help' => 'Les commentaires les plus utiles ont 100 mots ou plus',
 
  
@@ -861,6 +860,19 @@ And to insure en exceptional delivery all this unique experience, we have create
   'PCONTACT_form_help_sugg5' => 'Autre chose',
   'PCONTACT_form_comment_label' => 'Votre message',
   'PCONTACT_form_comment_error' => 'Votre message est trop court! (Veuillez saisir au moins 8 caract&#232;res)',
+
+ 
+
+
+
+
+
+  //[PAGE] 404 ...
+  //----------------------------------- 
+  'P404_h1' => 'La page n\'a pas été trouvée',
+  'P404_p1' => 'La page demandée n\'existe pas. Nous tenterons de vous rediriger automatiquement vers notre page d\'accueil dans',
+  'P404_p2' => 'Veuillez aller à la page d\'accueil de UkumbiTV en cliquant sur le bouton ci-dessous.',
+  'P404_cta' => 'UkumbiTV Accueil',
  
 
 

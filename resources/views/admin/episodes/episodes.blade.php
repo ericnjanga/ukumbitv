@@ -22,6 +22,7 @@
                             <tr>
                                 <th>{{tr('id')}}</th>
                                 <th>Video title</th>
+
                                 <th>{{tr('action')}}</th>
                             </tr>
                             </thead>
@@ -32,6 +33,7 @@
                                 <tr id="row{{$video->id}}">
                                     <td>{{$i+1}}</td>
                                     <td>{{$video->title}}</td>
+
                                     <td>
                                         <a href="{{route('admin.edit.episode', $video->id)}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add record"><i class="fa fa-plus" aria-hidden="true"></i></a>
                                         <a href="{{route('admin.edit.episodes', [$video->id, 1])}}" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>

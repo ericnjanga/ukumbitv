@@ -71,7 +71,7 @@ class UserController extends Controller {
         $this->UserAPI = $API;
         
 //        $this->middleware('auth', ['except' => ['watchVideo', 'index','single_video','all_categories' ,'category_videos' , 'sub_category_videos' , 'contact','trending']]);
-        $this->middleware('auth', ['except' => ['index','contact', 'showVideo', 'sendContactForm']]);
+        $this->middleware('auth', ['except' => ['index','contact', 'showVideo', 'sendContactForm', 'getAllVideos']]);
     }
 
 
@@ -272,37 +272,10 @@ class UserController extends Controller {
 
     public function getVideosByCategory($id)
     {
-        //#testing
-        if($id == '0'){
-            $videos = AdminVideo::with('videoimage')
-                ->orderBy('id', 'desc')->get();
-        }else{
-            $category = Category::where('id',$id)->firstOrFail();
-            $videos = AdminVideo::with('videoimage')
-                ->where('category_id', $category->id)
-                ->orderBy('id', 'desc')->get();
-        }
+        $category = Category::where('name', $id)->first();
+        $videos = AdminVideo::with('videoimage', 'category', 'likes')->where('category_id', $category->id)->orderby('id' , 'desc')->get();
 
-
-        $lastVideos = [];
-        $allCategories = Category::all();
-        $categories = get_categories();
-
-        foreach ($allCategories as $k){
-            $v = AdminVideo::orderby('id', 'desc')->with('videoimage')->where('category_id', $k->id)->first();
-            if ($v != NULL) {
-                array_push($lastVideos, $v);
-            }
-        }
-
-        return view('r.chunks._filter_results')
-            ->with('id',$id)
-            ->with('page' , 'Videos by tag')
-            ->with('subPage' , 'Videos by tag')
-            ->with('categories' , $categories)
-            ->with('videos_by_cat' , $lastVideos)
-            ->with('videos', $videos)
-            ->render();
+        return view('r.user.category-videos')->with('videos', $videos)->with('videoType', $id);
     }
 
     public function vimeoVideo()
@@ -510,9 +483,12 @@ class UserController extends Controller {
         $seasonsArr = [];
         $episodes = Season::where('admin_video_id', $video->id)->where('season_id', 1)->get();
         foreach ($episodes as $episode) {
-            array_push($seasonsArr, 'https://vimeo.com/'.$episode->title);
+            array_push($seasonsArr, $episode->vimeo_id);
         }
-        $seasonsArr = implode(',', $seasonsArr);
+        $seasons = [];
+        $seasons = Season::where('admin_video_id', $video->id)->orderBy('id', 'asc')->distinct()->get(['season_id']);
+
+//        $seasonsArr = implode(',', $seasonsArr);
 //        $seasonsArr = 'https://vimeo.com/39050404,https://vimeo.com/39050404';
 
 
@@ -534,11 +510,20 @@ class UserController extends Controller {
             ->with('tags', $tags)
             ->with('relatedVideos', $relatedVideos)
             ->with('payPlan', $flag)
-            ->with('episodesArr', $seasonsArr)
+//            ->with('episodesArr', $seasonsArr)
+            ->with('episodesArr', $episodes)
+            ->with('seasons', $seasons)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))
             ->with('directors', $directors);
 //            ->with('categories', $categories);
+    }
+
+    public function getEpisodesBySeason(Request $request)
+    {
+        $episodes = Season::where('admin_video_id', $request->video_id)->where('season_id', $request->season_id)->get();
+
+        return response()->json($episodes);
     }
 
     public function addToPlaylist(Request $request)
@@ -1279,7 +1264,7 @@ class UserController extends Controller {
 
     public function sendContactForm(Request $requset)
     {
-        $subject = trans('messages.user_welcome_title');
+        $subject = "Message from contact form";
         $email_data = $requset;
         $page = "emails.contact";
         $email = 'info@ukumbitv.com';
@@ -1800,6 +1785,13 @@ class UserController extends Controller {
     public function test()
     {
         return view('r.user.test');
+    }
+
+    public function getAllVideos()
+    {
+        $videos = AdminVideo::with('videoimage')->get();
+
+        return response()->json($videos, 200);
     }
 
 }

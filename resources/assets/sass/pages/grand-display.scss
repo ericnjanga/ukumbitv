@@ -1,0 +1,42 @@
+
+.page-grand-display {
+	.hero, .block-wrap {
+		margin-bottom: 35px;
+	}
+
+	h2, .block-msg {
+	  margin-left: 5px;
+	}
+
+	h2 {
+	  margin-bottom: 2px;
+    font-size: 20px;
+    font-weight: bold;
+	}
+
+	.hero {
+		position: relative;  
+		.fast-links {
+			position: absolute;
+			bottom: 15px;
+			left: 15px; 
+		}
+		.btn {
+			min-width: 150px;
+		}
+	}
+
+	.block-wrap{ 
+	  overflow-x: hidden;
+	  margin-left: -5px;
+	}
+}
+
+.page-grand-display { 
+	padding-left: 20px;
+	padding-right: 0; 
+	@media (min-width: 768px) { 
+  	padding-left: 50px;
+  	padding-right: 0; 
+	}
+}

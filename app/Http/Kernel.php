@@ -62,5 +62,6 @@ class Kernel extends HttpKernel
         'guestmoderator' => \App\Http\Middleware\RedirectIfAuthenticatedModerator::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'UserApiVal' => \App\Http\Middleware\UserApiValidation::class,
+
     ];
 }

@@ -24,7 +24,7 @@ elixir(function(mix) {
 	//Compile all "scss" files into a "style.css" file
 	mix.sass([
         'resources/assets/sass/style.scss' 
-    ], 'public/r/css/style.css');
+    ], 'public/r/css/style0359.css');
 
     
 	//Concatenating local librairies and main js files 
@@ -35,8 +35,9 @@ elixir(function(mix) {
 		'/libs/ng-password.js', //<-- Angularjs password comparison directive
 		//main js files
 		'main.js', 
-		'forms-validation.js'], 
-	'public/js/app.js')
+		'forms-validation.js',
+		'morphSearch.js'], 
+	'public/js/app0359.js')
 });
 
 

@@ -254,23 +254,27 @@ function movie_undislike($btn) {
 //contact form
 function sendContactForm(url) {
 
-    var fd = new FormData;
+  var fd = new FormData;
 
-    fd.append('_token', '{{csrf_token()}}');
-    fd.append('category', $('#q-category').val());
-    fd.append('email', $('#user-email').val());
-    fd.append('message', $('#message-text').val());
-    $('#btn-submit-contact').prop('disabled', true);
+  fd.append('_token', '{{csrf_token()}}');
+  fd.append('category', $('#q-category').val());
+  fd.append('email', $('#user-email').val());
+  fd.append('message', $('#message-text').val());
+  $('#btn-submit-contact').prop('disabled', true);
+
+  //Display spinner
+	var _spinner = $('#ukumbitv-spinner-frame');
+	_spinner.addClass('active');
 
 
-    $.ajax({
-      type: 'POST',
-      url: url,
-      contentType: false,
-      processData: false,
-      data: fd,
-      dataType: 'html',
-      success: function(data){ 
+  $.ajax({
+    type: 'POST',
+    url: url,
+    contentType: false,
+    processData: false,
+    data: fd,
+    dataType: 'html',
+    success: function(data){ 
       // var rep = JSON.parse(data);
 	    var curr_lang = $('body').data('active-lang');
 	    if(curr_lang=='en'){
@@ -290,8 +294,18 @@ function sendContactForm(url) {
       
       $('#btn-submit-contact').prop('disabled', false);
     }
-});
-}
+	}).done(function() {
+		//hide spinner when request is done!
+	  _spinner.removeClass('active');
+	  //and reload page
+	  setTimeout(function(){
+			location.reload();
+		}, 2000); 
+	});
+}//[end] sendContactForm
+
+
+
 
 //user profile
 function updateProfile(url) {

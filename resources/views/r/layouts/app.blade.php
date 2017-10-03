@@ -42,7 +42,7 @@
 	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,500i,700,900">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
-	  <link rel="stylesheet" href="{{asset('r/css/style.css')}}">
+	  <link rel="stylesheet" href="{{asset('r/css/style0359.css')}}">
 	  <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
 	 
 		
@@ -55,6 +55,9 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js" async></script>
 	</head>
 	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}">
+
+		@include('r.chunks._spinner-animated')
+ 
 	 	{{--FACEBOOK CODE--}}
 	  <div id="fb-root"></div>
 	  <script>(function(d, s, id) {
@@ -95,9 +98,17 @@
 
 
 
+  
+
+
+
 
 	@yield('layout')
 
+
+
+
+ 
 
 
 
@@ -109,7 +120,9 @@
 	<!-- CDN libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-animate.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>  
   <!-- Payment platform (stripe) -->
 	<script src="https://js.stripe.com/v2/"></script>
 	<!-- autocomplete librairy -->
@@ -123,7 +136,7 @@
 -->
 
 	<!-- Main JS file -->
-	<script src="{{asset('js/app.js')}}"></script>  
+	<script src="{{asset('js/app0359.js')}}"></script>  
 
 	@yield('scripts')
 

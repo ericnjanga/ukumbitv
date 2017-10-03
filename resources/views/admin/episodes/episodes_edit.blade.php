@@ -51,6 +51,7 @@
                                     <tr>
                                         <th>{{tr('id')}}</th>
                                         <th>Video title</th>
+                                        <th>Vimeo ID</th>
                                         <th>{{tr('action')}}</th>
                                     </tr>
                                     </thead>
@@ -61,6 +62,7 @@
                                         <tr id="row{{$season->id}}">
                                             <td>{{$i+1}}</td>
                                             <td>{{$season->title}}</td>
+                                            <td>{{$season->vimeo_id}}</td>
                                             <td>
                                                 <a href="{{route('admin.editOneEpisode', $season->id)}}" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit record"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                                 <button class="btn btn-danger" onclick="return confirmDelete({{$season->id}});" data-toggle="tooltip" data-placement="top" title="Delete record"><i class="fa fa-trash" aria-hidden="true"></i></button>
