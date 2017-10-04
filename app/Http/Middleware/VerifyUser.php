@@ -36,6 +36,9 @@ class VerifyUser
         if(\Auth::guard('api')->check()){
             return $next($request);
         }
+        if($request->is('videos/*')) {
+            abort(404);
+        }
         $user = $request->user();
         //Check if user is set and is not guest
         if($user && !$user->is_guest) {
