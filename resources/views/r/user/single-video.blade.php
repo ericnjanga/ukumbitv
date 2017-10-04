@@ -19,11 +19,7 @@
 	              	@if($video->video_type !== 'webseries')
 	              		<li>{{$duration}}</li>
 	              	@endif
-<<<<<<< HEAD
-	              	<li>$video->country</li>
-=======
-					<li>{{$video->country}}</li>
->>>>>>> cb28b31df3ed6332575c58df13167ecbb8ddd0a4
+									<li class="bold">{{$video->country}}</li>
 	              </ul>
 	              <div>
 	              	{{$video->direct}}
