@@ -24,7 +24,7 @@ elixir(function(mix) {
 	//Compile all "scss" files into a "style.css" file
 	mix.sass([
         'resources/assets/sass/style.scss' 
-    ], 'public/r/css/style0359.css');
+    ], 'public/r/css/style0365.css');
 
     
 	//Concatenating local librairies and main js files 
@@ -33,11 +33,12 @@ elixir(function(mix) {
 		// '/libs/jQuery.YoutubeBackground.js', 
 		'/libs/anchor-smooth-scroll.js', 
 		'/libs/ng-password.js', //<-- Angularjs password comparison directive
+		// '/libs/angular-lazy-loader.js', //<-- lazy loading images controlled by AngularJS
 		//main js files
 		'main.js', 
 		'forms-validation.js',
 		'morphSearch.js'], 
-	'public/js/app0359.js')
+	'public/js/app0365.js')
 });
 
 

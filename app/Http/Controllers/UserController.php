@@ -236,6 +236,13 @@ class UserController extends Controller {
         }
     }
 
+    public function newVideos()
+    {
+        $recent_videos = Helper::recently_added(WEB);
+
+        return view('r.user.new-videos')->with('recent_videos' , $recent_videos);
+    }
+
     public function getVideosByTag($id)
     {
         $videos = AdminVideo::with('videoimage')

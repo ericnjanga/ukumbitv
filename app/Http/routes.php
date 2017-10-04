@@ -640,6 +640,7 @@ Route::group([], function(){
     Route::get('/trending', 'UserController@trending')->name('user.trending');
 
 
+    Route::get('/new-videos', 'UserController@newVideos');
 
 });
 

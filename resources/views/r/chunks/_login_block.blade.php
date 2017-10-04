@@ -6,12 +6,12 @@
 		<img class="img-circle img-responsive" src="{{Auth::user()->picture}}" alt="">
 
 		<span class="nav-package-info">
-	    <span id="link-update-package" data-route="{{route('user.package')}}">
+	    <!-- <span id="link-update-package" data-route="{{route('user.package')}}">
 				@if(Auth::user()->paymentPlans[0]->flag != 3)
 					{{trans('messages.msg_upgrade')}}
 				@else
 				@endif
-	    </span> 
+	    </span>  -->
 	    <span class="login-text">
 				<span class="bold">
 					{{--username--}}
