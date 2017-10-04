@@ -164,7 +164,8 @@ class UserController extends Controller {
 //dd(Auth::user()->isVerified());
         //#testing
         if(!Auth::check()) {
-            $recent_videos = Helper::recently_added(WEB);
+
+            $recent_videos =  AdminVideo::with('videoimage', 'category', 'likes')->orderby('id' , 'desc')->limit(27)->get();
             return view('r.landing')
                 ->with('recent_videos' , $recent_videos)
                 ->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get());
