@@ -562,7 +562,7 @@
 //                $videos = $videos_query->skip($skip)->take(Setting::get('admin_take_count' ,12))
 //                            ->get();
 //            }
-          $videos =  AdminVideo::with('videoimage', 'category', 'likes')->orderby('id' , 'desc')->limit(24)->get();
+          $videos =  AdminVideo::with('videoimage', 'category', 'likes')->orderby('id' , 'desc')->limit(10)->get();
 
             return $videos;
         }
