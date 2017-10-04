@@ -67,8 +67,9 @@
 		}
 		.list-date-duration {
 			li {
-				&:first-child {
-					margin-right: 25px;
+				margin-right: 25px;
+				&:last-child {
+					margin-right: 0;
 				}
 			}
 		}
