@@ -122,12 +122,12 @@ class UserController extends Controller {
 
         $videoId = $video->id;
 
-        if($request->type = 'webseries') {
+        if($request->type == 'webseries') {
             $episode = Season::where('admin_video_id', $video->id)->where('season_id', 1)->first();
             $videoId = $episode->vimeo_id;
         }
 
-        if($request->type = 'episode') {
+        if($request->type == 'episode') {
             $videoId = $request->episodeId;
         }
 
