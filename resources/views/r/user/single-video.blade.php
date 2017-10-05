@@ -403,7 +403,8 @@
 		          url: '/vimeo-video-play',
 		          data: {
 		            id: {{$video->watchid}},
-		            _token: '{{csrf_token()}}'
+		            _token: '{{csrf_token()}}',
+					type: '{{$video->video_type}}'
 		          },
 		          success: function(data){
 		            _vimeo_flag = true;
@@ -509,7 +510,25 @@
 
       	console.log('[1][#video-episodes] change [',_vimeo_flag,']');
 
-        ukumbitv_video.loadPlayer(this.value); //pass episode ID to player 
+        ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
+          $.ajax({
+              type: 'POST',
+              url: '/vimeo-video-play',
+              data: {
+                  id: {{$video->watchid}},
+                  _token: '{{csrf_token()}}',
+                  type: 'episode',
+				  episodeId: this.value
+              },
+              success: function(data){
+                  var rep = JSON.parse(data);
+                  console.log(rep.status);
+
+              },
+              error: function(data) {
+                  console.error('[UkumbiTV player error] Could not play');
+              }
+          });
 
       	console.log('[2][#video-episodes] change [',_vimeo_flag,']');
         //Displayig the first title

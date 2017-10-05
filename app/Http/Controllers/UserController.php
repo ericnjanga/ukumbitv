@@ -120,11 +120,22 @@ class UserController extends Controller {
         $video->watch_count++;
         $video->save();
 
+        $videoId = $video->id;
+
+        if($request->type = 'webseries') {
+            $episode = Season::where('admin_video_id', $video->id)->where('season_id', 1)->first();
+            $videoId = $episode->vimeo_id;
+        }
+
+        if($request->type = 'episode') {
+            $videoId = $request->episodeId;
+        }
+
         $checkTrialRecord = false;
         $trials = TrialPeriod::where('user_id', Auth::id())->get();
         if(count($trials) < 3) {
             foreach ($trials as $trial) {
-                if ($trial->admin_video_id == $video->id) {
+                if ($trial->admin_video_id == $videoId) {
                     $checkTrialRecord = true;
                 }
             }
@@ -132,7 +143,7 @@ class UserController extends Controller {
             if(!$checkTrialRecord) {
                 $trialRecord = new TrialPeriod();
                 $trialRecord->user_id = Auth::id();
-                $trialRecord->admin_video_id = $video->id;
+                $trialRecord->admin_video_id = $videoId;
                 $trialRecord->save();
             }
         }
@@ -140,7 +151,7 @@ class UserController extends Controller {
         if (Auth::check()) {
             $hist = new UserHistory();
             $hist->user_id = Auth::id();
-            $hist->admin_video_id = $video->id;
+            $hist->admin_video_id = $videoId;
             $hist->status = 0;
             $hist->save();
 
