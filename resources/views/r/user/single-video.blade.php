@@ -521,7 +521,7 @@
               },
               success: function(data){
                   console.log(data.status);
-                  if(data.check === 'ok') {
+                  if(data.status === 'ok') {
                       ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
                   }
               },
