@@ -521,16 +521,14 @@
               },
               success: function(data){
                   console.log(data.status);
-                  if(data.status === 'ok') {
-                      ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
-                  }
+
               },
               error: function(data) {
                   console.error('[UkumbiTV player error] Could not play');
               }
           });
 
-
+        ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
 
 
       	console.log('[2][#video-episodes] change [',_vimeo_flag,']');
