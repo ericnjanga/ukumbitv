@@ -432,10 +432,6 @@
 
 				//[init]* Play next video when the current one ends ---  
 		    _player.on('ended',function(){
-		    	//Let the system know that the player has stopped
-		    	//(any activity related to a stopped player can
-		    	//now take place)
-		      _vimeo_flag = false;
 
 
 		      _episodeIndex = _episodeIndex + 1;
@@ -496,6 +492,10 @@
 			 * ----------------------------------------- 
 			*/
       $('body').on('change', '#video-episodes', function(){ 
+	    	//Let the system know that the player is stopped
+	    	//(any activity related to a stopped player can
+	    	//now take place)
+	      _vimeo_flag = false;
 
       	console.log('[#video-episodes] change');
 
