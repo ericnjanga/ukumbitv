@@ -1,6 +1,12 @@
 @extends('r.layouts.simple')
 @section('content')
 
+
+{{-- Assign "page-login" class to body --}}
+@section('body-class')
+page-login
+@endsection
+
  
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController">
     @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))

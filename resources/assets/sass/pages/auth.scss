@@ -1,5 +1,19 @@
 
 
+body.page-auth {
+  background-image: url(/r/img/bg-reg3.png)!important;
+  background-repeat: repeat-x!important;
+}
+
+
+body.page-login {
+  background-position: -150px top!important;
+}
+body.page-registration {
+  background-position: right top!important;
+}
+
+
 .page-auth {  
   button[type="submit"] {
   	margin-bottom: 30px;
