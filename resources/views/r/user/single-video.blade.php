@@ -496,6 +496,9 @@
 			 * ----------------------------------------- 
 			*/
       $('body').on('change', '#video-episodes', function(){ 
+
+      	console.log('[#video-episodes] change');
+
         ukumbitv_video.loadPlayer(this.value); //pass episode ID to player 
         //Displayig the first title
         $('#active-episode-title').html( $(this).find(':selected').data('title') ); 
