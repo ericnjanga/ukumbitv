@@ -497,9 +497,11 @@
 	    	//now take place)
 	      _vimeo_flag = false;
 
-      	console.log('[#video-episodes] change [',_vimeo_flag,']');
+      	console.log('[1][#video-episodes] change [',_vimeo_flag,']');
 
         ukumbitv_video.loadPlayer(this.value); //pass episode ID to player 
+
+      	console.log('[2][#video-episodes] change [',_vimeo_flag,']');
         //Displayig the first title
         $('#active-episode-title').html( $(this).find(':selected').data('title') ); 
       });
