@@ -399,6 +399,7 @@
 		          success: function(data){
 		            _vimeo_flag = true;
 		            _player.play();
+		      			console.log('>>[3]on --- rights ok');
 		          }, 
 		          error: function(data) {
 		            console.error('[UkumbiTV player error] Could not play');
