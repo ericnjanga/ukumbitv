@@ -385,10 +385,10 @@
 				//* priviledges to play the video
 				//debugger;\$checkTrial
 		    _player.on('play', function() {  
-					console.log('>>[1]on.play');
+					console.log('>>[1]on.play [',_vimeo_flag,']');
 		      if (_vimeo_flag == true) return;
 		      _player.pause().then(function() { 
-		      	console.log('>>[2]on --- checking user rights');
+		      	console.log('>>[2]on --- checking user rights [',_vimeo_flag,']');
 		        $.ajax({
 		          type: 'POST',
 		          url: '/vimeo-video-play',
@@ -399,7 +399,7 @@
 		          success: function(data){
 		            _vimeo_flag = true;
 		            _player.play();
-		      			console.log('>>[3]on --- rights ok');
+		      			console.log('>>[3]on --- rights ok [',_vimeo_flag,']');
 		          }, 
 		          error: function(data) {
 		            console.error('[UkumbiTV player error] Could not play');
@@ -497,7 +497,7 @@
 	    	//now take place)
 	      _vimeo_flag = false;
 
-      	console.log('[#video-episodes] change');
+      	console.log('[#video-episodes] change [',_vimeo_flag,']'
 
         ukumbitv_video.loadPlayer(this.value); //pass episode ID to player 
         //Displayig the first title
