@@ -1,12 +1,6 @@
 @extends('r.layouts.simple')
 @section('content')
 
-
-{{-- Assign "page-registration" class to body --}}
-@section('body-class')
-page-registration
-@endsection
-
  
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController">
     @if(Session::has('status'))

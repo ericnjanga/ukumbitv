@@ -1,5 +1,15 @@
 @extends('r.layouts.simple')
+
+
+{{-- Assign "page-registration" class to body --}}
+@section('body-class')
+page-authentication page-registration
+@endsection
+
+
 @section('content')
+
+ 
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController">  
     <div class="text-center">
     	<h1>{{trans('messages.auth_signup')}}</h1>
