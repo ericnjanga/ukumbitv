@@ -398,8 +398,9 @@
 		          },
 		          success: function(data){
 		            _vimeo_flag = true;
+		      			console.log('>>[3-a]_vimeo_flag = true : [',_vimeo_flag,']');
 		            _player.play();
-		      			console.log('>>[3]on --- rights ok [',_vimeo_flag,']');
+		      			console.log('>>[3-b]on --- rights ok [',_vimeo_flag,']');
 		          }, 
 		          error: function(data) {
 		            console.error('[UkumbiTV player error] Could not play');
