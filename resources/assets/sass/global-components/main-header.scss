@@ -19,8 +19,12 @@
 	    top: 15px;
 	    right: -5px;
   	}
-  	.nav-user-tmb {
-  		width: 120px;
+
+  	.nav-user-tmb { 
+	    display: flex;
+	    height: 40px;
+	    align-items: center;
+  		width: 130px;
   		color: #666;
   		&:hover{
   			color: $color-darkred;
@@ -128,14 +132,17 @@
   .nav-package-info {
   	margin-right:10px;
   	.login-text {
+  		font-size: 10px;
+    	line-height: 10px;
   		span {
   			display: block;
   		}
+  		display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    min-height: 30px;
   	}
-  	.login-text-vidcounter {
-  		font-size: 10px;
-    	line-height: 10px;
-  	}
+  	 
   }
 
   @media (min-width: 768px) {
