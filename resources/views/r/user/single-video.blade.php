@@ -359,7 +359,7 @@
 				_list_episodes = newArray; 
 			}
 			var _readyToplay = function (id) {
-				console.log('>>_readyToplay');
+				console.log('>>_readyToplay [',_vimeo_flag,']');
         _player.play().catch(function(error) {
             console.error('[UkumbiTV player error] : ', error);
         });
