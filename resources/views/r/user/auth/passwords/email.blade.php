@@ -2,7 +2,7 @@
 @section('content')
 
 
-{{-- Assign "page-login" class to body --}}
+{{-- Assign "page-registration" class to body --}}
 @section('body-class')
 page-registration
 @endsection

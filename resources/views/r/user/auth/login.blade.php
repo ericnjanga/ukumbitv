@@ -1,11 +1,15 @@
 @extends('r.layouts.simple')
-@section('content')
+
+
 
 
 {{-- Assign "page-login" class to body --}}
 @section('body-class')
 page-login
 @endsection
+
+
+@section('content')
 
  
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController">
