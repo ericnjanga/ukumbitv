@@ -510,7 +510,6 @@
 
       	console.log('[1][#video-episodes] change [',_vimeo_flag,']');
 
-        ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
           $.ajax({
               type: 'POST',
               url: '/vimeo-video-play',
@@ -518,18 +517,21 @@
                   id: {{$video->watchid}},
                   _token: '{{csrf_token()}}',
                   type: 'episode',
-				  episodeId: this.value
+                  episodeId: this.value
               },
               success: function(data){
                   console.log(data.status);
-					if(data.status === 'ok') {
-                        _vimeo_flag = false;
-					}
+                  if(data.check === 'ok') {
+                      ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
+                  }
               },
               error: function(data) {
                   console.error('[UkumbiTV player error] Could not play');
               }
           });
+
+
+
 
       	console.log('[2][#video-episodes] change [',_vimeo_flag,']');
         //Displayig the first title

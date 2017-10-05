@@ -134,18 +134,18 @@ class UserController extends Controller {
         $checkTrialRecord = false;
         $trials = TrialPeriod::where('user_id', Auth::id())->get();
         if(count($trials) < 3) {
-            foreach ($trials as $trial) {
-                if ($trial->admin_video_id == $videoId) {
-                    $checkTrialRecord = true;
-                }
-            }
-
-            if(!$checkTrialRecord) {
+//            foreach ($trials as $trial) {
+//                if ($trial->admin_video_id == $videoId) {
+//                    $checkTrialRecord = true;
+//                }
+//            }
+//
+//            if(!$checkTrialRecord) {
                 $trialRecord = new TrialPeriod();
                 $trialRecord->user_id = Auth::id();
                 $trialRecord->admin_video_id = $videoId;
                 $trialRecord->save();
-            }
+//            }
         }
 
         if (Auth::check()) {
