@@ -386,7 +386,7 @@
 				//debugger;\$checkTrial
 		    _player.on('play', function() {  
 					console.log('>>[1]on.play');
-		      // if (_vimeo_flag == true) return;
+		      if (_vimeo_flag == true) return;
 		      _player.pause().then(function() { 
 		      	console.log('>>[2]on --- checking user rights');
 		        $.ajax({
@@ -397,7 +397,7 @@
 		            _token: '{{csrf_token()}}'
 		          },
 		          success: function(data){
-		            // _vimeo_flag = true;
+		            _vimeo_flag = true;
 		            _player.play();
 		          }, 
 		          error: function(data) {
@@ -431,6 +431,12 @@
 
 				//[init]* Play next video when the current one ends ---  
 		    _player.on('ended',function(){
+		    	//Let the system know that the player has stopped
+		    	//(any activity related to a stopped player can
+		    	//now take place)
+		      _vimeo_flag = false;
+
+
 		      _episodeIndex = _episodeIndex + 1;
 		      var _nextVideoID = _list_episodes[_episodeIndex];
 		      //Change episode dropdown to the next episode value and trigger the 'change' event
