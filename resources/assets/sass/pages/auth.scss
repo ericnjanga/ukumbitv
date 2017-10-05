@@ -1,5 +1,28 @@
 
 
+body.page-authentication {
+	.page-main { 
+		padding-top: 50px;
+		padding-bottom: 40px;
+	  background-image: url(/r/img/bg-reg4.png)!important;
+	  background-repeat: repeat-x!important;
+	} 
+	&.page-login {
+		.page-main {
+			background-position: -150px bottom!important;
+		} 
+	}
+	&.page-registration {
+		.page-main {
+			background-position: right bottom!important;
+		} 
+	}
+}
+
+
+
+
+
 .page-auth {  
   button[type="submit"] {
   	margin-bottom: 30px;

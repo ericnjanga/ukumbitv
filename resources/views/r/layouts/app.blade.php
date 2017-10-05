@@ -42,7 +42,7 @@
 	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,500i,700,900">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
-	  <link rel="stylesheet" href="{{asset('r/css/style0367.css')}}">
+	  <link rel="stylesheet" href="{{asset('r/css/style0375.css')}}">
 	  <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
 	 
 		
@@ -54,7 +54,7 @@
 		<!-- lazy loader for images (including responsive images) -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js" async></script>
 	</head>
-	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}">
+	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}" class="@yield('body-class')">
 
 		@include('r.chunks._spinner-animated')
  
@@ -136,7 +136,7 @@
 -->
 
 	<!-- Main JS file -->
-	<script src="{{asset('js/app0367.js')}}"></script>  
+	<script src="{{asset('js/app0375.js')}}"></script>  
 
 	@yield('scripts')
 

@@ -1,4 +1,12 @@
 @extends('r.layouts.simple')
+
+
+{{-- Assign "page-login" class to body --}}
+@section('body-class')
+page-authentication page-login
+@endsection
+
+
 @section('content')
 
  
