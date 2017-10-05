@@ -521,6 +521,7 @@
 				  episodeId: this.value
               },
               success: function(data){
+                  console.log(data);
                   var rep = JSON.parse(data);
                   console.log(rep.status);
 
