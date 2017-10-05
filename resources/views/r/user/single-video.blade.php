@@ -360,7 +360,11 @@
 			}
 			var _readyToplay = function (id) {
 				console.log('>>_readyToplay id[',id,'] _vimeo_flag[', _vimeo_flag,']');
-        _player.play().catch(function(error) {
+        _player.play()
+        	.then(function() {
+					  console.log('***** player played!');
+					})
+        	.catch(function(error) {
             console.error('[UkumbiTV player error] : ', error);
         });
       };
