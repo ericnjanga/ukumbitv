@@ -386,6 +386,7 @@
 		    _player.on('play', function() { 
 		      if (_vimeo_flag == true) return;
 		      _player.pause().then(function() { 
+		      	console.log('>>> checking is user has right');
 		        $.ajax({
 		          type: 'POST',
 		          url: '/vimeo-video-play',
