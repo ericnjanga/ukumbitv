@@ -359,6 +359,7 @@
 				_list_episodes = newArray; 
 			}
 			var _readyToplay = function (id) {
+				console.log('>>_readyToplay');
         _player.play().catch(function(error) {
             console.error('[UkumbiTV player error] : ', error);
         });
@@ -383,10 +384,11 @@
 				//* until the server confirms the user has the
 				//* priviledges to play the video
 				//debugger;\$checkTrial
-		    _player.on('play', function() { 
+		    _player.on('play', function() {  
+					console.log('>>[1]on.play');
 		      if (_vimeo_flag == true) return;
 		      _player.pause().then(function() { 
-		      	console.log('>>> checking is user has right');
+		      	console.log('>>[2]on --- checking user rights');
 		        $.ajax({
 		          type: 'POST',
 		          url: '/vimeo-video-play',
