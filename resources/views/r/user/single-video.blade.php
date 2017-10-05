@@ -520,8 +520,10 @@
                   episodeId: this.value
               },
               success: function(data){
-                  console.log(data.status);
-
+                  console.log(data.trial);
+					if(data.trial === false) {
+                        location.reload();
+					}
               },
               error: function(data) {
                   console.error('[UkumbiTV player error] Could not play');

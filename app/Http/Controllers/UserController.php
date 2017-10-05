@@ -131,7 +131,7 @@ class UserController extends Controller {
             $videoId = $request->episodeId;
         }
 
-        $checkTrialRecord = false;
+
         $trials = TrialPeriod::where('user_id', Auth::id())->get();
         if(count($trials) < 3) {
 //            foreach ($trials as $trial) {
@@ -146,6 +146,9 @@ class UserController extends Controller {
                 $trialRecord->admin_video_id = $videoId;
                 $trialRecord->save();
 //            }
+            $checkTrialRecord = true;
+        } else {
+            $checkTrialRecord = false;
         }
 
         if (Auth::check()) {
@@ -155,7 +158,7 @@ class UserController extends Controller {
             $hist->status = 0;
             $hist->save();
 
-            return response()->json(['status' => 'ok'], 200);
+            return response()->json(['status' => 'ok', 'trial' => $checkTrialRecord], 200);
         } else {
             return response()->json(['status' => 'error'], 500);
         }
