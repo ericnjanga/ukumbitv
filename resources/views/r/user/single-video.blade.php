@@ -521,10 +521,10 @@
 				  episodeId: this.value
               },
               success: function(data){
-                  console.log(data);
-                  var rep = JSON.parse(data);
-                  console.log(rep.status);
-
+                  console.log(data.status);
+					if(data.status === 'ok') {
+                        _vimeo_flag = false;
+					}
               },
               error: function(data) {
                   console.error('[UkumbiTV player error] Could not play');
