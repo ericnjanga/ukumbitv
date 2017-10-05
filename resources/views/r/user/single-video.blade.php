@@ -386,7 +386,7 @@
 				//debugger;\$checkTrial
 		    _player.on('play', function() {  
 					console.log('>>[1]on.play');
-		      if (_vimeo_flag == true) return;
+		      // if (_vimeo_flag == true) return;
 		      _player.pause().then(function() { 
 		      	console.log('>>[2]on --- checking user rights');
 		        $.ajax({
@@ -397,7 +397,7 @@
 		            _token: '{{csrf_token()}}'
 		          },
 		          success: function(data){
-		            _vimeo_flag = true;
+		            // _vimeo_flag = true;
 		            _player.play();
 		          }, 
 		          error: function(data) {
