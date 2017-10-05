@@ -1,17 +1,24 @@
 
 
 body.page-authentication {
-  background-image: url(/r/img/bg-reg3.png)!important;
-  background-repeat: repeat-x!important;
+	.page { 
+	  background-image: url(/r/img/bg-reg3.png)!important;
+	  background-repeat: repeat-x!important;
+	}
+	&.page-login {
+		.page {
+			background-position: -150px bottom!important;
+		} 
+	}
+	&.page-registration {
+		.page {
+			background-position: right bottom!important;
+		} 
+	}
 }
 
 
-body.page-login {
-  background-position: -150px top!important;
-}
-body.page-registration {
-  background-position: right top!important;
-}
+
 
 
 .page-auth {  
