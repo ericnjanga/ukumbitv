@@ -497,7 +497,7 @@
 	    	//now take place)
 	      _vimeo_flag = false;
 
-      	console.log('[#video-episodes] change [',_vimeo_flag,']'
+      	console.log('[#video-episodes] change [',_vimeo_flag,']');
 
         ukumbitv_video.loadPlayer(this.value); //pass episode ID to player 
         //Displayig the first title
