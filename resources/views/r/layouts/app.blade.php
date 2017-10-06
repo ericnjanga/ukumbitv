@@ -150,52 +150,63 @@
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
-			var cookie_reminder = Cookies.get('ukumbitv-emailconfirm-reminder');
-			console.log('>>>cookie_reminder=', cookie_reminder);
 			/**
-			 * Displaying an alert message asking user to confirm
-			 * her/his email address
+			 * Displaying an alert message asking user to confirm her/his email address
+			 * 1) Alert never displays on the confirmation page
+			 * 2) Alert only displays once every "days_expiry" days
 			*/
-			var msg = $('#msg-auth-confirm-reminder'),
-					msg1 = msg.data('text1'),
-					msg2 = msg.data('text2'),
-					msg_btn_yes = msg.data('btn-yes'),
-					msg_btn_no = msg.data('btn-no'),
-					route_url = msg.data('confirm-route');
- 					
- 					//Alert will only display if user is not on the "confirmation email page"
-					if(document.location.href.indexOf('confirm-user-email') < 0) {
-						swal({
-						  title: msg1,
-						  text: msg2,
-						  type: 'warning',
-						  showCancelButton: true,
-						  confirmButtonColor: '#3085d6',
-						  cancelButtonColor: '#d33',
-						  confirmButtonText: msg_btn_yes,
-						  cancelButtonText: msg_btn_no,
-						  confirmButtonClass: 'btn btn-success',
-						  cancelButtonClass: 'btn btn-default',
-						  buttonsStyling: false
-						}).then(function () {
-							document.location.href = route_url;
-						  // swal(
-						  //   'Deleted!',
-						  //   'Your file has been deleted.',
-						  //   'success'
-						  // )
-						}, function (dismiss) {
-						  // // dismiss can be 'cancel', 'overlay',
-						  // // 'close', and 'timer'
-						  // if (dismiss === 'cancel') {
-						  //   swal(
-						  //     'Cancelled',
-						  //     'Your imaginary file is safe :)',
-						  //     'error'
-						  //   )
-						  // }
-						}); 
-					}//[end] "confirmation email page" 
+			var cki_reminder_name = 'ukb-emailconfirm-reminder',
+				cki_reminder = Cookies.get(cki_reminder_name);
+				console.log('>>>cki_reminder=', cki_reminder);
+
+			//Display alert only if cookie expires ...
+			if(cki_reminder==undefined){
+				var msg = $('#msg-auth-confirm-reminder'),
+				msg1 		= msg.data('text1'),
+				msg2 		= msg.data('text2'),
+				msg_btn_yes = msg.data('btn-yes'),
+				msg_btn_no 	= msg.data('btn-no'),
+				route_url 	= msg.data('confirm-route'),
+				days_expiry = 3;
+
+				//Set cookie to expire after "days_expiry" days
+				Cookies.set(cki_reminder_name, true, { expires: days_expiry });
+			
+				//Alert will only display if user is not on the "confirmation email page"
+				if(document.location.href.indexOf('confirm-user-email') < 0) {
+					swal({
+					  title: msg1,
+					  text: msg2,
+					  type: 'warning',
+					  showCancelButton: true,
+					  confirmButtonColor: '#3085d6',
+					  cancelButtonColor: '#d33',
+					  confirmButtonText: msg_btn_yes,
+					  cancelButtonText: msg_btn_no,
+					  confirmButtonClass: 'btn btn-success',
+					  cancelButtonClass: 'btn btn-default',
+					  buttonsStyling: false
+					}).then(function () {
+						document.location.href = route_url;
+					  // swal(
+					  //   'Deleted!',
+					  //   'Your file has been deleted.',
+					  //   'success'
+					  // )
+					}, function (dismiss) {
+					  // // dismiss can be 'cancel', 'overlay',
+					  // // 'close', and 'timer'
+					  // if (dismiss === 'cancel') {
+					  //   swal(
+					  //     'Cancelled',
+					  //     'Your imaginary file is safe :)',
+					  //     'error'
+					  //   )
+					  // }
+					}); 
+				}//[end] "confirmation email page" 
+			}//[end] Display alert only if cookie expires ...
+			
 		</script>
 			<!-- <div class="alert__force-notice alert alert-info text-center" role="alert">
 				{{trans('messages.auth_confirm_reminder1')}}
