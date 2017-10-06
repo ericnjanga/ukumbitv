@@ -156,8 +156,7 @@
 			 * 2) Alert only displays once every "days_expiry" days
 			*/
 			var cki_reminder_name = 'ukb-emailconfirm-reminder',
-				cki_reminder = Cookies.get(cki_reminder_name);
-				// console.log('>>>cki_reminder=', cki_reminder);
+				cki_reminder = Cookies.get(cki_reminder_name); 
 
 			//Display alert only if cookie expires ...
 			if(cki_reminder==undefined){
