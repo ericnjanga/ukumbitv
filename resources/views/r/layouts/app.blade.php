@@ -136,6 +136,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
   <!-- Alerts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.js"></script>
+  <!-- JS cookie librairy -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
   <!--
 	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.js"></script>
 	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.playlist.js"></script>
@@ -148,6 +150,8 @@
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
+			var cookie_reminder = Cookies.get('ukumbitv-emailconfirm-reminder');
+			console.log('>>>cookie_reminder=', cookie_reminder);
 			/**
 			 * Displaying an alert message asking user to confirm
 			 * her/his email address
