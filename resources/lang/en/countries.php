@@ -11,7 +11,7 @@ return [
     // 'Cabo Verde',
     'Cameroon',
     // 'Central African Republic (CAR)',
-    // 'Chad',
+    'Chad',
     // 'Comoros',
     // 'Democratic Republic of the Congo',
     // 'Republic of the Congo',
