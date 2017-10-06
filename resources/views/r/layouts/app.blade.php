@@ -56,11 +56,13 @@
 	</head>
 	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}" class="@yield('body-class')">
 		
-		<!-- User email confirmation -->
+		<!-- USER EMAIL CONFIRMATION -->
+		<!-- USER EMAIL CONFIRMATION -->
 		<!-- Information allowing the display the alert message asking the user to confirm her/his email address -->
 		<span id="msg-auth-confirm-reminder" data-text1="{{trans('messages.auth_confirm_reminder1')}}" data-text2="{{trans('messages.auth_confirm_reminder2')}}" data-btn-yes="{{trans('messages.auth_confirm_btn_yes')}}" data-btn-no="{{trans('messages.auth_confirm_btn_no')}}" data-confirm-route="{{route('user.confirm-user-email')}}"></span> 
 		<!-- Information allowing the display the alert message asking the user to confirm her/his email address -->
-		<!-- User email confirmation -->
+		<!-- USER EMAIL CONFIRMATION -->
+		<!-- USER EMAIL CONFIRMATION -->
 
 		@include('r.chunks._spinner-animated')
  
@@ -137,16 +139,15 @@
   <!-- Alerts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.js"></script>
   <!-- JS cookie librairy -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
-  <!--
-	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.js"></script>
-	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.playlist.js"></script>
--->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script> 
 
 	<!-- Main JS file -->
 	<script src="{{asset('js/app0378.js')}}"></script> 
 
 
+		
+	<!-- USER EMAIL CONFIRMATION -->
+	<!-- USER EMAIL CONFIRMATION -->
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
@@ -206,13 +207,11 @@
 				}//[end] "confirmation email page" 
 			}//[end] Display alert only if cookie expires ...
 			
-		</script>
-			<!-- <div class="alert__force-notice alert alert-info text-center" role="alert">
-				{{trans('messages.auth_confirm_reminder1')}}
-				<a href="{{route('user.confirm-user-email')}}"><b>{{trans('messages.auth_confirm_reminder2')}}</b></a> <i class="fa fa-smile-o" aria-hidden="true"></i>
-			</div> -->
+		</script> 
 		@endif
 	@endif
+	<!-- USER EMAIL CONFIRMATION -->
+	<!-- USER EMAIL CONFIRMATION -->
 
 
 
