@@ -56,8 +56,9 @@
 	</head>
 	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}" class="@yield('body-class')">
 
-		
-		<span id="msg-auth-confirm-reminder">{{trans('messages.auth_confirm_reminder1')}} {{trans('messages.auth_confirm_reminder2')}}</span>
+
+		<span id="msg-auth-confirm-reminder1">{{trans('messages.auth_confirm_reminder1')}}</span>
+		<span id="msg-auth-confirm-reminder2">{{trans('messages.auth_confirm_reminder2')}}</span>
 
 		@include('r.chunks._spinner-animated')
  
@@ -145,7 +146,9 @@
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
-			swal ( "Oops" ,  $('#msg-auth-confirm-reminder').text() ,  "info" )
+			var msg1 = $('#msg-auth-confirm-reminder2').text(),
+					msg2 = $('#msg-auth-confirm-reminder2').text();
+			swal(msg1, msg2, 'info');
 		</script>
 			<!-- <div class="alert__force-notice alert alert-info text-center" role="alert">
 				{{trans('messages.auth_confirm_reminder1')}}
