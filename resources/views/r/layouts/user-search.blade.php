@@ -8,7 +8,10 @@
 
   	@if(Auth::check())
 			@if(!Auth::user()->isVerified())
-			<script>alert('?????');</script>
+			<script>
+			
+		    		swal("Oh non!", "Difficulté à mettre à jour votre mot de passe. Veuillez réessayer plus tard", "error");
+			</script>
 			@endif
 		@endif
 
