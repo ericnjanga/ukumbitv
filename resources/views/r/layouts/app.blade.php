@@ -42,7 +42,7 @@
 	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,500i,700,900">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css">
-	  <link rel="stylesheet" href="{{asset('r/css/style0377.css')}}">
+	  <link rel="stylesheet" href="{{asset('r/css/style0378.css')}}">
 	  <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
 	 
 		
@@ -57,7 +57,7 @@
 	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}" class="@yield('body-class')">
 
 
-		<span id="msg-auth-confirm-reminder" data-text1="{{trans('messages.auth_confirm_reminder1')}}" data-text2="{{trans('messages.auth_confirm_reminder2')}}" data-btn-yes="{{trans('messages.auth_confirm_btn_yes')}}" data-btn-no="{{trans('messages.auth_confirm_btn_no')}}"></span> 
+		<span id="msg-auth-confirm-reminder" data-text1="{{trans('messages.auth_confirm_reminder1')}}" data-text2="{{trans('messages.auth_confirm_reminder2')}}" data-btn-yes="{{trans('messages.auth_confirm_btn_yes')}}" data-btn-no="{{trans('messages.auth_confirm_btn_no')}}" data-confirm-route="{{route('user.confirm-user-email')}}"></span> 
 
 		@include('r.chunks._spinner-animated')
  
@@ -139,7 +139,7 @@
 -->
 
 	<!-- Main JS file -->
-	<script src="{{asset('js/app0377.js')}}"></script> 
+	<script src="{{asset('js/app0378.js')}}"></script> 
 
 
 	@if(Auth::check())
@@ -149,7 +149,8 @@
 					msg1 = msg.data('text1'),
 					msg2 = msg.data('text2'),
 					msg_btn_yes = msg.data('btn-yes'),
-					msg_btn_no = msg.data('btn-no');
+					msg_btn_no = msg.data('btn-no'),
+					route_url = msg.data('confirm-route');
 
 
 
@@ -187,24 +188,25 @@ swal({
   confirmButtonText: msg_btn_yes,
   cancelButtonText: msg_btn_no,
   confirmButtonClass: 'btn btn-success',
-  cancelButtonClass: 'btn btn-danger',
+  cancelButtonClass: 'btn btn-default',
   buttonsStyling: false
 }).then(function () {
-  swal(
-    'Deleted!',
-    'Your file has been deleted.',
-    'success'
-  )
+	document.location.href = route_url;
+  // swal(
+  //   'Deleted!',
+  //   'Your file has been deleted.',
+  //   'success'
+  // )
 }, function (dismiss) {
-  // dismiss can be 'cancel', 'overlay',
-  // 'close', and 'timer'
-  if (dismiss === 'cancel') {
-    swal(
-      'Cancelled',
-      'Your imaginary file is safe :)',
-      'error'
-    )
-  }
+  // // dismiss can be 'cancel', 'overlay',
+  // // 'close', and 'timer'
+  // if (dismiss === 'cancel') {
+  //   swal(
+  //     'Cancelled',
+  //     'Your imaginary file is safe :)',
+  //     'error'
+  //   )
+  // }
 })
 
 
