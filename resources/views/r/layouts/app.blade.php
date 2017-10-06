@@ -56,6 +56,9 @@
 	</head>
 	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}" class="@yield('body-class')">
 
+		
+		<span id="msg-auth-confirm-reminder">{{trans('messages.auth_confirm_reminder1')}} {{trans('messages.auth_confirm_reminder2')}}</span>
+
 		@include('r.chunks._spinner-animated')
  
 	 	{{--FACEBOOK CODE--}}
@@ -141,7 +144,6 @@
 
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
-		<span id="msg-auth-confirm-reminder">{{trans('messages.auth_confirm_reminder1')}} {{trans('messages.auth_confirm_reminder2')}}</span>
 		<script>
 			swal ( "Oops" ,  $('#msg-auth-confirm-reminder').text() ,  "info" )
 		</script>
