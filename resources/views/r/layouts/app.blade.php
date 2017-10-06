@@ -146,8 +146,8 @@
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
-			// var msg1 = $('#msg-auth-confirm-reminder1').data('text'),
-			// 		msg2 = $('#msg-auth-confirm-reminder2').data('text');
+			var msg1 = $('#msg-auth-confirm-reminder1').data('text'),
+					msg2 = $('#msg-auth-confirm-reminder2').data('text');
 			// 			// swal(msg1, msg2, 'info');
 			// 			swal({
 			//   title: msg1,
@@ -168,8 +168,8 @@
 			// })
 
 swal({
-  title: 'Are you sure?',
-  text: "You won't be able to revert this!",
+  title: msg1,
+  text: msg2,
   type: 'warning',
   showCancelButton: true,
   confirmButtonColor: '#3085d6',
