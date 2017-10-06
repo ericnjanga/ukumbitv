@@ -358,15 +358,20 @@
 		    _episodeIndex 	= 0;
 				_list_episodes = newArray; 
 			}
-			var _readyToplay = function (id) {
-        _player.play().catch(function(error) {
+			var _readyToplay = function (id) { 
+        _player.play() 
+        	.catch(function(error) {
             console.error('[UkumbiTV player error] : ', error);
         });
       };
  
       //Load VIMEO player with the right episode id
       var _loadPlayer = function(episodeID){ 
-				_player.loadVideo(episodeID).then(_readyToplay).catch(function(error){
+				_player.loadVideo(episodeID)
+					.then(function(){ 
+						_readyToplay();
+					})
+					.catch(function(error){
 					console.error('[UkumbiTV player error] : ', error);
 				});
       };
@@ -383,19 +388,20 @@
 				//* until the server confirms the user has the
 				//* priviledges to play the video
 				//debugger;\$checkTrial
-		    _player.on('play', function() { 
+		    _player.on('play', function() {   
 		      if (_vimeo_flag == true) return;
-		      _player.pause().then(function() { 
+		      _player.pause().then(function() {  
 		        $.ajax({
 		          type: 'POST',
 		          url: '/vimeo-video-play',
 		          data: {
 		            id: {{$video->watchid}},
-		            _token: '{{csrf_token()}}'
+		            _token: '{{csrf_token()}}',
+					type: '{{$video->video_type}}'
 		          },
 		          success: function(data){
-		            _vimeo_flag = true;
-		            _player.play();
+		            _vimeo_flag = true; 
+		            _player.play(); 
 		          }, 
 		          error: function(data) {
 		            console.error('[UkumbiTV player error] Could not play');
@@ -428,6 +434,8 @@
 
 				//[init]* Play next video when the current one ends ---  
 		    _player.on('ended',function(){
+
+
 		      _episodeIndex = _episodeIndex + 1;
 		      var _nextVideoID = _list_episodes[_episodeIndex];
 		      //Change episode dropdown to the next episode value and trigger the 'change' event
@@ -486,7 +494,32 @@
 			 * ----------------------------------------- 
 			*/
       $('body').on('change', '#video-episodes', function(){ 
-        ukumbitv_video.loadPlayer(this.value); //pass episode ID to player 
+	    	//Let the system know that the player is stopped
+	    	//(any activity related to a stopped player can
+	    	//now take place)
+	      _vimeo_flag = false; 
+
+          $.ajax({
+              type: 'POST',
+              url: '/vimeo-video-play',
+              data: {
+                  id: {{$video->watchid}},
+                  _token: '{{csrf_token()}}',
+                  type: 'episode',
+                  episodeId: this.value
+              },
+              success: function(data){ 
+								if(data.trial === false) {
+			            location.reload();
+								}
+              },
+              error: function(data) {
+                  console.error('[UkumbiTV player error] Could not play');
+              }
+          });
+
+        ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
+ 
         //Displayig the first title
         $('#active-episode-title').html( $(this).find(':selected').data('title') ); 
       });

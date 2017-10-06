@@ -15,7 +15,7 @@ Route::get('setlocale/{locale}', function ($locale) {
 });
 
 Route::group(['prefix' => 'api/v1', 'middleware' => 'auth:api'], function () {
-    Route::get('/test', 'ApiController@test');
+    Route::get('/videos', 'ApiController@getAllVideos');
 });
 
 Route::group(['prefix' => 'api/v1'], function () {

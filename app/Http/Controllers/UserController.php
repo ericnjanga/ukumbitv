@@ -120,31 +120,45 @@ class UserController extends Controller {
         $video->watch_count++;
         $video->save();
 
-        $checkTrialRecord = false;
+        $videoId = $video->id;
+
+        if($request->type == 'webseries') {
+            $episode = Season::where('admin_video_id', $video->id)->where('season_id', 1)->first();
+            $videoId = $episode->vimeo_id;
+        }
+
+        if($request->type == 'episode') {
+            $videoId = $request->episodeId;
+        }
+
+
         $trials = TrialPeriod::where('user_id', Auth::id())->get();
         if(count($trials) < 3) {
-            foreach ($trials as $trial) {
-                if ($trial->admin_video_id == $video->id) {
-                    $checkTrialRecord = true;
-                }
-            }
-
-            if(!$checkTrialRecord) {
+//            foreach ($trials as $trial) {
+//                if ($trial->admin_video_id == $videoId) {
+//                    $checkTrialRecord = true;
+//                }
+//            }
+//
+//            if(!$checkTrialRecord) {
                 $trialRecord = new TrialPeriod();
                 $trialRecord->user_id = Auth::id();
-                $trialRecord->admin_video_id = $video->id;
+                $trialRecord->admin_video_id = $videoId;
                 $trialRecord->save();
-            }
+//            }
+            $checkTrialRecord = true;
+        } else {
+            $checkTrialRecord = false;
         }
 
         if (Auth::check()) {
             $hist = new UserHistory();
             $hist->user_id = Auth::id();
-            $hist->admin_video_id = $video->id;
+            $hist->admin_video_id = $videoId;
             $hist->status = 0;
             $hist->save();
 
-            return response()->json(['status' => 'ok'], 200);
+            return response()->json(['status' => 'ok', 'trial' => $checkTrialRecord], 200);
         } else {
             return response()->json(['status' => 'error'], 500);
         }

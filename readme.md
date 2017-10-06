@@ -1,5 +1,7 @@
 #StreamHash V1.2 #
+## API docs
 
+[API](docs/index.md)
 ### Features and Changes: ###
 
 * Code Optimization
