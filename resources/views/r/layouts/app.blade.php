@@ -146,26 +146,58 @@
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
-			var msg1 = $('#msg-auth-confirm-reminder1').data('text'),
-					msg2 = $('#msg-auth-confirm-reminder2').data('text');
-			// swal(msg1, msg2, 'info');
-			swal({
-  title: msg1,
-  type: 'info',
-  html:
-    'You can use <b>bold text</b>, ' +
-    '<a href="//github.com">links</a> ' +
-    'and other HTML tags',
-  showCloseButton: true,
+			// var msg1 = $('#msg-auth-confirm-reminder1').data('text'),
+			// 		msg2 = $('#msg-auth-confirm-reminder2').data('text');
+			// 			// swal(msg1, msg2, 'info');
+			// 			swal({
+			//   title: msg1,
+			//   type: 'info',
+			//   html:
+			//     'You can use <b>bold text</b>, ' +
+			//     '<a href="//github.com">links</a> ' +
+			//     'and other HTML tags',
+			//   showCloseButton: true,
+			//   showCancelButton: true,
+			//   focusConfirm: false,
+			//   confirmButtonText:
+			//     '<i class="fa fa-thumbs-up"></i> Great!',
+			//   confirmButtonAriaLabel: 'Thumbs up, great!',
+			//   cancelButtonText:
+			//   '<i class="fa fa-thumbs-down"></i>',
+			//   cancelButtonAriaLabel: 'Thumbs down',
+			// })
+
+swal({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  type: 'warning',
   showCancelButton: true,
-  focusConfirm: false,
-  confirmButtonText:
-    '<i class="fa fa-thumbs-up"></i> Great!',
-  confirmButtonAriaLabel: 'Thumbs up, great!',
-  cancelButtonText:
-  '<i class="fa fa-thumbs-down"></i>',
-  cancelButtonAriaLabel: 'Thumbs down',
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!',
+  cancelButtonText: 'No, cancel!',
+  confirmButtonClass: 'btn btn-success',
+  cancelButtonClass: 'btn btn-danger',
+  buttonsStyling: false
+}).then(function () {
+  swal(
+    'Deleted!',
+    'Your file has been deleted.',
+    'success'
+  )
+}, function (dismiss) {
+  // dismiss can be 'cancel', 'overlay',
+  // 'close', and 'timer'
+  if (dismiss === 'cancel') {
+    swal(
+      'Cancelled',
+      'Your imaginary file is safe :)',
+      'error'
+    )
+  }
 })
+
+
 		</script>
 			<!-- <div class="alert__force-notice alert alert-info text-center" role="alert">
 				{{trans('messages.auth_confirm_reminder1')}}
