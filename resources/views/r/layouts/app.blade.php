@@ -41,7 +41,7 @@
 
 	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,500i,700,900">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.2.0/sweet-alert.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css">
 	  <link rel="stylesheet" href="{{asset('r/css/style0376.css')}}">
 	  <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
 	 
@@ -133,7 +133,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
   <!-- Alerts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.2.0/sweet-alert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css"></script>
   <!--
 	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.js"></script>
 	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.playlist.js"></script>
