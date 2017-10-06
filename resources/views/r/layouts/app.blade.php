@@ -57,8 +57,8 @@
 	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}" class="@yield('body-class')">
 
 
-		<span id="msg-auth-confirm-reminder1">{{trans('messages.auth_confirm_reminder1')}}</span>
-		<span id="msg-auth-confirm-reminder2">{{trans('messages.auth_confirm_reminder2')}}</span>
+		<span id="msg-auth-confirm-reminder1" data-text="{{trans('messages.auth_confirm_reminder1')}}"></span>
+		<span id="msg-auth-confirm-reminder2" data-text="{{trans('messages.auth_confirm_reminder2')}}"></span>
 
 		@include('r.chunks._spinner-animated')
  
@@ -146,11 +146,11 @@
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
-			// var msg1 = $('#msg-auth-confirm-reminder1').text(),
-			// 		msg2 = $('#msg-auth-confirm-reminder2').text();
+			var msg1 = $('#msg-auth-confirm-reminder1').data('text'),
+					msg2 = $('#msg-auth-confirm-reminder2').data('text');
 			// swal(msg1, msg2, 'info');
 			swal({
-  title: '<i>HTML</i> <u>example</u>',
+  title: msg1,
   type: 'info',
   html:
     'You can use <b>bold text</b>, ' +
