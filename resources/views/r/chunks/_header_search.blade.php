@@ -1,8 +1,4 @@
 
-
-
-
-
 <header class="ukb-main-header fixed-top">
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">

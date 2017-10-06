@@ -2,21 +2,7 @@
 @section('layout')
   @include('r.chunks._morphsearch')
   @include('r.chunks._header_search')
-  <main>
-
-
-
-  	@if(Auth::check())
-			@if(!Auth::user()->isVerified())
-			<script defer>
-
-		    		swal("Oh non!", "Difficulté à mettre à jour votre mot de passe. Veuillez réessayer plus tard", "error");
-			</script>
-			@endif
-		@endif
-
-
-
+  <main> 
     @yield('content')
   </main>
   @include('r.chunks._footer_main')
@@ -24,6 +10,7 @@
 
 
 @section('scripts')
+<script>???????????????</script>
 	<!-- email confirmation reminder -->
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
