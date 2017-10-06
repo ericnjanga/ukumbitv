@@ -146,9 +146,26 @@
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
-			var msg1 = $('#msg-auth-confirm-reminder1').text(),
-					msg2 = $('#msg-auth-confirm-reminder2').text();
-			swal(msg1, msg2, 'info');
+			// var msg1 = $('#msg-auth-confirm-reminder1').text(),
+			// 		msg2 = $('#msg-auth-confirm-reminder2').text();
+			// swal(msg1, msg2, 'info');
+			swal({
+  title: '<i>HTML</i> <u>example</u>',
+  type: 'info',
+  html:
+    'You can use <b>bold text</b>, ' +
+    '<a href="//github.com">links</a> ' +
+    'and other HTML tags',
+  showCloseButton: true,
+  showCancelButton: true,
+  focusConfirm: false
+  confirmButtonText:
+    '<i class="fa fa-thumbs-up"></i> Great!',
+  confirmButtonAriaLabel: 'Thumbs up, great!',
+  cancelButtonText:
+  '<i class="fa fa-thumbs-down"></i>',
+  cancelButtonAriaLabel: 'Thumbs down',
+})
 		</script>
 			<!-- <div class="alert__force-notice alert alert-info text-center" role="alert">
 				{{trans('messages.auth_confirm_reminder1')}}
