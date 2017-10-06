@@ -141,8 +141,9 @@
 
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
+		<span id="msg-auth-confirm-reminder">{{trans('messages.auth_confirm_reminder1')}} {{trans('messages.auth_confirm_reminder2')}}</span>
 		<script>
-			swal ( "Oops" ,  "Something went wrong!" ,  "info" )
+			swal ( "Oops" ,  $('#msg-auth-confirm-reminder').text() ,  "info" )
 		</script>
 			<!-- <div class="alert__force-notice alert alert-info text-center" role="alert">
 				{{trans('messages.auth_confirm_reminder1')}}
@@ -153,7 +154,7 @@
 
 
 
-	 
+
 
 	@yield('scripts')
 
