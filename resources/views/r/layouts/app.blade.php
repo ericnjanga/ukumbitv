@@ -146,7 +146,7 @@
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
-			var msg1 = $('#msg-auth-confirm-reminder2').text(),
+			var msg1 = $('#msg-auth-confirm-reminder1').text(),
 					msg2 = $('#msg-auth-confirm-reminder2').text();
 			swal(msg1, msg2, 'info');
 		</script>
