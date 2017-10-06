@@ -133,7 +133,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
   <!-- Alerts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.js"></script>
   <!--
 	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.js"></script>
 	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.playlist.js"></script>
