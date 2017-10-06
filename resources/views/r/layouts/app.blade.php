@@ -57,8 +57,7 @@
 	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}" class="@yield('body-class')">
 
 
-		<span id="msg-auth-confirm-reminder1" data-text="{{trans('messages.auth_confirm_reminder1')}}"></span>
-		<span id="msg-auth-confirm-reminder2" data-text="{{trans('messages.auth_confirm_reminder2')}}"></span>
+		<span id="msg-auth-confirm-reminder" data-text1="{{trans('messages.auth_confirm_reminder1')}}" data-text2="{{trans('messages.auth_confirm_reminder2')}}" data-btn-yes="{{trans('messages.auth_confirm_btn_yes')}}" data-btn-no="{{trans('messages.auth_confirm_btn_no')}}"></span> 
 
 		@include('r.chunks._spinner-animated')
  
@@ -146,8 +145,19 @@
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
-			var msg1 = $('#msg-auth-confirm-reminder1').data('text'),
-					msg2 = $('#msg-auth-confirm-reminder2').data('text');
+			var msg = $('#msg-auth-confirm-reminder1'),
+					msg1 = msg.data('text1'),
+					msg2 = msg.data('text2'),
+					msg_btn_yes = msg.data('btn-yes'),
+					msg_btn_no = msg.data('btn-no');
+
+
+
+		// <span id="msg-auth-confirm-reminder" data-text1="{{trans('messages.auth_confirm_reminder1')}}" data-text2="{{trans('messages.auth_confirm_reminder2')}}" data-btn-yes="{{trans('messages.auth_confirm_btn_yes')}}" data-btn-no="{{trans('messages.auth_confirm_btn_no')}}"></span>
+
+
+
+
 			// 			// swal(msg1, msg2, 'info');
 			// 			swal({
 			//   title: msg1,
@@ -174,8 +184,8 @@ swal({
   showCancelButton: true,
   confirmButtonColor: '#3085d6',
   cancelButtonColor: '#d33',
-  confirmButtonText: 'Yes, delete it!',
-  cancelButtonText: 'No, cancel!',
+  confirmButtonText: msg_btn_yes,
+  cancelButtonText: msg_btn_no,
   confirmButtonClass: 'btn btn-success',
   cancelButtonClass: 'btn btn-danger',
   buttonsStyling: false

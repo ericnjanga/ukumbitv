@@ -814,7 +814,10 @@ return array(
 	'auth_signup'	=>	'Register',   
 	'auth_policy_check1'	=>	'By clicking Sign Up, I agree to the',   
 	'auth_confirm_reminder1'	=>	'Thanks for signing up!',    
-	'auth_confirm_reminder2'	=>	'Please don\'t forget to confirm your email address.', 
+	'auth_confirm_reminder2'	=>	'Please don\'t forget to confirm your email address.',
+	'auth_confirm_btn_yes'	=>	'Confirm',
+	'auth_confirm_btn_no'	=>	'Not now', 
+ 
   //SING-IN/REGISTER PAGE ...
   //----------------------------------- 
 
