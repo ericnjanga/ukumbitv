@@ -794,7 +794,9 @@ And to insure en exceptional delivery all this unique experience, we have create
 	'auth_signup'	=>	'S’enregistrer',   
 	'auth_policy_check1'	=>	'En cliquant sur Inscription, j’accepte les',   
 	'auth_confirm_reminder1'	=>	'Merci de vous &#234;tre enregistr&#233;!',    
-	'auth_confirm_reminder2'	=>	'N\'oubliez surtout pas deconfirmer votre addresse email.', 
+	'auth_confirm_reminder2'	=>	'N\'oubliez surtout pas de confirmer votre addresse email.', 
+	'auth_confirm_btn_yes'	=>	'Confirmer',
+	'auth_confirm_btn_no'	=>	'pas maintenant', 
 
 
 

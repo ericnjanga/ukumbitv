@@ -42,7 +42,7 @@
 	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,500i,700,900">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css">
-	  <link rel="stylesheet" href="{{asset('r/css/style0376.css')}}">
+	  <link rel="stylesheet" href="{{asset('r/css/style0377.css')}}">
 	  <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
 	 
 		
@@ -139,7 +139,7 @@
 -->
 
 	<!-- Main JS file -->
-	<script src="{{asset('js/app0376.js')}}"></script> 
+	<script src="{{asset('js/app0377.js')}}"></script> 
 
 
 	@if(Auth::check())
