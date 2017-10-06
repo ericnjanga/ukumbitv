@@ -132,7 +132,7 @@ class AuthController extends Controller
     public function sendVerifyEmail($User)
     {
         // Send welcome email to the new user:
-        $subject = trans('messages.user_welcome_title');
+        $subject = trans('messages.welcome_email_title');
         $email_data = $User;
         $page = "emails.welcome";
         $email = $User->email;

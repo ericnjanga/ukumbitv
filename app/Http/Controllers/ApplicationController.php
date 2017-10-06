@@ -40,7 +40,7 @@ class ApplicationController extends Controller {
 
         Log::info("MAIN VIDEO MOBILE");
 
-        // $subject = tr('user_welcome_title');
+        // $subject = tr('welcome_email_title');
         // $email_data = User::find(3);
         // $page = "emails.welcome";
         // $email = "test@mail.com";

@@ -358,7 +358,7 @@ class AdminController extends Controller
                 $email_data['password'] = $new_password;
                 $email_data['email'] = $user->email;
 
-                $subject = tr('user_welcome_title');
+                $subject = tr('welcome_email_title');
                 $page = "emails.admin_user_welcome";
                 $email = $user->email;
                 Helper::send_email($page,$subject,$email,$email_data);
@@ -442,7 +442,7 @@ class AdminController extends Controller
 
                 $email_data = array();
 
-                $subject = tr('user_welcome_title');
+                $subject = tr('welcome_email_title');
                 $page = "emails.moderator_welcome";
                 $email = $user->email;
                 $email_data['name'] = $moderator_user->name;
@@ -649,7 +649,7 @@ class AdminController extends Controller
                 $email_data['password'] = $new_password;
                 $email_data['email'] = $user->email;
 
-                $subject = tr('user_welcome_title');
+                $subject = tr('welcome_email_title');
                 $page = "emails.moderator_welcome";
                 $email = $user->email;
                 Helper::send_email($page,$subject,$email,$email_data);
