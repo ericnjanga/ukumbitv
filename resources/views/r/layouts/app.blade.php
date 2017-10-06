@@ -55,9 +55,12 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js" async></script>
 	</head>
 	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}" class="@yield('body-class')">
-
-
+		
+		<!-- User email confirmation -->
+		<!-- Information allowing the display the alert message asking the user to confirm her/his email address -->
 		<span id="msg-auth-confirm-reminder" data-text1="{{trans('messages.auth_confirm_reminder1')}}" data-text2="{{trans('messages.auth_confirm_reminder2')}}" data-btn-yes="{{trans('messages.auth_confirm_btn_yes')}}" data-btn-no="{{trans('messages.auth_confirm_btn_no')}}" data-confirm-route="{{route('user.confirm-user-email')}}"></span> 
+		<!-- Information allowing the display the alert message asking the user to confirm her/his email address -->
+		<!-- User email confirmation -->
 
 		@include('r.chunks._spinner-animated')
  
@@ -145,71 +148,50 @@
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
+			/**
+			 * Displaying an alert message asking user to confirm
+			 * her/his email address
+			*/
 			var msg = $('#msg-auth-confirm-reminder'),
 					msg1 = msg.data('text1'),
 					msg2 = msg.data('text2'),
 					msg_btn_yes = msg.data('btn-yes'),
 					msg_btn_no = msg.data('btn-no'),
 					route_url = msg.data('confirm-route');
-
-
-
-		// <span id="msg-auth-confirm-reminder" data-text1="{{trans('messages.auth_confirm_reminder1')}}" data-text2="{{trans('messages.auth_confirm_reminder2')}}" data-btn-yes="{{trans('messages.auth_confirm_btn_yes')}}" data-btn-no="{{trans('messages.auth_confirm_btn_no')}}"></span>
-
-
-
-
-			// 			// swal(msg1, msg2, 'info');
-			// 			swal({
-			//   title: msg1,
-			//   type: 'info',
-			//   html:
-			//     'You can use <b>bold text</b>, ' +
-			//     '<a href="//github.com">links</a> ' +
-			//     'and other HTML tags',
-			//   showCloseButton: true,
-			//   showCancelButton: true,
-			//   focusConfirm: false,
-			//   confirmButtonText:
-			//     '<i class="fa fa-thumbs-up"></i> Great!',
-			//   confirmButtonAriaLabel: 'Thumbs up, great!',
-			//   cancelButtonText:
-			//   '<i class="fa fa-thumbs-down"></i>',
-			//   cancelButtonAriaLabel: 'Thumbs down',
-			// })
-
-swal({
-  title: msg1,
-  text: msg2,
-  type: 'warning',
-  showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: msg_btn_yes,
-  cancelButtonText: msg_btn_no,
-  confirmButtonClass: 'btn btn-success',
-  cancelButtonClass: 'btn btn-default',
-  buttonsStyling: false
-}).then(function () {
-	document.location.href = route_url;
-  // swal(
-  //   'Deleted!',
-  //   'Your file has been deleted.',
-  //   'success'
-  // )
-}, function (dismiss) {
-  // // dismiss can be 'cancel', 'overlay',
-  // // 'close', and 'timer'
-  // if (dismiss === 'cancel') {
-  //   swal(
-  //     'Cancelled',
-  //     'Your imaginary file is safe :)',
-  //     'error'
-  //   )
-  // }
-})
-
-
+ 					
+ 					//Alert will only display if user is not on the "confirmation email page"
+					if(document.location.href.indexOf('confirm-user-email') < 0) {
+						swal({
+						  title: msg1,
+						  text: msg2,
+						  type: 'warning',
+						  showCancelButton: true,
+						  confirmButtonColor: '#3085d6',
+						  cancelButtonColor: '#d33',
+						  confirmButtonText: msg_btn_yes,
+						  cancelButtonText: msg_btn_no,
+						  confirmButtonClass: 'btn btn-success',
+						  cancelButtonClass: 'btn btn-default',
+						  buttonsStyling: false
+						}).then(function () {
+							document.location.href = route_url;
+						  // swal(
+						  //   'Deleted!',
+						  //   'Your file has been deleted.',
+						  //   'success'
+						  // )
+						}, function (dismiss) {
+						  // // dismiss can be 'cancel', 'overlay',
+						  // // 'close', and 'timer'
+						  // if (dismiss === 'cancel') {
+						  //   swal(
+						  //     'Cancelled',
+						  //     'Your imaginary file is safe :)',
+						  //     'error'
+						  //   )
+						  // }
+						}); 
+					}//[end] "confirmation email page" 
 		</script>
 			<!-- <div class="alert__force-notice alert alert-info text-center" role="alert">
 				{{trans('messages.auth_confirm_reminder1')}}
