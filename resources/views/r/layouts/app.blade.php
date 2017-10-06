@@ -145,7 +145,7 @@
 	@if(Auth::check())
 		@if(!Auth::user()->isVerified())
 		<script>
-			var msg = $('#msg-auth-confirm-reminder1'),
+			var msg = $('#msg-auth-confirm-reminder'),
 					msg1 = msg.data('text1'),
 					msg2 = msg.data('text2'),
 					msg_btn_yes = msg.data('btn-yes'),
