@@ -2,7 +2,7 @@
 @section('layout')
   @include('r.chunks._morphsearch')
   @include('r.chunks._header_search')
-  <main>
+  <main style="border:25px solid lime!important;">
       @yield('content')
   </main>
   @include('r.chunks._footer_main')
