@@ -24,7 +24,7 @@ elixir(function(mix) {
 	//Compile all "scss" files into a "style.css" file
 	mix.sass([
         'resources/assets/sass/style.scss' 
-    ], 'public/r/css/style0376.css');
+    ], 'public/r/css/style0378.css');
 
     
 	//Concatenating local librairies and main js files 
@@ -38,7 +38,7 @@ elixir(function(mix) {
 		'main.js', 
 		'forms-validation.js',
 		'morphSearch.js'], 
-	'public/js/app0376.js')
+	'public/js/app0378.js')
 });
 
 

@@ -41,8 +41,8 @@
 
 	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,500i,700,900">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
-	  <link rel="stylesheet" href="{{asset('r/css/style0376.css')}}">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css">
+	  <link rel="stylesheet" href="{{asset('r/css/style0378.css')}}">
 	  <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
 	 
 		
@@ -55,6 +55,14 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js" async></script>
 	</head>
 	<body data-search-route="{{route('search-data')}}" data-active-lang="{{App::getLocale()}}" class="@yield('body-class')">
+		
+		<!-- USER EMAIL CONFIRMATION -->
+		<!-- USER EMAIL CONFIRMATION -->
+		<!-- Information allowing the display the alert message asking the user to confirm her/his email address -->
+		<span id="msg-auth-confirm-reminder" data-text1="{{trans('messages.auth_confirm_reminder1')}}" data-text2="{{trans('messages.auth_confirm_reminder2')}}" data-btn-yes="{{trans('messages.auth_confirm_btn_yes')}}" data-btn-no="{{trans('messages.auth_confirm_btn_no')}}" data-confirm-route="{{route('user.confirm-user-email')}}"></span> 
+		<!-- Information allowing the display the alert message asking the user to confirm her/his email address -->
+		<!-- USER EMAIL CONFIRMATION -->
+		<!-- USER EMAIL CONFIRMATION -->
 
 		@include('r.chunks._spinner-animated')
  
@@ -129,14 +137,85 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
   <!-- Alerts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-  <!--
-	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.js"></script>
-	<script src="https://luwes.github.io/vimeowrap.js/vimeowrap.playlist.js"></script>
--->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.js"></script>
+  <!-- JS cookie librairy -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script> 
 
 	<!-- Main JS file -->
-	<script src="{{asset('js/app0376.js')}}"></script>  
+	<script src="{{asset('js/app0378.js')}}"></script> 
+
+
+		
+	<!-- USER EMAIL CONFIRMATION -->
+	<!-- USER EMAIL CONFIRMATION -->
+	@if(Auth::check())
+		@if(!Auth::user()->isVerified())
+		<script>
+			/**
+			 * Displaying an alert message asking user to confirm her/his email address
+			 * 1) Alert never displays on the confirmation page
+			 * 2) Alert only displays once every "days_expiry" days
+			*/
+			var cki_reminder_name = 'ukb-emailconfirm-reminder',
+				cki_reminder = Cookies.get(cki_reminder_name); 
+
+			//Display alert only if cookie expires ...
+			if(cki_reminder==undefined){
+				var msg = $('#msg-auth-confirm-reminder'),
+				msg1 		= msg.data('text1'),
+				msg2 		= msg.data('text2'),
+				msg_btn_yes = msg.data('btn-yes'),
+				msg_btn_no 	= msg.data('btn-no'),
+				route_url 	= msg.data('confirm-route'),
+				days_expiry = 3;
+
+				//Set cookie to expire after "days_expiry" days
+				Cookies.set(cki_reminder_name, true, { expires: days_expiry });
+			
+				//Alert will only display if user is not on the "confirmation email page"
+				if(document.location.href.indexOf('confirm-user-email') < 0) {
+					swal({
+					  title: msg1,
+					  text: msg2,
+					  type: 'warning',
+					  showCancelButton: true,
+					  confirmButtonColor: '#3085d6',
+					  cancelButtonColor: '#d33',
+					  confirmButtonText: msg_btn_yes,
+					  cancelButtonText: msg_btn_no,
+					  confirmButtonClass: 'btn btn-success',
+					  cancelButtonClass: 'btn btn-default',
+					  buttonsStyling: false
+					}).then(function () {
+						document.location.href = route_url;
+					  // swal(
+					  //   'Deleted!',
+					  //   'Your file has been deleted.',
+					  //   'success'
+					  // )
+					}, function (dismiss) {
+					  // // dismiss can be 'cancel', 'overlay',
+					  // // 'close', and 'timer'
+					  // if (dismiss === 'cancel') {
+					  //   swal(
+					  //     'Cancelled',
+					  //     'Your imaginary file is safe :)',
+					  //     'error'
+					  //   )
+					  // }
+					}); 
+				}//[end] "confirmation email page" 
+			}//[end] Display alert only if cookie expires ...
+			
+		</script> 
+		@endif
+	@endif
+	<!-- USER EMAIL CONFIRMATION -->
+	<!-- USER EMAIL CONFIRMATION -->
+
+
+
+
 
 	@yield('scripts')
 
