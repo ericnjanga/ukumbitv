@@ -358,12 +358,8 @@
 		    _episodeIndex 	= 0;
 				_list_episodes = newArray; 
 			}
-			var _readyToplay = function (id) {
-				console.log('>>_readyToplay id[',id,'] _vimeo_flag[', _vimeo_flag,']');
-        _player.play()
-        	.then(function() {
-					  console.log('***** player played!');
-					})
+			var _readyToplay = function (id) { 
+        _player.play() 
         	.catch(function(error) {
             console.error('[UkumbiTV player error] : ', error);
         });
@@ -372,8 +368,7 @@
       //Load VIMEO player with the right episode id
       var _loadPlayer = function(episodeID){ 
 				_player.loadVideo(episodeID)
-					.then(function(){
-						console.log('>>[1-1] episodeID[',episodeID,'] _vimeo_flag[', _vimeo_flag,']');
+					.then(function(){ 
 						_readyToplay();
 					})
 					.catch(function(error){
@@ -393,11 +388,9 @@
 				//* until the server confirms the user has the
 				//* priviledges to play the video
 				//debugger;\$checkTrial
-		    _player.on('play', function() {  
-					console.log('>>[1]on.play [',_vimeo_flag,']');
+		    _player.on('play', function() {   
 		      if (_vimeo_flag == true) return;
-		      _player.pause().then(function() { 
-		      	console.log('>>[2]on --- checking user rights [',_vimeo_flag,']');
+		      _player.pause().then(function() {  
 		        $.ajax({
 		          type: 'POST',
 		          url: '/vimeo-video-play',
@@ -407,10 +400,8 @@
 					type: '{{$video->video_type}}'
 		          },
 		          success: function(data){
-		            _vimeo_flag = true;
-		      			console.log('>>[3-a]_vimeo_flag = true : [',_vimeo_flag,']');
-		            _player.play();
-		      			console.log('>>[3-b]on --- rights ok [',_vimeo_flag,']');
+		            _vimeo_flag = true; 
+		            _player.play(); 
 		          }, 
 		          error: function(data) {
 		            console.error('[UkumbiTV player error] Could not play');
@@ -506,9 +497,7 @@
 	    	//Let the system know that the player is stopped
 	    	//(any activity related to a stopped player can
 	    	//now take place)
-	      _vimeo_flag = false;
-
-      	console.log('[1][#video-episodes] change [',_vimeo_flag,']');
+	      _vimeo_flag = false; 
 
           $.ajax({
               type: 'POST',
@@ -519,11 +508,10 @@
                   type: 'episode',
                   episodeId: this.value
               },
-              success: function(data){
-                  console.log(data.trial);
-					if(data.trial === false) {
-                        location.reload();
-					}
+              success: function(data){ 
+								if(data.trial === false) {
+			            location.reload();
+								}
               },
               error: function(data) {
                   console.error('[UkumbiTV player error] Could not play');
@@ -531,9 +519,7 @@
           });
 
         ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
-
-
-      	console.log('[2][#video-episodes] change [',_vimeo_flag,']');
+ 
         //Displayig the first title
         $('#active-episode-title').html( $(this).find(':selected').data('title') ); 
       });
