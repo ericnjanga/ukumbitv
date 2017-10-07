@@ -193,6 +193,7 @@
 	          <div class="comment-block" id="new-comment-section">
 
 	          	@foreach($video->comments as $comment)
+					@if(isset($comment->user))
 	            <div class="comment">
 	              <div class="img-block">
 	                <!--<span class="icon icon-man-user"></span>-->
@@ -206,6 +207,7 @@
 	                </p>
 	              </div>
 	            </div>
+					  @endif
 	            @endforeach
 	          </div>
 	          
