@@ -9,8 +9,8 @@
 	  <title>UkumbiTV: {{trans('messages.website_title')}}</title>
 	  @if(isset($video))
 			<meta property="og:type"          content="website" />
-			<meta property="og:title"         content="UkumbiTV" />
-			<meta property="og:description"   content="{{$video->title}}" />
+			<meta property="og:title"         content="{{$video->title}}" />
+			<meta property="og:description"   content="{{$video->description}}" />
 			<meta property="og:image"         content="{{$video->videoimage->imgPreview1}}" />
 	  @endif
 
