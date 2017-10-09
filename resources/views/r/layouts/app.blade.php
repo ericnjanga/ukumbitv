@@ -89,22 +89,7 @@
 		</script>
 
 
-
-		<?php
-			//SET LOCALE DEPENDING ON BROWSER LANGUAGE
-			//(EN by default, FR is necessary)
-			//NEXT: Make this script smarter
-			//-> Save language preference in cookie
-//			$locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-//
-//			if($locale=='fr' || $locale=='en'){
-//				App::setLocale($locale);
-//			}else{
-//				App::setLocale('en');
-//			}
-		?>
-
-
+ 
 
   
 
