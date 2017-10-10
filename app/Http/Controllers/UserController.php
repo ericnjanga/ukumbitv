@@ -112,6 +112,7 @@ class UserController extends Controller {
 
     public function checkVideoPlays(Request $request)
     {
+
         $video = AdminVideo::where('watchid', $request->id)->first();
         if(!$video) {
             return response()->json(['status' => 'error no video'], 500);
@@ -131,24 +132,27 @@ class UserController extends Controller {
             $videoId = $request->episodeId;
         }
 
-
-        $trials = TrialPeriod::where('user_id', Auth::id())->get();
-        if(count($trials) < 3) {
-//            foreach ($trials as $trial) {
-//                if ($trial->admin_video_id == $videoId) {
-//                    $checkTrialRecord = true;
-//                }
-//            }
-//
-//            if(!$checkTrialRecord) {
+        if(Auth::user()->paymentPlans[0]->flag == 1) {
+            $trials = TrialPeriod::where('user_id', Auth::id())->get();
+            if (count($trials) < 3) {
+                //            foreach ($trials as $trial) {
+                //                if ($trial->admin_video_id == $videoId) {
+                //                    $checkTrialRecord = true;
+                //                }
+                //            }
+                //
+                //            if(!$checkTrialRecord) {
                 $trialRecord = new TrialPeriod();
                 $trialRecord->user_id = Auth::id();
                 $trialRecord->admin_video_id = $videoId;
                 $trialRecord->save();
-//            }
-            $checkTrialRecord = true;
+                //            }
+                $checkTrialRecord = true;
+            } else {
+                $checkTrialRecord = false;
+            }
         } else {
-            $checkTrialRecord = false;
+            $checkTrialRecord = true;
         }
 
         if (Auth::check()) {
