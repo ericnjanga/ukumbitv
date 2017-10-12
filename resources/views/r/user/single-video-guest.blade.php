@@ -31,10 +31,10 @@
 
 		<style>
 			.main-container{
-				padding-left: 100px;
-    		padding-right: 100px;
-    		margin-top: 60px;
-    		margin-bottom: 60px;
+    		margin-top: 100px;
+    		margin-bottom: 100px;
+				padding-left: 50px;
+    		padding-right: 50px;
     		max-width: 1000px;
     		margin-left: auto;
     		margin-right: auto;
@@ -64,11 +64,12 @@
 			}
 
 			@media (max-width: 767px) {
+				
 				.main-container{
-					padding-left: 50px;
-	    		padding-right: 50px
-	    	}				
-	    	.img-block {
+	    		margin-top: 60px;
+	    		margin-bottom: 60px;
+	    	}
+				.img-block {
 					margin: 0 auto;
     			display: block;
 				}
