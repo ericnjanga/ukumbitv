@@ -31,8 +31,8 @@
 
 		<style>
 			.main-container{
-				padding-left: 50px;
-    		padding-right: 50px;
+				padding-left: 100px;
+    		padding-right: 100px;
     		margin-top: 60px;
     		margin-bottom: 60px;
     		max-width: 1000px;
@@ -48,7 +48,7 @@
 			}
 			h2{
 				margin-bottom: 20px; 
-				    font-size: 18px;
+				font-size: 18px;
 			}
 			.list-date-duration {
 				margin-bottom: 15px;
@@ -64,7 +64,11 @@
 			}
 
 			@media (max-width: 767px) {
-				.img-block {
+				.main-container{
+					padding-left: 50px;
+	    		padding-right: 50px
+	    	}				
+	    	.img-block {
 					margin: 0 auto;
     			display: block;
 				}
