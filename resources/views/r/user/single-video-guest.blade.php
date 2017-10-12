@@ -62,10 +62,10 @@
       	<div class="row">
       		<div class="col-sm-12"> 
 	      		<div class="row">
-	      			<div class="col-sm-3 col-md-3">
+	      			<div class="col-sm-4">
 		      			<img src="{{$video->videoimage->imgPreview1}}" alt="">
 		      		</div>
-		      		<div class="col-sm-7 col-md-3">
+		      		<div class="col-sm-8">
 		      			<h1 class="title">{{$video->title}}</h1>
 		      			<ul class="list-date-duration list-inline">
 		              <li>{{$video->year}}</li>
@@ -79,11 +79,13 @@
 	      		<hr>
 
       		<ul class="list-cta list-inline col-sm-12"> 
-      			<a href="{{route('user.login.form')}}" class="btn btn-block btn-primary btn-lg">{{trans('messages.auth_signin')}}</a>
+      			<li>
+      				<a href="{{route('user.login.form')}}" class="btn btn-block btn-primary btn-lg">{{trans('messages.auth_signin')}}</a>
+      			</li>
 
-      			<div class="or-line upper">{{trans('messages.auth_or')}}</div>
+      			<li class="or-line upper">{{trans('messages.auth_or')}}</li>
 
-      			<a href="{{route('user.register.form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</a>
+      			<li><a href="{{route('user.register.form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</a></li>
       		</ul> 
       	</div>
         
