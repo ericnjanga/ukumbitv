@@ -73,6 +73,13 @@
 					  <iframe id="ukumbitv-iframe-video" class="ukumbitv-iframe-video" src="https://player.vimeo.com/video/{{$episodesArr[0]->vimeo_id}}?autoplay=0" autoplay="0" width="100%" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					  <section class="hero-sub">
 					  	<div id="video-controls" class="row">
+					  		<style>
+					  			/* Avoid that "active-episode-title" blocks users from selecting an episode on mobile devices */
+					  			.control-frame {
+					  				position: relative;
+					  				z-index: 50;
+					  			}
+					  		</style>
 							  <div class="control-frame col-xs-6 col-sm-3">
 								  <!-- <label for="video-season"></label> -->
 								  <select name="video-season" id="video-season" class="form-control">
