@@ -71,23 +71,24 @@
 		              <li>{{$video->year}}</li>
 		              <li class="bold">{{$video->country}}</li>
 		            </ul> 
+
 		      			<p>{{$video->description}}</p>
+ 
+			      		<ul class="list-cta list-inline"> 
+			      			<li>
+			      				<a href="{{route('user.login.form')}}" class="btn btn-block btn-primary btn-lg">{{trans('messages.auth_signin')}}</a>
+			      			</li>
+
+			      			<li>{{trans('messages.auth_or')}}</li>
+
+			      			<li><a href="{{route('user.register.form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</a></li>
+			      		</ul> 
+      	 
 		      		</div> 
 	      		</div><!-- row --> 
       		</div><!-- col-sm-12 -->
 
 	      		<hr>
-
-      		<ul class="list-cta list-inline col-sm-12"> 
-      			<li>
-      				<a href="{{route('user.login.form')}}" class="btn btn-block btn-primary btn-lg">{{trans('messages.auth_signin')}}</a>
-      			</li>
-
-      			<li class="or-line upper">{{trans('messages.auth_or')}}</li>
-
-      			<li><a href="{{route('user.register.form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</a></li>
-      		</ul> 
-      	</div>
         
 
     </main>
