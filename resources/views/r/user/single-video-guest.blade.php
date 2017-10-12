@@ -51,6 +51,24 @@
 			}
 			.list-cta {
 				margin-top: 20px;
+				margin-top: 40px;
+			}
+
+			@media (max-width: 767px) {
+				.img-block {
+					margin: 0 auto;
+    			display: block;
+				}
+				.list-cta {
+					text-align: center;
+				}
+				.video-description {
+					text-align: center;
+			    margin-top: 30px;
+			    max-width: 500px;
+			    margin-left: auto;
+			    margin-right: auto;
+				}
 			}
 		</style>
 
@@ -62,9 +80,9 @@
     		<div class="col-sm-12"> 
       		<div class="row">
       			<div class="col-sm-4">
-	      			<img src="{{$video->videoimage->imgPreview1}}" alt="">
+	      			<img class="img-block" src="{{$video->videoimage->imgPreview1}}" alt="">
 	      		</div>
-	      		<div class="col-sm-8">
+	      		<article class="video-description col-sm-8">
 	      			<h1 class="title">{{$video->title}}</h1>
 	      			<ul class="list-date-duration list-inline">
 	              <li>{{$video->year}}</li>
@@ -82,7 +100,7 @@
 
 		      			<li><a href="{{route('user.register.form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</a></li>
 		      		</ul>  
-	      		</div> 
+	      		</article> 
       		</div><!-- row --> 
     		</div><!-- col-sm-12 -->
     	</div><!-- row --> 
