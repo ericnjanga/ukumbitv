@@ -53,7 +53,7 @@
 			.list-date-duration {
 				margin-bottom: 15px;
 			} 
-			.lis-cta a {
+			.list-cta a {
 				min-width: 140px;
 			}
 
