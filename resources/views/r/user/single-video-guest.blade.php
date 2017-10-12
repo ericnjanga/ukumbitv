@@ -28,20 +28,42 @@
     </header>
 
 
-    <main class="container">
+		<style>
+			.container-fluid{
+				padding-left: 50px;
+    		padding-right: 50px;
+    		margin-top: 60px;
+    		margin-bottom: 60px;
+			}
+			h1{
+				margin-bottom: 5px; 
+			}
+			.list-date-duration {
+				margin-bottom: 15px;
+			}
+		</style>
+    <main class="container-fluid">
       <!-- @yield('content') --> 
       <!-- <div class="info-block hero-sub"> -->
       	<div class="row">
-      		<div class="col-md-3">
+      		<div class="col-sm-3 col-sm-offset-1 col-md-3">
       			<img src="{{$video->videoimage->imgPreview1}}" alt="">
       		</div>
-      		<div class="col-md-3">
+      		<div class="col-sm-7 col-md-3">
       			<h1 class="title">{{$video->title}}</h1>
       			<ul class="list-date-duration list-inline">
               <li>{{$video->year}}</li>
               <li class="bold">{{$video->country}}</li>
             </ul> 
       			<p>{{$video->description}}</p>
+      		</div> 
+      		<div class="col-sm-7 col-md-3">
+      			<a href="#" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signin')}}</a>
+
+      			<div class="or-line upper">{{trans('messages.auth_or')}}</div>
+
+      			<a href="#" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</a>
+
       		</div> 
       	</div>
         
