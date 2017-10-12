@@ -183,6 +183,17 @@ class AuthController extends Controller
        return redirect()->intended($this->redirectPath());
     }
 
+    public function redirectPath()
+    {
+        if (property_exists($this, 'redirectPath')) {
+            return $this->redirectPath;
+        }
+        if(Session::has('redirectTo')) {
+            $this->redirectTo = Session::pull('redirectTo');
+        }
+        return property_exists($this, 'redirectTo') ? $this->redirectTo : '/home';
+    }
+
     public function confirmEmailMsg()
     {
         //dd(Session::get('user'));
