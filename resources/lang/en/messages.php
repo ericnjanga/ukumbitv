@@ -946,6 +946,16 @@ return array(
 
 
 
+  //VIDEO SINGLE ...
+  //----------------------------------- 
+  'vid_single_unauth_user_cta' => 'To enjoy this movie, please:',
+
+ 
+
+
+
+
+
   //[PAGE] MY ACCOUNT ...
   //----------------------------------- 
   'PMA_title' => 'Change your preferences',

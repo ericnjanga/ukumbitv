@@ -95,9 +95,9 @@
 
 	      			<p>{{$video->description}}</p>
 
-	      			<hr>
+	      			<hr> 
 
-	      			<h2>To enjoy this movie, please:</h2>
+	      			<h2>{{trans('messages.vid_single_unauth_user_cta')}}</h2>
 
 		      		<ul class="list-cta list-inline"> 
 		      			<li>

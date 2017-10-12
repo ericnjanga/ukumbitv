@@ -1011,6 +1011,16 @@ And to insure en exceptional delivery all this unique experience, we have create
 
 
 
+  //VIDEO SINGLE ...
+  //----------------------------------- 
+  'vid_single_unauth_user_cta' => 'Pour profiter de ce film, veuillez:',
+
+ 
+
+
+
+
+
 
   
 );
