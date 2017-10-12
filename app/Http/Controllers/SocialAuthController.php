@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use Socialite;
 use App\User;
 use Hash;
@@ -73,6 +74,10 @@ class SocialAuthController extends Controller
 		}
 
 	    auth()->login($user);
+
+        if(Session::has('redirectTo')) {
+            return redirect(Session::pull('redirectTo'));
+        }
 
 	    return redirect()->route('user.dashboard');
 	}
