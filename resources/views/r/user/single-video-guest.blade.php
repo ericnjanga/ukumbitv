@@ -58,38 +58,34 @@
     <main class="main-container container-fluid">
       <!-- @yield('content') --> 
       <!-- <div class="info-block hero-sub"> -->
-      	<div class="row">
-      		<div class="col-sm-12"> 
-	      		<div class="row">
-	      			<div class="col-sm-4">
-		      			<img src="{{$video->videoimage->imgPreview1}}" alt="">
-		      		</div>
-		      		<div class="col-sm-8">
-		      			<h1 class="title">{{$video->title}}</h1>
-		      			<ul class="list-date-duration list-inline">
-		              <li>{{$video->year}}</li>
-		              <li class="bold">{{$video->country}}</li>
-		            </ul> 
+    	<div class="row">
+    		<div class="col-sm-12"> 
+      		<div class="row">
+      			<div class="col-sm-4">
+	      			<img src="{{$video->videoimage->imgPreview1}}" alt="">
+	      		</div>
+	      		<div class="col-sm-8">
+	      			<h1 class="title">{{$video->title}}</h1>
+	      			<ul class="list-date-duration list-inline">
+	              <li>{{$video->year}}</li>
+	              <li class="bold">{{$video->country}}</li>
+	            </ul> 
 
-		      			<p>{{$video->description}}</p>
- 
-			      		<ul class="list-cta list-inline"> 
-			      			<li>
-			      				<a href="{{route('user.login.form')}}" class="btn btn-block btn-primary btn-lg">{{trans('messages.auth_signin')}}</a>
-			      			</li>
+	      			<p>{{$video->description}}</p>
 
-			      			<li>{{trans('messages.auth_or')}}</li>
+		      		<ul class="list-cta list-inline"> 
+		      			<li>
+		      				<a href="{{route('user.login.form')}}" class="btn btn-block btn-primary btn-lg">{{trans('messages.auth_signin')}}</a>
+		      			</li>
 
-			      			<li><a href="{{route('user.register.form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</a></li>
-			      		</ul> 
-      	 
-		      		</div> 
-	      		</div><!-- row --> 
-      		</div><!-- col-sm-12 -->
+		      			<li>{{trans('messages.auth_or')}}</li>
 
-	      		<hr>
-        
-
+		      			<li><a href="{{route('user.register.form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</a></li>
+		      		</ul>  
+	      		</div> 
+      		</div><!-- row --> 
+    		</div><!-- col-sm-12 -->
+    	</div><!-- row --> 
     </main>
     @include('r.chunks._footer_main')
 @endsection
