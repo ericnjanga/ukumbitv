@@ -806,7 +806,7 @@ return array(
 	'auth_enter_email'	=>	'Enter your e-mail', 
 	'auth_error_email'	=>	'Enter a valid email.', 
 	'auth_enter_password'	=>	'Enter your password', 
-	'auth_retype_password'	=>	'Re-Type New Password', 
+	'auth_retype_password'	=>	'Confirm your password', 
 	'auth_retypeerror_password'	=>	'Password doesn’t match.', 
 	'auth_error_password1'	=>	'You password is required.', 
 	'auth_error_password2'	=>	'Password is too short.',  
