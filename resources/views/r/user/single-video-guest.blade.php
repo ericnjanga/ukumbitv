@@ -28,21 +28,30 @@
     </header>
 
 
-    <main>
+    <main class="container">
       <!-- @yield('content') --> 
-      <div class="info-block hero-sub">
-        <h1 class="title">{{$video->title}}</h1>
-        <img src="{{$video->videoimage->imgPreview1}}" alt="">
-        <div class="video-info-main">
-          <div class="info-left">
-            <!-- <span class="age">16+</span> -->
-            <ul class="list-date-duration list-inline">
+      <!-- <div class="info-block hero-sub"> -->
+      	<div class="row">
+      		<div class="col-md-3">
+      			<img src="{{$video->videoimage->imgPreview1}}" alt="">
+      		</div>
+      		<div class="col-md-3">
+      			<h1 class="title">{{$video->title}}</h1>
+      			<ul class="list-date-duration list-inline">
               <li>{{$video->year}}</li>
               <li class="bold">{{$video->country}}</li>
             </ul> 
+      			<p>{{$video->description}}</p>
+      		</div> 
+      	</div>
+        
+        
+        <!-- <div class="video-info-main">
+          <div class="info-left">
+             
           </div>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
 
     </main>
     @include('r.chunks._footer_main')
