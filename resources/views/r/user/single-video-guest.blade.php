@@ -29,7 +29,7 @@
 
 
 		<style>
-			.container-fluid{
+			.main-container{
 				padding-left: 50px;
     		padding-right: 50px;
     		margin-top: 60px;
@@ -42,7 +42,7 @@
 				margin-bottom: 15px;
 			}
 		</style>
-    <main class="container-fluid">
+    <main class="main-container container-fluid">
       <!-- @yield('content') --> 
       <!-- <div class="info-block hero-sub"> -->
       	<div class="row">
@@ -58,11 +58,11 @@
       			<p>{{$video->description}}</p>
       		</div> 
       		<div class="col-sm-7 col-md-3">
-      			<a href="#" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signin')}}</a>
+      			<a href="#" class="btn btn-block btn-primary btn-lg">{{trans('user.login.form')}}</a>
 
       			<div class="or-line upper">{{trans('messages.auth_or')}}</div>
 
-      			<a href="#" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</a>
+      			<a href="{{route('user.register.form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</a>
 
       		</div> 
       	</div>
