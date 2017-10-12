@@ -59,7 +59,7 @@
 
 			@media (max-width: 428px) {
 				.list-cta-or{
-					display: none;
+					display: none!important;
 				}
 			}
 
