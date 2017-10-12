@@ -57,6 +57,12 @@
 				min-width: 140px;
 			}
 
+			@media (max-width: 428px) {
+				.list-cta-or{
+					display: none;
+				}
+			}
+
 			@media (max-width: 767px) {
 				.img-block {
 					margin: 0 auto;
@@ -107,7 +113,7 @@
 		      				<a href="{{route('user.login.form')}}" class="btn btn-block btn-primary btn-lg">{{trans('messages.auth_signin')}}</a>
 		      			</li>
 
-		      			<li>{{trans('messages.auth_or')}}</li>
+		      			<li class="list-cta-or">{{trans('messages.auth_or')}}</li>
 
 		      			<li><a href="{{route('user.register.form')}}" class="btn btn-block btn-cta1b btn-lg">{{trans('messages.auth_signup')}}</a></li>
 		      		</ul>  
