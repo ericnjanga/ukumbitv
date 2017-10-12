@@ -40,8 +40,8 @@
     		margin-right: auto;
 			}
 			.main-container hr{
-				margin-top: 20px;
-				margin-bottom: 20px;
+				margin-top: 40px;
+				margin-bottom: 40px;
 			}
 			h1{
 				margin-bottom: 5px; 
@@ -52,11 +52,7 @@
 			}
 			.list-date-duration {
 				margin-bottom: 15px;
-			}
-			.list-cta {
-				margin-top: 20px;
-				margin-top: 40px;
-			}
+			} 
 
 			@media (max-width: 767px) {
 				.img-block {
@@ -72,6 +68,10 @@
 			    max-width: 500px;
 			    margin-left: auto;
 			    margin-right: auto;
+				}
+				.main-container hr{
+					margin-top: 20px;
+					margin-bottom: 20px;
 				}
 			}
 		</style>
