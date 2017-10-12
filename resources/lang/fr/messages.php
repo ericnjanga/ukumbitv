@@ -135,7 +135,7 @@ return array(
 	'help'	=>	'Help',
 	'contact_us' => 'Contactez nous',
 	'about_us' => 'À propos',
-	'About_project' => 'À propos du roject',
+	'About_project' => 'À propos du project',
 	'alittle_about_yourself' => 'Quelque chose vous concernant',
 	'profile_update' => 'Mise à jour du profile',
 	'terms_conditions' => 'Terms and Conditions',

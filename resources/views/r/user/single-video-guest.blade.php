@@ -53,6 +53,9 @@
 			.list-date-duration {
 				margin-bottom: 15px;
 			} 
+			.lis-cta a {
+				min-width: 140px;
+			}
 
 			@media (max-width: 767px) {
 				.img-block {
