@@ -46,6 +46,10 @@
 			h1{
 				margin-bottom: 5px; 
 			}
+			h2{
+				margin-bottom: 20px; 
+				    font-size: 18px;
+			}
 			.list-date-duration {
 				margin-bottom: 15px;
 			}
@@ -90,6 +94,10 @@
 	            </ul> 
 
 	      			<p>{{$video->description}}</p>
+
+	      			<hr>
+
+	      			<h2>To enjoy this movie, please:</h2>
 
 		      		<ul class="list-cta list-inline"> 
 		      			<li>
