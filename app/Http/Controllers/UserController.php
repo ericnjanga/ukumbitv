@@ -40,7 +40,9 @@ use App\Flag;
 
 use Auth;
 
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
 use Omnipay\Omnipay;
 use phpDocumentor\Reflection\Types\Object_;
@@ -446,7 +448,10 @@ class UserController extends Controller {
 
         $video = AdminVideo::with('comments.user', 'videoimage')->where('watchid', $id)->firstOrFail();
 
-
+        if(!Auth::check()) {
+            Session::put('redirectTo', URL::to('/').'/video/'.$id);
+//            dd(Session::get('redirectTo'));
+        }
 
 
         $checkTrial = true;
@@ -456,8 +461,9 @@ class UserController extends Controller {
             if($flag == 1) {
                 $checkTrial = $this->checkTrial($video->id);
             }
-        } else {
-            return view('r.landing')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get())
+        }
+        else {
+            return view('r.user.single-video-guest')->with('payment_plans', PaymentPlan::orderBy('flag', 'asc')->get())
                 ->with('video', $video);
         }
 
@@ -541,7 +547,8 @@ class UserController extends Controller {
             ->with('seasons', $seasons)
             ->with('likes', count($likes))
             ->with('dislikes', count($disLikes))
-            ->with('directors', $directors);
+            ->with('directors', $directors)
+            ->withCookie(cookie('testcook', 'qwertyt'));
 //            ->with('categories', $categories);
     }
 

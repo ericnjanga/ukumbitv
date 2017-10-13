@@ -806,7 +806,7 @@ return array(
 	'auth_enter_email'	=>	'Enter your e-mail', 
 	'auth_error_email'	=>	'Enter a valid email.', 
 	'auth_enter_password'	=>	'Enter your password', 
-	'auth_retype_password'	=>	'Re-Type New Password', 
+	'auth_retype_password'	=>	'Confirm your password', 
 	'auth_retypeerror_password'	=>	'Password doesn’t match.', 
 	'auth_error_password1'	=>	'You password is required.', 
 	'auth_error_password2'	=>	'Password is too short.',  
@@ -939,6 +939,16 @@ return array(
   'packages_creditcard_msg' => 'You have the choice of entering your credit card information directly in the form bellow.',
   'packages_paypal_msg' => 'Or, you can use paypal\'s secure portal by simply follow the link bellow',
   'packages_paypal_cta' => 'Continue with Pay Pal',
+
+ 
+
+
+
+
+
+  //VIDEO SINGLE ...
+  //----------------------------------- 
+  'vid_single_unauth_user_cta' => 'To enjoy this movie, please:',
 
  
 

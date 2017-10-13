@@ -135,7 +135,7 @@ return array(
 	'help'	=>	'Help',
 	'contact_us' => 'Contactez nous',
 	'about_us' => 'À propos',
-	'About_project' => 'À propos du roject',
+	'About_project' => 'À propos du project',
 	'alittle_about_yourself' => 'Quelque chose vous concernant',
 	'profile_update' => 'Mise à jour du profile',
 	'terms_conditions' => 'Terms and Conditions',
@@ -1004,6 +1004,16 @@ And to insure en exceptional delivery all this unique experience, we have create
   'packages_creditcard_msg' => 'Vous avez le choix de saisir les informations de votre carte de crédit directement sous la forme ci-dessous.',
   'packages_paypal_msg' => 'Ou alors, vous pouvez utiliser le portail sécurisé de paypal simplement en suivant le lien ci-dessous',
   'packages_paypal_cta' => 'Continuer avec Paypal',
+
+ 
+
+
+
+
+
+  //VIDEO SINGLE ...
+  //----------------------------------- 
+  'vid_single_unauth_user_cta' => 'Pour profiter de ce film, veuillez:',
 
  
 

@@ -56,7 +56,7 @@ page-authentication page-login
 
             <!-- Password Confirmation -->
             <div class="form-group" ng-class="{ 'has-error' : (registerForm.password.$valid && registerForm.password_confirmation.$dirty &&registerForm.password_confirmation.$error.passwordMatch) }">
-                <label>Re-Type New Password</label>
+                <label>Confirm your password</label>
 
                 <input type="password" match-password="password" name="password_confirmation" ng-model="user.password_confirmation" class="form-control" required>
                 <p ng-show="(registerForm.password.$valid && registerForm.password_confirmation.$dirty &&registerForm.password_confirmation.$error.passwordMatch)" class="help-block">Password doesn't match.</p>
