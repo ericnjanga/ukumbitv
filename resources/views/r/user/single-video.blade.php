@@ -375,7 +375,10 @@
       };
  
       //Load VIMEO player with the right episode id
-      var _loadPlayer = function(episodeID){ 
+      var _loadPlayer = function(episodeID, newEpisodeIndex){ 
+      	//make sure next video loaded automatically comes after this one
+      	_episodeIndex = newEpisodeIndex;
+      	//load player
 				_player.loadVideo(episodeID)
 					.then(function(){ 
 						_readyToplay();
@@ -443,8 +446,6 @@
 
 				//[init]* Play next video when the current one ends ---  
 		    _player.on('ended',function(){
-
-
 		      _episodeIndex = _episodeIndex + 1;
 		      var _nextVideoID = _list_episodes[_episodeIndex];
 		      //Change episode dropdown to the next episode value and trigger the 'change' event
@@ -527,7 +528,7 @@
               }
           });
 
-        ukumbitv_video.loadPlayer(this.value); //pass episode ID to player
+        ukumbitv_video.loadPlayer(this.value, $(this)[0].selectedIndex); //pass episode ID to player
  
         //Displayig the first title
         $('#active-episode-title').html( $(this).find(':selected').data('title') ); 
