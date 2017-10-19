@@ -796,6 +796,7 @@ return array(
   'auth_signin' => 'Sign In',
   'auth_signin_blurb' => 'The easiest way for you to sign in is with Facebook',
   'auth_signin_fb' => 'Sign in with Facebook',
+  'auth_signin_email' => 'Sign In with an email address',
   'auth_or' => 'or',
   'auth_no_account' => 'Don’t have an account?',
   'auth_have_account' => 'Already have an account?',

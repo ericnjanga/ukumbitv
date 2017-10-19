@@ -61,9 +61,7 @@ page-authentication page-login
     	line-height: 0;
 		}
 
-		      position: absolute;
-    top: 25px;
-
+		    
 
 
 		#log-accordion .panel-title a:hover,
@@ -85,7 +83,7 @@ page-authentication page-login
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController" style="padding: 0;">
   	<div class="panel-group" id="log-accordion" role="tablist" aria-multiselectable="true">
 		  <div class="panel panel-default panel-facebook">
-		    <div class="panel-heading panel-heading-facebook" role="tab" id="headingOne">
+		    <div class="panel-heading panel-heading-facebook" role="tab" id="headingOne" style="display:none;">
 		      <h4 class="panel-title">
 		        <a role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-facebook" aria-expanded="true" aria-controls="collapse-facebook">
 		        	<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
@@ -113,7 +111,7 @@ page-authentication page-login
 		      <h4 class="panel-title">
 		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-email" aria-expanded="false" aria-controls="collapse-email">
 		        	<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-		          Sign In with an email address
+		          {{trans('messages.auth_signin_email')}}
 		        </a>
 		      </h4>
 		    </div>
@@ -196,7 +194,7 @@ page-authentication page-login
 
 
 
-		console.log('*>>>*****' );
+		console.log('*/////*' );
 		//Activate current tab
 		$('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
 
@@ -208,10 +206,17 @@ page-authentication page-login
 		$('#log-accordion').on('hidden.bs.collapse', function () {
 			window.setTimeout(function(){
 				console.log('????dcdsv????');
-			  // do something…
-			  $('a[data-toggle="collapse"].active').removeClass('active');
+			   
+			//   $('a[data-toggle="collapse"].active').removeClass('active');
+			// //Activate current tab
+			// $('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
+
+
+				$('a[data-toggle="collapse"].active').removeClass('active').parents('.panel-heading').fadeOut();
 			//Activate current tab
-			$('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
+			$('.collapse.in').prev('.panel-heading')fadeIn().find('.panel-title a').addClass('active');
+
+
 			}, 150);
 		});
 

@@ -776,6 +776,7 @@ And to insure en exceptional delivery all this unique experience, we have create
   'auth_signin' => 'Se Connecter',
   'auth_signin_blurb' => 'La façon la plus simple pour vous de vous connecter est avec Facebook',
   'auth_signin_fb' => 'Se connecter avec Facebook',
+  'auth_signin_email' => 'Connecter avec un email',
   'auth_or' => 'ou',
   'auth_no_account' => 'Vous n’avez pas de compte?',
   'auth_have_account' => 'Vous avez déjà un compte?',
