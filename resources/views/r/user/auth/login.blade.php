@@ -207,8 +207,11 @@ page-authentication page-login
 			window.setTimeout(function(){
 				console.log('????dcdsv????');
 
-				$('.panel-heading.active').removeClass('active').fadeIn(function(){
-					$('.panel-heading:not(.active)').addClass('active').fadeOut();
+				var _active = $('.panel-heading.active'),
+						_inactive = $('.panel-heading:not(.active)');
+				_active.fadeIn(function(){
+					_active.removeClass('active');
+					_inactive.addClass('active').fadeOut();
 				});
 				
 			   
