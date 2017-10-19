@@ -83,9 +83,9 @@ page-authentication page-login
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController" style="padding: 0;">
   	<div class="panel-group" id="log-accordion" role="tablist" aria-multiselectable="true">
 		  <div class="panel panel-default panel-facebook">
-		    <div class="panel-heading panel-heading-facebook" role="tab" id="headingOne" style="display:none;">
+		    <div class="panel-heading panel-heading-facebook active" role="tab" id="headingOne" style="display:none;">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-facebook" aria-expanded="true" aria-controls="collapse-facebook" class="active">
+		        <a role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-facebook" aria-expanded="true" aria-controls="collapse-facebook">
 		        	<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
 		          {{trans('messages.auth_signin_fb')}}
 		        </a>
