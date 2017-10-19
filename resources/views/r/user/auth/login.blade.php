@@ -69,7 +69,7 @@ page-authentication page-login
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController" style="padding: 0;">
   	<div class="panel-group" id="log-accordion" role="tablist" aria-multiselectable="true">
 		  <div class="panel panel-default panel-facebook">
-		    <div class="panel-heading-facebook" role="tab" id="headingOne">
+		    <div class="panel-heading panel-heading-facebook" role="tab" id="headingOne">
 		      <h4 class="panel-title">
 		        <a role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-facebook" aria-expanded="true" aria-controls="collapse-facebook">
 		          {{trans('messages.auth_signin_fb')}}
@@ -92,7 +92,7 @@ page-authentication page-login
 		    </div>
 		  </div><!-- panel-email -->
 		  <div class="panel panel-default panel-email">
-		    <div class="panel-heading-email" role="tab" id="headingTwo">
+		    <div class="panel-heading panel-heading-email" role="tab" id="headingTwo">
 		      <h4 class="panel-title">
 		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-email" aria-expanded="false" aria-controls="collapse-email">
 		          Sign In with an email address
@@ -163,9 +163,10 @@ page-authentication page-login
 
 @section('scripts')
 <script>
-alert('aaaa');
+
 	$(document).ready(function(){
-		$('.collapse.in').prev('.panel-heading-facebook').find('a').addClass('active');
+		console.log('>>>>aaaa', $('.collapse.in').length);
+		$('.collapse.in').prev('.panel-heading').find('a').addClass('active');
 	});
 </script>
 @endsection
