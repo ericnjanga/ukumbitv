@@ -163,6 +163,7 @@ page-authentication page-login
 
 @section('scripts')
 <script>
+alert('aaaa');
 	$(document).ready(function(){
 		$('.collapse.in').prev('.panel-heading-facebook').find('a').addClass('active');
 	});
