@@ -209,7 +209,7 @@ page-authentication page-login
 
 				var _active = $('.panel-heading.active'),
 						_inactive = $('.panel-heading:not(.active)');
-				_active.removeClass('active');.fadeIn(function(){ });
+				_active.removeClass('active').fadeIn(function(){ });
 				_inactive.addClass('active').fadeOut();
 			   
 			 
