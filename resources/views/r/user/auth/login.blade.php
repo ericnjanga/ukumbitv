@@ -168,23 +168,27 @@ page-authentication page-login
 		//Activate current tab
 		$('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
 
-		//Activate tab after collapse...
-		$('#log-accordion').on('hide.bs.collapse', function () {
-			// window.setTimeout(function(){
-				console.log('>>>>1111', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
-			  // do something…
-			  $('.collapse.in').removeClass('active');
-			// });
+		$('#log-accordion').on('hidden.bs.collapse', function(){
+			console.log('.....', $(this));
 		});
 
-		//Activate tab after collapse...
-		$('#log-accordion').on('hidden.bs.collapse', function () {
-			window.setTimeout(function(){
-				console.log('>>>>2222', $('.collapse:not(.in)').prev('.panel-heading').find('.panel-title a').length);
-			  // do something…
-			  $('.collapse:not(.in)').prev('.panel-heading').find('.panel-title a').addClass('active');
-			}, 100);
-		});
+		// //Activate tab after collapse...
+		// $('#log-accordion').on('hide.bs.collapse', function () {
+		// 	// window.setTimeout(function(){
+		// 		console.log('>>>>1111', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
+		// 	  // do something…
+		// 	  $('.collapse.in').removeClass('active');
+		// 	// });
+		// });
+
+		// //Activate tab after collapse...
+		// $('#log-accordion').on('hidden.bs.collapse', function () {
+		// 	window.setTimeout(function(){
+		// 		console.log('>>>>2222', $('.collapse:not(.in)').prev('.panel-heading').find('.panel-title a').length);
+		// 	  // do something…
+		// 	  $('.collapse:not(.in)').prev('.panel-heading').find('.panel-title a').addClass('active');
+		// 	}, 100);
+		// });
 	});
 </script>
 @endsection
