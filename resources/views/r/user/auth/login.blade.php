@@ -35,8 +35,20 @@ page-authentication page-login
     	padding: 15px;
     	color: #fff;
     	font-weight: bold; 
+		  background-color: rgba(177, 50, 39, 1);
+		}
+		#log-accordion .panel-title a:hover {
+		  background-color: rgba(177, 50, 39, 0.7);
+		}
+
+		/*--- ---*/
+		.panel-heading .panel-title a.active {
 		  background-color: rgba(180, 180, 180, 0.6);
 		}
+		 
+
+
+
 		#log-accordion .panel-title a:hover,
 		#log-accordion .panel-title a:focus,
 		#log-accordion .panel-title a:active {
@@ -49,21 +61,8 @@ page-authentication page-login
 			box-shadow: 0 0 0 rgba(0,0,0,.05);
 		}
 
-		/*--- ---*/
-		.panel-heading-facebook .panel-title a.active {
-		  background-color: rgba(59, 89, 152, 1);
-		}
-		.panel-heading-facebook .panel-title a.active:hover {
-		  background-color: rgba(59, 89, 152, 0.7);
-		}
+		 
 
-		/*--- ---*/
-		.panel-heading-email .panel-title a.active {
-		  background-color: rgba(177, 50, 39, 1);
-		}
-		.panel-heading-email .panel-title a.active:hover {
-		  background-color: rgba(177, 50, 39, 0.7);
-		}
 	</style>
  
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController" style="padding: 0;">
