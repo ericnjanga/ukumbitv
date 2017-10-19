@@ -178,8 +178,8 @@ page-authentication page-login
 
 
 		console.log('******' );
-		// //Activate current tab
-		// $('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
+		//Activate current tab
+		$('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
 
 		// $('#log-accordion').on('hidden.bs.collapse', function(){
 		// 	console.log('.....', $(this));
@@ -187,11 +187,13 @@ page-authentication page-login
 
 		//Activate tab after collapse...
 		$('#log-accordion').on('hiden.bs.collapse', function () {
-			// window.setTimeout(function(){
-				// console.log('>>>>1111', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
+			window.setTimeout(function(){
+				console.log('????dcdsv????');
 			  // do something…
-			  $('.collapse.in').removeClass('active');
-			// });
+			  $('a[data-toggle="collapse"].active').removeClass('active');
+			//Activate current tab
+			$('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
+			}, 150);
 		});
 
 		// //Activate tab after collapse...
