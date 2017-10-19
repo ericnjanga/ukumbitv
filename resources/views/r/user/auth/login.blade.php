@@ -180,9 +180,9 @@ page-authentication page-login
 		//Activate tab after collapse...
 		$('#log-accordion').on('hidden.bs.collapse', function () {
 			window.setTimeout(function(){
-				console.log('>>>>2222', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
+				console.log('>>>>2222', $('.collapse:not(.in)').prev('.panel-heading').find('.panel-title a').length);
 			  // do something…
-			  $('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
+			  $('.collapse:not(.in)').prev('.panel-heading').find('.panel-title a').addClass('active');
 			}, 100);
 		});
 	});
