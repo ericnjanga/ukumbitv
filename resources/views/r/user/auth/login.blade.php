@@ -36,24 +36,27 @@ page-authentication page-login
     	color: #000;
     	font-weight: bold;
 		}
+		#log-accordion .panel-title a:hover {
+			text-decoration: none;
+		}
 		#log-accordion .panel+.panel {
 			margin-top: 0;
 		}
 		#log-accordion .panel {
 			box-shadow: 0 0 0 rgba(0,0,0,.05);
 		}
-		
+
 		/*--- ---*/
 		.panel-heading-facebook .panel-title a {
-		  background-color: rgba(59, 89, 152, 0.5);
+		  background-color: rgba(59, 89, 152, 0.6);
 		}
 		.panel-heading-facebook .panel-title a:hover {
 		  background-color: rgba(59, 89, 152, 1);
 		}
-		
+
 		/*--- ---*/
 		.panel-heading-email .panel-title a {
-		  background-color: rgba(177, 50, 39, 0.5);
+		  background-color: rgba(177, 50, 39, 0.6);
 		}
 		.panel-heading-email .panel-title a:hover {
 		  background-color: rgba(177, 50, 39, 1);
