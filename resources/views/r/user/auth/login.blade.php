@@ -14,7 +14,17 @@ page-authentication page-login
 	    min-height: initial; 
 		}
 		#collapse-facebook .panel-body {
-			min-height: 400px;
+			min-height: 400px; 
+	    min-height: 400px;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+		}
+		#collapse-facebook .text-center {
+		  width: 100%;	
+		}
+		#collapse-facebook .panel-title a {
+		  background-color: #3b5998;
 		}
 		#log-accordion .panel {
 			border-width: 0;
@@ -25,7 +35,8 @@ page-authentication page-login
 		}
 		#log-accordion .panel-title a {
 			display: block; 
-    	padding: 10px 15px;
+    	padding: 15px;
+    	color: #fff;
 		}
 		#log-accordion .panel+.panel {
 			margin-top: 0;
@@ -33,6 +44,12 @@ page-authentication page-login
 		#log-accordion .panel {
 			box-shadow: 0 0 0 rgba(0,0,0,.05);
 		}
+		#collapse-email .panel-title a {
+		  background-color: #B13227;
+		}
+
+
+
 	</style>
  
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController" style="padding: 0;">
@@ -49,7 +66,7 @@ page-authentication page-login
 		      <div class="panel-body"> 
 						@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
 					    <div class="text-center">
-					      <!-- <p>{{trans('messages.auth_signin_blurb')}}</p> -->
+					      <p>{{trans('messages.auth_signin_blurb')}}</p>
 					      <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
 					        <input type="hidden" value="facebook" name="provider" id="provider">
 					        {{--<a href="{{ route('SocialLogin') }}" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</a>--}}
