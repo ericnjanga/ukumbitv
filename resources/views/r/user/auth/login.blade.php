@@ -206,15 +206,18 @@ page-authentication page-login
 		$('#log-accordion').on('hidden.bs.collapse', function () {
 			window.setTimeout(function(){
 				console.log('????dcdsv????');
+
+				$('.panel-heading.active').removeClass('active').fadeIn(function(){
+					$('.panel-heading:not(.active)').addClass('active').fadeOut();
+				});
+				
 			   
-			//   $('a[data-toggle="collapse"].active').removeClass('active');
-			// //Activate current tab
-			// $('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
+			 
 
 
-				$('a[data-toggle="collapse"].active').removeClass('active').parent('.panel-title').parent('.panel-heading').fadeOut();
-				//Activate current tab
-				$('.collapse.in').prev('.panel-heading').fadeIn().find('.panel-title a').addClass('active');
+				// $('a[data-toggle="collapse"].active').removeClass('active').parent('.panel-title').parent('.panel-heading').fadeOut();
+				// //Activate current tab
+				// $('.collapse.in').prev('.panel-heading').fadeIn().find('.panel-title a').addClass('active');
 
 
 			}, 150);
