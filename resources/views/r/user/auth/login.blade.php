@@ -33,10 +33,13 @@ page-authentication page-login
 		#log-accordion .panel-title a {
 			display: block; 
     	padding: 15px;
-    	color: #000;
-    	font-weight: bold;
+    	color: #fff;
+    	font-weight: bold; 
+		  background-color: rgba(180, 180, 180, 0.6);
 		}
-		#log-accordion .panel-title a:hover {
+		#log-accordion .panel-title a:hover,
+		#log-accordion .panel-title a:focus,
+		#log-accordion .panel-title a:active {
 			text-decoration: none;
 		}
 		#log-accordion .panel+.panel {
@@ -47,23 +50,20 @@ page-authentication page-login
 		}
 
 		/*--- ---*/
-		.panel-heading-facebook .panel-title a {
-		  background-color: rgba(59, 89, 152, 0.6);
-		}
-		.panel-heading-facebook .panel-title a:hover {
+		.panel-heading-facebook .panel-title a.active {
 		  background-color: rgba(59, 89, 152, 1);
+		}
+		.panel-heading-facebook .panel-title a.active:hover {
+		  background-color: rgba(59, 89, 152, 0.7);
 		}
 
 		/*--- ---*/
-		.panel-heading-email .panel-title a {
-		  background-color: rgba(177, 50, 39, 0.6);
-		}
-		.panel-heading-email .panel-title a:hover {
+		.panel-heading-email .panel-title a.active {
 		  background-color: rgba(177, 50, 39, 1);
 		}
-
-
-
+		.panel-heading-email .panel-title a.active:hover {
+		  background-color: rgba(177, 50, 39, 0.7);
+		}
 	</style>
  
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController" style="padding: 0;">
@@ -149,4 +149,22 @@ page-authentication page-login
 		</div>
   </div><!-- page-auth -->
  
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+@section('scripts')
+<script>
+	$(document).ready(function(){
+		$('.collapse.in').prev('.panel-heading-facebook').find('a').addClass('active');
+	});
+</script>
 @endsection
