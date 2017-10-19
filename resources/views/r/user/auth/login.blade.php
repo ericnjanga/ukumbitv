@@ -164,7 +164,7 @@ page-authentication page-login
 <script>
 
 	$(document).ready(function(){
-		console.log('====???aaaa', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
+		console.log('1====???aaaa', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
 		//Activate current tab
 		$('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
 
@@ -183,7 +183,7 @@ page-authentication page-login
 				console.log('>>>>2222', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
 			  // do something…
 			  $('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
-			});
+			}, 100);
 		});
 	});
 </script>
