@@ -214,7 +214,7 @@ page-authentication page-login
 
 				$('a[data-toggle="collapse"].active').removeClass('active').parents('.panel-heading').fadeOut();
 			//Activate current tab
-			$('.collapse.in').prev('.panel-heading')fadeIn().find('.panel-title a').addClass('active');
+			$('.collapse.in').prev('.panel-heading').fadeIn().find('.panel-title a').addClass('active');
 
 
 			}, 150);
