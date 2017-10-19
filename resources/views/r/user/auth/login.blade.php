@@ -23,9 +23,6 @@ page-authentication page-login
 		#collapse-facebook .text-center {
 		  width: 100%;	
 		}
-		#collapse-facebook .panel-title a {
-		  background-color: #3b5998;
-		}
 		#log-accordion .panel {
 			border-width: 0;
     	border-radius: 0;
@@ -44,7 +41,10 @@ page-authentication page-login
 		#log-accordion .panel {
 			box-shadow: 0 0 0 rgba(0,0,0,.05);
 		}
-		#collapse-email .panel-title a {
+		.panel-heading-facebook .panel-title a {
+		  background-color: #3b5998;
+		}
+		.panel-heading-email .panel-title a {
 		  background-color: #B13227;
 		}
 
@@ -55,7 +55,7 @@ page-authentication page-login
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController" style="padding: 0;">
   	<div class="panel-group" id="log-accordion" role="tablist" aria-multiselectable="true">
 		  <div class="panel panel-default panel-facebook">
-		    <div class="panel-heading" role="tab" id="headingOne">
+		    <div class="panel-heading-facebook" role="tab" id="headingOne">
 		      <h4 class="panel-title">
 		        <a role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-facebook" aria-expanded="true" aria-controls="collapse-facebook">
 		          {{trans('messages.auth_signin_fb')}}
@@ -78,7 +78,7 @@ page-authentication page-login
 		    </div>
 		  </div><!-- panel-email -->
 		  <div class="panel panel-default panel-email">
-		    <div class="panel-heading" role="tab" id="headingTwo">
+		    <div class="panel-heading-email" role="tab" id="headingTwo">
 		      <h4 class="panel-title">
 		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-email" aria-expanded="false" aria-controls="collapse-email">
 		          Sign In with an email address
