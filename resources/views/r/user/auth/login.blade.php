@@ -33,7 +33,8 @@ page-authentication page-login
 		#log-accordion .panel-title a {
 			display: block; 
     	padding: 15px;
-    	color: #fff;
+    	color: #000;
+    	font-weight: bold;
 		}
 		#log-accordion .panel+.panel {
 			margin-top: 0;
@@ -41,11 +42,21 @@ page-authentication page-login
 		#log-accordion .panel {
 			box-shadow: 0 0 0 rgba(0,0,0,.05);
 		}
+		
+		/*--- ---*/
 		.panel-heading-facebook .panel-title a {
-		  background-color: #3b5998;
+		  background-color: rgba(59, 89, 152, 0.5);
 		}
+		.panel-heading-facebook .panel-title a:hover {
+		  background-color: rgba(59, 89, 152, 1);
+		}
+		
+		/*--- ---*/
 		.panel-heading-email .panel-title a {
-		  background-color: #B13227;
+		  background-color: rgba(177, 50, 39, 0.5);
+		}
+		.panel-heading-email .panel-title a:hover {
+		  background-color: rgba(177, 50, 39, 1);
 		}
 
 
