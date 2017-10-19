@@ -164,7 +164,7 @@ page-authentication page-login
 <script>
 
 	$(document).ready(function(){
-		console.log('1====???aaaa', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
+		console.log('2====???aaaa', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
 		//Activate current tab
 		$('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
 
