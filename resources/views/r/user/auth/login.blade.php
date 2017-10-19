@@ -177,7 +177,7 @@ page-authentication page-login
 
 
 
-		console.log('******' );
+		console.log('*>>>*****' );
 		//Activate current tab
 		$('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
 
@@ -186,7 +186,7 @@ page-authentication page-login
 		// });
 
 		//Activate tab after collapse...
-		$('#log-accordion').on('hiden.bs.collapse', function () {
+		$('#log-accordion').on('hidden.bs.collapse', function () {
 			window.setTimeout(function(){
 				console.log('????dcdsv????');
 			  // do something…
