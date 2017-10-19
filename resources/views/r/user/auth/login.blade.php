@@ -167,7 +167,8 @@ page-authentication page-login
 		//Always keep one panel open
 		$('#log-accordion .panel-heading a').on('click',function(e){
 	    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
-	        e.stopPropagation();
+	    	e.preventDefault();
+	      //e.stopPropagation();
 	    }
 	    // You can also add preventDefault to remove the anchor behavior that makes
 	    // the page jump
