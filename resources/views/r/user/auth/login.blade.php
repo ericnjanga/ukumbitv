@@ -8,19 +8,24 @@ page-authentication page-login
 
 
 @section('content')
-
+	
+	<style>
+		#collapse-facebook .panel-body {
+			min-height: 300px;
+		}
+	</style>
  
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController" style="padding: 0;">
-  	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  	<div class="panel-group" id="log-accordion" role="tablist" aria-multiselectable="true">
 		  <div class="panel panel-default panel-facebook">
 		    <div class="panel-heading" role="tab" id="headingOne">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		        <a role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-facebook" aria-expanded="true" aria-controls="collapse-facebook">
 		          {{trans('messages.auth_signin_fb')}}
 		        </a>
 		      </h4>
 		    </div>
-		    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+		    <div id="collapse-facebook" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 		      <div class="panel-body"> 
 						@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
 					    <div class="text-center">
@@ -38,12 +43,12 @@ page-authentication page-login
 		  <div class="panel panel-default panel-email">
 		    <div class="panel-heading" role="tab" id="headingTwo">
 		      <h4 class="panel-title">
-		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-email" aria-expanded="false" aria-controls="collapse-email">
 		          Sign In with an email address
 		        </a>
 		      </h4>
 		    </div>
-		    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+		    <div id="collapse-email" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 		      <div class="panel-body" style="padding: 20px;">
 		        	
 	        	<form name="loginForm" action="{{route('user.login.post')}}" method="POST" autocomplete="off" novalidate>
