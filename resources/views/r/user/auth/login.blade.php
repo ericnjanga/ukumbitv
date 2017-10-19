@@ -85,7 +85,7 @@ page-authentication page-login
 		  <div class="panel panel-default panel-facebook">
 		    <div class="panel-heading panel-heading-facebook" role="tab" id="headingOne" style="display:none;">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-facebook" aria-expanded="true" aria-controls="collapse-facebook">
+		        <a role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-facebook" aria-expanded="true" aria-controls="collapse-facebook" class="active">
 		        	<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
 		          {{trans('messages.auth_signin_fb')}}
 		        </a>
@@ -212,9 +212,9 @@ page-authentication page-login
 			// $('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
 
 
-				$('a[data-toggle="collapse"].active').removeClass('active').parents('.panel-heading').fadeOut();
-			//Activate current tab
-			$('.collapse.in').prev('.panel-heading').fadeIn().find('.panel-title a').addClass('active');
+				$('a[data-toggle="collapse"].active').removeClass('active').parent('.panel-title').parent('.panel-heading').fadeOut();
+				//Activate current tab
+				$('.collapse.in').prev('.panel-heading').fadeIn().find('.panel-title a').addClass('active');
 
 
 			}, 150);
