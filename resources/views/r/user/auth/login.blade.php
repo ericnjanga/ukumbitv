@@ -170,6 +170,7 @@ page-authentication page-login
 
 		//Activate tab after collapse...
 		$('#log-accordion').on('hidden.bs.collapse', function () {
+			console.log('111+++++???aaaa', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
 		  // do something…
 		  $('.collapse.in').removeClass('active').prev('.panel-heading').find('.panel-title a').addClass('active');
 		});
