@@ -17,6 +17,16 @@ page-authentication page-login
 			border-width: 0;
     	border-radius: 0;
 		}
+		#log-accordion .panel-heading {
+			padding: 0;
+		}
+		#log-accordion .panel-title a {
+			display: block; 
+    	padding: 10px 15px;
+		}
+		#log-accordion .panel+.panel {
+			margin-top: 0;
+		}
 	</style>
  
   <div class="page page-auth" ng-app="validationApp" ng-controller="mainController" style="padding: 0;">
