@@ -167,8 +167,8 @@ page-authentication page-login
 		//Always keep one panel open
 		$('#log-accordion .panel-heading a').on('click',function(e){
 	    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
-	    	e.preventDefault();
-	      //e.stopPropagation();
+	    	// e.preventDefault();
+	      e.stopPropagation();
 	    }
 	    // You can also add preventDefault to remove the anchor behavior that makes
 	    // the page jump
@@ -177,22 +177,22 @@ page-authentication page-login
 
 
 
-		console.log('2====???aaaa', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
-		//Activate current tab
-		$('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
+		console.log('******' );
+		// //Activate current tab
+		// $('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
 
-		$('#log-accordion').on('hidden.bs.collapse', function(){
-			console.log('.....', $(this));
-		});
-
-		// //Activate tab after collapse...
-		// $('#log-accordion').on('hide.bs.collapse', function () {
-		// 	// window.setTimeout(function(){
-		// 		console.log('>>>>1111', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
-		// 	  // do something…
-		// 	  $('.collapse.in').removeClass('active');
-		// 	// });
+		// $('#log-accordion').on('hidden.bs.collapse', function(){
+		// 	console.log('.....', $(this));
 		// });
+
+		//Activate tab after collapse...
+		$('#log-accordion').on('hiden.bs.collapse', function () {
+			// window.setTimeout(function(){
+				// console.log('>>>>1111', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
+			  // do something…
+			  $('.collapse.in').removeClass('active');
+			// });
+		});
 
 		// //Activate tab after collapse...
 		// $('#log-accordion').on('hidden.bs.collapse', function () {
