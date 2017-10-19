@@ -164,8 +164,15 @@ page-authentication page-login
 <script>
 
 	$(document).ready(function(){
-		console.log('>????aaaa', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
+		console.log('+++++???aaaa', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
+		//Activate current tab
 		$('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
+
+		//Activate tab after collapse...
+		$('#log-accordion').on('hidden.bs.collapse', function () {
+		  // do something…
+		  $('.collapse.in').removeClass('active').prev('.panel-heading').find('.panel-title a').addClass('active');
+		});
 	});
 </script>
 @endsection
