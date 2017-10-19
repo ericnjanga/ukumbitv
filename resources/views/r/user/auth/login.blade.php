@@ -164,6 +164,18 @@ page-authentication page-login
 <script>
 
 	$(document).ready(function(){
+		//Always keep one panel open
+		$('#log-accordion .panel-heading a').on('click',function(e){
+	    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
+	        e.stopPropagation();
+	    }
+	    // You can also add preventDefault to remove the anchor behavior that makes
+	    // the page jump
+	    // e.preventDefault();
+		});
+
+
+
 		console.log('2====???aaaa', $('.collapse.in').prev('.panel-heading').find('.panel-title a').length);
 		//Activate current tab
 		$('.collapse.in').prev('.panel-heading').find('.panel-title a').addClass('active');
