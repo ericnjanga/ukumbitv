@@ -35,17 +35,26 @@ page-authentication page-login
     	padding: 15px;
     	color: #fff;
     	font-weight: bold; 
-		  background-color: rgba(177, 50, 39, 1);
+		  background-color: rgba(12, 90, 19, 1);
 		}
 		#log-accordion .panel-title a:hover {
-		  background-color: rgba(177, 50, 39, 0.7);
+		  background-color: rgba(12, 90, 19, 0.7);
 		}
 
 		/*--- ---*/
 		.panel-heading .panel-title a.active {
 		  background-color: rgba(180, 180, 180, 0.6)!important;
 		}
-		 
+		.panel-heading .panel-title .glyphicon { 
+			transition: all 0.3s ease;
+    	line-height: 0;
+		}
+		.panel-heading .panel-title a.active .glyphicon {
+		  transform: rotate(180deg);
+    	line-height: 0;
+		}
+
+		  
 
 
 
@@ -71,6 +80,7 @@ page-authentication page-login
 		    <div class="panel-heading panel-heading-facebook" role="tab" id="headingOne">
 		      <h4 class="panel-title">
 		        <a role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-facebook" aria-expanded="true" aria-controls="collapse-facebook">
+		        	<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
 		          {{trans('messages.auth_signin_fb')}}
 		        </a>
 		      </h4>
@@ -94,6 +104,7 @@ page-authentication page-login
 		    <div class="panel-heading panel-heading-email" role="tab" id="headingTwo">
 		      <h4 class="panel-title">
 		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-email" aria-expanded="false" aria-controls="collapse-email">
+		        	<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
 		          Sign In with an email address
 		        </a>
 		      </h4>
