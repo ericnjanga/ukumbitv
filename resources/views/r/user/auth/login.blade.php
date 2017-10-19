@@ -43,7 +43,7 @@ page-authentication page-login
 
 		/*--- ---*/
 		.panel-heading .panel-title a.active {
-		  background-color: rgba(180, 180, 180, 0.6);
+		  background-color: rgba(180, 180, 180, 0.6)!important;
 		}
 		 
 
