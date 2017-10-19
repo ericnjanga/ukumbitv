@@ -14,6 +14,10 @@ page-authentication page-login
 
 
 
+    	<h1>{{trans('messages.auth_signin')}}</h1>
+
+
+
 
 
   	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -27,8 +31,30 @@ page-authentication page-login
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
+        
+
+
+
+
+
+				@if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
+			    <div class="text-center">
+			      <p>{{trans('messages.auth_signin_blurb')}}</p>
+			      <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
+			        <input type="hidden" value="facebook" name="provider" id="provider">
+			        {{--<a href="{{ route('SocialLogin') }}" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</a>--}}
+			        <button type="submit" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</button>
+			      </form>
+			    </div>
+			    @endif
+
+
+
+
+
+
+
+      </div><!-- panel-body -->
     </div>
   </div>
   <div class="panel panel-default">
@@ -73,17 +99,7 @@ page-authentication page-login
 
 
 
-    @if(config('services.facebook.client_id') && config('services.facebook.client_secret'))
-    <div class="text-center">
-    	<h1>{{trans('messages.auth_signin')}}</h1>
-      <p>{{trans('messages.auth_signin_blurb')}}</p>
-      <form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
-        <input type="hidden" value="facebook" name="provider" id="provider">
-        {{--<a href="{{ route('SocialLogin') }}" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</a>--}}
-        <button type="submit" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</button>
-      </form>
-    </div>
-    @endif
+    
 
 
     <div class="or-line upper">{{trans('messages.auth_or')}}</div>
