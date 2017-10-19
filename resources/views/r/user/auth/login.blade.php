@@ -165,7 +165,7 @@ page-authentication page-login
 <script>
 
 	$(document).ready(function(){
-		console.log('>>>>aaaa', $('.collapse.in').length);
+		console.log('>>>>aaaa', $('.collapse.in').prev('.panel-heading').length);
 		$('.collapse.in').prev('.panel-heading').find('a').addClass('active');
 	});
 </script>
