@@ -31,10 +31,12 @@ page-authentication page-login
 			padding: 0;
 		}
 		#log-accordion .panel-title a {
+			position: relative;
 			display: block; 
     	padding: 15px;
     	color: #fff;
     	font-weight: bold; 
+    	padding-left: 40px;
 		  background-color: rgba(12, 90, 19, 1);
 		}
 		#log-accordion .panel-title a:hover {
@@ -43,18 +45,24 @@ page-authentication page-login
 
 		/*--- ---*/
 		.panel-heading .panel-title a.active {
+			color: #333!important;
 		  background-color: rgba(180, 180, 180, 0.6)!important;
 		}
 		.panel-heading .panel-title .glyphicon { 
+			position: absolute;
+			left: 15px;
+    	top: 25px;
 			transition: all 0.3s ease;
     	line-height: 0;
 		}
 		.panel-heading .panel-title a.active .glyphicon {
 		  transform: rotate(180deg);
+		  opacity: 0;
     	line-height: 0;
 		}
 
-		  
+		      position: absolute;
+    top: 25px;
 
 
 
@@ -80,7 +88,7 @@ page-authentication page-login
 		    <div class="panel-heading panel-heading-facebook" role="tab" id="headingOne">
 		      <h4 class="panel-title">
 		        <a role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-facebook" aria-expanded="true" aria-controls="collapse-facebook">
-		        	<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+		        	<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
 		          {{trans('messages.auth_signin_fb')}}
 		        </a>
 		      </h4>
@@ -104,7 +112,7 @@ page-authentication page-login
 		    <div class="panel-heading panel-heading-email" role="tab" id="headingTwo">
 		      <h4 class="panel-title">
 		        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#log-accordion" href="#collapse-email" aria-expanded="false" aria-controls="collapse-email">
-		        	<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+		        	<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
 		          Sign In with an email address
 		        </a>
 		      </h4>
