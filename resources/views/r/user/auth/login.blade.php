@@ -10,6 +10,9 @@ page-authentication page-login
 @section('content')
 	
 	<style>
+		.page {
+	    min-height: initial; 
+		}
 		#collapse-facebook .panel-body {
 			min-height: 400px;
 		}
@@ -26,6 +29,9 @@ page-authentication page-login
 		}
 		#log-accordion .panel+.panel {
 			margin-top: 0;
+		}
+		#log-accordion .panel {
+			box-shadow: 0 0 0 rgba(0,0,0,.05);
 		}
 	</style>
  
