@@ -11,7 +11,11 @@ page-authentication page-login
 	
 	<style>
 		#collapse-facebook .panel-body {
-			min-height: 300px;
+			min-height: 400px;
+		}
+		#log-accordion .panel {
+			border-width: 0;
+    	border-radius: 0;
 		}
 	</style>
  
