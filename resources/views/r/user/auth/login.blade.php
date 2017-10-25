@@ -14,7 +14,16 @@ page-authentication page-login
 			margin-left: auto;
 	    margin-right: auto;
 	    max-width: 500px;
+		} 
+		.section-auth .nav-tabs .fa {
+			font-size: 25px;
+		} 
+		.section-auth .nav-tabs span {
+			display: inline-block;
+			margin: 0 0 5px 10px;
 		}
+		
+
 		.header-auth {
 			margin-bottom: 40px; 
 		}
@@ -24,15 +33,6 @@ page-authentication page-login
 		.header-auth h2 {
 			font-size: 20px;
 			color: #666;
-		}
-
-		.header-auth .nav-tabs .fa {
-			font-size: 25px;
-		}
-
-		.header-auth .nav-tabs span {
-			display: inline-block;
-			margin: 0 0 5px 10px;
 		}
 
 		    
