@@ -15,6 +15,12 @@ page-authentication page-login
 	    margin-right: auto;
 	    max-width: 500px;
 		}
+		.header-auth {
+			margin-bottom: 40px; 
+		}
+		.header-auth h2 {
+			font-style: 20px;
+		}
 		.section-auth .tab-content {
 			background: #fff;
     	padding: 50px 20px;
@@ -31,8 +37,10 @@ page-authentication page-login
 
 
 
-	<h1>{{trans('messages.login_form_title')}}</h1>
-	<h2>{{trans('messages.login_page_h2')}}</h2>
+	<header class="header-auth text-center">
+		<h1>{{trans('messages.login_form_title')}}</h1>
+		<h2>{{trans('messages.login_page_h2')}}</h2>
+	</header>
 
 
 
