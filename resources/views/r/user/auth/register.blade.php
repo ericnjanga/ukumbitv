@@ -33,6 +33,7 @@ page-authentication page-registration
 	  <div class="tab-content">
 
 	    <div role="tabpanel" class="tab-pane active" id="tab-facebook">
+			  <p class="text-center">{{trans('messages.auth_signin_blurb')}}</p>
 				<form class="social-form form-horizontal" role="form" method="POST" action="{{ route('SocialLogin') }}">
 	        <input type="hidden" value="facebook" name="provider" id="provider">
 	        {{--<a href="{{ route('SocialLogin') }}" class="btn btn-block btn-lg butn-dblue butn-face"><span class="icon icon-facebook"></span>{{trans('messages.auth_signin_fb')}}</a>--}}
