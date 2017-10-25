@@ -18,9 +18,15 @@ page-authentication page-login
 		.header-auth {
 			margin-bottom: 40px; 
 		}
-		.header-auth h2 {
-			font-style: 20px;
+		.header-auth h1 {
+			margin-bottom: 10px;
 		}
+		.header-auth h2 {
+			font-size: 20px;
+			color: #666;
+		}
+
+		    
 		.section-auth .tab-content {
 			background: #fff;
     	padding: 50px 20px;
@@ -49,11 +55,14 @@ page-authentication page-login
 	  <!-- Nav tabs -->
 	  <ul class="nav nav-tabs" role="tablist">
 	    <li role="presentation" class="active">
-	    	<a href="#tab-facebook" aria-controls="tab-facebook" role="tab" data-toggle="tab">With your Facebook account</a>
+	    	<a href="#tab-facebook" aria-controls="tab-facebook" role="tab" data-toggle="tab">
+	    		<i class="fa fa-facebook-official" aria-hidden="true"></i> With Facebook</a>
 	   	</li>
 	    <li role="presentation">
-	    	<a href="#tab-email" aria-controls="tab-email" role="tab" data-toggle="tab">
-	    		With your Email account</a></li> 
+	    	<a href="#tab-email" aria-controls="tab-email" role="tab" data-toggle="tab"> 
+	    		<i class="fa fa-envelope" aria-hidden="true"></i> 
+	    		With an Email</a>
+	    	</li> 
 	  </ul>
 
 	  <!-- Tab panes -->
