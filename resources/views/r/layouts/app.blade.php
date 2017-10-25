@@ -42,7 +42,7 @@
 	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,500i,700,900">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css">
-	  <link rel="stylesheet" href="{{asset('r/css/style0380.css')}}">
+	  <link rel="stylesheet" href="{{asset('r/css/style0382.css')}}">
 	  <link rel="stylesheet" href="{{asset('r/css/style.css.map')}}">
 	 
 		
@@ -127,7 +127,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script> 
 
 	<!-- Main JS file -->
-	<script src="{{asset('js/app0380.js')}}"></script> 
+	<script src="{{asset('js/app0382.js')}}"></script> 
 
 
 		
