@@ -23,7 +23,8 @@ body.page-authentication {
 
 
 
-.page-auth {  
+.page-auth,
+.section-auth {  
   button[type="submit"] {
   	margin-bottom: 30px;
   }
@@ -43,23 +44,47 @@ body.page-authentication {
   }
 }//page-auth
 
-// .terms-policy{
-//   margin: 0 0 5px 0;
-//   p{
-//     font-size: 12px;
-//     font-weight: 400;
-//     color: #616161;
-//     line-height: 14px;
-//   }
-//   span{
-//     font-size: 12px;
-//     font-weight: 400;
-//     color: #616161;
-//     line-height: 14px;
-//   }
-//   a{
-//     font-size: 12px;
-//     font-weight: 400;
-//     line-height: 14px;
-//   }
-// }
+
+
+
+
+//Pages "login" and "registration"
+//--------------------------------
+.section-auth{
+	margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+} 
+.section-auth .nav-tabs .fa {
+	font-size: 25px;
+} 
+.section-auth .nav-tabs span {
+	display: inline-block;
+	margin: 0 0 5px 10px;
+}
+
+
+.header-auth {
+	margin-bottom: 40px; 
+}
+.header-auth h1 {
+	margin-bottom: 10px;
+}
+.header-auth h2 {
+	font-size: 20px;
+	color: #666;
+}
+
+    
+.section-auth .tab-content {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-top: 0;
+	padding: 50px 20px;
+	min-height: 450px;
+}
+.section-auth #tab-facebook p {
+	margin-bottom: 20px;
+} 
+
+

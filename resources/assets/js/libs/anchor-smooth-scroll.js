@@ -9,6 +9,7 @@ $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
   .not('[data-toggle="collapse"]')
+  .not('[data-toggle="tab"]')
   .click(function(event) {
     // On-page links
     if (
