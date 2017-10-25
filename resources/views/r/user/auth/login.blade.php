@@ -31,7 +31,7 @@ page-authentication page-login
 
 
 
-	<div id="section-auth" class="section-auth"> 
+	<div id="section-auth" class="section-auth" ng-app="validationApp" ng-controller="mainController">
 	  <!-- Nav tabs -->
 	  <ul class="nav nav-tabs" role="tablist">
 	    <li role="presentation" class="active">
