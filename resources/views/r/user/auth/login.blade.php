@@ -26,6 +26,15 @@ page-authentication page-login
 			color: #666;
 		}
 
+		.header-auth .nav-tabs .fa {
+			font-size: 25px;
+		}
+
+		.header-auth .nav-tabs span {
+			display: inline-block;
+			margin: 0 0 5px 10px;
+		}
+
 		    
 		.section-auth .tab-content {
 			background: #fff;
@@ -56,12 +65,11 @@ page-authentication page-login
 	  <ul class="nav nav-tabs" role="tablist">
 	    <li role="presentation" class="active">
 	    	<a href="#tab-facebook" aria-controls="tab-facebook" role="tab" data-toggle="tab">
-	    		<i class="fa fa-facebook-official" aria-hidden="true"></i> With Facebook</a>
+	    		<i class="fa fa-facebook-official" aria-hidden="true"></i> <span>{{trans('messages.login_via_fb')}}</span></a>
 	   	</li>
 	    <li role="presentation">
 	    	<a href="#tab-email" aria-controls="tab-email" role="tab" data-toggle="tab"> 
-	    		<i class="fa fa-envelope" aria-hidden="true"></i> 
-	    		With an Email</a>
+	    		<i class="fa fa-envelope" aria-hidden="true"></i> <span>{{trans('messages.login_via_email')}}</span></a>
 	    	</li> 
 	  </ul>
 
