@@ -773,7 +773,7 @@ And to insure en exceptional delivery all this unique experience, we have create
   //SING-IN/REGISTER PAGE (AUTH) ...
   //----------------------------------- 
   'auth_signin' => 'Se Connecter',
-  'auth_signin_blurb' => 'La façon la plus simple pour vous de vous connecter est avec Facebook',
+  'auth_signin_blurb' => 'Utilisez votre compte Facebook et evitez les tracasseries d\'emails et mots de passe',
   'auth_signin_fb' => 'Se connecter avec Facebook',
   'auth_signin_email' => 'Connecter avec un email',
   'auth_or' => 'ou',
@@ -791,7 +791,8 @@ And to insure en exceptional delivery all this unique experience, we have create
 	'auth_error_password1'	=>	'Votre mot de passe est requis.', 
 	'auth_error_password2'	=>	'Votre mot de passe est trop court.',  
 	'auth_error_password3'	=>	'Votre mot de passe doit contenir au moins 1 lettre minuscule, 1 lettre majuscule, 1 numéro, 1 caractère spécial.', 
-	'auth_signup'	=>	'S’enregistrer',   
+	'auth_signup'	=>	'S’enregistrer',  
+	'auth_signup_h2'	=>	'Choisissez une methode d\'enregistrement',    
 	'auth_policy_check1'	=>	'En cliquant sur Inscription, j’accepte les',   
 	'auth_confirm_reminder1'	=>	'Merci de vous &#234;tre enregistr&#233;!',    
 	'auth_confirm_reminder2'	=>	'N\'oubliez surtout pas de confirmer votre addresse email.', 

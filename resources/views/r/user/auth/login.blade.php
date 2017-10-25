@@ -8,50 +8,6 @@ page-authentication page-login
 
 
 @section('content')
-	
-	<style>
-		.section-auth{
-			margin-left: auto;
-	    margin-right: auto;
-	    max-width: 500px;
-		} 
-		.section-auth .nav-tabs .fa {
-			font-size: 25px;
-		} 
-		.section-auth .nav-tabs span {
-			display: inline-block;
-			margin: 0 0 5px 10px;
-		}
-		
-
-		.header-auth {
-			margin-bottom: 40px; 
-		}
-		.header-auth h1 {
-			margin-bottom: 10px;
-		}
-		.header-auth h2 {
-			font-size: 20px;
-			color: #666;
-		}
-
-		    
-		.section-auth .tab-content {
-			background: #fff;
-    	padding: 50px 20px;
-    	min-height: 450px;
-		}
-		#tab-facebook p {
-			margin-bottom: 20px;
-		}
-		.page {
-	    min-height: initial; 
-		}
-	</style>
-
-
-
-
 	<header class="header-auth text-center">
 		<h1>{{trans('messages.login_form_title')}}</h1>
 		<h2>{{trans('messages.login_page_h2')}}</h2>

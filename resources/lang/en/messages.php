@@ -793,7 +793,7 @@ return array(
   //SING-IN/REGISTER PAGE (AUTH) ...
   //----------------------------------- 
   'auth_signin' => 'Sign In',
-  'auth_signin_blurb' => 'The easiest way for you to sign in is with Facebook',
+  'auth_signin_blurb' => 'Use your Facebook account and avoid the hassle of emails and passwords',
   'auth_signin_fb' => 'Sign in with Facebook',
   'auth_signin_email' => 'Sign In with an email address',
   'auth_or' => 'or',
@@ -811,7 +811,8 @@ return array(
 	'auth_error_password1'	=>	'You password is required.', 
 	'auth_error_password2'	=>	'Password is too short.',  
 	'auth_error_password3'	=>	'Your assword should contain at least 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character.', 
-	'auth_signup'	=>	'Register',   
+	'auth_signup'	=>	'Register',
+	'auth_signup_h2'	=>	'Choose a registration method',   
 	'auth_policy_check1'	=>	'By clicking Sign Up, I agree to the',   
 	'auth_confirm_reminder1'	=>	'Thanks for signing up!',    
 	'auth_confirm_reminder2'	=>	'Please don\'t forget to confirm your email address.',
