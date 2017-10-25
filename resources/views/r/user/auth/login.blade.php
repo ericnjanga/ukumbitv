@@ -18,7 +18,10 @@ page-authentication page-login
 		.section-auth .tab-content {
 			background: #fff;
     	padding: 50px 20px;
-    	min-height: 500px;
+    	min-height: 450px;
+		}
+		#tab-facebook p {
+			margin-bottom: 20px;
 		}
 		.page {
 	    min-height: initial; 
@@ -27,6 +30,9 @@ page-authentication page-login
 
 
 
+
+	<h1>{{trans('messages.login_form_title')}}</h1>
+	<h2>{{trans('messages.login_page_h2')}}</h2>
 
 
 

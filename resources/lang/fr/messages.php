@@ -274,6 +274,7 @@ return array(
 	'new_account' => 'Create a new Account',
 	'no_account' 				=> 'Pas de compte',
 	'sign_up_now' 			=> 'S\'inscrire maintenant',
+	'login_page_h2' => 'Choisissez une methode d\'identification',
 	'login_via_fb' 			=> 'Connexion via facebook',
 	'register_via_fb' 	=> 'Enregistrement Via Facebook',
 	'register_via_email' => 'Enregistrement Via Email',

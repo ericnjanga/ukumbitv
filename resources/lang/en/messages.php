@@ -275,6 +275,7 @@ return array(
 	'new_account' => 'Create a new Account',
 	'no_account' => 'No account',
 	'sign_up_now' => 'Sign up now',
+	'login_page_h2' => 'Choose a login method',
 	'login_via_fb' => 'Login Via Facebook',
 	'register_via_fb' => 'Register Via Facebook',
 	'register_via_email' => 'Register Via Email',
