@@ -10,6 +10,16 @@ page-authentication page-login
 @section('content')
 	
 	<style>
+		.section-auth{
+			margin-left: auto;
+	    margin-right: auto;
+	    max-width: 500px;
+		}
+		.section-auth .tab-content {
+			background: #fff;
+    	padding: 50px 20px;
+    	min-height: 500px;
+		}
 		.page {
 	    min-height: initial; 
 		}
@@ -86,8 +96,12 @@ page-authentication page-login
 	<div id="section-auth" class="section-auth"> 
 	  <!-- Nav tabs -->
 	  <ul class="nav nav-tabs" role="tablist">
-	    <li role="presentation" class="active"><a href="#tab-facebook" aria-controls="tab-facebook" role="tab" data-toggle="tab">Home</a></li>
-	    <li role="presentation"><a href="#tab-email" aria-controls="tab-email" role="tab" data-toggle="tab">Profile</a></li> 
+	    <li role="presentation" class="active">
+	    	<a href="#tab-facebook" aria-controls="tab-facebook" role="tab" data-toggle="tab">With your Facebook account</a>
+	   	</li>
+	    <li role="presentation">
+	    	<a href="#tab-email" aria-controls="tab-email" role="tab" data-toggle="tab">
+	    		With your Email account</a></li> 
 	  </ul>
 
 	  <!-- Tab panes -->
